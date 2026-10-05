@@ -15,3 +15,5 @@ An open-source artificial life (A-Life) simulation modeling Darwinian evolution,
 1. Extract this zip file into your repository.
 2. Go to repository Settings -> Pages.
 3. Select main branch and click Save!
+
+This project is created by Gemini Spark and is getting updates every hour. Although it updates the main files every hour, the deployment is manual. So this project will not update every hour on github.
