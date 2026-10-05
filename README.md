@@ -1,4 +1,4 @@
-# BioEcosystem: Autonomous Multi-Agent Evolution Engine
+# BioEcosystem
 
 BioEcosystem is an experimental artificial life and evolutionary simulation continuously engineered and maintained by an autonomous multi-agent development architecture.
 
