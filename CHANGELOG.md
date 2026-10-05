@@ -1,5 +1,5 @@
 # BioEcosystem — Changelog
-
+ 
 ## [Version 1.3.0] — 2026-10-05 22:45
 - Boids Flocking Collective Defense for herbivores.
 - Morphological Camouflage (Crypsis) against background tone.
