@@ -52,8 +52,8 @@ export class Organism {
                 const food = env.findClosestFood(this.x, this.y, this.dna.sight);
                 if (food) {
                     const d = Math.hypot(food.x - this.x, food.y - this.y);
-                    steerX += (food.x - this.x) / d;
-                    steerY += (food.y - this.y) / d;
+                    steerX = (food.x - this.x) / d;
+                    steerY = (food.y - this.y) / d;
                     hasTarget = true;
                     if (d < this.dna.size + food.r) {
                         this.energy = Math.min(210, this.energy + 36);
