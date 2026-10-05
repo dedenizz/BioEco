@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetriDish — Bilimsel Doğal Seçilim & Türleşme Motoru</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+        body {
+            background: #06070a;
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #hud {
+            position: absolute;
+            top: 14px;
+            display: flex;
+            gap: 16px;
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(10px);
+            padding: 8px 22px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.8rem;
+            color: #94a3b8;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            z-index: 10;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #hud span b {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        .season-badge {
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .season-bahar { background: #065f46; color: #34d399; }
+        .season-yaz { background: #854d0e; color: #fde047; }
+        .season-guz { background: #7c2d12; color: #fb923c; }
+        .season-kis { background: #1e3a8a; color: #93c5fd; }
+
+        #speciesPanel {
+            position: absolute;
+            bottom: 14px;
+            left: 20px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(8px);
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.75rem;
+            color: #94a3b8;
+            max-width: 280px;
+            pointer-events: none;
+        }
+        .sp-title {
+            font-weight: 600;
+            color: #cbd5e1;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.7rem;
+        }
+        .sp-line {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 2px;
+        }
+
+        #hint {
+            position: absolute;
+            bottom: 14px;
+            right: 20px;
+            font-size: 0.75rem;
+            color: #64748b;
+            background: rgba(15, 23, 42, 0.6);
+            padding: 6px 14px;
+            border-radius: 999px;
+            pointer-events: none;
+        }
+        canvas {
+            display: block;
+            background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 70px rgba(56, 189, 248, 0.09), inset 0 0 90px rgba(0,0,0,0.85);
+            border: 3px solid rgba(56, 189, 248, 0.25);
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="hud">
+        <span>🦠 Popülasyon: <b id="countPop">0</b></span>
+        <span>🧬 Tür Sayısı: <b id="countSpecies">0</b></span>
+        <span><span id="seasonBadge" class="season-badge season-bahar">Bahar</span></span>
+        <span>⚡ Hız: <b id="avgSpeed">0</b></span>
+        <span>👀 Görüş: <b id="avgSight">0</b></span>
+        <span>🏆 Hakim Tür: <b id="domSpecies">-</b></span>
+    </div>
+
+    <canvas id="dish" width="700" height="700"></canvas>
+
+    <div id="speciesPanel">
+        <div class="sp-title">🧬 Aktif Türler & Soy Ağacı</div>
+        <div id="speciesList"></div>
+    </div>
+
+    <div id="hint">💡 Tıklayarak besin serpebilirsiniz</div>
+
+    <script>
+        const canvas = document.getElementById('dish');
+        const ctx = canvas.getContext('2d');
+        const R = canvas.width / 2;
+        const CX = R, CY = R;
+
+        let isMouseDown = false;
+        let seasonTick = 0;
+        let seasons = ['Bahar', 'Yaz', 'Güz', 'Kış'];
+        let currentSeasonIdx = 0;
+        let seasonFoodCap = 75;
+
+        // === 1. ÇEVRESEL BESİNLER VE LEŞLER ===
+        let foods = [];
+        let carrion = [];
+
+        function spawnFood(x, y) {
+            foods.push({
+                x: x || CX + (Math.random() - 0.5) * (R * 1.6),
+                y: y || CY + (Math.random() - 0.5) * (R * 1.6),
+                r: 2.4,
+                eaten: false
+            });
+        }
+
+        function addCarrion(x, y) {
+            if (carrion.length < 25) {
+                carrion.push({ x, y, r: 3.2, eaten: false });
+            }
+        }
+
+        // === 2. ÇOK BOYUTLU GENOM (DNA) & TÜRLENME ===
+        class DNA {
+            constructor(parent = null) {
+                if (parent) {
+                    const mut = (rate) => (Math.random() - 0.5) * rate;
+                    this.speed = Math.max(0.6, Math.min(4.8, parent.speed + mut(0.35)));
+                    this.sight = Math.max(30, Math.min(220, parent.sight + mut(14)));
+                    this.size  = Math.max(3.8, Math.min(13.0, parent.size + mut(0.6)));
+                    this.hue   = (parent.hue + mut(20) + 360) % 360;
+                    // Diyet Nişi: 0.0 (Otobur) <-> 0.5 (Leşçil) <-> 1.0 (Avcı)
+                    this.diet  = Math.max(0, Math.min(1, parent.diet + mut(0.06)));
+                    this.generation = parent.generation + 1;
+                    this.speciesId = parent.speciesId;
+                    this.founder = parent.founder;
+                } else {
+                    this.speed = 1.1 + Math.random() * 1.4;
+                    this.sight = 45 + Math.random() * 60;
+                    this.size  = 5.0 + Math.random() * 2.5;
+                    this.diet  = Math.random() < 0.25 ? 0.85 : (Math.random() < 0.35 ? 0.5 : 0.15);
+                    this.hue   = this.diet > 0.65 ? 10 : (this.diet < 0.35 ? 150 : 42); // Nişe göre başlangıç rengi
+                    this.generation = 1;
+                    const tag = this.diet > 0.65 ? 'Carnis' : (this.diet < 0.35 ? 'Phyto' : 'Scav');
+                    this.speciesId = `${tag}-1`;
+                    this.founder = this;
+                }
+            }
+
+            // Genetik Mesafe (Türleşme Eşiği)
+            distanceTo(other) {
+                const dSpd = Math.pow((this.speed - other.speed) / 4.0, 2);
+                const dSight = Math.pow((this.sight - other.sight) / 180.0, 2);
+                const dDiet = Math.pow(this.diet - other.diet, 2) * 2.5;
+                return Math.sqrt(dSpd + dSight + dDiet);
+            }
+        }
+
+        // === 3. FİLOGENETİK TAKİPÇİ ===
+        class Phylogeny {
+            constructor() {
+                this.species = new Map();
+                this.nextId = 2;
+            }
+
+            register(id, dna) {
+                if (!this.species.has(id)) {
+                    this.species.set(id, { id, founder: dna, count: 1, hue: dna.hue, gen: dna.generation });
+                }
+            }
+
+            testSpeciation(dna) {
+                const current = this.species.get(dna.speciesId);
+                if (current && dna.distanceTo(current.founder) > 0.40) {
+                    // YENİ TÜR DOĞDU
+                    const prefix = dna.diet > 0.65 ? 'Carnis' : (dna.diet < 0.35 ? 'Phyto' : 'Scav');
+                    const newId = `${prefix}-${this.nextId++}`;
+                    dna.speciesId = newId;
+                    dna.founder = dna;
+                    this.species.set(newId, { id: newId, founder: dna, count: 1, hue: dna.hue, gen: dna.generation });
+                }
+            }
+
+            update(creatures) {
+                for (let s of this.species.values()) s.count = 0;
+                for (let c of creatures) {
+                    if (c.alive) {
+                        const s = this.species.get(c.dna.speciesId);
+                        if (s) s.count++;
+                    }
+                }
+            }
+
+            getActive() {
+                return Array.from(this.species.values())
+                    .filter(s => s.count > 0)
+                    .sort((a, b) => b.count - a.count);
+            }
+        }
+        const phylogeny = new Phylogeny();
+
+        // === 4. CANLI VARLIK (MİKROORGANİZMA) ===
+        class Creature {
+            constructor(x, y, parentDNA = null) {
+                this.x = x;
+                this.y = y;
+                this.vx = (Math.random() - 0.5) * 2;
+                this.vy = (Math.random() - 0.5) * 2;
+                this.dna = new DNA(parentDNA);
+                phylogeny.testSpeciation(this.dna);
+                phylogeny.register(this.dna.speciesId, this.dna);
+
+                this.energy = 90;
+                this.alive = true;
+                this.tail = [];
+                this.niche = this.dna.diet > 0.65 ? 'carnivore' : (this.dna.diet < 0.35 ? 'herbivore' : 'scavenger');
+            }
+
+            update(season) {
+                // Kışın metabolizma bedeli %35 artar
+                const seasonBurn = season === 'Kış' ? 1.35 : 1.0;
+                const burn = (0.045 + (this.dna.speed * 0.032) + (this.dna.size * 0.012)) * seasonBurn;
+                this.energy -= burn;
+
+                if (this.energy <= 0) {
+                    this.alive = false;
+                    addCarrion(this.x, this.y);
+                    return;
+                }
+
+                let steerX = 0, steerY = 0;
+                let hasTarget = false;
+
+                // --- 1. OTOBUR ---
+                if (this.niche === 'herbivore') {
+                    let pred = null, minPred = this.dna.sight * 0.8;
+                    for (let c of creatures) {
+                        if (c.alive && c.niche === 'carnivore') {
+                            const d = Math.hypot(c.x - this.x, c.y - this.y);
+                            if (d < minPred) { minPred = d; pred = c; }
+                        }
+                    }
+
+                    if (pred) {
+                        steerX = (this.x - pred.x) / minPred;
+                        steerY = (this.y - pred.y) / minPred;
+                        hasTarget = true;
+                    } else {
+                        let closestFood = null, minF = this.dna.sight;
+                        for (let f of foods) {
+                            const d = Math.hypot(f.x - this.x, f.y - this.y);
+                            if (d < minF) { minF = d; closestFood = f; }
+                        }
+                        if (closestFood) {
+                            steerX = (closestFood.x - this.x) / minF;
+                            steerY = (closestFood.y - this.y) / minF;
+                            hasTarget = true;
+                            if (minF < this.dna.size + closestFood.r) {
+                                this.energy = Math.min(210, this.energy + 36);
+                                closestFood.eaten = true;
+                            }
+                        }
+                    }
+                }
+
+                // --- 2. APEKS AVCI ---
+                else if (this.niche === 'carnivore') {
+                    let prey = null, minPrey = this.dna.sight;
+                    for (let c of creatures) {
+                        if (c.alive && c.niche === 'herbivore') {
+                            const d = Math.hypot(c.x - this.x, c.y - this.y);
+                            if (d < minPrey) { minPrey = d; prey = c; }
+                        }
+                    }
+
+                    if (prey) {
+                        steerX = (prey.x - this.x) / minPrey;
+                        steerY = (prey.y - this.y) / minPrey;
+                        hasTarget = true;
+                        if (minPrey < this.dna.size + prey.dna.size) {
+                            prey.alive = false;
+                            this.energy = Math.min(250, this.energy + 80);
+                        }
+                    }
+                }
+
+                // --- 3. LEŞÇİL & AYRIŞTIRICI ---
+                else if (this.niche === 'scavenger') {
+                    let closestCar = null, minC = this.dna.sight * 1.1;
+                    for (let cr of carrion) {
+                        const d = Math.hypot(cr.x - this.x, cr.y - this.y);
+                        if (d < minC) { minC = d; closestCar = cr; }
+                    }
+
+                    if (closestCar) {
+                        steerX = (closestCar.x - this.x) / minC;
+                        steerY = (closestCar.y - this.y) / minC;
+                        hasTarget = true;
+                        if (minC < this.dna.size + closestCar.r) {
+                            this.energy = Math.min(190, this.energy + 32);
+                            closestCar.eaten = true;
+                        }
+                    }
+                }
+
+                // Yönelme Fiziği
+                if (hasTarget) {
+                    this.vx += steerX * 0.16;
+                    this.vy += steerY * 0.16;
+                } else {
+                    this.vx += (Math.random() - 0.5) * 0.25;
+                    this.vy += (Math.random() - 0.5) * 0.25;
+                }
+
+                const spd = Math.hypot(this.vx, this.vy);
+                if (spd > 0) {
+                    this.vx = (this.vx / spd) * this.dna.speed;
+                    this.vy = (this.vy / spd) * this.dna.speed;
+                }
+
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Dairesel sınır
+                const dCenter = Math.hypot(this.x - CX, this.y - CY);
+                if (dCenter > R - this.dna.size - 8) {
+                    const ang = Math.atan2(this.y - CY, this.x - CX);
+                    this.vx -= Math.cos(ang) * 0.45;
+                    this.vy -= Math.sin(ang) * 0.45;
+                }
+
+                this.tail.unshift({ x: this.x, y: this.y });
+                if (this.tail.length > 5) this.tail.pop();
+            }
+
+            canDivide() {
+                return this.energy >= (this.niche === 'carnivore' ? 180 : 135);
+            }
+
+            divide() {
+                this.energy *= 0.5;
+                return new Creature(
+                    this.x + (Math.random() - 0.5) * 8,
+                    this.y + (Math.random() - 0.5) * 8,
+                    this.dna
+                );
+            }
+
+            draw() {
+                ctx.save();
+
+                // Kuyruk izi
+                for (let i = 0; i < this.tail.length; i++) {
+                    const p = this.tail[i];
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, this.dna.size * (1 - i / 7) * 0.75, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsla(${this.dna.hue}, 80%, 55%, ${0.22 - i * 0.035})`;
+                    ctx.fill();
+                }
+
+                ctx.translate(this.x, this.y);
+                const angle = Math.atan2(this.vy, this.vx);
+                ctx.rotate(angle);
+
+                // Gövde
+                ctx.beginPath();
+                ctx.arc(0, 0, this.dna.size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsl(${this.dna.hue}, 85%, 55%)`;
+                ctx.shadowColor = `hsl(${this.dna.hue}, 85%, 55%)`;
+                ctx.shadowBlur = this.niche === 'carnivore' ? 12 : 6;
+                ctx.fill();
+
+                // Çekirdek
+                ctx.shadowBlur = 0;
+                ctx.beginPath();
+                ctx.arc(0, 0, this.dna.size * 0.4, 0, Math.PI * 2);
+                ctx.fillStyle = '#ffffff';
+                ctx.fill();
+
+                // Enerji halkası
+                ctx.beginPath();
+                ctx.arc(0, 0, this.dna.size + 2.5, 0, Math.PI * 2 * Math.min(1.0, this.energy / 160));
+                ctx.strokeStyle = this.energy > 50 ? 'rgba(56, 189, 248, 0.7)' : 'rgba(239, 68, 68, 0.8)';
+                ctx.lineWidth = 1.2;
+                ctx.stroke();
+
+                ctx.restore();
+            }
+        }
+
+        // === 5. SİMÜLASYON DÖNGÜSÜ ===
+        let creatures = [];
+
+        function init() {
+            creatures = [];
+            foods = [];
+            carrion = [];
+            for (let i = 0; i < 28; i++) {
+                creatures.push(new Creature(
+                    CX + (Math.random() - 0.5) * (R * 1.2),
+                    CY + (Math.random() - 0.5) * (R * 1.2)
+                ));
+            }
+            for (let i = 0; i < 45; i++) spawnFood();
+        }
+        init();
+
+        // Mouse besleme
+        canvas.addEventListener('mousedown', e => { isMouseDown = true; feed(e); });
+        window.addEventListener('mouseup', () => isMouseDown = false);
+        canvas.addEventListener('mousemove', e => { if (isMouseDown) feed(e); });
+
+        function feed(e) {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            if (Math.hypot(x - CX, y - CY) < R - 15) {
+                for (let i = 0; i < 3; i++) spawnFood(x + (Math.random() - 0.5) * 16, y + (Math.random() - 0.5) * 16);
+            }
+        }
+
+        function loop() {
+            // Mevsim Döngüsü (Her 900 karede bir mevsim değişir)
+            seasonTick++;
+            if (seasonTick > 900) {
+                seasonTick = 0;
+                currentSeasonIdx = (currentSeasonIdx + 1) % seasons.length;
+                const sName = seasons[currentSeasonIdx];
+                const bEl = document.getElementById('seasonBadge');
+                bEl.textContent = sName;
+                bEl.className = `season-badge season-${sName.toLowerCase()}`;
+                seasonFoodCap = sName === 'Kış' ? 25 : (sName === 'Bahar' ? 95 : 65);
+            }
+            const activeSeason = seasons[currentSeasonIdx];
+
+            // Akıcı hareket izi
+            ctx.fillStyle = 'rgba(6, 7, 10, 0.35)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Doğal Besin Üretimi (Mevsime göre)
+            const spawnRate = activeSeason === 'Kış' ? 0.05 : 0.22;
+            if (foods.length < seasonFoodCap && Math.random() < spawnRate) spawnFood();
+
+            // Besinleri Çiz
+            ctx.fillStyle = '#34d399';
+            ctx.shadowColor = '#34d399';
+            ctx.shadowBlur = 6;
+            for (let f of foods) {
+                ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2); ctx.fill();
+            }
+            ctx.shadowBlur = 0;
+
+            // Leşleri Çiz
+            ctx.fillStyle = '#b45309';
+            for (let cr of carrion) {
+                ctx.beginPath(); ctx.arc(cr.x, cr.y, cr.r, 0, Math.PI * 2); ctx.fill();
+            }
+
+            // Canlıları güncelle ve çoğalt
+            const newborns = [];
+            let totalSpd = 0, totalSight = 0;
+
+            for (let c of creatures) {
+                c.update(activeSeason);
+                c.draw();
+                if (c.alive) {
+                    totalSpd += c.dna.speed;
+                    totalSight += c.dna.sight;
+                    if (c.canDivide() && creatures.length < 80) newborns.push(c.divide());
+                }
+            }
+
+            creatures = creatures.filter(c => c.alive);
+            creatures.push(...newborns);
+            foods = foods.filter(f => !f.eaten);
+            carrion = carrion.filter(cr => !cr.eaten);
+
+            // Kurtarma Tohumlama
+            if (creatures.length < 4) {
+                for (let i = 0; i < 4; i++) {
+                    creatures.push(new Creature(CX + (Math.random() - 0.5) * 50, CY + (Math.random() - 0.5) * 50));
+                }
+            }
+
+            // Filogenetik & HUD Güncellemesi
+            phylogeny.update(creatures);
+            const activeSpecies = phylogeny.getActive();
+            const n = creatures.length || 1;
+
+            document.getElementById('countPop').textContent = creatures.length;
+            document.getElementById('countSpecies').textContent = activeSpecies.length;
+            document.getElementById('avgSpeed').textContent = (totalSpd / n).toFixed(2);
+            document.getElementById('avgSight').textContent = (totalSight / n).toFixed(0);
+            document.getElementById('domSpecies').textContent = activeSpecies[0] ? activeSpecies[0].id : '-';
+
+            // Sol Alt Soy Ağacı Listesi
+            const listEl = document.getElementById('speciesList');
+            listEl.innerHTML = activeSpecies.slice(0, 4).map(sp => 
+                `<div class="sp-line">
+                    <span style="color: hsl(${sp.hue}, 85%, 65%);">● ${sp.id} (G${sp.gen})</span>
+                    <b>${sp.count} birey</b>
+                 </div>`
+            ).join('');
+
+            requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+    </script>
+</body>
+</html>
