@@ -3,183 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioEcosystem — Natural Selection & Speciation Engine</title>
+    <title>BioEcosystem — Natural Selection & Speciation Studio</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
         body {
-            background: #08090c;
+            background-color: #080a0e;
             color: #d1d5db;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 16px;
+            overflow-x: hidden;
+        }
+        .app-shell {
+            display: flex;
+            gap: 16px;
+            max-width: 1200px;
+            width: 100%;
+            background: #0f141c;
+            border: 1px solid #212936;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.8);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .viewport-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            gap: 10px;
         }
-        #hud {
-            position: absolute;
-            top: 18px;
+        .header-bar {
             display: flex;
-            gap: 24px;
-            background: rgba(13, 17, 23, 0.9);
-            backdrop-filter: blur(12px);
-            padding: 8px 24px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 660px;
+            padding: 4px 6px;
             font-size: 0.76rem;
             color: #8b949e;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            z-index: 10;
-            letter-spacing: 0.5px;
             text-transform: uppercase;
-        }
-        #hud span b {
-            color: #f0f6fc;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-weight: 600;
-            margin-left: 4px;
-        }
-        .season-tag {
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.72rem;
-            font-weight: 600;
             letter-spacing: 0.5px;
         }
-        .season-spring { background: #064e3b; color: #6ee7b7; border: 1px solid #047857; }
-        .season-summer { background: #713f12; color: #fde047; border: 1px solid #a16207; }
-        .season-autumn { background: #7c2d12; color: #fdba74; border: 1px solid #c2410c; }
-        .season-winter { background: #1e3a8a; color: #93c5fd; border: 1px solid #1d4ed8; }
-
-        #speciesPanel {
-            position: absolute;
-            bottom: 18px;
-            left: 20px;
-            background: rgba(13, 17, 23, 0.88);
-            backdrop-filter: blur(10px);
-            padding: 10px 14px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            font-size: 0.72rem;
-            color: #8b949e;
-            min-width: 240px;
-            pointer-events: none;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        .header-bar b {
+            color: #f3f4f6;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
         }
-        .sp-header {
-            font-size: 0.68rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            color: #c9d1d9;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 4px;
-            margin-bottom: 6px;
-            display: flex;
-            justify-content: space-between;
-        }
-        .sp-row {
-            display: flex;
-            justify-content: space-between;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 0.72rem;
-            margin-bottom: 3px;
-        }
-
-        #hint {
-            position: absolute;
-            bottom: 18px;
-            right: 20px;
-            font-size: 0.72rem;
-            color: #8b949e;
-            background: rgba(13, 17, 23, 0.75);
-            padding: 6px 14px;
-            border-radius: 6px;
-            border: 1px solid #21262d;
-            pointer-events: none;
-        }
-        canvas {
-            display: block;
-            background: radial-gradient(circle at center, #0f141c 0%, #030508 100%);
+        .canvas-container {
+            position: relative;
+            background: radial-gradient(circle at center, #101622 0%, #03060a 100%);
+            border: 2px solid #212936;
             border-radius: 50%;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 80px rgba(0,0,0,0.85);
-            border: 2px solid #21262d;
+            box-shadow: inset 0 0 60px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.6);
             cursor: crosshair;
         }
+        canvas#dishCanvas {
+            display: block;
+            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+        }
+        .side-dashboard {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 320px;
+        }
+        .card {
+            background: #151b26;
+            border: 1px solid #283344;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .card-header {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #9ca3af;
+            border-bottom: 1px solid #283344;
+            padding-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            font-size: 0.72rem;
+        }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            color: #8b949e;
+        }
+        .stat-item b {
+            color: #f3f4f6;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.82rem;
+        }
+        /* Mini Chart */
+        .chart-container {
+            width: 100%;
+            height: 80px;
+            background: #0b0f16;
+            border: 1px solid #212936;
+            border-radius: 4px;
+            position: relative;
+        }
+        canvas#chartCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .chart-legend {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.65rem;
+            color: #6b7280;
+            margin-top: 2px;
+            text-transform: uppercase;
+        }
+        .legend-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+        /* Inspector Card */
+        .inspector-body {
+            font-size: 0.74rem;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: #9ca3af;
+        }
+        .inspector-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .inspector-row b {
+            color: #f3f4f6;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        }
+        .energy-bar-bg {
+            width: 100%;
+            height: 5px;
+            background: #212936;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 2px;
+        }
+        .energy-bar-fill {
+            height: 100%;
+            background: #10b981;
+            width: 50%;
+            transition: width 0.1s linear;
+        }
+        /* Controls */
+        .btn-group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
+        }
+        button.action-btn {
+            background: #212936;
+            border: 1px solid #334155;
+            color: #e5e7eb;
+            padding: 6px 4px;
+            font-size: 0.72rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            font-family: inherit;
+            transition: all 0.12s ease;
+        }
+        button.action-btn:hover {
+            background: #2d3748;
+            border-color: #4b5563;
+        }
+        button.action-btn.active {
+            background: #0284c7;
+            border-color: #38bdf8;
+            color: #fff;
+            font-weight: 600;
+        }
+        .tool-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+        }
+        .season-badge {
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.68rem;
+            font-weight: 600;
+        }
+        .season-spring { background: #064e3b; color: #6ee7b7; }
+        .season-summer { background: #713f12; color: #fde047; }
+        .season-autumn { background: #7c2d12; color: #fdba74; }
+        .season-winter { background: #1e3a8a; color: #93c5fd; }
     </style>
 </head>
 <body>
 
-    <div id="hud">
-        <span>Population: <b id="countPop">0</b></span>
-        <span>Taxa: <b id="countSpecies">0</b></span>
-        <span><span id="seasonBadge" class="season-tag season-spring">SPRING</span></span>
-        <span>Velocity: <b id="avgSpeed">0.00</b></span>
-        <span>Sensory Range: <b id="avgSight">0px</b></span>
-        <span>Dominant: <b id="domSpecies">None</b></span>
-    </div>
+    <div class="app-shell">
+        <!-- Viewport Section -->
+        <div class="viewport-section">
+            <div class="header-bar">
+                <div>CYCLE: <b id="lblCycle">1</b> (<span id="lblSeason" class="season-badge season-spring">SPRING</span>)</div>
+                <div>POPULATION: <b id="lblTotalPop">0</b></div>
+                <div>TAXA: <b id="lblTaxaCount">0</b></div>
+                <div>SPEED: <b id="lblSimSpeed">1.0x</b></div>
+            </div>
 
-    <canvas id="dish" width="700" height="700"></canvas>
-
-    <div id="speciesPanel">
-        <div class="sp-header">
-            <span>Phylogeny / Active Taxa</span>
-            <span>Count</span>
+            <div class="canvas-container">
+                <canvas id="dishCanvas" width="660" height="660"></canvas>
+            </div>
         </div>
-        <div id="speciesList"></div>
-    </div>
 
-    <div id="hint">Click or drag inside viewport to distribute nutrient clusters</div>
+        <!-- Sidebar Dashboard -->
+        <div class="side-dashboard">
+            <!-- Real-Time Telemetry & Population Dynamics Chart -->
+            <div class="card">
+                <div class="card-header">
+                    <span>Population Dynamics (Lotka-Volterra)</span>
+                    <span id="lblDominantTaxon" style="color: #38bdf8;">None</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chartCanvas" width="296" height="80"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <span><span class="legend-dot" style="background:#10b981;"></span>Food</span>
+                    <span><span class="legend-dot" style="background:#38bdf8;"></span>Herb</span>
+                    <span><span class="legend-dot" style="background:#ef4444;"></span>Carn</span>
+                    <span><span class="legend-dot" style="background:#f59e0b;"></span>Scav</span>
+                    <span><span class="legend-dot" style="background:#f43f5e;"></span>Sick</span>
+                    <span><span class="legend-dot" style="background:#34d399;"></span>Immune</span>
+                </div>
+                <div class="chart-legend" style="border-top: 1px solid #212936; padding-top: 4px; margin-top: 4px;">
+                    <span style="color: #94a3b8;"><span class="legend-dot" style="background:#38bdf8;"></span>Healthy</span>
+                    <span style="color: #f87171;"><span class="legend-dot" style="background:#ef4444;"></span>Fever (Infected)</span>
+                    <span style="color: #6ee7b7;"><span class="legend-dot" style="background:#34d399;"></span>Immune Sheath</span>
+                </div>
+            </div>
+
+            <!-- Organism Real-Time Inspector Card -->
+            <div class="card">
+                <div class="card-header">
+                    <span>Organism Telemetry Inspector</span>
+                    <span id="lblInspectMode" style="color: #6ee7b7; font-size: 0.68rem; cursor: pointer;" title="Click to deselect">LIVE TRACK [DESELECT]</span>
+                </div>
+                <div class="inspector-body" id="inspectorContent">
+                    <div style="color: #64748b; text-align: center; padding: 12px 0;">Click any organism in the viewport to inspect its genome, lineage, and live state.</div>
+                </div>
+            </div>
+
+            <!-- Simulation Controls -->
+            <div class="card">
+                <div class="card-header">
+                    <span>Simulation Controls</span>
+                </div>
+                <div class="btn-group">
+                    <button class="action-btn" id="btnPause">PAUSE</button>
+                    <button class="action-btn active" data-speed="1">1X</button>
+                    <button class="action-btn" data-speed="2">2X</button>
+                    <button class="action-btn" data-speed="4">4X</button>
+                </div>
+
+                <div class="card-header" style="margin-top: 6px;">
+                    <span>Intervention Tool</span>
+                </div>
+                <div class="tool-selector">
+                    <button class="action-btn active" data-tool="food">Feed Nutrients</button>
+                    <button class="action-btn" data-tool="herb">Add Herbivore</button>
+                    <button class="action-btn" data-tool="carn">Add Carnivore</button>
+                    <button class="action-btn" data-tool="scav">Add Scavenger</button>
+                    <button class="action-btn" data-tool="pathogen">Infect Pathogen</button>
+                    <button class="action-btn" id="btnToggleReefs" style="grid-column: span 2;">REEF BARRIERS: ACTIVE</button>
+                </div>
+            </div>
+
+            <!-- Ecological Averages -->
+            <div class="card">
+                <div class="card-header"><span>Genome Averages</span></div>
+                <div class="stat-grid">
+                    <div class="stat-item"><span>Avg Velocity:</span><b id="avgVelocity">0.00</b></div>
+                    <div class="stat-item"><span>Avg Sensory Cone:</span><b id="avgSensory">0px</b></div>
+                    <div class="stat-item"><span>Avg Biomass:</span><b id="avgSize">0.00</b></div>
+                    <div class="stat-item"><span>Avg Camouflage:</span><b id="avgCamo">0%</b></div>
+                    <div class="stat-item"><span>Avg Immunity:</span><b id="avgImmunity">0%</b></div>
+                    <div class="stat-item"><span>Avg Symbiosis:</span><b id="avgSymbiosis" style="color: #38bdf8;">0%</b></div>
+                    <div class="stat-item"><span>Active Sickness:</span><b id="valOutbreak" style="color: #f43f5e;">0</b></div>
+                    <div class="stat-item"><span>Active Bonds:</span><b id="valMutualists" style="color: #38bdf8;">0</b></div>
+                    <div class="stat-item" style="grid-column: span 2;"><span>Herd Resistance:</span><b id="valHerdImmunity" style="color: #34d399;">0%</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        const canvas = document.getElementById('dish');
+        const canvas = document.getElementById('dishCanvas');
         const ctx = canvas.getContext('2d');
         const R = canvas.width / 2;
         const CX = R, CY = R;
 
-        let isMouseDown = false;
-        let seasonTick = 0;
+        const chartCanvas = document.getElementById('chartCanvas');
+        const cctx = chartCanvas.getContext('2d');
+
+        let isPaused = false;
+        let simSpeed = 1;
+        let activeTool = 'food';
+        let reefsEnabled = true;
+        const reefs = [
+            { x: CX, y: CY - 105, r: 62 },
+            { x: CX, y: CY + 105, r: 62 }
+        ];
+        let selectedOrganism = null;
+        let cycle = 1;
+        let tick = 0;
+
         const seasons = ['SPRING', 'SUMMER', 'AUTUMN', 'WINTER'];
-        let currentSeasonIdx = 0;
-        let seasonFoodCap = 80;
+        let seasonIdx = 0;
+        let carryingCapacity = 85;
 
+        // Telemetry History for Graph
+        const historyLength = 74;
+        let historyData = {
+            food: new Array(historyLength).fill(0),
+            herb: new Array(historyLength).fill(0),
+            carn: new Array(historyLength).fill(0),
+            scav: new Array(historyLength).fill(0),
+            infected: new Array(historyLength).fill(0),
+            immune: new Array(historyLength).fill(0)
+        };
+
+        // Entities
         let foods = [];
-        let carrion = [];
-
-        function spawnFood(x, y) {
-            foods.push({
-                x: x || CX + (Math.random() - 0.5) * (R * 1.58),
-                y: y || CY + (Math.random() - 0.5) * (R * 1.58),
-                r: 2.2,
-                eaten: false
+        let carrions = [];
+        let rippleRings = [];
+        let fluidParticles = [];
+        for (let i = 0; i < 45; i++) {
+            fluidParticles.push({
+                x: CX + (Math.random() - 0.5) * (R * 1.55),
+                y: CY + (Math.random() - 0.5) * (R * 1.55),
+                vx: (Math.random() - 0.5) * 0.18,
+                vy: (Math.random() - 0.5) * 0.18,
+                size: Math.random() * 1.2 + 0.6,
+                alpha: Math.random() * 0.20 + 0.08
             });
         }
 
-        function addCarrion(x, y) {
-            if (carrion.length < 30) {
-                carrion.push({ x, y, r: 3.0, eaten: false });
+        function addRipple(x, y, r, g, b) {
+            if (rippleRings.length < 24) {
+                rippleRings.push({ x, y, r: 3, maxR: 20, alpha: 0.5, rCol: r, gCol: g, bCol: b });
+            }
+        }
+        let organisms = [];
+
+        function spawnFood(x, y) {
+            // Micro-Basin Ecological Asymmetry (West: Dense Flora, East: Pelagic Open)
+            let fx = x, fy = y;
+            if (!fx || !fy) {
+                const inWest = Math.random() < 0.62; // West Basin has denser vegetation
+                const xOffset = inWest ? -(Math.random() * 120 + 30) : (Math.random() * 120 + 30);
+                fx = CX + xOffset;
+                fy = CY + (Math.random() - 0.5) * (R * 1.4);
+                // Ensure inside circular boundary
+                if (Math.hypot(fx - CX, fy - CY) > R - 20) {
+                    fx = CX + (Math.random() - 0.5) * (R * 1.2);
+                    fy = CY + (Math.random() - 0.5) * (R * 1.2);
+                }
+            }
+            foods.push({
+                x: fx,
+                y: fy,
+                r: 2.3,
+                consumed: false
+            });
+        }
+
+        function addCarrion(x, y, amount) {
+            if (carrions.length < 28) {
+                carrions.push({
+                    x, y,
+                    r: Math.max(2.2, Math.min(5.5, amount * 0.38)),
+                    maxR: Math.max(2.2, Math.min(5.5, amount * 0.38)),
+                    decay: 450, // Saprotrophic natural decomposition lifespan
+                    consumed: false
+                });
             }
         }
 
+        // === GENOME & SPECIATION ===
         class DNA {
             constructor(parent = null) {
                 if (parent) {
                     const delta = (scale) => (Math.random() - 0.5) * scale;
-                    this.speed = Math.max(0.6, Math.min(4.8, parent.speed + delta(0.32)));
-                    this.sight = Math.max(30, Math.min(220, parent.sight + delta(12)));
-                    this.size  = Math.max(3.8, Math.min(12.5, parent.size + delta(0.5)));
+                    this.speed = Math.max(0.6, Math.min(4.8, parent.speed + delta(0.35)));
+                    this.sight = Math.max(30, Math.min(220, parent.sight + delta(14)));
+                    this.size  = Math.max(3.8, Math.min(12.0, parent.size + delta(0.6)));
                     this.hue   = (parent.hue + delta(18) + 360) % 360;
-                    this.diet  = Math.max(0, Math.min(1, parent.diet + delta(0.05)));
+                    this.diet  = Math.max(0, Math.min(1, parent.diet + delta(0.06)));
+                    this.immunity = Math.max(0.05, Math.min(0.95, parent.immunity + delta(0.08)));
+                    this.symbiosisAffinity = Math.max(0.0, Math.min(1.0, (parent.symbiosisAffinity || 0.15) + delta(0.08)));
                     this.generation = parent.generation + 1;
                     this.speciesId = parent.speciesId;
                     this.founder = parent.founder;
                 } else {
-                    this.speed = 1.1 + Math.random() * 1.3;
+                    this.speed = 1.1 + Math.random() * 1.4;
                     this.sight = 45 + Math.random() * 60;
-                    this.size  = 4.8 + Math.random() * 2.2;
+                    this.size  = 5.0 + Math.random() * 2.5;
                     this.diet  = Math.random() < 0.22 ? 0.85 : (Math.random() < 0.32 ? 0.5 : 0.15);
-                    this.hue   = this.diet > 0.65 ? 12 : (this.diet < 0.35 ? 160 : 44);
+                    this.immunity = 0.20 + Math.random() * 0.40;
+                    this.symbiosisAffinity = 0.05 + Math.random() * 0.30;
+                    this.hue   = this.diet > 0.65 ? 12 : (this.diet < 0.35 ? 195 : 44);
                     this.generation = 1;
                     const tag = this.diet > 0.65 ? 'Apex' : (this.diet < 0.35 ? 'Phyto' : 'Scav');
                     this.speciesId = `${tag}-1`;
@@ -191,14 +439,16 @@
                 const dSpd = Math.pow((this.speed - other.speed) / 4.0, 2);
                 const dSight = Math.pow((this.sight - other.sight) / 180.0, 2);
                 const dDiet = Math.pow(this.diet - other.diet, 2) * 2.5;
-                return Math.sqrt(dSpd + dSight + dDiet);
+                const dImm  = Math.pow(this.immunity - (other.immunity || 0.3), 2) * 1.5;
+                const dSym  = Math.pow((this.symbiosisAffinity || 0.15) - (other.symbiosisAffinity || 0.15), 2) * 1.2;
+                return Math.sqrt(dSpd + dSight + dDiet + dImm + dSym);
             }
         }
 
-        class Phylogeny {
+        class PhylogenyTracker {
             constructor() {
                 this.species = new Map();
-                this.nextId = 2;
+                this.nextSpeciesNumber = 2;
             }
 
             register(id, dna) {
@@ -210,19 +460,19 @@
             testSpeciation(dna) {
                 const current = this.species.get(dna.speciesId);
                 if (current && dna.distanceTo(current.founder) > 0.40) {
-                    const prefix = dna.diet > 0.65 ? 'Apex' : (dna.diet < 0.35 ? 'Phyto' : 'Scav');
-                    const newId = `${prefix}-${this.nextId++}`;
+                    const tag = dna.diet > 0.65 ? 'Apex' : (dna.diet < 0.35 ? 'Phyto' : 'Scav');
+                    const newId = `${tag}-${this.nextSpeciesNumber++}`;
                     dna.speciesId = newId;
                     dna.founder = dna;
                     this.species.set(newId, { id: newId, founder: dna, count: 1, hue: dna.hue, gen: dna.generation });
                 }
             }
 
-            update(creatures) {
+            update(orgs) {
                 for (let s of this.species.values()) s.count = 0;
-                for (let c of creatures) {
-                    if (c.alive) {
-                        const s = this.species.get(c.dna.speciesId);
+                for (let o of orgs) {
+                    if (o.alive) {
+                        const s = this.species.get(o.dna.speciesId);
                         if (s) s.count++;
                     }
                 }
@@ -234,80 +484,124 @@
                     .sort((a, b) => b.count - a.count);
             }
         }
-        const phylogeny = new Phylogeny();
+        const phylogeny = new PhylogenyTracker();
 
-        class Creature {
-            constructor(x, y, parentDNA = null) {
+        // === ORGANISM WITH DISTINCT SHAPES & BEHAVIORS ===
+        class Organism {
+            constructor(x, y, parentDNA = null, forcedDiet = null) {
                 this.x = x;
                 this.y = y;
                 this.vx = (Math.random() - 0.5) * 1.8;
                 this.vy = (Math.random() - 0.5) * 1.8;
                 this.dna = new DNA(parentDNA);
+                if (forcedDiet !== null) this.dna.diet = forcedDiet;
+
                 phylogeny.testSpeciation(this.dna);
                 phylogeny.register(this.dna.speciesId, this.dna);
 
                 this.energy = 90;
                 this.alive = true;
+                this.age = 0;
+                this.offspringCount = 0;
+                this.actionState = 'FORAGING';
                 this.tail = [];
+                this.ciliaPhase = Math.random() * Math.PI * 2;
+                this.infected = false;
+                this.infectionTimer = 0;
+                this.hasAntibodies = false;
+                this.partner = null;
+                this.symbiosisBond = 0; // Ticks spent in mutualist exchange
+
                 this.niche = this.dna.diet > 0.65 ? 'carnivore' : (this.dna.diet < 0.35 ? 'herbivore' : 'scavenger');
             }
 
             update(season) {
+                this.age++;
+                this.ciliaPhase += 0.2;
+
                 const climateBurn = season === 'WINTER' ? 1.35 : 1.0;
-                const metabolicRate = (0.042 + (this.dna.speed * 0.03) + (this.dna.size * 0.011)) * climateBurn;
+                const immuneTax = this.dna.immunity * 0.012; // Metabolic cost of maintaining robust immune defenses
+                const symbiosisTax = (this.dna.symbiosisAffinity || 0.15) * 0.006; // Enzyme synthesis for cross-feeding
+                const metabolicRate = (0.042 + (this.dna.speed * 0.03) + (this.dna.size * 0.012) + immuneTax + symbiosisTax) * climateBurn;
                 this.energy -= metabolicRate;
+
+                // Pathogen Sickness and Immunity Recovery
+                if (this.infected) {
+                    this.energy -= 0.065; // Cellular fever and viral damage
+                    this.infectionTimer++;
+                    if (this.infectionTimer > 170) {
+                        // Successful immune response and antibody formation
+                        this.infected = false;
+                        this.hasAntibodies = true;
+                        if (typeof addRipple === 'function') addRipple(this.x, this.y, 16, 185, 129);
+                    }
+                }
 
                 if (this.energy <= 0) {
                     this.alive = false;
-                    addCarrion(this.x, this.y);
+                    addCarrion(this.x, this.y, this.dna.size);
                     return;
                 }
 
                 let steerX = 0, steerY = 0;
                 let hasTarget = false;
 
+                // --- HERBIVORE BEHAVIOR ---
                 if (this.niche === 'herbivore') {
-                    let pred = null, minPred = this.dna.sight * 0.82;
+                    let predator = null, minPred = this.dna.sight * 0.82;
                     let herdX = 0, herdY = 0, herdCount = 0;
 
-                    for (let c of creatures) {
-                        if (!c.alive || c === this) continue;
-                        const d = Math.hypot(c.x - this.x, c.y - this.y);
-                        if (c.niche === 'carnivore' && d < minPred) { minPred = d; pred = c; }
-                        else if (c.niche === 'herbivore' && d < 36) {
-                            herdX += c.vx; herdY += c.vy; herdCount++;
+                    for (let other of organisms) {
+                        if (!other.alive || other === this) continue;
+                        const d = Math.hypot(other.x - this.x, other.y - this.y);
+                        if (other.niche === 'carnivore' && d < minPred) {
+                            minPred = d;
+                            predator = other;
+                        } else if (other.niche === 'herbivore' && d < 38) {
+                            herdX += other.vx; herdY += other.vy; herdCount++;
                         }
                     }
 
-                    if (pred) {
-                        steerX = (this.x - pred.x) / minPred;
-                        steerY = (this.y - pred.y) / minPred;
+                    if (predator) {
+                        steerX = (this.x - predator.x) / minPred;
+                        steerY = (this.y - predator.y) / minPred;
                         hasTarget = true;
+                        this.actionState = 'FLEEING PREDATOR';
                     } else {
                         if (herdCount > 0) {
                             steerX += (herdX / herdCount) * 0.18;
                             steerY += (herdY / herdCount) * 0.18;
                         }
-                        const food = this.findFood();
+                        const food = this.findClosest(foods, this.dna.sight);
                         if (food) {
                             const d = Math.hypot(food.x - this.x, food.y - this.y);
-                            steerX = (food.x - this.x) / d;
-                            steerY = (food.y - this.y) / d;
+                            steerX += (food.x - this.x) / d;
+                            steerY += (food.y - this.y) / d;
                             hasTarget = true;
+                            this.actionState = 'FORAGING FOOD';
                             if (d < this.dna.size + food.r) {
                                 this.energy = Math.min(210, this.energy + 36);
-                                food.eaten = true;
+                                food.consumed = true; addRipple(food.x, food.y, 56, 189, 248);
                             }
+                        } else {
+                            this.actionState = herdCount > 0 ? 'HERD ROAMING' : 'EXPLORING';
                         }
                     }
-                } else if (this.niche === 'carnivore') {
+                }
+
+                // --- CARNIVORE BEHAVIOR ---
+                else if (this.niche === 'carnivore') {
                     let prey = null, minPrey = this.dna.sight;
-                    for (let c of creatures) {
-                        if (c.alive && c.niche === 'herbivore') {
-                            const d = Math.hypot(c.x - this.x, c.y - this.y);
-                            const camo = 1.0 - (Math.abs(c.dna.hue - 215) / 180) * 0.42;
+                    for (let other of organisms) {
+                        if (other.alive && other.niche === 'herbivore') {
+                            const d = Math.hypot(other.x - this.x, other.y - this.y);
+                            // Camouflage check (Hue similarity to dark background ~215)
+                            const camo = 1.0 - (Math.abs(other.dna.hue - 215) / 180) * 0.42;
                             const effectiveDist = d / camo;
-                            if (effectiveDist < minPrey) { minPrey = effectiveDist; prey = c; }
+                            if (effectiveDist < minPrey) {
+                                minPrey = effectiveDist;
+                                prey = other;
+                            }
                         }
                     }
 
@@ -315,28 +609,36 @@
                         steerX = (prey.x - this.x) / minPrey;
                         steerY = (prey.y - this.y) / minPrey;
                         hasTarget = true;
+                        this.actionState = `HUNTING ${prey.dna.speciesId}`;
                         if (Math.hypot(prey.x - this.x, prey.y - this.y) < this.dna.size + prey.dna.size) {
-                            prey.alive = false;
+                            prey.alive = false; addRipple(prey.x, prey.y, 248, 113, 113);
                             this.energy = Math.min(250, this.energy + 75);
+                            this.actionState = 'FEEDING ON PREY';
                         }
-                    }
-                } else {
-                    let targetCarrion = null, minC = this.dna.sight * 1.1;
-                    for (let cr of carrion) {
-                        const d = Math.hypot(cr.x - this.x, cr.y - this.y);
-                        if (d < minC) { minC = d; targetCarrion = cr; }
-                    }
-                    if (targetCarrion) {
-                        steerX = (targetCarrion.x - this.x) / minC;
-                        steerY = (targetCarrion.y - this.y) / minC;
-                        hasTarget = true;
-                        if (minC < this.dna.size + targetCarrion.r) {
-                            this.energy = Math.min(190, this.energy + 32);
-                            targetCarrion.eaten = true;
-                        }
+                    } else {
+                        this.actionState = 'STALKING PREY';
                     }
                 }
 
+                // --- SCAVENGER BEHAVIOR ---
+                else {
+                    const car = this.findClosest(carrions, this.dna.sight * 1.15);
+                    if (car) {
+                        const d = Math.hypot(car.x - this.x, car.y - this.y);
+                        steerX = (car.x - this.x) / d;
+                        steerY = (car.y - this.y) / d;
+                        hasTarget = true;
+                        this.actionState = 'RECYCLING CARRION';
+                        if (d < this.dna.size + car.r) {
+                            this.energy = Math.min(190, this.energy + 32);
+                            car.consumed = true;
+                        }
+                    } else {
+                        this.actionState = 'PATROLLING BOTTOM';
+                    }
+                }
+
+                // Steering Physics
                 if (hasTarget) {
                     this.vx += steerX * 0.15;
                     this.vy += steerY * 0.15;
@@ -354,33 +656,120 @@
                 this.x += this.vx;
                 this.y += this.vy;
 
+                // Pathogen Contact Transmission (Optimized Squared Distance)
+                if (this.infected) {
+                    for (let other of organisms) {
+                        if (!other.alive || other === this || other.infected || other.hasAntibodies) continue;
+                        const dxC = other.x - this.x;
+                        const dyC = other.y - this.y;
+                        const reach = this.dna.size + other.dna.size + 4;
+                        if (dxC * dxC + dyC * dyC < reach * reach) {
+                            const contagionProb = (1.0 - other.dna.immunity) * 0.42;
+                            if (Math.random() < contagionProb) {
+                                other.infected = true;
+                                other.infectionTimer = 0;
+                                if (typeof addRipple === 'function') addRipple(other.x, other.y, 239, 68, 68);
+                            }
+                        }
+                    }
+                }
+
+                // Interspecific Symbiosis & Mutualistic Cross-Feeding (System Agent v2.2.0)
+                this.partner = null;
+                if (!this.infected && this.dna.symbiosisAffinity > 0.20) {
+                    let bestPartner = null;
+                    let minPartnerDistSq = 48 * 48;
+                    for (let other of organisms) {
+                        if (!other.alive || other === this || other.infected) continue;
+                        // Mutualism occurs between complementary trophic niches (e.g., Herbivore & Scavenger)
+                        if (this.niche !== other.niche && this.niche !== 'carnivore' && other.niche !== 'carnivore') {
+                            const dxP = other.x - this.x;
+                            const dyP = other.y - this.y;
+                            const dSq = dxP * dxP + dyP * dyP;
+                            if (dSq < minPartnerDistSq) {
+                                minPartnerDistSq = dSq;
+                                bestPartner = other;
+                            }
+                        }
+                    }
+
+                    if (bestPartner) {
+                        this.partner = bestPartner;
+                        this.symbiosisBond = Math.min(100, this.symbiosisBond + 1);
+                        // Mutual metabolic byproduct exchange
+                        const exchangeRate = 0.055 * (this.dna.symbiosisAffinity + bestPartner.dna.symbiosisAffinity) * 0.5;
+                        this.energy = Math.min(220, this.energy + exchangeRate);
+                        bestPartner.energy = Math.min(220, bestPartner.energy + exchangeRate * 0.5);
+
+                        // Coordinated swimming: gentle cohesion pull
+                        const dxP = bestPartner.x - this.x;
+                        const dyP = bestPartner.y - this.y;
+                        const distP = Math.sqrt(minPartnerDistSq) || 1;
+                        if (distP > this.dna.size + bestPartner.dna.size + 6) {
+                            this.vx += (dxP / distP) * 0.04;
+                            this.vy += (dyP / distP) * 0.04;
+                        }
+                    } else {
+                        this.symbiosisBond = Math.max(0, this.symbiosisBond - 1);
+                    }
+                } else {
+                    this.symbiosisBond = 0;
+                }
+
+                // Circular Dish Boundaries
+                // Mineral Reef Collisions (Optimized Early-Out Squared Distance)
+                if (reefsEnabled) {
+                    for (let rf of reefs) {
+                        const dxR = this.x - rf.x;
+                        const dyR = this.y - rf.y;
+                        const reachR = rf.r + this.dna.size;
+                        if (dxR * dxR + dyR * dyR < reachR * reachR) {
+                            const angRf = Math.atan2(dyR, dxR);
+                            this.vx = Math.cos(angRf) * this.dna.speed * 0.75;
+                            this.vy = Math.sin(angRf) * this.dna.speed * 0.75;
+                            this.x = rf.x + Math.cos(angRf) * (reachR + 1);
+                            this.y = rf.y + Math.sin(angRf) * (reachR + 1);
+                        }
+                    }
+                }
+
                 const dCenter = Math.hypot(this.x - CX, this.y - CY);
                 if (dCenter > R - this.dna.size - 8) {
                     const ang = Math.atan2(this.y - CY, this.x - CX);
-                    this.vx -= Math.cos(ang) * 0.42;
-                    this.vy -= Math.sin(ang) * 0.42;
+                    this.vx -= Math.cos(ang) * 0.45;
+                    this.vy -= Math.sin(ang) * 0.45;
                 }
 
                 this.tail.unshift({ x: this.x, y: this.y });
                 if (this.tail.length > 5) this.tail.pop();
             }
 
-            findFood() {
-                let closest = null, minD = this.dna.sight;
-                for (let f of foods) {
-                    const d = Math.hypot(f.x - this.x, f.y - this.y);
-                    if (d < minD) { minD = d; closest = f; }
+            findClosest(items, maxRange) {
+                let closest = null;
+                let minSq = maxRange * maxRange;
+                for (let it of items) {
+                    if (it.consumed) continue;
+                    const dx = it.x - this.x;
+                    const dy = it.y - this.y;
+                    const distSq = dx * dx + dy * dy;
+                    if (distSq < minSq) {
+                        minSq = distSq;
+                        closest = it;
+                    }
                 }
                 return closest;
             }
 
             canDivide() {
-                return this.energy >= (this.niche === 'carnivore' ? 180 : 135);
+                const threshold = this.niche === 'carnivore' ? 180 : 135;
+                return this.energy >= threshold;
             }
 
             divide() {
                 this.energy *= 0.5;
-                return new Creature(
+                this.offspringCount++;
+                this.actionState = 'CELL DIVISION';
+                return new Organism(
                     this.x + (Math.random() - 0.5) * 8,
                     this.y + (Math.random() - 0.5) * 8,
                     this.dna
@@ -389,138 +778,515 @@
 
             draw() {
                 ctx.save();
+                const angle = Math.atan2(this.vy, this.vx);
+
+                // Highlight Reticle if Selected
+                if (selectedOrganism === this) {
+                    ctx.strokeStyle = '#38bdf8';
+                    ctx.lineWidth = 1.5;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.dna.size + 8, 0, Math.PI * 2);
+                    ctx.stroke();
+
+                    // Crosshair Ticks
+                    ctx.beginPath();
+                    ctx.moveTo(this.x - this.dna.size - 12, this.y); ctx.lineTo(this.x - this.dna.size - 5, this.y);
+                    ctx.moveTo(this.x + this.dna.size + 5, this.y); ctx.lineTo(this.x + this.dna.size + 12, this.y);
+                    ctx.moveTo(this.x, this.y - this.dna.size - 12); ctx.lineTo(this.x, this.y - this.dna.size - 5);
+                    ctx.moveTo(this.x, this.y + this.dna.size + 5); ctx.lineTo(this.x, this.y + this.dna.size + 12);
+                    ctx.stroke();
+
+                    // Draw Vision Cone
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.dna.sight, 0, Math.PI * 2);
+                    ctx.strokeStyle = 'rgba(56, 189, 248, 0.15)';
+                    ctx.stroke();
+                }
+
+                // Render Tail Ribbon
                 for (let i = 0; i < this.tail.length; i++) {
                     const p = this.tail[i];
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, this.dna.size * (1 - i / 7) * 0.75, 0, Math.PI * 2);
-                    ctx.fillStyle = `hsla(${this.dna.hue}, 70%, 50%, ${0.2 - i * 0.03})`;
+                    ctx.fillStyle = `hsla(${this.dna.hue}, 70%, 50%, ${0.18 - i * 0.03})`;
                     ctx.fill();
                 }
 
                 ctx.translate(this.x, this.y);
-                const angle = Math.atan2(this.vy, this.vx);
                 ctx.rotate(angle);
 
-                ctx.beginPath();
-                ctx.arc(0, 0, this.dna.size, 0, Math.PI * 2);
-                ctx.fillStyle = `hsl(${this.dna.hue}, 75%, 52%)`;
-                ctx.fill();
-                ctx.strokeStyle = 'rgba(255,255,255,0.7)';
-                ctx.lineWidth = 0.8;
-                ctx.stroke();
+                // Organic Membrane Elasticity (Squash & Stretch)
+                const spdRatio = Math.hypot(this.vx, this.vy) / (this.dna.speed || 1);
+                const stretch = Math.min(1.32, Math.max(0.85, 1.0 + (spdRatio - 1.0) * 0.20));
+                const squash = 1.0 / Math.sqrt(stretch);
+                ctx.scale(stretch, squash);
 
-                ctx.beginPath();
-                ctx.arc(0, 0, this.dna.size * 0.38, 0, Math.PI * 2);
-                ctx.fillStyle = '#ffffff';
-                ctx.fill();
+                // Pathogen Fever & Antibody Sheath Visuals (Looks Agent)
+                if (this.hasAntibodies) {
+                    ctx.strokeStyle = 'rgba(52, 211, 153, 0.75)';
+                    ctx.lineWidth = 1.5;
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.dna.size * 1.32, 0, Math.PI * 2);
+                    ctx.stroke();
+                } else if (this.infected) {
+                    const fever = Math.sin(this.ciliaPhase * 2.8) * 0.5 + 0.5;
+                    ctx.strokeStyle = 'rgba(239, 68, 68, ' + (0.45 + fever * 0.45) + ')';
+                    ctx.lineWidth = 2.0;
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.dna.size * (1.2 + fever * 0.15), 0, Math.PI * 2);
+                    ctx.stroke();
+                }
+
+                // --- MORPHOLOGY VARIATIONS BASED ON NICHE ---
+                if (this.niche === 'carnivore') {
+                    // Apex Predator: Spiky/Triangular Arrowhead with Jaws
+                    ctx.beginPath();
+                    ctx.moveTo(this.dna.size * 1.5, 0);
+                    ctx.lineTo(-this.dna.size, -this.dna.size * 0.9);
+                    ctx.lineTo(-this.dna.size * 0.5, 0);
+                    ctx.lineTo(-this.dna.size, this.dna.size * 0.9);
+                    ctx.closePath();
+                    ctx.fillStyle = `hsl(${this.dna.hue}, 85%, 52%)`;
+                    ctx.fill();
+                    ctx.strokeStyle = '#f87171';
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+
+                    // Fierce forward eyes
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(this.dna.size * 0.6, -2.5, 2, 2);
+                    ctx.fillRect(this.dna.size * 0.6, 1.5, 2, 2);
+                } else if (this.niche === 'herbivore') {
+                    // Herbivore: Soft Rounded Cell with Swimming Cilia
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, this.dna.size * 1.25, this.dna.size * 0.9, 0, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsl(${this.dna.hue}, 75%, 48%)`;
+                    ctx.fill();
+                    ctx.strokeStyle = '#38bdf8';
+                    ctx.lineWidth = 0.8;
+                    ctx.stroke();
+
+                    // Cilia (Swimming micro-hairs)
+                    ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+                    ctx.lineWidth = 0.7;
+                    for (let a = -Math.PI / 2; a <= Math.PI / 2; a += Math.PI / 4) {
+                        const wave = Math.sin(this.ciliaPhase + a) * 2.5;
+                        ctx.beginPath();
+                        ctx.moveTo(-this.dna.size * 0.8, a * 4);
+                        ctx.lineTo(-this.dna.size * 1.4 + wave, a * 5);
+                        ctx.stroke();
+                    }
+
+                    // Soft Nucleus
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.dna.size * 0.4, 0, Math.PI * 2);
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fill();
+                } else {
+                    // Scavenger: Amoeboid Blob
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.dna.size * 1.05, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsl(${this.dna.hue}, 80%, 46%)`;
+                    ctx.fill();
+                    ctx.strokeStyle = '#f59e0b';
+                    ctx.lineWidth = 0.9;
+                    ctx.stroke();
+
+                    // Secondary Nuclei
+                    ctx.fillStyle = '#fde68a';
+                    ctx.fillRect(-2, -2, 4, 4);
+                }
 
                 ctx.restore();
             }
         }
 
-        let creatures = [];
-
-        function init() {
-            creatures = [];
+        // === SIMULATION CORE ===
+        function initSimulation() {
             foods = [];
-            carrion = [];
-            for (let i = 0; i < 28; i++) {
-                creatures.push(new Creature(
-                    CX + (Math.random() - 0.5) * (R * 1.2),
-                    CY + (Math.random() - 0.5) * (R * 1.2)
-                ));
-            }
+            carrions = [];
+            organisms = [];
+            selectedOrganism = null;
+            cycle = 1;
+            tick = 0;
+
+            // Seed balanced trophic community
+            for (let i = 0; i < 22; i++) organisms.push(new Organism(CX + (Math.random() - 0.5) * R, CY + (Math.random() - 0.5) * R, null, 0.15));
+            for (let i = 0; i < 4; i++)  organisms.push(new Organism(CX + (Math.random() - 0.5) * R, CY + (Math.random() - 0.5) * R, null, 0.85));
+            for (let i = 0; i < 5; i++)  organisms.push(new Organism(CX + (Math.random() - 0.5) * R, CY + (Math.random() - 0.5) * R, null, 0.50));
+
             for (let i = 0; i < 45; i++) spawnFood();
         }
-        init();
+        initSimulation();
 
-        canvas.addEventListener('mousedown', e => { isMouseDown = true; feed(e); });
-        window.addEventListener('mouseup', () => isMouseDown = false);
-        canvas.addEventListener('mousemove', e => { if (isMouseDown) feed(e); });
-
-        function feed(e) {
+        // === USER CLICK & SELECTION INTERACTION ===
+        canvas.addEventListener('click', e => {
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            if (Math.hypot(x - CX, y - CY) < R - 15) {
-                for (let i = 0; i < 3; i++) spawnFood(x + (Math.random() - 0.5) * 16, y + (Math.random() - 0.5) * 16);
+
+            // Check if user clicked an organism
+            let clickedOrg = null;
+            for (let o of organisms) {
+                if (o.alive && Math.hypot(o.x - x, o.y - y) < o.dna.size + 10) {
+                    clickedOrg = o;
+                    break;
+                }
             }
+
+            if (clickedOrg) {
+                selectedOrganism = clickedOrg;
+                updateInspector();
+                return;
+            }
+
+            // Otherwise, tool interaction
+            if (activeTool === 'food') {
+                for (let i = 0; i < 4; i++) spawnFood(x + (Math.random() - 0.5) * 20, y + (Math.random() - 0.5) * 20);
+            } else if (activeTool === 'herb') {
+                organisms.push(new Organism(x, y, null, 0.15));
+            } else if (activeTool === 'carn') {
+                organisms.push(new Organism(x, y, null, 0.85));
+            } else if (activeTool === 'scav') {
+                organisms.push(new Organism(x, y, null, 0.50));
+            } else if (activeTool === 'pathogen') {
+                for (let o of organisms) {
+                    if (o.alive && Math.hypot(o.x - x, o.y - y) < 45) {
+                        o.infected = true;
+                        o.infectionTimer = 0;
+                        if (typeof addRipple === 'function') addRipple(o.x, o.y, 239, 68, 68);
+                    }
+                }
+            }
+        });
+
+        // Speed and Control Buttons
+        document.querySelectorAll('button[data-speed]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('button[data-speed]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                simSpeed = parseFloat(btn.dataset.speed);
+                document.getElementById('lblSimSpeed').textContent = `${simSpeed}X`;
+            });
+        });
+
+        const btnToggleReefs = document.getElementById('btnToggleReefs');
+        if (btnToggleReefs) {
+            btnToggleReefs.addEventListener('click', () => {
+                reefsEnabled = !reefsEnabled;
+                btnToggleReefs.textContent = reefsEnabled ? 'REEF BARRIERS: ACTIVE' : 'REEF BARRIERS: OFF';
+                btnToggleReefs.classList.toggle('active', reefsEnabled);
+            });
         }
 
-        function loop() {
-            seasonTick++;
-            if (seasonTick > 900) {
-                seasonTick = 0;
-                currentSeasonIdx = (currentSeasonIdx + 1) % seasons.length;
-                const sName = seasons[currentSeasonIdx];
-                const bEl = document.getElementById('seasonBadge');
+        const lblInspectMode = document.getElementById('lblInspectMode');
+        if (lblInspectMode) {
+            lblInspectMode.addEventListener('click', () => {
+                selectedOrganism = null;
+                updateInspector();
+            });
+        }
+
+        const btnPause = document.getElementById('btnPause');
+        btnPause.addEventListener('click', () => {
+            isPaused = !isPaused;
+            btnPause.classList.toggle('active', isPaused);
+            btnPause.textContent = isPaused ? 'RESUME' : 'PAUSE';
+        });
+
+        document.querySelectorAll('button[data-tool]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('button[data-tool]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeTool = btn.dataset.tool;
+            });
+        });
+
+        // === INSPECTOR CARD UPDATE ===
+        function updateInspector() {
+            const container = document.getElementById('inspectorContent');
+            if (!selectedOrganism || !selectedOrganism.alive) {
+                container.innerHTML = `<div style="color: #64748b; text-align: center; padding: 12px 0;">Organism perished or none selected. Click another to track.</div>`;
+                return;
+            }
+
+            const o = selectedOrganism;
+            const roleColor = o.niche === 'carnivore' ? '#ef4444' : (o.niche === 'herbivore' ? '#38bdf8' : '#f59e0b');
+            const camoPercent = Math.max(0, Math.min(100, Math.round((1.0 - (Math.abs(o.dna.hue - 215) / 180) * 0.42) * 100)));
+
+            container.innerHTML = `
+                <div class="inspector-row">
+                    <span style="color: ${roleColor}; font-weight: bold;">● ${o.dna.speciesId}</span>
+                    <span style="text-transform: uppercase;">${o.niche}</span>
+                </div>
+                <div class="inspector-row">
+                    <span>Current Goal:</span>
+                    <b style="color: #6ee7b7;">${o.actionState}</b>
+                </div>
+                <div class="inspector-row">
+                    <span>Energy Stores:</span>
+                    <b>${Math.round(o.energy)} / 200</b>
+                </div>
+                <div class="energy-bar-bg">
+                    <div class="energy-bar-fill" style="width: ${Math.min(100, (o.energy / 200) * 100)}%;"></div>
+                </div>
+                <div class="stat-grid" style="margin-top: 4px;">
+                    <div class="stat-item"><span>Generation:</span><b>G${o.dna.generation}</b></div>
+                    <div class="stat-item"><span>Offspring:</span><b>${o.offspringCount}</b></div>
+                    <div class="stat-item"><span>Velocity:</span><b>${o.dna.speed.toFixed(2)}</b></div>
+                    <div class="stat-item"><span>Sensory Radius:</span><b>${o.dna.sight.toFixed(0)}px</b></div>
+                    <div class="stat-item"><span>Biomass:</span><b>${o.dna.size.toFixed(1)}</b></div>
+                    <div class="stat-item"><span>Camouflage:</span><b>${camoPercent}%</b></div>
+                    <div class="stat-item"><span>Immunity:</span><b>${Math.round((o.dna.immunity || 0.3) * 100)}%</b></div>
+                    <div class="stat-item"><span>Symbiosis:</span><b>${Math.round((o.dna.symbiosisAffinity || 0) * 100)}%</b></div>
+                    <div class="stat-item"><span>Partner Bond:</span><b style="color: ${o.partner ? '#38bdf8' : '#64748b'};">${o.partner ? o.symbiosisBond + '%' : 'NONE'}</b></div>
+                    <div class="stat-item"><span>Health:</span><b style="color: ${o.infected ? '#ef4444' : (o.hasAntibodies ? '#10b981' : '#94a3b8')};">${o.infected ? 'INFECTED' : (o.hasAntibodies ? 'ANTIBODIES / IMMUNE' : 'HEALTHY')}</b></div>
+                </div>
+            `;
+        }
+
+        // === POPULATION DYNAMICS CHART RENDERING ===
+        function drawPopulationChart() {
+            cctx.fillStyle = '#0b0f16';
+            cctx.fillRect(0, 0, chartCanvas.width, chartCanvas.height);
+
+            // Draw Grid Lines
+            cctx.strokeStyle = '#1a2230';
+            cctx.lineWidth = 1;
+            cctx.beginPath();
+            cctx.moveTo(0, 40); cctx.lineTo(chartCanvas.width, 40);
+            cctx.stroke();
+
+            const maxVal = Math.max(50, ...historyData.food, ...historyData.herb, ...historyData.carn, ...historyData.scav);
+
+            function plotLine(arr, color, isDashed = false) {
+                cctx.strokeStyle = color;
+                cctx.lineWidth = 1.4;
+                if (isDashed) cctx.setLineDash([3, 3]);
+                else cctx.setLineDash([]);
+                cctx.beginPath();
+                const step = chartCanvas.width / (historyLength - 1);
+                for (let i = 0; i < historyLength; i++) {
+                    const y = chartCanvas.height - (arr[i] / maxVal) * (chartCanvas.height - 8) - 4;
+                    if (i === 0) cctx.moveTo(0, y);
+                    else cctx.lineTo(i * step, y);
+                }
+                cctx.stroke();
+                cctx.setLineDash([]);
+            }
+
+            plotLine(historyData.food, '#10b981');
+            plotLine(historyData.herb, '#38bdf8');
+            plotLine(historyData.carn, '#ef4444');
+            plotLine(historyData.scav, '#f59e0b');
+            plotLine(historyData.infected, '#f43f5e', true);
+            plotLine(historyData.immune, '#34d399');
+        }
+
+        // === MAIN ENGINE LOOP ===
+        function stepSimulation() {
+            tick++;
+            if (tick % 750 === 0) {
+                cycle++;
+                seasonIdx = (seasonIdx + 1) % seasons.length;
+                const sName = seasons[seasonIdx];
+                const bEl = document.getElementById('lblSeason');
                 bEl.textContent = sName;
-                bEl.className = `season-tag season-${sName.toLowerCase()}`;
-                seasonFoodCap = sName === 'WINTER' ? 25 : (sName === 'SPRING' ? 95 : 65);
+                bEl.className = `season-badge season-${sName.toLowerCase()}`;
+                carryingCapacity = sName === 'WINTER' ? 25 : (sName === 'SPRING' ? 100 : 70);
             }
-            const activeSeason = seasons[currentSeasonIdx];
+            const activeSeason = seasons[seasonIdx];
 
-            ctx.fillStyle = 'rgba(8, 9, 12, 0.36)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            const spawnRate = activeSeason === 'WINTER' ? 0.05 : 0.22;
-            if (foods.length < seasonFoodCap && Math.random() < spawnRate) spawnFood();
-
-            ctx.fillStyle = '#10b981';
-            for (let f of foods) {
-                ctx.beginPath(); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2); ctx.fill();
+            // Density-Dependent Microbial Outbreak
+            if (organisms.length > 60 && Math.random() < 0.004) {
+                const susceptible = organisms.filter(o => o.alive && !o.infected && !o.hasAntibodies);
+                if (susceptible.length > 0) {
+                    const patientZero = susceptible[Math.floor(Math.random() * susceptible.length)];
+                    patientZero.infected = true;
+                    patientZero.infectionTimer = 0;
+                    if (typeof addRipple === 'function') addRipple(patientZero.x, patientZero.y, 239, 68, 68);
+                }
             }
 
-            ctx.fillStyle = '#92400e';
-            for (let cr of carrion) {
-                ctx.beginPath(); ctx.arc(cr.x, cr.y, cr.r, 0, Math.PI * 2); ctx.fill();
+            // Nutrient generation
+            const spawnChance = activeSeason === 'WINTER' ? 0.05 : 0.22;
+            if (foods.length < carryingCapacity && Math.random() < spawnChance) spawnFood();
+
+            // Clean consumed
+            foods = foods.filter(f => !f.consumed);
+            // Saprotrophic Natural Decomposition (Prevents permanent accumulation)
+            for (let c of carrions) {
+                c.decay--;
+                c.r = c.maxR * (c.decay / 450);
+                if (c.decay <= 0) c.consumed = true;
             }
+            carrions = carrions.filter(c => !c.consumed);
 
             const newborns = [];
-            let totalSpd = 0, totalSight = 0;
+            let totalSpd = 0, totalSight = 0, totalSize = 0, totalCamo = 0, totalImmunity = 0, totalSymbiosis = 0;
+            let herbs = 0, carns = 0, scavs = 0;
+            let infCount = 0, immCount = 0, mutualistPairs = 0;
 
-            for (let c of creatures) {
-                c.update(activeSeason);
-                c.draw();
-                if (c.alive) {
-                    totalSpd += c.dna.speed;
-                    totalSight += c.dna.sight;
-                    if (c.canDivide() && creatures.length < 80) newborns.push(c.divide());
+            for (let o of organisms) {
+                o.update(activeSeason);
+                if (o.alive) {
+                    if (o.niche === 'herbivore') herbs++;
+                    else if (o.niche === 'carnivore') carns++;
+                    else scavs++;
+                    if (o.infected) infCount++;
+                    if (o.hasAntibodies) immCount++;
+                    if (o.partner) mutualistPairs++;
+
+                    totalSpd += o.dna.speed;
+                    totalSight += o.dna.sight;
+                    totalSize += o.dna.size;
+                    const camo = 1.0 - (Math.abs(o.dna.hue - 215) / 180) * 0.42;
+                    totalCamo += camo;
+                    totalImmunity += (o.dna.immunity || 0.3);
+                    totalSymbiosis += (o.dna.symbiosisAffinity || 0.15);
+
+                    if (o.canDivide() && organisms.length < 90) {
+                        newborns.push(o.divide());
+                    }
                 }
             }
 
-            creatures = creatures.filter(c => c.alive);
-            creatures.push(...newborns);
-            foods = foods.filter(f => !f.eaten);
-            carrion = carrion.filter(cr => !cr.eaten);
+            organisms = organisms.filter(o => o.alive);
+            organisms.push(...newborns);
 
-            if (creatures.length < 4) {
-                for (let i = 0; i < 4; i++) {
-                    creatures.push(new Creature(CX + (Math.random() - 0.5) * 50, CY + (Math.random() - 0.5) * 50));
-                }
+            // Natural rescue seeding if trophic collapse occurs
+            if (herbs === 0 && Math.random() < 0.08) organisms.push(new Organism(CX + (Math.random() - 0.5) * 80, CY + (Math.random() - 0.5) * 80, null, 0.15));
+
+            // Record telemetry every 15 ticks
+            if (tick % 15 === 0) {
+                historyData.food.shift(); historyData.food.push(foods.length);
+                historyData.herb.shift(); historyData.herb.push(herbs);
+                historyData.carn.shift(); historyData.carn.push(carns);
+                historyData.scav.shift(); historyData.scav.push(scavs);
+                historyData.infected.shift(); historyData.infected.push(infCount);
+                historyData.immune.shift(); historyData.immune.push(immCount);
+                drawPopulationChart();
             }
 
-            phylogeny.update(creatures);
-            const activeSpecies = phylogeny.getActive();
-            const n = creatures.length || 1;
+            // Update UI Averages
+            const count = organisms.length || 1;
+            document.getElementById('lblCycle').textContent = cycle;
+            document.getElementById('lblTotalPop').textContent = organisms.length;
+            phylogeny.update(organisms);
+            const activeTaxa = phylogeny.getActive();
+            document.getElementById('lblTaxaCount').textContent = activeTaxa.length;
+            document.getElementById('lblDominantTaxon').textContent = activeTaxa[0] ? activeTaxa[0].id : 'None';
 
-            document.getElementById('countPop').textContent = creatures.length;
-            document.getElementById('countSpecies').textContent = activeSpecies.length;
-            document.getElementById('avgSpeed').textContent = (totalSpd / n).toFixed(2);
-            document.getElementById('avgSight').textContent = (totalSight / n).toFixed(0) + 'px';
-            document.getElementById('domSpecies').textContent = activeSpecies[0] ? activeSpecies[0].id : 'None';
+            document.getElementById('avgVelocity').textContent = (totalSpd / count).toFixed(2);
+            document.getElementById('avgSensory').textContent = (totalSight / count).toFixed(0) + 'px';
+            document.getElementById('avgSize').textContent = (totalSize / count).toFixed(1);
+            document.getElementById('avgCamo').textContent = Math.round((totalCamo / count) * 100) + '%';
+            document.getElementById('avgImmunity').textContent = Math.round((totalImmunity / count) * 100) + '%';
+            document.getElementById('avgSymbiosis').textContent = Math.round((totalSymbiosis / count) * 100) + '%';
+            document.getElementById('valMutualists').textContent = mutualistPairs;
+            document.getElementById('valOutbreak').textContent = infCount;
+            document.getElementById('valHerdImmunity').textContent = Math.round((immCount / count) * 100) + '%';
 
-            const listEl = document.getElementById('speciesList');
-            listEl.innerHTML = activeSpecies.slice(0, 4).map(sp => 
-                `<div class="sp-row">
-                    <span style="color: hsl(${sp.hue}, 80%, 65%);">${sp.id} (G${sp.gen})</span>
-                    <span>${sp.count}</span>
-                 </div>`
-            ).join('');
-
-            requestAnimationFrame(loop);
+            if (selectedOrganism) updateInspector();
         }
-        requestAnimationFrame(loop);
+
+        function render() {
+            ctx.fillStyle = 'rgba(7, 9, 13, 0.38)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Ambient Microscopic Fluid Drift Particles
+            for (let fp of fluidParticles) {
+                fp.x += fp.vx;
+                fp.y += fp.vy;
+                const dC = Math.hypot(fp.x - CX, fp.y - CY);
+                if (dC > R - 12) {
+                    fp.vx *= -1;
+                    fp.vy *= -1;
+                }
+                ctx.fillStyle = 'rgba(148, 163, 184, ' + fp.alpha + ')';
+                ctx.beginPath();
+                ctx.arc(fp.x, fp.y, fp.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Biological Event Ripples
+            for (let i = rippleRings.length - 1; i >= 0; i--) {
+                const rp = rippleRings[i];
+                rp.r += 0.75;
+                rp.alpha *= 0.91;
+                ctx.strokeStyle = 'rgba(' + rp.rCol + ',' + rp.gCol + ',' + rp.bCol + ',' + rp.alpha + ')';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2);
+                ctx.stroke();
+                if (rp.alpha < 0.03 || rp.r >= rp.maxR) {
+                    rippleRings.splice(i, 1);
+                }
+            }
+
+            // Render Mineral Reefs (Allopatric Barriers)
+            if (reefsEnabled) {
+                for (let rf of reefs) {
+                    const rg = ctx.createRadialGradient(rf.x, rf.y, 10, rf.x, rf.y, rf.r);
+                    rg.addColorStop(0, '#1e293b');
+                    rg.addColorStop(0.7, '#0f172a');
+                    rg.addColorStop(1, '#020617');
+                    ctx.fillStyle = rg;
+                    ctx.beginPath();
+                    ctx.arc(rf.x, rf.y, rf.r, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.strokeStyle = 'rgba(148, 163, 184, 0.35)';
+                    ctx.lineWidth = 1.5;
+                    ctx.stroke();
+
+                    // Subtle mineral core
+                    ctx.fillStyle = 'rgba(56, 189, 248, 0.08)';
+                    ctx.beginPath();
+                    ctx.arc(rf.x, rf.y, rf.r * 0.5, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                // Basin Labels
+                ctx.fillStyle = 'rgba(100, 116, 139, 0.45)';
+                ctx.font = '10px ui-monospace, monospace';
+                ctx.textAlign = 'center';
+                ctx.fillText('WEST BASIN', CX - 130, CY);
+                ctx.fillText('EAST BASIN', CX + 130, CY);
+                ctx.fillText('STRAIT', CX, CY);
+            }
+
+            // Nutrients (Green)
+            ctx.fillStyle = '#10b981';
+            for (let f of foods) {
+                ctx.beginPath();
+                ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Carrion / Organic Waste (Amber/Brown)
+            ctx.fillStyle = '#92400e';
+            for (let c of carrions) {
+                ctx.beginPath();
+                ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Organisms
+            for (let o of organisms) {
+                o.draw();
+            }
+        }
+
+        function gameLoop() {
+            if (!isPaused) {
+                for (let s = 0; s < simSpeed; s++) {
+                    stepSimulation();
+                }
+            }
+            render();
+            requestAnimationFrame(gameLoop);
+        }
+        requestAnimationFrame(gameLoop);
     </script>
 </body>
 </html>
