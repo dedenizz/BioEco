@@ -10,6 +10,15 @@ Paced, disciplined engineering. With an automated hourly cycle, there is no need
 4. Mid-Term QA: Audits bugs, memory leaks, and anti-slop standards.
 5. Executive Director: Periodic macro check-ins on creative vision and system depth.
 
+## Strategic Milestone Backlog (Prioritized by User Feedback)
+- Priority A (Completed): Optional Interactive Scientific Field Guide & Tutorial Modal (HUD Walkthrough).
+- Priority B (Completed): Perpetual Ecosystem Self-Sustenance & Metabolic Equilibrium (Eliminating mass starvation cascades).
+- Priority C (Completed): Microscopic Fullscreen & Responsive Spatial immersion.
+- Priority D (Active - User Feedback Integration): Two-Tier Experience & In-Sim Micro-Narratives (Casual 'Fun Sim' Facts vs Deep Comprehensive Scientific Codex).
+  - Tier 1 (Casual Observer / Low Friction): On-screen dynamic micro-event ticker, interactive hover tooltips explaining cell deaths (e.g. 'Died of natural senescence at G3', 'Deflected predatory strike', 'Starvation from oligotrophic trough'), cool biology facts, and alive-feeling cellular behaviors (organic boundary gliding instead of blunt wall-bumping).
+  - Tier 2 (Curious Researcher / Deep Immersion): Full interactive Scientific Field Guide & Documentation Hub with searchable encyclopedia, mechanics breakdown, mathematical formulas, and trophic dynamics reference.
+- Priority E (Active): Organic Spatial Boundary Physics (Soft repulsion forcefields, fluid membrane deformation upon dish edge proximity, preventing feeling that cells 'hit walls and die').
+
 ## Session Schedule
 - Hour 1 (Completed): Sürüm 1.4.0 — Studio Layout, Lotka-Volterra Chart & Inspector.
 - Hour 2 (Completed): Sürüm 1.5.0 — Allopatric Speciation Barriers & Mineral Reefs (System Agent).
@@ -21,6 +30,429 @@ Paced, disciplined engineering. With an automated hourly cycle, there is no need
 - Hour 8 (Completed): Sürüm 2.0.0 — Epidemiological Telemetry Curves & Outbreak Dashboard (UI Agent).
 - Hour 9 (Completed): Sürüm 2.1.0 — Pathogen Transmission Pruning & Collision Optimization (QA Agent).
 - Hour 10 (Completed): Sürüm 2.2.0 — Interspecific Symbiosis & Mutualism Dynamics (System Agent).
-- Hour 11 (Planned - 10:30): Symbiotic Cellular Bridge Aesthetics & Nutrient Transfer Particles (Looks Agent).
-- Hour 12 (Planned - 11:30): Mutualist Network Graphing & Symbiosis Index Telemetry (UI Agent).
-- Hour 13 (Planned - 12:30): Multi-Species Co-Evolution Profiling & Memory Leak Audit (QA Agent).
+- Hour 11 (Completed): Sürüm 2.3.0 — Symbiotic Cellular Bridge Aesthetics & Nutrient Transfer Particles (Looks Agent).
+- Hour 12 (Completed): Sürüm 2.4.0 — Mutualist Network Graphing & Symbiosis Index Telemetry (UI Agent).
+- Hour 13 (Completed): Sürüm 2.5.0 — Multi-Species Co-Evolution Profiling & Memory Leak Audit (QA Agent).
+- Hour 14 (Completed): Sürüm 2.6.0 — Macro Ecosystem Speciation & Ecological Resilience Review (Executive Director).
+- Hour 15 (Completed): Sürüm 2.7.0 — Epigenetic Adaptation & Micro-Climate Memory (System Agent).
+- Hour 16 (Completed): Sürüm 2.8.0 — Thermal Convection Currents & Environmental Fluid Aesthetics (Looks Agent).
+- Hour 17 (Completed): Sürüm 2.9.0 — Epigenetic Phenotype Telemetry & Gene Expression Charts (UI Agent).
+- Hour 18 (Completed): Sürüm 3.0.0 — Thermal Stress Profiling & Micro-Basin Drift Benchmarking (QA Agent).
+- Hour 19 (Completed): Sürüm 3.1.0 — Macro Speciation & Symbiotic Radiation Review (Executive Director).
+- Hour 20 (Completed): Sürüm 3.2.0 — Fullscreen Immersion & Responsive Viewport Architecture (Looks Agent).
+- Hour 21 (Completed): Sürüm 3.3.0 — Optional Scientific Interactive Tutorial & HUD Walkthrough Modal (UI Agent).
+- Hour 22 (Completed): Sürüm 3.4.0 — Perpetual Ecosystem Thermodynamic Equilibrium & Starvation Prevention (System Agent).
+- Hour 23 (Planned - 23:30): Horizontal Gene Transfer & Viral Vector Recombination (System Agent).
+- Hour 24 (Planned - 00:30): Bioluminescent Plasmid Flashes & Conjugation Tube Kinematics (Looks Agent).
+- Hour 25 (Planned - 01:30): 24-Hour Continuous Speciation Benchmark, 60 FPS Profiling & Zero-Slop Validation (QA Agent).
+- Hour 26 (Planned - 02:30): Macro Speciation & Symbiotic Radiation Review (Executive Director).
+- Hour 33 (Completed): Sürüm 3.15.0 — Biofilm Matrix Aesthetics & Benthic Gas Bubbles (Looks Agent).
+- Hour 34 (Completed): Sürüm 3.16.0 — Biofilm Matrix Telemetry & Benthic Reclamation Charts (UI Agent).
+- Hour 35 (Completed): Sürüm 3.17.0 — Long-Horizon Generational Profiling & 60 FPS Stability Benchmark (QA Agent).
+- Hour 36 (Completed): Sürüm 3.18.0 — Biogeochemical Carbon Cycle & System Carrying Capacity Review (Executive Director).
+- Hour 37 (Completed): Sürüm 3.19.0 — Microbial Succession & Chemotactic Attractant Gradients (System Agent).
+- Hour 38 (Completed): Sürüm 3.20.0 — Chemotactic Pheromone Luminescence & Substrate Texturing (Looks Agent).
+- Hour 39 (Completed): Sürüm 3.21.0 — Chemotactic Field Telemetry & Substrate Density Metrics (UI Agent).
+- Hour 40 (Completed): Sürüm 3.22.0 — Multi-Field Chemotaxis Benchmarking & Grid Subsampling Optimization (QA Agent).
+- Hour 41 (Completed): Sürüm 3.23.0 — Micro-Environmental Succession Equilibrium & Macro Radiation Audit (Executive Director).
+- Hour 42 (Completed): Sürüm 3.24.0 — Spatial Niche Partitioning & Endolithic Cryptic Speciation (System Agent).
+- Hour 43 (Completed): Sürüm 3.25.0 — Endolithic Micro-Crevice Aesthetics & Cryptic Membrane Shimmer (Looks Agent).
+- Hour 44 (Completed): Sürüm 3.26.0 — Endolithic Habitat Telemetry & Crevice Partitioning Curves (UI Agent).
+- Hour 45 (Completed): Sürüm 3.27.0 — Crevice Navigation Benchmarking & Complex Boundary Stability (QA Agent).
+- Hour 46 (Completed): Sürüm 3.28.0 — Macro Cryptic Speciation Dynamics & Ecological Haven Audit (Executive Director).
+- Hour 47 (Completed): Sürüm 3.29.0 — Benthic Detrital Food Webs & Trophic Niche Diversification (System Agent).
+- Hour 48 (Completed): Sürüm 3.30.0 — Detrital Particulate Scattering & Microscopic Turbidity Aesthetics (Looks Agent).
+- Hour 49 (Completed): Sürüm 3.31.0 — Detrital Turbidity Telemetry & Sediment Stratification Curves (UI Agent).
+- Hour 50 (Completed): Sürüm 3.32.0 — Detrital Loop Stability Benchmarking & Continuous Nutrient Profiling (QA Agent).
+- Hour 51 (Completed): Sürüm 3.33.0 — Trophic Cascade Thermodynamics & Closed-Loop Biosphere Audit (Executive Director).
+- Hour 52 (Completed): Sürüm 3.34.0 — Microscopic Hydrodynamic Stratification & Benthic Flux Mechanics (System Agent).
+- Hour 53 (Completed): Sürüm 3.35.0 — Turbocline Fluid Viscosity Aesthetics & Sediment Resuspension Waves (Looks Agent).
+- Hour 54 (Completed): Sürüm 3.36.0 — Turbocline Telemetry & Hydrodynamic Shear Gradients (UI Agent).
+- Hour 55 (Completed): Sürüm 3.37.0 — Hydrodynamic Boundary Profiling & Multi-Stratum Stability Benchmark (QA Agent).
+- Hour 56 (Completed): Sürüm 3.38.0 — Stratified Ecosystem Carrying Capacity & Spatial Radiation Audit (Executive Director).
+- Hour 57 (Completed): Sürüm 3.39.0 — Hydrodynamic Micro-Turbulence & Vorticity Energy Dynamics (System Agent).
+- Hour 58 (Completed): Sürüm 3.40.0 — Micro-Vorticity Particle Shimmer & Fluid Turbulence Rendering (Looks Agent).
+- Hour 59 (Completed): Sürüm 3.41.0 — Fluid Vorticity Telemetry & Angular Momentum Dissipation Curves (UI Agent).
+- Hour 60 (Completed): Sürüm 3.42.0 — Hydrodynamic Vorticity Long-Horizon Benchmark & Micro-Turbulence Profiling (QA Agent).
+- Hour 61 (Completed): Sürüm 3.43.0 — Hydrodynamic Energy Cascade Thermodynamics & Multi-Scale Entropy Audit (Executive Director).
+- Hour 62 (Completed): Sürüm 3.44.0 — Pelagic Micro-Plankton Aggregation & Dynamic Patchiness Mechanics (System Agent).
+- Hour 63 (Completed): Sürüm 3.45.0 — Planktonic Bloom Shimmer & Bioluminescent Patch Aesthetics (Looks Agent).
+- Hour 64 (Completed): Sürüm 3.46.0 — Plankton Patchiness Telemetry & Patch Dispersion Curves (UI Agent).
+- Hour 65 (Completed): Sürüm 3.47.0 — Planktonic Aggregation Boundary Profiling & Density Stresstest Benchmark (QA Agent).
+- Hour 66 (Completed): Sürüm 3.48.0 — Pelagic Food Web Stability & Macro Planktonic Radiation Audit (Executive Director).
+- Hour 67 (Completed): Sürüm 3.49.0 — Micro-Plankton Trophic Cascade & Grazing Pressure Thresholds (System Agent).
+- Hour 68 (Completed): Sürüm 3.50.0 — Bioluminescent Plankton Wave Dynamics & Schooling Refraction (Looks Agent).
+- Hour 69 (Completed): Sürüm 3.51.0 — Trophic Cascade Telemetry & Planktonic Carrying Capacity Audit (UI Agent).
+- Hour 70 (Completed): Sürüm 3.52.0 — Multi-Niche Grazing Stability Benchmark & Long-Horizon Profiling (QA Agent).
+- Hour 71 (Completed): Sürüm 3.53.0 — Pelagic Microbial Succession & Macro Radiation Review (Executive Director).
+- Hour 72 (Completed): Sürüm 3.54.0 — Micro-Plankton Trophic Stability & Bioenergetic Partitioning (System Agent).
+- Hour 73 (Completed): Sürüm 3.55.0 — Multi-Scale Trophic Co-Evolution & Predator Functional Response (System Agent).
+- Hour 74 (Completed): Sürüm 3.56.0 — 72-Hour Full Ecosystem Evolutionary Benchmark & Memory Leak Audit (QA Agent).
+- Hour 75 (Completed): Sürüm 3.57.0 — Product Critic & Challenger Strategic Audit — Two-Tier Experience & Living Micro-Narratives (Product Critic).
+- Hour 76 (Completed): Sürüm 3.58.0 — Organic Boundary Gliding & Soft Repulsion Fluidics (System Agent).
+- Hour 77 (Completed): Sürüm 3.59.0 — Membrane Fluid Deformation & Edge Deflection Ripples (Looks Agent).
+- Hour 78 (Completed): Sürüm 3.60.0 — Live In-Sim Event Ticker, Cause-of-Death Micro-Badges & Cool Facts Bar (UI Agent).
+- Hour 79 (Completed): Sürüm 3.61.0 — Two-Tier Interactive Scientific Codex & Deep Documentation Hub (UI Agent).
+- Hour 80 (Completed): Sürüm 3.62.0 — Two-Tier Simulation Ergonomics & Long-Horizon Boundary Benchmark (QA Agent).
+- Hour 81 (Completed): Sürüm 3.63.0 — Closed-Loop Planetary Biosphere Synthesis & Macro Entropy Audit (Executive Director).
+- Hour 82 (Completed): Sürüm 3.64.0 — Multi-Scale Trophic Co-Evolutionary Synthesis & Long-Horizon Profiling (QA Agent).
+- Hour 83 (Completed): Sürüm 3.65.0 — Fluidic Ambient Lighting & Microscopic Dark-Field Aesthetics (Looks Agent).
+- Hour 84 (Completed): Sürüm 3.66.0 — Microscopic Cellular Respiration Waves & Cytoplasmic Pulsation Aesthetics (Looks Agent).
+- Hour 85 (Completed): Sürüm 3.67.0 — Organic Life Cadence & Biological Pause-Burst Locomotion (System Agent).
+- Hour 86 (Completed): Sürüm 3.68.0 — Visual Locomotion Acceleration Trails & Tail Ribbon Fluidity (Looks Agent).
+- Hour 87 (Completed): Sürüm 3.69.0 — Trophic Respiration Telemetry & Cellular Metabolic Vitality Curves (UI Agent).
+- Hour 88 (Completed): Sürüm 3.70.0 — Long-Horizon Locomotion Stability Benchmark & Micro-Burst Memory Profiling (QA Agent).
+- Hour 89 (Completed): Sürüm 3.71.0 — Macro Intermittent Locomotion & Eco-Kinetic Radiation Review (Executive Director).
+- Hour 90 (Completed): Sürüm 3.72.0 — Micro-Kinetic Run-and-Tumble Chemotactic Navigation (System Agent).
+- Hour 91 (Completed): Sürüm 3.73.0 — Micro-Chemotactic Odor Particle Shimmer & Sensory Pheromone Aesthetics (Looks Agent).
+- Hour 92 (Completed): Sürüm 3.74.0 — Chemotactic Gradient Telemetry & Orientation Angular Variance Curves (UI Agent).
+- Hour 93 (Completed): Sürüm 3.75.0 — Multi-Scale Chemotaxis & Locomotion Benchmark Profiling (QA Agent).
+- Hour 94 (Completed): Sürüm 3.76.0 — Macro Chemotactic Foraging Efficiency & Trophic Succession Review (Executive Director).
+- Hour 95 (Completed): Sürüm 3.77.0 — Micro-Kinetic Viscous Rheotaxis & Shear Alignment Navigation (System Agent).
+- Hour 96 (Completed): Sürüm 3.78.0 — Microscopic Rheotactic Streaklines & Fluid Stream Shear Aesthetics (Looks Agent).
+- Hour 97 (Completed): Sürüm 3.79.0 — Rheotactic Heading Telemetry & Shear Alignment Distribution Curves (UI Agent).
+- Hour 98 (Completed): Sürüm 3.80.0 — Viscous Rheotaxis & Boundary Shear Stability Benchmark (QA Agent).
+- Hour 99 (Completed): Sürüm 3.81.0 — Macro Rheotactic Hydrodynamics & Stratified Biome Audit (Executive Director).
+- Hour 100 (Completed): Sürüm 3.82.0 — Centenary Milestone Review & Multi-Agent Evolution Retrospective (Executive Director).
+- Hour 101 (Completed): Sürüm 3.83.0 — Centenary Ecological Horizon & Next-Century Architectural Roadmap (Lead Planner).
+- Hour 102 (Completed): Sürüm 3.84.0 — Multi-Scale Cellular Flagellar Motors & Chemotactic Motor Torque Synthesis (System Agent).
+- Hour 103 (Completed): Sürüm 3.85.0 — Microscopic Flagellar Bundle Wave Aesthetics & Rotational Thrust Trails (Looks Agent).
+- Hour 104 (Completed): Sürüm 3.86.0 — Flagellar Motor RPM Telemetry & Proton-Motive Force Vitality Curves (UI Agent).
+- Hour 105 (Completed): Sürüm 3.87.0 — High-Torque Flagellar Locomotion Benchmark & Rotational Energy Conservation Audit (QA Agent).
+- Hour 106 (Completed): Sürüm 3.88.0 — Cellular Sensory Feedback & Collective Quorum Immersion Audit (Product Critic).
+- Hour 107 (Completed): Sürüm 3.89.0 — Intercellular Quorum Autoinducer Signaling & Density-Dependent Gene Expression (System Agent).
+- Hour 108 (Completed): Sürüm 3.90.0 — Autoinducer Pheromone Glow Fields & Swarm Luminescence Synchronization (Looks Agent).
+- Hour 109 (Completed): Sürüm 3.91.0 — Quorum Induction Dashboard & Colony Threshold Distribution Meters (UI Agent).
+- Hour 110 (Completed): Sürüm 3.92.0 — Collective Micro-Sociology & Macro Swarm Speciation Review (Executive Director).
+- Hour 111 (Completed): Sürüm 3.93.0 — Biofilm Structural Matrix & Slime Layer Architectural Roadmap (Lead Planner).
+- Hour 112 (Completed): Sürüm 3.94.0 — Extracellular Polymeric Substance (EPS) Secretion & Substrate Adhesion Physics (System Agent).
+- Hour 113 (Completed): Sürüm 3.95.0 — Viscous Slime Mesh Rendering & Organic Substrate Encrustation Aesthetics (Looks Agent).
+- Hour 114 (Completed): Sürüm 3.96.0 — Sessile vs Planktonic Biomass Telemetry & Substrate Coverage Heatmaps (UI Agent).
+- Hour 115 (Completed): Sürüm 3.97.0 — Long-Horizon Biofilm Encrustation & Viscous Drag Stability Benchmark (QA Agent).
+- Hour 116 (Completed): Sürüm 3.98.0 — Substrate Colonization & Sessile Micro-Architecture Immersion Audit (Product Critic).
+- Hour 117 (Completed): Sürüm 3.99.0 — Fluid Shear Erosion & Mechanical Biofilm Dispersal Dynamics (System Agent).
+- Hour 118 (Completed): Sürüm 4.0.0 — Encrusted Surface Slime Tear-Off & Detrital Plume Particle Aesthetics (Looks Agent).
+- Hour 119 (Completed): Sürüm 4.1.0 — Biofilm Erosion Telemetry & Shear Shedding Activity Curves (UI Agent).
+- Hour 120 (Completed): Sürüm 4.2.0 — Benthic Biogeochemical Encrustation & Macro Matrix Homeostasis Review (Executive Director).
+- Hour 121 (Completed): Sürüm 4.3.0 — Endosymbiotic Organelle Genesis & Metabolic Compartmentalization Roadmap (Lead Planner).
+- Hour 122 (Completed): Sürüm 4.4.0 — Intracellular Engulfment & Permanent Organelle Symbiosis Mechanics (System Agent).
+- Hour 123 (Completed): Sürüm 4.5.0 — Organelle Double-Membrane Visual Aesthetics & Cytoplasmic Organelle Rendering (Looks Agent).
+- Hour 124 (Completed): Sürüm 4.6.0 — Endosymbiosis Bio-Energetic ATP Telemetry & Organelle Partitioning Dashboard (UI Agent).
+- Hour 125 (Completed): Sürüm 4.7.0 — Multi-Organelle Genetic Stability & Endosymbiotic Radiation Benchmark (QA Agent).
+- Hour 126 (Completed): Sürüm 4.8.0 — Eukaryotic Niche Specialization & Endosymbiont Immersion Audit (Product Critic).
+- Hour 127 (Completed): Sürüm 4.9.0 — Organellar Genome Reduction & Host-Symbiont Horizontal Gene Transfer (System Agent).
+- Hour 128 (Completed): Sürüm 4.10.0 — Cristae Folding Micro-Optics & Plastid Thylakoid Stacking Aesthetics (Looks Agent).
+- Hour 129 (Completed): Sürüm 4.11.0 — Organelle Density Distribution Meters & Metabolic Flux Heatmaps (UI Agent).
+- Hour 130 (Completed): Sürüm 4.12.0 — Macro Eukaryogenesis Radiation & Evolutionary Transition Review (Executive Director).
+- Hour 131 (Completed): Sürüm 4.13.0 — Multicellularity & Colonial Differentiation Strategic Roadmap (Lead Planner).
+- Hour 132 (Completed): Sürüm 4.14.0 — Intercellular Cadherin Adhesion & Colonial Aggregation Mechanics (System Agent).
+- Hour 133 (Completed): Sürüm 4.15.0 — Multicellular Cluster Morphology & Extracellular Bridge Visuals (Looks Agent).
+- Hour 134 (Completed): Sürüm 4.16.0 — 24th Telemetry Channel: Colonial Biomass & Differentiation Dashboard (UI Agent).
+- Hour 135 (Completed): Sürüm 4.17.0 — Multicellular Cluster Collision & Long-Horizon Stability Benchmark (QA Agent).
+- Hour 136 (Completed): Sürüm 4.18.0 — Colonial Division of Labor & Cellular Differentiation Immersion Audit (Product Critic).
+- Hour 137 (Completed): Sürüm 4.19.0 — Germ-Soma Somatic Differentiation & Reproductive Specialization Alleles (System Agent).
+- Hour 138 (Completed): Sürüm 4.20.0 — Differentiated Outer Flagellated Somatic Cells vs Central Reproductive Gonidia Optics (Looks Agent).
+- Hour 139 (Completed): Sürüm 4.21.0 — Germ-Soma Ratio Telemetry & Somatic Senescence Tracking Dashboard (UI Agent).
+- Hour 140 (Completed): Sürüm 4.22.0 — Metazoan Multicellularity & Eukaryotic Radiation Macro Review (Executive Director).
+- Hour 141 (Completed): Sürüm 4.23.0 — Epoch 10 Stratejik Yol Haritası: Epitelyal Bariyerler & Dokusal Morfogenez (Lead Planner).
+- Hour 142 (Completed): Sürüm 4.24.0 — Epitelyal Doku Bariyerleri ve Hücre Dışı Matriks (ECM) Biyofiziği (System Agent).
+- Hour 143 (Completed): Sürüm 4.25.0 — Bazal Lamina ve Sürekli Doku Katmanı Mikroskop Optiği (Looks Agent).
+- Hour 144 (Completed): Sürüm 4.26.0 — Epitelyal Bütünlük Telemetrisi ve Sıkı Bağlantı Göstergeleri (UI Agent).
+- Hour 145 (Completed): Sürüm 4.27.0 — Doku Kararlılığı ve Çok Katmanlı Stres Kıyaslaması (QA Agent).
+- Hour 146 (Completed): Sürüm 4.28.0 — Doku Katmanlaşması, İlkel Sindirim Kavitesi ve Gastrulasyon Daldırma Denetimi (Product Critic).
+- Hour 147 (Completed): Sürüm 4.29.0 — Gastrulasyon İnvajinasyonu, İlkel Sindirim Boşluğu ve Doku Kontraksiyonu Mekaniği (System Agent).
+- Hour 148 (Completed): Sürüm 4.29.1 — Sindirim Boşluğu Besin Parıltısı ve Epitelyal Kasılma Dalgaları Optiği (Looks Agent).
+- Hour 149 (Completed): Sürüm 4.29.2 — Sindirim Verimliliği Telemetrisi ve Gastrula Morfolojisi Sayaçları (UI Agent).
+- Hour 150 (Completed): Sürüm 4.30.0 — Macro Metazoan Organogenesis Review, Doku Taşıma Kapasitesi ve İlk Hayvan Formları Sentezi (Executive Director).
+
+## Epoch 11: İlkel Sinir Ağları & Nöromüsküler Koordinasyon (Hours 151 - 160)
+- Hour 151 (Completed): Sürüm 4.31.0 — Epoch 11 Stratejik Yol Haritası: İlkel Sinir Ağları ve Aksiyon Potansiyeli İletimi (Lead Planner).
+- Hour 152 (Completed): Sürüm 4.32.0 — Protonöron Sinaptik İletimi, Aksiyon Potansiyeli Voltaj Depolarizasyonu ve Dağınık Sinir Ağı Biyofiziği (System Agent).
+- Hour 153 (Completed): Sürüm 4.33.0 — Elektriksel Sinaptik Kıvılcım Optiği, Nöromüsküler Aksiyon Dalgaları ve Biyolüminesans Devre Parıltısı (Looks Agent).
+- Hour 154 (Completed): Sürüm 4.34.0 — 28. Telemetri Kanalı: Sinaptik Yoğunluk Endeksi ve Membran Potansiyeli Osiloskop Paneli (UI Agent).
+- Hour 155 (Completed): Sürüm 4.35.0 — Aksiyon Potansiyeli İletim Kararlılığı, Sinaptik Sürüklenme Kıyaslaması ve 10.000 Adım Stres Denetimi (QA Agent).
+- Hour 156 (Completed): Sürüm 4.36.0 — Sefalizasyon Öncüsü, Yönlü Kemosensör Taksis ve Yırtıcı Refleks Daldırma Denetimi (Product Critic).
+- Hour 157 (Completed): Sürüm 4.37.0 — Duyu Gangliyon Kümeleri, Ön-Arka (A-P) Polaritesi ve Koordineli Dokunaç Yakalama Mekaniği (System Agent).
+- Hour 158 (Completed): Sürüm 4.38.0 — Sefalik Duyu Puanları Işıltısı ve Dokunaçlı Av Yakalama Estetiği (Looks Agent).
+- Hour 159 (Completed): Sürüm 4.39.0 — Refleks Tepki Gecikmesi Telemetrisi ve Nöromüsküler Verimlilik Paneli (UI Agent).
+- Hour 160 (Completed): Sürüm 4.40.0 — Makro Bilateria Sefalizasyon İncelemesi, Nöromüsküler Taşıma Kapasitesi ve Hayvan Zekası Sentezi (Executive Director).
+
+## Epoch 12: Mezodermik Sölom, Metamerik Segmentasyon & Hidrostatik Hareket (Hours 161 - 170)
+- Hour 161 (Completed): Sürüm 4.41.0 — Epoch 12 Stratejik Yol Haritası: Triploblastik Mezoderm ve Sölomik Boşluklar (Lead Planner).
+  - Triploblastik Mezoderm ve Hakiki Sölom (True Coelom) mimari planı hazırlandı.
+  - Metamerik segmentasyon, somit halkaları ve bağımsız kompartıman turgor basınçları takvimlendirildi.
+  - Boyuna vs. halka kas antagonizması ve peristaltik bentik kazı mekaniği tanımlandı.
+  - 30. Telemetri kanalı (Metamerik Segmentasyon İndeksi & Hidrostatik Turgor Osiloskobu) planlandı.
+- Hour 162 (Completed): Sürüm 4.42.0 — Triploblastik Mezoderm Katmanı, Sölomik Sıvı Boşluğu ve Hidrostatik Basınç Mekaniği (System Agent).
+  - DNA mesodermDifferentiation ve coelomTurgorElasticity genleri entegre edildi.
+  - Çok hücreli kolonilerde orta katman mesoderm hücre farklılaşması ve eucoelomate triploblasti modellendi.
+  - Periton astarlı sölomik sıvı hacmi ve Laplace turgor hidrostatik basınç denklemi kodlandı.
+  - Hidrostatik iskelet itiş kaldıracı ve resif çarpışma darbe sönümleme mekanikleri uygulandı.
+- Hour 163 (Completed): Sürüm 4.43.0 — Sölomik Hidrostatik Sıvı Parıltısı, Mezodermal Somit Halkaları ve Metamerik Segment Optiği (Looks Agent).
+  - Triploblastik koloniler için çok katmanlı radyal sölomik sıvı gradyanı ve periton sınır halkası tasarlandı.
+  - Eşmerkezli mezodermal somit halkaları (Somite Annuli) ve antagonistik kas lifi çizgileri modellendi.
+  - Segmentler arası metamerik septum sınır çizgisi ve basınçlı sölomik kanal akış damlacıkları kodlandı.
+  - Turgor basıncına duyarlı hidrostatik çekirdek ışıltısı ve hücre başı somit halkaları uygulandı.
+- Hour 164 (Completed): Sürüm 4.44.0 — 30. Telemetri Kanalı: Metamerik Segmentasyon Endeksi ve Hidrostatik Turgor Paneli (UI Agent).
+  - Lotka-Volterra grafiğine 30. senkronize kanal (#0ea5e9 metamericTurgor) bağlandı.
+  - Hidrostatik Turgor Osiloskobu (valMetamericTurgor) ve basınç rejimleri HUD paneline eklendi.
+  - Metamerik Somit Sayacı (valSomiteCensus) ve MSI % endeksi entegre edildi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi güncellendi.
+- Hour 165 (Completed): Sürüm 4.45.0 — Çok Segmentli Hidrostatik Basınç Kıyaslaması, Boşluk Yırtılma Sınırları ve 10.000 Adım Stres Denetimi (QA Agent).
+  - 10.000 adımlık kararlılık kıyaslaması yürütüldü; 0 NaN/sapma hatası ve 30.21 MB kararlı bellek farkı doğrulandı.
+  - Hidrostatik turgor basıncına 115.0 kPa kritik yırtılma tavanı ve sıvı tahliye güvenliği eklendi.
+  - Segmentler arası sölomik sıvı akışı sınırlandırılarak sayısal dalgalanma giderildi.
+  - Kopan somit bağları ve sahipsiz hücrelerin sölomik durum temizliği güvenceye alındı.
+- Hour 166 (Completed): Sürüm 4.46.0 — Endobentik Kazı, Substrat Penetrasyonu ve Peristaltik Sürünme Daldırma Denetimi (Product Critic).
+  - 'Yüzeyde Kayan Asölomat Taklidi' (Surface Glider) kısıtı ve sedimente nüfuz edememe problemi teşhis edildi.
+  - Kambriyen Substrat Devrimi: Antagonistik dairesel ve boyuna kas dalgaları ile peristaltik kazı mekaniği tanımlandı.
+  - Sediment penetrasyonu, bentik oyuk açma ve biyotürbasyon mineral geri dönüşümü takvimlendirildi.
+  - Saat 167 - 170 uygulama mimarisi resmileştirildi.
+- Hour 167 (Completed): Sürüm 4.47.0 — Peristaltik Hareket Dalgaları, Boyuna vs. Halka Kas Antagonizması ve Substrat İçi İlerleme Mekaniği (System Agent).
+  - DNA peristalticCoordination ve burrowingExcavationPower genleri entegre edildi.
+  - Dairesel vs. boyuna kas tabakaları antagonistik kasılma ve retrograde peristaltik dalga fiziği kodlandı.
+  - Mineral resiflerde endobentik kazı modu (isBurrowing) ve detritik besin kazanımı uygulandı.
+  - Biyotürbasyon mineral geri dönüşümü ve Organizma İnceleme Paneli güncellendi.
+- Hour 168 (Completed): Sürüm 4.48.0 — Substrat Deformasyon Dalgacıkları, Segment Kasılma Dalgaları ve Hidrostatik Kazı Estetiği (Looks Agent).
+  - Konsantrik substrat deformasyon dalgacıkları ve detritik mineral partikül plümleri tasarlandı.
+  - Dairesel penetrasyon kaması vs. boyuna terminal ankraj halkası görsel morfolojisi modellendi.
+  - Retrograde peristaltik kasılma dalga yayları ve endobentik tünel giriş parıltısı entegre edildi.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi güncellendi.
+- Hour 169 (Completed): Sürüm 4.49.0 — Kazı İlerleme Hızı Telemetrisi ve Metamerik Somit Sayacı Paneli (UI Agent).
+  - HUD paneline Kazı İlerleme Hızı (valBurrowRate) ve penetrasyon rejimleri eklendi.
+  - Bentik Biyotürbasyon ve Sediment Havalandırma Göstergesi (valBioturbationIndex) bağlandı.
+  - Seçili Organizma Panelinde dairesel kama vs boyuna ankraj oranları ayrıştırıldı.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi güncellendi.
+- Hour 170 (Completed): Sürüm 4.50.0 — Makro Triploblast Organogenez İncelemesi, Bentik Sediment Dolaşımı ve Hayvan Şubeleri Radyasyonu Sentezi (Executive Director).
+  - Epoch 12 (Hours 161 - 170) başarıyla tamamlandı; triploblastik mezoderm, sölom ve metameri sentezlendi.
+  - Taşıma kapasitesi rekor 213+ birime genişletildi (endobenthicBioturbationBuffer +6).
+  - Biyotürbasyon mineral geri dönüşüm akısı (benthicTurnoverFlux, max 0.90 tavanı) bağlandı.
+  - Epoch 13 Yol Haritası (İlkel Dolaşım Sistemi & Nabız Veren Damarlar) resmileştirildi.
+
+## Epoch 13: İlkel Dolaşım Sistemi, Nabız Veren Damarlar & Solunum Pigmentleri (Hours 171 - 180)
+- Hour 171 (Completed): Sürüm 4.51.0 — Epoch 13 Stratejik Yol Haritası: İlkel Dolaşım Sistemi ve Nabız Veren Damarlar (Lead Planner).
+  - Açık sölomik hemolenf dolaşımı ve doku perfüzyonu mimari planı hazırlandı.
+  - Peritoneal kontraktil damarlar (dorsal/ventral) ve peristaltik vasküler pompa takvimlendirildi.
+  - Hemosiyanin/hemoglobin solunum pigmentleri ve hipoksi toleransı belirlendi.
+  - 31. Telemetri kanalı (Hemolenf Dolaşım Hızı & Damar Nabız Paneli) planlandı.
+- Hour 172 (Completed): Sürüm 4.52.0 — Açık Sölomik Hemolenf Dolaşımı, Nabız Veren Peritoneal Damarlar ve Hemodinamik Sıvı Basıncı (System Agent).
+  - DNA pulsatileVesselContractility ve hemolymphPerfusionAffinity genleri entegre edildi.
+  - Boyuna peritoneal kontraktil damar kanalları ve sistolik nabız basıncı formülü kodlandı.
+  - Kütlesel sıvı perfüzyonu ile doku difüzyon sınırları aşıldı; %20 metabolik tasarruf sağlandı.
+  - Endobentik kazıda +%25 hemodinamik dayanıklılık itişi ve Inspector damar satırları bağlandı.
+- Hour 173 (Completed): Sürüm 4.53.0 — Nabız Veren Damar Kasılma Işıltısı, Hemolenf Sıvı Akımı ve Solunum Pigmenti Renk Geçişleri (Looks Agent).
+  - Boyuna peritoneal damar kanalları ve sistolik kalp odacığı halesi görselleştirildi.
+  - Somitler arası tek yönlü hemolenf jet damlacıkları ve damarsal peristaltik dalgalar kodlandı.
+  - Deoksijene çivit vs. oksijene camgöbeği solunum pigmenti renk geçişleri modellendi.
+  - Metamerik kılcal damar perfüzyon ilmekleri ve Bilimsel Rehber Tab 4 güncellendi.
+- Hour 174 (Completed): Sürüm 4.54.0 — 31. Telemetri Kanalı: Hemolenf Dolaşım Hızı ve Damar Nabız Paneli (UI Agent).
+  - Lotka-Volterra grafiğine 31. senkronize kanal (#0284c7 hemolymphFlow) bağlandı.
+  - Hemolenf Basınç Göstergesi (valHemolymphFlow) ve hemodinamik rejimler HUD paneline eklendi.
+  - Damar Nabız Osiloskobu (valVascularBPM) ve dakika başına atım (BPM) takibi entegre edildi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi güncellendi.
+- Hour 175 (Completed): Sürüm 4.55.0 — Çok Odacıklı Hemolenf Akış Kararlılığı, Damar Tıkanma Sınırları ve 10.000 Adım Stres Denetimi (QA Agent).
+  - 10.000 adımlık hemodinamik stres testinde 0 NaN / tanımsız değer ve 211.2 TPS verimlilik doğrulandı.
+  - Damar tıkanma ve aşırı sistol basıncı için 45.0 mm Hg mutlak güvenlik tavanı bağlandı.
+  - Predasyon ve hücre ölümünde sahipsiz damar referansları ve hemolenf havuzları temizlendi (22.71 MB bellek farkı).
+  - İki kademeli Bilimsel Saha Rehberi Tab 6 Retrospektif paneline denetim raporu işlendi.
+- Hour 176 (Completed): Sürüm 4.56.0 — Doku Oksijenlenmesi, Hipoksi Stresi ve Metabolik Taşıma Derinliği Daldırma Denetimi (Product Critic).
+  - Saydam Sıvı Paradoksu ve August Krogh difüzyon derinlik limiti analiz edildi.
+  - Kalın gövdeli triploblastik dokularda hipoksik çekirdek boğulması ve metabolik stres gereksinimi formüle edildi.
+  - Hemosiyanin/hemoglobin metaloproteinleri ve kooperatif Bohr etkisi zorunluluğu ortaya kondu.
+  - Saat 177 - 180 uygulama yol haritası (Sistem, Görsel, UI, Direktör) resmileştirildi.
+- Hour 177 (Completed): Sürüm 4.57.0 — Solunum Pigmentleri (Hemosiyanin/Hemoglobin), Çözünmüş Gaz Difüzyonu ve Hipoksi Toleransı (System Agent).
+  - DNA respiratoryPigmentGene, oxygenBindingAffinity ve hypoxiaTolerance genleri entegre edildi.
+  - August Krogh difüzyon direnci ve kütlesel konvektif hemolenf oksijen taşınımı formüle edildi.
+  - Kooperatif Hill doygunluğu (n=2.4) ile hemosiyanin/hemoglobin Bohr kinetiği modellendi.
+  - Hipoksi stresi (<32 mm Hg) anaerobik asidoz cezası ve yüksek oksijenasyon canlılık temettüsü kodlandı.
+  - Organizma İnceleme Paneli'ne (Inspector) solunum pigmenti ve doku PO2 satırları eklendi.
+- Hour 178 (Completed): Sürüm 4.58.0 — Oksijenli Parlak Mavi/Kızıl Hemolenf Parıltısı ve Doku Gaz Değişim Dalgacıkları (Looks Agent).
+  - Hemosiyanin (çivit -> elektrik camgöbeği) ve hemoglobin (bordo -> parlak kızıl) dinamik renk geçişleri kodlandı.
+  - Kronik hipoksi altındaki dokular için dumanlı kehribar/mor çekirdek gölgelendirmesi ve asidoz titreşim halkaları entegre edildi.
+  - Membran çeperinden dış sıvıya yayılan eşmerkezli gaz değişim difüzyon dalgacıkları çizildi.
+  - Somitler arası kütlesel hemolenf jet damlacıkları solunum pigmenti saturasyon rengiyle senkronize edildi.
+- Hour 179 (Completed): Sürüm 4.59.0 — Doku Oksijen Satürasyonu Telemetrisi ve Hipoksi Uyarı Göstergeleri (UI Agent).
+  - Lotka-Volterra grafiğine 32. senkronize kanal (#06b6d4 tissueOxygen) bağlandı.
+  - Doku Oksijenasyon Göstergesi (valTissueOxygen) ve StO2 satürasyon rejimleri HUD paneline eklendi.
+  - Hipoksi Stres İndeksi ve Anoksi Uyarı Paneli (valHypoxiaAlert) ile hücresel asidoz takibi entegre edildi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi güncellendi.
+- Hour 180 (Completed): Sürüm 4.60.0 — Makro Dolaşım ve Solunum Organogenezi İncelemesi, Metabolik Taşıma Kapasitesi ve Kambriyen Radyasyonu Sentezi (Executive Director).
+  - Epoch 13 stratejik olarak sonuçlandırıldı; dolaşım ve solunum organogenezi sentezlendi.
+  - Taşıma kapasitesi tamponu genişletildi (+6 kapasite, Rekor 219+ birim).
+  - Kütlesel gaz taşınımı ve metabolik dönüşüm akısı (respiratoryConvectionFlux) entegre edildi.
+  - İki kademeli Bilimsel Saha Rehberi Tab 6 Retrospektif paneli ve Epoch 14 Yol Haritası resmileştirildi.
+
+## Epoch 14: Özelleşmiş Boşaltım Organları, Nefridyal Filtrasyon & Osmotik Denge (Hours 181 - 190)
+- Hour 181 (Completed): Sürüm 4.61.0 — Epoch 14 Stratejik Yol Haritası: İlkel Boşaltım Sistemi, Alev Hücreleri ve Osmotik Homeostaz (Lead Planner).
+  - Epoch 14 Dört Temel Mimari Sütunu (Metanefridyum, Alev Hücreleri, Osmoregülasyon, 33. Telemetri Kanalı) resmileştirildi.
+  - Basınçlı sölomik hemolenf sıvısından azotlu protein atıklarının ultrafiltrasyon planı hazırlandı.
+  - Saat 181 - 190 oturum takvimi ve uzman rol dağılımı takvimlendirildi.
+  - İki kademeli Bilimsel Saha Rehberi Tab 1 Genel Bakış ve Yol Haritası senkronize edildi.
+  - Sölomik metanefridyum filtrasyonu ve podosit mimari planı hazırlanacak.
+  - Alev hücresi sil salkımları (flame bulbs) ve negatif filtrasyon basıncı takvimlendirilecek.
+  - Azotlu atık (amonyak/üre) klirensi ve osmoregülasyon formülleri belirlenecek.
+  - 33. Telemetri kanalı (Nefridyal Filtrasyon Debisi & Osmotik Denge Paneli) planlanacak.
+- Hour 182 (Completed): Sürüm 4.62.0 — Metanefridyal Sölomik Sıvı Filtrasyonu, Podosit Çeperleri ve Azotlu Toksin Arıtımı (System Agent).
+  - DNA nephridialFiltrationRate, podocyteSlitIntegrity ve nitrogenTolerance genleri eklendi.
+  - Sölomik basınçla çalışan podosit süzme diyaframı ve metanefridyal filtrasyon formülü entegre edildi.
+  - Azotlu metabolik toksin havuzu (nitrogenousWaste) ve amonyak toksisite stresi (metabolicToxicity) modellendi.
+  - Organizma İnceleme Paneli'ne (Inspector) Metanephridia ve Nitrogen Waste satırları eklendi.
+- Hour 183 (Completed): Sürüm 4.63.0 — Titreşen Alev Hücresi Sil Salkımları (Flame Bulbs), Nefridyal Boşaltım Kanalları ve Toksin Parıltısı (Looks Agent).
+  - Titreşen alev hücresi sil salkımları (#a7f3d0 / #10b981) ve negatif çekim dalgalanması modellendi.
+  - S-kıvrımlı nefridyal boşaltım tübülleri ve podosit süzme noktacıkları görselleştirildi.
+  - Yüksek azotlu atık (>30 ppm) durumunda kükürt kehribarı toksin sisi ve amonyak zehirlenmesi halkası eklendi.
+  - İki kademeli Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi senkronize edildi.
+- Hour 184 (Completed): Sürüm 4.64.0 — 33. Telemetri Kanalı: Nefridyal Filtrasyon Debisi ve Osmotik Denge Osiloskobu (UI Agent).
+  - Lotka-Volterra grafiğine 33. senkronize kanal (#10b981 nephridialClearance) bağlandı.
+  - Nefridyal Filtrasyon Göstergesi (valNephridialClearance) ve ultrafiltrasyon rejimleri HUD paneline eklendi.
+  - Metabolik Azot Toksisitesi ve Azotemi Paneli (valNitrogenToxicity) ile hücresel amonyak takibi entegre edildi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi güncellendi.
+- Hour 185 (Completed): Sürüm 4.65.0 — Boşaltım Toksini Dengesi, Osmotik Patlama Sınırları ve 10.000 Adım Kararlılık Denetimi (QA Agent).
+  - 10.000 adımlık çoklu sistem stres testinde 0 NaN / tanımsız değer ve sıfır sayısal sapma doğrulandı (~46.500 TPS verimlilik).
+  - Hücresel azotlu atık havuzu [0.0 - 100.0] ppm aralığında ve nefridyal filtrasyon debisi Number.isFinite kontrolleriyle güvenle sınırlandırıldı.
+  - Ölüm (senescence), avlanma (predation) ve koloni parçalanması durumlarında asılı kalan metanephridia göstericileri sıfırlandı; bellek sızıntısı giderildi (+0.74 MB yığın deltası).
+  - Somitler arası azotlu atık iletimi [-2.0, +2.0] ppm sınırıyla dengelendi, yüksek frekanslı sayısal salınımlar önlendi.
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline teknik denetim raporu işlendi.
+- Hour 186 (Completed): Sürüm 4.66.0 — Toksik Metabolit Yükü, Tuzluluk Şoku ve Boşaltım Daldırma Denetimi (Product Critic).
+  - 'Statik Çözücü' ikilemi tespit edildi: Boşaltımın sadece amonyak atımı olmadığı, su ve iyon osmoregülasyonu (Na+/K+) ile birlikte çalışması gerektiği ortaya kondu.
+  - Çevresel tuzluluk dalgalanmaları (hipotonik lizis ve hipertonik krenasyon riskleri) tanımlandı.
+  - Nefridyal tübüler iyonik geri emilim ve osmotik hacim dengesi mekaniği Hours 187-190 için takvimlendirildi.
+  - Nefridyopor atık fışkırtma dalgacıkları ve hücre zarı şişme/büzülme estetiği görsel gereksinimleri belirlendi.
+  - Bilimsel Saha Rehberi Tab 1 ve Tab 6 panellerine kapsamlı eleştirmen denetimi işlendi.
+- Hour 187 (Completed): Sürüm 4.67.0 — Osmoregülasyon, İyonik Geri Emilim (Na+/K+) ve Çevresel Tuzluluk Değişimlerine Adaptasyon (System Agent).
+  - DNA'ya ionicReabsorptionRate ve osmoregulatoryCapacity genetik alelleri eklendi.
+  - Dinamik çevresel tuzluluk (ambientSalinity, 30.5 - 45.0 mOsm/L), mevsimsel buharlaşma ve resif mikro-havzası mineral salınımı modellendi.
+  - Metanefridyal tübüllerde Na+/K+ aktif taşınması ve elektrolit tutulum oranı (ionicRetentionRatio, %98'e kadar) modellendi.
+  - Ozmotik basınç gradyanı, turgor gerilimi (osmoticStrain) ve aşırı şişme/büzülmeden kaynaklanan hareket sönümlemesi (azami %35) entegre edildi.
+  - Organizma İnceleme Paneli'ne Osmotic Homeostasis ve Ionic Retention satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline osmoregülasyon formülleri işlendi.
+- Hour 188 (Completed): Sürüm 4.68.0 — Nefridyopor Atık Fışkırtma Dalgacıkları ve Osmotik Şişme/Büzülme Dinamikleri (Looks Agent).
+  - Yan metanefridyoporlardan periyodik mikro-sıvı atık ve idrar püskürmeleri (#34d399 / #10b981) modellendi.
+  - Püskürme kaynaklı eşmerkezli mikro-sıvı dalgacıkları (concentric effluent jet ripples, #a7f3d0) çizildi.
+  - Hipotonik ortamda hücre ödemi ve hacimsel şişme (edema swelling) sucul soluk haleyle (#bae6fd) görselleştirildi.
+  - Hipertonik ortamda su kaybına bağlı hücresel büzülme (crenation shrinkage) kesikli kehribar rengi zar kırışıklıklarıyla (#f59e0b) modellendi.
+  - Tübüler epiteller boyunca aktif Na+/K+ ATPaz iyon pompası taşınmasını simgeleyen altın-kehribar parıltı (#facc15) entegre edildi.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi senkronize edildi.
+- Hour 189 (Completed): Sürüm 4.69.0 — Osmotik Turgor Gerilimi Telemetrisi ve Toksin Uyarı Göstergeleri (UI Agent).
+  - Lotka-Volterra grafiğine 34. senkronize kanal (#fbbf24 osmoticHomeostasis) bağlandı.
+  - Ortam Ozmolaritesi ve Tuzluluk Göstergesi (valAmbientSalinity) HUD paneline entegre edildi.
+  - Hücresel Ozmotik Gerilim ve Hidrasyon Uyarı Paneli (valOsmoticStrain) eklendi.
+  - Grafik lejantına altın-kehribar 'Osmoregulation' göstergesi eklendi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi 34. kanal ve hidrasyon rejimleriyle güncellendi.
+- Hour 190 (Completed): Sürüm 4.70.0 — Makro Boşaltım ve Osmoregülasyon Sentezi, Taşıma Kapasitesi Zirvesi (Peak 225+) ve Kambriyen Kararlılık İncelemesi (Executive Director).
+  - Epoch 14 (Hours 181 - 190) başarıyla tamamlandı: Metanefridyal ultrafiltrasyon, podosit süzme diyaframı, ciliated flame bulbs, tübüler Na+/K+ aktif iyon geri emilimi, dinamik çevresel ozmolarite ve 33. & 34. telemetri kanalları sentezlendi.
+  - Ekolojik taşıma kapasitesi formülüne excretoryOsmoregulatoryBuffer (+6 birim) eklenerek tarihi Peak 225+ birim seviyesine yükseltildi.
+  - Kambriyen fizyolojik homeostazı tamamlandı; doku içi azotemi zehirlenmesi ve ozmotik lizis/krenasyon riskleri bertaraf edildi.
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline büyük resim sentez raporu işlendi.
+
+## Epoch 15: Tam Sindirim Kanalı, Ağız-Anüs Polaritesi & Özelleşmiş Trofik Sindirim Bezleri (Hours 191 - 200)
+- Hour 191 (Completed): Sürüm 4.71.0 — Epoch 15 Stratejik Yol Haritası & Sindirim Kanalı Organogenezi Takvimlendirmesi (Lead Planner).
+  - Kör-kese sindirim boşluklarından tek yönlü tam sindirim kanalına (alimentary through-gut: stomodaeum-proctodeum) geçiş mimarisi modellendi.
+  - Saat 191 - 200 oturumları sakin, tempolu ve modüler bir yapıda takvimlendirildi.
+  - Enzimatik hidroliz (proteaz/lipaz), trofik çene aparatları (radula/trophi) ve 35. telemetri kanalı için gereksinimler belirlendi.
+  - Bilimsel Saha Rehberi Tab 1 Genel Bakış paneline Epoch 15 stratejik yol haritası eklendi.
+- Hour 192 (Completed): Sürüm 4.72.0 — Tam Sindirim Kanalı Morfogenezi, Tek Yönlü Peristaltik Bağırsak Akışı ve Enzimatik Hidroliz (System Agent).
+  - Kör-kese gastrodermis modelinden tek yönlü stomodaeum-proctodeum (ağız-anüs) alimenter kanalına geçildi.
+  - DNA'ya throughGutMorphogenesis, enzymaticHydrolysisRate ve peristalticGutCadence genleri entegre edildi.
+  - Unidirectional anteroposterior bolus ilerlemesi (alimentaryFlowPhase) ile kesintisiz besin alımı sağlandı.
+  - Enterosit lümen enzim salgılarıyla kimyasal hidroliz modellendi, besin asimilasyon verimi %85'e kadar yükseltildi (1.85x metabolik çarpan).
+  - Organizma İnceleme Paneli'ne Alimentary Canal ve Enzymatic Hydrolysis satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline sindirim formülleri işlendi.
+- Hour 193 (Completed): Sürüm 4.73.0 — Enterosit Lümen Dinamikleri, Salgı Bezleri Enzim Damlacıkları ve Sindirim Akış Optiği (Looks Agent).
+  - Anteroposterior eksen boyunca uzanan endodermal sindirim borusu ve kehribar-mercan (#f59e0b / #ea580c) mukoza çeperleri çizildi.
+  - Ağız (stomodaeum, #34d399) ve anüs (proctodeum, #ea580c) açıklıkları modellendi.
+  - Ağızdan anüse doğru peristaltik dalgalanmalarla ilerleyen ışıltılı zümrüt sindirim bolusu (#a7f3d0 / #34d399) görselleştirildi.
+  - Aktif kimyasal hidroliz sırasında salgılanan asidik-sarı enzim damlacıkları (#facc15) ve katalitik mikro-ışık halkaları (#fde047) eklendi.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi senkronize edildi.
+- Hour 194 (Completed): Sürüm 4.74.0 — 35. Telemetri Kanalı: Sindirimsel Besin Emilim Verimi (% AAE) ve Trofik Akı Göstergesi (UI Agent).
+  - Lotka-Volterra grafiğine 35. senkronize kanal (#f97316 alimentaryAssimilation) bağlandı.
+  - Sindirimsel Asimilasyon Verimi Göstergesi (valAssimilationEfficiency) HUD paneline entegre edildi.
+  - Trofik Sindirim Akısı ve Bolus Sayımı Göstergesi (valDigestiveFlux) eklendi.
+  - Grafik lejantına mercan-turuncu 'Assimilation' göstergesi eklendi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi 35. kanal ve sindirim rejimleriyle güncellendi.
+- Hour 195 (Completed): Sürüm 4.75.0 — Sindirim Geçiş Kararlılık Kıyaslaması, Proteolitik Enzim Dengesi ve 10.000 Adım Denetimi (QA Agent).
+  - 10.000 adımlık çoklu sistem stres testinde 0 NaN / tanımsız değer ve sıfır sayısal sapma doğrulandı (~44.200 TPS verimlilik).
+  - Hücresel sindirim bolusu [0.0 - 60.0] ve akış fazı [0.0 - 1.0) aralığında Number.isFinite kontrolleriyle kesin olarak sınırlandırıldı.
+  - Ölüm (senescence), avlanma (predation) ve koloni parçalanması durumlarında asılı kalan tam sindirim kanalı göstericileri sıfırlandı; bellek sızıntısı giderildi (+0.02 MB yığın deltası).
+  - Somitler arası bolus transferi [-1.8, +1.8] sınırıyla dengelendi, sayısal salınımlar engellendi.
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline teknik denetim raporu işlendi.
+- Hour 196 (Completed): Sürüm 4.76.0 — Trofik Beslenme Ekleri, Çene/Radula Aparatı ve Sindirim Daldırma Denetimi (Product Critic).
+  - 'Homojen Boru' ikilemi tespit edildi: Alimenter kanalın tek düze bir boru olamayacağı, mide vs. bağırsak bölümlenmesi gerektiği ortaya kondu.
+  - Asidik mekanik öğütme (mide, pH 2.5 - 3.5) ve alkali mikrovillus emilim (bağırsak, pH 7.5 - 8.2) mimarisi tanımlandı.
+  - Etçil farengeal çeneler (trophi) ve otçul radula kazıyıcıları Hours 197-200 için takvimlendirildi.
+  - Bilimsel Saha Rehberi Tab 1 ve Tab 6 panellerine kapsamlı eleştirmen denetim raporu işlendi.
+- Hour 197 (Completed): Sürüm 4.77.0 — Özelleşmiş Mide/Bağırsak Bölmeleri, pH Gradyanı ve İntestinal Emilim Mekaniği (System Agent).
+  - Homojen sindirim borusu iki bölmeye ayrıldı: Asidik mide/proventrikül (pH 2.2 - 4.5) ve alkali intestinal fırçamsı kenar (pH 7.2 - 8.3).
+  - DNA'ya gastricAcidSecretase, microvilliBrushBorderDensity ve trophicMasticationApparatus genleri eklendi.
+  - Mide asidi proteolizi ve kimus havuzu (gastricChymePool) mekanikleri modellendi.
+  - İntestinal mikrovillus yüzey amplifikasyonuyla besin emilim verimi %95'e çıkarıldı.
+  - Etçillerde farengeal trofi çeneleri (+%50 avlanma verimi) ve otçullarda radula kazıma aparatı (+%45 otlama verimi) entegre edildi.
+  - Organizma İnceleme Paneli'ne Gastric Acid Chamber ve Enteric Brush Border satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline bölümlenmiş sindirim formülleri işlendi.
+- Hour 198 (Completed): Sürüm 4.78.0 — İntestinal Villus Yüzey Dalgalanmaları ve Enzim Salgı Parıltısı (Looks Agent).
+  - Ön mide proventrikül odacığı asidik kızıl-kehribar (#ef4444 / #f97316) ışıltıyla ve sıvı kimus kavitasyon mikro-kabarcıklarıyla (#fef08a) modellendi.
+  - Arka emilim bağırsağında mikrovillus fırçamsı kenar villus dalgalanmaları (#06b6d4 / #34d399) ve alkali emilim halesi çizildi.
+  - Ağız stomodaeum bölgesinde mafsallı etçil farengeal trofi çeneleri (#f87171) ve otçul radula kazıma şeridi (#34d399) görselleştirildi.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi senkronize edildi.
+- Hour 199 (Completed): Sürüm 4.79.0 — İntestinal pH ve Sindirimsel Asimilasyon Telemetri Paneli (UI Agent).
+  - Lotka-Volterra grafiğine 36. senkronize kanal (#d946ef digestivePhGradient) bağlandı.
+  - Mide Asitliği ve Proventrikül pH Göstergesi (valGastricPh) HUD paneline entegre edildi.
+  - İntestinal Fırçamsı Kenar Emilim Göstergesi (valEntericAbsorption) eklendi.
+  - Grafik lejantına macenta-fuşya 'pH Gradient' göstergesi eklendi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi 36. kanal ve pH rejimleriyle güncellendi.
+- Hour 200 (Completed): Sürüm 4.80.0 — Makro Sindirim Kanalı Sentezi, Taşıma Kapasitesi Zirvesi (Peak 231+) ve 200 Saatlik Büyük Kambriyen Kutlaması (Executive Director).
+  - Epoch 15 Büyük Kambriyen Sindirim Sentezi tamamlandı; tek yönlü tam alimenter kanal (stomodaeum-proctodeum), asidik mide proventrikülü (pH 2.2-4.5) ve alkali intestinal fırçamsı kenar (pH 7.2-8.3) eksiksiz bütünleştirildi.
+  - Taşıma kapasitesi (carrying capacity) sindirimsel asimilasyon tamponu (+6 birim) ile tarihi zirvesine ulaştı: Peak 231+ taşıma kapasitesi.
+  - Kambriyen Üçlü Organ Sistemi (Dolaşım + Boşaltım + Sindirim) tekil, stabil ve 60 FPS metazoan gövdesinde kenetlendi.
+  - 36 Senkronize telemetri kanalı ve bilimsel laboratuvar panelleri sıfır emoji kuralıyla 200 saatlik jübile durumuna getirildi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası ve Tab 6 Retrospektif panellerine 200 Saatlik Büyük Kambriyen Jübilesi inceleme raporu işlendi.
+
+---
+
+### Mimari Prensip: Modüler ve Kısa Dosya Yapısı (Saat 201+ Standart Kuralı)
+- Tüm kodun tek bir devasa `index.html` içinde toplanması yerine, proje büyüdükçe yeni, kısa ve odaklı modül dosyaları oluşturulacaktır.
+- Güncellemeler yalnızca ilgili uzmanlık dosyasına (`src/core/`, `src/genetics/`, `src/organs/`, `src/render/`, `src/ui/`, `css/`) yapılacak; her dosya okunabilir ve kompakt tutulacaktır.
+
+### Epoch 16: Modüler Mimariye Geçiş, Duyu Kapsülleri, Statokistler ve İlkel Fotoreseptörler (Hours 201-210) [Planlanan / Gelecek Hedefler]:
+- Hour 201 (Completed): Sürüm 4.81.0 — Modüler Dosya Mimarisi Tasarımı (`src/` ayrıştırması) ve Epoch 16 Duyu Kapsülleri Yol Haritası (Lead Planner).
+  - Monolitik `index.html` yapısından 477 satırlık CSS ayrılarak `css/style.css` içine taşındı ve harici bağlandı.
+  - Modüler dizin yapısı oluşturuldu: `src/core/`, `src/genetics/`, `src/organs/`, `src/render/`, `src/ui/` ve `css/`.
+  - İlk modül dosyaları devreye alındı: `src/core/constants.js` (sabitler ve Peak 231+ sınırları), `src/genetics/dna_definitions.js` (duyu gen lokusları), `src/organs/sensory.js` (statokist/rhopalia ve ocelli fototaksi sistemi).
+  - `docs/MODULAR_ARCHITECTURE.md` teknik mimari rehberi yayınlandı.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası ve canlı bilgi kuyruğu Epoch 16 duyu hedefleriyle senkronize edildi.
+- Hour 202 (Completed): Sürüm 4.82.0 — `src/genetics/` & `src/organs/sensory.js`: Statokist Yerçekimi Algısı ve Rhopalia Denge Organları Mekaniği (System Agent).
+  - Statokist denge kapsülü ve statolit mineral kütlesinin eylemsizlik/kayma dinamiği modellendi (`SensorySystem`).
+  - Yerçekimsel derinlik yönelimi (gravitaxis) eklendi; bentik detritivorlar dip substratlara, pelajik otçullar aydınlık yüzeye yönelebilir hale geldi.
+  - Rhopalia marjinal denge düğümleri ve açısal sönümleme devresi kuruldu; türbülanslı takla atma kaosu engellenerek yüzme enerjisinde %28'e varan ATP tasarrufu sağlandı.
+  - `src/genetics/dna_definitions.js` ve `class DNA` içine statocystSensoryDensity, rhopaliaEquilibriumCadence, gravitaxisAffinity ve rheotacticSensitivity lokusları entegre edildi.
+  - Organizma İnceleme Paneli'ne Statocyst Georeception ve Rhopalia Equilibrium telemetri satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline statokist/rhopalia diferansiyel hareket denklemleri işlendi.
+- Hour 203 (Completed): Sürüm 4.83.0 — `src/render/sensory_optics.js`: Pigment Noktası Ocelli Optiği, Fotoreseptör Mikro-Parıltısı ve Statolit Kristal Işıltısı (Looks Agent).
+  - `src/render/sensory_optics.js` bağımsız modülü oluşturuldu (`SensoryOpticsRenderer`, 196 satır).
+  - Statokist vezikül kapsülü, 6 adet radyal kinocilia sili ve eylemsizlik kaymasına göre ötelenen kalsit statolit mineral çekirdeği (#f8fafc) görselleştirildi.
+  - Rhopalia marjinal denge düğümleri eklendi; kararlı yüzmede göksel turkuaz (#38bdf8), açısal sönümleme anında mor-leylak (#c084fc) mikro-dalga dalgalanmalarıyla modellendi.
+  - Sefalik kenarda derin melanin koruma çanağına (#1e1b4b) ve yönelimsel foton odak parıltısına sahip çift göz benekleri (ocelli) çizildi.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi yeni duyu organ optik rehberiyle senkronize edildi.
+- Hour 204 (Completed): Sürüm 4.84.0 — `src/ui/telemetry_sensory.js` & `css/`: 37. Telemetri Kanalı: Duyu Entegrasyon İndeksi (% SII) ve Fototaksi HUD (UI Agent).
+  - Lotka-Volterra popülasyon grafiğine 37. senkronize kanal (#818cf8 sensoryIntegrationIndex) eklendi.
+  - Bağımsız `src/ui/telemetry_sensory.js` modülü oluşturuldu (`SensoryTelemetryManager`, 121 satır).
+  - Duyu Entegrasyon İndeksi Göstergesi (valSensoryIndex) ve Duyu Dengesi & ATP Tasarrufu Göstergesi (valSensoryBalance) HUD paneline entegre edildi.
+  - Popülasyon grafiği lejantına leylak-indigo Sensory SII göstergesi ve `css/style.css` içine duyu stilleri eklendi.
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi 37. kanal formülleri ve 4 duyu evrim rejimiyle senkronize edildi.
+- Hour 205 (Completed): Sürüm 4.85.0 — `src/core/stability.js`: Modüler Paket Bütünlüğü, Duyu Mekaniği Kararlılık Kıyaslaması ve 10.000 Adım Denge Denetimi (QA Agent).
+  - 10.000 adımlık çoklu sistem stres testinde 0 NaN / tanımsız değer ve sıfır sayısal sapma doğrulandı (~14.140 TPS verimlilik).
+  - Bağımsız `src/core/stability.js` modülü devreye alındı (`StabilityValidator`, 121 satır).
+  - Statolit sapması [0.0 - 1.0], eğilme açısı [-180, +180] derece ve ATP tasarruf tavanı (%30) Number.isFinite sınırlarıyla kesin olarak kilitlendi.
+  - Headless Node.js ortamlarında document tanımsızlık hatası giderildi (`src/ui/telemetry_sensory.js`).
+  - Ölüm durumlarında asılı kalan duyu ve organ işaretçileri sıfırlandı; bellek sızıntısı önlendi (+2.7 MB yığın deltası).
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline teknik denetim raporu işlendi.
+- Hour 206 (Completed): Sürüm 4.86.0 — `docs/CRITIC_AUDIT_EPOCH16.md`: Kambriyen Duyu ve Görme Derinliği Denetimi, Av-Avcı Algı Karşılaşmaları Değerlendirmesi (Product Critic).
+  - Pasif Işık Paradoksu tespit edildi: Canlıların ocelli göz beneklerine rağmen çevreye dinamik ışık saçamadığı ve fototaksinin aktif avlanma tuzağına dönüşmediği ortaya kondu.
+  - Andrew Parker'ın Işık Düğmesi Hipotezi (Light Switch Hypothesis) doğrultusunda Hours 207-210 için fotofor organları ve optik avlanma mimarisi tanımlandı.
+  - Biyo-lüminesans fotofor bezleri (lusiferin-lusiferaz), agresif ışık tuzakları (Hour 207 System), gece su altı ışık yayılımı (Hour 208 Looks), 38. telemetri kanalı (Hour 209 UI) ve Peak 237+ taşıma kapasitesi (Hour 210 Executive Director) takvimlendirildi.
+  - `docs/CRITIC_AUDIT_EPOCH16.md` resmi denetim belgesi yayımlandı.
+  - Bilimsel Saha Rehberi Tab 1 ve Tab 6 panellerine eleştirmen inceleme raporu işlendi.
+- Hour 207 (Planned): Basit Işık Tuzakları, Fototaktik Beslenme Çekimi ve Biyo-Lüminesans Yanıtı (System Agent).
+- Hour 208 (Planned): Biyo-Lüminesans Fotofor Işıltıları ve Gece Avlanma Optiği (Looks Agent).
+- Hour 209 (Planned): 38. Telemetri Kanalı: Fototaktik Akı ve Işık Gradyanı Paneli (UI Agent).
+- Hour 210 (Planned): Epoch 16 Duyu Organogenezi Sentezi, Taşıma Kapasitesi Zirvesi (Peak 237+) ve Büyük Duyu Kapanışı (Executive Director).
