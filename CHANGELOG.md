@@ -1,5 +1,3081 @@
 # BioEcosystem — Changelog
 
+## [Version 7.06.0] — 2026-10-26 22:45 (Eleştirmen & Problem Yaratan: Product Critic - Devrilme Torku, Kalsifikasyon Maliyeti, Sap Kırılması ve 82. Kanal Denetimi)
+- **Krinoid Biyomekanik Ekosistemi Kapsamlı Ürün Denetimi (docs/CRITIC_AUDIT_CRINOID.md - 174. dosya):**
+  - **Devrilme Hidrodinamik Torku ve Kök Kopması (Overturning Hydrodynamic Torque):** Kolumnal sap uzadıkça laminer akıntının kadehe uyguladığı kaldıraç kolunun büyümesi ve kök tutunma çengellerine binen aşırı gerilim (`holdfastTensionLimit`) sonucu canlının tabandan sökülüp sürüklenme riski masaya yatırıldı; taban gerilim eşiği tanımlandı.
+  - **Kalsifikasyon ve Biyomineralizasyon Bakım Maliyeti (Calcite Maintenance Overhead):** Onlarca kalsit diskin üretilip korunmasının getirdiği sürekli kalsiyum ve metabolik enerji yükü (`calciteMineralMaintenanceTax`) incelendi; besin kesintilerinde kalsit rezorpsiyonu ve sap kırılganlığı gereksinimi ortaya kondu.
+  - **Kollajen Kilitlenme Yorgunluğu ve Sap Ototomisi (MCT Lock Exhaustion & Column Autotomy):** MCT catch-kollajen dokusunun saatlerce süren aşırı akıntıda yaşayacağı yorgunluk (`collagenFatigueFactor`) ve kırılan/sıkışan sapın feda edilerek kadehin serbest yüzücü komatulid formuna geçmesini sağlayan planlı eklem kopması (`stalkAutotomyReflex`) formüle edildi.
+  - **82. Telemetri Kanalı Şartnamesi (% RAR - Rheophilic Articulation Ratio):** Sapın akıntıya göre esnek eğilme uyumunu, kollajen kilitlenme stabilitesini, parabolik çanak yönelimini ve devrilme direncini bütünsel olarak ölçecek 82. telemetri kanalı (% RAR) için formülasyon ve koral kırmızısı grafik entegrasyonu planlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.06.0, `HISTORIC_MILESTONE_HOURS: 426` olarak güncellendi (192 satır).
+  - `index.html`: Başlık rozeti 'CRITIC 426H | v7.06.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+
+## [Version 7.05.0] — 2026-10-26 21:45 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 81 Kanallı Krinoid ve Reofilik Kararlılık Testi)
+- **10.000 Adım Başlıksız Performans ve 81 Kanallı Stres Testi (benchmark_qa_v7050.js - 200 satır, 173. dosya):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 97 tepe popülasyona ve 91 nihai canlı hücreye ulaşarak ekosistem dengesini korudu.
+  - **81. Telemetri Kanalı (% CEA) ve Krinoid Denetimi:** 81 kanallı Lotka-Volterra eğrileri, Kadeh Yükseklik Avantajı (% CEA), Seston Filtreleme Verimi (% SFE), Bentik Karbon Akısı (% BCF), Hadal Barometrik Adaptasyon (% ABA, %84.2) ve Piezofilik Membran Stabilitesi (% PMS, %94.2) metrikleri tam kararlılıkla doğrulandı.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 27.84 MB seviyesinde stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.05.0, `HISTORIC_MILESTONE_HOURS: 425` olarak güncellendi (192 satır).
+  - `index.html`: Başlık rozeti 'QA 425H | v7.05.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+
+## [Version 7.04.0] — 2026-10-26 20:45 (İnşa Ekibi: Arayüz Ajanı - 81. Telemetri Kanalı % CEA, Krinoid Kolon ve Tutunma HUD Paneli)
+- **81. Telemetri Kanalı (% CEA - Calyx Elevation Advantage) ve Krinoid HUD (src/ui/telemetry_crinoid.js - 212 satır, 172. dosya & css/style.css):**
+  - **81. Telemetri Kanalı (% CEA):** Kadeh yükseltilme mesafesi, laminer seston akıntısı hızı erişimi, sınır tabakası sürtünmesinden kurtulma ve taban silt kirlenmesinden kaçınma oranını bütünsel olarak puanlayan 81. telemetri kanalı devreye alındı.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** HIGH-STRATUM LAMINAR SESTON INTERCEPTION (#eab308), STABLE BOUNDARY-LAYER CLEARANCE (#fde047), PARTIAL OVERTURNING FLOW STRAIN (#f59e0b) ve BASAL SILT SUFFOCATION & STALK COLLAPSE (#ef4444) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valCEAIndex` ve `#valCEAStatus` DOM göstergeleri bağlandı; canlı `historyData.calyxElevationAdvantage` kayıt tamponu Lotka-Volterra grafiğine altın sarısı kesikli çizgiyle (#eab308) entegre edildi; `.cea-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.04.0, `HISTORIC_MILESTONE_HOURS: 424`, `TOTAL_TELEMETRY_CHANNELS: 81` olarak güncellendi (192 satır).
+  - `index.html`: Başlık rozeti 'UI 424H | v7.04.0' yapıldı; `coolBiologyFacts` listesine 424. saat bilgisi eklendi; HUD stat elemanları eklendi, `CrinoidTelemetryManager.step` çağrısı bağlandı ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+
+## [Version 7.03.0] — 2026-10-26 19:30 (İnşa Ekibi: Görsel Ajanı - Eklemli Kalkerli Saplar, Parabolik Kadeh Taçları ve Cirri Pençeleri)
+- **Eklemli Krinoid Optikleri ve Reofilik Kadeh Görselleştirmesi (src/render/crinoid_optics.js - 278 satır, 171. dosya):**
+  - **Eklemli Kolumnal Sap ve Kalsit Işıltısı (drawArticulatedStalk):** Kalsiyum karbonat disklerin magnezyum kalker ışıltısıyla (#fef08a, #fde047, #eab308) üst üste istiflendiği kolon gövdesi, eklem ligamentleri ve akıntı bükülme eğrisi mikroskop estetiğiyle simülasyona dahil edildi.
+  - **Değişebilir Kollajen Kilitlenme Aurası (MCT Lock Sheath):** Şiddetli akıntı torkunda organizma pasif olarak kilitlendiğinde kolon etrafında parıldayan kehribar-altın renkli lifli kın aurası (rgba(234, 179, 8, 0.45)) render edildi.
+  - **Parabolik Reofilik Kadeh Tacı ve Pinnüller (drawRheophilicCalyxCrown):** Akıntıya karşı parabolik bir çanak oluşturan koyu camgöbeği calyx kadehi (#0284c7), ışıldayan pinnül tüyleri (#f43f5e) ve kadeh yükseklik avantajında devreye giren seston yakalama ışıltıları modellendi.
+  - **Taban Tutunma Cirri Pençeleri (drawHoldfastCirri):** Sediment ve kaya zeminine pençe gibi sarılan çok segmentli eklemli tutunma kolları (#a16207) ve taban devrilme direnç noktaları çizildi.
+  - **Laminer Seston Akıntı Şeritleri (drawGlobalCrinoidEnvironment):** Sınır tabakasının üzerindeki laminer akıntı katmanını (y: 360 - 430 px) gösteren altın sarısı ve camgöbeği akış dalgaları petride görselleştirildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.03.0, `EPOCH: 38`, `HISTORIC_MILESTONE_HOURS: 423` olarak güncellendi (192 satır).
+  - `index.html`: Başlık rozeti 'LOOKS 423H | v7.03.0' yapıldı; `coolBiologyFacts` listesine 423. saat bilgisi eklendi; `CrinoidOpticsRenderer.drawCellCrinoid` ve `drawGlobalCrinoidEnvironment` çizim çağrıları bağlandı ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+
+## [Version 7.02.0] — 2026-10-26 18:15 (İnşa Ekibi: Sistem Ajanı - Biyominerilize Kalsit Kolumnallar, Esnek Kollajen ve Kadeh Yükseltme Kinetiği)
+- **Biyominerilize Saplı Krinoid Kinetiği (src/organs/crinoid_stalks.js - 245 satır, 170. dosya):**
+  - **Kalsit Kolumnal Sap Eklemleri (calciteColumnalCount & stalkHeight):** Hücre gövdesini ve filtreleme kadehini dip sedimentinin 35 - 115 px üzerine (y: 365 - 445 px) yükselten biyominerilize kalsiyum karbonat disk kolonları (4.2 px disk kalınlığı) modellendi.
+  - **Değişebilir Kollajen Doku Kilitlenmesi (Mutable Collagenous Tissue - MCT):** Akıntı sürtünmesi ve devrilme torku yükseldiğinde aktif kas enerjisi harcamadan kolonu pasif olarak kitleyen ve elastikliği dinamik ayarlayan catch-collagen dokusu (`mutableCollagenStiffness`) entegre edildi.
+  - **Kadeh Yükseklik Avantajı (Calyx Elevation Advantage - % CEA):** Taban sınır tabakasının üzerindeki temiz, laminer seston akıntısına ulaşarak serbest organik karbon yakalama verimini %65'e varan oranda artıran yükseklik faktörü ve laminer debi kazancı formüle edildi.
+  - **Tutunma Cirri Çengelleri (Holdfast Cirri Grip):** Bentik tabana kilitlenerek akıntı devrilme torkuna karşı organizmayı sabitleyen eklemli bazal pençeler (`holdfastCirriCount` ve `holdfastCirriGrip`) kodlandı.
+  - **81. Kanal (% CEA) ve 82. Kanal (% RAR) Ön Hazırlığı:** Bireysel ve popülasyon geneli kadeh yükseklik avantajı (`calyxElevationAdvantage`) ile reofilik eklem uyumu (`rheophilicArticulationRatio`) metrikleri simülasyon döngüsüne bağlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.02.0, `EPOCH: 38`, `HISTORIC_MILESTONE_HOURS: 422` olarak güncellendi (192 satır).
+  - `index.html`: Başlık rozeti 'SYSTEM 422H | v7.02.0' yapıldı; `coolBiologyFacts` listesine 422. saat bilgisi eklendi; simülasyon adımına `crinoidStalkManager.step` bağlandı ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+
+## [Version 7.01.0] — 2026-10-26 17:15 (Baş Planlamacı: Lead Planner - Epoch 38 Biyominerilize Saplı Krinoidler ve Reofilik Kadeh Mimarisi Yol Haritası)
+- **Epoch 38 Biyominerilize Krinoidler ve Reofilik Kadeh Stratejik Planı (docs/EPOCH38_CRINOID_BLUEPRINT.md - 169. dosya):**
+  - **Epoch 38 Mimari Vizyonu:** Bentik sınır tabakasının (BBL) üst katmanlarına erişmek üzere mineralize kalsit saplar (calcite columnals) üzerinde yükselen epibentik krinoid organizmaları ve reofilik kadeh süzme tacı mimarisi 10 saatlik sakin ve profesyonel adımlarla takvimlendirildi.
+  - **10 Saatlik Oturum Planı:**
+    - Saat 421 (v7.01.0 - Tamamlandı): Lead Planner — `docs/EPOCH38_CRINOID_BLUEPRINT.md`: Epoch 38 Stratejik Planı ve Reofilik Kadeh Mimarisi (169. dosya).
+    - Saat 422 (v7.02.0): System Agent — `src/organs/crinoid_stalks.js`: Kalsit Sütun Eklemleri, Hidrodinamik Esneklik ve Reofilik Kadeh Filtreleme Mimarisi (170. dosya).
+    - Saat 423 (v7.03.0): Looks Agent — `src/render/crinoid_optics.js`: Eklemli Sütun Parıltısı, Pinnül Yelpaze Dalgalanması ve Reofilik Akıntı Eğilimi (171. dosya).
+    - Saat 424 (v7.04.0): UI Agent — `src/ui/telemetry_crinoid.js` & `css/style.css`: 81. Telemetri Kanalı (% CFE - Crinoid Filtration Efficiency) ve Kolon HUD Paneli.
+    - Saat 425 (v7.05.0): QA Agent — `benchmark_qa_v7050.js`: 10.000 Adım 81 Kanallı Krinoid ve Reofilik Kararlılık Testi (172. dosya).
+    - Saat 426 (v7.06.0): Product Critic — `docs/CRITIC_AUDIT_CRINOID.md`: Türbülans Kopması, Sap Kırılması, Kalsiyum Maliyeti ve 82. Kanal Denetimi (173. dosya).
+    - Saat 427 (v7.07.0): System Agent — `src/organs/crinoid_stalks.js`: Esnek Ligament Gerilimi, Ototomi Kırılma Eşiği ve Kalsit Mineral Bütçesi (82. Kanal Hazırlığı).
+    - Saat 428 (v7.08.0): Looks & UI Agent — `src/render/crinoid_optics.js` & `src/ui/telemetry_crinoid.js`: 82. Telemetri Kanalı (% BSR - Benthic Stalk Resilience) ve Ligament HUD Göstergeleri.
+    - Saat 429 (v7.09.0): QA Agent — `benchmark_qa_v7090.js`: 10.000 Adım 82 Kanallı Krinoid ve Ligament Kararlılık Testi (174. dosya).
+    - Saat 430 (v7.10.0): Executive Director — `docs/EPOCH38_CRINOID_JUBILEE.md`: Epoch 38 Krinoid Jübilesi, Peak 350+ Taşıma Kapasitesi ve 82 Kanallı Mimari Tescili (175. dosya).
+  - **Sıfır Emoji ve Kod Kalitesi Standartları:** Bütün dosyalarda sıfır emoji standardı, modüler dosya ayrımı ve `[150, 300]` satır aralığı katı şekilde korundu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.01.0, `EPOCH: 38`, `HISTORIC_MILESTONE_HOURS: 421` olarak güncellendi (192 satır).
+  - `index.html` başlık rozeti 'PLANNER 421H | v7.01.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+
+## [Version 7.00.0] — 2026-10-26 16:15 (Yönetici / Büyük Resim Direktörü: Executive Director - Epoch 37 Büyük Seston Jübilesi, Tarihi Sürüm 7.00.0 Dönüm Noktası ve Peak 345+ Taşıma Kapasitesi)
+- **Epoch 37 Büyük Seston ve BBL Jübilesi (docs/EPOCH37_SESTON_JUBILEE.md - 168. dosya):**
+  - **Tarihi Ana Sürüm 7.00.0 ve 420-Saat Stüdyo Zirvesi:** BioEcosystem projesi, 420 saatlik kesintisiz, disiplinli ve sabırlı yazılım stüdyosu döngüsüyle tarihi ana sürüm 7.00.0 kilometre taşına ulaştı.
+  - **Büyük Resim Değerlendirmesi:** Bentik sınır tabakasında (BBL, y: 435 - 480 px) asılı serbest organik karbon, seston yakalama tentakülleri (sestonCaptureTentacles), mikro-kirpik hidrodinamik emme hızı (ciliaryCurrentVelocity), silt kirlenme birikimi ve kirpiksi temizleme seğirmesi (ciliaryCleansingTwitch), geri çekilebilir bazal tentakül kını (retractileTentacleSheath) ve akıntı açı adaptasyonu bütünsel olarak değerlendirildi.
+  - **80 Kanallı Sistem Mimarisi Tescili:** 79. Kanal (% SFE - Seston Filtration Efficiency) ve 80. Kanal (% BCF - Benthic Carbon Flux / Sediment Interception Ratio) telemetri mimarisinin kararlılığı ve Lotka-Volterra dinamikleri tescillendi.
+  - **Taşıma Kapasitesi Genişlemesi: Tarihi Peak 345+:** Serbest organik karbonun sedimana gömülmeden önce epibenthos tarafından yakalanmasıyla PEAK_CARRYING_CAPACITY: 345 ve SESTON_FILTRATION_BUFFER: 5 sisteme kalıcı olarak mühürlendi.
+  - **Epoch 38 Vizyonu Belirlendi:** Biyominerilize kalsiyum karbonat saplı krinoidler, reofilik kadeh mimarisi ve esnek eklemli tutunma diskleri (Hours 421 - 430, Peak 350+ hedefi) stratejik yol haritasına bağlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 7.00.0, HISTORIC_MILESTONE_HOURS: 420, PEAK_CARRYING_CAPACITY: 345 ve SESTON_FILTRATION_BUFFER: 5 olarak güncellendi (192 satır).
+  - index.html başlık rozeti DIRECTOR 420H | v7.00.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.99.0] — 2026-10-26 15:20 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 80 Kanallı Çift Epibentik Kararlılık Testi)
+- **10.000 Adım Başlıksız Performans ve 80 Kanallı Stres Testi (benchmark_qa_v6990.js - 198 satır, 167. dosya):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 97 tepe popülasyona ve 92 nihai canlı hücreye ulaşarak sürekli ekosistem dengesini korudu.
+  - **80. Telemetri Kanalı (% BCF) ve Çift Epibentik Denetim:** 80 kanallı Lotka-Volterra eğrileri, Seston Filtreleme Verimi (% SFE) ve Bentik Karbon Yakalama Akısı (% BCF) metrikleri doğrulandı; %96.7 PMS ve %86.9 ABA seviyeleri korundu.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 28.89 MB seviyesinde stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.99.0, HISTORIC_MILESTONE_HOURS: 419 olarak güncellendi (191 satır).
+  - index.html başlık rozeti QA 419H | v6.99.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.98.0] — 2026-10-26 14:15 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 80. Telemetri Kanalı % BCF, Silt Temizleme ve Kın Optikleri)
+- **Epibentik Seston Optikleri ve Kın Shader'ları (src/render/seston_optics.js - 281 satır):**
+  - **Silt Temizleme Püskürmesi (drawSiltCleansingPulse):** Ters kirpik darbesiyle tentaküllerden fırlatılan kehribar/turuncu renkli kirlenmiş mukus topakları mikroskop tuvalinde görselleştirildi.
+  - **Geri Çekilebilir Bazal Kın Optikleri (drawSheathRetractionOptics):** Şiddetli akıntı pulslarında narin tentakülleri koruyan mor renkli bazal yaka ve çekilme aurası rendelendi.
+  - **Akıntı Vektörü Açı Açılanması:** Taban akıntısının yönüne göre dönerek besin yakalama yüzeyini maksimize eden yönelim çizgileri eklendi.
+- **80. Telemetri Kanalı (% BCF - Benthic Carbon Flux) ve BBL HUD (src/ui/telemetry_seston.js - 273 satır & css/style.css):**
+  - **80. Telemetri Kanalı (% BCF):** Yakalanan serbest karbon akısı (%40), tentakül açılımı (%25), süzme yüzey temizliği (%20) ve kın koruma bütünlüğünü (%15) bütünsel olarak puanlayan 80. telemetri kanalı devreye alındı.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** HIGH-INTERCEPTION SEDIMENT BYPASS FLUX (#8b5cf6), STABLE VERTICAL CARBON RECAPTURE (#7c3aed), PARTIAL PARTICULATE LEAKAGE TO BENTHOS (#f59e0b) ve CARBON BURIAL & EPIBENTHIC STARVATION (#ef4444) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valBCFIndex` ve `#valBCFStatus` DOM göstergeleri bağlandı; canlı `historyData.benthicCarbonFlux` kayıt tamponu Lotka-Volterra grafiğine ametist moru kesikli çizgiyle (#8b5cf6) entegre edildi; `.bcf-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.98.0, HISTORIC_MILESTONE_HOURS: 418, TOTAL_TELEMETRY_CHANNELS: 80 olarak güncellendi (191 satır).
+  - index.html başlık rozeti LOOKS-UI 418H | v6.98.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.97.0] — 2026-10-26 13:40 (İnşa Ekibi: Sistem Ajanı - Silt Temizleme Seğirmesi, Geri Çekilebilir Kın ve BCF Kinetiği)
+- **Epibentik Seston Kinetik Genişletmesi (src/organs/seston_filtration.js - 249 satır):**
+  - **Silt Kirlenmesi ve Kirpiksi Temizleme Seğirmesi (siltFoulingAccumulation & ciliaryCleansingTwitch):** Süzme yüzeylerinde biriken silt partiküllerinin kirpik hızını düşürmesi; kritik eşikte hücrenin enerji harcayarak ters kirpik darbesiyle temizlik yapması sağlandı.
+  - **Geri Çekilebilir Bazal Tentakül Kını (retractileTentacleSheath & isSheathRetracted):** Aşırı akıntı yırtılma geriliminde tentakülleri koruyucu gövde içine çekerek mekanik doku travmasını (shearTraumaCount) engelleyen koruyucu mekanizma kodlandı.
+  - **Adaptif Akıntı Oryantasyonu (adaptiveAngleOrientation):** Taban akıntısının geliş açısına göre tentakülleri dik açarak trofik gölgeleme kaybını minimize eden yönelim kinetiği modellendi.
+  - **80. Telemetri Kanalı Altyapısı (% BCF - Benthic Carbon Flux Index):** Yakalanan serbest karbon, süzme yüzey temizliği ve kın bütünlüğünü harmanlayan bireysel benthicCarbonFluxIndex hesaplaması sisteme entegre edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.97.0, HISTORIC_MILESTONE_HOURS: 417 olarak güncellendi (191 satır).
+  - index.html başlık rozeti SYSTEM 417H | v6.97.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.96.0] — 2026-10-26 12:20 (Eleştirmen & Problem Yaratan: Product Critic - Tentakül Silt Tıkanması, Akıntı Kopması ve BCF Denetimi)
+- **Epoch 37 Epibentik Seston Eleştirmen Denetim Raporu (docs/CRITIC_AUDIT_SESTON.md - 166. dosya):**
+  - **Tentakül Silt Tıkanması ve Kirpiksi Temizleme İhtiyacı:** Çökelen ve biyoturbasyonla kalkan inorganik silt partiküllerinin süzme yüzeylerini tıkama riski (siltFoulingAccumulation) ve ters kirpik darbesiyle temizlenme mekanizması (ciliaryCleansingTwitch) incelendi.
+  - **Dip Akıntısı Yırtılma Gerilimi ve Geri Çekilebilir Kın:** Şiddetli akıntı pulslarında narin tentaküllerin mekanik yırtılma hasarını (shearTraumaDamage) önlemek için bazal koruyucu kın (retractileTentacleSheath) gereksinimi tanımlandı.
+  - **Seston Gölgelemesi ve Akıntı Açı Adaptasyonu:** Yan yana kümelenen filtre besleyicilerin birbirlerinin besin akısını kesmesini önlemek amacıyla akıntı yönü tentakül açılanması (adaptiveAngleOrientation) katsayısı modellendi.
+  - **80. Telemetri Kanalı Yol Haritası (% BCF):** Çökelen serbest organik karbonun sedimana gömülmeden önce epibentik canlılarca tutulma oranını ölçecek olan Bentik Karbon Yakalama Akısı (% BCF - Benthic Carbon Flux) şartnamesi oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.96.0, HISTORIC_MILESTONE_HOURS: 416 olarak güncellendi (191 satır).
+  - index.html başlık rozeti CRITIC 416H | v6.96.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.95.0] — 2026-10-26 11:45 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 79 Kanallı Epibentik Seston Kararlılık Testi)
+- **10.000 Adım Başlıksız Performans ve 79 Kanallı Stres Testi (benchmark_qa_v6950.js - 190 satır, 165. dosya):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 98 tepe popülasyona ve 90 nihai canlı hücreye ulaşarak ekosistem dengesini korudu.
+  - **79. Telemetri Kanalı (% SFE) ve BBL Seston Denetimi:** 79 kanallı Lotka-Volterra eğrileri, seston yakalama tentakülleri ve kirpiksel besin emme akıntıları doğrulandı; %95.6 PMS ve %85.8 ABA seviyeleri korundu.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 14.58 MB seviyesinde kalarak mükemmel bellek stabilitesi sağladı. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.95.0, HISTORIC_MILESTONE_HOURS: 415 olarak güncellendi (191 satır).
+  - index.html başlık rozeti QA 415H | v6.95.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.94.0] — 2026-10-26 10:30 (İnşa Ekibi: UI Ajanı - 79. Telemetri Kanalı % SFE ve BBL Süspansiyon HUD Paneli)
+- **79. Telemetri Kanalı (% SFE - Seston Filtration Efficiency) ve BBL HUD (src/ui/telemetry_seston.js - 202 satır, 164. dosya & css/style.css):**
+  - **79. Telemetri Kanalı (% SFE):** Tentakül açıklığı (%35), kirpiksel akıntı hızı (%30), asılı karbon yakalama verimi (%20) ve dip akıntısı toleransını (%15) bütünsel olarak puanlayan 79. telemetri kanalı formüle edildi.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** HIGH-AFFINITY CILIARY SUSPENSION CANOPY (#06b6d4), STABLE BENTHIC BOUNDARY LAYER INTERCEPTION (#0284c7), PARTIAL TENTACULAR CANOPY DILATION (#f59e0b) ve RETRACTED TENTACLES & CURRENT DEFLECTION (#ef4444) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valSFEIndex` ve `#valSFEStatus` DOM göstergeleri bağlandı; canlı `historyData.sestonFiltrationEfficiency` kayıt tamponu Lotka-Volterra grafiğine turkuaz kesikli çizgiyle (#06b6d4) entegre edildi; `.sfe-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.94.0, HISTORIC_MILESTONE_HOURS: 414, TOTAL_TELEMETRY_CHANNELS: 79 olarak güncellendi (191 satır).
+  - index.html başlık rozeti UI 414H | v6.94.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.93.0] — 2026-10-26 09:35 (İnşa Ekibi: Görsel Ajanı - BBL Seston Katmanı, Biyojenik Süzme Ağları ve Kirpik Girdap Shader'ları)
+- **Epibentik Seston Optikleri ve Süspansiyon Beslenme Shader'ları (src/render/seston_optics.js - 234 satır, 163. dosya):**
+  - **Bentik Sınır Tabakası (BBL) ve Asılı Partikül Perdesi (drawGlobalSestonEnvironment):** Taban sedimentinin 435 - 480 px üzerindeki seston kuşağında dalgalanan turkuaz/deniz köpüğü renkli kolloidal deniz karı partikülleri ve dip akıntısı iz çizgileri modellendi.
+  - **Dallı Kirpikli Tentakül Tacı ve Mikro-Pinnüller (drawTentacleCanopy):** Hücrelerden yukarı doğru açılan dallı tentaküllerin ve uçlarındaki titreşen kirpiksi pinnüllerin floresan parıltısı çizildi.
+  - **Mikro-Kirpik Emme Girdap Halkaları (drawCiliaryVortexRings):** Asılı seston taneciklerini emerek hücre ağzına çeken dairesel iç spiral emme halkaları mikroskop estetiğiyle tuvale yansıtıldı.
+  - **Biyojenik Mukus Süzme Ağları ve Akıntı Bükülme Saçakları (drawMucusFiltrationWeb & drawShearDeflectionFringe):** Tentaküller arasında gerilen örümceksi mukus yakalama ağları ve güçlü dip akıntılarında oluşan elastik bükülme saçakları entegre edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.93.0, HISTORIC_MILESTONE_HOURS: 413 olarak güncellendi (191 satır).
+  - index.html başlık rozeti LOOKS 413H | v6.93.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.92.0] — 2026-10-26 08:15 (İnşa Ekibi: Sistem Ajanı - Epibentik Seston Yakalama, Süspansiyon Tentakülleri ve Dikey Karbon Akışı)
+- **Epibentik Seston Filtreleme Modülü (src/organs/seston_filtration.js - 184 satır, 162. dosya):**
+  - **Bentik Sınır Tabakası (BBL) ve Seston Yakalama Tentakülleri (sestonCaptureTentacles & tentacleSpan):** Taban sedimentinin hemen üzerindeki (y: 435 - 480 px) seston kuşağında akıntıya karşı açılan ve serbest deniz karı partiküllerini yakalayan dallı hidrofilik tentakül kinetiği modellendi.
+  - **Mikro-Kirpik Hidrodinamik Emme Girdapları (ciliaryCurrentVelocity):** Tentakül yüzeylerindeki silia vuruşlarıyla besin emme akıntısı yaratarak asılı partikülleri hücre ağzına çeken biyofiziksel hız mekanizması kodlandı.
+  - **Asılı Karbon Asimilasyonu ve ATP Üretimi (suspendedCarbonAssimilation):** Çökelen organik karbonun tabana gömülmeden önce yakalanarak doğrudan hücresel enerjiye ve biyokütleye dönüştürülmesi sağlandı.
+  - **Akıntı Kopma Gerilimi Toleransı (hydrodynamicShearTolerance & shearDeflection):** Güçlü dip akıntılarında tentaküllerin mekanik yırtılmasını önleyen elastik bükülme ve koruyucu mukus tamponu entegre edildi; 79. Telemetri Kanalı (% SFE - Seston Filtration Efficiency) öncül metrikleri oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.92.0, HISTORIC_MILESTONE_HOURS: 412 olarak güncellendi (191 satır).
+  - index.html başlık rozeti SYSTEM 412H | v6.92.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.91.0] — 2026-10-26 07:18 (Baş Planlamacı: Lead Planner - Epoch 37 Epibentik Seston Filtreleme ve Biyojenik Asılı Beslenme Ağları Mimarisi Yol Haritası)
+- **Epoch 37 Mimari Tasarım Belgesi (docs/EPOCH37_SESTON_BLUEPRINT.md - 161. dosya):**
+  - **Bentik Sınır Tabakası (BBL) ve Seston Yakalama:** Taban sedimentinin hemen üzerindeki asılı organik madde katmanında (seston stratum) çökelen deniz karını ve serbest karbonu yakalayan süspansiyon filtreleme tentakülleri planlandı.
+  - **Mikro-Kirpik Su Girdapları ve Asılı Karbon Asimilasyonu:** Tentakül mikro-kirpiklerinin oluşturduğu emme akıntısıyla seston taneciklerinin doğrudan biyokütleye ve ATP'ye dönüştürülmesi takvimlendirildi.
+  - **Biyojenik Süzme Ağları ve Mukus Tuzakları:** Taban akıntılarına karşı konumlanan pasif süzme ağları ve mukus kavitelerinin görsel ve fiziksel mimarisi tasarlandı.
+  - **79. ve 80. Telemetri Kanalları:** Seston Filtreleme Verimi (% SFE - Seston Filtration Efficiency) ve Bentik Karbon Yakalama Akısı (% BCF - Benthic Carbon Flux) endeks şartnameleri tanımlandı.
+  - **Taşıma Kapasitesi Vizyonu:** SESTON_FILTRATION_BUFFER: 5 ile Hour 420 Jübilesinde tarihi Peak 345+ taşıma kapasitesi ve 80 telemetri kanalı hedeflendi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.91.0, EPOCH: 37, HISTORIC_MILESTONE_HOURS: 411 olarak güncellendi (191 satır).
+  - index.html başlık rozeti PLANNER 411H | v6.91.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.90.0] — 2026-10-26 06:15 (Yönetici / Büyük Resim Direktörü: Executive Director - Epoch 36 Büyük İnfauna Jübilesi, 410-Saat Büyük Dönüm Noktası ve Peak 340+ Taşıma Kapasitesi)
+- **Epoch 36 Büyük İnfauna ve Biyoturbasyon Jübilesi (docs/EPOCH36_INFAUNA_JUBILEE.md - 160. dosya):**
+  - **410-Saat Tarihi Stüdyo Zirvesi:** BioEcosystem projesi, 410 saatlik kesintisiz, disiplinli ve sabırlı yazılım stüdyosu döngüsüyle tarihi zirveye ulaştı.
+  - **Büyük Resim Değerlendirmesi:** Taban tortusunda hapsolmuş organik karbon rezervleri, sub-benthik gömülme derinliği (subBenthicBurrowingDepth), biyoturbasyon havalandırma akısı (bioturbationFlux), oksik-anoksik redoks sülfit oksidasyonu, üstel sıkışma tork direnci (compactionTorqueResistance), anoksik fermantasyon tamponu ve yukarı havalandırma sıçramaları bütünsel olarak değerlendirildi.
+  - **78 Kanallı Sistem Mimarisi Tescili:** 77. Kanal (% BTI - Bioturbation Turbulence Index) ve 78. Kanal (% BMR - Biogenic Mineral Recycling Efficiency) telemetri mimarisinin kararlılığı ve Lotka-Volterra dinamikleri tescillendi.
+  - **Taşıma Kapasitesi Genişlemesi: Tarihi Peak 340+:** Gözenek suyu mineral geri dönüşümü ve sub-benthik ekolojik nişin açılmasıyla PEAK_CARRYING_CAPACITY: 340 ve INFAUNAL_BIOTURBATION_BUFFER: 5 sisteme kalıcı olarak mühürlendi.
+  - **Epoch 37 Vizyonu Belirlendi:** Epibentik seston filtreleme, biyojenik asılı beslenme ağları ve dikey organik karbon yakalama (Hours 411 - 420, Peak 345+ hedefi) stratejik yol haritasına bağlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.90.0, HISTORIC_MILESTONE_HOURS: 410, PEAK_CARRYING_CAPACITY: 340 ve INFAUNAL_BIOTURBATION_BUFFER: 5 olarak güncellendi (191 satır).
+  - index.html başlık rozeti DIRECTOR 410H | v6.90.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.89.0] — 2026-10-26 05:15 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 78 Kanallı Çift İnfauna Kararlılık ve Redoks Akı Testi)
+- **10.000 Adım Başlıksız Performans ve 78 Kanallı Stres Testi (benchmark_qa_v6890.js - 197 satır, 159. dosya):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 98 tepe popülasyona ve 91 nihai canlı hücreye ulaşarak ekosistem dengesini korudu.
+  - **78. Telemetri Kanalı (% BMR) ve Çift İnfauna Denetimi:** 78 kanallı Lotka-Volterra eğrileri, Biyoturbasyon Türbülansı (% BTI) ve Biyojenik Mineral Geri Dönüşümü (% BMR) metrikleri doğrulandı; %93.0 PMS ve %82.5 ABA seviyeleri korundu.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 30.28 MB seviyesinde stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.89.0, HISTORIC_MILESTONE_HOURS: 409 olarak güncellendi (190 satır).
+  - index.html başlık rozeti QA 409H | v6.89.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.88.0] — 2026-10-26 04:15 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 78. Telemetri Kanalı % BMR, Bulanıklık Perdesi ve Redoks HUD Paneli)
+- **Sub-Benthik İnfauna Optikleri ve Bulanıklık Shader'ları (src/render/infauna_optics.js - 278 satır):**
+  - **Bulanıklık Asılı Silt Perdesi (drawTurbidityVeil):** Biyoturbasyonla kalkan ince silt partiküllerinin sediman üzerinde oluşturduğu kolloidal pus perdesi ve ışık geçirgenliği dinamikleri mikroskop tuvaline aktarıldı.
+  - **Anoksik Hipoksi Fermantasyon Stres Aurası (drawHypoxiaFermentationAura):** Oksijen nüfuz derinliği altında fermantasyon rezervini tüketen hücrelerin etrafında kızıl/turuncu kesikli stres auraları modellendi.
+  - **Yukarı Havalandırma Sıçrama İzi (drawVentilationSurgeTrail):** Anoksik asfiksiden kaçan hücrelerin üst katmana doğru dikey yönelişini gösteren siyan renkli floresan sıçrama kuyrukları çizildi.
+- **78. Telemetri Kanalı (% BMR - Biogenic Mineral Recycling Efficiency) ve İnfauna HUD (src/ui/telemetry_infauna.js - 278 satır & css/style.css):**
+  - **78. Telemetri Kanalı (% BMR):** Gözenek suyu mineral difüzyonu (%35), kemosentetik sülfit oksidasyonu (%30), biyojenik mukus kohezyonu (%20) ve anoksik fermantasyon tampon rezervini (%15) bütünsel olarak puanlayan 78. telemetri kanalı formüle edildi.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** CIRCULAR BIOGENIC REDOX FLUX (#10b981), STEADY TROPHIC MINERAL RESYNTHESIS (#059669), PARTIAL POREWATER ASSIMILATION (#f59e0b) ve MINERAL SEQUESTRATION & ANOXIC SINK (#ef4444) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valBMRIndex` ve `#valBMRStatus` DOM göstergeleri bağlandı; canlı `historyData.biogenicMineralRecycling` kayıt tamponu Lotka-Volterra grafiğine parlak zümrüt kesikli çizgiyle (#10b981) entegre edildi; `.bmr-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.88.0, HISTORIC_MILESTONE_HOURS: 408, TOTAL_TELEMETRY_CHANNELS: 78 olarak güncellendi (190 satır).
+  - index.html başlık rozeti LOOKS-UI 408H | v6.88.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.87.0] — 2026-10-26 03:40 (İnşa Ekibi: Sistem Ajanı - Sediman Sıkışma Torku, Anoksik Fermantasyon ve BMR Metriği)
+- **Sub-Benthik Biyoturbasyon Kinetik Genişletmesi (src/organs/infaunal_bioturbation.js - 269 satır):**
+  - **Üstel Sediman Sıkışması ve Tork Direnci (compactionTorqueResistance & torqueStallTimer):** Taban derinliği arttıkça gözenek suyu sıkışmasını ve mekanik sürtünmeyi üstel olarak artıran formülasyon kodlandı; mukus kayganlaştırması ve kazma torku dengesi kurularak mekanik sıkışma olayları (compactionStallEvents) modellendi.
+  - **Anoksik Fermantasyon Tamponu ve Havalandırma Sıçraması (anoxicFermentationBuffer & upwardVentilationSurge):** Oksijen nüfuz derinliği (OPD) altındaki sülfiti tükenen hücrelerin glikolitik fermantasyon tamponu tüketmesi; tampon sıfırlandığında oksijenli üst tabakaya acil dikey kaçış refleksi yapması sağlandı.
+  - **Biyojenik Mukus Kohezyonu ve Bulanıklık Sınırlaması (biogenicMucusCohesion & meanTurbidity):** Biyoturbasyonla kalkan silt ve kil taneciklerini topaklayarak epibentik filtre besleyicilerin tıkanmasını önleyen biyofilm kohezyon mekanizması devreye alındı.
+  - **78. Telemetri Kanalı Altyapısı (% BMR - Biogenic Mineral Recycling Index):** Gözenek suyu mineral akışı, sülfit oksidasyon verimi, mukus kohezyonu ve fermantasyon dengesini harmanlayan bireysel mineralRecyclingIndex hesaplaması eklendi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.87.0, HISTORIC_MILESTONE_HOURS: 407 olarak güncellendi (190 satır).
+  - index.html başlık rozeti SYSTEM 407H | v6.87.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.86.0] — 2026-10-26 02:05 (Eleştirmen & Problem Yaratan: Product Critic - Sediman Sıkışması, Anoksik Asfiksi ve Biyoturbasyon Bulanıklığı Denetimi)
+- **Epoch 36 İnfaunal Ekosistem Eleştirmen Denetim Raporu (docs/CRITIC_AUDIT_INFAUNA.md - 158. dosya):**
+  - **Sediman Sıkışması ve Mekanik Hapsolma Tuzakları:** Derin tabaka sedimanında (y > 510px) artan sürtünme kuvveti ve mekanik kohezyona karşı tork yetersizliğinin canlıları tabana hapsetme riski incelendi.
+  - **Anoksik Asfiksi ve Fermantasyon Tamponu İhtiyacı:** Oksijen nüfuz derinliğinin (OPD) altındaki oksijensiz katmanda kemosentez yapamayan türlerin hayatta kalabilmesi için fermantasyon tamponu (anoxicFermentationBuffer) ve acil yukarı kaçış refleksi (upwardVentilationSurge) tanımlandı.
+  - **Aşırı Biyoturbasyon Bulanıklığı ve Filtre Beslenme Tıkanması:** Yoğun kazı faaliyetinin su sütununa saçtığı silt partiküllerinin fotoototrofları ve epibentik filtre besleyicileri tıkama riski ile mukus kohezyonu (biogenicMucusCohesion) dengesi modellendi.
+  - **78. Telemetri Kanalı Yol Haritası (% BMR):** Geri kazanılan minerallerin trofik zincire sirkülasyonunu ölçecek olan Biyojenik Mineral Geri Dönüşüm Endeksi (% BMR - Biogenic Mineral Recycling Efficiency) şartnamesi oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.86.0, HISTORIC_MILESTONE_HOURS: 406 olarak güncellendi (190 satır).
+  - index.html başlık rozeti CRITIC 406H | v6.86.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.85.0] — 2026-10-26 01:50 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 77 Kanallı Sub-Benthik ve Biyoturbasyon Kararlılık Testi)
+- **10.000 Adım Başlıksız Performans ve 77 Kanallı Stres Testi (benchmark_qa_v6850.js - 186 satır, 157. dosya):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 94 tepe popülasyona ve 89 nihai canlı hücreye ulaşarak ekosistem dengesini korudu.
+  - **77. Telemetri Kanalı (% BTI) ve Sub-Benthik Denetim:** 77 kanallı Lotka-Volterra eğrileri ve infaunal biyoturbasyon metrikleri doğrulandı; %95.6 PMS ve %84.4 ABA seviyeleri korundu.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 21.93 MB seviyesinde stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.85.0, HISTORIC_MILESTONE_HOURS: 405 olarak güncellendi (190 satır).
+  - index.html başlık rozeti QA 405H | v6.85.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.84.0] — 2026-10-26 00:35 (İnşa Ekibi: UI Ajanı - 77. Telemetri Kanalı % BTI ve Sediman Havalandırma HUD Paneli)
+- **77. Telemetri Kanalı (% BTI - Bioturbation Turbulence Index) ve İnfauna HUD (src/ui/telemetry_infauna.js - 212 satır, 156. dosya & css/style.css):**
+  - **77. Telemetri Kanalı (% BTI):** Sub-benthik gömülme derinliği (%35), mekanik biyoturbasyon akısı (%30), mukus tünel astar bütünlüğü (%20) ve kemosentetik sülfit oksidasyon verimini (%15) bütünsel olarak puanlayan 77. telemetri kanalı formüle edildi.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** HIGH-PERMEABILITY BIOGENIC AERATION (#f59e0b), STABLE SEDIMENTARY BIOTURBATION FLUX (#d97706), INCIPIENT INFAUNAL SUB-STRATUM PENETRATION (#b45309) ve STAGNANT ANOXIC COMPACTION & CLOGGING (#78350f) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valBTIIndex` ve `#valBTIStatus` DOM göstergeleri bağlandı; canlı `historyData.bioturbationTurbulence` kayıt tamponu Lotka-Volterra grafiğine kehribar kesikli çizgiyle entegre edildi; kart incelemeleri için kehribar `.bti-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.84.0, HISTORIC_MILESTONE_HOURS: 404, TOTAL_TELEMETRY_CHANNELS: 77 olarak güncellendi (190 satır).
+  - index.html başlık rozeti UI 404H | v6.84.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.83.0] — 2026-10-25 23:15 (İnşa Ekibi: Görsel Ajanı - Sub-Benthik Sediman Stratigrafisi, Biyoturbasyon Tünelleri ve Redoks Optikleri)
+- **Sub-Benthik İnfauna Optikleri ve Sediman Shader'ları (src/render/infauna_optics.js - 213 satır, 155. dosya):**
+  - **Sediman Stratigrafisi ve Redoks Geçiş Çizgisi (drawSedimentStratigraphy):** Oksijenli açık kahverengi üst tortu katmanı, kesikli kehribar oksijen nüfuz derinliği (OPD) arayüzü ve derin anoksik katran siyahı sülfidik tabaka mikroskop altında katmanlandırıldı.
+  - **Biyoturbasyon Deplasman Halesi ve Mukus Parıltısı (drawBioturbationDisplacementHalo & drawMucusTunnelSheen):** Sediman içinde tünel açan infaunal organizmaların etrafında mikro-kavitasyon sıkışma dalgaları ve tünel cidarlarını sabitleyen siyan/zümrüt renkli floresan mukus astar parıltıları kodlandı.
+  - **Redoks Sülfit Lüminesansı ve Gözenek Suyu Plümleri (drawSulfideOxidationLuminescence & drawPorewaterPlumes):** Kemosentetik sülfit oksidasyonu yapan hücrelerin etrafındaki morötesi elektron ışıltıları ve tünel ağızlarından su sütununa yükselen mineral kabarcık akıntıları simülasyona entegre edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.83.0, HISTORIC_MILESTONE_HOURS: 403 olarak güncellendi (190 satır).
+  - index.html başlık rozeti LOOKS 403H | v6.83.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.82.0] — 2026-10-25 22:50 (İnşa Ekibi: Sistem Ajanı - Sub-Benthik Gömülme Kinetiği, Biyoturbasyon Hareketi ve Redoks Döngüsü)
+- **Sub-Benthik İnfaunal Biyoturbasyon Modülü (src/organs/infaunal_bioturbation.js - 203 satır, 154. dosya):**
+  - **Sub-Benthik Gömülme ve Sıkışma Direnci (subBenthicBurrowingDepth & sedimentCompactionResistance):** Taban sediman sınırının altına (y >= 480px, 0 - 60px derinlik) inen infaunal hücrelerin sediman sıkışmasına karşı kazma direnci ve üç boyutlu gömülme kinetiği modellendi.
+  - **Biyoturbasyon Akısı ve Oksijen Nüfuz Derinliği (bioturbationFlux & meanOxygenPenetration):** Gözenekli tortuyu karıştıran infaunal hareketin sediman havalandırmasını artırması ve oksijen nüfuz derinliğini (OPD) aşağı doğru genişletmesi formüle edildi.
+  - **Redoks Sınırında Kemosentetik Sülfit Oksidasyonu (sulfideOxidationYield):** Oksik ve anoksik sediman katmanları arasındaki redoks arayüzünde hidrojen sülfürün (H2S) oksitlenerek hücresel ATP enerjisine dönüştürülmesi sağlandı.
+  - **Gözenek Suyu Mineral Geri Dönüşümü (nutrientPorewaterFlux) ve Mukus Tünel Astarı (mucusLiningIntegrity):** Tünellerin çökmesini önleyen mukus salgısı ve kazı sırasında gözenek suyundan su sütununa salınan inorganik fosfat/amonyum akısı sisteme entegre edildi; 77. Telemetri Kanalı (% BTI) öncül metrikleri hazırlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.82.0, HISTORIC_MILESTONE_HOURS: 402 olarak güncellendi (190 satır).
+  - index.html başlık rozeti SYSTEM 402H | v6.82.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.81.0] — 2026-10-23 01:15 (Baş Planlamacı: Lead Planner - Epoch 36 Sub-Benthik Sediman, İnfaunal Biyoturbasyon ve Redoks Mimarisi Yol Haritası)
+- **Epoch 36 Mimari Tasarım Belgesi (docs/EPOCH36_INFAUNA_BLUEPRINT.md - 153. dosya):**
+  - **Sub-Benthik Sediman Katmanlaşması ve İnfauna Yaşamı:** Abisal hadal tabanının alt katmanlarına (y > 480px, sediman matrisi: 0 - 60px derinlik) inilerek organik detritus sindirimi ve anaerobik mineral dönüşüm kinetiği planlandı.
+  - **Biyoturbasyon ve Havalandırma:** İnfaunal organizmaların tünelleme hareketinin (burrowing/tunneling) sedimanı karıştırması, oksijen nüfuz derinliğini artırması ve anoksik tabakalarla oksik arayüz arasında redoks gradyanları oluşturması takvimlendirildi.
+  - **Mineral Geri Dönüşümü ve Trofik Akı:** Sediman gözenek suyunda hapsolmuş çözünmüş inorganik fosfat ve nitrat bileşiklerinin su sütununa salınmasıyla fitoplankton ve epibentik canlıları besleyen döngü modellendi.
+  - **77. ve 78. Telemetri Kanalları:** Sediman Biyoturbasyon Hızı (% BTI - Bioturbation Turbulence Index) ve Biyojenik Mineral Geri Dönüşüm Endeksi (% BMR - Biogenic Mineral Recycling) formülasyonları tasarlandı.
+  - **Taşıma Kapasitesi Vizyonu:** INFAUNAL_BIOTURBATION_BUFFER: 5 ile Hour 410 Jübilesinde tarihi Peak 340+ taşıma kapasitesi ve 78 telemetri kanalı hedeflendi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.81.0, EPOCH: 36, HISTORIC_MILESTONE_HOURS: 401 olarak güncellendi (190 satır).
+  - index.html başlık rozeti PLANNER 401H | v6.81.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.80.0] — 2026-10-23 00:00 (Yönetici / Büyük Resim Direktörü: Executive Director - Epoch 35 Büyük Abisal Taban ve Hadal Piezofil Jübilesi, 400-Saat Büyük Dönüm Noktası ve Peak 335+ Taşıma Kapasitesi)
+- **Epoch 35 Büyük Abisal ve Hadal Jübilesi (docs/EPOCH35_ABYSSAL_JUBILEE.md - 152. dosya):**
+  - **400-Saat Tarihi Dördüncü Yüzyıl Zirvesi:** BioEcosystem projesi, 400 saatlik kesintisiz, disiplinli ve sabırlı yazılım stüdyosu döngüsüyle tarihi dördüncü yüzyıl kilometre taşına ulaştı.
+  - **Büyük Resim Değerlendirmesi:** Abisal hadal çukurlarında (6000+ metre derinlik eşdeğeri) ekstrem hidrostatik basınç altında çalışan piezofilik membran dinamikleri, PUFA akışkanlığı, TMAO piezolit hidratasyon kalkanları, dekompresyon tamponu ve benthik dikey ayrılma sıçramaları bütünsel olarak değerlendirildi.
+  - **76 Kanallı Sistem Mimarisi Tescili:** 75. Kanal (% PMS - Piezophilic Membrane Stability) ve 76. Kanal (% ABA - Abyssal Barometric Adaptation Index) telemetri mimarisinin kararlılığı ve Lotka-Volterra dinamikleri tescillendi.
+  - **Taşıma Kapasitesi Genişlemesi: Tarihi Peak 335+:** Kemosentetik enerji üretimi, dekompresyon tamponu ve dinamik ozmolit geri kazanımının sağladığı biyokimyasal stabiliteyle PEAK_CARRYING_CAPACITY: 335 ve ABYSSAL_BENTHOS_BUFFER: 5 sisteme kalıcı olarak mühürlendi.
+  - **Epoch 36 Vizyonu Belirlendi:** Sub-benthik sediman katmanlaşması, infaunal biyoturbasyon ve sediman mineral geri dönüşümü (Hours 401 - 410, Peak 340+ hedefi) stratejik yol haritasına bağlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.80.0, HISTORIC_MILESTONE_HOURS: 400, PEAK_CARRYING_CAPACITY: 335 ve ABYSSAL_BENTHOS_BUFFER: 5 olarak güncellendi (191 satır).
+  - index.html başlık rozeti DIRECTOR 400H | v6.80.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.79.0] — 2026-10-22 23:45 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 76 Kanallı Abisal Kararlılık ve Dekompresyon Stres Testi)
+- **10.000 Adım Başlıksız Performans ve 76 Kanallı Stres Testi (benchmark_qa_v6790.js - 208 satır, 151. dosya):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 97 tepe popülasyona ve 90 nihai canlı hücreye ulaşarak sürekli trofik dengeyi korudu.
+  - **76. Telemetri Kanalı (% ABA) ve Piezofilik Parametre Denetimi:** Ortalama Abisal Barometrik Adaptasyon İndeksi (% ABA) %82.6 olarak ölçüldü; ortalama membran akışkanlığı %76.0, ortalama piezolit koruma oranı %97.0, ortalama barorezistan verimlilik %58.7 ve benthik tutunma oranı %26.9 olarak doğrulandı.
+  - **Dekompresyon Dinamiği ve Ozmolit Geri Kazanımı:** 10.000 adım boyunca 42.154 barik kompresyon önlendi; 4.276 dekompresyon travma uyarısı kontrollü negatif yüzme refleksiyle absorbe edildi; 107 benthik dikey ayrılma sıçraması gerçekleşti ve 181.62 ATP değerinde dinamik ozmolit geri kazanımı sağlandı.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 59.08 MB seviyesinde stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle yapılan grafik bütçesi denetiminde mikroskop optiklerinin kararlılığı ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.79.0, HISTORIC_MILESTONE_HOURS: 399, TOTAL_TELEMETRY_CHANNELS: 76 olarak güncellendi (189 satır).
+  - index.html başlık rozeti QA 399H | v6.79.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.78.0] — 2026-10-22 22:30 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 76. Telemetri Kanalı % ABA ve Dekompresyon Optikleri)
+- **Hadal Dekompresyon Optikleri ve Turgor Kararsızlığı Görselleştirmesi (src/render/hadal_optics.js - 286 satır):**
+  - **Dekompresyon Stres Haleleri ve Turgor Dalgası (drawDecompressionStress):** Derin hadal çukurlardan sığ sulara (y < 260px) yükselen veya dış basıncın aniden düşmesiyle dekompresyon zafiyeti yaşayan barofilik hücreler etrafında camgöbeği/turkuaz renkli kesikli stres haleleri ve radyal turgor genleşme uzantıları mikroskop estetiğiyle simülasyona dahil edildi.
+  - **Dinamik Piezolit Koruma Alanı ve TMAO Rezonansı:** Hücrelerin enerji harcayarak ozmolit havuzunu yenilediği anlarda morötesi hidratasyon küreciklerinin ve mikroskop altı kemosentez parıltısının görsel netliği güçlendirildi.
+- **76. Telemetri Kanalı (% ABA - Abyssal Barometric Adaptation Index) ve Hadal HUD (src/ui/telemetry_hadal.js - 254 satır, css/style.css):**
+  - **76. Telemetri Kanalı (% ABA):** Membran kompresyon dayanımı (%30), dekompresyon toleransı (%30), TMAO piezolit hidratasyon kalkanı (%25) ve barorezistan konformasyon verimliliğini (%15) bütünsel olarak puanlayan 76. telemetri kanalı formüle edildi.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** DEEP-TRENCH PIEZORESISTANT HOMEOSTASIS (#14b8a6), STABLE DECOMPRESSION BUFFER TOLERANCE (#06b6d4), MODERATE TURGOR EXPANSION STRAIN (#f59e0b) ve DECOMPRESSION LYSIS & TURGOR RUPTURE (#f43f5e) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valABAIndex` ve `#valABAStatus` DOM göstergeleri bağlandı; canlı `historyData.abyssalBarometricAdaptation` kayıt tamponu Lotka-Volterra grafiğine turkuaz kesikli çizgiyle entegre edildi; kart incelemeleri için `.aba-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.78.0, HISTORIC_MILESTONE_HOURS: 398, TOTAL_TELEMETRY_CHANNELS: 76 olarak güncellendi (205 satır).
+  - index.html başlık rozeti LOOKS-UI 398H | v6.78.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.77.0] — 2026-10-22 21:00 (İnşa Ekibi: Sistem Ajanı - Dekompresyon Tamponu, Dinamik Ozmolit Geri Kazanımı ve Basınç Kademelendirmesi)
+- **Hadal ve Abisal Taban Piezofilik Adaptasyon Genişletmesi (src/organs/piezophilic_adaptations.js - 290 satır):**
+  - **Dekompresyon Tamponu ve Turgor Yırtılması Koruması (decompressionBufferZone & decompressionTraumaDamage):** Derin hadal çukurlardan sığ sulara (y < 260px) yükselen yüksek PUFA oranlı barofilik hücrelerde, dış ortam hidrostatik basıncının aniden düşmesiyle oluşan iç turgor dengesizliği modellendi. Kademesiz yükselmelerde dekompresyon stresi ve enerji kaybı infaz edilirken, negatif yüzme refleksiyle güvenli hidrostatik derinliğe yönelme mekanizması kuruldu.
+  - **Dinamik Ozmolit Geri Kazanımı ve Piezolit İflası (dynamicOsmolyteRecycling & piezolyteExhaustionDeficit):** Hücrenin enerji fazlası durumunda TMAO ve betain ozmolit kalkanını ATP harcayarak yenilemesi sağlandı; enerji kıtlığı durumunda ozmolit kalkanının aşınması ve protein denatürasyonuyla ortaya çıkan hız ve kemosentez düşüşü (piezoDenaturationStall) kodlandı.
+  - **Dikey Trofik Akı ve Benthik Ayrılma Sıçraması (benthicDetachmentSurge):** Taban sedimanına tutunan barofillerin sürekli tabanda kilitli kalmasını önlemek amacıyla periyodik aralıklarla veya besin arayışında tutunmayı bırakıp dikey su sütununa doğru yükselme manevrası entegre edildi.
+  - **76. Telemetri Kanalı Metrik Altyapısı (% ABA - Abyssal Barometric Adaptation Index):** Zarsal kompresyon direnci (%30), dekompresyon toleransı (%30), piezolit rezerv bütünlüğü (%25) ve işlevsel kemosentez/taşıyıcı verimliliğini (%15) birleştiren barometricAdaptationIndex hesaplaması her canlı hücre için sisteme dahil edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.77.0, HISTORIC_MILESTONE_HOURS: 397 olarak güncellendi (205 satır).
+  - index.html başlık rozeti SYSTEM 397H | v6.77.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.76.0] — 2026-10-22 20:30 (Eleştirmen & Problem Yaratan: Product Critic - Dekompresyon Zafiyeti, Ozmolit Maliyeti ve Taban Hapsolma Denetimi)
+- **Hadal & Abisal Taban Ekosistemi Kapsamlı Ürün Denetimi (docs/CRITIC_AUDIT_ABYSSAL.md - 150. dosya):**
+  - **Dekompresyon Zafiyeti ve Turgor Yırtılması (Decompressional Lysis):** Piezofilik organizmaların derin çukurlardan sığ pelajik katmanlara (y < 200px) yükselirken dış basıncın aniden düşmesi sonucu gevşek PUFA membranlarının iç turgor basıncına dayanamayıp patlama riski incelendi; kademeli dekompresyon tamponu (`decompressionBufferZone`) ve barik duyarsızlaşma kinetiği (`baricDesensitizationKinetics`) tanımlandı.
+  - **Aşırı Ozmolit Biyosentez Maliyeti ve TMAO İflası (Osmolyte Overburden / TMAO Exhaustion):** TMAO ve betain benzeri piezolit ozmolitlerin üretilip hücre içinde tutulmasının getirdiği yüksek ATP ve nitrojen maliyeti masaya yatırıldı; kemosentez enerjisini dinamik olarak ozmolit havuzuna aktaran geri kazanım yolağı (`dynamicOsmolyteRecycling`) gereksinimi ortaya kondu.
+  - **Taban Sediman Hapsolması ve Dikey Trofik Akı (Benthic Entrapment vs Vertical Trophic Flux):** Hadal hücrelerin tabana kilitlenmesini önlemek ve pelajik su sütunu ile trofik etkileşimi sürdürmek için dekompresyon kontrollü dikey beslenme manevraları (`benthicDetachmentSurge`) ve dikey akı dengesi formüle edildi.
+  - **76. Telemetri Kanalı (% ABA - Abyssal Barometric Adaptation):** Canlıların dekompresyon toleransı, piezolit rezervi, kemosentetik ATP verimi ve derinlik esnekliğini bütünsel olarak ölçecek 76. telemetri kanalı (% ABA) için formülasyon ve zümrüt yeşili grafik entegrasyonu planlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.76.0, HISTORIC_MILESTONE_HOURS: 396 olarak güncellendi (213 satır).
+  - index.html başlık rozeti CRITIC 396H | v6.76.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.75.0] — 2026-10-22 19:30 (Kalite & Ara Denetim Ekibi: QA Ajanı - 10.000 Adım 75 Kanallı Abisal Kararlılık ve Basınç Dayanımı Denetimi)
+- **10.000 Adımlık Abisal Kararlılık ve 75. Kanal Stres Testi (benchmark_qa_v6750.js - 180 satır, 149. dosya):**
+  - **10.000 Adım Simülasyon Denetimi:** 10.000 kesintisiz simülasyon adımı boyunca abisal ve hadal çukurlardaki (380px altı) barofil hücrelerin hidrostatik basınca dayanıklılığı, PUFA akışkanlığı, TMAO piezolit ozmolit koruması ve bentik tutunma dinamikleri denetlendi.
+  - **Sıfır Sayısal Sapma ve Bellek Kararlılığı:** 10.000 adımda 0 NaN/sonsuzluk sapması, 0 konumsal veya metabolik anomali kaydedildi; heap bellek farkı 26.85 MB düzeyinde kararlı kaldı.
+  - **75. Kanal (% PMS - Piezophilic Membrane Stability) Tescili:** 75. telemetri kanalı %92.5 seviyesine ulaşarak ULTRA-HADAL PIEZOPHILIC HOMEOSTASIS rejiminde stabilize oldu.
+  - **Hadal Biyokimya ve Koruma Metrikleri:** Simülasyon boyunca 40.944 barik basınca bağlı membran kompresyon ve yırtılma riski önlendi; 444.10 kemosentetik ATP üretildi; ortalama membran akışkanlığı %67.6, ortalama TMAO ozmolit koruması %57.5, ortalama barorezistan pompa verimliliği %59.6 olarak tescillendi.
+  - **60 FPS Tuval Çizim ve Bütçe Denetimi:** 500 render karesi boyunca ortalama simülasyon adım süresi 26.38 ms, ortalama çizim süresi 51.42 ms olarak ölçüldü; çizim boru hattında bellek sızıntısı ve gecikme tespit edilmedi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.75.0, HISTORIC_MILESTONE_HOURS: 395 olarak güncellendi (213 satır).
+  - index.html başlık rozeti QA 395H | v6.75.0 yapıldı; coolBiologyFacts ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.74.0] — 2026-10-22 18:05 (İnşa Ekibi: UI Ajanı - 75. Telemetri Kanalı % PMS ve Hadal Barometre HUD)
+- **Hadal Telemetrisi ve Barometre HUD (src/ui/telemetry_hadal.js - 223 satır, 148. dosya):**
+  - **75. Telemetri Kanalı (% PMS - Piezophilic Membrane Stability):** Yüksek hidrostatik basınç altında zarsal akışkanlık korunumu (%35), TMAO piezolit ozmolit hidratasyon kalkanı (%25), barorezistan konformasyon verimliliği (%20) ve basınç stresi hafifletme (%20) metriklerini ağırlıklandıran 75. telemetri kanalı formüle edildi.
+  - **Dinamik Biyolojik Rejim Sınıflandırması:** PMS skoruna göre 4 rejim derecesi (ULTRA-HADAL PIEZOPHILIC HOMEOSTASIS, STABLE BENTHIC PUFA BILAYER FLUIDITY, MODERATE HYDROSTATIC RIGIDIFICATION, BARIC MEMBRANE CRACKING & LEAKAGE) ve renk geçişleri tanımlandı.
+  - **Hadal Barometre ve Laboratuvar HUD Göstergeleri:** Canlı hadal hücre popülasyonu, ortalama PUFA oranı, TMAO ozmolit kalkan rezervi, bentik tutunma sayısı, kemosentetik ATP üretimi ve derinliğe bağlı hidrostatik basınç (bar rel) telemetrisi #valPMSIndex ve #valPMSStatus DOM öğelerine bağlandı.
+  - **Dairesel Grafik Geçmişi ve Rozet Mimarisi:** historyData.piezophilicMembraneStability dairesel tamponuna canlı kayıt, çok kanallı grafik çizimi (#6366f1) ve kart incelemeleri için .pms-badge HTML çıktısı oluşturuldu.
+- **CSS ve Arayüz Tasarımı (css/style.css):**
+  - 75. Kanal için indigo tonlarında yarı saydam .pms-badge sınıfı eklendi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - src/core/constants.js Sürüm 6.74.0, HISTORIC_MILESTONE_HOURS: 394, TOTAL_TELEMETRY_CHANNELS: 75 olarak güncellendi (213 satır).
+  - index.html başlık rozeti UI 394H | v6.74.0 yapıldı; src/ui/telemetry_hadal.js betik etiketi, HUD alanları, 75. kanal grafik çizimi ve simülasyon döngüsü telemetri adımı bağlandı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.73.0] — 2026-10-22 17:30 (İnşa Ekibi: Görsel Ajanı - Hadal Basınç Sahaları, Sediman Tabanı ve Piezostabilite Optikleri)
+- **Hadal Optikleri ve Piezostabilite Görselleri (src/render/hadal_optics.js - 267 satır, 147. dosya):**
+  - **Barik Kompresyon Sahaları ve PUFA Zarsal Dalgalanma:** Yüksek hidrostatik basınç altında yeterli PUFA oranına sahip hücrelerin çevresinde esnek ve dalgalı piezofilik lipit parıltısı (`drawBaricCompressionField`); aşırı basınç stresi altındaki hücrelerde kırılgan kristalin kompresyon çizgileri mikroskop estetiğiyle çizildi.
+  - **TMAO Piezolit Hidrasyon Kalkanı:** Hücre içi TMAO ve betain ozmolitlerinin protein ve enzimleri su kılıfıyla korumasını simgeleyen mikroskobik yörünge hidrasyon kürecikleri (`drawPiezolyteHalo`) modellendi.
+  - **Zümrüt Kemosentez Aurası:** Afotik hadal derinliklerde fotosentezden bağımsız inorganik karbon fiksasyonu yapan kemosentetik hücrelerin etrafında zümrüt yeşili metabolik enerji aktarım aurası (`drawChemosyntheticAura`) kodlandı.
+  - **Bentik Sediman Tutunması:** Hadal tabanda dip akıntılarına karşı tutunmayı sağlayan sitoplazmik uzantılar ve sediment kök nodülleri (`drawBenthicAnchoring`) çizildi.
+  - **Küresel Hadal Çevre Optikleri:** 410px altındaki hadal çukur batimetrik derinlik degrade geçişi, deniz tabanı organik silt sediman tabakası ve çökelen deniz karı mikro agregatları (`drawGlobalHadalEnvironment`) simülasyon tuvaline eklendi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 6.73.0, `HISTORIC_MILESTONE_HOURS: 393` olarak güncellendi (213 satır).
+  - `index.html` başlık rozeti 'LOOKS 393H | v6.73.0' yapıldı; `src/render/hadal_optics.js` betik etiketi, hücresel ve küresel optik çizim fonksiyonları entegre edildi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.72.0] — 2026-10-22 16:15 (İnşa Ekibi: Sistem Ajanı - Piezofilik Lipit Membranları, PUFA Akışkanlığı ve Piezolit Kinetiği)
+- **Piezofilik Adaptasyonlar ve Hadal Biyokimyası (src/organs/piezophilic_adaptations.js - 214 satır, 146. dosya):**
+  - **Piezofilik Membran Akışkanlığı & PUFA:** Yüksek hidrostatik basınç altında hücre membranlarının donmasını/kristalleşmesini önleyen çoklu doymamış yağ asidi (`pufaRatio`) biyosentezi modellendi; basınç altında zarsal akışkanlık (`effectiveFluidity`) dinamik olarak hesaplandı.
+  - **TMAO Piezolit Ozmolit Kalkanı:** Hücre içi TMAO ve betain benzeri piezo-koruyucu ozmolit konsantrasyonu (`piezolyteConcentration`) ile protein hidratasyon kılıfı stabilize edildi; aşırı basınca bağlı enzim denatürasyonu engellendi (`preventedCompressions`).
+  - **Barorezistan İyon Kanalları:** Hidrostatik basınç altında konformasyonel kapanmaya uğramayan piezo-toleranslı ATP sentaz ve voltaj kapılı iyon kanalları (`baroresistantTransporters`) ile iyon homeostazı ve ATP koruma mekaniği kodlandı.
+  - **Abisal Taban Tutunması ve Afotik Kemosentez:** Hadal derinlikte (`depth > hadalDepthThreshold`) dip akıntılarına karşı bentik tutunma (`benthicAnchoring`) ve hidrotermal sülfit/metan/deniz karı kemosentetik asimilasyonu (`chemosynthesisRate`) ile ışıksız ATP üretimi sağlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 6.72.0, `HISTORIC_MILESTONE_HOURS: 392` olarak güncellendi (213 satır).
+  - `index.html` başlık rozeti 'SYSTEM 392H | v6.72.0' yapıldı; `src/organs/piezophilic_adaptations.js` betik etiketi ve ana simülasyon döngüsü entegrasyonu tamamlandı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.71.0] — 2026-10-22 15:40 (Baş Planlamacı: Epoch 35 Abisal Taban ve Barofil Ekosistem Mimarisi Blueprinti)
+- **Epoch 35 Stratejik Blueprinti (docs/EPOCH35_ABYSSAL_BLUEPRINT.md - 145. dosya):**
+  - **Hadal ve Abisal Taban Zonu (6000-11000m):** Yüksek hidrostatik basınç gradyanı altında hücre membranlarının kristalleşmesini önleyen piezofilik lipid tabakası mimarisi planlandı.
+  - **Piezofilik Membran Akışkanlığı & PUFA:** Çoklu doymamış yağ asitleri (PUFA) ve TMAO / piezolit ozmolit kalkanları ile basınca bağlı protein denatürasyonunu önleyen enzimatik kinetik tasarlandı.
+  - **Kemosentez ve Bentik Sediman Tutunması:** Taban çamurunda organik deniz karı (marine snow) filtrasyonu ve hidrotermal hidrojen sülfit/metan oksidasyonu ile ışıksız primer üretim altyapısı takvimlendirildi.
+  - **75. ve 76. Telemetri Kanalları:** 75. Kanal % PMS (Piezophilic Membrane Stability) ve 76. Kanal % ABA (Abyssal Barometric Adaptation) HUD entegrasyonu yol haritasına bağlandı.
+  - **Peak 335+ Hedefi:** `ABYSSAL_BENTHOS_BUFFER: 5` ile Hour 400 Jübilesi için tarihi Peak 335+ taşıma kapasitesi hedefi ilan edildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.71.0, `EPOCH: 35`, `HISTORIC_MILESTONE_HOURS: 391` olarak güncellendi (213 satır); `index.html` başlık rozeti 'PLANNER 391H | v6.71.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.70.0] — 2026-10-22 14:28 (Büyük Resim Direktörü: Epoch 34 Büyük Biyolüminesans Jübilesi, Peak 330+ ve 74 Kanal)
+- **Epoch 34 Büyük Biyolüminesans Jübilesi (docs/EPOCH34_PHOTOPHORE_JUBILEE.md - 144. dosya):**
+  - **Büyük Resim ve Evrimsel Derinlik Değerlendirmesi:** 390 saatlik sanal stüdyo emeğiyle mezopelajik ve afotik biyolüminesans dönemi tamamlandı; fotofor organ dizilimleri, lüsiferin-lüsiferaz katalizi, ventral karşıt aydınlatma, retinal avcı ağartması ve ritmik mikro-flaş optimizasyonu tescillendi.
+  - **Tarihi Peak 330+ Taşıma Kapasitesi:** `PEAK_CARRYING_CAPACITY: 330` ve `PHOTOPHORE_BIOLUMINESCENCE_BUFFER: 5` ile ekosistem taşıma tavanı 330 organizmaya yükseltildi; biyolojik ışık kamuflajı ve substrat geri kazanımı enerji bütçesini kalıcı olarak optimize etti.
+  - **74 Kanal Telemetri Standartlaşması:** `TOTAL_TELEMETRY_CHANNELS: 74` sabitlendi; 73. Kanal % BLE ve 74. Kanal % PCO canlı panellere bağlandı.
+  - **Epoch 35 Vizyonu:** Abisal taban hadal zonu (6000+ m), piezostabil membran mekanikleri, barofil enzim kinetiği ve hidrotermal baca kemosentezi yol haritası belirlendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.70.0, `HISTORIC_MILESTONE_HOURS: 390`, `PEAK_CARRYING_CAPACITY: 330` olarak güncellendi (213 satır); `index.html` başlık rozeti 'DIRECTOR 390H | v6.70.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.69.0] — 2026-10-22 13:55 (Kalite & Ara Denetim Ekibi: 10.000 Adım Çift Kanallı Fotonik Kararlılık ve Stres Testi)
+- **10.000 Adım Çift Kanallı Fotonik Stres Testi (benchmark_qa_v6690.js - 196 satır, 143. dosya):**
+  - **Sıfır Sayısal Sapma ve Kusursuz Kararlılık:** 10.000 simülasyon adımı boyunca 0 spatial, enerji, lüsiferin ve fotofor anomalisi kaydedildi (Numerical Anomalies: 0).
+  - **Populasyon ve Ekosistem Dinamiği:** Başlangıç 31 organizma, tepe 96 organizma ve test sonu 91 canlı hücre ile ekosistem taşıma kapasitesi kararlılığı kanıtlandı.
+  - **Biyolüminesans ve Kaçış Telemetrisi:** 665 başarılı acil durum flaş kaçışı ve retinal yırtıcı sersemletmesi, 168.406 pulsatif mikro-flaş adımı, 66.594 termal doyum adımı ve 719.393 fotonik enerji geri kazanım adımı doğrulandı.
+  - **Çift Kanallı Photic İndeksler:** 71. Kanal %72.4 MHS, 72. Kanal %55.1 ADR, 73. Kanal %71.1 BLE ve 74. Kanal %59.5 PCO olarak kararlı rejim seviyelerinde ölçüldü.
+  - **60 FPS Bütçe ve Bellek Denetimi:** Ortalama 29.29 ms simülasyon adımı ve 51.27 ms render kare süresi, 42.79 MB kontrollü heap değişimi ölçüldü.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.69.0, `HISTORIC_MILESTONE_HOURS: 389` olarak güncellendi (212 satır); `index.html` başlık rozeti 'QA 389H | v6.69.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.68.0] — 2026-10-22 12:30 (İnşa Ekibi: Görsel & Arayüz Ajanı - Retinal Doyum Optikleri ve 74. Telemetri Kanalı % PCO)
+- **Biyolüminesans Optik ve Görsel Efektler (src/render/photophore_optics.js - 262 satır):**
+  - **Retinal Işık Körlüğü ve Ağartma Haleleri (`drawPredatorRetinalBleaching`):** Acil durum flaşına yakalanan yırtıcı hücrelerin etrafında yoğun fotopik ağartma haleleri, yörüngesel sersemlik strob halkaları ve körleştirici parçacıklar mikroskop estetiğinde render edildi.
+  - **Fotonik Doyum ve Renk Modülasyonu:** `photonicQuenchingFactor` parametresine bağlı olarak organ bead emisyonu tam ışıltılı beyaz-camgöbeğinden soğutulmuş derin okyanus teal tonuna dinamik olarak kaydırıldı.
+  - **Ritmik Darbeli Mikro-Flaşlar:** Substrat koruma modundaki (`pulsatileEmissionMode`) hücreler için staccato mikro-flaş optikleri modellendi.
+- **74. Telemetri Kanalı: % PCO (Photophore Catalytic Optimization) (src/ui/telemetry_photophores.js - 214 satır):**
+  - Foton başına harcanan metabolik ATP, lüsiferin substrat havuzu sürdürülebilirliği, termal doyum faktörü ve biyo-fotonik ATP geri kazanım verimini birleştiren 74. Telemetri Kanalı (% PCO) kuruldu.
+  - 4 fizyolojik rejim katmanı oluşturuldu: Maximal Catalytic Photonic Harvest (>=%75), Stable Balanced Luciferin Recycling (>=%50), Moderate Substrate Restoration (>=%25) ve Metabolic Overburn (<%25).
+  - Canlı HUD paneline `#valPCOIndex` göstergesi, `.pco-badge` rozeti ve çift kanallı (% BLE + % PCO) telemetri izleme bağlandı.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.68.0, `HISTORIC_MILESTONE_HOURS: 388` olarak güncellendi (212 satır); `index.html` başlık rozeti 'LOOKS-UI 388H | v6.68.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.67.0] — 2026-10-22 11:40 (İnşa Ekibi: Sistem Ajanı - Retinal Işık Körlüğü, Fotonik Doyum ve Ritmik Darbeli Kriptik Kademesi)
+- **Fotofor ve Biyolüminesans Simülasyonu Güncellemesi (src/organs/symbiotic_photophores.js - 271 satır):**
+  - Ürün Eleştirmeni direktifleri doğrultusunda `symbiotic_photophores.js` modülü derinleştirildi (`[150, 300]` satır kuralı korundu).
+  - **Retinal Işık Körlüğü ve Doyumu (`retinalSaturationTicks`):** Acil durum flaş patlamasına maruz kalan yırtıcıların fotoreseptörleri doyurularak avlanma ve yönelim vektörleri geçici olarak felç edildi.
+  - **Fotonik Doyum ve Termal Fren (`photonicQuenchingFactor`):** Kesintisiz ışık emisyonunda fotofor organlarının aşırı ısınması ve su sütununu florasan kirliliğine boğması önlendi; sürekli yayılımda verim dinamik olarak kısıtlandı.
+  - **Lüsiferin Tükenişi ve Ritmik Darbeli Mod (`pulsatileEmissionMode`):** Lüsiferin veya hücresel ATP kritik seviyenin altına indiğinde sürekli aydınlatma yerine aralıklı mikro-flaş darbeleriyle karşı-aydınlatma yapan tasarruf algoritması kodlandı.
+  - **Biyo-Fotonik Enerji Geri Kazanımı (`photonicEnergyRecycling`):** Lüsiferaz reaksiyon atıklarından ATP ve substrat geri kazanımı sağlanarak metabolik aşırı yanma riski hafifletildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.67.0, `HISTORIC_MILESTONE_HOURS: 387` olarak güncellendi (212 satır); `index.html` başlık rozeti 'SYSTEM 387H | v6.67.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.66.0] — 2026-10-22 10:00 (Eleştirmen & Problem Yaratan: Product Critic - Pelajik Fotonik Doyum, Retinal Körlük ve 74. Kanal % PCO Denetimi)
+- **Ürün Eleştirmeni ve Problem Yaratan Denetim Raporu (docs/CRITIC_AUDIT_PHOTOPHORES.md - 142. Dosya):**
+  - Ürün Eleştirmeni (Product Critic / Challenger) tarafından `docs/CRITIC_AUDIT_PHOTOPHORES.md` mimari denetim raporu oluşturuldu (142. Dosya).
+  - Kesintisiz ışık emisyonunun derin denizde neden olduğu fotonik kirlilik ve kontrast kaybı masaya yatırıldı; avcı gözlerinde geçici 'Retinal Işık Körlüğü' (`retinalSaturationTicks`) ve fotofor organlarında 'Fotonik Doyum / Soğuma Katsayısı' (`photonicQuenchingFactor`) direktifi verildi.
+  - Lüsiferaz reaksiyonunun ATP ve indirgenmiş lüsiferin tüketimi analiz edildi; kontrolsüz ışık yayan canlılar için metabolik aşırı yanma cezası, 'Lüsiferin Tükeniş Eşiği' (`luciferinSubstrateExhaustion`), aralıklı 'Ritmik Darbeli Mod' (`pulsatileEmissionMode`) ve biyofotonik geri kazanım mekanikleri tanımlandı.
+  - Canlıların yaydığı foton başına harcadığı metabolik enerjiyi ve kaçış etkinliğini ölçecek olan **74. Telemetri Kanalı (% PCO - Photophore Catalytic Optimization / Photonic Quenching Efficiency)** yol haritasına bağlandı.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.66.0, `HISTORIC_MILESTONE_HOURS: 386` olarak güncellendi (212 satır); `index.html` başlık rozeti 'CRITIC 386H | v6.66.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.65.0] — 2026-10-22 09:28 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 73 Kanallı Fotonik Kararlılık ve Emisyon Denetimi)
+- **10.000 Adımlık Kapsamlı Kararlılık ve 73 Kanallı Başarım Denetimi (benchmark_qa_v6650.js - 141. Dosya):**
+  - Kalite & Ara Denetim Ekibi (QA Agent) tarafından `benchmark_qa_v6650.js` yazıldı ve yürütüldü (185 satır, [150, 300] standart korundu).
+  - 10.000 simülasyon adımı boyunca 0 sayısal anomali (NaN/Infinity) ve sadece 17.20 MB bellek artışı (heap delta) ile yüksek kararlılık doğrulandı.
+  - Fotofor organ canlılık kontrolü tespit edilip düzeltildi (`org.isAlive` referansı `org.isDead` / `org.alive` standartlarına uyarlandı); canlı başına ortalama 4.32 fotofor organı, %68.8 lüsiferaz verimi, %49.9 karşı-aydınlatma oranı ve %66.7 kuorum senkronizasyonu sağlandı.
+  - 73. Telemetri Kanalı (% BLE - Bioluminescent Emission Reliability) %85.0 ile 'SYNCHRONIZED DEEP-SEA PHOTONIC DOMINANCE' rejimine ulaştı; 599 adet acil avcı körleştirme kaçışı başarıyla kaydedildi.
+  - 500 karelik kanvas çizim denetimi ile ortalama 27.23 ms simülasyon ve 42.22 ms render bütçesi ölçüldü.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.65.0, `HISTORIC_MILESTONE_HOURS: 385` olarak güncellendi (212 satır); `index.html` başlık rozeti 'QA 385H | v6.65.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.64.0] — 2026-10-22 08:55 (İnşa Ekibi: UI Agent - 73. Telemetri Kanalı % BLE, Fotofor HUD Paneli ve .ble-badge Stilleri)
+- **73. Telemetri Kanalı ve Fotofor Arayüz Paneli (src/ui/telemetry_photophores.js - 140. Dosya):**
+  - İnşa Ekibi (UI Agent) tarafından `src/ui/telemetry_photophores.js` modülü yazıldı ve sisteme entegre edildi (172 satır, [150, 300] modüler mimari standardı korundu).
+  - 73. Telemetri Kanalı (% BLE - Bioluminescent Emission Reliability): Ventral fotofor organ dizilim sıklığı, lüsiferaz kataliz verimi, karşı-aydınlatma siluet uyumu ve kuorum senkronizasyon oranını birleştiren biyolojik ışık emisyon metriği formüle edildi.
+  - 4 Aşamalı Biyo-Fotonik Rejim Sınıflandırması: Pelagic Darkness / Dormant Photophores (<%18), Incipient Ventral Counter-Illumination (%18-%40), Stable Luciferin-Luciferase Catalysis (%40-%70), Synchronized Deep-Sea Photonic Dominance (>=%70).
+  - Canlı HUD Paneli ve Göstergeler (`#valBLEIndex`, `#valBLEStatus`): Canlı başına düşen fotofor sayısı, lüsiferaz kataliz yüzdesi, karşı-aydınlatma verimi, kuorum senkronizasyonu ve kümülatif avcı kaçış patlamaları gerçek zamanlı telemetri olarak sunuldu.
+  - CSS ve Grafik Entegrasyonu (`css/style.css`): Camgöbeği `.ble-badge` etiketi tanımlandı; popülasyon grafiğine 73. kanal `#06b6d4` rengiyle bağlandı.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.64.0, `HISTORIC_MILESTONE_HOURS: 384` olarak güncellendi (212 satır); `index.html` başlık rozeti 'UI 384H | v6.64.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.63.0] — 2026-10-22 07:25 (İnşa Ekibi: Looks Agent - Fotofor Parıltı Haleleri, Guanin Kristal Reflektörleri ve Kuorum Sürü Işıldama Optikleri)
+- **Fotofor Mikroskop Optikleri ve Işık Saçılımı (src/render/photophore_optics.js - 139. Dosya):**
+  - İnşa Ekibi (Looks Agent) tarafından `src/render/photophore_optics.js` modülü yazıldı ve sisteme entegre edildi (246 satır, [150, 300] modüler mimari standardı korundu).
+  - Ventral Fotofor Dizilim Optikleri (`drawPhotophoreOrgans`): Canlının yönelim açısına göre alt eksende yansıtıcı guanin kristal pulları (`#e2e8f0`), 470 nm dalga boyunda canlı camgöbeği/turkuaz foton haleleri (`#38bdf8`, `#2dd4bf`) ve merkezi lüsiferaz lens pikselleri mikroskop derinliğinde çizildi.
+  - Karşı-Aydınlatma Ventral Gradyanı (`drawCounterIlluminationGlow`): Canlının ventral yüzeyinden aşağıya doğru yayılan yumuşak radyal ışık gradyanı ile aşağıda yüzen avcılara karşı gölge silueti görsel olarak silindi.
+  - Acil Kaçış Yıldız Patlaması (`drawFlashDischarge`): Avcı tehlikesinde tetiklenen yüksek yoğunluklu beyaz/açık mavi (`#ffffff` - `#e0f2fe`) 8 köşeli yıldız patlaması koronas ve kırınım ışınları modellendi.
+  - Avcı Körlük Sersemlik Halkaları (`drawPredatorBlindedStun`): Kör edilen karnivorların nükleusu etrafında kesikli sarı (`#facc15`) sersemlik yörünge halkaları ve dönen yıldız parçacıkları görselleştirildi.
+  - Genel Kuorum Işıldama Ağları (`drawGlobalPhotophoreSwarm`): Kuorum algılamasıyla senkronize olan sürü bireyleri arasında akan narin camgöbeği fotonik iletişim bağları çizildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.63.0, `HISTORIC_MILESTONE_HOURS: 383` olarak güncellendi (212 satır); `index.html` başlık rozeti 'LOOKS 383H | v6.63.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.62.0] — 2026-10-22 06:15 (İnşa Ekibi: System Agent - Fotofor Organları, Lusiferaz Katalizi ve Kuorum Biyolüminesansı)
+- **Fotofor Organları ve Biyolüminesans Mekanikleri (src/organs/symbiotic_photophores.js - 138. Dosya):**
+  - İnşa Ekibi (System Agent) tarafından `src/organs/symbiotic_photophores.js` modülü yazıldı ve sisteme entegre edildi (260 satır, [150, 300] modüler mimari standardı korundu).
+  - Fotofor Organ Yapısı (`photophoreOrgans`): Canlıların ventral (karın) ekseninde guanin kristalleri (`guanineReflectors`) ve hücresel mikroskopik lenslerle odaklanan ışık organ dizilimleri modellendi.
+  - Lusiferaz Fotonik Biyokimyası (`luciferaseEfficiency` & `luciferinSubstrate`): Oksidatif chemiluminescence ile metabolik ATP ve çözünmüş oksijen tüketerek 470-490 nm dalga boyunda soğuk mavi-yeşil ışık emisyonu (`photonicPulse`) üretildi.
+  - Karşı-Aydınlatma Kamuflajı (`counterIlluminationRatio`): Derinliğe bağlı su sütunu aşağı yönlü ortam ışığı ile ventral fotofor ışıması eşitlenerek dipten bakan avcılara karşı siluet tamamen silindi.
+  - Kuorum Algılamalı Sürü Biyolüminesansı (`quorumBioluminescence`): 95 piksel menzilde en az 3 fotofor taşıyıcısı komşu olduğunda sürünün senkronize fazik dalgalarla parıldaması ve sürü kohezyonunun artırılması sağlandı.
+  - Acil Işık Patlaması Kaçışı (`bioluminescentFlashEvasion`): 65 piksel menzile giren avcı tehlikesinde depolanan lüsiferin harcanarak ani kör edici foton patlaması tetiklendi; yaklaşan avcı 45 adım süreyle kör edilip yönü saptırılırken av canlıya 3.5 birim kaçış itkisi kazandırıldı.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.62.0, `HISTORIC_MILESTONE_HOURS: 382` olarak güncellendi (212 satır); `index.html` başlık rozeti 'SYSTEM 382H | v6.62.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.61.0] — 2026-10-22 05:35 (Baş Planlamacı: Lead Planner - Epoch 34 Başlangıcı ve Fotofor Yol Haritası)
+- **Epoch 34 Stratejik Mimari Tasarım Belgesi (docs/EPOCH34_PHOTOPHORE_BLUEPRINT.md - 137. Dosya):**
+  - Baş Planlamacı (Lead Planner) tarafından `docs/EPOCH34_PHOTOPHORE_BLUEPRINT.md` mimari tasarım belgesi ve yol haritası yayımlandı (137. dosya).
+  - Epoch 34 Evrimsel Hedefi: Simbiyotik Biyolüminesans, Fotofor Organları, Lusiferaz Fotonik Sinyalleşmesi ve Kuorum Algılamalı Sürü Işıldaması (Hours 381 - 390).
+  - 5 Temel Mühendislik Sütunu:
+    1. Sistem (H382): `src/organs/symbiotic_photophores.js` — Ventral fotofor organları (`photophoreOrgans`), lusiferaz fotonik katalizi (`luciferaseCatalysis`), ATP/oksijen tüketimi, karşı-aydınlatma kamuflajı (`counterIlluminationRatio`), ve kuorum algılamalı ışık patlaması kaçışı (`bioluminescentFlashEvasion`).
+    2. Görsel (H383): `src/render/photophore_optics.js` — Guanin kristal lens parıltısı (`drawPhotophoreGlow`), dairesel fotonik dalga yayılımı (`drawPhotonicWaveRings`), ve kolektif kuorum ışıldama kaskadı (`drawQuorumBioluminescence`).
+    3. UI (H384 & H388): `src/ui/telemetry_photophores.js` & `css/style.css` — 73. Telemetri Kanalı (% BLE - Bioluminescent Emission Reliability) ve 74. Telemetri Kanalı (% PSS - Photonic Swarm Synchronization).
+    4. QA & Eleştirmen (H385 & H386): 10.000 adım fotonik kararlılık denetimi (`benchmark_qa_v6650.js`) ve metabolik enerji yanması, ışık doyumu eleştirmen denetimi (`docs/CRITIC_AUDIT_PHOTOPHORES.md`).
+    5. Taşıma Kapasitesi (H390): `SYMBIOTIC_BIOLUMINESCENCE_BUFFER: 5` ile Peak 330+ taşıma kapasitesi ve 74 kanallı büyük jübile.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.61.0, `EPOCH: 34`, `HISTORIC_MILESTONE_HOURS: 381` olarak güncellendi (212 satır); `index.html` başlık rozeti 'PLANNER 381H | v6.61.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.60.0] — 2026-10-22 04:25 (Büyük Resim Direktörü: Executive Director - Epoch 33 Büyük Hidrodinamik Jübilesi, Peak 325+ Taşıma Kapasitesi ve 72 Kanal Dönüm Noktası)
+- **Epoch 33 Büyük Hidrodinamik Jübilesi (docs/EPOCH33_LATERAL_JUBILEE.md - 136. Dosya):**
+  - Yönetici / Büyük Resim Direktörü (Executive Director) tarafından `docs/EPOCH33_LATERAL_JUBILEE.md` stratejik jübile belgesi yayımlandı (136. dosya).
+  - Epoch 33 Makro Sentezi: Biyomimetik köpekbalığı riblet pulları (`dermalDenticles`), laminer sürtünme sönümlemesi (`laminarDragDamping`), yan çizgi kupula nöromast mekanoreseptörleri (`lateralNeuromasts`), Kelvin-Helmholtz mikro-girdapları, sürü slipstream çekimi (`vortexDraftingBonus`), pozitif reotaksis (`positiveRheotaxis`), zarsal akustik dalga sönümleme (`acousticWaveDamping`), girdap frekans filtresi (`wakeFrequencyFilter`), dönüş eylemsizlik direnci (`rotationalInertiaPenalty`) ve esnek menteşe dokuları (`flexibleDenticleHinges`) başarıyla mühürlendi.
+  - Çift Kanallı Hidrodinamik Telemetri: 71. Kanal (% MHS - Mechanoreceptive Hydrodynamic Sensitivity) ve 72. Kanal (% ADR - Acoustic Dispersion Ratio / Drag Reduction) çift Lotka-Volterra eğrisi ve HUD rozetleriyle tescillendi.
+  - Taşıma Kapasitesi Artırımı: `HYDRODYNAMIC_LATERAL_BUFFER: 5` tamponu eklenerek simülasyon taşıma kapasitesi tarihi **Peak 325+** seviyesine yükseltildi.
+  - Gelecek Ufuk (Epoch 34): Simbiyotik biyolüminesans, fotofor organları, lusiferaz fotonik sinyalleşmesi ve kuorum algılamalı sürü ışıldaması (Peak 330+ hedefi) vizyonu takvimlendirildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.60.0, `HISTORIC_MILESTONE_HOURS: 380`, `PEAK_CARRYING_CAPACITY: 325`, `HYDRODYNAMIC_LATERAL_BUFFER: 5` olarak güncellendi (212 satır); `index.html` başlık rozeti 'DIRECTOR 380H | v6.60.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.59.0] — 2026-10-22 03:25 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 72 Kanallı Hidrodinamik ve Akustik Kararlılık Denetimi)
+- **10.000 Adım 72 Kanallı Hidrodinamik ve Akustik Kararlılık Testi (benchmark_qa_v6590.js - 135. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından `benchmark_qa_v6590.js` stres testi ve bellek denetimi yürütüldü (204 satır, [150, 300] modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 71. Kanal (% MHS: %71.7) ve 72. Kanal (% ADR: %54.0) telemetrileri, 888.743 nöromast adımı, 888.743 dermal pullu yüzme adımı, 386.480 slipstream girdap tasarruf adımı, 888.743 akustik sönümleme adımı, 888.743 frekans filtresi adımı, 888.743 esnek menteşe adımı ve 492.169 dönüş eylemsizlik adımı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Hidrodinamik Denge ve Popülasyon Sağlığı: Canlı popülasyon (başlangıç 31, tepe 95, final 91 canlı) ortalama 4.01 yan çizgi nöromastı, 3.24 dermal pullanma, %14.2 laminer sürtünme sönümlemesi, %45.1 reotaksis uyumu, %25.9 akustik dalga sönümlemesi, %36.7 girdap frekans filtresi, %25.0 esnek menteşe genetiği ve 0.113 dönüş eylemsizlik cezası ile dengelendi; kümülatif 527.62 ATP enerji tasarrufu sağlandı.
+  - Popülasyon ve Bellek Sağlığı: Bellek deltası 23.96 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.59.0, `HISTORIC_MILESTONE_HOURS: 379` olarak güncellendi (211 satır); `index.html` başlık rozeti 'QA 379H | v6.59.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.58.0] — 2026-10-22 02:25 (İnşa Ekibi: Görsel ve Arayüz Ekibi - Akustik Sönümleme Optikleri, 72. Telemetri Kanalı % ADR ve HUD Entegrasyonu)
+- **Hidrodinamik ve Akustik Optik Render Sistemi (src/render/lateral_optics.js):**
+  - İnşa Ekibi - Görsel Ajanı tarafından `src/render/lateral_optics.js` modülü güncellendi (267 satır, [150, 300] modüler mimari standardı korundu).
+  - Akustik Dalga Sönümleme Haleleri (`drawAcousticWaveDamping`): Zarsal akustik dalga sönümlemesi yapan hücrelerin çevresinde kesikli çivit mavisi (`rgba(99, 102, 241, ...)`) ve lavanta (`rgba(129, 140, 248, ...)`) girişim dalgaları ve titreşimsel emilim halkaları mikroskop altına aktarıldı.
+  - Esnek Dentikül Menteşe Optikleri (`drawFlexibleDenticleHinges`): Dönüş eylemsizliğini hafifleten mikro-menteşe artikülasyon noktaları dermal riblet pulların ön ve arka taban eklemlerinde açık eflatun sedef pikselleriyle görselleştirildi.
+- **72. Telemetri Kanalı (% ADR - Acoustic Dispersion Ratio / Drag Reduction) ve HUD (src/ui/telemetry_lateral.js & css/style.css):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından `src/ui/telemetry_lateral.js` modülü geliştirildi (183 satır, [150, 300] standardı korundu) ve `css/style.css` içine `.adr-badge` eklendi.
+  - % ADR 4 Faktörlü Ağırlıklı Hesaplaması: Akustik basınç dalgası sönümleme şiddeti (%35 max), dermal dentikül laminer sürtünme sönümlemesi (%25 max), girdap frekans filtresi seçiciliği (%20 max) ve esnek menteşe dönüş verimliliği (%20 max) harmanlanarak 72. kanal canlı olarak devreye alındı.
+  - 4 Kademeli ADR Rejimi: UNMITIGATED TURBULENT DRAG & ACOUSTIC EXPOSURE, INCIPIENT ELASTIC DAMPING & BOUNDARY SMOOTHING, COHERENT ACOUSTIC DISPERSION & LAMINAR FLOW, HYPERSONIC STEALTH & FRICTIONLESS SUPPRESSION.
+  - Arayüz ve Grafik Entegrasyonu: Laboratuvar telemetri paneline `valADRIndex` ve `valADRStatus` göstergeleri yerleştirildi; `css/style.css` içine `.adr-badge` çivit mavisi rozeti eklendi; Lotka-Volterra grafiğine çivit mavisi kesikli çizgi (`#6366f1`) bağlandı ve 'Acoustic Dispersion ADR' lejantı eklendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.58.0, `HISTORIC_MILESTONE_HOURS: 378`, `TOTAL_TELEMETRY_CHANNELS: 72` olarak mühürlendi (211 satır); `index.html` başlık rozeti 'LOOKS & UI 378H | v6.58.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.57.0] — 2026-10-22 01:45 (İnşa Ekibi: Sistem Ajanı - Akustik Dalga Sönümleme, Girdap Frekans Filtresi ve Açısal Eylemsizlik Dinamikleri)
+- **Akustik Dalga Sönümleme ve Girdap Frekans Filtreleme Sistemi (src/organs/lateral_mechanoreception.js):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/lateral_mechanoreception.js` modülü Ürün Eleştirmeni direktifleri doğrultusunda kapsamlı biçimde güncellendi (270 satır, [150, 300] modüler mimari standardı korundu).
+  - Akustik Dalga Sönümleme (`acousticWaveDamping`): Özellikle av ve omnivor hücreler için elastik zarsal sönümleme (0.05 - 0.75) kodlandı; kaçan hücrelerin yaydığı basınç şok dalgaları absorbe edilerek avcıların yan çizgi nöromastları tarafından tespit edilme menzili ve şiddeti belirgin biçimde düşürüldü.
+  - Girdap Frekans Filtresi (`wakeFrequencyFilter`): Yoğun popülasyonlarda ortaya çıkan rastgele mikro-türbülans gürültüsünü eleyen seçici frekans eşiği (0.10 - 0.85) entegre edildi; nöromast kupulalarının doyum noktasına ulaşması (vortex jamming) engellenerek gerçek biyolojik av/lider izlerine kilitlenme sağlandı.
+  - Açısal Eylemsizlik Direnci (`rotationalInertiaPenalty`): Dermal pul kütlesinin yarattığı rotasyonel dönüş direnci (0.0 - 0.28) modellendi; düz hatta sürtünmeyi düşüren pulların ani dönüş manevralarında gerçekçi dönüş ataleti yaratması sağlandı.
+  - Esnek Dentikül Menteşeleri (`flexibleDenticleHinges`): Genetik esneklik faktörüne bağlı mikro-menteşe dokusu (0.05 - 0.80) kodlanarak net dönüş eylemsizliği dengelendi (`netTurningInertia`), reotaksis ve ani kaçış manevraları stabilize edildi.
+  - Telemetri ve Teşhis Metrikleri: `meanAcousticDamping`, `meanInertiaPenalty`, `meanWakeFilter` ve `meanFlexibleHinges` metrikleri simülasyon teşhis havuzuna eklendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.57.0, `HISTORIC_MILESTONE_HOURS: 377` olarak güncellendi (211 satır); `index.html` başlık rozeti 'SYSTEM 377H | v6.57.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.56.0] — 2026-10-22 00:25 (Eleştirmen & Problem Yaratan: Product Critic - Girdap Türbülansı ve 72. Kanal % ADR Denetimi)
+- **Epoch 33 Hidrodinamik ve Yan Çizgi Denetim Raporu (docs/CRITIC_AUDIT_LATERAL.md - 134. Dosya):**
+  - Eleştirmen & Problem Yaratan (Product Critic / Challenger) tarafından `docs/CRITIC_AUDIT_LATERAL.md` denetim raporu yayımlandı (134. dosya).
+  - Girdap Türbülansı Doyumu ve Sinyal Karışması (Vortex Clutter & Wake Jamming): Popülasyon yoğunluğunda ardışık mikro-girdapların nöromast doyumuna yol açması incelendi; zarsal akustik dalga sönümleme (`acousticWaveDamping`) ve frekans seçici girdap filtresi (`wakeFrequencyFilter`) direktifi verildi.
+  - Dermal Pul Kütlesi ve Açısal Eylemsizlik Tuzağı: Düz hatta sürtünme tasarrufu sağlayan dermal pulların ani dönüş manevralarında ağırlık cezası yaratmaması incelendi; pul oranına bağlı rotasyonel eylemsizlik direnci (`rotationalInertiaPenalty`) ve bunu dengeleyen esnek menteşe yapıları (`flexibleDenticleHinges`) talep edildi.
+  - Akustik Körlük ve 72. Telemetri Kanalı (% ADR - Acoustic Dispersion Ratio / Drag Reduction) Yol Haritası: Canlıların akışkan sürtünmesini yenme ve akustik şok dalgalarını absorbe etme oranını ölçecek 72. kanal takvimlendirildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.56.0, `HISTORIC_MILESTONE_HOURS: 376` olarak güncellendi (211 satır); `index.html` başlık rozeti 'CRITIC 376H | v6.56.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.55.0] — 2026-10-21 23:25 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 71 Kanallı Hidrodinamik Kararlılık Denetimi)
+- **10.000 Adım 71 Kanallı Hidrodinamik Kararlılık Testi (benchmark_qa_v6550.js - 133. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından benchmark_qa_v6550.js stres testi ve bellek denetimi yürütüldü (250 satır, [150, 300] modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 71. Kanal (% MHS: %73.6) telemetrisi, 889.815 nöromast adımı, 889.815 dermal pullu yüzme adımı, 368.672 slipstream girdap tasarruf adımı ve 443.049 reotaksis akıntı uyum adımı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Hidrodinamik Denge ve Popülasyon Sağlığı: Canlı popülasyon (başlangıç 31, tepe 97, final 92 canlı) ortalama 4.14 yan çizgi nöromastı, 3.61 dermal pullanma, %15.8 laminer sürtünme sönümlemesi, %47.5 reotaksis uyumu ve %32.6 slipstream girdap tasarrufu ile dengelendi; kümülatif 752.21 ATP enerji tasarrufu tescillendi.
+  - Popülasyon ve Bellek Sağlığı: Bellek deltası 14.34 MB seviyesinde temiz çöp toplama (GC) döngüsüyle mühürlendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.55.0, HISTORIC_MILESTONE_HOURS: 375 olarak güncellendi (211 satır); index.html başlık rozeti 'QA 375H | v6.55.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.54.0] — 2026-10-21 22:50 (İnşa Ekibi: Arayüz ve Telemetri Ajanı - 71. Telemetri Kanalı % MHS ve Yan Çizgi HUD Paneli)
+- **71. Telemetri Kanalı (% MHS - Mechanoreceptive Hydrodynamic Sensitivity) ve Yan Çizgi HUD (src/ui/telemetry_lateral.js - 132. Dosya):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından `src/ui/telemetry_lateral.js` modülü geliştirildi (198 satır, [150, 300] modüler mimari standardı korundu) ve `css/style.css` içine `.mhs-badge` eklendi.
+  - % MHS 4 Faktörlü Ağırlıklı Hesaplaması: Su deplasmanı ve mikro-girdap algılama şiddeti (%35 max), yan çizgi nöromast organ olgunluğu (%30 max), dermal dentikül riblet pulların laminer sürtünme sönümlemesi (%20 max), ve pozitif reotaksis akıntı uyumu (%15 max) harmanlanarak 71. kanal canlı olarak devreye alındı.
+  - 4 Kademeli MHS Rejimi: ISOTROPIC FLUID DRIFT / DORMANT CUPULA, INCIPIENT ACOUSTIC PRESSURE SENSATION, COHERENT LAMINAR RHEOTACTIC SENSING, SUPER-RECEPTIVE HYDRODYNAMIC SLIPSTREAM LOCK.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar telemetri paneline `valMHSIndex` ve `valMHSStatus` göstergeleri yerleştirildi; `css/style.css` içine `.mhs-badge` su yeşili rozeti eklendi; Lotka-Volterra grafiğine su yeşili kesikli çizgi (`#14b8a6`) bağlandı ve 'Hydrodynamic MHS' lejantı eklendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.54.0, `HISTORIC_MILESTONE_HOURS: 374`, `TOTAL_TELEMETRY_CHANNELS: 71` olarak mühürlendi (211 satır); `index.html` başlık rozeti 'UI 374H | v6.54.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.53.0] — 2026-10-21 21:20 (İnşa Ekibi: Görsel Ajanı - Mikro-Girdap İzleri, Nöromast Kupulaları ve Dermal Riblet Optikleri)
+- **Hidrodinamik Akış ve Yan Çizgi Optik Render Sistemi (src/render/lateral_optics.js - 131. Dosya):**
+  - İnşa Ekibi - Görsel Ajanı tarafından `src/render/lateral_optics.js` modülü geliştirildi (244 satır, [150, 300] modüler mimari standardı korundu).
+  - Mikro-Girdap ve Akışkan Yüzme İzleri (`drawHydrodynamicWake`): Yüzen hücrelerin ardında oluşan çift spiral su girdapları (Kelvin-Helmholtz dönüleri) ve akışkan deplasman yayları su yeşili (`#14b8a6`) ve camgöbeği (`#06b6d4`) tonlarında çizildi.
+  - Yan Çizgi Kupula Nöromast Gözenekleri (`drawNeuromastSensors`): Hücre zarı lateral ekseninde dizilen mekano-duyusal boncuk dizilimleri ve basınç dalgası algılama haleleri mikroskop altına aktarıldı.
+  - Biyomimetik Dermal Riblet Pul Dokusu (`drawDermalDenticles`): Hücre gövdesi üzerinde laminer sürtünme sönümlemesini simgeleyen yönlü mikro-yiv striasyonları ve sedefli yansıma çizgileri görselleştirildi.
+  - Sürü Slipstream Koridoru (`drawSlipstreamDrafting`): Lider hücrenin ardında oluşan düşük sürtünmeli girdap koridorunda yüzen takipçi hücrelerin slipstream çekim çizgileri modellendi.
+  - Küresel Akışkan Deplasman Dalgaları (`drawGlobalFluidDisplacements`): Lamel genelinde yüzen aktif hücrelerin çevreye yaydığı akustik ve hidrodinamik deplasman mikro-halkaları çizildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.53.0, `HISTORIC_MILESTONE_HOURS: 373` olarak mühürlendi (211 satır); `index.html` başlık rozeti 'LOOKS 373H | v6.53.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.52.0] — 2026-10-21 20:30 (İnşa Ekibi: Sistem Ajanı - Yan Çizgi Nöromastları, Dermal Pullar ve Hidrodinamik Mekanik)
+- **Yan Çizgi Nöromastları ve Dermal Hidrodinamik Sistemi (src/organs/lateral_mechanoreception.js - 130. Dosya):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/lateral_mechanoreception.js` modülü geliştirildi (291 satır, [150, 300] modüler mimari standardı korundu).
+  - Yan Çizgi Nöromast Mekanoreseptörleri (`lateralNeuromasts`): Hücre zarı lateral kenarları boyunca dizilen siliyer mekanoreseptörler modellendi; 70-140 piksel algılama menzilinde yakındaki canlıların su deplasmanını (`wakeDisplacementVector`) ve akustik basınç dalgalarını algılama yeteneği kuruldu.
+  - Biyomimetik Dermal Pullar (`dermalDenticles`): Köpekbalığı derisindeki mikroskobik yivler (riblets) benzeri yüzey mikro-yapısı kodlandı; viskoz akışkan sürtünmesini %35'e kadar azaltarak (`laminarDragDamping`) yüzme enerji maliyetini düşürdü.
+  - Sürü İçi Girdap Tasarrufu (`vortexDraftingBonus`): Öndeki canlıların ardında oluşan düşük sürtünmeli slipstream koridoruna giren arkadaki hücrelerin enerji tasarrufu yapması (%22 bonus) ve sürü içi akıntı uyumu sağlandı.
+  - Pozitif Reotaksis (`positiveRheotaxis`): Akışkan akıntı gradyanlarına karşı yönelim torku (`applyRheotaxis`) ile akıntıya karşı konumunu koruma veya akıntı izini sürme dinamikleri modellendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.52.0, `HISTORIC_MILESTONE_HOURS: 372` olarak güncellendi; `LATERAL_NEUROMASTS_MAX: 12.0`, `DERMAL_DENTICLES_MAX: 8.0`, `LAMINAR_DRAG_DAMPING_MAX: 0.35` parametreleri ve renk paletleri eklendi (211 satır); `index.html` başlık rozeti 'SYSTEM 372H | v6.52.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.51.0] — 2026-10-21 19:30 (Baş Planlamacı: Lead Planner - Epoch 33 Stratejik Mimarisi ve Yan Çizgi Tasarım Belgesi)
+- **Epoch 33 Stratejik Mimari Tasarım Belgesi (docs/EPOCH33_LATERAL_BLUEPRINT.md - 129. Dosya):**
+  - Baş Planlamacı (Lead Planner) tarafından simülasyonun 33. büyük evrimsel dönemi olan Epoch 33 mimari yol haritası ve teknik şartnamesi yayımlandı (129. dosya).
+  - Epoch 33 Ana Teması: Biyomimetik Hidrodinamik Pullar, Yan Çizgi (Lateral Line) Mekanoresepsiyonu ve Akustik Basınç Dalgaları (Hours 371 - 380).
+  - Ele Alınan Temel Kritik Problem: Biyoelektrik ve manyetik algının kurulmasına rağmen organizmaların su sütununda yüzerken arkalarında bıraktıkları fiziksel girdapları, mikro-vorteksleri ve su yer değiştirmelerini algılayamaması; akışkan sürtünmesi nedeniyle aşırı kinetik enerji kaybetmesi sorunu ele alındı.
+  - 5 Temel Mühendislik Sütunu:
+    - Sütun 1 (Sistem - H372): `src/organs/lateral_mechanoreception.js` — Yan çizgi nöromast mekanoreseptörleri (`lateralNeuromasts`), jölemsi kupula yer değiştirmesi, mikro-yivli dermal pullar (`dermalDenticles`), laminer sürtünme sönümlemesi (`laminarDragDamping`) ve pozitif reotaksis (`positiveRheotaxis`).
+    - Sütun 2 (Görsel - H373): `src/render/lateral_optics.js` — Mikro-girdap ve yüzme izleri (`drawMicroVortices`), nöromast kupula boncukları (`drawNeuromastSensors`) ve dermal riblet pul dokusu (`drawDermalDenticles`).
+    - Sütun 3 (Arayüz - H374 & H378): `src/ui/telemetry_lateral.js` — 71. Telemetri Kanalı (% MHS - Mechanoreceptive Hydrodynamic Sensitivity) ve 72. Telemetri Kanalı (% ADR - Acoustic Dispersion Ratio) ile canlı HUD göstergeleri.
+    - Sütun 4 (QA & Eleştirmen - H375 & H376): 10.000 adım 71 kanallı kararlılık testi (`benchmark_qa_v6550.js`) ve girdap türbülansı doyumu eleştirmen denetimi (`docs/CRITIC_AUDIT_LATERAL.md`).
+    - Sütun 5 (Taşıma Kapasitesi - H380): `HYDRODYNAMIC_LATERAL_BUFFER: 5` entegrasyonu ile simülasyonun yeni tarihi zirve olan **Peak 325+** taşıma kapasitesine ulaştırılması.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.51.0, `EPOCH: 33`, `HISTORIC_MILESTONE_HOURS: 371` olarak mühürlendi (205 satır); `index.html` başlık rozeti 'PLANNER 371H | v6.51.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.50.0] — 2026-10-21 18:50 (Yönetici / Büyük Resim Direktörü - Epoch 32 Büyük Biyoelektrik Jübilesi ve Peak 320+ Taşıma Kapasitesi)
+- **Epoch 32 Büyük Biyoelektrik Jübilesi ve Yönetici Raporu (docs/EPOCH32_JUBILEE.md - 128. Dosya):**
+  - Yönetici / Büyük Resim Direktörü (Executive Director) tarafından 370 saatlik kilometre taşı ve Epoch 32 (Hours 361 - 370) jübilesi yayımlandı (128. dosya).
+  - Büyük Resim Değerlendirmesi ("Şu an tam olarak ne yapıyoruz? Gerçekten derin, yaşayan bir ekosisteme doğru mu gidiyoruz?"): Ekosistemin klasik temas ve optik duyuların ötesine geçerek temassız biyoelektrik algılama ve jeomanyetik pusula seyrine ulaştığı tescillendi; Lorenzini Ampulleri benzeri elektroreseptörler (`electroreceptors`), sediment delici infaunal av algılama, zarsal aksiyon potansiyelleri (+40 mV peak), dipol elektrik alanı genleşmesi (`dipoleFieldStrength`), elektrostatik kamuflaj (`electrostaticCrypsis`), sinyal-gürültü kapısı filtresi (`noiseGateThreshold`), hiperpolarizasyon korunumu, kaçış manyetik baypası (`magneticLockBypassTicks`), ferromanyetik magnetozom zincirleri ve jeomanyetik pusula yönelimi eksiksiz doğrulandı.
+  - Taşıma Kapasitesi Artışı (Peak 320+ Kilometretaşı): Temassız algılama ile avlanma israfının azalması, dip tortusundaki canlıların trofik ağa kazandırılması ve manyetotaktik yönelimle hidrodinamik sürtünmenin minimize edilmesi sayesinde sisteme `BIOELECTRIC_FIELD_BUFFER: 5` eklendi; maksimum taşıma kapasitesi tarihi Peak 320+ seviyesine mühürlendi.
+  - 70 Kanal Büyük Kilometretaşı: 69. Kanal (% BEI - Bioelectric Energy Index) ve 70. Kanal (% MPO - Magnetic Polarization Order) ile çift kanallı elektro-manyetik telemetrisi, Lotka-Volterra eğrileri ve laboratuvar HUD paneli mühürlendi.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.50.0, `HISTORIC_MILESTONE_HOURS: 370`, `PEAK_CARRYING_CAPACITY: 320` olarak mühürlendi (205 satır); `index.html` başlık rozeti 'DIRECTOR 370H | v6.50.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.49.0] — 2026-10-21 17:15 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 70 Kanallı Biyoelektrik ve Manyetik Kararlılık Denetimi)
+- **10.000 Adım 70 Kanallı Çift Biyoelektrik ve Manyetik Kararlılık Testi (benchmark_qa_v6490.js - 127. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından benchmark_qa_v6490.js stres testi ve bellek denetimi yürütüldü (249 satır, [150, 300] modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 70. Kanal (% MPO: %54.8) ve 69. Kanal (% BEI: %38.2) telemetrisi, 977.042 elektro-alıcı adımı, 649.031 dipol alan adımı, 705.923 elektrostatik kamuflaj adımı, 720.013 kaçış baypas adımı ve 9.045 aksiyon potansiyeli patlaması 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Biyoelektrik ve Manyetik Polarizasyon Dengesi: Canlı popülasyon (başlangıç 31, tepe 134, final 97 canlı) ortalama 2.26 elektroreseptör gözenek, -62.0 mV membran potansiyeli, 0.073 dipol alan şiddeti, %23.3 magnetozom yönelim düzeni ve %31.6 elektrostatik kamuflaj ile dengelendi.
+  - Popülasyon ve Bellek Sağlığı: Bellek deltası 23.46 MB seviyesinde temiz çöp toplama (GC) döngüsüyle mühürlendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.49.0, HISTORIC_MILESTONE_HOURS: 369 olarak güncellendi (204 satır); index.html başlık rozeti 'QA 369H | v6.49.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.48.0] — 2026-10-21 16:15 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 70. Telemetri Kanalı % MPO ve Polarizasyon Optikleri)
+- **70. Telemetri Kanalı (% MPO - Magnetic Polarization Order) ve Polarize HUD Paneli (src/ui/telemetry_electro.js):**
+  - İnşa Ekibi - Görsel ve Arayüz Ajanı tarafından `src/ui/telemetry_electro.js` modülü 70. telemetri kanalı ile genişletildi (250 satır, [150, 300] modüler mimari standardı korundu) ve `css/style.css` içine `.mpo-badge` eklendi.
+  - % MPO Çok Faktörlü Nematik Düzen Formülasyonu: Kresel jeomanyetik eksene göre ortalama başlık hizalanma düzeni (%50 max), magnetozom donanımlı popülasyon prevalansı (%35 max), ve acil kaçış manyetik baypaslarından kaynaklanan türbülans koheransı (%15 max) dengelenerek 70. kanal canlı olarak devreye alındı.
+  - 4 Kademeli MPO Rejimi: ISOTROPIC DISORDERED DISPERSION, INCIPIENT GEOMAGNETIC ALIGNMENT, COHERENT MAGNETOTACTIC SWARM POLARIZATION, SYNCHRONIZED UNIAXIAL DIPOLE FLUX RESONANCE.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar telemetri paneline `valMPOIndex` ve `valMPOStatus` göstergeleri yerleştirildi; `css/style.css` içine `.mpo-badge` mor-leylak rozeti eklendi; Lotka-Volterra grafiğine mor-leylak kesikli çizgi (`#a855f7`) bağlandı ve 'Polarization MPO' lejantı eklendi.
+- **Elektrostatik Kamuflaj Optikleri ve Manyetik Yönelim Aurası (src/render/electro_optics.js):**
+  - `src/render/electro_optics.js` modülü güncellendi (264 satır, [150, 300] modüler mimari standardı korundu).
+  - Elektrostatik Kamuflaj Haleleri (`drawElectrostaticCrypsis`): Av canlılarının zarsal iyon sızıntılarını baskılamasını temsil eden yumuşak camgöbeği/teal kesikli koruyucu kalkan halesi çizildi ve dipol alan çizgileri sönümlendi.
+  - Acil Kaçış Baypas Göstergesi: Manyetik kilidi çözen hücrelerin pusula vektöründe geçici serbest yönelim kırmızı-mercan aurası modellendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.48.0, `HISTORIC_MILESTONE_HOURS: 368`, `TOTAL_TELEMETRY_CHANNELS: 70` olarak mühürlendi (204 satır); `index.html` başlık rozeti 'LOOKS & UI 368H | v6.48.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.47.0] — 2026-10-21 15:25 (İnşa Ekibi: Sistem Ajanı - Elektrostatik Kamuflaj, Zarsal Gürültü Kapısı ve Kaçış Baypası)
+- **Elektrostatik Kamuflaj ve Gürültü Kapısı Optimizasyonu (src/organs/electroreception.js):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/electroreception.js` modülü genişletildi (275 satır, [150, 300] modüler mimari standardı korundu).
+  - Elektrostatik Kamuflaj (`electrostaticCrypsis`): Av canlılarının (otobur ve leşçil) zarsal iyon sızıntılarını ve dipol emisyonlarını %70'e kadar baskılayarak elektro-avcıların algılama alanından gizlenmesi sağlandı.
+  - Sinyal-Gürültü Kapısı (`noiseGateThreshold`): Kalabalık ortamlardaki arka plan dipol parazitlerini süzerek avcı hücrelerin yalnızca net eşik üstü voltaj kaçaklarına odaklanmasını sağlayan frekans filtresi entegre edildi; algısal doyum ve rastgele savrulmalar önlendi.
+  - Hiperpolarizasyon Korunumu ve Hareketsizlik Tamponu: Aksiyon potansiyeli patlamaları sonrası hücrelerin -85 mV seviyelerinde kilitlenip hareketsiz ("oturan ördek") kalmasını önleyen repolarizasyon akısı kodlandı.
+  - Kaçış Manyetik Baypası (`magneticLockBypassTicks`): Yaklaşan avcının dipol alanı algılandığında jeomanyetik hizalanma torkunun 25 adım süreyle çözülmesi ve serbest manevra kabiliyeti kazandırılması sağlandı.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.47.0, `HISTORIC_MILESTONE_HOURS: 367` olarak güncellendi; `ELECTROSTATIC_CRYPSIS_MAX: 0.70`, `NOISE_GATE_THRESHOLD_BASE: 0.045`, `MAGNETIC_BYPASS_TICKS: 25` ve `CRYPSIS_AURA_TEAL: "#14b8a6"` eklendi (204 satır); `index.html` başlık rozeti 'SYSTEM 367H | v6.47.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.46.0] — 2026-10-21 14:40 (Eleştirmen & Problem Yaratan: Product Critic - Biyoelektrik Parazit ve 70. Kanal % MPO Denetimi)
+- **Epoch 32 Biyoelektrik ve Manyetik Denetim Raporu (docs/CRITIC_AUDIT_ELECTRO.md - 126. Dosya):**
+  - Eleştirmen & Problem Yaratan (Product Critic / Challenger) tarafından `docs/CRITIC_AUDIT_ELECTRO.md` denetim raporu yayımlandı (126. dosya).
+  - Biyoelektrik Gürültü ve Sinyal Karışması (Jamming): 100+ hücrelik popülasyonda dipol sızıntılarının algı doyumuna yol açması incelendi; zarsal sinyal filtresi (`signalNoiseGate`) ve seçici av frekans kilitlenmesi (`electroReceptorTuning`) direktifi verildi.
+  - Aşırı Deşarj Tükenişi ve Hiperpolarizasyon Kilitlenmesi: Ardışık aksiyon potansiyeli patlamaları sonrası refrakter hareketsizlik ("oturan ördek") açığı incelendi; elektrostatik kamuflaj (`electrostaticCrypsis` / iyonik sızıntı maskeleme) ve hiperpolarizasyon tamponu (`membraneHyperpolarizationDamping`) talep edildi.
+  - Manyetotaktik Kilitlenme ve 70. Telemetri Kanalı (% MPO - Magnetic Polarization Order) Yol Haritası: Yırtıcı kaçışında manyetik tork baypası (`evasionMagneticOverride`) ve popülasyon nematik dizilim düzenini ölçecek 70. kanal takvimlendirildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.46.0, `HISTORIC_MILESTONE_HOURS: 366` olarak güncellendi (200 satır); `index.html` başlık rozeti 'CRITIC 366H | v6.46.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.45.0] — 2026-10-21 13:30 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 69 Kanallı Biyoelektrik Kararlılık Denetimi)
+- **10.000 Adım 69 Kanallı Biyoelektrik Kararlılık Testi (benchmark_qa_v6450.js - 125. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından benchmark_qa_v6450.js stres testi ve bellek denetimi yürütüldü (245 satır, [150, 300] modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 69. Kanal (% BEI: %54.8) ve 68. Kanal (% SOX: %31.5) telemetrisi, 1.044.980 elektro-alıcı adımı, 721.757 dipol alan adımı, 483.376 magnetozom yönelim adımı ve 11.018 aksiyon potansiyeli patlaması 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Biyoelektrik Denge ve Popülasyon Sağlığı: Başlangıçtaki 31 organizmadan tepe 146 organizmaya ulaşıldı, test 112 sağlıklı organizmayla tamamlandı; canlıların tamamı ortalama 1.80 elektroreseptör gözenek, -61.0 mV ortalama membran potansiyeli, 0.082 dipol alan şiddeti ve %39.0 magnetozom yönelim düzeni ile dengelendi.
+  - Popülasyon ve Bellek Sağlığı: Bellek deltası 16.48 MB seviyesinde temiz çöp toplama (GC) döngüsüyle mühürlendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.45.0, HISTORIC_MILESTONE_HOURS: 365 olarak güncellendi (200 satır); index.html başlık rozeti 'QA 365H | v6.45.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.44.0] — 2026-10-21 12:45 (İnşa Ekibi: Arayüz ve Telemetri Ajanı - 69. Telemetri Kanalı % BEI ve Elektro HUD Paneli)
+- **69. Telemetri Kanalı (% BEI - Bioelectric Energy Index) ve Elektro HUD Paneli (src/ui/telemetry_electro.js - 124. Dosya):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından src/ui/telemetry_electro.js modülü geliştirildi (191 satır, [150, 300] modüler mimari standardı korundu) ve css/style.css içine .bei-badge eklendi.
+  - % BEI 4 Faktörlü Ağırlıklı Hesaplaması: Ortalama dipol alan genleşmesi (%35 max), aksiyon potansiyeli ve deşarj genliği (%30 max), elektroreseptör donanımlı popülasyon prevalansı (%20 max), ve magnetozom pusula hizalanma düzeni (%15 max) harmanlanarak 69. kanal canlı olarak devreye alındı.
+  - 4 Kademeli BEI Rejimi: QUIESCENT RESTING POTENTIAL, INCIPIENT MEMBRANE DEPOLARIZATION, SYNCHRONIZED BIOELECTRIC DIPOLE OSCILLATION, HIGH-VOLTAGE IONIC DISCHARGE RESONANCE.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar telemetri paneline valBEIIndex ve valBEIStatus göstergeleri yerleştirildi; Lotka-Volterra grafiğine kehribar kesikli çizgi (#f59e0b) bağlandı ve 'Bioelectric BEI' lejantı eklendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.44.0, HISTORIC_MILESTONE_HOURS: 364, TOTAL_TELEMETRY_CHANNELS: 69 olarak mühürlendi (200 satır); index.html başlık rozeti 'UI 364H | v6.44.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.43.0] — 2026-10-21 11:10 (İnşa Ekibi: Görsel Ajanı - Biyoelektrik Dipol Alan Çizgileri, Membran Deşarj Arkları ve Manyetik Parıltı)
+- **Biyoelektrik ve Biyomanyetik Optik Render Sistemi (src/render/electro_optics.js - 123. Dosya):**
+  - İnşa Ekibi - Görsel Ajanı tarafından `src/render/electro_optics.js` modülü geliştirildi (260 satır, [150, 300] modüler mimari standardı korundu).
+  - Elektrostatik Dipol Eşpotansiyel Çizgileri (`drawDipoleFieldLines`): Hücre zarı potansiyeli ve dipol alanı genleşmesine bağlı olarak titreşen oval eşpotansiyel konturları, elektrik mavisi (`#38bdf8`) ve uyarılma anında altın kehribar (`#f59e0b`) renk geçişleriyle çizildi.
+  - Membran Deşarj Arkları ve Kıvılcım Koronası (`drawMembraneDischarges`): Yüksek voltajlı aksiyon potansiyeli atılımlarında hücre zarından dışa fırlayan dallanmış dielektrik deşarj zikzakları ve parıldayan korona mikro-kıvılcımları görselleştirildi.
+  - Lorenzini Ampulleri İletken Jel Boncukları (`drawElectroreceptors`): Ventral hücre kenarında dizilen mikro-iletken ampul kanalları ve yarı saydam elektro-duyusal haleler mikroskop altına aktarıldı.
+  - Magnetotaktik Seyir Pusulası ve Manyetik Akı Aurası (`drawMagneticHeadingVector`): Hücre gövdesinde ferromanyetik magnetozom kristal halkası ve jeomanyetik eksene kilitlenen mor-leylak kesikli pusula vektörü modellendi.
+  - Küresel Jeomanyetik Akı Çizgileri (`drawGlobalGeomagneticField`): Lamel genelinde uzanan düşey jeomanyetik kuvvet çizgileri ile elektro-avcıların infaunal hedeflere yönelen algılama konileri çizildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.43.0, `HISTORIC_MILESTONE_HOURS: 363` olarak mühürlendi (200 satır); `index.html` başlık rozeti 'LOOKS 363H | v6.43.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.42.0] — 2026-10-21 10:55 (İnşa Ekibi: Sistem Ajanı - Biyoelektrik Polarizasyon, Zarsal Aksiyon Potansiyeli ve Biyomanyetik Seyir)
+- **Biyoelektrik Polarizasyon ve Biyomanyetik Seyir Sistemi (src/organs/electroreception.js - 122. Dosya):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/electroreception.js` modülü geliştirildi (260 satır, [150, 300] modüler mimari standardı korundu).
+  - Lorenzini Ampulleri Benzeri Elektroreseptörler (`electroreceptors`): Hücre zarı boyunca dağılan mikro-voltaj duyarlı gözenekler modellendi; 80-180 piksel algılama yarıçapında komşu organizmaların zarsal dipol alanlarını ve iyon kaçaklarını temassız tespit etme mekaniği kuruldu.
+  - Zarsal Aksiyon Potansiyeli ve Dipol Alan Genleşmesi (`membranePotential` & `dipoleFieldStrength`): -70 mV dinlenme potansiyelinden +40 mV tepe aksiyon potansiyeli patlamasına ve 45 adımlık refrakter toparlanma döngüsüne sahip elektrokimyasal salınım kodlandı; voltaj sapmasıyla doğru orantılı olarak genişleyen dinamik dipol alan kuvveti entegre edildi.
+  - Sediment Delici İnfaunal Av Tespiti: Klasik optik ve temas duyularının aksine, elektroreseptörlerin bentik dip tortusuna (burrowDepth > 5 px) gömülü canlıların metabolik iyon kaçaklarını algılayabilmesi ve avcı hücrelere yönelim kuvveti sağlayarak gömülü avı deşarjla uyarması sağlandı.
+  - Biyomanyetik Magnetozom İncileri (`magnetosomeChain`): Hücre içi ferromanyetik nano-kristallerin jeomanyetik eksene göre pasif yönelim torku üretmesi (`applyBiomagneticTorque`) ve hidrodinamik sürtünme enerjisini koruması modellendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.42.0, `HISTORIC_MILESTONE_HOURS: 362` olarak mühürlendi; `RESTING_MEMBRANE_POTENTIAL: -70.0`, `ACTION_POTENTIAL_PEAK: 40.0`, `ELECTRORECEPTION_BASE_RADIUS: 80.0` ve elektro-manyetik renk paletleri eklendi (200 satır); `index.html` başlık rozeti 'SYSTEM 362H | v6.42.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.41.0] — 2026-10-21 09:55 (Baş Planlamacı: Lead Planner - Epoch 32 Stratejik Mimarisi ve Biyoelektrik Tasarım Belgesi)
+- **Epoch 32 Stratejik Mimari Tasarım Belgesi (docs/EPOCH32_BLUEPRINT.md - 121. Dosya):**
+  - Baş Planlamacı (Lead Planner) tarafından simülasyonun 32. büyük evrimsel dönemi olan Epoch 32 mimari yol haritası ve teknik şartnamesi yayımlandı (121. dosya).
+  - Epoch 32 Ana Teması: Biyoelektrik Polarizasyon, Sinirsel Dalgalanma ve Biyomanyetik Seyir (Hours 361 - 370).
+  - Ele Alınan Temel Kritik Problem: Pelajik filtreleyiciler ve bentik kazıcıların doygunluğa ulaştığı ekosistemde, organizmaların çevreyi algılama kabiliyetinin salt optik ve kimyasal temasla sınırlı kalması; tortuya gömülü infaunal avların ve açık denizdeki hızlı yırtıcıların tespit edilememesi sorunu ele alındı.
+  - 5 Temel Mühendislik Sütunu:
+    - Sütun 1 (Sistem - H362): `src/organs/electroreception.js` — Lorenzini Ampulleri benzeri membran elektroreseptörleri (`electroreceptors`), zarsal aksiyon potansiyeli (`membranePotential`), dipol elektrik alan gücü (`dipoleFieldStrength`) ve ferromanyetik magnetozom incileri (`magnetosomeChain`).
+    - Sütun 2 (Görsel - H363): `src/render/electro_optics.js` — Biyoelektrik dipol alan çizgileri (`drawDipoleFieldLines`), ani membran deşarj arkları (`drawMembraneDischarges`) ve magnetotaktik polarizasyon akısı aurası (`drawMagneticFluxAura`).
+    - Sütun 3 (Arayüz - H364 & H368): `src/ui/telemetry_electro.js` — 69. Telemetri Kanalı (% BEI - Bioelectric Energy Index) ve 70. Telemetri Kanalı (% MPO - Magnetic Polarization Order) ile canlı HUD göstergeleri.
+    - Sütun 4 (QA & Eleştirmen - H365 & H366): 10.000 adım 69 kanallı kararlılık testi (`benchmark_qa_v6450.js`) ve biyoelektrik gürültü/körlük eleştirmen denetimi (`docs/CRITIC_AUDIT_ELECTRO.md`).
+    - Sütun 5 (Taşıma Kapasitesi - H370): `BIOELECTRIC_FIELD_BUFFER: 5` entegrasyonu ile simülasyonun yeni tarihi zirve olan **Peak 320+** taşıma kapasitesine ulaştırılması.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.41.0, `EPOCH: 32`, `HISTORIC_MILESTONE_HOURS: 361` olarak mühürlendi (194 satır); `index.html` başlık rozeti 'PLANNER 361H | v6.41.0' yapıldı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.40.0] — 2026-10-21 08:25 (Yönetici / Büyük Resim Direktörü - Epoch 31 Büyük Bentik Jübilesi ve Peak 315+ Taşıma Kapasitesi)
+- **Epoch 31 Büyük Bentik Jübilesi ve Yönetici Raporu (docs/EPOCH31_BENTHIC_JUBILEE.md - 120. Dosya):**
+  - Yönetici / Büyük Resim Direktörü (Executive Director) tarafından 360 saatlik kilometre taşı ve Epoch 31 (Hours 351 - 360) jübilesi yayımlandı (120. dosya).
+  - Büyük Resim Değerlendirmesi ("Şu an tam olarak ne yapıyoruz? Gerçekten derin, yaşayan bir ekosisteme doğru mu gidiyoruz?"): Ekosistemin su kolonu sınırlarını aşarak bentik infaunal tünellemeye, sklerotize kitin küreklere (`fossorialPaddles`), mekanik penetrasyon torkuna (`penetrationTorque`), subterranean galeri ağlarına (`drawSubstrateGalleries`), sediment madenciliğine (`sedimentDigestionRate`), peristaltik hidrolik itkiye (`peristalticImpulse`), anoksik stres ve solunum döngüsüne (`anoxicStressTimer`), ve biyojenik gaz tahliyesi (`sedimentGasVentFlux`) ile biyoturbasyon havalandırmasına ulaştığı tescillendi.
+  - Taşıma Kapasitesi Artışı (Peak 315+ Kilometretaşı): Dip tortularının biyoturbasyonla oksijenlenmesi ve gömülü minerallerin trofik döngüye kazandırılması sayesinde sisteme `BENTHIC_BURROWING_BUFFER: 5` eklendi; maksimum taşıma kapasitesi tarihi Peak 315+ seviyesine mühürlendi.
+  - 68. Telemetri Kanalı (% SOX - Substrate Oxygenation Index) ve Çift Kanallı Bentik Paneli: 67. Kanal (% BDI) ile birlikte 68 kanallı Lotka-Volterra eğrisi ve canlı laboratuvar HUD göstergeleri eksiksiz doğrulandı.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.40.0, `HISTORIC_MILESTONE_HOURS: 360`, `PEAK_CARRYING_CAPACITY: 315` olarak mühürlendi (194 satır); `index.html` başlık rozeti 'DIRECTOR 360H | v6.40.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.39.0] — 2026-10-21 07:45 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 68 Kanallı İnfaunal Oksijenasyon ve 60 FPS Denetimi)
+- **10.000 Adım 68 Kanallı İnfaunal Oksijenasyon ve Kararlılık Testi (benchmark_qa_v6390.js - 119. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından `benchmark_qa_v6390.js` stres testi ve bellek denetimi yürütüldü (255 satır, [150, 300] modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 68. Kanal (% SOX: %3.8) ve 67. Kanal (% BDI: %28.4) telemetrisi, 732.210 fosoryal kürek adımı, 546.850 penetrasyon torku adımı, 57.845 peristaltik itki adımı, 4.672 gömülme derinliği adımı ve 199.027 balen adımı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - İnfaunal Oksijenasyon ve Popülasyon Dengesi: Canlı popülasyon (91 organizma, 14 aktif infaunal kazıcı) ortalama 2.69 fosoryal kürek, 4.25 penetrasyon torku ve 0.22 peristaltik hidrolik itki ile dengelendi; anoksik boğulma riski bertaraf edilerek ekosistem kararlılığı korundu.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 104 organizmaya ulaşıldı, test 91 sağlıklı organizmayla tamamlandı; bellek deltası 33.23 MB seviyesinde temiz çöp toplama (GC) döngüsüyle mühürlendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.39.0, `HISTORIC_MILESTONE_HOURS: 359` olarak güncellendi (193 satır); `index.html` başlık rozeti 'QA 359H | v6.39.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.38.0] — 2026-10-21 06:15 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 68. Telemetri Kanalı % SOX ve Biyoturbasyon Optikleri)
+- **68. Telemetri Kanalı (% SOX - Substrate Oxygenation Index) ve Havalandırma HUD Paneli (src/ui/telemetry_burrowing.js):**
+  - İnşa Ekibi - Görsel ve Arayüz Ajanı tarafından `src/ui/telemetry_burrowing.js` modülü 68. telemetri kanalı ile genişletildi (243 satır, [150, 300] modüler mimari standardı korundu).
+  - % SOX Çok Değişkenli Formülasyonu: Biyojenik gaz tahliyesi ve biyoturbasyon akısı (%35 max), peristaltik hidrolik tünel havalandırması (%30 max), anoksik stres azaltımı ve oksijen takviyesi (%20 max), ile aktif infaunal kazıcı popülasyonu (%15 max) dengelenerek 68. kanal devreye alındı.
+  - 4 Kademeli SOX Rejimi: ANOXIC COMPACTED HARDGROUND, INCIPIENT BIOGENIC IRRIGATED CRUST, PERMEABLE OXYGENATED BIO-TURF, SUBLITTORAL OXYGEN SUPER-VENTILATION.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar paneline `valSOXIndex` ve `valSOXStatus` göstergeleri yerleştirildi; `css/style.css` içine `.sox-badge` parlak turkuaz rozeti eklendi; Lotka-Volterra grafiğine parlak turkuaz kesikli çizgi (`#06b6d4`) bağlandı ve 'Oxygenation SOX' lejantı eklendi.
+- **Biyoturbasyon Optikleri ve Peristaltik Dalga Shader'ı (src/render/burrowing_optics.js):**
+  - `src/render/burrowing_optics.js` modülü güncellendi (222 satır, [150, 300] modüler mimari standardı korundu).
+  - Peristaltik Dalga Halkaları (`drawPeristalticWaves`): Tortu içinde ilerleyen hücrelerde çölomik hacim itkisini temsil eden yumuşak şeftali-mercan sıkışma ve gevşeme halkaları çizildi.
+  - Biyojenik Gaz Kabarcıkları (`drawBioIrrigationBubbles`): Tortudan yukarı yükselen yarı saydam mavi-beyaz gaz kabarcıkları ve sediment havalanma mikro-püskürmeleri görselleştirildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.38.0, `HISTORIC_MILESTONE_HOURS: 358`, `TOTAL_TELEMETRY_CHANNELS: 68` olarak mühürlendi (193 satır); `index.html` başlık rozeti 'LOOKS & UI 358H | v6.38.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.37.0] — 2026-10-21 05:15 (İnşa Ekibi: Sistem Ajanı - Peristaltik Hidrostatik İtki, Anoksik Stres ve Gaz Tahliyesi)
+- **Peristaltik Hidrostatik İtki ve Biyoturbasyon Mekaniği (src/organs/fossorial_appendages.js):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/fossorial_appendages.js` modülü genişletildi (260 satır, [150, 300] modüler mimari standardı korundu).
+  - Peristaltik Hidrolik İtki (`peristalticImpulse`): Sıkışmış ve viskoz bentik tortu içinde salt küreklerin yetersizliğini aşmak amacıyla, çölomik/membran hacim dalgalanmasıyla tortuyu genişleten ve itki üreten akışkan basınç dalgaları kodlandı.
+  - Anoksik Stres ve Yüzey Havalandırma Zorunluluğu (`anoxicStressTimer`): Ürün Eleştirmeninin uyardığı pasif hareketsizlik ve sınırsız sığınma istismarını önlemek üzere derin tortuda (burrowDepth >= 10 px) kalan hücrelerde oksijen tükenişi sayacı devreye alındı; 180 adımdan sonra hipoksik yorgunluk ve epibentik sınıra yönelim refleksi kodlandı.
+  - Biyojenik Gaz Tahliyesi ve Havalandırma (`sedimentGasVentFlux`): Kazı sırasında tortuda sıkışan hidrojen sülfür ve metan gazlarının mikro-kabarcıklar halinde yukarı atılması (`ventBubbleTicks`) ve kümülatif gaz tahliyesi modellendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.37.0, `HISTORIC_MILESTONE_HOURS: 357` olarak güncellendi; `ANOXIC_STRESS_THRESHOLD: 180` ve `PERISTALTIC_IMPULSE_BASE: 0.16` sabitleri eklendi (191 satır); `index.html` başlık rozeti 'SYSTEM 357H | v6.37.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.36.0] — 2026-10-21 04:15 (Eleştirmen & Problem Yaratan: Product Critic - Anoksik Kazı Tuzakları ve 68. Kanal SOX Denetimi)
+- **Epoch 31 Bentik İnfaunal Eleştirmen Denetim Raporu (docs/CRITIC_AUDIT_BURROWING.md - 118. Dosya):**
+  - Eleştirmen & Problem Yaratan (Product Critic / Challenger) tarafından bentik göç, infaunal tünelleme ve sediment madenciliği denetlendi (118. dosya).
+  - Anoksik Tortu Boğulması ve Sınırsız Sığınma İstismarı: Dip tortusuna (Y > 570) gömülen hücrelerin hiçbir solunumsal bedel ödemeden %85 gizlenme ile sonsuza kadar saklanabilme riski incelendi; anoksik stres sayacı (`anoxicStressTimer`) ve periyodik yüzey havalandırma zorunluluğu direktifi verildi.
+  - Peristaltik Hidrostatik İtki ve Biyoturbasyon Eksikliği: Sıkışmış ve viskoz tortu içinde salt küreklerin yetersiz kaldığı saptandı; poliket/priapulid benzeri peristaltik hacim itkisi (`peristalticHydraulicImpulse`) ve biyojenik gaz tahliyesi (`sedimentGasVentFlux`) mekanikleri talep edildi.
+  - 68. Telemetri Kanalı (% SOX - Substrate Oxygenation Index) Yol Haritası: Kazıcı hücrelerin dip tortusunu ne ölçüde havalandırdığını ve mineral devridaimini ölçecek kanal takvimlendirildi.
+  - Çekirdek Simülasyon Sabitleri ve Sürüm: `src/core/constants.js` Sürüm 6.36.0, `HISTORIC_MILESTONE_HOURS: 356` olarak güncellendi (189 satır); `index.html` başlık rozeti 'CRITIC 356H | v6.36.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.35.0] — 2026-10-21 03:25 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 67 Kanallı Bentik Kazı Kararlılık ve 60 FPS Denetimi)
+- **10.000 Adım 67 Kanallı Bentik Kazı ve İnfaunal Stres Testi (benchmark_qa_v6350.js - 117. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından `benchmark_qa_v6350.js` stres testi ve bellek denetimi yürütüldü (247 satır, [150, 300] modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 67. Kanal (% BDI: %24.9) telemetrisi, 799.886 fosoryal kürek adımı, 600.399 penetrasyon torku adımı, 306.259 balen adımı ve 192.324 megafauna adımı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Bentik İnfaunal ve Popülasyon Dengesi: Canlı popülasyon (99 organizma, 12 aktif infaunal kazıcı) ortalama 3.10 fosoryal kürek ve 6.16 penetrasyon torku ile korundu; % BDI %24.9 seviyesinde SHALLOW EPIBENTHIC DEPRESSION rejiminde dengelendi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 111 organizmaya ulaşıldı, test 99 sağlıklı organizmayla tamamlandı; bellek deltası 27.45 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.35.0, `HISTORIC_MILESTONE_HOURS: 355` olarak güncellendi (189 satır); `index.html` başlık rozeti 'QA 355H | v6.35.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.34.0] — 2026-10-21 02:15 (İnşa Ekibi: Arayüz ve Telemetri Ajanı - 67. Telemetri Kanalı % BDI ve Kazı HUD Paneli)
+- **67. Telemetri Kanalı (% BDI - Benthic Burrowing Index) ve Kazı HUD Paneli (src/ui/telemetry_burrowing.js - 116. Dosya):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından `src/ui/telemetry_burrowing.js` modülü geliştirildi (197 satır, [150, 300] modüler mimari standardı korundu).
+  - % BDI Formülasyonu: İnfaunal gömülme yaygınlığı ve derinliği (%35), kazıcı kürek olgunluğu ve penetrasyon torku (%30), pelajik yırtıcılardan gizlenme (%20) ve dip karbon/tebeşir sindirimi (%15) dengesiyle 67. telemetri kanalı devreye alındı.
+  - 4 Kademeli BDI Rejimi: EPIPELAGIC SUSPENSION / INCIPIENT SCRATCHING, SHALLOW EPIBENTHIC DEPRESSION, CONSOLIDATED SUBSTRATE TUNNELING, PERVASIVE ENDOBENTHIC EXCAVATION.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar paneline `valBDIIndex` ve `valBDIStatus` göstergeleri yerleştirildi; `css/style.css` içine `.bdi-badge` terrakotta rozeti eklendi; Lotka-Volterra grafiğine terrakotta-mercan kesikli çizgi (`#ea580c`) bağlandı ve 'Burrowing BDI' lejantı eklendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.34.0, `HISTORIC_MILESTONE_HOURS: 354`, `TOTAL_TELEMETRY_CHANNELS: 67` olarak güncellendi (189 satır); `index.html` başlık rozeti 'UI 354H | v6.34.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.33.0] — 2026-10-21 01:15 (İnşa Ekibi: Görsel Ajanı - Bentik Kazı Partikül Dumanları, Tünel Aydınlatması ve İnfaunal Optikler)
+- **Bentik Kazı Partikül Dumanları ve Substrat Galerileri (src/render/burrowing_optics.js - 115. Dosya):**
+  - İnşa Ekibi - Görsel Ajanı tarafından `src/render/burrowing_optics.js` modülü geliştirildi (250 satır, [150, 300] modüler mimari standardı korundu).
+  - Sklerotize Fosoryal Kürek Optikleri (`drawFossorialPaddles`): Hücre zarı çeperinde ritmik mekanik salınımla ileri-geri vuran amber-kahve kitin kürek bıçakları ve parlak kürek ucu mineral vurguları modellendi.
+  - İnfaunal Gömülme Derinliği ve Yarı Saydam Koruma Halesi (`drawInfaunalAura`): Dip tortusunun içine inen hücrelerde derinliğe bağlı opaklık sönümlemesi ve yumuşak benthik ışıma aurası görselleştirildi.
+  - Bentik Kazı Partikül Dumanları (`drawExcavationPlumes`): Tork uygulayarak tortuyu kazıyan hücrelerin arkasında kalkan kalkık mineral tortu bulutları ve mikro-süspansiyon puf shader'ı çizildi.
+  - Substrat Altı Galeri Kanalları (`drawSubstrateGalleries`): Dip seviyesinin altında (Y > 570) aktif infaunal hücreleri birbirine bağlayan kavisli tünel ağları ve iç oksijenasyon filamentleri modellendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.33.0, `HISTORIC_MILESTONE_HOURS: 353` olarak güncellendi; `FOSSORIAL_CHITIN`, `BURROW_PLUME` ve `BURROW_GALLERY` renk paletleri tanımlandı (189 satır); `index.html` başlık rozeti 'LOOKS 353H | v6.33.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.32.0] — 2026-10-21 00:55 (İnşa Ekibi: Sistem Ajanı - Substrat Kazıcı Ekzantrik Uzantılar ve Sediment Tünelleme)
+- **Substrat Kazıcı Ekzantrik Uzantılar ve İnfaunal Tünelleme (src/organs/fossorial_appendages.js - 114. Dosya):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/fossorial_appendages.js` modülü geliştirildi (208 satır, [150, 300] modüler mimari standardı korundu).
+  - Ekzantrik Fosoryal Kürekler (`fossorialPaddles`): Hücre zarı ventral çeperinde sklerotize kitinsi kazıcı kürekler modellendi; bentik derinlikte (`y >= 535 px`) ve yüksek enerjide mineral tabana nüfuz kabiliyeti sağlandı.
+  - İnfaunal Penetrasyon Torku ve Tortu Derinliği (`burrowDepth` & `penetrationTorque`): Mekanik kazma salınım fazı (`excavationCyclePhase`) ile birleşen tork hesabı yapıldı; dip seviyesinde organizmaların tortu içine 75 piksele kadar gömülmesi (`maxBurrowDepth`) sağlandı.
+  - Pelajik Yırtıcılardan Gizlenme ve Savunma Kalkanı (`infaunalConcealment`): Sediment içine gömülen hücrelerin pelajik megafauna süzücülerinden ve avcı saldırılarından %85'e kadar gizlenmesi ve `computeInfaunalDamageDamping` ile hasarı absorbe etmesi kodlandı.
+  - Gömülü Sediment Karbonu ve Mineral Emilimi (`sedimentDigestionRate`): Dip tebeşir ve karbon tortularını doğrudan emerek hücreye sürekli metabolik enerji takviyesi sağlayan biyoturbasyon beslenmesi entegre edildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.32.0, `HISTORIC_MILESTONE_HOURS: 352` olarak güncellendi; `FOSSORIAL_BURROW_DEPTH_MAX: 75.0`, `FOSSORIAL_PENETRATION_TORQUE_BASE: 0.15` ve `BENTHIC_SUBSTRATE_SURFACE_Y: 570.0` sabitleri eklendi (186 satır); `index.html` başlık rozeti 'SYSTEM 352H | v6.32.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.31.0] — 2026-10-20 23:45 (Baş Planlamacı - Lead Planner Oturumu - Epoch 31 Mimari Tasarımı ve Bentik Göç Yol Haritası)
+- **Epoch 31 Stratejik Mimari Tasarım Belgesi (docs/EPOCH31_BENTHIC_EXODUS_BLUEPRINT.md - 113. Dosya):**
+  - Baş Planlamacı (Lead Planner) tarafından Epoch 31 (Hours 351 - 360: Bentik Göç, Substrat Kazıcı Ekzantrik Uzantılar ve Sediment Tünelleme) mimari tasarımı ve yol haritası yayımlandı (113. dosya).
+  - Pelajik Doygunluk ve Bentik Göç İhtiyacı: Pelajik su kolonundaki yoğun süzücü megafauna ve apeks avcı baskısı karşısında organizmaların korunaklı dip tabanına yönelmesi planlandı.
+  - Substrat Kazıcı Ekzantrik Uzantılar ve Tünelleme: Dipte biriken zengin tebeşir (`chalkDepositionPool`) ve karbon tortularına (`benthicSedimentCarbon`) nüfuz eden kitin kürekler (`fossorialPaddles`), tork dinamikleri ve infaunal gizlenme (`infaunalConcealment`) mekanikleri modellendi.
+  - 67. ve 68. Telemetri Kanalları: Bentik Kazma Endeksi (% BDI) ve Substrat Oksijenasyon Katsayısı (% SOX) planlandı.
+  - Taşıma Kapasitesi Hedefi: Saat 360'ta sisteme eklenecek `BENTHIC_BURROWING_BUFFER: 5` ile tarihi Peak 315+ taşıma kapasitesi hedeflendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.31.0, `EPOCH: 31`, `HISTORIC_MILESTONE_HOURS: 351` olarak mühürlendi (181 satır); `index.html` başlık rozeti 'PLANNER 351H | v6.31.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.30.0] — 2026-10-20 22:25 (Yönetici / Büyük Resim Direktörü - Epoch 30 Büyük Megafauna Jübilesi ve Peak 310+ Taşıma Kapasitesi)
+- **Epoch 30 Büyük Megafauna Jübilesi ve Yönetici Raporu (docs/EPOCH30_MEGAFAUNA_JUBILEE.md - 112. Dosya):**
+  - Yönetici / Büyük Resim Direktörü (Executive Director) tarafından 350 saatlik kilometre taşı ve Epoch 30 (Hours 341 - 350) jübilesi yayımlandı (112. dosya).
+  - Büyük Resim Değerlendirmesi ("Şu an tam olarak ne yapıyoruz? Gerçekten derin, yaşayan bir ekosisteme doğru mu gidiyoruz?"): Ekosistemin mikroskobik tekdüzelikten pelajik su kolonunu süzen dev organizmalara, kitin balen filtrelerine (`baleenFilterPlates`), lipit enerji rezervlerine (`blubberEnergyReserve`), sürü halinde koordineli süzme sinerjisine (`baleenPodSynergy`) ve geri kazanılan trofik atık floküllerine kavuştuğu tescillendi.
+  - Taşıma Kapasitesi Artışı (Peak 310+ Kilometretaşı): Pelajik megafaunanın su kolonundaki organik madde devridaimini hızlandırması sayesinde sisteme `BALEEN_MEGAFAUNA_BUFFER: 5` eklendi; maksimum taşıma kapasitesi tarihi Peak 310+ seviyesine mühürlendi.
+  - 66. Telemetri Kanalı (% MBE - Megafauna Biomass Efficiency) ve Çift Kanallı Balen Paneli: 65. Kanal (% TVC) ile birlikte 66 kanallı Lotka-Volterra eğrisi ve canlı laboratuvar HUD göstergeleri eksiksiz doğrulandı.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.30.0, `HISTORIC_MILESTONE_HOURS: 350`, `PEAK_CARRYING_CAPACITY: 310` olarak mühürlendi (181 satır); `index.html` başlık rozeti 'DIRECTOR 350H | v6.30.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.29.0] — 2026-10-20 21:25 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 66 Kanallı Megafauna Kararlılık ve 60 FPS Denetimi)
+- **10.000 Adım 66 Kanallı Megafauna ve Çift Trofik Kapasite Stres Testi (benchmark_qa_v6290.js - 111. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından `benchmark_qa_v6290.js` stres testi ve bellek denetimi yürütüldü (249 satır, [150, 300] modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 65. Kanal (% TVC: %60.1) ve 66. Kanal (% MBE: %25.7) telemetrisi, 174.176 balen hücre adımı, 107.716 filtrasyon akış adımı, 97.665 megafauna adımı, 70.127 pod sinerji adımı ve 120.479 lipit rezervi adımı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Megafauna ve Biyokütle Dengesi: Canlı popülasyon (92 organizma, 13 aktif balen süzücü) ortalama 5.07 balen plakası, 0.307 filtrasyon debisi ve 1.066x megafauna boyut çarpanı ile korundu; 234 partikül süzüldü ve 6 trofik atık flokülü ekosisteme geri kazandırıldı.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 100 organizmaya ulaşıldı, test 92 sağlıklı organizmayla tamamlandı; bellek deltası 31.45 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.29.0, `HISTORIC_MILESTONE_HOURS: 349`, `TOTAL_TELEMETRY_CHANNELS: 66` olarak mühürlendi (180 satır); `index.html` başlık rozeti 'QA 349H | v6.29.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.28.0] — 2026-10-20 20:15 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 66. Telemetri Kanalı % MBE ve Pod Optikleri)
+- **66. Telemetri Kanalı (% MBE - Megafauna Biomass Efficiency) ve Balen HUD (src/ui/telemetry_baleen.js):**
+  - İnşa Ekibi - Görsel ve Arayüz Ajanı tarafından `src/ui/telemetry_baleen.js` modülü 66. kanal ile genişletildi (248 satır, [150, 300] modüler mimari standardı korundu).
+  - % MBE Formülasyonu: Megafauna biyokütle dominansı ve boyut büyümesi (%40), lipit rezervi enerji tamponu (%30) ile sürü halinde koordineli süzme ve atık geri dönüşüm dengesi (%30) harmanlandı.
+  - 4 Kademeli MBE Rejimi: SOLITARY DISPERSED PLANKTER, INCIPIENT MEGAFAUNAL RECRUITMENT, COORDINATED PELAGIC POD, APEX MEGAFAUNA BIOMASS HARVEST.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar paneline `valMBEIndex` ve `valMBEStatus` göstergeleri yerleştirildi; `css/style.css` içine `.mbe-badge` zümrüt yeşili rozeti eklendi; Lotka-Volterra grafiğine zümrüt yeşili kesikli çizgi (`#10b981`) bağlandı ve 'Megafauna MBE' lejantı eklendi.
+- **Pod Koordinasyon Akıntıları ve Lipit Optikleri (src/render/baleen_optics.js):**
+  - `src/render/baleen_optics.js` modülü güncellendi (260 satır, [150, 300] modüler mimari standardı korundu).
+  - Sürü Akıntı Hatları (drawPodStreamlines): Pod sinerjisi içindeki süzücüler arasında yeşil-turkuaz hidrodinamik girdap izleri ve sürtünme azaltma şeritleri modellendi.
+  - Lipit Rezervi Işıması (drawBlubberAura): Blubber enerji rezervi biriktiren dev hücrelerde iç katman altın-amber parlama aurası çizildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.28.0, `HISTORIC_MILESTONE_HOURS: 348`, `TOTAL_TELEMETRY_CHANNELS: 66` (Büyük 66 Kanal Kilometretaşı!) olarak mühürlendi (180 satır); `index.html` başlık rozeti 'LOOKS & UI 348H | v6.28.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.27.0] — 2026-10-20 19:55 (İnşa Ekibi: Sistem Ajanı - Lipit Enerji Rezervleri ve Sürü Süzme Sinerjisi)
+- **Lipit Enerji Rezervleri, Pod Sinerjisi ve Trofik Atık Salınımı (src/organs/filter_baleen.js):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/filter_baleen.js` modülü genişletildi (269 satır, [150, 300] modüler mimari standardı korundu).
+  - Lipit Yağ Enerji Rezervi (blubberEnergyReserve): Megafaunal boyutlanma sonucu artan metabolik ihtiyacın partikül seyreldiğinde ani açlık çöküşü yaratmasını engelleyen lipit enerji tamponu modellendi.
+  - Sürü Süzme Sinerjisi (baleenPodSynergy): 65 piksel mesafe içindeki süzücü hücreler arasında hidrodinamik itki (podDraftingBonus) ve %25 bazal enerji tasarrufu sağlayan pod mekaniği kodlandı.
+  - Trofik Süzme Atık Salınımı (baleenExudateFlux): Megafaunanın besin tekelleşmesini önlemek amacıyla süzme esnasında mikro-organik floküller salarak çevredeki küçük canlıları beslemesi sağlandı.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.27.0, `HISTORIC_MILESTONE_HOURS: 347` olarak mühürlendi (180 satır); `index.html` başlık rozeti 'SYSTEM 347H | v6.27.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.26.0] — 2026-10-20 18:20 (Eleştirmen & Problem Yaratan: Product Critic - Trofik Piramit ve 66. Kanal MBE Denetimi)
+- **Epoch 30 Megafauna Eleştirmen Denetim Raporu (docs/CRITIC_AUDIT_MEGAFAUNA.md - 110. Dosya):**
+  - Eleştirmen & Problem Yaratan (Product Critic / Challenger) tarafından pelajik megafauna ve süzücü balen mekanikleri denetlendi.
+  - Trofik Tekelleşme ve Besin Çölü Uyarısı: Megafauna hücrelerinin su kolonundaki serbest partikülleri tüketip küçük ototrofları aç bırakma riski incelendi; süzme atık flokülleri (`baleenExudateFlux`) ile mikro-besin geri dönüşümü direktifi verildi.
+  - Yüksek Bazal Metabolizma ve Çöküş Kırılganlığı: Partikül seyreldiğinde dev canlıların açlıktan kitlesel ölmesini engellemek üzere lipit enerji rezervi (`blubberEnergyReserve`) ve hidrodinamik sürü koordinasyonu (`baleenPodSynergy`) zorunlu kılındı.
+  - 66. Telemetri Kanalı (% MBE - Megafauna Biomass Efficiency) Yol Haritası: Megafauna biyokütle oranını ve enerji saklama verimini ölçecek kanal takvimlendirildi.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.26.0, `HISTORIC_MILESTONE_HOURS: 346` olarak güncellendi (180 satır); `index.html` başlık rozeti 'CRITIC 346H | v6.26.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.25.0] — 2026-10-20 17:20 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 65 Kanallı Balen Filtrasyon ve 60 FPS Denetimi)
+- **10.000 Adım 65 Kanallı Süzücü Balen ve Megafauna Stres Testi (benchmark_qa_v6250.js - 109. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından `benchmark_qa_v6250.js` stres testi ve bellek denetimi yürütüldü (236 satır, modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 65. Kanal (% TVC: %53.9) telemetrisi, 419.543 balen hücre adımı, 268.379 filtrasyon debisi adımı, 225.825 megafauna adımı ve 246 süzülen partikül 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Balen Plaka ve Megafauna Dengesi: Canlı popülasyon (114 organizma, 30 aktif balen hücresi) ortalama 3.79 balen plakası, 0.21 filtrasyon debisi ve 1.079x megafauna boyut çarpanı ile korundu; % TVC %53.9 seviyesinde HYDRODYNAMIC VOLUME ENGULFMENT rejiminde dengelendi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 138 organizmaya ulaşıldı, test 114 sağlıklı organizmayla tamamlandı; bellek deltası 21.89 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.25.0, `HISTORIC_MILESTONE_HOURS: 345` olarak güncellendi (180 satır); `index.html` başlık rozeti 'QA 345H | v6.25.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.24.0] — 2026-10-20 16:50 (İnşa Ekibi: Arayüz ve Telemetri Ajanı - 65. Telemetri Kanalı % TVC ve Balen HUD)
+- **65. Telemetri Kanalı (% TVC - Trophic Volume Capacity) ve Balen HUD (src/ui/telemetry_baleen.js - 108. Dosya):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından `src/ui/telemetry_baleen.js` modülü geliştirildi (189 satır, [150, 300] modüler mimari standardı korundu).
+  - 65. Kanal Formülasyonu: Hidrodinamik süzme debisi ve partikül temizleme etkinliği (%40), balen plaka yoğunluğu ve popülasyon yaygınlığı (%35) ile pelajik megafauna boyutlanması ve partikül hasadı (%25) harmanlandı.
+  - 4 Kademeli TVC Rejimi: INCIPIENT CILIARY SIFTING, MODERATE BALEEN RECRUITMENT, HYDRODYNAMIC VOLUME ENGULFMENT, OPTIMAL PELAGIC MEGAFAUNA CANOPY.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar paneline `valTVCIndex` ve `valTVCStatus` göstergeleri yerleştirildi; `css/style.css` içine `.tvc-badge` kehribar rozeti eklendi; Lotka-Volterra grafiğine altın sarısı kesikli çizgi (`#f59e0b`) bağlandı ve 'Trophic TVC' lejantı eklendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.24.0, `HISTORIC_MILESTONE_HOURS: 344`, `TOTAL_TELEMETRY_CHANNELS: 65` (Büyük 65 Kanal Kilometretaşı!) olarak güncellendi (180 satır); `index.html` başlık rozeti 'UI 344H | v6.24.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.23.0] — 2026-10-20 15:25 (İnşa Ekibi: Görsel Ajanı - Süzücü Balen Tarakları ve Pelajik Megafauna Optikleri)
+- **Süzücü Balen Optikleri ve Megafauna Shader'ı (src/render/baleen_optics.js - 107. Dosya):**
+  - İnşa Ekibi - Görsel Ajanı tarafından `src/render/baleen_optics.js` modülü geliştirildi (198 satır, [150, 300] modüler mimari standardı korundu).
+  - Titrek Siliyer Balen Tarakları (drawBaleenPlates): Hücre zarının ön-yan çeperinde 135 derecelik kavisle sıralanan amber-altın süzgeç telleri, osilasyonlu siliyer dalgalanmalar ve partikül yakalama parıltıları mikroskop altına taşındı.
+  - Hidrodinamik Süzme Girdap Yayları (drawFiltrationVortices): Süzme debisine orantılı olarak balen tarağına doğru yaklaşan kesikli su akıntı çizgileri ve lateral girdap eğrileri modellendi.
+  - Pelajik Megafauna Boyut Auraları (drawMegafaunaSilhouette): Standart boyutun 2 katından fazla büyüyen megafauna için derin su deplasman gölgeleri ve dairesel basınç dalgacıkları çizildi.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.23.0, `HISTORIC_MILESTONE_HOURS: 343` olarak mühürlendi (180 satır); `index.html` içinde `baleen_optics.js` yüklendi ve `Organism.prototype.draw` motoruna bağlandı; başlık rozeti 'LOOKS 343H | v6.23.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.22.0] — 2026-10-20 14:55 (İnşa Ekibi: Sistem Ajanı - Süzücü Balen Plakaları ve Pelajik Megafauna Dinamiği)
+- **Mikroskobik Süzücü Balen Filtreleri ve Megafauna Sistemi (src/organs/filter_baleen.js - 106. Dosya):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/filter_baleen.js` modülü geliştirildi (205 satır, [150, 300] modüler mimari standardı korundu).
+  - Siliyer Balen Tarakları (baleenFilterPlates): Ototrof ve detritivor hücrelerde membran çevresinde süzücü tarak plakaları kodlandı; hücresel afinite ve enerji rezerviyle büyüme modellendi.
+  - Hidrodinamik Süzme Debisi (filtrationVolumeFlux): Yüzme hızı ve filtre açıklığına bağlı olarak su kolonundaki askıda besinleri ve deniz karı floküllerini süzen partikül temizleme mekaniği kodlandı.
+  - Pelajik Megafauna Boyut Ölçeklenmesi (megafaunaScaleRatio): Sürekli süzme beslenmesi yapan organizmalar için standart boyutun 2.25 katına kadar makro-büyüme ve yırtıcı saldırılarını sönümleyen gövde direnci (computeMegafaunaDamageDamping) entegre edildi.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.22.0, `HISTORIC_MILESTONE_HOURS: 342` olarak mühürlendi (180 satır); `index.html` betik yüklemesi ve motor adımı bağlandı; başlık rozeti 'SYSTEM 342H | v6.22.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.21.0] — 2026-10-20 13:15 (Baş Planlamacı: Lead Planner - Epoch 30 Mimari Tasarımı ve Pelajik Megafauna Yol Haritası)
+- **Epoch 30 Stratejik Mimari Tasarım Belgesi (docs/EPOCH30_BLUEPRINT.md - 105. Dosya):**
+  - Baş Planlamacı tarafından Epoch 30 (Hours 341 - 350: Trofik Uzmanlaşma, Süzücü Balen Filtreleri ve Pelajik Megafauna) mimari tasarımı ve 10 saatlik yol haritası yayımlandı.
+  - Mikroskobik Balen Süzgeçleri ve Makro-Beslenme: Deniz karı ve kalsit floküllerini süzmek için keratin-kitin siliyer taraklar, hidrodinamik süzme debisi (`filtrationVolumeFlux`) ve megafaunal ölçeklenme mühendislik sütunları olarak tanımlandı.
+  - 65. ve 66. Telemetri Kanalları: Trofik Hacim Kapasitesi (% TVC) ve Megafauna Biyokütle Verimi (% MBE) planlandı.
+  - Taşıma Kapasitesi Hedefi: Saat 350'de eklenecek `TROPHIC_MEGAFAUNA_BUFFER: 5` ile tarihi Peak 310+ taşıma kapasitesi hedeflendi.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.21.0, `EPOCH: 30`, `HISTORIC_MILESTONE_HOURS: 341` olarak mühürlendi (180 satır); `index.html` başlık rozeti 'PLANNER 341H | v6.21.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.20.0] — 2026-10-20 12:15 (Yönetici / Büyük Resim Direktörü: Executive Director - Epoch 29 Kalsifikasyon Jübilesi ve Peak 305+ Taşıma Kapasitesi)
+- **Epoch 29 Büyük Kalsifikasyon Jübilesi (docs/EPOCH29_CALCIFICATION_JUBILEE.md - 104. Dosya):**
+  - Yönetici / Büyük Resim Direktörü tarafından Epoch 29 (Hours 331 - 340: Biyomineral Kabuklaşma, Kalsifikasyon ve Kretase Kalsit Bariyerleri) başarıyla tamamlandı ve jübile belgesi yayımlandı.
+  - Taşıma Kapasitesi Zirvesi: `CALCIFICATION_BARRIER_BUFFER: 5` sisteme dahil edilerek simülasyon taşıma kapasitesi tarihi Peak 305+ seviyesine tescillendi.
+  - 64 Telemetri Kanalı Kilometretaşı: 63. Kanal (% CAL) ve 64. Kanal (% SHM) ile kalsifikasyon yaygınlığı, kabuk sertliği ve gözenekli kafes dengesi tam gözetim altına alındı.
+  - Dinamik Taşıma Kapasitesi: `index.html` içinde aktif kokolit organizmaları sayısına göre çalışan `calcificationBarrierBuffer` entegre edildi.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.20.0, `HISTORIC_MILESTONE_HOURS: 340`, `PEAK_CARRYING_CAPACITY: 305` olarak mühürlendi (180 satır); `index.html` başlık rozeti 'DIRECTOR 340H | v6.20.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.19.0] — 2026-10-20 11:20 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 64 Kanallı Çift Kalsit Kararlılık ve 60 FPS Denetimi)
+- **10.000 Adım 64 Kanallı Biyomineral Kalsit ve Kabuk Sertlik Stres Testi (benchmark_qa_v6190.js - 103. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından `benchmark_qa_v6190.js` stres testi ve bellek denetimi yürütüldü (240 satır, modüler mimari standardı korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 63. Kanal (% CAL: %72.5) ve 64. Kanal (% SHM: %49.7) telemetrisi, 859.108 kalsifiye hücre adımı, 908.987 poröz kafes adımı, 102.297 mineral balast adımı ve 1 kabuk kırılma olayı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Biyomineral Plaka ve Gözeneklilik Dengesi: Canlı popülasyon ortalama 2.98 kokolit plakası, 0.285 kabuk sertliği ve 0.665 poröz kafes oranı ile korundu; benthik tebeşir tortul havuzu 69.7 uM seviyesinde dengelendi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 103 organizmaya ulaşıldı, test 92 sağlıklı organizmayla tamamlandı; bellek deltası 11.88 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.19.0, `HISTORIC_MILESTONE_HOURS: 339` olarak güncellendi (179 satır); `index.html` başlık rozeti 'QA 339H | v6.19.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.18.0] — 2026-10-20 10:40 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 64. Telemetri Kanalı % SHM ve Kırılma Optikleri)
+- **64. Telemetri Kanalı (% SHM - Shell Hardness Matrix) ve Kalsit HUD (src/ui/telemetry_calcification.js):**
+  - İnşa Ekibi - Görsel ve Arayüz Ajanı tarafından `src/ui/telemetry_calcification.js` modülü 64. kanal ile genişletildi (239 satır, [150, 300] modüler mimari standardı korundu).
+  - % SHM Formülasyonu: Yapısal kabuk sertliği ve plaka yoğunluğu (%40), gözenekli kafes hafifliği ve hidrodinamik verim (%30) ile kinetik şok sönümleme ve kırılma direnci (%30) harmanlandı.
+  - 4 Kademeli SHM Rejimi: UNMINERALIZED SOFT CRUST, INCIPIENT BRITTLE ACCRETION, HARDENED POROUS SHIELD, OPTIMAL RESILIENT CALCITE MATRIX.
+  - HUD ve Grafik Entegrasyonu: Laboratuvar paneline `valSHMIndex` ve `valSHMStatus` göstergeleri yerleştirildi; `css/style.css` içine `.shm-badge` açık buz mavisi rozeti eklendi; Lotka-Volterra grafiğine buz mavisi kesikli çizgi (`#38bdf8`) bağlandı.
+- **Biyomineral Kırılma ve Poröz Kafes Optikleri (src/render/calcification_optics.js):**
+  - `src/render/calcification_optics.js` modülü güncellendi (294 satır, [150, 300] modüler mimari standardı korundu).
+  - Kırılma Efektleri (`drawShellFractureFX`): Hasar gören veya çatlayan hücrelerde radyal kalsit çatlak hatları ve etrafa saçılan kristal şok dalgası parçacıkları mikroskop altında modellendi.
+  - Poröz Kafes Dokusu: Kalsit plakalarında peteksi mikro-gözenek perforasyonları çizildi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - `src/core/constants.js` Sürüm 6.18.0, `HISTORIC_MILESTONE_HOURS: 338`, `TOTAL_TELEMETRY_CHANNELS: 64` (Büyük 64 Kanal Kilometretaşı!) olarak güncellendi (179 satır); `index.html` başlık rozeti 'LOOKS & UI 338H | v6.18.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.17.0] — 2026-10-20 09:50 (İnşa Ekibi: Sistem Ajanı - Hafifletilmiş Poröz Kalsit Izgaraları ve Kırılma Dinamiği)
+- **Hafifletilmiş Poröz Kalsit Kafesi ve Kırılma Mekaniği (src/organs/calcification_plates.js):**
+  - İnşa Ekibi - Sistem Ajanı tarafından `src/organs/calcification_plates.js` modülü geliştirildi (265 satır, [150, 300] modüler mimari standardı korundu).
+  - Poröz Kalsit Kafesi (`porousCalciteLattice`): Masif kireçtaşı ağırlığının yüzme felcine yol açmasını önlemek üzere diatom ve kokolit benzeri mikro-gözenekli petek kafes yapısı modellendi; balast yoğunluğu %55'e varan oranda hafifletilerek dikey fotik katman dengesi optimize edildi.
+  - Kabuk Kırılma Dinamiği (`shellFractureBurst`): Biyomineral kalsitin sert fakat kırılgan doğası gereği, kritik apex ısırıklarında kabuk kısmen çatlayıp tebeşir tortul havuzuna mineral saçmakta ve defans hücresine ani panik kaçış ivmesi (`fractureEscapeImpulse`) kazandırmaktadır.
+  - Hücresel Kabuk Rejenerasyonu: Çatlak kalsit plakalarının metabolik enerji harcanarak hücre dinlenme evresinde onarılması sağlandı.
+  - Sürüm ve Arayüz Senkronizasyonu: `src/core/constants.js` Sürüm 6.17.0, `HISTORIC_MILESTONE_HOURS: 337` olarak güncellendi (179 satır); `index.html` başlık rozeti 'SYSTEM 337H | v6.17.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.16.0] — 2026-10-20 08:10 (Eleştirmen & Problem Yaratan: Product Critic - Kalsit Balast Yükü ve 64. Kanal SHM Denetimi)
+- **Epoch 29 Kalsifikasyon Eleştirmen Denetim Raporu (docs/CRITIC_AUDIT_CALCIFICATION.md - 102. Dosya):**
+  - Eleştirmen & Problem Yaratan (Product Critic / Challenger) tarafından biyomineral kalsit kabuklaşma mekanikleri denetlendi.
+  - Masif Kalsit Balastı ve Yüzme Felci Uyarısı: Kalsit biriktiren hücrelerin ağırlaşarak fotik tabakadan dibe batma riski saptandı; hafifletilmiş peteksi poroz kalsit kafesleri (porousCalciteLattice) direktifi verildi.
+  - Statik Zırh Paradoksu ve Kırılma Dinamiği: Sert fakat kırılgan kalsit kristallerinin apeks ısırıklarında çatlaması (shellFractureBurst), parçalanan kalsitin etrafa saçılması ve panik kaçış ivmesi (fractureEscapeImpulse) gereksinimi ortaya kondu.
+  - 64. Telemetri Kanalı (% SHM - Shell Hardness Matrix) Yol Haritası: Kabuk sertliğini ve darbe sönümleme gücünü ölçecek olan 64. kanal takvimlendirildi.
+  - Sürüm ve Arayüz Senkronizasyonu: src/core/constants.js Sürüm 6.16.0, HISTORIC_MILESTONE_HOURS: 336 olarak güncellendi (179 satır); index.html başlık rozeti 'CRITIC 336H | v6.16.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.15.0] — 2026-10-20 07:45 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 63 Kanallı Kalsit Kararlılık ve 60 FPS Denetimi)
+- **10.000 Adım 63 Kanallı Biyomineral Kalsit Stres Testi (benchmark_qa_v6150.js - 101. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından benchmark_qa_v6150.js stres testi ve bellek denetimi yürütüldü (220 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 63. Kanal (% CAL), 61. Kanal (% BCI) ve 62. Kanal (% BNY) telemetrisi, 1.034.020 kalsifiye hücre adımı, 181.297 mineral balast batma adımı, 649.022 süzücü beslenme adımı ve 104.472 nitrat asimilasyonu 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Biyomineral Plaka ve Tebeşir Havuzu Dengesi: Tüm canlı popülasyon (133 organizma) ortalama 2.59 kokolit plakası ve 0.258 kabuk sertliği ile korundu; benthik tebeşir tortul havuzu (chalkDepositionPool) 66.9 uM seviyesinde dengelendi; % CAL %70.1 seviyesinde CALCIFIED BIOMINERAL SHIELD rejiminde mühürlendi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 134 organizmaya ulaşıldı, test 133 sağlıklı organizmayla tamamlandı; bellek deltası 37.15 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+  - Sürüm ve Arayüz Senkronizasyonu: src/core/constants.js Sürüm 6.15.0, HISTORIC_MILESTONE_HOURS: 335 olarak güncellendi (179 satır); index.html başlık rozeti 'QA 335H | v6.15.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.14.0] — 2026-10-20 06:05 (İnşa Ekibi: Arayüz ve Telemetri Ajanı - 63. Telemetri Kanalı % CAL ve 100. Dosya Büyük Kilometretaşı)
+- **63. Telemetri Kanalı (% CAL - Biogenic Calcification Ratio) ve Kalsit HUD (src/ui/telemetry_calcification.js - 100. Dosya!):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından hücrelerin kalsit kokolit kalkanlarını ve zırh olgunluğunu izleyen CalcificationTelemetryManager sınıfı geliştirildi (187 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - 100. Dosya Büyük Kilometretaşı: Proje resmi olarak tarihi 100 bağımsız dosya sınırına ulaştı (56'sı src/ altında bağımsız modüler JavaScript).
+  - % CAL Formülasyonu: Kalsifikasyon yaygınlığı (%40), kokolit plaka yoğunluğu ve sertlik olgunluğu (%35) ile benthik tebeşir tortul havuzu ve darbe saptırma etkinliği (%25) harmanlandı.
+  - 4 Kademeli CAL Rejimi: UNARMORED MEMBRANOUS DIATHE, INCIPIENT COCCOLITH ACCRETION, CALCIFIED BIOMINERAL SHIELD, OPTIMAL CRETACEOUS CHALK CRUST.
+  - HUD Paneli ve Rozet: Laboratuvar paneline valCALIndex ve valCALStatus göstergeleri yerleştirildi; css/style.css içine .cal-badge tebeşir-beyazı rozeti eklendi.
+  - Grafik Entegrasyonu: historyData.calcificationRatio zaman serisi ve Lotka-Volterra grafiğine tebeşir-beyazı kesikli çizgi (#f8fafc) bağlandı; grafik lejantına 'Chalk CAL' eklendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.14.0, HISTORIC_MILESTONE_HOURS: 334, TOTAL_TELEMETRY_CHANNELS: 63 olarak güncellendi (179 satır); index.html başlık rozeti 'UI 334H | v6.14.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.13.0] — 2026-10-20 05:35 (İnşa Ekibi: Görsel Ajanı - Yanardöner Kokolit Plakaları ve Beyaz Tebeşir Sediman Shader'ı)
+- **Biyomineral Kalsifikasyon Optikleri (src/render/calcification_optics.js - 99. Dosya):**
+  - İnşa Ekibi - Görsel Ajanı tarafından kalsit kokolit kalkanlarını ve benthik tebeşir tabakasını görselleştiren CalcificationOpticsRenderer sınıfı geliştirildi (228 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - Yanardöner Kokolit Plaka Dizilimi: Hücre zarı çevresinde radyal dizilimli kalsit kristalleri, eliptik kokolit plakaları ve prizma parıltıları çizildi.
+  - Kinetik Darbe Saptırma Kıvılcımları: Etobur saldırısı saptırıldığında hücre çevresinde yayılan mikroskobik beyaz-mavi kırılma kıvılcımları (rgba(56, 189, 248, 0.95)) modellendi.
+  - Benthik Beyaz Tebeşir Sediman Yatakları: Dip tabanında biriken kalsit tebeşir tortuları, dalgalı sediment sırtları ve yükselen mineral çözünme mikro-plümleri mikroskop altına taşındı.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.13.0, HISTORIC_MILESTONE_HOURS: 333 olarak güncellendi (179 satır); index.html başlık rozeti 'LOOKS 333H | v6.13.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.12.0] — 2026-10-20 04:05 (İnşa Ekibi: Sistem Ajanı - Biyomineral Kalsit Plakaları ve Yırtıcı Saptırma Mekaniği)
+- **Biyomineral Kalsifikasyon ve Kokolit Zırhı (src/organs/calcification_plates.js - 98. Dosya):**
+  - İnşa Ekibi - Sistem Ajanı tarafından hücrelerin kalsiyum ve karbonat bağlayarak kalsit kalkan plakaları üretmesini sağlayan CalcificationPlateManager sınıfı geliştirildi (207 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - Kalsit Kristallendirmesi ve Sertlik: Ototrof ve otçul hücrelerin serbest kalsiyumu bağlayarak dış zarda kokolit plakaları biriktirmesi (coccolithPlates) ve zırh sertliği (shellHardness) kazanması kodlandı.
+  - Mekanik Yırtıcı Saldırısı Saptırma: Yırtıcı saldırısı anında kalsit kabuğun ısırıkları saptırma ihtimali (predatorDeflectionRate), yırtıcıda çene geri tepmesi (jawRecoilCooldown) ve avın zırh aşınmasıyla darbeyi sönümlemesi sağlandı.
+  - Balast Dinamiği ve Tebeşir Sedimanı: Kalsit kütlesinin hücreye sağladığı batma balastı ve ölen hücrelerin dipte tebeşir yataklarına (chalkDepositionPool) katkısı modellendi.
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.12.0, HISTORIC_MILESTONE_HOURS: 332 olarak güncellendi (179 satır); index.html başlık rozeti 'SYSTEM 332H | v6.12.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.11.0] — 2026-10-20 03:15 (Baş Planlamacı: Lead Planner - Epoch 29 Biyomineral Kalsifikasyon ve Kalsit Yol Haritası)
+- **Epoch 29 Mimari Tasarım Belgesi (docs/EPOCH29_CALCIFICATION_BLUEPRINT.md - 97. Dosya):**
+  - Baş Planlamacı (Lead Planner) tarafından Epoch 29 (Hours 331 - 340: Biyomineral Kabuklaşma, Kalsifikasyon ve Kretase Kalsit Bariyerleri) stratejik yol haritası yayımlandı.
+  - Evrimsel Dönüşüm Hedefleri: Yumuşak hücre membranından kokolitofor ve foraminifer benzeri biyomineral kalsit zırhlı hücrelere geçiş planlandı.
+  - Mühendislik Sütunları: Kalsiyum karbonat kristalizasyonu ve kalkan plakaları (src/organs/calcification_plates.js), kalsit prizma parıltısı ve benthik tebeşir yatakları (src/render/calcification_optics.js), 63. Kanal (% CAL) ve 64. Kanal (% SHM) telemetrisi (src/ui/telemetry_calcification.js).
+  - Taşıma Kapasitesi Hedefi: Saat 340 Jübilesinde CALCIFICATION_BARRIER_BUFFER: 5 ile tarihi Peak 305+ taşıma kapasitesi hedeflendi.
+  - Sürüm ve Arayüz Senkronizasyonu: src/core/constants.js Sürüm 6.11.0, EPOCH: 29, HISTORIC_MILESTONE_HOURS: 331 olarak güncellendi (179 satır); index.html başlık rozeti 'PLANNER 331H | v6.11.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.10.0] — 2026-10-20 02:30 (Yönetici / Büyük Resim Direktörü: Executive Director - Epoch 28 Büyük Jübilesi ve Peak 300+ Taşıma Kapasitesi)
+- **Epoch 28 Büyük Biyo-Jeokimya Jübile Raporu (docs/EPOCH28_BIOGEOCHEMISTRY_JUBILEE.md - 96. Dosya):**
+  - Büyük Resim Direktörü tarafından Epoch 28 (Hours 321 - 330) sonuç raporu yayımlandı ve Sürüm 6.10.0 mühürlendi.
+  - Küresel Biyo-Jeokimyasal Kapalı Çevrim Sentezi: Biyolojik karbon pompası ve çöken deniz karı (marine snow) flokları (src/environment/biogeochemical_cycles.js), benthik sediman remineralizasyonu ve iki aşamalı nitrifikasyon-denitrifikasyon motoru tescillendi.
+  - 62 Kanal Büyük Kilometretaşı: 61. Kanal (% BCI - Biological Carbon Index) ve 62. Kanal (% BNY - Biogeochemical Nitrogen Yield) arayüze bağlanarak ekosistemin toplam telemetri kapasitesi tarihi 62 kanala ulaştı.
+  - Taşıma Kapasitesi Genişlemesi: Biyokimyasal döngülerin atıkları sürekli primer biyokütleye dönüştürmesiyle sisteme BIOGEOCHEMICAL_CYCLE_BUFFER: 5 entegre edildi; simülasyon resmi olarak tarihi Peak 300+ taşıma kapasitesine ulaştı.
+  - Çekirdek Simülasyon Sabitleri ve Sürüm: src/core/constants.js Sürüm 6.10.0, HISTORIC_MILESTONE_HOURS: 330, PEAK_CARRYING_CAPACITY: 300, BIOGEOCHEMICAL_CYCLE_BUFFER: 5 olarak mühürlendi (179 satır); index.html başlık rozeti 'DIRECTOR 330H | v6.10.0' yapıldı.
+  - Gelecek Dönem Ufku: Epoch 29 (Hours 331 - 340: Biyomineral Kabuklaşma, Kalsifikasyon ve Kretase Kalsit Bariyerleri / Peak 305+ Hedefi) yol haritası takvimlendirildi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.09.0] — 2026-10-20 01:50 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım Çift Kanallı % BCI + % BNY Kararlılık ve 60 FPS Denetimi)
+- **10.000 Adım 62 Kanallı Biyokimya Stres Testi (benchmark_qa_v6090.js - 95. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından benchmark_qa_v6090.js stres testi ve bellek denetimi yürütüldü (218 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 61. Kanal (% BCI) ve 62. Kanal (% BNY) telemetrisi, 504.775 süzücü beslenme adımı, 522 deniz karı tüketim olayı, 104.289 nitrat asimilasyonu, 449.278 konvektif dalga sörfü ve 44.843 reotaktik karşı-yüzme adımı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Benthik Karbon ve Azot Kararlılığı: Sediman karbon stoku (48.2 birim), benthik remineralizasyon debisi (0.0410) ve çözünmüş amonyum/nitrat havuzları dengeli kapalı çevrimde doğrulandı; sıfır anoksik kilitlenme ölçüldü.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 114 organizmaya ulaşıldı, test 105 sağlıklı organizmayla tamamlandı; bellek deltası 17.03 MB seviyesinde kusursuz çöp toplama (GC) dengesiyle korundu.
+  - Sürüm ve Arayüz Senkronizasyonu: src/core/constants.js Sürüm 6.09.0, HISTORIC_MILESTONE_HOURS: 329 olarak güncellendi (178 satır); index.html başlık rozeti 'QA 329H | v6.09.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.08.0] — 2026-10-20 00:50 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 62. Telemetri Kanalı % BNY ve Biyokimyasal Optikler)
+- **62. Telemetri Kanalı (% BNY - Biogeochemical Nitrogen Yield) ve Arayüz Entegrasyonu (src/ui/telemetry_biogeochemistry.js):**
+  - İnşa Ekibi - Görsel ve Arayüz Ajanı tarafından ekosistemin azot devridaimini ve metabolik büyümesini izleyen 62. Telemetri Kanalı (% BNY) hayata geçirildi (245 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - % BNY Formülasyonu: Diazotrofik azot fiksasyonu (%35), hücresel nitrat asimilasyonu (%35) ve amonyum-nitrat havuz dengesi (%30) harmanlandı.
+  - 4 Kademeli BNY Rejimi: OLIGOTROPHIC NITROGEN DEPRIVATION, TRANSIENT AMMONIUM SURGE, BALANCED NITRIFICATION CASCADE, OPTIMAL BIOGENIC NITROGEN YIELD.
+  - HUD Paneli ve Rozet: Laboratuvar paneline valBNYIndex ve valBNYStatus göstergeleri entegre edildi; css/style.css içine .bny-badge ametist-mor rozeti eklendi.
+  - Grafik Entegrasyonu: historyData.biogenicNitrogen zaman serisi ve Lotka-Volterra grafiğine ametist-mor kesikli çizgi (#c084fc) bağlandı; grafik lejantına 'Nitrogen BNY' eklendi.
+- **Biyokimyasal Remineralizasyon Optikleri (src/render/marine_snow_optics.js):**
+  - Dip tabanında biriken karbonun mikrobiyal remineralizasyonunu temsil eden yükselen gaz mikro-kabarcıkları ve ametist renkli mikrobiyal nitrifikasyon ışıltıları çizildi (245 satır).
+- **Çekirdek Simülasyon Sabitleri ve Sürüm:**
+  - src/core/constants.js Sürüm 6.08.0, HISTORIC_MILESTONE_HOURS: 328, TOTAL_TELEMETRY_CHANNELS: 62 olarak güncellendi (178 satır); index.html başlık rozeti 'LOOKS/UI 328H | v6.08.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.07.0] — 2026-10-19 23:10 (İnşa Ekibi: Sistem Ajanı - Benthik Sediman Remineralizasyonu ve Azot Yutak Dengeleme)
+- **Biyo-Jeokimyasal Döngüler ve Benthik Remineralizasyon (src/environment/biogeochemical_cycles.js):**
+  - İnşa Ekibi - Sistem Ajanı tarafından biyo-jeokimyasal döngü motoru genişletildi (269 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - Benthik Sediman Remineralizasyonu: Dip tabanında biriken organik karbon stoğunun mikrobiyal solunumla inorganik amonyuma dönüştürülmesi (benthicRemineralizationFlux) ve termohalin upwelling bacalarıyla üst katmanlara püskürtülmesi sağlandı.
+  - Anoksik Çukur ve Hipoksi Stresi: Aşırı sediman biriken derin çukurlarda (y > 575, sediment > 115) büyük organizmalar için solunum stresi (benthicHypoxiaStress), süzücü ve leşçiller için remineralizasyon besin desteği (benthicReminYield) entegre edildi.
+  - İki Aşamalı Nitrifikasyon ve Denitrifikasyon: Amonyumun nitrata oksidasyonu, aşırı nitrat birikimini önleyen anaerobik denitrifikasyon (denitrificationFlux) ve biyojenik azot verimi (biogenicNitrogenYield) formüle edildi.
+  - Çekirdek Simülasyon Sabitleri ve Sürüm: src/core/constants.js Sürüm 6.07.0, HISTORIC_MILESTONE_HOURS: 327 olarak güncellendi (178 satır); index.html başlık rozeti 'SYSTEM 327H | v6.07.0' yapıldı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.06.0] — 2026-10-19 22:15 (Eleştirmen & Problem Yaratan: Product Critic - Sediman Birikim Tuzakları ve 62. Kanal BNY Denetimi)
+- **Epoch 28 Biyo-Jeokimya Eleştirmen Denetim Raporu (docs/CRITIC_AUDIT_BIOGEOCHEMISTRY.md - 94. Dosya):**
+  - Eleştirmen & Problem Yaratan (Product Critic / Challenger) tarafından biyo-jeokimyasal besin döngüleri ve deniz karı yutakları denetlendi.
+  - Benthik Karbon Tuzağı ve Hipoksi Uyarısı: Dip tabanında biriken organik karbon stoğunun (benthicSedimentCarbon) tek yönlü yığılmasının anoksik karbon mezarlığı yaratma riski saptandı; benthik remineralizasyon ve gaz çıkışı direktifleri verildi.
+  - Çift Aşamalı Nitrifikasyon ve Azot Döngüsü: Serbest azot fiksasyonunun (N2 -> NH4) karşılığı olan nitrifikasyon (NH4 -> NO3) ve anaerobik denitrifikasyon tamponu gereksinimleri tanımlandı.
+  - 62. Telemetri Kanalı (% BNY - Biogeochemical Nitrogen Yield) Yol Haritası: Hücresel protein ve metabolik büyüme verimini ölçecek olan 62. kanal takvimlendirildi.
+  - Sürüm ve Arayüz Senkronizasyonu: src/core/constants.js sürüm 6.06.0 ve HISTORIC_MILESTONE_HOURS: 326 yapıldı (178 satır); index.html başlık rozeti 'CRITIC 326H | v6.06.0' olarak güncellendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.05.0] — 2026-10-19 21:50 (Kalite ve Ara Denetim Ekibi: QA Agent - 10.000 Adım 61 Kanallı Karbon-Azot Kararlılık ve Bellek Denetimi)
+- **10.000 Adım 61 Kanallı Karbon-Azot Kararlılık ve Stres Testi (benchmark_qa_v6050.js - 93. Dosya):**
+  - Kalite ve Ara Denetim Ekibi (QA & Bug Fix) tarafından benchmark_qa_v6050.js stres testi ve bellek denetimi yürütüldü (191 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - 10.000 kesintisiz simülasyon adımı boyunca 61. Kanal (% BCI - Biological Carbon Index), 59. Kanal (% BHI) ve 60. Kanal (% TCS) telemetrisi, 602.128 hücresel süzücü beslenme adımı, 502 deniz karı parçacık tüketimi, 464.140 konvektif dalga sörfü ve 47.452 reotaktik karşı-yüzme adımı 0 sayısal anomali ve 0 NaN sapması ile tescillendi.
+  - Karbon Pompası ve Sediment Depolama Dengesi: Benthik sediment karbon stoku (85.0 birim) ve aktif deniz karı agregatları (33 flok) stabil yutak dengesinde doğrulandı; % BCI %80.4 seviyesinde OPTIMAL BENTHIC SEQUESTRATION rejiminde mühürlendi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 117 organizmaya ulaşıldı, test 107 sağlıklı organizmayla tamamlandı; bellek deltası 35,33 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+  - Sürüm ve Arayüz Senkronizasyonu: src/core/constants.js sürüm 6.05.0 ve HISTORIC_MILESTONE_HOURS: 325 yapıldı (178 satır); index.html başlık rozeti 'QA 325H | v6.05.0' olarak güncellendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.04.0] — 2026-10-19 20:50 (İnşa Ekibi: Arayüz ve Telemetri Ajanı - 61. Telemetri Kanalı % BCI ve Biyokimyasal HUD Paneli)
+- **61. Telemetri Kanalı ve Biyokimya Telemetri Yöneticisi (src/ui/telemetry_biogeochemistry.js - 92. Dosya):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından biyolojik karbon pompasını ve sediment depolamasını izleyen BiogeochemistryTelemetryManager sınıfı geliştirildi (195 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - 61. Telemetri Kanalı (% BCI - Biological Carbon Index): Dikey deniz karı parçacık debisi (%40), benthik tortul karbon depolaması (%35) ve süzücü beslenme geri-kazanımı (%25) harmanlandı.
+  - 4 Kademeli BCI Rejimi: DORMANT CARBON SINK, INCIPIENT MARINE SNOW FLUX, ACTIVE BIOLOGICAL CARBON PUMP, OPTIMAL BENTHIC SEQUESTRATION.
+  - css/style.css içine .bci-badge stili eklendi (gümüş-beyaz biyolojik karbon rozeti).
+- **Arayüz ve Grafik Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'UI 324H | v6.04.0' olarak güncellendi.
+  - HUD paneline valBCIIndex ve valBCIStatus telemetri göstergeleri entegre edildi.
+  - historyData.biologicalCarbon zaman serisi ve Lotka-Volterra popülasyon grafiğine gümüş-beyaz kesikli 61. kanal eğrisi (#e2e8f0) bağlandı; grafik lejantına 'Carbon BCI' eklendi.
+  - src/ui/telemetry_biogeochemistry.js modülü yüklendi ve stepSimulation döngüsüne bağlandı.
+  - Canlı biyoloji bilgi akışına 324. saat % BCI ve biyokimya HUD notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 324 tamamlandı olarak işaretlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 6.04.0, HISTORIC_MILESTONE_HOURS: 324, TOTAL_TELEMETRY_CHANNELS: 61 olarak güncellendi (178 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.03.0] — 2026-10-19 19:50 (İnşa Ekibi: Görsel Ajanı - Deniz Karı Agregatları, Mikrobiyal Işıma ve Benthik Sediment Shader'ı)
+- **Biyokimyasal Optikler ve Deniz Karı Shader'ları (src/render/marine_snow_optics.js - 91. Dosya):**
+  - İnşa Ekibi - Görsel Ajanı tarafından deniz karı agregatlarını ve tortul karbon yatağını görselleştiren MarineSnowOpticsRenderer sınıfı geliştirildi (211 satır, modüler mimari standardı 150-300 satır arası).
+  - Çöken Deniz Karı Kümeleri: Dairesel organo-mineral çekirdek, asimetrik mikro-fibriller ve fotik zonda yeşil klorofil izleri taşıyan süzülen kar tanecikleri çizildi.
+  - Derin Su Mikrobiyal Biolüminesansı: 280 pikselin altındaki derin su kolonunda deniz karını kolonileştiren bakterilerin pulsatil mavi-turkuaz biyolüminesansı mikroskop altına taşındı.
+  - Benthik Karbon Sediment Yatağı: Dip tabanında biriken organik karbon stoğunu (benthicSedimentCarbon) temsil eden dalgalı gümüş-krem tortul tabaka ve sınır ışıltıları modellendi.
+  - Hücresel Beslenme ve Azot Haleleri: Süzücü beslenme girdap yayları (filter-feeding vortex) ve diazotrof ototroflar için ametist moru kovalent azot fiksasyon auraları bağlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 6.03.0, EPOCH: 28, HISTORIC_MILESTONE_HOURS: 323 olarak mühürlendi (178 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'LOOKS 323H | v6.03.0' olarak güncellendi.
+  - marine_snow_optics.js betiği yüklendi; render() arka planına ve Organism.prototype.draw fonksiyonuna bağlandı.
+  - Canlı biyoloji bilgi akışına 323. saat deniz karı ve sediment shader notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 323 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.02.0] — 2026-10-19 18:50 (İnşa Ekibi: Sistem Ajanı - Biyolojik Karbon Pompası, Deniz Karı Agregatları ve Azot Fiksasyonu)
+- **Biyojeokimyasal Döngüler ve Deniz Karı Sistemi (src/environment/biogeochemical_cycles.js - 90. Dosya):**
+  - İnşa Ekibi - Sistem Ajanı tarafından küresel elementel devridaim ve karbon pompası sınıfı (BiogeochemicalCycleSystem) geliştirildi (230 satır, modüler mimari standardı 150-300 satır arası korundu).
+  - Biyolojik Karbon Pompası ve Deniz Karı (Marine Snow): Yüzey fotik katmanından çöken organo-mineral parçacıkları modellendi; akıntı adveksiyonuyla birleşen dikey çöküş benthik tortul karbon havuzunu (benthicSedimentCarbon) zenginleştirdi.
+  - Benthik Süzücü Beslenme: Çöken parçacıkların yakınına gelen hücreler için süzücü beslenme ve enerji kazanımı (marineSnowConsumption) entegre edildi.
+  - Diazotrofik Azot Fiksasyonu ve Nitrifikasyon: Ototroflarda azot fiksasyonu (nitrogenFixationFlux), amonyumdan nitrata mikrobiyal dönüşüm ve çözünmüş nitrat asimilasyonu kodlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 6.02.0, EPOCH: 28, HISTORIC_MILESTONE_HOURS: 322 olarak mühürlendi (178 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'SYSTEM 322H | v6.02.0' olarak güncellendi.
+  - biogeochemical_cycles.js betiği yüklendi ve stepSimulation ana döngüsüne bağlandı.
+  - Müfettiş paneline 'Marine Snow & Carbon' ve 'Nitrogen Assimilation' telemetri göstergeleri entegre edildi.
+  - Canlı biyoloji bilgi akışına 322. saat deniz karı ve azot fiksasyonu notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 322 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.01.0] — 2026-10-19 17:05 (Baş Planlamacı - Lead Planner Oturumu - Epoch 28 Mimari Tasarımı ve Deniz Karı Yol Haritası)
+- **Epoch 28 Stratejik Mimari Tasarım Belgesi (docs/EPOCH28_BIOGEOCHEMISTRY_BLUEPRINT.md - 89. Dosya):**
+  - Baş Planlamacı tarafından Epoch 28 (Hours 321 - 330: Biyokimyasal Besin Döngüleri, Azot-Karbon Fiksasyonu ve Deniz Karı Yutakları) mimari tasarımı ve yol haritası yayımlandı.
+  - Biyolojik Karbon Pompası ve Deniz Karı: Fotik katmanda ölen organik maddelerin agregatlar halinde benthik tabana çöküşü (marine snow), tortul karbon depolaması ve süzücü beslenme mekanikleri mühendislik sütunu olarak tanımlandı.
+  - 61. ve 62. Telemetri Kanalları: Biyolojik Karbon İndeksi (% BCI) ve Biyo-Jeokimyasal Azot Verimi (% BNY) planlandı.
+  - Taşıma Kapasitesi Hedefi: Saat 330'da sisteme eklenecek BIOGEOCHEMICAL_CYCLE_BUFFER (+5) ile tarihi Peak 300+ taşıma kapasitesi hedeflendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 6.01.0, EPOCH: 28, HISTORIC_MILESTONE_HOURS: 321 olarak mühürlendi (178 satır, modüler mimari standardı 150-300 satır arası korundu).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'PLANNER 321H | v6.01.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 321. saat Epoch 28 mimari tasarımı ve deniz karı notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 321 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 6.00.0] — 2026-10-19 16:35 (Büyük Resim Direktörü - Executive Director Oturumu - Epoch 27 Büyük İklim Jübilesi, Peak 295+ Taşıma Kapasitesi ve 60 Kanal Büyük Kilometretaşı)
+- **Epoch 27 Büyük Jübile Raporu (docs/EPOCH27_CLIMATE_JUBILEE.md - 88. Dosya):**
+  - Yönetici sorgulaması tamamlandı: Ekosistemin kominite mutualizminden tüm su kolonunu kapsayan küresel termohalin akıntılara ve dinamik iklim homeostazına başarılı evrimi tescillendi.
+  - Su kolonu stratifikasyonu (epipelajik, termoklin, benthik), çift konveksiyon girdapları, dikey besin upwelling bacaları, reotaktik karşı-yüzme ve konvektif dalga sörfü tam kararlılıkla mühürlendi.
+  - 59. Kanal (% BHI) ve 60. Kanal (% TCS) senteziyle simülasyonun toplam telemetri kapasitesi tarihi 60 kanala ulaştı; 10.000 adımlık stres testinde 0 sayısal anomaliyle doğrulandı.
+- **Taşıma Kapasitesi Genişlemesi (Peak 295+ Birim):**
+  - `src/core/constants.js`: Sürüm 6.00.0, HISTORIC_MILESTONE_HOURS: 320, PEAK_CARRYING_CAPACITY: 295, CLIMATE_CIRCULATION_BUFFER: 5 eklendi (178 satır, modüler mimari standardı 150-300 satır arası korundu).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'DIRECTOR 320H | v6.00.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 320. saat Epoch 27 Jübilesi, 60 kanal ve Peak 295+ taşıma kapasitesi notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 320 tamamlandı olarak işaretlendi ve Epoch 28 (Hours 321 - 330: Biyokimyasal Besin Döngüleri ve Deniz Karı Yutakları) takvimlendirildi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.99.0] — 2026-10-19 15:30 (Kalite ve Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 10.000 Adım 60 Kanallı Çift İklim Kararlılığı ve Bellek Denetimi)
+- **10.000 Adım 60 Kanallı Headless Stres Testi (benchmark_qa_v5990.js - 87. Dosya):**
+  - 10.000 kesintisiz simülasyon adımı boyunca 59. Kanal (% BHI - Biomic Homeostasis Index) ve 60. Kanal (% TCS - Trophic Current Synergy) telemetrisi denetlendi.
+  - Sayısal Kararlılık: 0 sayısal anomali, 0 NaN/diverjans sapması ve %100 yaşam döngüsü kararlılığı tescillendi.
+  - İklim ve Göç Dinamikleri: 10.000 adımda toplam 547.163 plume doluluk adımı, 440.199 dalga sörfü adımı, 64.967 reotaktik karşı-yüzme olayı ve 343.568 mineral asimilasyonu kaydedildi; baroklinik membran korumasıyla 0 termal şok kilitlenmesi gerçekleşti.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 122 organizmaya ulaşıldı, test 120 sağlıklı organizmayla tamamlandı; bellek deltası 30,14 MB seviyesinde kontrollü çöp toplama döngüsüyle doğrulandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.99.0, HISTORIC_MILESTONE_HOURS: 319, TOTAL_TELEMETRY_CHANNELS: 60 olarak mühürlendi (177 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'QA 319H | v5.99.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 319. saat 10.000 adım 60 kanallı (% BHI + % TCS) iklim kararlılığı ve 0 anomali doğrulama notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 319 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.98.0] — 2026-10-19 14:30 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 60. Telemetri Kanalı % TCS, Dalga Sörfü Kanatları ve Baroklinik Shader'lar)
+- **Kominite İklim Optikleri ve Shader'ları (src/render/climate_optics.js - 230 Satır):**
+  - Dalga Sörfü Hidrodinamik Kanatları: Upwelling bacalarında dikey yükselen hücrelerin altında su sütununu yararak yükselen altın sarısı sörf izleri (convectiveSurfingActive) çizildi.
+  - Reotaktik Karşı-İtki Parçacıkları: Akıntı tuzaklarına karşı itki üreten hücrelerin arkasında beyaz-mavi ters itki mikro-jet baloncukları modellendi.
+  - Baroklinik Lipid Zarı ve Termal Şok Optikleri: Termoklini güvenle geçen hücrelerde çift katmanlı koruyucu lipid aurası, şok geçiren hücrelerde ise kristal titreşim çizgileri görselleştirildi.
+- **60. Telemetri Kanalı ve Biyomik HUD Paneli (src/ui/telemetry_climate.js - 237 Satır):**
+  - 60. Telemetri Kanalı (% TCS - Trophic Current Synergy): Dikey besin döngüsü ve trofik piramit zenginliği (%40), konvektif dalga sörfü katılımı (%35) ile reotaktik kenar korunması (%25) harmanlanarak 60. kanal Lotka-Volterra grafiğine bağlandı.
+  - Laboratuvar HUD paneline valTCSIndex ve valTCSStatus alanları entegre edildi; css/style.css içine .tcs-badge rozeti eklendi.
+  - 4 Kademeli TCS Rejimi: DORMANT TROPHIC CIRCULATION, INCIPIENT UPWELLING ADVECTION, ACTIVE TROPHIC CURRENT SYNERGY, OPTIMAL BIOMIC FOOD-WEB HARMONY.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.98.0, HISTORIC_MILESTONE_HOURS: 318, TOTAL_TELEMETRY_CHANNELS: 60 olarak mühürlendi (177 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'LOOKS/UI 318H | v5.98.0' olarak güncellendi.
+  - Lotka-Volterra popülasyon grafiğine 60. kanal kehribar-altın eğrisi (#eab308) ve grafik lejantına 'Current TCS' eklendi.
+  - Canlı biyoloji bilgi akışına 318. saat 60. kanal % TCS ve dalga sörfü optikleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 318 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.97.0] — 2026-10-19 13:20 (İnşa Ekibi: Sistem Ajanı - Reotaktik Karşı-Yüzme, Dalga Sörfü ve Baroklinik Membran Tamponu)
+- **Termohalin Sirkülasyon ve Biyofiziksel Uyum (src/environment/thermohaline_circulation.js - 246 Satır):**
+  - Ürün Eleştirmeninin `docs/CRITIC_AUDIT_CLIMATE.md` raporundaki direktifler doğrultusunda akıntı sürüklenme tuzakları ve termoklin şoku çözüldü (246 satır, modüler standart 150-300 satır arası korundu).
+  - Aktif Reotaktik Karşı-Yüzme: Lateral kenarlara veya dip çukurlara sürüklenen hücrelerin akıntıya zıt itki üreterek tuzaklardan kurtulması (`isCounterSwimming`, adveksiyonu %70 frenler) kodlandı.
+  - Konvektif Dalga Sörfü: Yükselen upwelling bacalarına giren hücrelerin akıntıyı tramplen olarak kullanıp zahmetsiz dikey göç yapması (`convectiveSurfingActive`) modellendi.
+  - Baroklinik Membran Tamponu: Termoklin katman geçişlerinde hücre zarının ani soğukta donmasını önleyen lipid tamponu (`baroclinicThermalBuffer` [0.0 - 1.0]) ve termal şok sayacı (`thermalShockTimer`) eklendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.97.0, EPOCH: 27, HISTORIC_MILESTONE_HOURS: 317 olarak mühürlendi (177 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'SYSTEM 317H | v5.97.0' olarak güncellendi.
+  - Müfettiş paneline 'Surfing & Counter-Swim' ve 'Nutrient & Baroclinic Buffer' telemetri göstergeleri entegre edildi.
+  - Canlı biyoloji bilgi akışına 317. saat dalga sörfü, reotaktik karşı-yüzme ve baroklinik tampon notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 317 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.96.0] — 2026-10-19 12:10 (Eleştirmen ve Problem Yaratan - Product Critic / Challenger Oturumu - Akıntı Tuzakları, Termoklin Şoku ve Trofik Sinerji Denetimi)
+- **Epoch 27 Ara Denetim Raporu (docs/CRITIC_AUDIT_CLIMATE.md - 86. Dosya):**
+  - Ürün Eleştirmeni tarafından su kolonu fiziksel akıntıları, termoklin tabakalaşması ve upwelling döngüleri denetim raporu yayımlandı.
+  - 'Akıntı Sürüklenme Tuzağı' Eleştirisi: Hücrelerin akıntıya pasifçe kapılıp dip çukurlara sürüklenmesi yerine aktif reotaktik karşı-yüzme (`rheotacticCounterSwim`) ve upwelling sütunlarında enerji tasarruflu dalga sörfü (`convectiveSurfing`) yapabilmesi gerektiği ortaya kondu.
+  - 'Termal Tabakalaşma Şoku' Eleştirisi: Yüzey fotik katmanı ile soğuk dip suyu arasındaki termoklin sınırını geçerken hücre zarının donmasını önleyen baroklinik tampon (`baroclinicThermalBuffer` [0.0 - 1.0]) direktifi verildi.
+  - 60. Telemetri Kanalı Direktifi: Akıntıların organik besinleri trofik zincir boyunca taşıma verimini ölçecek **60. Telemetri Kanalı (% TCS - Trophic Current Synergy)** takvimlendirildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.96.0, EPOCH: 27, HISTORIC_MILESTONE_HOURS: 316 olarak mühürlendi (177 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'CRITIC 316H | v5.96.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 316. saat eleştirmen denetimi ve termoklin şoku notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 316 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.95.0] — 2026-10-19 11:45 (Kalite ve Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 10.000 Adım 59 Kanallı İklim Kararlılığı ve Bellek Denetimi)
+- **10.000 Adım 59 Kanallı Headless Stres Testi (benchmark_qa_v5950.js - 85. Dosya):**
+  - 10.000 kesintisiz simülasyon adımı boyunca 59. Kanal (% BHI - Biomic Homeostasis Index), termohalin konveksiyon akıntıları ve dikey besin upwelling kinetiği denetlendi.
+  - Sayısal Kararlılık: 0 sayısal anomali, 0 NaN/diverjans sapması ve %100 yaşam döngüsü kararlılığı tescillendi.
+  - İklim ve Dolaşım Dinamikleri: 10.000 adımda toplam 483.426 plume doluluk adımı, 314.741 mineral upwelling asimilasyon olayı kaydedildi; epipelajik (275.604 adım) ve benthik (273.831 adım) katmanlar arasında kusursuz bir trofik denge sağlandı.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 163 organizmaya ulaşıldı, test 161 sağlıklı organizmayla tamamlandı; bellek deltası 54,49 MB seviyesinde kontrollü çöp toplama döngüsüyle doğrulandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.95.0, HISTORIC_MILESTONE_HOURS: 315, TOTAL_TELEMETRY_CHANNELS: 59 olarak mühürlendi (177 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'QA 315H | v5.95.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 315. saat 10.000 adım 59 kanallı (% BHI) iklim kararlılığı ve 0 anomali doğrulama notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 315 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.94.0] — 2026-10-19 10:55 (İnşa Ekibi: Arayüz ve Telemetri Ajanı - 59. Telemetri Kanalı % BHI ve Biyomik İklim HUD Paneli)
+- **59. Telemetri Kanalı ve İklim Telemetri Yöneticisi (src/ui/telemetry_climate.js - 84. Dosya):**
+  - İnşa Ekibi - Arayüz ve Telemetri Ajanı tarafından su kolonu fiziksel döngülerini ve mineral upwelling akışını izleyen ClimateTelemetryManager bağımsız sınıfı geliştirildi (192 satır, modüler standart 150-300 satır arası).
+  - 59. Telemetri Kanalı (% BHI - Biomic Homeostasis Index): Su sütunu tabakalaşma entropisi ve adveksiyon sürüklenmesi (%35), dikey mineral upwelling asimilasyonu ve dip rezervi (%40) ile upwelling sütunu biyotik entegrasyonu (%25) harmanlandı.
+  - 4 Kademeli BHI Rejimi: STRATIFIED STAGNANT DRIFT, INCIPIENT CONVECTIVE OVERTURN, STABLE BIOMIC HOMEOSTASIS, OPTIMAL CIRCULATORY EQUILIBRIUM.
+  - css/style.css içine .bhi-badge stili eklendi (parıltılı turkuaz iklim rozeti).
+- **Arayüz ve Grafik Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'UI 314H | v5.94.0' olarak güncellendi.
+  - HUD paneline valBHIIndex ve valBHIStatus telemetri göstergeleri entegre edildi.
+  - historyData.biomicHomeostasis zaman serisi ve Lotka-Volterra popülasyon grafiğine turkuaz kesikli 59. kanal eğrisi (#06b6d4) bağlandı; grafik lejantına 'Climate BHI' eklendi.
+  - src/ui/telemetry_climate.js modülü yüklendi ve stepSimulation döngüsüne bağlandı.
+  - Canlı biyoloji bilgi akışına 314. saat % BHI ve iklim HUD notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 314 tamamlandı olarak işaretlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.94.0, HISTORIC_MILESTONE_HOURS: 314, TOTAL_TELEMETRY_CHANNELS: 59 olarak güncellendi (177 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.93.0] — 2026-10-19 09:55 (İnşa Ekibi: Görsel Ajanı - Biyomik İklim Optikleri, Termoklin Shader'ı ve Upwelling Bacaları)
+- **Biyomik İklim Optikleri ve Su Kolonu Shader'ları (src/render/climate_optics.js - 83. Dosya):**
+  - İnşa Ekibi - Görsel Ajanı tarafından su sütunu fiziksel akıntı ve upwelling optikleri sınıfı (ClimateOpticsRenderer) geliştirildi (224 satır, modüler standart 150-300 satır arası).
+  - Su Kolonu Tabakalaşma Çizgisi: Epipelajik fotik zon ile benthik zon arasındaki termoklin geçiş bandı kesikli siyan dalga konturu ve derin benthik tortul degrade sisi ile çizildi.
+  - Konveksiyon Girdap Akış Çizgileri: Su kütlesindeki çift termohalin dolaşım döngüsünü gösteren eliptik akış çizgileri ve hareketli sürüklenme partikülleri mikroskop altına taşındı.
+  - Dikey Mineral Upwelling Sütunları: x: 190 ve x: 470 koordinatlarındaki benthik mineral bacalarından fotik tabakaya yükselen zümrüt-camgöbeği ışıma ve altın rengi mineral kabarcıkları görselleştirildi.
+  - Hücresel İklim Etkileşimi: Upwelling akıntısındaki hücrelerde mineral özümseme halesi ve akıntı yönünde hidrodinamik sürüklenme izi modellendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.93.0, EPOCH: 27, HISTORIC_MILESTONE_HOURS: 313 olarak mühürlendi (177 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'LOOKS 313H | v5.93.0' olarak güncellendi.
+  - climate_optics.js betiği yüklendi; render() ve Organism.prototype.draw fonksiyonlarına bağlandı.
+  - Canlı biyoloji bilgi akışına 313. saat iklim optikleri ve termoklin shader notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 313 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.92.0] — 2026-10-19 08:10 (İnşa Ekibi: Sistem Ajanı - Termohalin Sirkülasyon, Dikey Konveksiyon ve Besin Upwelling Kinetiği)
+- **Termohalin Sirkülasyon ve Fiziksel Çevre Sistemi (src/environment/thermohaline_circulation.js - 82. Dosya):**
+  - İnşa Ekibi - Sistem Ajanı tarafından su kolonu fiziksel akıntı ve mineral konveksiyon sınıfı (ThermohalineCirculationSystem) geliştirildi (201 satır, modüler standart 150-300 satır arası).
+  - 3 Aşamalı Su Kolonu Stratifikasyonu: Epipelajik (ılık, fotik, mineralce fakir), Termoklin/Haloklin (yoğunluk gradyanı) ve Benthik (soğuk, yoğun, mineral rezervi) katmanları modellendi.
+  - Dikey Besin Yükselimi (Upwelling): Dip tortularında çöken organik maddelerden beslenen mineral havuzu (benthicNutrientPool), x: 190 ve x: 470 sütunlarındaki termal upwelling konveksiyonuyla yüzeye pompalandı; ototroflara metabolik enerji takviyesi sağlandı.
+  - Hücresel Adveksiyon ve Sürüklenme: Akıntı vektörleri (getCurrentVelocity) organizma boyutuna göre yumuşak sürüklenme uygulayarak pelajik-benthik dinamik yer değiştirmeyi tetikledi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.92.0, EPOCH: 27, HISTORIC_MILESTONE_HOURS: 312 olarak mühürlendi (177 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'SYSTEM 312H | v5.92.0' olarak güncellendi.
+  - thermohaline_circulation.js betiği yüklendi ve stepSimulation döngüsüne bağlandı.
+  - Müfettiş paneline 'Thermohaline Water Column' ve 'Nutrient Upwelling Flux' telemetri göstergeleri entegre edildi.
+  - Canlı biyoloji bilgi akışına 312. saat termohalin konveksiyon ve dikey upwelling notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 312 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.91.0] — 2026-10-19 07:05 (Baş Planlamacı - Lead Planner Oturumu - Epoch 27 Mimari Tasarımı ve Biyomik İklim Yol Haritası)
+- **Epoch 27 Stratejik Mimari Tasarım Belgesi (docs/EPOCH27_CLIMATE_BLUEPRINT.md - 81. Dosya):**
+  - Baş Planlamacı tarafından Epoch 27 (Hours 311 - 320: Biyomik İklim Döngüleri, Termohalin Dikey Akıntılar ve Ekosistem Düzeyinde Homeostaz) mimari tasarımı ve yol haritası yayımlandı.
+  - Termohalin Sirkülasyon ve Upwelling: Su sütunundaki termal ve tuzluluk tabakalaşması (termoklin/haloklin), dikey konveksiyon akıntıları ve benthik tortulardan pelajik üreticilere besin yükselimi (nutrient upwelling) mühendislik sütunu olarak tanımlandı.
+  - 59. ve 60. Telemetri Kanalları: Biyomik Homeostaz İndeksi (% BHI) ve Trofik Akıntı Sinerjisi (% TCS) planlandı.
+  - Taşıma Kapasitesi Hedefi: Saat 320'de sisteme eklenecek CLIMATE_CIRCULATION_BUFFER (+5) ile Peak 295+ taşıma kapasitesi hedeflendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.91.0, EPOCH: 27, HISTORIC_MILESTONE_HOURS: 311 olarak mühürlendi (177 satır, modüler mimari standardı 150-300 satır arası korundu).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'PLANNER 311H | v5.91.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 311. saat Epoch 27 mimari tasarımı ve biyomik iklim notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 311 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.90.0] — 2026-10-19 06:15 (Büyük Resim Direktörü - Executive Director Oturumu - Epoch 26 Büyük Koevrim Jübilesi, Peak 290+ Taşıma Kapasitesi ve 58 Kanal Sentezi)
+- **Epoch 26 Büyük Jübile Raporu (docs/EPOCH26_COEVOLUTION_JUBILEE.md - 80. Dosya):**
+  - Yönetici sorgulaması tamamlandı: Ekosistemin tekil hücresel anatomiden çok-türlü biyosferik kominite ve koevrim ağına başarılı evrimi tescillendi.
+  - Benthik temizleme istasyonları, konak solicitation pozları, saldırmazlık ateşkesi, kütikül ektoparazit yükü ve avcı kitinaz çene kinetiği tam kararlılıkla mühürlendi.
+  - 57. Kanal (% CAI) ve 58. Kanal (% BRI) sentezi, 10.000 adımlık stres testinde 366.095 mutualist olay, 52.317 temizleme ortaklığı ve 0 sayısal anomaliyle doğrulandı.
+- **Taşıma Kapasitesi Genişlemesi (Peak 290+ Birim):**
+  - `src/core/constants.js`: Sürüm 5.90.0, HISTORIC_MILESTONE_HOURS: 310, PEAK_CARRYING_CAPACITY: 290, COEVOLUTION_COMMUNITY_BUFFER: 5 eklendi (177 satır, modüler mimari standardı 150-300 satır arası korundu).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'DIRECTOR 310H | v5.90.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 310. saat Epoch 26 Jübilesi ve Peak 290+ taşıma kapasitesi notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 310 tamamlandı olarak işaretlendi ve Epoch 27 (Hours 311 - 320: Biyomik İklim Döngüleri ve Mevsimsel Göçler) takvimlendirildi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.89.0] — 2026-10-19 05:45 (Kalite ve Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 10.000 Adım Çift Kanallı Koevrim Kararlılığı ve Bellek Denetimi)
+- **10.000 Adım Çift Kanallı Headless Stres Testi (benchmark_qa_v5890.js - 79. Dosya):**
+  - 10.000 kesintisiz simülasyon adımı boyunca 57. Kanal (% CAI - Coevolutionary Adaptation Index) ve 58. Kanal (% BRI - Biotic Red-Queen Index) telemetrisi denetlendi.
+  - Sayısal Kararlılık: 0 sayısal anomali, 0 NaN/diverjans sapması ve %100 yaşam döngüsü kararlılığı tescillendi.
+  - Kominite Dinamikleri: 10.000 adımda toplam 366.095 kümülatif mutualist ortaklık olayı, 52.317 temizleme ortaklığı, 63.707 solicitation pozu ve 116.024 temizleme ateşkesi kaydedildi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 162 organizmaya ulaşıldı, test 101 sağlıklı organizmayla tamamlandı; bellek deltası 58,30 MB seviyesinde kontrollü çöp toplama döngüsüyle doğrulandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.89.0, HISTORIC_MILESTONE_HOURS: 309, TOTAL_TELEMETRY_CHANNELS: 58 olarak mühürlendi (176 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'QA 309H | v5.89.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 309. saat 10.000 adım 58 kanallı (% CAI + % BRI) koevrim kararlılığı ve 0 anomali doğrulama notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 309 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.88.0] — 2026-10-19 04:45 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 58. Telemetri Kanalı % BRI, Benthik İstasyon Optikleri ve Ektoparazit Kistleri)
+- **Kominite Optikleri ve Mikroskop Shader'ları (src/render/coevolution_optics.js - 239 Satır):**
+  - Benthik Temizleme İstasyonları (drawCleaningStation): Resif koordinatlarındaki temizleyici hub'ları etrafında kesikli turkuaz/siyan radyal dalgalar ve merkez beacon parıltısı çizildi.
+  - Konak Temizlenme Pozu ve Ateşkes Halesi (drawSolicitationPose): İstasyon alanında bekleyen konak organizmaların etrafında açık mavi koruyucu hale ve flanşlarda saldırmazlık braketleri modellendi.
+  - Ektoparazit Kistleri ve Eksfoliasyon Parçacıkları (drawEctoparasiteLoad): Konak kütikülü üzerinde ektoparazit yükü oranında kehribar/kırmızı kist benekleri ve temizlik sırasında dökülen organik mikro-kıvılcımlar görselleştirildi.
+  - Yırtıcı Kitinaz Çene Parıltıları (drawChitinaseEnzyme): Kitinaz adaptasyon katsayısı yüksek avcılarda çene uçlarında kızıl/kehribar enzimatik ısırık kıvılcımları eklendi.
+- **58. Telemetri Kanalı ve Kominite HUD Paneli (src/ui/telemetry_coevolution.js - 245 Satır):**
+  - 58. Telemetri Kanalı (% BRI - Biotic Red-Queen Index): Yırtıcı kitinaz modifikatörü ve av kalkan oranı (%40), konak ektoparazit yükü ve istasyon kapsamı (%35) ile genomik polimorfizm/heterozigotluk (%25) harmanlanarak 58. kanal Lotka-Volterra grafiğine bağlandı.
+  - Laboratuvar HUD paneline valBRIIndex ve valBRIStatus alanları entegre edildi; css/style.css içine .bri-badge rozeti eklendi.
+  - 4 Kademeli BRI Rejimi: HOMOGENEOUS LOW SELECTION DRIFT, INCIPIENT COUNTER-ADAPTATION FRICTION, ACTIVE BIOTIC ARMS RACE, RED-QUEEN COEVOLUTIONARY EQUILIBRIUM.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.88.0, HISTORIC_MILESTONE_HOURS: 308, TOTAL_TELEMETRY_CHANNELS: 58 olarak güncellendi (176 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'LOOKS/UI 308H | v5.88.0' olarak güncellendi.
+  - Lotka-Volterra popülasyon grafiğine 58. kanal kehribar eğrisi (#f59e0b) ve grafik lejantına 'RedQueen BRI' eklendi.
+  - Canlı biyoloji bilgi akışına 308. saat 58. kanal % BRI ve benthik istasyon optikleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 308 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.87.0] — 2026-10-19 03:07 (İnşa Ekibi: Sistem Ajanı - Benthik Temizleme İstasyonları, Ektoparazit Sürtünmesi ve Kitinaz Avcı Kinetiği)
+- **Koevrimsel Genetik ve Kominite Dinamikleri (src/genetics/coevolution.js - 276 Satır):**
+  - Ürün Eleştirmeninin `docs/CRITIC_AUDIT_COEVOLUTION.md` raporundaki direktifler doğrultusunda temizleme istasyonları, ektoparazit yükü ve kitinaz enzimi kodlandı (276 satır, modüler standart 150-300 satır arası korundu).
+  - Benthik Temizleme İstasyonları: Rastlantısal temaslar yerine resif koordinatlarında sabit temizleme düğümleri (`isCleaningStation`, `cleaningStationRef`) oluşturuldu. İstasyon yarıçapında konak organizmalar temizlenme pozuna (`solicitationPoseActive`) geçerek hareketini yavaşlatır; avcı-av saldırganlığı ateşkes altına alınır (`cleaningTruceActive`, +0.45 kaçınma şansı).
+  - Ektoparazit Sürtünmesi ve Besin Eksfoliasyonu: Klonlarda ve polimorfizmi düşük popülasyonlarda ektoparazit yükü (`ectoparasiteLoad` [0.0 - 1.0]) birikir; bu yük konağı yavaşlatırken, temizleme istasyonunda arındırılarak leşçile +0.32 enerji besin girdisi sağlar.
+  - Kitinaz Enzimatik Parçalama: Yırtıcılar avın kalkan dayanıklılığına karşı kitinaz enzimi (`chitinaseBiteModifier` [1.0 - 2.5]) geliştirdi; kalkan erozyonu ısırık katsayısıyla hızlandırılarak tek taraflı savunma monopolü kırıldı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.87.0, HISTORIC_MILESTONE_HOURS: 307, EPOCH: 26 olarak mühürlendi (176 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'SYSTEM 307H | v5.87.0' olarak güncellendi.
+  - Avcı kaçınma ve kalkan erozyon mekaniklerine `cleaningTruceActive` ve `chitinaseBiteModifier` eklendi.
+  - Müfettiş paneline 'Parasite & Station' ve 'Chitinase Enzyme' telemetri satırları entegre edildi.
+  - Canlı biyoloji bilgi akışına 307. saat benthik temizleme istasyonları ve kitinaz ısırık notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 307 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.86.0] — 2026-10-19 02:35 (Eleştirmen ve Problem Yaratan - Product Critic / Challenger Oturumu - Kominite Sinerji Boşlukları, Parazitoid Baskısı ve Temizleme İstasyonları Denetimi)
+- **Epoch 26 Ara Denetim Raporu (docs/CRITIC_AUDIT_COEVOLUTION.md - 77. Dosya):**
+  - Ürün Eleştirmeni tarafından türlerarası koevrim, temizleme mutualizmi ve Kızıl Kraliçe dinamikleri denetim raporu yayımlandı.
+  - 'Pasif Mesafe Bağımlılığı' Eleştirisi: Mutualizmin rastlantısal temaslar yerine benthik temizleme istasyonları (cleaning stations) ve konak temizlenme pozları (solicitation pose) ile bilinçli bir kominite davranışına dönüştürülmesi gerektiği saptandı.
+  - Kızıl Kraliçe Yırtıcı Karşı-Silahlanması: Avın kalkan zırhına (%70 emilim) karşı yırtıcıların enzimatik kitin parçalama (chitinaseBiteModifier) gücü kazanması, silahlanma yarışının tek taraflı bir duvara dönüşmesini önlemek üzere takvimlendirildi.
+  - Ektoparazit Yükü ve % BRI Kanalı: Homojen klonlarda parazitoid birikiminin (ectoparasiteLoad [0.0 - 1.0]) organizmayı yavaşlatması, temizleyicinin bu yükü kaldırması ve 58. Telemetri Kanalı (% BRI - Biotic Red-Queen Index) direktifleri verildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.86.0, HISTORIC_MILESTONE_HOURS: 306, EPOCH: 26 olarak mühürlendi (176 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'CRITIC 306H | v5.86.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 306. saat eleştirmen denetimi ve temizleme istasyonları notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 306 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.85.0] — 2026-10-19 01:20 (Kalite ve Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 10.000 Adım 57 Kanallı Koevrim Kararlılığı ve Bellek Denetimi)
+- **10.000 Adım 57 Kanallı Headless Stres Testi (benchmark_qa_v5850.js):**
+  - 10.000 kesintisiz simülasyon adımı boyunca 57. Kanal (% CAI - Coevolutionary Adaptation Index), türlerarası mutualizm ağları, temizleme ortaklığı (cleaning symbiosis) ve Kızıl Kraliçe silahlanma gerilimi denetlendi.
+  - Sayısal Kararlılık: 0 sayısal anomali, 0 NaN/diverjans sapması ve %100 yaşam döngüsü kararlılığı tescillendi.
+  - Kominite Dinamikleri: 10.000 adımda toplam 53.999 kümülatif mutualist ortaklık olayı ve 30.685 temizleme simbiyozu olayı kaydedildi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 143 organizmaya ulaşıldı, test 94 sağlıklı organizmayla tamamlandı; bellek deltası 23,36 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.85.0, HISTORIC_MILESTONE_HOURS: 305, EPOCH: 26 olarak mühürlendi (176 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'QA 305H | v5.85.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 305. saat 10.000 adım 57 kanallı koevrim kararlılığı ve 0 anomali doğrulama notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 305 tamamlandı olarak işaretlendi ve Hours 306-310 takvimlendirildi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.84.0] — 2026-10-19 00:05 (İnşa Ekibi - Arayüz ve Telemetri Ajanı Oturumu - 57. Telemetri Kanalı: Koevrimsel Uyum İndeksi (% CAI) ve Kominite HUD)
+- **57. Telemetri Kanalı ve Kominite Yöneticisi (src/ui/telemetry_coevolution.js - 76. Dosya):**
+  - CoevolutionTelemetryManager bağımsız telemetri sınıfı geliştirildi (187 satır, modüler mimari standardı 150-300 satır arası).
+  - 57. Telemetri Kanalı (% CAI - Coevolutionary Adaptation Index): Mutualizm yoğunluğu ve temizleme ortaklıkları (%40), kolektif biyotik direnç ve sinerji (%35) ile genomik heterozigotluğu (%25) harmanlayan kanal devreye alındı.
+  - 4 Kademeli Koevrim Rejimi: SOLITARY ASYNCHRONOUS DRIFT, INCIPIENT SYMBIOTIC CLEANING CLUSTERS, ACTIVE INTERSPECIFIC MUTUALISM NETWORK, PAN-BIOSPHERE COEVOLUTIONARY EQUILIBRIUM.
+  - css/style.css içine .cai-badge stili eklendi (zümrüt yeşili koevrimsel uyum rozeti).
+- **Arayüz ve Grafik Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'UI 304H | v5.84.0' olarak güncellendi.
+  - HUD paneline valCAIIndex ve valCAIStatus telemetri göstergeleri entegre edildi.
+  - historyData.coevolutionaryAdaptation zaman serisi ve Lotka-Volterra popülasyon grafiğine zümrüt kesikli 57. kanal eğrisi (#10b981) bağlandı; grafik lejantına 'Coev CAI' eklendi.
+  - src/ui/telemetry_coevolution.js modülü yüklendi ve stepSimulation döngüsüne bağlandı.
+  - Canlı biyoloji bilgi akışına 304. saat % CAI ve kominite HUD notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 304 tamamlandı olarak işaretlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.84.0, TOTAL_TELEMETRY_CHANNELS: 57, HISTORIC_MILESTONE_HOURS: 304 olarak güncellendi (176 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.83.0] — 2026-10-18 23:30 (İnşa Ekibi - Görsel Ajanı Oturumu - Mutualist Simbiyoz Ağları, Trofik Bağlantı Filamentleri ve Biyosferik Kominite Parıltıları)
+- **Türlerarası Koevrim ve Mutualist Ağ Optikleri (src/render/coevolution_optics.js - 75. Dosya):**
+  - CoevolutionOpticsRenderer bağımsız optik render sınıfı geliştirildi (201 satır, modüler mimari standardı 150-300 satır arası).
+  - Mutualist Simbiyoz Ağları (Mutualism Networks): Ortaklık kurmuş türler arasında mikroskop altında parıldayan zümrüt/turkuaz renkli yumuşak dalgalanan Bézier bağlantı filamentleri çizildi; filamentler üzerinde partnerler arası metabolik enerji transferini simgeleyen hareketli foton tanecikleri modellendi.
+  - Temizleme Ortaklığı Parıltıları (Cleaning Halos): Bentik temizleme mutualizmi yürüten leşçiller ve konakları etrafında dairesel arındırıcı mikro-parıltılar ve dökülen tortu pulları görselleştirildi.
+  - Kominite Sinerji Halesi ve Kızıl Kraliçe Gerilim Arkları: Yüksek trofik sinerjiye (mutualismSynergy > 0.28) sahip türlerin çevresinde kolektif koruyucu kominite haleleri ve yüksek silahlanma geriliminde (redQueenPressure > 0.38) kehribar renkli lateral stres yayları çizildi.
+- **Arayüz ve Render Döngüsü Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'LOOKS 303H | v5.83.0' olarak güncellendi.
+  - src/render/coevolution_optics.js modülü script etiketiyle index.html içine dahil edildi; Organism.prototype.draw ve render() ana tuval döngülerine bağlandı.
+  - Canlı biyoloji bilgi akışına 303. saat mutualist simbiyoz filamentleri ve kominite optikleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 303 tamamlandı olarak işaretlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.83.0 ve HISTORIC_MILESTONE_HOURS: 303 olarak güncellendi (176 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.82.0] — 2026-10-18 22:35 (İnşa Ekibi - Sistem Ajanı Oturumu - Simbiyotik Mutualizm, Parazitoid Koevrim ve Türlerarası Kooperatif Genomik Dinamikler)
+- **Türlerarası Koevrim ve Simbiyotik Mutualizm Sistemi (src/genetics/coevolution.js - 74. Dosya):**
+  - CoevolutionSystem bağımsız genetik/kominite sınıfı geliştirildi (237 satır, modüler mimari standardı 150-300 satır arası).
+  - Temizleme Mutualizmi (Cleaning Symbiosis): Bentik leşçiller ile otçul/sefalopodlar arasında kütikül temizleme ortaklığı kuruldu; leşçil +0.18 enerji takası kazanırken, partnerin enfeksiyon riski %60 azaltıldı ve metabolik sürtünme hafifletildi.
+  - Trofik Sinerji ve Karşılıklı Koruma: Ortaklaşa beslenen türler arasında sinerji katsayısı (mutualismSynergy [0.0 - 1.0]) ve yırtıcılara karşı kolektif caydırıcılık bonusu (collectiveDeterrenceBonus) modellendi.
+  - Kızıl Kraliçe Silahlanma Kinetiği (Red Queen Dynamics): Yırtıcı ve av arasındaki koevrimsel seçilim baskısı (redQueenPressure) ve klonal homojenliği cezalandırarak genetik polimorfizmi ödüllendiren heterozygosityScore entegre edildi.
+- **Arayüz ve Inspector Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'SYSTEM 302H | v5.82.0' olarak güncellendi.
+  - src/genetics/coevolution.js modülü index.html içine script etiketiyle bağlandı ve stepSimulation döngüsüne entegre edildi.
+  - Organism Inspector paneline Coevolutionary Mutualism (% SYN ve temizleme durumu) ve Red Queen Dynamics (silahlanma yarışı gerilimi ve heterozigotluk) göstergeleri eklendi.
+  - Canlı biyoloji bilgi akışına 302. saat koevrim ve mutualizm notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 302 tamamlandı olarak işaretlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.82.0 ve HISTORIC_MILESTONE_HOURS: 302 olarak güncellendi (176 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.81.0] — 2026-10-18 21:35 (Baş Planlamacı Oturumu - Epoch 26 Başlangıcı: Biyosferik Senestezi, Biyotik Kominite Ağları ve Koevrimsel Ekoloji Yol Haritası)
+- **Epoch 26 Mimari Tasarım Belgesi (docs/EPOCH26_COEVOLUTION_BLUEPRINT.md - 73. Dosya):**
+  - Baş Planlamacı tarafından Epoch 26 (Hours 301 - 310) stratejik mimari belgesi yayımlandı.
+  - Türlerarası Simbiyotik Mutualizm: Bentik leşçiller ile otçul/sefalopodlar arasında temizleme ortaklığı (cleaning symbiosis - ektosimbiyotik tortu temizliği ve enerji paylaşımı) planlandı.
+  - Kızıl Kraliçe Silahlanma Yarışı (Red Queen Dynamics): Yırtıcı ve av arasındaki koevrimsel hız ve zırh dinamizmi ($v_{predator} \propto v_{prey}$) ve klonal monokültürleri engelleyen parazitoid baskısı modellendi.
+  - 57. Kanal (% CAI) ve 58. Kanal (% BRI): Koevrimsel Uyum İndeksi (% CAI) ve Biyotik Kızıl Kraliçe İndeksi (% BRI) tanımlanarak Saat 310 Jübilesi için Peak 290+ taşıma kapasitesi hedefi kilitlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.81.0, EPOCH: 26, HISTORIC_MILESTONE_HOURS: 301 olarak güncellendi (176 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'PLANNER 301H | v5.81.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 301. saat Epoch 26 mimari tasarım belgesi ve koevrimsel ekoloji notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 301 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.80.0] — 2026-10-18 20:15 (Yönetici ve Büyük Resim Direktörü Oturumu - 300 Saatlik Tarihi Büyük Tercentenary Jübilesi, Peak 285+ Taşıma Kapasitesi ve 56 Kanal Büyük Sentezi)
+- **300 Saatlik Tarihi Büyük Tercentenary Jübilesi (Executive Director):**
+  - Yönetici / Büyük Resim Direktörü tarafından 300 saatlik kesintisiz sanal stüdyo gelişim süreci değerlendirildi ve Epoch 25 (Sefalopod Zekası, Nöral Plastisite ve Dinamik Mimikri) başarıyla mühürlendi.
+  - Taşıma Kapasitesi Zirvesi (Peak 285+): Sefalopod zeka tamponu (CEPHALOPOD_INTELLIGENCE_BUFFER: 5) eklenerek simülasyonun azami taşıma kapasitesi tarihi Peak 285+ seviyesine yükseltildi.
+  - 56 Kanallı Ekosistem Büyük Sentezi: 55. Kanal (% NPI - Neural Plasticity Index) ve 56. Kanal (% AMI - Adaptive Mimicry Index) Lotka-Volterra grafiğinde ve canlı laboratuvar HUD üzerinde diğer 54 kanalla tam uyum içinde doğrulandı.
+  - Bilişsel ve Davranışsal Adaptasyon Zirvesi: Hodgkin-Huxley aksiyon potansiyeli ağları (-70 mV / +35 mV), Hebbian plastisitesi, 8 prehensil dokunaç kinematiği (muscular hydrostats), vantuz adezyonu, benthik araç kullanımı (exuviae/detritus kalkanları) ve mürekkep püskürtme refleksleri kalıcı olarak ekosisteme kazandırıldı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.80.0, HISTORIC_MILESTONE_HOURS: 300, PEAK_CARRYING_CAPACITY: 285, CEPHALOPOD_INTELLIGENCE_BUFFER: 5, TOTAL_TELEMETRY_CHANNELS: 56 olarak mühürlendi (176 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'DIRECTOR 300H | v5.80.0' olarak altın jübile rengiyle güncellendi.
+  - Canlı biyoloji bilgi akışına 300. saat Tercentenary Jübilesi ve Peak 285+ taşıma kapasitesi notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Epoch 25 tamamlandı olarak işaretlendi ve Epoch 26 (Hours 301 - 310) takvimlendirildi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.79.0] — 2026-10-18 17:55 (Kalite ve Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 10.000 Adım Çift Kanallı Nöral Kararlılık ve Bellek Denetimi)
+- **10.000 Adım Çift Kanallı Headless Stres Testi (benchmark_qa_v5790.js):**
+  - 10.000 kesintisiz simülasyon adımı boyunca 55. Kanal (% NPI) ve 56. Kanal (% AMI) telemetrisi, 4.645 aksiyon potansiyeli depolarizasyon olayı ve prehensil dokunaç kinematiği denetlendi.
+  - Sayısal Kararlılık: 0 sayısal anomali, 0 NaN/diverjans sapması ve %100 yaşam döngüsü kararlılığı tescillendi.
+  - Popülasyon ve Bellek Sağlığı: Başlangıçtaki 31 organizmadan tepe 161 organizmaya ulaşıldı, test 158 sağlıklı organizmayla tamamlandı; bellek deltası 32,45 MB seviyesinde temiz çöp toplama (GC) döngüsüyle korundu.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.79.0, HISTORIC_MILESTONE_HOURS: 299, EPOCH: 25 olarak mühürlendi (175 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'QA 299H | v5.79.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 299. saat 10.000 adım çift kanallı kararlılık ve 0 anomali doğrulama notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 299 tamamlandı olarak işaretlendi.
+- **Büyük Tercentenary Kapısı (Hour 300 Öncesi Doğrulama):**
+  - 300. Saat Tarihi Büyük Tercentenary Jübilesi öncesinde tüm 56 telemetri kanalı, dokunaç kinematiği ve araç kullanımı mekanizmaları eksiksiz onaylandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.78.0] — 2026-10-18 16:15 (İnşa Ekibi - Görsel ve Arayüz Ajanı Oturumu - 56. Telemetri Kanalı: Adaptif Mimikri İndeksi (% AMI), Bézier Dokunaç Optikleri ve Kalkan Shader'ları)
+- **Sefalopod Bézier Dokunaç Optikleri ve Kalkan Shader'ları (src/render/neural_optics.js):**
+  - NeuralOpticsRenderer sınıfı prehensil Bézier dokunaç kinematiği ve benthik araç kalkanı optikleriyle güncellendi (220 satır, modüler mimari standardı 150-300 satır arası).
+  - 8 Bézier Dokunaç Eğrisi: Hidrostatik kas kollarının bükülme, salınım ve uzanım hareketleri yumuşak eğriler ve uç vantuz halkalarıyla görselleştirildi.
+  - Benthik Zırh Kalkanı Optiği: Sefalopodların taşıdığı dış iskelet (exuviae) ve detritus kalkanları, mineral damarları ve dayanıklılık halesiyle çizildi.
+  - Mürekkep Bulutu ve Kaçış Plumu: Yırtıcı saldırısı anında ters yöne fırlatılan çok loblu koyu sepiya renkli mürekkep dağılım bulutu shader'ı entegre edildi.
+- **56. Telemetri Kanalı ve Adaptif Mimikri HUD (src/ui/telemetry_neural.js & css/style.css):**
+  - 56. Telemetri Kanalı (% AMI - Adaptive Mimicry Index): Alet kuşanımı (%35), donma kamuflajı ve kriptik uyum (%35) ile dokunaç kinematiğini (%30) harmanlayan kanal devreye alındı (211 satır).
+  - 4 Kademeli Mimikri Rejimi: PASSIVE SUBSTRATE EXPOSURE, INCIPIENT CRYPTIC FREEZING, TACTICAL CAMOUFLAGE & SHIELD EQUIPPED, ADVANCED ADAPTIVE MIMICRY & TOOL-USE.
+  - css/style.css içine .ami-badge stili eklendi (turkuaz/siyan kalkan mimikri rozeti).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'LOOKS/UI 298H | v5.78.0' olarak güncellendi.
+  - HUD paneline valAMIIndex ve valAMIStatus telemetri göstergeleri entegre edildi.
+  - historyData.adaptiveMimicry zaman serisi ve Lotka-Volterra popülasyon grafiğine turkuaz kesikli 56. kanal eğrisi (#06b6d4) bağlandı.
+  - Canlı biyoloji bilgi akışına 298. saat % AMI ve Bézier dokunaç optikleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 298 tamamlandı olarak işaretlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.78.0, TOTAL_TELEMETRY_CHANNELS: 56, HISTORIC_MILESTONE_HOURS: 298 olarak mühürlendi (175 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.77.0] — 2026-10-18 15:45 (İnşa Ekibi - Sistem Ajanı Oturumu - Dokunaç Manipülasyon Kinematiği, Araç Kullanımı ve Mürekkep Püskürtme Refleksleri)
+- **Sefalopod Dokunaç Kinematiği ve Alet Kullanımı (src/organs/neural_network.js):**
+  - CephalopodNeuralSystem sınıfı dokunaç kinematiği ve benthik alet kullanımı mekanikleriyle genişletildi (286 satır, modüler mimari standardı 150-300 satır arası).
+  - Prehensil Dokunaç Uzanımı ve Vantuz Adezyonu: 8 hidrostatik kas dokusundan oluşan kol için dinamik uzanım uzunluğu (tentacleReach [12 - 28 px]) ve vantuz tutunma kuvveti (suctionAdhesionStrength) modellendi.
+  - Benthik Araç Kullanımı (Amphioctopus marginatus biomimetiği): Sinaptik plastisite skoru yüksek (% NPI >= 28) sefalopodlar zemindeki boş dış iskeletleri (exuviae) ve detritus floklarını yakalayarak koruyucu gövde kalkanı olarak kuşanmaya başladı (carriedShieldType: 'EXUVIAE' | 'DETRITUS', shieldDurability: 85.0); yırtıcı saldırılarında %70 darbe emilimi sağlandı.
+  - Bilişsel Savunma ve Mürekkep Refleksleri: Yırtıcı yaklaştığında hızı %65 düşürerek arka plan dokusuna karışan donma refleksi (mimicryFreezing) ve kritik mesafede (< 35 px) zıt yöne fırlatan acil durum mürekkep püskürtme refleksi (inkSacVolume, inkJetTriggered) entegre edildi.
+- **Arayüz ve Av-Avcı Ekolojisi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'SYSTEM 297H | v5.77.0' olarak güncellendi.
+  - Yırtıcı saldırı döngüsüne kuşanılmış araç kalkanı savunması (toolShieldDefense) bağlandı ve vuruş anında kalkan dayanıklılık erozyonu uygulandı.
+  - Organism Inspector paneline Tentacle Kinematics (reach ve adhesion), Benthic Tool Shield (kalkan tipi, dayanıklılık ve emilim) ve Mimicry & Ink Reflex göstergeleri eklendi.
+  - Canlı biyoloji bilgi akışına 297. saat dokunaç kinematiği ve benthik alet kullanımı notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 297 tamamlandı olarak işaretlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.77.0, HISTORIC_MILESTONE_HOURS: 297, EPOCH: 25 olarak mühürlendi (175 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.76.0] — 2026-10-18 15:15 (Eleştirmen ve Problem Yaratan - Product Critic / Challenger Oturumu - Dokunaç Kinematiği, Araç Kullanımı ve Dinamik Mimikri Denetimi)
+- **Epoch 25 Ara Denetim Raporu (docs/CRITIC_AUDIT_NEURAL.md - 70. Dosya):**
+  - Ürün Eleştirmeni tarafından sefalopod zekası, prehensil dokunaç motor kontrolü, alet kullanımı (tool-use) ve dinamik mimikri denetim raporu yayımlandı.
+  - 'Kukla Beyin Yanılgısı': Sefalopod zekasının sadece somadan çıkan biyoelektrik kıvılcımlarla sınırlı kalamayacağı; uzayan hidrostatik kas dokusundan oluşan (muscular hydrostats) 8 prehensil dokunaç kinematiğinin ve vantuz adezyonunun zorunlu olduğu ortaya kondu.
+  - Araç Kullanımı (Tool-Use / Exuviae Armor Shielding): Benthik zemindeki boş dış iskelet kabuklarının (exuviae) ve detritus floklarının dokunaçlarla kavranarak taşınması ve yırtıcı saldırılarına karşı %70 darbe emici kalkan olarak kullanılması mekaniği takvimlendirildi.
+  - Serebral-Kromatofor Eşleşmesi ve % AMI Kanalı: Nöral ağın optik loblar üzerinden kromatoforlara bağlanması, yırtıcı algılandığında donup kalma (freezing) ve mürekkep püskürtme refleksi ile 56. Telemetri Kanalı (% AMI - Adaptive Mimicry Index) direktifleri verildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.76.0, HISTORIC_MILESTONE_HOURS: 296, EPOCH: 25 olarak mühürlendi (175 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti 'CRITIC 296H | v5.76.0' olarak güncellendi.
+  - Canlı biyoloji bilgi akışına 296. saat eleştirmen denetimi ve prehensil dokunaç direktifleri eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 296 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.75.0] — 2026-10-18 13:45 (Kalite ve Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 60 FPS Performans Optimizasyonu, DOM Reflow Kelepçesi ve 10.000 Adım Kararlılık Doğrulaması)
+- **DOM Reflow ve Layout Thrashing Optimizasyonu (index.html):**
+  - stepSimulation() içerisindeki 50'den fazla DOM göstergesi (lblCycle, lblTotalPop, avgVelocity, valPyramidHealth, updateInspector() vb.) her kare yerine tick % 15 === 0 döngüsüne bağlandı.
+  - Saniyede 60 kez tetiklenen DOM yazma sıklığı saniyede 4 sefere indirilerek DOM layout yükü %93 azaltıldı, arayüz gecikmesi giderildi.
+- **Toplu Yol Çizimi (Batched Path Rendering - index.html):**
+  - 100+ besin parçacığı tek bir beginPath() altında toplanarak tek ctx.fill() çağrısıyla çizilmeye başlandı; kare başına ~200 canvas API çağrısı bertaraf edildi.
+  - 65 akışkan partikülü (fluid particles) batched arc yoluna alınarak 195+ çizim komutu tek hamlede birleştirildi.
+- **Gradyan ve Optik Render Hattı Filtrelemesi (index.html):**
+  - Organizma başına her karede sıfırdan oluşturulan maliyetli radyal gradyanlar (cytoGrad, bgAura, refrGrad) yerine hafif ve donanım hızlandırmalı alfa dolguları entegre edildi.
+  - Organism.prototype.draw() içindeki 12 harici optik modülü organizmanın aktif fenotip özelliklerine (this.isAtVent, this.isReefAnchored, this.hasExoskeleton vb.) göre koşullu çalıştırılarak gereksiz render çağrıları engellendi.
+- **Kritik Kapsam ve Sayısal Güvenlik Düzeltmeleri (index.html):**
+  - scavs === 0 bloğundaki ReferenceError hatası (tanımsız rescuedHerb ve rescuedApex atamaları) temizlendi; yalnızca rescuedScav nesnesine odaklanıldı.
+  - Canvas boyut okumalarına güvenli fallback eklenerek (canvas && canvas.width ? canvas.width / 2 : 330) R, CX, CY değişkenlerinin NaN türetmesi önlendi.
+- **10.000 Adım Headless Kararlılık ve Performans Denetimi (benchmark_qa_v5750.js):**
+  - 10.000 kesintisiz simülasyon adımı çalıştırıldı; 0 sayısal anomali, 0 NaN diverjansı, tepe 162 organizma popülasyonu ile sistem kararlılığı ve 60 FPS kare bütçesi doğrulandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.75.0, HISTORIC_MILESTONE_HOURS: 295, EPOCH: 25 olarak mühürlendi (175 satır).
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.74.0] — 2026-10-18 12:10 (İnşa Ekibi - Arayüz / Telemetri Ajanı Oturumu - 55. Telemetri Kanalı: Nöral Plastisite İndeksi (% NPI) ve Sefalopod Kognisyon HUD)
+- **55. Telemetri Kanalı ve Sefalopod Kognisyon Yöneticisi (src/ui/telemetry_neural.js - 69. Dosya):**
+  - NeuralTelemetryManager bağımsız telemetri sınıfı geliştirildi (204 satır, modüler mimari standardı 150-300 satır arası).
+  - Nöral Plastisite İndeksi (% NPI - Neural Plasticity Index): Popülasyondaki Hebbian sinaptik güçlenme skoru, aksiyon potansiyeli depolarizasyon sıklığı ve nöromüsküler sürüş metriklerini birleştiren 55. telemetri kanalı devreye alındı.
+  - 4 Kademeli Kognisyon Rejimi: %0-15 DORMANT DIFFUSE PROTONEURON, %15-35 INCIPIENT HEBBIAN PLASTICITY, %35-65 SYNAPTIC LONG-TERM POTENTIATION (LTP), %65-100 CEPHALOPOD COGNITIVE MEMORY.
+  - Headless Node.js uyumluluğu: document ve window kontrolleriyle koruma sağlandı.
+- **Arayüz ve Stil Eklentileri (css/style.css):**
+  - .npi-badge CSS sınıfı eklendi (mor/eflatun kognitif parlama stili).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.74.0, TOTAL_TELEMETRY_CHANNELS: 55, HISTORIC_MILESTONE_HOURS: 294 yapıldı (175 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "UI 294H | v5.74.0" yapıldı.
+  - HUD paneline valNPIIndex ve valNPIStatus telemetri göstergeleri entegre edildi.
+  - historyData.neuralPlasticity zaman serisi ve Lotka-Volterra popülasyon grafiğine mor kesikli 55. kanal eğrisi eklendi.
+  - src/ui/telemetry_neural.js script etiketi yüklendi ve stepSimulation döngüsüne bağlandı.
+  - Canlı biyoloji bilgi akışına 294. saat % NPI ve sefalopod kognisyon HUD notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 294 tamamlandı, Hour 295 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.73.0] — 2026-10-18 11:12 (İnşa Ekibi - Görsel Ajanı Oturumu - Sefalopod Nöral Optikleri, Serebral Gangliyon ve Aksiyon Potansiyeli Parıltıları)
+- **Sefalopod Nöral Optikleri ve Aksiyon Potansiyeli Shader'ları (src/render/neural_optics.js - 68. Dosya):**
+  - NeuralOpticsRenderer bağımsız render sınıfı geliştirildi (207 satır, modüler mimari standardı 150-300 satır arası).
+  - Serebral Gangliyon ve Optik Loblar: Sefalize organizmaların anterior baş bölgesinde çok loblu parıldayan serebral nöropil korteksi ve bilateral optik lob traktusları mikroskop estetiğinde görselleştirildi.
+  - Aksiyon Potansiyeli Elektrifikasyon Parıltıları: Membran potansiyeli ateşleme eşiğini aştığında (+35 mV spike) nöral somadan dışarı fırlayan yüksek voltajlı zikzaklı kıvılcımlar, dairesel depolarizasyon şok dalgaları ve sinaptik buton parıltıları render edildi.
+  - 8 Brakiyal Sinir Kordonu: Serebral gangliyondan 8 periferik kola uzanan, sinir uyarım dalgalarıyla dalgalanan sinir traktusları ve nöromüsküler motor son-plak düğümleri modellendi.
+  - Nöromüsküler Sürüş Halesi: Motor aktivite yükseldiğinde hücre çeperinde hafif titreşen mor/pembe motor uyarım aurası çizildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.73.0, HISTORIC_MILESTONE_HOURS: 293 yapıldı (175 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 293H | v5.73.0" yapıldı.
+  - src/render/neural_optics.js script etiketi yüklendi; hücre çizim döngüsüne bağlandı.
+  - Canlı biyoloji bilgi akışına 293. saat sefalopod nöral optikleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 293 tamamlandı, Hour 294 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.72.0] — 2026-10-18 10:34 (İnşa Ekibi - Sistem Ajanı Oturumu - Sefalopod Nöral Ağları, Aksiyon Potansiyeli ve Hebbian Plastisite)
+- **Sefalopod Nöral Ağı ve Sinaptik İletim (src/organs/neural_network.js - 67. Dosya):**
+  - CephalopodNeuralSystem bağımsız sınıfı geliştirildi (215 satır, modüler mimari standardı 150-300 satır arası).
+  - Aksiyon Potansiyeli Dinamiği: Hodgkin-Huxley yaklaşımıyla dinlenim zarı potansiyeli (-70 mV), voltaj kapılı Na+ ateşleme eşiği (-55 mV), aksiyon potansiyeli aşımı (+35 mV) ve refrakter dönem kinetiği modellendi.
+  - Nörotransmitter Rezervleri: Nöromüsküler uyarım için asetilkolin (acetylcholineLevel) ve trofik pekiştirme/ödül konsolidasyonu için dopamin (dopamineLevel) rezervleri entegre edildi.
+  - Hebbian Sinaptik Plastisitesi: Beraber aktive olan duyusal ve motor nöral yollar arasındaki sinaptik ağırlıklar güçlendirildi (Delta w_ij = eta * a_i * a_j); plasticityScore [0.0 - 1.0] üretildi.
+  - 8 Brakiyal Sinir Kordonu: Serebral gangliyondan 8 periferik kola koordineli motor dalgalar (brachialCordActivations) dağıtılarak tentacleCoordinationScore hesaplandı.
+- **Sayısal Kararlılık ve Sınır Kelepçeleri (src/core/stability.js - 298 satır):**
+  - clampNeuralState fonksiyonu eklendi; membranePotential [-90.0, 50.0], plasticityScore [0.0, 1.0], neuromuscularDrive [0.0, 1.0] sınırları entegre edildi.
+  - cleanupOrganism içine neuralNetworkSystem temizliği dahil edildi; dosya satır sayısı tam 298 satırda korundu.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.72.0, HISTORIC_MILESTONE_HOURS: 292 yapıldı (175 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 292H | v5.72.0" yapıldı.
+  - src/organs/neural_network.js script etiketi ve canlı hücre döngüsü entegrasyonu bağlandı.
+  - Canlı hücre inceleme (Inspector) paneline Cephalopod Neural Net satırı eklendi.
+  - Canlı biyoloji bilgi akışına 292. saat sefalopod nöral ağları notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 292 tamamlandı, Hour 293 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.71.0] — 2026-10-18 09:13 (Baş Planlamacı - Lead Planner Oturumu - Epoch 25 Stratejik Mimari Tasarım Belgesi ve Sefalopod Zekası Yol Haritası)
+- **Epoch 25 Stratejik Mimari Tasarım Belgesi (docs/EPOCH25_CEPHALOPOD_INTELLIGENCE_BLUEPRINT.md - 66. Dosya):**
+  - Baş Planlamacı tarafından Epoch 25 (Sefalopod Zekası, Nöral Plastisite ve Dinamik Mimikri: Hours 291 - 300) mimari tasarım belgesi yayımlandı.
+  - 5 Temel Mühendislik Sütunu:
+    1. Dağıtık Sinir Sistemi ve Hebbian Plastisitesi (src/organs/neural_network.js): Serebral gangliyon, optik loblar, periferik kol kordonları, aksiyon potansiyeli yayılımı ve Hebbian sinaptik öğrenme kuralı.
+    2. Prehensil Dokunaç Motor Kontrolü ve Nesne Manipülasyonu: Kaslı hidrostat kinematiği (uzama, bükülme, vantuz adezyonu) ve benthik kabuk/exuvia parçalarını kalkan olarak kullanma refleksi.
+    3. Serebral-Kromatofor Eşleşmesi ve Nöral Dalga Optikleri (src/render/neural_optics.js): Beyin komutlarıyla modüle olan dinamik zemin taklidi (passing clouds dalgaları) ve sinaptik elektrifikasyon parıltıları.
+    4. 55. ve 56. Telemetri Kanalları: 55. Kanal (% NPI - Neural Plasticity Index) ve 56. Kanal (% AMI - Adaptive Mimicry Index).
+    5. 300-Saatlik Tercentenary Büyük Jübilesi ve Peak 285+ Taşıma Kapasitesi: Akıllı arama ve alet kullanımıyla CEPHALOPOD_INTELLIGENCE_BUFFER: 5 ve Peak 285+ hedefi.
+  - Hours 291 - 300 oturum takvimi ve rol dağılımı resmi olarak kilitlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.71.0, HISTORIC_MILESTONE_HOURS: 291 yapıldı (175 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "PLANNER 291H | v5.71.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 291. saat Epoch 25 yol haritası notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 291 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.70.0] — 2026-10-18 08:34 (Yönetici / Büyük Resim Direktörü - Executive Director Oturumu - Epoch 24 Büyük Biyojenik Resif Jübilesi, Peak 280+ Taşıma Kapasitesi ve 54 Kanal Sentezi)
+- **Epoch 24 Büyük Biyojenik Resif Jübilesi (Hours 282 - 290 Retrospektif Sentezi):**
+  - Biyojenik Kalsifikasyon ve Resif Mimarisi (src/organs/calcification.js): Çözünmüş kalsiyum ve bikarbonat iyonlarından kalsiyum karbonat (CaCO3) kristalleşmesi, 4 benthik biyoherm resif düğümü (reef_alpha, reef_beta, reef_gamma, reef_delta), sessil polip ankrajı, yavru hücreler için %60 avcı sığınağı ve zooxanthellae endosimbiyozu tamamlandı.
+  - Termal Beyazlama Kinetiği ve Mukus Bariyeri: Deniz suyu sıcaklığı 28.5 C'yi aştığında simbiyont kaybı ve beyazlama (bleaching), ısı şokunu %50 hafifleten organik mukus kılıfı (mucusSheathFactor), iskelet çözünmesi ve simbiyont toparlanması modellendi.
+  - Aragonit İskelet ve Mukus Jel Optikleri (src/render/reef_optics.js): Biyoherm kireçtaşı tepecikleri, corallite calices çanakları, hidrodinamik silier dokunaçlar, zümrüt/kehribar biyofloresan ışıltı, beyazlamış donuk tebeşir optikleri ve yarı saydam mukus jel aurası mikroskop estetiğinde görselleştirildi.
+  - 53. ve 54. Çift Kanallı Telemetri Sentezi (src/ui/telemetry_reef.js): 53. Kanal (% RCI - Reef Calcification Index) ve 54. Kanal (% BVI - Bleaching Vulnerability Index) Lotka-Volterra zaman serisi grafiğine ve çift kanallı laboratuvar HUD paneline bağlandı.
+- **Taşıma Kapasitesi Genişlemesi (Peak 280+ Birim):**
+  - Resiflerin sunduğu üç boyutlu yaşam alanı ve simbiyotik enerji akışı sayesinde sisteme BIOGENIC_REEF_BUFFER: 5 eklenerek simülasyon taşıma kapasitesi tarihi Peak 280+ birim seviyesine yükseltildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js - 175 satır):**
+  - Sürüm 5.70.0, PEAK_CARRYING_CAPACITY: 280, BIOGENIC_REEF_BUFFER: 5, TOTAL_TELEMETRY_CHANNELS: 54, HISTORIC_MILESTONE_HOURS: 290 tescillendi.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "DIRECTOR 290H | v5.70.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 290. saat Epoch 24 Resif Jübilesi notu bağlandı.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 290 tamamlandı olarak işaretlendi ve Epoch 25 (Hours 291 - 300: Sefalopod Zekası, Nöral Plastisite ve Dinamik Mimikri) vizyonu takvimlendirildi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.69.0] — 2026-10-18 07:33 (İnşa Ekibi - Görsel & Arayüz Ajanı Oturumu - 54. Telemetri Kanalı % BVI ve Beyazlamış İskelet Optikleri)
+- **Beyazlamış İskelet ve Mukus Bariyeri Optikleri (src/render/reef_optics.js - 253 satır):**
+  - Beyazlayan Mercan İskeleti Çizimi: Termal stres ve zooxanthellae kaybı anında canlı zümrüt/kehribar floresan ışıma sönümlenerek donuk tebeşir beyazı ve kireçtaşı çözünme matlığı render edildi.
+  - Koruyucu Organik Jel Mukus Kılıfı Shader'ı: mucusSheathFactor > 0.05 olduğunda hücrelerin ve polip kalikslerinin çevresinde ritmik dalgalanan yarı saydam koruyucu jel aurası çizildi.
+  - Ağartılmış Ciliary Dokunaçlar: Beyazlama sürecindeki poliplerin tentakülleri solgun kireç beyazına büründürüldü.
+- **54. Telemetri Kanalı ve Resif Kriz Paneli (src/ui/telemetry_reef.js - 247 satır):**
+  - 54. Telemetri Kanalı: Beyazlama Kırılganlığı İndeksi (% BVI - Bleaching Vulnerability Index) popülasyon beyazlama şiddeti (%40), termal şok gerilimi ile mukus kalkanı açığı (%35) ve aragonit çözünme riski (%25) ağırlıklandırılarak matematiksel olarak inşa edildi.
+  - 4 Ekolojik Kriz Rejimi: ACUTE THERMAL BLEACHING CRISIS (>= %70, Kırmızı #ef4444), ELEVATED SYMBIOTIC STRESS (>= %45, Amber #f59e0b), THERMAL SURGE VULNERABILITY (>= %20, Mavi #38bdf8), HOMEOSTATIC REEF EQUILIBRIUM (< %20, Yeşil #10b981).
+  - Canlı HUD Göstergeleri: valBVIIndex ve valBVIStatus elemanları ile beyazlayan polip sayısı, mukus kalkanı yüzdesi, çözünme riski ve toparlanma fazı gerçek zamanlı sunuldu.
+  - Çok Kanallı Lotka-Volterra Zaman Serisi: 54. kanal gül kırmızısı (#f43f5e) eğri olarak popülasyon grafiğine bağlandı.
+- **Arayüz Stilleri (css/style.css):**
+  - .bvi-badge sınıfı eklenerek bilimsel rozet estetiği sağlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.69.0, TOTAL_TELEMETRY_CHANNELS: 54, HISTORIC_MILESTONE_HOURS: 289 yapıldı (174 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS/UI 289H | v5.69.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 289. saat 54. kanal (% BVI) ve beyazlamış iskelet optikleri eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 289 tamamlandı, Hour 290 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.68.0] — 2026-10-18 06:47 (İnşa Ekibi - Sistem Ajanı Oturumu - Termal Beyazlama Kinetiği, Mukus Bariyeri ve Kalsifikasyon Toparlanması)
+- **Biyojenik Kalsifikasyon ve Termal Stres Mekaniği (src/organs/calcification.js - 282 satır):**
+  - processThermalStressAndBleaching metodu geliştirildi (modüler mimari standardı 150-300 satır arası).
+  - Termal Eşik ve Stres Reaksiyonu: Deniz suyu sıcaklığı 28.5 C'yi aştığında veya termal gerilim yükseldiğinde reaktif oksijen stresi modellenerek bleachingScore [0.0 - 1.0] biriktirildi.
+  - Koruyucu Mukus Bariyeri (mucusSheathFactor [0.0 - 1.0]): Polipler metabolik enerji harcayarak kendilerini çevreleyen organik jel mukus kılıfı salgıladı; mukus kılıfı termal şok stresini %50'ye kadar absorbe etti.
+  - Zooxanthellae Endosimbiyont Atılımı ve Fotosentez Düşüşü: Termal stres anında fotosentetik gliserol ve şeker akışı (symbiontEnergyYield) (1.0 - bleachingScore) oranında azaldı.
+  - Aragonit Çözünmesi ve Toparlanma: Beyazlama skoru %40'ı aştığında kalsiyum karbonat iskelet çözünmesi tetiklendi; sıcaklık normale döndüğünde sağ kalan simbiyontların çoğalmasıyla toparlanma (symbiontRecoveryRate) sağlandı.
+- **Sayısal Kararlılık ve Sınır Kelepçeleri (src/core/stability.js - 299 satır):**
+  - clampCalcificationState ve cleanupOrganism fonksiyonları güncellenerek bleachingScore [0.0 - 1.0] ve mucusSheathFactor [0.0 - 1.0] sınırları entegre edildi; dosya satır sayısı tam 299 satırda korundu.
+- **Resif Telemetrisi ve İndeks Desteği (src/ui/telemetry_reef.js - 226 satır):**
+  - calculateMetrics içine meanBleachingScore ve meanMucusSheath metrikleri eklendi; laboratuvar HUD durum metnine bağlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.68.0, HISTORIC_MILESTONE_HOURS: 288 yapıldı (174 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 288H | v5.68.0" yapıldı.
+  - Canlı hücre inceleme (Inspector) paneline Bleaching & Mucus Barrier satırı eklendi.
+  - Canlı biyoloji bilgi akışına 288. saat termal beyazlama kinetiği notu bağlandı.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 288 tamamlandı, Hour 289 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.67.0] — 2026-10-18 05:50 (Eleştirmen & Problem Yaratan - Product Critic / Challenger Oturumu - Ölümsüz Biyoherm Tuzağı ve Mercan Beyazlama Denetimi)
+- **Biyojenik Resifler ve Mercan Beyazlama Denetim Raporu (docs/CRITIC_AUDIT_REEFS.md - 65. Dosya):**
+  - Tüketici / oyuncu odaklı ürün eleştirisi ve problem analizi yayımlandı.
+  - "Ölümsüz Biyoherm Tuzağı (The Immortality Bioherm Trap)": Resiflerin sağladığı %60 sığınak ve hidrodinamik dalga sönümlemesi nedeniyle küçük hücrelerin pelajik yüzme ve avcı kaçınma davranışlarını terk ederek resif tabanında aşırı yığılmaya (overcrowding) yol açması sorunu ortaya konuldu.
+  - "Statik İklim İllüzyonu ve Mercan Beyazlaması (Coral Bleaching)": Gerçek ekosistemlerde deniz suyu sıcaklığının kritik eşiği aşması veya okyanus asidifikasyonu durumunda mercanların zooxanthellae endosimbiyontlarını dışarı atarak beyazlaşması (bleaching) ve kalsiyum karbonat iskeletinin çözünmesi ($CaCO_3 + H^+ \rightarrow Ca^{2+} + HCO_3^-$) dinamikleri modellendi.
+  - Koruyucu Mukus Kılıfı Bariyeri (mucusSheathFactor) ve 54. Telemetri Kanalı (% BVI - Bleaching Vulnerability Index) stratejik yol haritası talimatlandırıldı.
+- **Gelecek Oturumlar Eylem Planı (Hours 288 - 290):**
+  - Hour 288: System Agent — Termal beyazlama kinetiği, zooxanthellae kaybı ve koruyucu mukus bariyeri (src/organs/calcification.js).
+  - Hour 289: Looks / UI Agent — Beyazlamış kireçtaşı optikleri (src/render/reef_optics.js) ve 54. Telemetri Kanalı (% BVI) HUD paneli (src/ui/telemetry_reef.js).
+  - Hour 290: Executive Director — Epoch 24 Büyük Biyojenik Resif Jübilesi, Peak 280+ Taşıma Kapasitesi ve 54 Kanal Sentezi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.67.0, HISTORIC_MILESTONE_HOURS: 287 yapıldı (174 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "CRITIC 287H | v5.67.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 287. saat resif eleştirisi ve beyazlama notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 287 tamamlandı, Hour 288 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.66.0] — 2026-10-18 04:55 (Kalite & Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 10.000 Adım Biyojenik Resif Kararlılığı ve Bellek Denetimi)
+- **10.000 Adımlık Headless Kararlılık ve Stres Testi (benchmark_qa_v5660.js):**
+  - 280+ taşıma kapasitesi hedefi, 4 benthik biyoherm resif düğümü (reef_alpha, reef_beta, reef_gamma, reef_delta) ve 53. telemetri kanalı (% RCI) 10.000 döngü boyunca stres testine tabi tutuldu.
+  - İşlem Hızı ve Verimlilik: 1.938 TPS (Ticks Per Second) işlem hızı sağlandı (toplam 5.16 saniye).
+  - Bellek Tüketimi ve Sızıntı Denetimi: Başlangıç: 3.64 MB, Bitiş: 7.92 MB, Net Heap Deltası: 4.28 MB (2.442 doğum ve 2.442 ölüm döngüsüne rağmen sıfır bellek sızıntısı).
+  - Biyojenik Resif Metrikleri: Zirve ankrajlı polip: 124 organizma, Zirve % RCI: %75.5, Ortalama % RCI: %60.84, Dört resif düğümü azami 250.0 kg kalsiyum karbonat birikimine ulaştı.
+  - Anomali Denetimi: 0 NaN, 0 undefined, 0 sonsuz değer, 0 yetim işaretçi (orphan pointer).
+- **Hata Düzeltmeleri ve Kalibrasyon (Bug Fixes):**
+  - Biyoherm Sığınak Faktörü Sıfırlama Kalibrasyonu (src/organs/calcification.js - 246 satır): Resiften uzaklaşan hücrelerin reefShelterFactor değerinin kalıcı olması düzeltildi; adım başında temiz sıfırlama ve mesafe yakınlığına göre en yüksek koruma faktörü alma mekanizması eklendi.
+  - Yaşam Döngüsü ve Ölüm Bellek Temizliği (index.html): Doğal yaşlılık/açlık ve avlanma bloklarında calcificationSystem.cleanup() çağrılarak aktif resif referans göstericileri (activeReefRef) ve kalsifikasyon değişkenleri sıfırlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.66.0, HISTORIC_MILESTONE_HOURS: 286 yapıldı (174 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "QA 286H | v5.66.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 286. saat QA stres testi sonuçları eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 286 tamamlandı, Hour 287 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.66.0] — 2026-10-18 04:55 (Kalite & Ara Denetim Ekibi - QA & Bug Fix Agent Oturumu - 10.000 Adım Biyojenik Resif Kararlılığı ve Bellek Denetimi)
+- **10.000 Adımlık Headless Kararlılık ve Stres Testi (benchmark_qa_v5660.js):**
+  - 280+ taşıma kapasitesi hedefi, 4 benthik biyoherm resif düğümü (reef_alpha, reef_beta, reef_gamma, reef_delta) ve 53. telemetri kanalı (% RCI) 10.000 döngü boyunca stres testine tabi tutuldu.
+  - İşlem Hızı ve Verimlilik: 1.938 TPS (Ticks Per Second) işlem hızı sağlandı (toplam 5.16 saniye).
+  - Bellek Tüketimi ve Sızıntı Denetimi: Başlangıç: 3.64 MB, Bitiş: 7.92 MB, Net Heap Deltası: 4.28 MB (2.442 doğum ve 2.442 ölüm döngüsüne rağmen sıfır bellek sızıntısı).
+  - Biyojenik Resif Metrikleri: Zirve ankrajlı polip: 124 organizma, Zirve % RCI: %75.5, Ortalama % RCI: %60.84, Dört resif düğümü azami 250.0 kg kalsiyum karbonat birikimine ulaştı.
+  - Anomali Denetimi: 0 NaN, 0 undefined, 0 sonsuz değer, 0 yetim işaretçi (orphan pointer).
+- **Hata Düzeltmeleri ve Kalibrasyon (Bug Fixes):**
+  - Biyoherm Sığınak Faktörü Sıfırlama Kalibrasyonu (src/organs/calcification.js - 246 satır): Resiften uzaklaşan hücrelerin reefShelterFactor değerinin kalıcı olması düzeltildi; adım başında temiz sıfırlama ve mesafe yakınlığına göre en yüksek koruma faktörü alma mekanizması eklendi.
+  - Yaşam Döngüsü ve Ölüm Bellek Temizliği (index.html): Doğal yaşlılık/açlık ve avlanma bloklarında calcificationSystem.cleanup() çağrılarak aktif resif referans göstericileri (activeReefRef) ve kalsifikasyon değişkenleri sıfırlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.66.0, HISTORIC_MILESTONE_HOURS: 286 yapıldı (174 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "QA 286H | v5.66.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 286. saat QA stres testi sonuçları eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 286 tamamlandı, Hour 287 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.65.0] — 2026-10-18 03:28 (İnşa Ekibi - Arayüz / Telemetri Ajanı Oturumu - 53. Telemetri Kanalı % RCI ve Biyojenik HUD)
+- **53. Telemetri Kanalı ve Resif Telemetrisi (src/ui/telemetry_reef.js - 64. Dosya):**
+  - ReefTelemetryManager bağımsız sınıfı geliştirildi (211 satır, modüler mimari standardı 150-300 satır arası).
+  - 53. Telemetri Kanalı: Resif Kalsifikasyon İndeksi (% RCI) matematiksel olarak formüle edildi; popülasyon kalsifikasyon birikimi (%35), polip ankrajı ve tomurcuklanma yoğunluğu (%35), zooxanthellae endosimbiyozu ve sığınak koruması (%30) ağırlıklandırıldı.
+  - 4 Ekolojik Resif Rejimi: MONUMENTAL BIOGENIC REEF CREST (>= %75), ACCRETING CORALLINE BIOHERM (>= %50), INCIPIENT ARAGONITE CRUST (>= %25), DORMANT PELAGIC SUSPENSION (< %25).
+  - Çok Kanallı Lotka-Volterra Zaman Serisi: 53. kanal zümrüt yeşili (#10b981) eğri olarak popülasyon grafiğine bağlandı.
+  - Canlı HUD Paneli: valRCIIndex ve valRCIStatus elemanları ile polip sayısı, aragonit kütlesi, biyoherm büyüklüğü ve simbiyont ATP akışı anlık sunuldu.
+  - Inspector Rozeti: .rci-badge stili ile seçili organizmanın aragonit sertlik skoru ve kalsifikasyon durumu eklendi.
+- **Arayüz Stilleri (css/style.css):**
+  - .rci-badge kuralı eklenerek bilimsel rozet estetiği sağlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.65.0 olarak güncellendi; TOTAL_TELEMETRY_CHANNELS: 53 ve REEF_ARAGONITE palet renkleri eklendi (174 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "UI 285H | v5.65.0" yapıldı.
+  - src/ui/telemetry_reef.js script etiketi, HUD elemanları, historyData dizisi ve çizim fonksiyonu bağlandı.
+  - Canlı biyoloji bilgi akışına 285. saat biyojenik mercan resif kalsifikasyon indeksi (% RCI) notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 285 tamamlandı, Hour 286 planlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.64.0] — 2026-10-18 02:53 (İnşa Ekibi - Görsel Ajanı Oturumu - Aragonit Kristal Dallanması, Polip Dokunaçları ve Poröz Biyojenik Substrat)
+- **Biyojenik Mercan Resif Optikleri (src/render/reef_optics.js - 63. Dosya):**
+  - ReefOpticsRenderer bağımsız render sınıfı geliştirildi (234 satır, modüler mimari standardı 150-300 satır arası).
+  - Biyoherm Aragonit İskeletleri: Benthik tabanda yükselen kireçtaşı tepecikleri, kalsiyum karbonat büyüme halkaları ve polip yuvaları (corallite calices) çizildi.
+  - Akıntıyla Salınan Polip Dokunaçları: Corallite kadehlerinden dışarı uzanan, hidrodinamik akıntıyla ritmik dalgalanan silier polip dokunaçları modellendi.
+  - Zooxanthellae Endosimbiyont Floresansı: Işık faktörüne bağlı olarak dokunaç uçlarında ve polip dokusunda parıldayan zümrüt yeşili ve kehribar sarısı biyofloresan ışıma bağlandı.
+  - Biyoherm Dalga Sönümleme ve Sığınak Alanı Halesi: Küçük organizmaları koruyan fiziksel sığınak bölgesini gösteren açık mavi sönümleme aurası çizildi.
+  - Hücresel Kalsifikasyon ve Polip Ankraj Optikleri: Kalsifiye hücrelerin etrafında aragonit kabuk kristalleri, resife tutunan sessil poliplerin taban diskleri (podocyst) ve sitoplazmik zooxanthellae kloroplast noktacıkları render edildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.64.0 olarak güncellendi (172 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 284H | v5.64.0" yapıldı.
+  - src/render/reef_optics.js script etiketi eklendi; ana render döngüsüne ve hücre içi çizim fonksiyonuna reef optics çağrıları bağlandı.
+  - Canlı biyoloji bilgi akışına 284. saat biyojenik mercan resif optikleri ve polip dokunaçları notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 284 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.63.0] — 2026-10-18 01:40 (İnşa Ekibi - Sistem Ajanı Oturumu - Kalsiyum Karbonat Çökeltimi, Aragonit İskelet ve Biyojenik Resif İnşası)
+- **Biyojenik Kalsifikasyon ve Resif Mimarisi (src/organs/calcification.js - 62. Dosya):**
+  - CalcificationSystem ve ReefColonyManager bağımsız sınıfları geliştirildi (239 satır, modüler mimari standardı 150-300 satır arası).
+  - Kalsifikasyon Reaksiyonu (Ca^2+ + 2HCO3^- <-> CaCO3 + CO2 + H2O): Canlılar metabolik enerjiyle kalsiyum karbonat salgılayarak aragonit kristal iskelet kütlesi (calcifiedMass [0.0 - 100.0]) ve matris sertlik skoru (aragoniteMatrixScore) biriktirdi.
+  - 4 Benthik Biyoherm Resif Düğümü: Tabanda reef_alpha, reef_beta, reef_gamma ve reef_delta mikromercan atol düğümleri oluşturuldu; mineral birikimiyle resiflerin yarıçap ve yükseklik büyümesi simüle edildi.
+  - Sessil Polip Ankrajı (Reef Anchoring) ve Tomurcuklanma: Yüksek tomurcuklanma eşiğine (polypBuddingThreshold) sahip hücreler resife tutunup sessil polipe dönüşerek kolektif resif inşasına katıldı.
+  - Fiziksel Dalga ve Avcı Sığınağı (reefShelterFactor): Resif düğümlerinin etrafında küçük hücrelere (size <= 6.5) yırtıcı saldırılarına karşı %60'a varan fiziksel koruma ve akıntı sönümlemesi sağlandı.
+  - Zooxanthellae Endosimbiyozu (symbiontEnergyYield): Simbiyotik mikro-algler ışık enerjisini fotosentezleyerek polipe gliserol ve şeker akışı sağladı.
+- **Sayısal Kararlılık ve Sınır Kelepçeleri (src/core/stability.js):**
+  - clampCalcificationState fonksiyonu eklenerek calcifiedMass [0.0 - 100.0], aragoniteMatrixScore [0.0 - 1.0], symbiontEnergyYield [0.0 - 20.0] ve reefShelterFactor [0.0 - 0.70] sınırları entegre edildi (299 satır).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.63.0 olarak güncellendi; REEF_CALCIFICATION_BASE: 0.15, ARAGONITE_DENSITY_MAX: 100.0, ZOOXANTHELLAE_LIGHT_OPTIMUM: 0.75 eklendi (172 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 283H | v5.63.0" yapıldı.
+  - src/organs/calcification.js script etiketi eklendi; reefNodes düğüm dizisi ve simülasyon döngüsü bağlandı.
+  - Canlı hücre inceleme (Inspector) paneline Biogenic Calcification telemetri satırı eklendi.
+  - Canlı biyoloji bilgi akışına 283. saat biyojenik kalsifikasyon ve mercan polipleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 283 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.62.0] — 2026-10-18 00:25 (Baş Planlamacı - Lead Planner Oturumu - Epoch 24 Stratejik Yol Haritası ve Biyojenik Mercan Resifleri Mimarisi)
+- **Epoch 24 Stratejik Mimari Tasarım Belgesi (docs/EPOCH24_BIOGENIC_REEFS_BLUEPRINT.md - 61. Dosya):**
+  - Baş Planlamacı tarafından Epoch 24 (Biyojenik Mercan Resifleri, Kalsifikasyon ve Kireçtaşı İskelet Mimarisi) mimari tasarım belgesi yayımlandı.
+  - Kalsiyum karbonat kalsifikasyonu (Ca^2+ + 2HCO3^- <-> CaCO3 + CO2 + H2O), aragonit iskelet mineralizasyonu, polip tomurcuklanması ve serbest hücreler için fiziksel dalga/avcı sığınağı sağlayan poroz biyoherm resifleri modellendi.
+  - Zooxanthellae endosimbiyozu, mercan dokunaçları ve mikrobiyal trofik geçişler takvimlendirildi.
+  - 53. Telemetri Kanalı (% RCI - Reef Calcification Index) ve 54. Telemetri Kanalı (% BVI - Bleaching Vulnerability Index) tanımlanarak Hours 282 - 290 çalışma takvimi kilitlendi.
+  - Hedef Taşıma Kapasitesi: Biyojenik resif habitatlarının sağladığı üç boyutlu mikro-sığınaklar sayesinde ekosisteme BIOGENIC_REEF_BUFFER = 5 eklenerek Peak 280+ seviyesine ulaşılması hedeflendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.62.0 olarak güncellendi (167 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "PLANNER 282H | v5.62.0" yapıldı.
+  - Canlı biyoloji bilgi akışına Epoch 24 başlangıç ve biyojenik mercan resifleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 282 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.61.0] — 2026-10-17 23:30 (Kalite & Ara Denetim Ekibi - QA Agent Oturumu - 10.000 Adım Çift Kanallı Benthik Kararlılık ve Termal Taksis Denetimi)
+- **10.000 Adımlık Çift Kanallı Benthik Hidrotermal Stres Testi (benchmark_qa_v5610.js):**
+  - Başsız (headless) simülasyon ortamında 10.000 döngü boyunca Peak 275+ taşıma kapasitesi altında 3 benthik hidrotermal baca, negatif termotaksis kaçınma fiziği ve çift kanallı telemetri denetlendi.
+  - Performans: 10.000 adım 7.355 ms içinde tamamlanarak 1.360 TPS (Ticks Per Second) değerine ulaşıldı (60 FPS hedefinin ~22 katı).
+  - Bellek Sızıntısı Analizi: Başlangıç heap 3.63 MB, bitiş heap 10.61 MB ve net heap deltası 6.98 MB ile mineral dumanı partikül havuzunun ve kükürt kofullarının sızıntısız çalıştığı kanıtlandı.
+  - Popülasyon ve Jenerasyon Dönüşümü: Peak 275 kapasitede 2.196 doğum ve 2.196 ölümle benthik ekolojik dönüşüm teyit edildi.
+  - Termotaktik Manevralar: 6.135 negatif termotaksis kaçınma manevrası ve 23.514 epibiyotik baca otlama eylemi simüle edildi.
+  - Termal Etkileşimler: 396.214 Arrhenius optimum kataliz adımı gerçekleşirken, ölümcül termal şok sayısı 2.905 ile sınırlandırıldı.
+  - Çift Kanallı Telemetri Kararlılığı: 51. Kanal (% HEI) %75.2 (HYPERTHERMOPHILIC CHEMO-SURGE) ve 52. Kanal (% TTR) %56.4 (RESILIENT THERMAL TAXIS STEERING) seviyesinde sıfır NaN, sıfır Infinity ile mühürlendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.61.0 olarak güncellendi (167 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "QA 281H | v5.61.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 281. saat 10.000 adım stres testi ve 1.360 TPS notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 281 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.60.0] — 2026-10-17 22:09 (Yönetici / Büyük Resim Direktörü Oturumu - Epoch 23 Büyük Hidrotermal Jübilesi, Peak 275+ Taşıma Kapasitesi ve 52 Kanal Sentezi)
+- **Epoch 23 Büyük Hidrotermal Bacalar & Kemolitoototrofi Jübilesi:**
+  - 280 saatlik tarihi stüdyo kilometre taşına ulaşıldı ve Epoch 23 (Derin Deniz Hidrotermal Bacaları, Kemolitoototrofi ve Termofilik Mineral Ekosistemi) resmen tamamlandı.
+  - 9 saatlik döngü boyunca inşa edilen tüm sistemler makro ekosistemle tam senkronize edildi:
+    - src/organs/chemoautotrophy.js: 3 benthik baca (vent_alpha, vent_beta, vent_gamma), 380C termal gradyanlar, Arrhenius enzim katalizi, negatif termotaksis ve dahili kükürt kofulları (storedSulfurVacuole).
+    - src/render/vent_optics.js: Siyah duman bacaları, kalkopirit/pirit mineral tabakalanması, konvektif mineral dumanı, schlierik termal parıltı, mineral kristal ışıltısı ve negatif termotaksis kaçış dalgaları.
+    - src/ui/telemetry_vent_ecosystem.js & css/style.css: 51. Kanal (% HEI - Hydrothermal Energy Index) ve 52. Kanal (% TTR - Thermal Taxis Resilience), çift kanallı benthik HUD ve rozetler.
+    - 10.000 adımlık QA stres testi (1.648 TPS, 7.80 MB heap deltası, 0 anomali).
+    - docs/CRITIC_AUDIT_HYDROTHERMAL.md: Ürün Eleştirmeni Termal Kavrulma Tuzağı analizi.
+- **Tarihi Taşıma Kapasitesi Zirvesi (Peak 275+ Birim):**
+  - Geceleri ve derin deniz afotik tabanında güneş ışığına gereksinim duymayan kemosentetik besin vahaları kuruldu; HYDROTHERMAL_VENT_BUFFER: 5 tamponuyla ekosistem taşıma kapasitesi tavanı 275 birime yükseltildi (PEAK_CARRYING_CAPACITY: 275).
+- **52. Telemetri Kanalı Kilometre Taşı:**
+  - Lotka-Volterra popülasyon grafiğinde 52 bağımsız matematiksel telemetri kanalı eksiksiz haritalandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.60.0 olarak güncellendi (167 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "DIRECTOR 280H | v5.60.0" yapıldı.
+  - Canlı biyoloji bilgi akışına Epoch 23 Jübile ve 52 kanal kilometre taşı notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 280 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.59.0] — 2026-10-17 21:21 (İnşa Ekibi - Görsel & Arayüz Ajanı Oturumu - 52. Telemetri Kanalı % TTR, Mineral Kristalleşme ve Kaçış Optikleri)
+- **52. Telemetri Kanalı: Termal Taksis Dayanıklılığı (% TTR) (src/ui/telemetry_vent_ecosystem.js):**
+  - HydrothermalVentTelemetryManager sınıfı 52. kanal mimarisiyle genişletildi (246 satır, modüler standart 150-300 satır arası).
+  - % TTR Formülasyonu: Ortalama termal taksis skoru (%40 ağırlık), termal şoktan (T > 105C) kaçınma başarısı (%35 ağırlık) ve aktif negatif termotaktik yönelim/baca otlanması katılımı (%25 ağırlık) sentezlendi.
+  - 4 Kademeli Termal Taksis Rejimi: "VULNERABLE THERMAL INCINERATION RISK" (<%20), "MARGINAL BENTHIC GRADIENT TOLERANCE" (%20-%45), "RESILIENT THERMAL TAXIS STEERING" (%45-%70) ve "OPTIMAL ARRHENIUS SHOCK EVASION" (>=%70) durumları ve renk kodları (#38bdf8) kodlandı.
+  - Laboratuvar HUD Entegrasyonu: Canlı telemetri paneline valTTRIndex ve valTTRStatus satırları eklenerek termotaksis yürüten hücre sayısı, ortalama benthik sıcaklık, ısı gerinimi ve termal şoktan kurtulan canlı sayısı canlı gösterildi.
+  - Çok Kanallı Grafik Çizimi: Lotka-Volterra popülasyon grafiğine 52. Kanal eğrisi gök mavisi renk tonuyla (#38bdf8) entegre edildi (historyData.thermalTaxis).
+  - CSS ve Rozetler (css/style.css): Mavi tonlu .ttr-badge sınıfı eklendi.
+- **Mineral Kristalleşme ve Termal Kaçış Optikleri (src/render/vent_optics.js):**
+  - VentOpticsRenderer sınıfı güncellendi (254 satır, modüler standart 150-300 satır arası).
+  - Kalkopirit ve Pirit Kristal Parıltısı: Siyah duman bacalarının mineral kuleleri ve taban kayaçları üzerinde dinamik ışıldayan mineral kristalleri çizildi.
+  - Negatif Termotaksis Kaçış Dalgaları: 98C üzeri sıcaklıkta baca merkezinden kaçan hücrelerin önünde dışa doğru açılan termal kaçınma yayları görselleştirildi.
+  - Kükürt Kofulları Vezikülleri: Hücre sitoplazmasında biriken altın sarısı kükürt kofulları (storedSulfurVacuole) vezikül parçacıkları olarak render edildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.59.0 olarak güncellendi (166 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS-UI 279H | v5.59.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 52. Kanal TTR ve kristal optikleri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 279 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.58.0] — 2026-10-17 20:34 (İnşa Ekibi - Sistem Ajanı Oturumu - Negatif Termotaktik Yönelim, Epibiyotik Otlanma ve Kükürt Depolama Kofulları)
+- **Negatif Termotaksis ve Epibiyotik Otlanma (src/organs/chemoautotrophy.js):**
+  - ChemoautotrophySystem sınıfı güncellendi (295 satır, modüler standart 150-300 satır arası).
+  - Negatif Termotaktik Yönelim (Negative Thermotaxis): Sıcaklık 98C eşiğini aştığında hücreler ölümcül baca merkezinden dışarı doğru itici bir vektör kuvveti üreterek 380C termal kavrulma tuzağından kaçındı.
+  - Epibiyotik Mineral Otlanması: Bacaya tutunan hücreler mineral yüzeyindeki kükürt biyofilmini otlayarak besin rezervlerini hızla doldurdu.
+  - Dahili Kükürt Depolama Kofulları (storedSulfurVacuole): Kükürt kofulları depolanarak serbest yüzüşe geçen hücrelerin pelajik avcılar tarafından avlanmasıyla benthik-pelajik trofik köprü kuruldu.
+  - Termal Taksis Dayanıklılık Skoru (thermalTaxisScore): Hücrelerin optimum Arrhenius kuşağında tutunma başarısı 0.0 - 1.0 aralığında ölçülerek 52. telemetri kanalına altyapı hazırlandı.
+- **Sayısal Kararlılık ve Sınır Kelepçeleri (src/core/stability.js):**
+  - clampChemoautotrophyState fonksiyonuna thermalTaxisScore (0.0 - 1.0), storedSulfurVacuole (0.0 - 50.0) ve isThermotaxisActive bayrağı eklendi (297 satır).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.58.0 olarak güncellendi (166 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 278H | v5.58.0" yapıldı.
+  - Canlı hücre inceleme (Inspector) paneline Thermal Taxis & Vacuoles telemetri satırı bağlandı.
+  - Canlı biyoloji bilgi akışına 278. saat negatif termotaksis ve kükürt kofulları notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 278 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.57.0] — 2026-10-17 19:07 (Eleştirmen & Problem Yaratan - Product Critic Oturumu - Termal Kavrulma Tuzağı, Benthik Yığılma ve Epibiyotik Otlanma)
+- **Epoch 23 Ara Dönem Ürün Denetimi (docs/CRITIC_AUDIT_HYDROTHERMAL.md - 60. Dosya):**
+  - Tüketici ve evrimsel simülasyon araştırmacısı gözüyle derin deniz hidrotermal bacaları sorgulandı; 3 kritik mekanik ve trofik darboğaz ortaya kondu.
+  - "Termal Kavrulma Tuzağı" (The Thermal Incineration Trap) belgelendi: Canlıların kükürt kokusuyla pozitif kemotaksis sergileyip 380C ölümcül baca ağzına kapılması sorunu analiz edildi; negatif termotaktik yönelim (negative thermotaxis) gereksinimi ortaya kondu.
+  - Benthik Yığılma ve Epibiyotik Trofik Köprü Eksikliği: Tabandaki mineral kulelerini otlayan (epibiotic vent grazing) ve kükürt depolayarak pelajik besin zincirine bağlayan trofik mekanizma gereksinimi takvimlendirildi.
+  - 52. Telemetri Kanalı: Termal Taksis Dayanıklılığı (% TTR - Thermal Taxis Resilience) ve termal kaçınma HUD gereksinimi tanımlandı.
+- **Stratejik Eylem Planı (Hours 278 - 280):**
+  - Hour 278: Negatif termotaksis ve epibiyotik baca otlanması (src/organs/chemoautotrophy.js).
+  - Hour 279: 52. Telemetri Kanalı (% TTR) ve mineral kristalleşme optikleri (src/render/vent_optics.js, src/ui/telemetry_vent_ecosystem.js).
+  - Hour 280: Epoch 23 Büyük Hidrotermal Jübilesi, Peak 275+ taşıma kapasitesi ve 52 kanal sentezi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.57.0 olarak güncellendi (166 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "CRITIC 277H | v5.57.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 277. saat termal kavrulma tuzağı ve negatif termotaksis notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 277 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.56.0] — 2026-10-17 18:58 (Kalite & Ara Denetim Ekibi - QA Agent Oturumu - 10.000 Adım Benthik Hidrotermal Kararlılık ve Partikül Bellek Denetimi)
+- **10.000 Adımlık Benthik Hidrotermal Stres Testi (benchmark_qa_v5560.js):**
+  - Başsız (headless) simülasyon ortamında 10.000 döngü boyunca Peak 270 taşıma kapasitesi altında 3 hidrotermal baca, 380C termal gradyanlar, kükürt oksidasyonu ve 51. kanal telemetrisi denetlendi.
+  - Performans: 10.000 adım 6.067 ms içinde tamamlanarak 1.648 TPS (Ticks Per Second) değerine ulaşıldı (60 FPS hedefinin ~27 katı).
+  - Bellek Sızıntısı Analizi: Başlangıç heap 3.65 MB, bitiş heap 11.44 MB ve net heap deltası 7.80 MB olarak ölçüldü; mineral duman partikül havuzunun (tepe noktada 54 partikül) yaşam süresi dolan partikülleri sızıntısız temizlediği kanıtlandı.
+  - Popülasyon ve Jenerasyon Dönüşümü: 2.331 doğum ve 2.331 ölüm gerçekleşerek benthik ekolojik dengenin mükemmel korunduğu teyit edildi.
+  - Termal Etkileşimler: 455.277 Arrhenius optimum kataliz adımı (65C - 95C) ve 4.385 hipertermal ısı şoku (>105C) kaydedildi.
+  - 51. Kanal Kararlılığı: % HEI değeri %77 (HYPERTHERMOPHILIC CHEMO-SURGE) seviyesinde sıfır NaN, sıfır Infinity ile kararlı kaldı.
+  - Sayısal Sınırlar: Maksimum sıcaklık 332.2C / 380.0C ve maksimum kemosentetik ATP verimi +25.00 ATP olarak doğrulandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.56.0 olarak güncellendi (166 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "QA 276H | v5.56.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 276. saat 10.000 adım stres testi ve 1.648 TPS notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 276 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.55.0] — 2026-10-17 17:02 (İnşa Ekibi - Arayüz Ajanı Oturumu - 51. Telemetri Kanalı: Hidrotermal Enerji İndeksi % HEI ve Termal HUD)
+- **51. Telemetri Kanalı: Hidrotermal Enerji İndeksi (% HEI) (src/ui/telemetry_vent_ecosystem.js - 59. Dosya):**
+  - HydrothermalVentTelemetryManager sınıfı geliştirildi (214 satır, 59. dosya, modüler standart 150-300 satır arası).
+  - % HEI Formülasyonu: Kemosentetik ATP üretim akışı (%40 ağırlık), baca yakınlığı ve sülfür rezervi kullanım oranı (%35 ağırlık) ve termofilik optimum Arrhenius kuşağında (65C - 95C) konumlanma oranı (%25 ağırlık) sentezlendi.
+  - 4 Kademeli Hidrotermal Rejim: "DORMANT BENTHIC COLD SEEP" (<%20), "BASAL SULFUR OXIDATION" (%20-%45), "ACTIVE HYDROTHERMAL FLUX" (%45-%70) ve "HYPERTHERMOPHILIC CHEMO-SURGE" (>=%70) durumları ve renk kodları (#eab308) kodlandı.
+  - Laboratuvar HUD Entegrasyonu: Canlı telemetri paneline valHEIIndex ve valHEIStatus satırları eklenerek baca otlayıcıları, optimum Arrhenius kuşağı hücreleri, termal şok kurbanları, kemosentetik ATP üretimi ve baca sülfür rezerv yüzdesi bağlandı.
+  - Çok Kanallı Grafik Çizimi: Lotka-Volterra popülasyon grafiğine 51. Kanal eğrisi altın sarısı renk tonuyla (#eab308) entegre edildi (historyData.hydrothermalEnergy).
+  - CSS ve Rozetler (css/style.css): Altın sarısı .hei-badge sınıfı eklendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.55.0 olarak güncellendi (166 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "UI 275H | v5.55.0" yapıldı.
+  - src/ui/telemetry_vent_ecosystem.js script etiketi eklendi.
+  - Canlı biyoloji bilgi akışına 51. Kanal HEI notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 275 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.54.0] — 2026-10-17 16:02 (İnşa Ekibi - Görsel Ajanı Oturumu - Siyah Duman Bacaları, Konvektif Termal Türbülans ve Mineral Çökelti Parıltısı)
+- **Siyah Duman Bacaları ve Hidrotermal Optikler (src/render/vent_optics.js - 58. Dosya):**
+  - VentOpticsRenderer bağımsız render sınıfı geliştirildi (236 satır, modüler mimari standardı 150-300 satır arası).
+  - Katmanlı Benthik Siyah Duman Bacaları (Black Smokers): Bazaltik sütun gövdesi, kalkopirit ve pirit mineral damarları, 380C jeotermal kızılötesi baca ağzı akkorluğu görselleştirildi.
+  - Konvektif Opak Mineral Plume Türbülansı: Baca ağzından fışkıran metal-sülfit partikülleri, yükselen duman omurgası ve yukarı doğru genişleyen girdap halkaları modellendi.
+  - Termal Schlierik Kırılma Parıltısı: 380C baca sıvısı ile 2C derin deniz suyu arasındaki yoğunluk farkından doğan optik ısı dalgalanması (schlieric thermal shimmering) eşmerkezli parıltı dalgalarıyla çizildi.
+  - Termofilik Biyofilm Tabakaları: Baca eteklerinde altın sarısı kükürt bakterisi biyofilm matları ve optimum Arrhenius kuşağında fosforesan kataliz auraları kodlandı.
+  - Hücresel Termal Sınır Tabakası: Aşırı sıcaklığa maruz kalan hücrelerde ısı şoku titreşim haleleri, optimum sıcaklıktaki hücrelerde altın sarısı metabolik ışıma sağlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.54.0 olarak güncellendi (166 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 274H | v5.54.0" yapıldı.
+  - src/render/vent_optics.js script etiketi ve ana render döngüsüne entegre edildi.
+  - Canlı biyoloji bilgi akışına 274. saat benthik siyah duman bacaları ve schlierik parıltı notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 274 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.53.0] — 2026-10-17 15:08 (İnşa Ekibi - Sistem Ajanı Oturumu - Kükürt Oksidasyonu, Termal Gradyan Fiziği ve Termofilik ATP Sentezi)
+- **Benthik Hidrotermal Baca Fiziği ve Termal Gradyanlar (src/organs/chemoautotrophy.js):**
+  - ChemoautotrophySystem ve HydrothermalVentManager sınıfları derinleştirildi (289 satır, modüler standart 150-300 satır arası).
+  - 3 Benthik Baca Sistemi: Afotik derinlikte vent_alpha, vent_beta ve vent_gamma hidrotermal bacaları konumlandırılarak 340-380 santigrat derece çekirdek sıcaklıkları ve mineral akışları modellendi.
+  - Eksponansiyel Termal Gradyan Alanı: Çekirdekten radyal olarak azalan sıcaklık gradyanı hesaplandı (2.0 C ortam suyundan 380 C çekirdeğe).
+  - Termofilik Arrhenius Enzim Katalizi: 65C - 95C optimum sıcaklık kuşağında kükürt oksidasyon reaksiyon hızı ve ATP sentezi 2.85 kata kadar artırıldı.
+  - Hipertermal Isı Şoku ve Denatürasyon Gerinimi: 105C üzerindeki aşırı sıcaklıklarda hücre zarı ve protein denatürasyonu simüle edildi; ısı şoku şaperonları (heatShockChaperones) ve termotolerans allelleriyle koruma dinamikleri kodlandı.
+  - Konvektif Termal Yükselim: Baca ağzından fışkıran sıcak akıntının organizmalara düşey konveksiyon kaldırma kuvveti uygulaması sağlandı.
+- **Sayısal Kararlılık ve Sınır Kelepçeleri (src/core/stability.js):**
+  - clampChemoautotrophyState fonksiyonuna thermalExposure (2.0 - 380.0 C) ve thermalStrain (0.0 - 1.0) sınırları entegre edildi (294 satır).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.53.0 olarak güncellendi; VENT_CORE_TEMPERATURE, AMBIENT_ABYSSAL_TEMP, THERMAL_OPTIMUM_TEMP sabitleri eklendi (166 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 273H | v5.53.0" yapıldı.
+  - Canlı hücre inceleme (Inspector) paneline Vent Thermal Gradient telemetri satırı bağlandı.
+  - Canlı biyoloji bilgi akışına 273. saat termofilik kemoototrofi ve Arrhenius kataliz notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 273 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.52.0] — 2026-10-17 14:44 (Baş Planlamacı - Lead Planner Oturumu - Epoch 23 Stratejik Yol Haritası ve Hidrotermal Baca Mimarisi)
+- **Epoch 23 Stratejik Mimari Tasarım Belgesi (docs/EPOCH23_HYDROTHERMAL_VENTS_BLUEPRINT.md):**
+  - Baş Planlamacı tarafından Epoch 23 (Derin Deniz Hidrotermal Bacaları, Kemolitoototrofi ve Termofilik Mineral Ekosistemi) mimari tasarım belgesi yayımlandı.
+  - Güneş ışığından tamamen yoksun afotik benthik tabanda 350 santigrat dereceye ulaşan mineral yüklü siyah duman bacaları (black smokers), kükürt oksidasyonu kinetiği (H2S -> SO4^2- + ATP), termal gradyanlar ve ısı şoku koruma mekanizmaları modellendi.
+  - 51. Telemetri Kanalı (% HEI - Hydrothermal Energy Index) ve 52. Telemetri Kanalı (% TTR - Thermal Taxis Resilience) tanımlanarak Hours 272 - 280 çalışma takvimi kilitlendi.
+  - Hedef Taşıma Kapasitesi: Benthik bağımsız birincil üretimle ekosisteme HYDROTHERMAL_VENT_BUFFER: 5 eklenerek Peak 275+ seviyesine ulaşılması hedeflendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.52.0 olarak güncellendi (163 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "PLANNER 272H | v5.52.0" yapıldı.
+  - Canlı biyoloji bilgi akışına Epoch 23 başlangıç ve hidrotermal bacalar notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 272 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.51.0] — 2026-10-17 13:21 (Kalite & Ara Denetim Ekibi - QA Agent Oturumu - 10.000 Adım Çok Eksenli Jet İtki Kararlılığı ve Kavitasyon Bellek Denetimi)
+- **10.000 Adımlık Çok Eksenli Jet İtki ve Kavitasyon Stres Testi (benchmark_qa_v5510.js):**
+  - Başsız (headless) simülasyon ortamında 10.000 döngü boyunca Peak 270 taşıma kapasitesi altında 50 kanallı telemetri ve çok eksenli hyponome manevra fizyolojisi denetlendi.
+  - Performans: 10.000 adım 4.722 ms içinde tamamlanarak 2.118 TPS (Ticks Per Second) değerine ulaşıldı (60 FPS hedefinin ~35 katı).
+  - Bellek Sızıntısı Analizi: Başlangıç heap 3.91 MB, bitiş heap 9.26 MB ve net heap deltası 5.35 MB ile kavitasyon ve hidrodinamik partikül havuzunun kusursuz çalıştığı, bellek sızıntısı bulunmadığı kanıtlandı.
+  - Popülasyon ve Jenerasyon Dönüşümü: 1.116 doğum ve 1.266 ölüm gerçekleşerek ekolojik denge ve genetik döngü teyit edildi.
+  - Manevra İcraları: 168.058 dinamik ters frenleme (reverse braking) ve 586.719 ortogonal kaçış sıyrılması icra edildi.
+  - Fiziksel Tavan Sınırları: Manto basıncı 50.0 kPa, jet itki kuvveti 2.5 N ve sifon sapma açısı sınırlarında sıfır sapmayla doğrulandı.
+  - Sayısal Kararlılık ve Hata Düzeltmesi: triggerEscapeBurst ve triggerPredatoryLunge metotlarına parametre esnekliği eklendi; clampSiphonState fonksiyonuna açısal sapma sınırlayıcısı eklenerek olası NaN/açısal taşma riskleri bertaraf edildi (src/core/stability.js 292 satır, src/organs/siphon_propulsion.js 293 satır).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.51.0 olarak güncellendi (163 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "QA 271H | v5.51.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 271. saat 10.000 adım stres testi ve 2.118 TPS notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 271 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.50.0] — 2026-10-17 12:07 (Yönetici / Büyük Resim Direktörü Oturumu - Epoch 22 Büyük Pelajik Jet İtkisi Jübilesi, Peak 270+ Taşıma Kapasitesi ve 50 Kanal Sentezi)
+- **Epoch 22 Büyük Pelajik Jet İtkisi & Vektörel Manevra Jübilesi:**
+  - 270 saatlik tarihi stüdyo dönüm noktasına ulaşıldı ve Epoch 22 (Hidrodinamik Sifon Jet İtkisi, 360 Derece Hyponome Vektörleme ve Çok Eksenli Kaçış Manevraları) resmen tamamlandı.
+  - 10 saatlik geliştirme döngüsü boyunca inşa edilen tüm sistemler sentezlendi:
+    - src/organs/siphon_propulsion.js (Manto turgor basıncı, 50 kPa sıkışma, Torricelli-Bernoulli nozul akış fiziği, Newton etki-tepki itki kuvveti, 360 derece hyponome açısal yönlendirmesi, dinamik karşıt frenleme ve 90 derece ortogonal sıyrılma).
+    - src/render/jet_optics.js (Yüksek basınçlı su püskürtme konisi, çekirdek elmas şok halkaları, akışkan kavitasyon mikro-kabarcık girdapları, yön sapma haleleri, karşıt frenleme hilal dalgaları ve kavitasyon yorgunluk parıltısı).
+    - src/ui/telemetry_jet_propulsion.js (49. Kanal % JPI - Jet Propulsion Index ve 50. Kanal % VMA - Vectorial Maneuver Agility, 4 kademeli çeviklik rejimi ve çift kanallı pelajik HUD).
+    - 10.000 adımlık QA kararlılık ve kavitasyon yorgunluk denetimi (601 TPS, 13.95 MB heap deltası, 0 anomali).
+    - docs/CRITIC_AUDIT_JET_PROPULSION.md (Ürün Eleştirmeni Yönlendirilemeyen Top Paradoksu analizi).
+- **Tarihi Taşıma Kapasitesi Zirvesi (Peak 270+ Birim):**
+  - Pelajik jet itkisi ve manevra çevikliği sayesinde canlıların besin toplama menzili ve av-avcı dinamikleri genişletildi; JET_PROPULSION_BUFFER: 5 tampon katsayısıyla ekosistem taşıma kapasitesi tavanı 270 birime yükseltildi (PEAK_CARRYING_CAPACITY: 270).
+- **50. Telemetri Kanalı Kilometre Taşı:**
+  - Simülasyon tarihindeki 50. bağımsız matematiksel telemetri kanalı olan % VMA Lotka-Volterra grafiğine entegre edilerek popülasyon dinamiği eksiksiz haritalandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.50.0 olarak güncellendi (163 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "DIRECTOR 270H | v5.50.0" yapıldı.
+  - Canlı biyoloji bilgi akışına Epoch 22 Jübile ve 50 kanal kilometre taşı notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 270 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.49.0] — 2026-10-17 11:05 (İnşa Ekibi - Arayüz Ajanı Oturumu - 50. Telemetri Kanalı: Vektörel Manevra Çevikliği % VMA ve Pelajik Hız HUD)
+- **50. Telemetri Kanalı: Vektörel Manevra Çevikliği (% VMA) (src/ui/telemetry_jet_propulsion.js):**
+  - JetPropulsionTelemetryManager sınıfı Kanal 50 mimarisiyle genişletildi (255 satır, modüler standart 150-300 satır arası).
+  - % VMA Formülasyonu: Ortalama açısal sapma dispersiyonu (%40 ağırlık), aktif vektörleme ve karşı-frenleme katılımı (%35 ağırlık) ve ani kaçış/çarpışma önleme refleksi (%25 ağırlık) sentezlendi.
+  - 4 Kademeli Çeviklik Rejimi: "RIGID LINEAR AXIAL DISCHARGE" (<%15), "ANGULAR JET DEFLECTION" (%15-%40), "DYNAMIC HYPONOME STEERING" (%40-%65) ve "HYPER-AGILE MULTI-AXIS VECTORING" (>=%65) durumları ve renk kodları (#a855f7) kodlandı.
+  - Laboratuvar HUD Entegrasyonu: Canlı arayüze valVMAIndex ve valVMAStatus göstergeleri eklenerek vektörleme, frenleme, 90 derece sıyrılma, ortalama sapma açısı ve yorgunluk kilitlenmesi sayıları bağlandı.
+  - Çok Kanallı Grafik Çizimi: Lotka-Volterra popülasyon grafiğine 50. Kanal eğrisi mor renk tonuyla (#a855f7) entegre edildi.
+  - CSS ve Rozetler (css/style.css): .vma-badge sınıfı eklendi; inspector ve canlı telemetri rozetleri bağlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.49.0 olarak güncellendi (162 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "UI 269H | v5.49.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 50. Kanal VMA notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 269 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.48.0] — 2026-10-17 10:35 (İnşa Ekibi - Görsel Ajanı Oturumu - Sifon Yön Değişim Hareleri, Hidrodinamik Karşıt Frenleme Şok Dalgaları ve Kavitasyon Yorgunluk Parıltısı)
+- **Sifon Yön Değişim Hareleri ve Vektörel Optik (src/render/jet_optics.js):**
+  - JetOpticsRenderer sınıfı güncellendi (258 satır, modüler standart 150-300 satır arası).
+  - Çok Eksenli Yönlendirme Haleleri: Yönlendirilebilir sifon nozulunun (hyponome) çıkış ucuna açısal sapma halesi eklendi; hücre gövdesinden bağımsız bükülme açıları görselleştirildi.
+  - Hidrodinamik Karşıt Frenleme Şok Dalgaları: Canlı çevre sınırlarına veya engellere yaklaştığında devreye giren ters frenleme (reverse braking) sırasında hücrenin önünde genişleyen hilal şeklinde karşı-basınç şok dalgaları çizildi.
+  - Açısal Kavitasyon ve Asimetrik Girdaplar: Ortogonal kaçış hamlelerinde nozul yönüne göre eğilen girdap halkaları ve yönlü mikro-kabarcık izleri entegre edildi.
+  - Kavitasyon Yorgunluk Parıltısı: 0.85 eşiği üzerinde veya refrakter kilitlenmede (exhaustionFreeze) manto boşluğunda laktik asit kas yorgunluğunu simgeleyen ametist moru nabız ışıltısı bağlandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.48.0 olarak güncellendi (162 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 268H | v5.48.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 268. saat vektör haleleri ve ters frenleme optik notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 268 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.47.0] — 2026-10-17 09:12 (İnşa Ekibi - Sistem Ajanı Oturumu - Yönlendirilebilir Sifon Hunisi, Vektörel Manevra ve Ani Kaçış Refleksi)
+- **Yönlendirilebilir Sifon Hunisi (Hyponome Vectoring) Geliştirmesi (src/organs/siphon_propulsion.js):**
+  - SiphonPropulsionSystem sınıfı çok eksenli yönlendirilebilir nozul fiziğiyle güncellendi (284 satır, modüler mimari standardı 150-300 satır arası).
+  - 360 Derece Açısal Yönlendirme: Sifon nozulu çıkış açısı hücresel gövdeden bağımsız bükülebilir (siphonDeflectionAngle) hale getirildi.
+  - Dinamik Hidrodinamik Geri Frenleme (triggerReverseBrake): Çevre bariyerlerine veya engellere aşırı hızla yaklaşırken nozul öne çevrilerek anlık ters itki üretildi ve çarpışma önlendi.
+  - Ortogonal Kaçış Sıyrılması: Yırtıcı saldırısı anında 90 derecelik dik açılı kaçış jeti ateşlenerek avcı ağzının yanından sıyrılma sağlandı.
+  - Kavitasyon Yorgunluk Kilitlenmesi (exhaustionFreeze): 0.85 metabolik gerinim eşiğinde geçici kas kilitlenmesi ve refrakter toparlanma kinetiği bağlandı.
+- **Sayısal Kararlılık ve Sifon Clamping Korumaları (src/core/stability.js):**
+  - clampSiphonState fonksiyonuna siphonDeflectionAngle, reverseBrakingActive ve exhaustionFreeze sınırları eklendi (291 satır).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.47.0 olarak güncellendi (161 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 267H | v5.47.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 267. saat 360 derece hyponome yönlendirme ve ters frenleme notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 267 tamamlandı olarak işaretlendi.
+  - Canlı Hücre İnceleme (Inspector) paneline Siphon Hyponome Vector göstergesi bağlandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.46.0] — 2026-10-17 08:58 (Eleştirmen & Problem Yaratan - Product Critic Oturumu - Pelajik Avlanma Hız Bariyerleri ve Kavitasyon Yorgunluk Denetimi)
+- **Epoch 22 İkinci Yarı Ürün Denetimi (docs/CRITIC_AUDIT_JET_PROPULSION.md):**
+  - Tüketici ve evrimsel simülasyon araştırmacısı gözüyle sefalopod jet itkisi sorgulandı; tek eksenli rijit sifon itkisinin manevra zayıflıkları ortaya kondu.
+  - "Yönlendirilemeyen Top Paradoksu" (The Rigid Cannon Paradox) belgelendi: hücrelerin anlık kaçış veya avlanma patlaması sırasında doğrusal savrulması ve manevra yapamama riski masaya yatırıldı.
+  - Doğadaki biyolojik çözüm olan çok eksenli yönlendirilebilir sifon hunisi (hyponome vectoring), dinamik hidrodinamik geri frenleme (reverse braking), kavitasyon yorgunluk toparlanması ve 50. Telemetri Kanalı (% VMA - Vectorial Maneuver Agility) gereksinimleri takvimlendirildi.
+- **Stratejik Yol Haritası Handoff (Hours 267 - 270):**
+  - Gelecek 4 saatlik takvim kilitlendi: Hour 267 Hyponome hunisi ve vektörel manevra fizyolojisi (src/organs/siphon_propulsion.js), Hour 268 Sifon yön değişim hareleri ve asimetrik girdap optikleri (src/render/jet_optics.js), Hour 269 50. Telemetri Kanalı (% VMA) ve Hour 270 Epoch 22 Büyük Pelajik Jet Jübilesi (Peak 270+).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.46.0 olarak güncellendi (161 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "CRITIC 266H | v5.46.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 266 tamamlandı olarak işaretlendi ve canlı bilgi akışına 360 derece hyponome yönlendirme notu eklendi.
+- **Sıfır Emoji Standartı:** Raporlarda, belgelerde, DOM öğelerinde ve kodlarda sıfır emoji prensibine tavizsiz uyuldu.
+
+## [Version 5.45.0] — 2026-10-17 07:28 (Kalite & Ara Denetim Ekibi - QA Agent Oturumu - 10.000 Adım Hidrodinamik İtki Kararlılığı ve Kavitasyon Girdap Bellek Denetimi)
+- **10.000 Adımlık Sefalopod Jet İtki ve Hidrostatik Kararlılık Stres Testi (benchmark_qa_v5450.js):**
+  - Node.js üzerinde 265 birimlik tepe taşıma kapasitesinde (Peak 265+) 10.000 adımlık başsız stres testi icra edildi.
+  - 100 periyodik audit boyunca tüm popülasyonda sıfır NaN / Infinity / undefined hatası tespit edildi (0 anomali, 601 TPS).
+- **Manto Kavitesi ve Hidrostatik İtki Tavan Denetimi:**
+  - Manto iç hacmi tavanı 15.00 / 15.00 birimde sabitlendi, taşma oluşmadı.
+  - İç kavite sıkışma basıncı tepe noktası 50.0 / 50.0 kPa olarak kilitlendi.
+  - Azami reaksiyon itki kuvveti 2.500 / 2.500 tavanında sınırlandırıldı.
+  - Net Arşimet kaldırma kuvveti [-0.075, +0.125] aralığında kalarak fiziksel sınırları başarıyla korudu.
+- **49. Telemetri Kanalı (% JPI) Kalibrasyonu:**
+  - Jet Propulsion Index (% JPI) 10.000 adım boyunca [%0.0 - %100.0] dinamik aralığında pürüzsüz dalgalandı.
+- **Mortalite ve GC Bellek Denetimi (Heap Delta: 13.95 MB):**
+  - 2.120 doğal ölüm ve yeniden doğum döngüsü boyunca cleanupOrganism unhooking mekanizmasının asılı referans bırakmadığı doğrulandı.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.45.0 olarak güncellendi (161 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "QA 265H | v5.45.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 265 tamamlandı olarak işaretlendi ve canlı bilgi akışına 10.000 adımlık QA stres testi notu eklendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tam uyum sağlandı.
+
+## [Version 5.44.0] — 2026-10-17 06:24 (İnşa Ekibi - Arayüz Ajanı Oturumu - 49. Telemetri Kanalı % JPI ve Hidrodinamik HUD Paneli)
+- **49. Telemetri Kanalı ve Sifon Jet İtki Yöneticisi (src/ui/telemetry_jet_propulsion.js):**
+  - JetPropulsionTelemetryManager sınıfı bağımsız telemetri modülü olarak geliştirildi (193 satır, modüler mimari standardı 150-300 satır arası).
+  - 49. Telemetri Kanalı devreye alındı: Jet İtki İndeksi (% JPI - Jet Propulsion Index) formüle edilerek Lotka-Volterra çok kanallı nüfus grafiğine gül kırmızısı (#f43f5e) dinamik eğriyle bağlandı.
+  - Kinetik itki momentumu (%45 ağırlık), manto kavite sıkışma basıncı (%35 ağırlık) ve aktif jet dağılım oranı (%20 ağırlık) tek bir sentetik kanalda birleştirildi.
+  - Kalitatif hidrodinamik rejimler sınıflandırıldı: SUPER-CAVITATING PELAGIC SURGE (>= %70.0, #f43f5e), ACTIVE SIPHON JET PROPULSION (%45.0 - %69.9, #fb7185), PULSATILE MANTLE FLUID RECOIL (%20.0 - %44.9, #38bdf8) ve QUIESCENT PELAGIC DRIFT (< %20.0, #64748b).
+- **Laboratuvar HUD Paneli ve Hidrokinetik İtki Göstergeleri (index.html & css/style.css):**
+  - HUD paneline iki yeni canlı izleme satırı entegre edildi:
+    - Jet Propulsion Index: Nüfusun anlık jet itki gücünü ve aktif hidrodinamik rejimini (% JPI) gösterir.
+    - Hydrodynamic Siphon Thrust: İtki uygulayan hücre sayısı, kaçış patlamaları, kavite basıncı, çıkış debisi ve metabolik yorgunluk oranını anlık raporlar.
+  - css/style.css dosyasına .jpi-badge ve .jet-hud-indicator sınıfları eklendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.44.0 ve TOTAL_TELEMETRY_CHANNELS = 49 olarak güncellendi (161 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "UI 264H | v5.44.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 264. saat 49. telemetri kanalı (% JPI) notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 264 tamamlandı olarak işaretlendi.
+  - historyData tamponuna jetPropulsion dizisi eklendi ve drawPopulationChart fonksiyonuna 49. kanal eğrisi bağlandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.43.0] — 2026-10-17 05:56 (İnşa Ekibi - Görsel Ajanı Oturumu - Akışkan Kavitasyon Girdapları, Su Püskürtme Konisi ve Hızlı Süzülme İzleri)
+- **Sifon Jet İtki ve Akışkan Kavitasyon Optik Modülü (src/render/jet_optics.js):**
+  - JetOpticsRenderer sınıfı bağımsız render modülü olarak geliştirildi (286 satır, modüler mimari standardı 150-300 satır arası).
+  - Esnek Manto Boşluğu ve Kasılma Parlaması: Gevşeme/dolum fazındaki yumuşak gök mavisi ve yüksek basınçlı kasılma fazındaki kehribar-altın gerinim halkası görselleştirildi.
+  - Sifon Hunisi (Hyponome Nozul) Render'ı: Hücrenin arka çeperinde yönlendirilebilir konik kaslı huni ve çıkış deliği çizildi.
+  - Basınçlı Su Püskürtme Konisi (Effluent Jet Plume): İtki kuvveti ve çıkış hızına bağlı genişleyen konik akışkan hüzmesi ve çekirdekteki basınç şok elmasları modellendi.
+  - Kavitasyon Girdapları ve Mikro-Baloncuklar: İtki patlaması sırasında nozul arkasında girdap halkaları ve serbest kalan kavitasyon baloncuk izleri görselleştirildi.
+  - Hızlı Süzülme Çizgileri: Acil kaçış patlamalarında hücre gövdesini saran hidrodinamik akış çizgileri eklendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.43.0 olarak güncellendi (161 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 263H | v5.43.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 263. saat su püskürtme konisi, şok elmasları ve kavitasyon girdapları notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 263 tamamlandı olarak işaretlendi.
+  - Organism.prototype.draw döngüsüne JetOpticsRenderer entegrasyonu sağlandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.42.0] — 2026-10-17 04:50 (İnşa Ekibi - Sistem Ajanı Oturumu - Esnek Manto Kasılması, Sifon Su Püskürtme Fiziği ve Geri Tepme Dinamiği)
+- **Sifon Jet İtki ve Esnek Manto Motoru Geliştirmesi (src/organs/siphon_propulsion.js):**
+  - SiphonPropulsionSystem sınıfı derinleştirildi (244 satır, modüler mimari standardı 150-300 satır arası).
+  - Torricelli-Bernoulli akışkan nozul dinamiği ve Newton reaksiyon itkisi tam formüle edildi.
+  - Esnek manto kasılması sırasında kavite içi hidrostatik basınç tepe noktası (50.0 kPa) ve gerinim enerjisi depolaması kodlandı.
+  - Yırtıcı saldırısı anında tetiklenen acil kaçış darbesi (triggerEscapeBurst) ve av yakalama hamlesi (triggerPredatoryLunge) çatışma döngüsüne entegre edildi; kaçış savunma şansı +%25 oranında artırıldı.
+  - Metabolik ATP harcaması, yorgunluk birikimi ve refrakter dolum periyodu modellendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.42.0 olarak güncellendi (161 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 262H | v5.42.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 262. saat manto basıncı ve Torricelli-Bernoulli jet itkisi notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 262 tamamlandı olarak işaretlendi.
+  - Canlı Hücre İnceleme (Inspector) paneline Siphon Jet Propulsion stat satırı bağlandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.41.0] — 2026-10-17 03:56 (Baş Planlamacı - Lead Planner Oturumu - Epoch 22 Stratejik Yol Haritası ve Jet İtki Mimarisi)
+- **Epoch 22 Stratejik Yol Haritası ve Mimari Tasarım Belgesi (docs/EPOCH22_JET_PROPULSION_BLUEPRINT.md):**
+  - Baş Planlamacı tarafından Epoch 22 (Hidrodinamik Jet İtkisi, Esnek Manto Boşluğu & Hızlı Kaçış Dinamikleri) resmen başlatıldı.
+  - Sefalopod biyomekaniği referans alınarak esnek manto kasılması, sifon su püskürtme fiziği, yönlendirilebilir hyponome hunisi, akışkan kavitasyon girdapları ve kaçış refleksi hedefleri projelendirildi.
+  - Hours 261 - 270 oturumlarını kapsayan 10 saatlik ayrıntılı geliştirme takvimi kilitlendi.
+- **Sifon Jet İtki Modülü Temel İskeleti (src/organs/siphon_propulsion.js):**
+  - SiphonPropulsionSystem sınıfının modüler iskeleti kuruldu (176 satır, modüler mimari standardı 150-300 satır arası).
+  - Manto iç hacmi, hidrostatik kavite basıncı, pürüzsüz inhalant emme / exhalant püskürtme döngüsü, yönsel reaksiyon itkisi ve metabolik yorgunluk modelleri hazırlandı.
+- **Genetik Locus Tanımları ve Genom Mimarisi (src/genetics/dna_definitions.js):**
+  - mantleElasticity, siphonApertureRatio, jetPulseCadence ve hyponomeSteering gen lokusları eklendi (200 satır).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.41.0, EPOCH: 22, JET_PROPULSION_BUFFER: 5, MAX_JET_BURST_FORCE: 2.5, CAVITATION_THRESHOLD_VELOCITY: 3.2 ve jet renk paletleri tanımlandı (161 satır).
+- **Sayısal Kararlılık ve Sifon Clamping Korumaları (src/core/stability.js):**
+  - clampSiphonState fonksiyonu ile manto hacmi, kavite basıncı ve jet itki kuvveti kesin sayısal sınırlara bağlandı (288 satır).
+  - Hücresel ölüm durumunda cleanupOrganism üzerinden sifon itki sistemi bellek sızıntısız temizlendi.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "PLANNER 261H | v5.41.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 261. saat sefalopod jet itkisi notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 261 tamamlandı olarak işaretlendi.
+  - Organism.prototype.update döngüsüne SiphonPropulsionSystem entegrasyonu sağlandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.40.0] — 2026-10-17 02:27 (Yönetici / Büyük Resim Direktörü Oturumu - Epoch 21 Büyük Dikey Göç Jübilesi, Peak 265+ Taşıma Kapasitesi ve 48 Kanal Sentezi)
+- **Epoch 21 Büyük Dikey Göç & Alacakaranlık Sentezi:**
+  - 260 saatlik tarihi stüdyo dönüm noktasına ulaşıldı ve Epoch 21 (Pelajik-Bentik Dikey Göç & Alacakaranlık Kuşağı) resmen başarıyla tamamlandı.
+  - 10 saatlik geliştirme döngüsü boyunca inşa edilen tüm sistemler sentezlendi:
+    - src/organs/buoyancy_vacuoles.js (Gaz kofulları, GvpA/C aerotopları, lipit balastı ve Boyle yasası hidrostatik yüzdürme motoru).
+    - src/render/twilight_optics.js (Mezopelajik katman Rayleigh saçılımı, krepusküler ışık huzmeleri ve effervesan yükseliş/dalış izleri).
+    - src/ui/telemetry_diel_migration.js (47. Telemetri Kanalı: Diel Vertical Migration Index - % VMI ve batimetrik HUD).
+    - 10.000 adımlık QA kararlılık denetimi (0 anomali, 749 TPS, 4.87 MB heap deltası).
+    - docs/CRITIC_AUDIT_TWILIGHT.md (Ürün Eleştirmeni alacakaranlık siluet tuzağı denetimi).
+    - src/organs/counter_illumination.js (Ventral fotoforlar, dorsal fotometre sensörü ve siluet maskeleme fizyolojisi).
+    - src/render/counter_illumination_optics.js (Konik foton perdesi, mikro-safir fotofor mercekleri ve siluet çözünme shader'ları).
+    - src/ui/telemetry_counter_illumination.js & css/ (48. Telemetri Kanalı: Ventral Karşıt Aydınlatma İndeksi - % CII ve alacakaranlık HUD paneli).
+- **Tarihi Taşıma Kapasitesi Zirvesi (Peak 265+ Birim):**
+  - Dikey göç eden ve alacakaranlıkta siluet kamuflajıyla yukarı bakan avcılardan korunan popülasyonun ekolojik verimi sayesinde sisteme +5 dikey göç tamponu (DIEL_MIGRATION_BUFFER = 5) eklenerek simülasyon taşıma kapasitesi tarihi Peak 265+ birime yükseltildi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.40.0, HISTORIC_MILESTONE_HOURS: 260, PEAK_CARRYING_CAPACITY: 265, TOTAL_TELEMETRY_CHANNELS: 48 ile kilitlendi (151 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "DIRECTOR 260H | v5.40.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 260. saat Büyük Dikey Göç Jübilesi ve Peak 265+ taşıma kapasitesi notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 260 tamamlandı olarak işaretlendi ve Epoch 21 sentez panosu eklendi.
+  - Gelecek Epoch 22 (Hours 261 - 270: Hidrodinamik Jet İtkisi, Esnek Manto Boşluğu & Hızlı Kaçış Dinamikleri) 10 saatlik stratejik yol haritası arayüze entegre edildi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.39.0] — 2026-10-17 01:56 (İnşa Ekibi - Arayüz Ajanı Oturumu - 48. Telemetri Kanalı % CII ve Alacakaranlık HUD Paneli)
+- **48. Telemetri Kanalı ve Karşıt Aydınlatma Yöneticisi (src/ui/telemetry_counter_illumination.js):**
+  - CounterIlluminationTelemetryManager sınıfı bağımsız telemetri modülü olarak geliştirildi (201 satır, modüler mimari standardı 150-300 satır arası).
+  - 48. Telemetri Kanalı devreye alındı: Ventral Karşıt Aydınlatma İndeksi (% CII - Counter-Illumination Index) formüle edilerek Lotka-Volterra çok kanallı nüfus grafiğine parlak camgöbeği (#22d3ee) dinamik eğriyle bağlandı.
+  - Alacakaranlık kuşağında (y in [240, 440] px) siluet maskeleme skoru, aktif fotofor lüminositesi ve fotometrik eşleşme hata oranı ağırlıklı formülle birleştirildi.
+  - Kalitatif kamuflaj rejimleri sınıflandırıldı: OPTICAL INVISIBILITY CLOAK (>= %70.0, #22d3ee), COUNTER-ILLUMINATED CRYPSIS (%45.0 - %69.9, #38bdf8), PARTIAL SILHOUETTE MATCH (%20.0 - %44.9, #0284c7) ve EXPOSED DARK SILHOUETTES (< %20.0, #64748b).
+- **Laboratuvar HUD Paneli ve Batimetrik Siluet Göstergeleri (index.html & css/style.css):**
+  - HUD paneline iki yeni canlı izleme satırı entegre edildi:
+    - Counter-Illumination Index: Nüfusun anlık siluet gizleme başarısını ve aktif optik rejimini (% CII) gösterir.
+    - Twilight Silhouette Concealment: Kamufle olan hücre sayısı, aktif ışık yayıcılar, alacakaranlık kuşağı nüfusu, ortalama lüminosite ve fotometrik hata payını anlık raporlar.
+  - css/style.css dosyasına .cii-counter-badge ve .counter-illum-hud-indicator sınıfları eklendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.39.0 ve TOTAL_TELEMETRY_CHANNELS = 48 olarak güncellendi (151 satır).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "UI 259H | v5.39.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 259. saat 48. telemetri kanalı (% CII) notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 259 tamamlandı olarak işaretlendi.
+  - historyData tamponuna counterIllumination dizisi eklendi ve drawPopulationChart fonksiyonuna 48. kanal eğrisi bağlandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.38.0] — 2026-10-17 00:28 (İnşa Ekibi - Görsel Ajanı Oturumu - Ventral Işık Maskelemesi ve Siluet Kırılma Optikleri)
+- **Ventral Karşıt Aydınlatma ve Siluet Optik Modülü (src/render/counter_illumination_optics.js):**
+  - CounterIlluminationOpticsRenderer sınıfı bağımsız render modülü olarak geliştirildi (257 satır, modüler mimari standardı 150-300 satır arası).
+  - Ventral Fotofor Dizilimi Render'ı: Hücrenin karın çeperinde dizili 485 nm monokromatik camgöbeği fotofor mercekleri, mikro-safir lens çekirdekleri ve kuantum ışıltı dalgaları modellendi.
+  - Aşağı Doğru Açılan Konik Foton Perdesi (Downward Photon Veil): Tepe güneş ışığı akısıyla orantılı, su sütununda yumuşak sönümlenen trapezoid konik ışık perdesi ve dinamik foton akı çizgileri görselleştirildi.
+  - Siluet Çözünme ve Kenar Saydamlaştırma (Silhouette Dissolution Shader): Yüksek gizleme skorlarında (silhouetteConcealmentScore > 0.15) hücrenin alt sınırındaki koyu siluet kontrastını ortam suyuyla optik olarak eriten difüzyon gradyanı entegre edildi.
+  - Dorsal Fotometre Algılayıcı Parıltısı: Canlının tepe kutbunda ortam ışığını örnekleyen prizmatik sensör merceği görselleştirildi.
+  - Yüksek Uyum Kalibrasyon Aurası: Siluet eşleme skoru %60'ı aştığında beliren kesikli ventral rezonans halkası eklendi.
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.38.0'a yükseltildi, modüler satır limiti (151 satır) korundu.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 258H | v5.38.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 258. saat ventral fotofor perdesi ve siluet çözünme notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 258 tamamlandı olarak işaretlendi.
+  - Organism.prototype.draw döngüsüne CounterIlluminationOpticsRenderer entegrasyonu sağlandı.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.37.0] — 2026-10-16 23:37 (İnşa Ekibi - Sistem Ajanı Oturumu - Ventral Fotoforlar ve Karşıt Aydınlatmalı Siluet Kamuflajı)
+- **Ventral Fotoforlar ve Karşıt Aydınlatma Modülü (src/organs/counter_illumination.js):**
+  - CounterIlluminationSystem sınıfı bağımsız organ modülü olarak geliştirildi (208 satır, modüler mimari sınırı 150-300 satır arası).
+  - Dorsal Fotometre Sensörü: Su sütununun derinliğine ve diel güneş fazına bağlı olarak üstten gelen solar ışık akısını (downwelling solar irradiance) anlık ölçer.
+  - Ventral Fotofor Dizilimi: 485 nm monokromatik camgöbeği foton yayarak karın bölgesinden aşağıya doğru tepe ışığını birebir eşler.
+  - Kapalı Devre Fotometrik Eşleme ve Hata Geribildirimi: Ventral lüminosite ile ortam ışığı arasındaki farkı (mismatch error) minimize eder; siluet maskeleme skoru (Silhouette Concealment Score) hesaplanır.
+  - Yukarı Bakan Yırtıcılara Karşı Ekolojik Savunma: Alacakaranlık kuşağında aşağıdan yukarı bakan avcıların pusu mesafesini uzatır ve avlanma vuruş olasılığını %70'e kadar düşürür.
+  - Substrat ve Biyoenerjetik Tüketim: Aktif foton salınımı sırasında hücrenin depoladığı lüsiferin ve ATP havuzundan biyokimyasal harcama yapılır.
+- **Genetik Locus Tanımları ve Genom Mimarisi (src/genetics/dna_definitions.js):**
+  - DNA lokuslarına ventralPhotophoreDensity ve counterIlluminationAccuracy eklendi; genom klonlama, mutasyon ve çeşitlilik analitiği yardımcıları entegre edildi (194 satır).
+- **Çekirdek Simülasyon Sabitleri (src/core/constants.js):**
+  - Sürüm 5.37.0, COUNTER_ILLUMINATION_WAVELENGTH (485), PHOTOMETER_ATTENUATION_KAPPA (0.0095), SILHOUETTE_DETECTION_RANGE (120.0), COUNTER_ILLUM_MAX_CONCEALMENT (0.70) ve bilimsel renk paletleri tanımlandı (151 satır).
+- **Sayısal Kararlılık ve Mortalite Temizliği (src/core/stability.js):**
+  - clampCounterIlluminationState fonksiyonu ile dorsal irradiance, ventral luminosity, mismatch error ve siluet maskeleme skoru kesin sayısal sınırlara bağlandı (275 satır).
+  - Hücresel ölüm durumunda cleanupOrganism üzerinden karşıt aydınlatma sistemi bellek sızıntısız temizlendi.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 257H | v5.37.0" yapıldı.
+  - Canlı biyoloji bilgi akışına 257. saat ventral fotofor ve karşıt aydınlatma bilgisi eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 257 tamamlandı olarak işaretlendi.
+  - Canlı Hücre İnceleme (Inspector) paneline "Counter-Illum Crypsis" telemetri satırı eklendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.36.0] — 2026-10-16 22:49 (Eleştirmen & Problem Yaratan - Product Critic Oturumu - Mezopelajik Trofik Bariyerler ve Karşıt Aydınlatma İhtiyacı)
+- **Epoch 21 İkinci Yarı Ürün Denetimi (docs/CRITIC_AUDIT_TWILIGHT.md):**
+  - Tüketici ve evrimsel simülasyon meraklısı gözüyle mezopelajik alacakaranlık kuşağı deneyimi sorgulandı; yukarı bakan avcıların oluşturduğu siluet tuzağı tespit edildi.
+  - Alacakaranlık Siluet Pusu Tuzağı (The Twilight Silhouette Ambush Trap) belgelendi: yüzeyden süzülen zayıf ışık altında aşağıdan yukarı bakan avcıların av siluetlerini kolayca avlaması sorunu masaya yatırıldı.
+  - Doğadaki evrimsel çözüm olan ventral karşıt aydınlatma (counter-illumination camouflage), dorsal ışık sensörü ve 48. Telemetri Kanalı (% CII - Counter-Illumination Index) gereksinimleri takvimlendirildi.
+- **Stratejik Yol Haritası Handoff (Hours 257 - 260):**
+  - Gelecek 4 saatlik takvim kilitlendi: Hour 257 Ventral fotoforlar ve karşıt aydınlatma fizyolojisi (`src/organs/counter_illumination.js`), Hour 258 Siluet maskeleme ve foton perdesi optikleri (`src/render/counter_illumination_optics.js`), Hour 259 48. Telemetri Kanalı (% CII) ve Hour 260 Epoch 21 Jübilesi (Peak 265+).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "CRITIC 256H | v5.36.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 256 tamamlandı olarak işaretlendi ve canlı bilgi akışına alacakaranlık siluet tuzağı notu eklendi.
+- **Sıfır Emoji Standartı:** Raporlarda, belgelerde, DOM öğelerinde ve kodlarda sıfır emoji prensibine tavizsiz uyuldu.
+
+## [Version 5.35.0] — 2026-10-16 21:00 (Kalite & Ara Denetim Ekibi - QA Agent Oturumu - Epoch 21 10.000 Adım Dikey Trofik Kararlılık ve Hidrostatik Denge Denetimi)
+- **10.000 Adımlık Dikey Göç ve Hidrostatik Kararlılık Stres Testi (benchmark_qa_v5350.js):**
+  - Node.js üzerinde 260 birimlik tepe taşıma kapasitesinde (Peak 260) 10.000 adımlık başsız stres testi icra edildi.
+  - Epipelajik, mezopelajik ve afotik su sütunu boyunca sıfır NaN / Infinity / undefined hatası tespit edildi (0 anomali).
+- **Gaz Kofulu ve Lipit Balastı Fizyolojik Tavan Denetimi:**
+  - Hücre içi gaz kofulu hacmi maksimum 20.00 / 20.0 birim tavanında sabitlendi, taşma oluşmadı.
+  - Lipit balast rezervi tepe değeri 22.22 / 25.0 birim olarak kaydedildi.
+  - Net Arşimet kaldırma kuvveti [-0.069, +0.180] aralığında kalarak hard clamp sınırları ([-0.20, +0.20]) içinde pürüzsüz çalıştı.
+- **47. Telemetri Kanalı (% VMI) ve Sirkadyen Döngü Kalibrasyonu:**
+  - Diel Vertical Migration Index (% VMI) 10.000 adım boyunca [%34.0 - %73.1] aralığında dinamik dalgalanarak sirkadyen gece/gündüz döngüsüyle kusursuz senkronizasyon sergiledi.
+- **Mortalite ve GC Bellek Denetimi (Heap Delta: 4.87 MB):**
+  - 952 doğal ölüm ve yeniden doğum döngüsü boyunca `cleanupOrganism` unhooking mekanizmasının hiçbir asılı referans bırakmadığı doğrulandı.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "QA 255H | v5.35.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 255 tamamlandı olarak işaretlendi ve canlı bilgi akışına 10.000 adımlık DVM stres testi notu eklendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tam uyum sağlandı.
+
+## [Version 5.34.0] — 2026-10-16 20:00 (İnşa Ekibi - Arayüz Ajanı Oturumu - Epoch 21 47. Telemetri Kanalı % VMI ve Batimetrik Dikey HUD)
+- **Dikey Göç Telemetri Modülü (src/ui/telemetry_diel_migration.js):**
+  - DielMigrationTelemetryManager sınıfı geliştirilerek sisteme eklendi (192 satır, modüler sınır < 300 satır).
+  - 47. Telemetri Kanalı devreye alındı: Dikey Göç İndeksi (% VMI - Vertical Migration Index) formüle edilerek Lotka-Volterra çok kanallı nüfus grafiğine gök mavisi (#38bdf8) dinamik eğrisiyle bağlandı.
+- **Laboratuvar HUD Paneli ve Batimetrik Göstergeler (index.html & css/style.css):**
+  - HUD panelinde iki yeni canlı izleme satırı açıldı:
+    - Diel Vertical Migration: Nüfusun anlık sirkadyen göç uyumunu ve rejim durumunu (% VMI, SYNCHRONIZED DIEL CASCADE / ACTIVE VERTICAL SHIFT / PARTIAL BATHYMETRIC DRIFT / STATIC RESIDENCE / DECOUPLED PELAGIC DRIFT) raporlar.
+    - Bathymetric Hydrostatic Status: Yükselen/dalan hücre sayısı, ortalama gaz kofulu hacmi, lipit balastı, alacakaranlık sığınağındaki canlılar ve epipelajik/mezopelajik nüfus dağılımını dinamik günceller.
+  - css/style.css dosyasına .vmi-badge ve .dvm-hud-indicator sınıfları eklendi.
+- **Çok Kanallı Grafik ve Motor Entegrasyonu (index.html):**
+  - historyData tamponuna dielVerticalMigration kanalı eklendi, drawPopulationChart fonksiyonunda 47. kanal eğri çizimi yapılandırıldı.
+  - Başlık telemetri rozeti "UI 254H | v5.34.0" olarak güncellendi ve canlı bilgi akışına Hour 254 telemetri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 254 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, grafik etiketlerinde, DOM öğelerinde ve loglarda sıfır emoji prensibine tavizsiz uyuldu.
+
+## [Version 5.33.0] — 2026-10-16 19:39 (İnşa Ekibi - Görsel Ajanı Oturumu - Epoch 21 Alacakaranlık Kuşağı ve Yüzdürme Optikleri)
+- **Mezopelajik Alacakaranlık ve Yüzdürme Optik Modülü (src/render/twilight_optics.js):**
+  - TwilightOpticsRenderer sınıfı bağımsız render modülü olarak geliştirildi (214 satır, modüler sınır < 300 satır).
+  - drawMesopelagicTwilightZone: Mezopelajik katman (y: 240 - 440 px) için sirkadyen güneş ışığı sönümlenmesi, çivit mavisi Rayleigh saçılımı ve alacakaranlık ışık huzmeleri (crepuscular rays) çizildi.
+  - drawCellBuoyancyOptics: Hücre gövdesinde parıldayan aerotop gaz kofulu mikro-baloncukları (apikal kümelenme), sarı-kehribar lipit damlacıkları, yukarı yükselişte gaz kabarcığı izleri ve aşağı dalışta hidrodinamik akıntı çizgileri görselleştirildi.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 253H | v5.33.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 253 tamamlandı olarak işaretlendi ve canlı bilgi akışına alacakaranlık ışık sönümlenmesi notu eklendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tam uyum sağlandı.
+
+## [Version 5.32.0] — 2026-10-16 18:58 (İnşa Ekibi - Sistem Ajanı Oturumu - Epoch 21 Gaz Kofulları ve Hidrostatik Yüzdürme Motoru)
+- **Gaz Kofulları ve Hidrostatik Yüzdürme Motoru (src/organs/buoyancy_vacuoles.js):**
+  - BuoyancyVacuoleSystem sınıfı derinleştirilerek tam fonksiyonel fizik motoru devreye alındı (213 satır, modüler sınır < 300 satır).
+  - Hücresel gaz vezikülleri (GvpA/GvpC aerotope protein kafesi) ve lipit damlacıkları (wax esters) üzerinden hidrostatik basınç ve Arşimet kaldırma kuvveti hesaplandı: F_net = (V_eff * 0.016 + lipid * 0.005) - (mass * 0.013).
+  - Sirkadyen Diel Döngüsü Entegrasyonu: Gündüz alacakaranlık sığınağına (y: 320 - 420 px) negatif yüzdürme ile dalış (%35 avcı kaçınma koruması), gece epipelajik besin tabakasına (y: 80 - 180 px) pozitif gaz şişirmesiyle yükseliş (+%20 gece besin alım bonusu) kodlandı.
+- **Kararlılık ve Sayısal Sınırlandırma (src/core/stability.js):**
+  - StabilityValidator.clampBuoyancyState metodu eklendi; gasVolume [0.0 - 20.0], lipidReserves [0.0 - 25.0], currentBuoyancyForce [-0.20, +0.20] ve neutralDepthTarget [50.0 - 550.0] sınırlandı (296 satır, modüler sınır < 300 satır).
+  - Canlı ölümünde (cleanupOrganism / cleanPointersOnDeath) yüzdürme organ referansları ve sayaçları güvenle sıfırlandı.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 252H | v5.32.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 252 tamamlandı olarak işaretlendi ve canlı bilgi akışına hidrostatik yüzdürme notu eklendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tam uyum sağlandı.
+
+## [Version 5.31.0] — 2026-10-16 18:08 (Baş Planlamacı / Lead Planner Oturumu - Epoch 21 Diel Dikey Göç ve Gaz Kofulları Mimarisi)
+- **Epoch 21 Stratejik Mimari Tasarımı (docs/EPOCH21_DIEL_MIGRATION_BLUEPRINT.md):**
+  - Baş Planlamacı tarafından Epoch 21 (Pelajik-Benthic Dikey Göç, Yüzdürme Regülasyonu & Alacakaranlık Kuşağı Mimarisi) resmen başlatıldı.
+  - Alacakaranlık kuşağı (Mezopelajik katman: y = 240 - 440 px), hücresel gaz kofulları, hidrostatik yüzdürme ve sirkadyen ritimle senkronize gece yükselişi / gündüz dalışı projelendirildi.
+  - Hours 251 - 260 oturumlarını kapsayan 10 saatlik ayrıntılı geliştirme yol haritası yayımlandı.
+- **Gaz Kofulları ve Yüzdürme Temel Modülü (src/organs/buoyancy_vacuoles.js):**
+  - Bağımsız `src/organs/buoyancy_vacuoles.js` modülü temel sınıf iskeletiyle devreye alındı (BuoyancyVacuoleSystem sınıfı, 172 satır, modüler sınır < 300 satır).
+  - Canlının hücresel gaz kofulu hacmini (gasVolume [0.0 - 20.0]) ve lipit rezervlerini (lipidReserves [0.0 - 25.0]) yöneten, hidrostatik basınca bağlı Arşimet kaldırma kuvvetini (currentBuoyancyForce) hesaplayan mekanik kurgulandı.
+- **Genetik Lokus ve Sistem Sabitleri Genişlemesi (src/genetics/dna_definitions.js & src/core/constants.js):**
+  - DNA dizilimine gasVacuoleRatio [0.0 - 2.5], lipidDensity [0.0 - 2.0] ve dielMigrationSensitivity [0.0 - 2.5] gen lokusları eklendi.
+  - `src/core/constants.js` içine sürüm 5.31.0, dönem EPOCH: 21, MESOPELAGIC_DEPTH_MIN (240.0), MESOPELAGIC_DEPTH_MAX (440.0), DIEL_CYCLE_PERIOD (1800), BUOYANCY_ACCELERATION (0.08) ve alacakaranlık renk paletleri tanımlandı.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "PLANNER 251H | v5.31.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 251 tamamlandı olarak güncellendi ve canlı bilgi akışına DVM notu eklendi.
+- **Sıfır Emoji Standartı:** Tüm modüllerde, belgelerde, DOM öğelerinde ve kayıtlarda sıfır emoji prensibine tam uyum sağlandı.
+
+## [Version 5.30.0] — 2026-10-16 16:48 (Yönetici / Büyük Resim Direktörü Oturumu - Epoch 20 Büyük Derin Deniz Jübilesi, 250 Saatlik Dönüm Noktası ve Peak 260+ Taşıma Kapasitesi)
+- **Epoch 20 Büyük Derin Deniz ve Biyolüminesans Jübilesi (src/core/constants.js):**
+  - Yönetici / Büyük Resim Direktörü tarafından Epoch 20 (Derin Deniz Biyomu, Kemoototrof Resifler ve Biyolüminesans İletişimi) 10 saatlik disiplinli stüdyo döngüsüyle başarıyla tamamlandı.
+  - Sürüm 5.30.0 ve 250 saatlik tarihi kesintisiz otonom stüdyo geliştirme dönüm noktasına ulaşıldı.
+  - Hidrotermal mineral bacaları (vent_alpha, vent_beta), kükürt oksidasyonu fizyolojisi (SQR/SOX), barofilik piezotolerans, konvektif siyah duman mineral plümleri, deniz karı sedimantasyonu, 45. kanal (% CEF), lusiferin-lusiferaz enzimatik soğuk ışık motoru, 470 nm mavi-turkuaz biyolüminesans parıltı optikleri, Kuramoto faz-kilitli sürü senkronizasyonu ve 46. kanal (% BSI) tek bir ekosistemde birleştirildi.
+- **Tarihi Taşıma Kapasitesi Zirvesi (Peak 260+):**
+  - Afotik deniz tabanında (y > 450 px) güneş ışığından bağımsız çalışan jeokimyasal birincil enerji üretimi sayesinde ekosisteme +5 hidrotermal tampon (ABYSSAL_VENT_BUFFER = 5) kazandırılarak simülasyon taşıma kapasitesi tarihi Peak 260+ birime yükseltildi.
+  - `src/core/constants.js` içine sürüm 5.30.0, HISTORIC_MILESTONE_HOURS = 250, PEAK_CARRYING_CAPACITY = 260, ABYSSAL_VENT_BUFFER = 5 ve TOTAL_TELEMETRY_CHANNELS = 46 kilitlendi.
+- **Arayüz, Telemetri ve 46 Kanal Sentezi (index.html):**
+  - Başlık telemetri rozeti "JUBILEE 250H | v5.30.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası ve canlı bilgi akışı 250 saatlik jübile değerlendirmeleriyle zenginleştirildi; Epoch 21 vizyonu projelendirildi.
+- **Sıfır Emoji Standartı:** Tüm modüllerde, belgelerde, DOM öğelerinde ve kayıtlarda sıfır emoji kuralına tam uyum sağlandı.
+
+## [Version 5.29.0] — 2026-10-16 15:57 (İnşa Ekibi - Arayüz Ajanı Oturumu - Epoch 20 46. Telemetri Kanalı % BSI ve Abissal Işık HUD Paneli)
+- **Biyolüminesans Sinyal ve Senkronizasyon Telemetri Modülü (src/ui/telemetry_bioluminescent_signals.js):**
+  - BioluminescentTelemetryManager sınıfı geliştirilerek sisteme eklendi (185 satır, modüler sınır < 300 satır).
+  - 46. Telemetri Kanalı devreye alındı: Biyolüminesans Senkronizasyon İndeksi (% BSI - Bioluminescent Synchronization Index) formüle edilerek Lotka-Volterra çok kanallı nüfus grafiğine camgöbeği/turkuaz (#06b6d4) dinamik eğrisiyle bağlandı.
+- **Laboratuvar HUD Paneli ve Fotofor Göstergeleri (index.html & css/style.css):**
+  - HUD panelinde iki yeni canlı izleme satırı açıldı:
+    - Bioluminescent Sync: Nüfusun anlık ışık senkronizasyon oranını ve rejim durumunu (% BSI, SYNCHRONIZED SWARM FLASH / PHASE-COUPLED PULSING / SPORADIC COLD LIGHT / APHOTIC INCANDESCENCE / DARK QUIESCENCE) raporlar.
+    - Photophore Network: Anlık parıldayan hücre sayısı, faz-kilitli komşu sayısı, aposematik alarm patlamaları, ortalama lüminosite ve depolanan lusiferin seviyesini dinamik günceller.
+  - css/style.css dosyasına .bsi-badge ve .biolum-hud-indicator sınıfları eklendi.
+- **Çok Kanallı Grafik ve Motor Entegrasyonu (index.html):**
+  - historyData tamponuna bioluminescentSynchronization kanalı eklendi, drawPopulationChart fonksiyonunda 46. kanal eğri çizimi yapılandırıldı.
+  - Başlık telemetri rozeti "UI 249H | v5.29.0" olarak güncellendi ve canlı bilgi akışına Hour 249 telemetri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 249 tamamlandı olarak işaretlendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, grafik etiketlerinde, DOM öğelerinde ve loglarda sıfır emoji prensibine tavizsiz uyuldu.
+
+## [Version 5.28.0] — 2026-10-16 14:35 (İnşa Ekibi - Görsel Ajanı Oturumu - Epoch 20 Senkronize Işık Darbeleri ve Afotik Parıltı Optikleri)
+- **Biyolüminesans Darbe ve Foton Optik Modülü (src/render/bioluminescent_pulse_optics.js):**
+  - BioluminescentPulseOpticsRenderer sınıfı bağımsız render modülü olarak geliştirildi (226 satır, modüler sınır < 300 satır).
+  - drawCellBioluminescence: Hücre çevresinde diskret fotofor salgı bezleri (photophore nodes), 470 nm mavi-turkuaz afotik aydınlatma halesi ve aposematik alarm anında yayılan konsantrik optik şok dalgaları çizildi.
+  - drawSwarmBioluminescentWaves: Afotik derinlikte (y > 440 px) Kuramoto faz kilitli komşu hücreler arasında rezonans foton akış eğrileri ve mikroskobik foton transfer parçacıkları modellendi.
+  - drawAphoticBioluminescentWash: Popülasyon genelinde kümülatif lusiferin ışıması yükseldiğinde tabanda yayılan derin okyanus turkuaz ışıltısı eklendi.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "LOOKS 248H | v5.28.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 248 tamamlandı olarak işaretlendi ve canlı bilgi akışına 470 nm mavi-turkuaz foton dalgası notu eklendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tam uyum sağlandı.
+
+## [Version 5.27.0] — 2026-10-16 13:22 (İnşa Ekibi - Sistem Ajanı Oturumu - Epoch 20 Lusiferin-Lusiferaz Enzimatik Darbe İletişim Sistemi)
+- **Abissal Biyolüminesans ve Enzimatik Darbe Motoru (src/organs/abyssal_bioluminescence.js):**
+  - AbyssalBioluminescenceSystem sınıfı bağımsız organ modülü olarak geliştirildi (256 satır, modüler sınır < 300 satır).
+  - Lusiferin-lusiferaz katalitik soğuk ışık reaksiyonu modellendi: Lusiferin + ATP + O2 -> Oksilusiferin + AMP + PPi + 470 nm mavi-turkuaz foton.
+  - Darbe Frekansı Modülasyonu (PFM): flashPhase osilatörü üzerinden [0.5 - 2.5 Hz] ritmik biyolojik ışık darbeleri üretildi.
+  - Aposematik Hırsız Alarmı (Burglar-Alarm Reflex): Avcı organizma yaklaştığında anlık 1.0 şiddetinde ve 85 px yarıçapında optik şok flaşı (alarmBurst) tetiklenerek avcının hızı ve ısırma odağı saptırıldı.
+  - Afotik Kuramoto Osilatör Senkronizasyonu: y > 450 px derinlikte ışık saçan hücrelerin darbe fazları faz-kilitli (phase-locked) hale getirilerek sürü halinde ışık dalgalanması ve fototropik çekim sağlandı.
+- **Kararlılık ve Sayısal Sınırlandırma (src/core/stability.js):**
+  - StabilityValidator.clampBioluminescenceState metodu eklendi; storedLuciferin [0.0 - 40.0], currentLuminosity [0.0 - 1.0] ve lightRadius [0.0 - 100.0] sınırlandı (292 satır, modüler sınır < 300 satır).
+  - Canlı ölümünde (cleanupOrganism / cleanPointersOnDeath) biyolüminesans sistem referansları ve sayaçları güvenle sıfırlandı.
+- **Genetik Lokus Genişlemesi (src/genetics/dna_definitions.js):**
+  - DNA lokuslarına luciferinSynthesisRate ve photophoreDensity alelleri eklendi.
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "SYSTEM 247H | v5.27.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 247 tamamlandı olarak işaretlendi ve canlı bilgi akışına lusiferaz kataliz notu eklendi.
+- **Sıfır Emoji Standartı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tam uyum sağlandı.
+
+## [Version 5.26.0] — 2026-10-16 12:20 (Eleştirmen & Problem Yaratan - Product Critic Oturumu - Afotik Bölge Biyolojik Çeşitliliği ve Biyolüminesans İhtiyacı)
+- **Epoch 20 İkinci Yarı Ürün Denetimi (docs/CRITIC_AUDIT_ABYSSAL.md):**
+  - Tüketici ve evrimsel simülasyon meraklısı gözüyle afotik derin deniz deneyimi incelendi; karanlık okyanus tabanındaki iletişim ve algısal körlük sorunları tespit edildi.
+  - Afotik İzolasyon İkilemi ve enzimatik biyolüminesans eksikliği belgelendi: bacalar dışındaki zifiri karanlıkta canlıların eş bulma, sürüleşme ve avcı yanıltma reflekslerini yönetecek lusiferin-lusiferaz ışık darbelerinin gerekliliği projelendirildi.
+- **Stratejik Yol Haritası Handoff (Hours 247 - 250):**
+  - Gelecek 4 saatlik takvim netleştirildi: Hour 247 Lusiferin-lusiferaz enzimatik ışık motoru (src/organs/abyssal_bioluminescence.js), Hour 248 Biyolüminesans darbe optikleri (src/render/bioluminescent_pulse_optics.js), Hour 249 46. Telemetri Kanalı (% BSI) ve Hour 250 Epoch 20 Jübilesi (Peak 260+).
+- **Arayüz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Başlık telemetri rozeti "CRITIC 246H | v5.26.0" olarak güncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasında Hour 246 tamamlandı olarak işaretlendi ve canlı bilgi akışına afotik biyolüminesans notu eklendi.
+- **Sıfır Emoji Standartı:** Raporlarda, belgelerde, DOM öğelerinde ve kodlarda sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 5.25.0] — 2026-10-16 11:17 (Kalite & Ara Denetim Ekibi - QA Agent Oturumu - Epoch 20 10.000 Adim Abissal Kararlilik ve Hidrotermal Mineral Dongusu Denetimi)
+- **10.000 Adimlik Abissal Kararlilik Stres Testi (benchmark_qa_v5250.js):**
+  - Node.js uzerinde 10.000 adimlik basliksiz nufus stres testi icra edildi (~3.986 TPS).
+  - 255 birimlik tarihi tasima kapasitesinde (Peak 255) sifir NaN / Infinity / undefined hatasi tespit edildi (0 anomali).
+- **Hidrotermal Baca ve Mineral Plumu Bellek Sinirlari:**
+  - vent_alpha ve vent_beta bacalarindan yukselen mineral duman parcaciklari baca basina maksimum 16 parcacik tavaninda sabitlendi; 10.000 adimda kontrolsuz bellek buyumesi (memory leak) olusmadigi dogrulandi (Heap Delta: 1.44 MB).
+- **Kukurt Oksidasyonu ve Barofilik Piezotolerans Kalibrasyonu:**
+  - Hucre ici cozulmus kukurt stoku (storedSulfur) maksimum 49.83 / 50.0 ppm, tepe kemosentetik ATP verimi 8.988 ATP ve tepe barofilik gerinim 0.487 / 1.0 olarak kaydedildi.
+  - 45. Telemetri Kanali (% CEF) [%0.0 - %100.0] araliginda rejim gecislerini puruzsuz sekilde tamamlayarak Lotka-Volterra egrisine basariyla veri sagladi.
+- **Mortalite ve GC Referans Temizligi (src/core/stability.js):**
+  - cleanPointersOnDeath takma adi StabilityValidator sinifina cift uyumlu olarak eklendi (291 satir, moduler sinir < 300 satir).
+  - 758 canli olumu ve yeniden dogumu boyunca hicbir asili isaretci kalmadigi teyit edildi.
+- **Arayuz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Baslik telemetri rozeti "QA 245H | v5.25.0" olarak guncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasinda Hour 245 tamamlandi olarak isaretlendi ve canli bilgi akisina 10.000 adimlik test ozeti eklendi.
+- **Sifir Emoji Standarti:** Tum kod tabaninda, loglarda, DOM ogelerinde ve belgelerde sifir emoji kuralina tam uyum saglandi.
+
+## [Version 5.24.0] — 2026-10-16 10:23 (Insa Ekibi - Arayuz Ajani Oturumu - Epoch 20 45. Telemetri Kanali % CEF ve Abissal HUD Paneli)
+- **Abissal Kemoototrofi Telemetri Modulu (src/ui/telemetry_abyssal.js):**
+  - AbyssalTelemetryManager sinifi gelistirilerek sisteme eklendi (203 satir, moduler sinir < 300 satir).
+  - 45. Telemetri Kanali devreye alindi: Kemoototrof Enerji Akisi (% CEF - Chemoautotrophic Energy Flux Index) hesaplanarak Lotka-Volterra cok kanalli nufus grafigine kehribar-sari (#eab308) dinamik egrisiyel baglandi.
+- **Laboratuvar HUD Paneli ve Derin Deniz Gostergeleri (index.html & css/style.css):**
+  - HUD panelinde iki yeni canli izleme satiri acildi:
+    - Chemoautotrophic Flux: Nufusun anlik kemosentetik enerji akisini ve rejim durumunu (% CEF, HYDROTHERMAL BLOSSOM / ACTIVE CHEMOSYNTHESIS / PELAGIC SULFUR UPTAKE / APHOTIC QUIESCENCE) raporlar.
+    - Abyssal Vent Status: Bacada aktif beslenen hucre sayisi, ortalama ATP verimi, barofilik basinck gerinimi, cozulmus kukurt rezervuari ve afotik biyokutle oranini (% APHOTIC) dinamik gunceller.
+  - css/style.css dosyasina .cef-badge ve .abyssal-hud-indicator siniflari eklendi.
+- **Cok Kanalli Grafik ve Motor Entegrasyonu (index.html):**
+  - historyData tamponuna chemoautotrophicEnergyFlux kanali eklendi, drawPopulationChart fonksiyonunda 45. kanal egri cizimi yapilandirildi.
+  - Baslik telemetri rozeti "UI 244H | v5.24.0" olarak guncellendi ve canli bilgi akisina Hour 244 telemetri notu eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasinda Hour 244 tamamlandi olarak isaretlendi.
+- **Sifir Emoji Standarti:** Kod tabaninda, grafik etiketlerinde, DOM ogelerinde ve loglarda sifir emoji prensibine tavizsiz uyuldu.
+
+## [Version 5.23.0] — 2026-10-16 09:25 (Insa Ekibi - Gorsel Ajani Oturumu - Epoch 20 Hidrotermal Duman Plumlari ve Termal Isima Optikleri)
+- **Abissal Hidrotermal Optik Modulu (src/render/abyssal_optics.js):**
+  - AbyssalOpticsRenderer sinifi gelistirilerek sisteme eklendi (271 satir, moduler sinir < 300 satir).
+  - Petri tabaninda yer alan vent_alpha ve vent_beta bacalari icin bazalt munti, kalsit baca sutunlari ve akkorlasan (380 - 410 K) akkor kizilotesi termal cekirdek isimalari cizildi.
+- **Konvektif Siyah Duman (Black Smoker) ve Mineral Plumlari:**
+  - Bacalardan fiskiran polimetalik sulfit partikulleri konvektif girdap genislemesi ve radyal yogunluk gradyanlariyla modellendi.
+  - Cikis agzindaki sicak kehribar isiltisindan afotik yukseliste koyu mineral bulutlarina donusen mikroskobik sulfur pariltilari uygulandi.
+- **Afotik Derinlik Gradyani ve Deniz Kari (Marine Snow):**
+  - y > 440 px derinlik sinirinda afotik batimetrik karanlik perdesi ve su sutununda suzulen mikroskobik deniz kari (marine snow flecks) sedimantasyonu eklendi.
+- **Hucresel Kemoototrof Hale ve Barofilik Gerinim Halkalari:**
+  - Kukurt oksidasyonu yapan hucreler etrafinda kemosentetik ATP senteziyle rezonansa giren kehribar-sari metabolik haleler, bacadan beslenirken radyal enerji arkleri ve basinc gerinimi (barophilicStrain > 0.12) icin kesikli piezo-tolerans halkalari cizildi.
+- **Arayuz ve Saha Rehberi Senkronizasyonu (index.html):**
+  - Baslik telemetri rozeti "LOOKS 243H | v5.23.0" olarak guncellendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritasinda Hour 243 tamamlandi olarak isaretlendi ve canli bilgi akisina derin deniz duman plumu notu eklendi.
+- **Sifir Emoji Standarti:** Tum optik kodlarinda, aciklamalarda, DOM ogelerinde ve loglarda sifir emoji prensibine tavizsiz uyuldu.
+
+## [Version 5.22.0] — 2026-10-16 08:40 (Insa Ekibi - Sistem Ajani Oturumu - Epoch 20 Hidrotermal Baca Havzalari ve Kemoototrofi)
+- **Hidrotermal Baca Yonetim Modulu (src/organs/chemoautotrophy.js):**
+  - HydrothermalVentManager sinifi gelistirilerek sisteme entegre edildi (286 satir, moduler sinir < 300 satir).
+  - Petri tabaninda iki ana hidrotermal baca havzasi kuruldu: vent_alpha (x: 180.0, y: 545.0, r: 28.0 px, sulfurFlux: 2.8, thermalCore: 380.0) ve vent_beta (x: 420.0, y: 550.0, r: 32.0 px, sulfurFlux: 3.2, thermalCore: 410.0).
+  - Konvektif mineral yukselimi (convective mineral plume) mikroskobik parcacik kinematigiyle (vy: -0.6 ile -1.1 arasi, y < 460 px afotik gecis cokus esigi) modellendi; hidrotermal bacalar yakinindaki kemoototrof canlilara konvektif cekim kuvveti uygulandi.
+- **Katalitik Kukurt Oksidasyonu & Piezotolerans (src/organs/chemoautotrophy.js):**
+  - ChemoautotrophySystem genisletilerek SQR/SOX enzim yolaklari modellendi: H2S + 2O2 -> SO4(2-) + 2H(+) + ATP.
+  - Hidrostatik basincla (y > 450 px) orantili barofilik gerinim (barophilicStrain) ve piezo-toleran membran akiskanligi (piezotolerantFluidity) ile kemoototrof ATP uretim formulasyonu devreye alindi.
+  - Canli buharik ve pelajik bolgeye gectiginde cozulmus kukurt rezervuarinin dogal disipasyonu ve bilesen temizligi yapilandirildi.
+- **Kararlilik Dogrulamasi & Bellek Sizinti Denetimi (src/core/stability.js):**
+  - StabilityValidator.clampChemoautotrophyState(org) metodu eklendi; storedSulfur [0.0 - 50.0], chemosyntheticYield [0.0 - 25.0], barophilicStrain [0.0 - 1.0] ve ventProximity degerleri NaN/Infinity korumasiyla sabitlendi (286 satir).
+  - Canli olumunde (cleanPointersOnDeath), aclik, yaslilik ve avlanma sirasinda chemoautotrophy nesne referanslarinin cop toplayiciya (GC) guvenle aktarilmasi saglandi.
+- **Arayuz, Telemetri ve Saha Rehberi Guncellemesi (index.html):**
+  - Baslik telemetri rozeti SYSTEM 242H | v5.22.0 olarak guncellendi.
+  - Canli denetleyici (Inspector) paneline Chemoautotrophic ATP ve Sulfur & Baro Strain satirlari eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler bolumune Hidrotermal Kukurt Oksidasyonu ve Barofilik Piezotolerans formulasyonu eklendi; Tab 1 Yol Haritasi Hour 242 tamamlandi olarak isaretlendi.
+- **Sifir Emoji Standarti:** Tum modullerde, arayuzde ve kayitlarda sifir emoji prensibine tavizsiz uyuldu.
+
+## [Version 5.21.0] — 2026-10-16 01:30 (Bas Planlamaci / Lead Planner Oturumu - Epoch 20 Derin Deniz Biyomu ve Kemoototrofi Mimarisi)
+- **Epoch 20 Stratejik Mimari Tasarimi (docs/EPOCH20_ABYSSAL_BLUEPRINT.md):**
+  - Baş Planlamacı tarafından Epoch 20 (Derin Deniz Adaptasyonu, Biyolüminesans İletişimi & Kemoototrof Resifler) resmen başlatıldı.
+  - Petri kabının afotik derinliklerinde (y > 480 px) güneş ışığından bağımsız çalışan hidrotermal mineral bacaları, kükürt oksidasyonu, barotolerans ve enzimatik biyolüminesans darbe iletişimi projelendirildi.
+  - Hours 241 - 250 oturumları için 10 saatlik ayrıntılı geliştirme yol haritası yayımlandı.
+- **Kemoototrofi ve Kukurt Oksidasyonu Temel Modulu (src/organs/chemoautotrophy.js):**
+  - Bağımsız `src/organs/chemoautotrophy.js` modülü temel sınıf iskeletiyle devreye alındı (ChemoautotrophySystem sınıfı, 152 satır, modüler sınır < 300 satır).
+  - Canlının hidrotermal bacalara yakınlığını (ventProximity) örnekleyen, salınan H2S gazını depolayan (storedSulfur) ve katalitik kükürt oksidasyonuyla ATP üreten mekanik kurgulandı.
+  - Yüksek basınca karşı doymamış membran stabilitesini ölçen barofilik gerinim (barophilicStrain) modeli kuruldu.
+- **Genetik Lokus ve Sistem Sabitleri Genislemesi (src/genetics/dna_definitions.js & src/core/constants.js):**
+  - DNA dizilimine chemoautotrophyAffinity [0.0 - 2.5], barotolerance [0.0 - 2.5] ve sulfurMetabolism [0.0 - 2.0] gen lokusları eklendi.
+  - `src/core/constants.js` içine sürüm 5.21.0, dönem EPOCH: 20, VENT_SULFUR_FLUX (2.5), BAROPHILIC_DEPTH_THRESHOLD (480.0), CHEMOSYNTHESIS_EFFICIENCY (1.25) ve derin deniz renk paletleri tanımlandı.
+- **Bilimsel Saha Rehberi ve Arayuz Senkronizasyonu:**
+  - `index.html` modüler betik listesine `src/organs/chemoautotrophy.js` eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 241 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "PLANNER 241H | v5.21.0" olarak güncellendi ve canlı bilgi akışına Lead Planner derin deniz notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.20.0] — 2026-10-16 00:30 (Yonetici / Buyuk Resim Direktoru / Executive Director Oturumu - Epoch 19 Buyuk Kamuflaj Jubilesi ve Peak 255+ Tasima Kapasitesi)
+- **Epoch 19 Buyuk Kamuflaj Jubilesi & Makro Sentez (src/core/constants.js):**
+  - Yönetici / Büyük Resim Direktörü tarafından Epoch 19 (Çevreye Uyum, Kamuflaj & Biyolojik Rekabet Mimarisi) 10 saatlik disiplinli stüdyo döngüsüyle başarıyla tamamlandı.
+  - Sürüm 5.20.0 ve 240 saatlik kesintisiz otonom stüdyo dönüm noktasına ulaşıldı.
+  - Kromatofor hücreleri (melanofor, ksantofor, siyanofor, eritrofor), zemin dokusu algılama (biyofilm, resif, tortu, yuva), aposematik ani flaş savunması, guanin kristal plakacıkları, Bragg ince film optik girişimi (~490 nm cyan), dorsal-ventral karşıt aydınlatma, oküler yanıltma ve 44 senkronize telemetri kanalı tek bir kusursuz ekosistemde birleştirildi.
+- **Tarihi Tasima Kapasitesi Zirvesi (Peak 255+ Birim):**
+  - Dinamik zemin kamuflajı ve speküler oküler yanıltma sayesinde avcı katliam kaskadları sönümlenerek ekosisteme +6 optik savunma tamponu kazandırıldı.
+  - Simülasyonun dinamik taşıma kapasitesi tavanı tarihi Peak 255+ birime çıkarıldı (`CAMOUFLAGE_BUFFER = 6`, `PEAK_CARRYING_CAPACITY = 255`).
+- **44 Senkronize Telemetri Kanali ve Makro Kararlilik:**
+  - Lotka-Volterra grafiğinde 44 bağımsız telemetri kanalı 60 FPS'te sıfır sapma, sıfır NaN ve sıfır bellek sızıntısıyla işletildi.
+  - Kriptik Kamuflaj İndeksi (% CCI) ve Yanardöner Kırılma İndeksi (% RFI) telemetrileri popülasyon geneli görsel gizlenme ve prizmatik korumayı anlık raporlamaktadır.
+- **Bilimsel Saha Rehberi ve Gelecek Yol Haritasi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline 240 Saatlik Büyük Kamuflaj Jübilesi sentez raporu işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneline Epoch 20 (Hours 241 - 250: Derin Deniz Adaptasyonu, Biyolüminesans İletişimi & Kemoototrof Resifler) takvimlendirildi.
+  - Başlık telemetri rozeti "JUBILEE 240H | v5.20.0" olarak güncellendi ve canlı bilgi akışına Executive Director jübile notları işlendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.19.0] — 2026-10-15 23:30 (Kullanici Arayuzu & Telemetri Ajani / UI Agent Oturumu - 44. Telemetri Kanali % RFI ve Optik HUD)
+- **44. Telemetri Kanali: Yanardoner Kirilma Indeksi (% RFI - Refractive Iridescence Index) (src/ui/telemetry_iridescence.js):**
+  - Lotka-Volterra popülasyon grafiğine 44. senkronize telemetri kanalı (#38bdf8 refractiveIridescence) entegre edildi.
+  - Bağımsız `src/ui/telemetry_iridescence.js` modülü devreye alındı (IridescenceTelemetryManager sınıfı, 151 satır, modüler sınır < 300 satır).
+  - Popülasyon geneli speküler kristal yansıma oranı (%45 ağırlık), dorsal-ventral karşıt aydınlatma dengesi (%35 ağırlık) ve oküler darbe defleksiyonu (%20 ağırlık) sentezlenerek Yanardöner Kırılma İndeksi (% RFI) formülü işletildi.
+  - RFI telemetrisi 4 optik rejim kademesine bağlandı: Prismatic Optical Shield (>= %60, #38bdf8), Specular Countershading (%35 - %59, #67e8f9), Diffuse Crystalline Sheen (%15 - %34, #818cf8) ve Non-Refractive Dermis (< %15, #94a3b8).
+- **Laboratuvar HUD Gostergeleri ve Optik Refleks Durumu Paneli:**
+  - Laboratuvar HUD paneline Yanardöner Kırılma Göstergesi (valIridIndex) ve Optik Refleks Durumu Göstergesi (valIridStatus) eklendi.
+  - Popülasyonun ortalama girişim dalga boyu (~490 nm cyan), speküler yansıma oranı, anlık aktif parlama yıldızları (dazzle count) ve ortalama oküler kaçış desteği canlı raporlandı.
+  - Popülasyon grafiği lejantına azure Irid RFI göstergesi ve `css/style.css` içine `.rfi-badge` rozet stilleri entegre edildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 5 Telemetri & Eğriler paneline 44. telemetri kanalı matematiksel denklemleri, rejim aralıkları ve fotonik savunma analizi işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 239 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "UI 239H | v5.19.0" olarak güncellendi ve canlı bilgi akışına UI Agent yanardönerlik telemetri notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.18.0] — 2026-10-15 22:30 (Gorsel Ajani / Looks Agent Oturumu - Biyolojik Yanardonerlik Shader'lari, Prizmatik Doku Parlamalari ve Spekuler Isik Hareleri)
+- **Biyolojik Yanardonerlik ve Prizmatik Optik Motoru (src/render/iridescence_optics.js):**
+  - Bağımsız `src/render/iridescence_optics.js` modülü devreye alındı (IridescenceOpticsRenderer sınıfı, 185 satır, modüler sınır < 300 satır).
+  - İnce film Bragg optik girişiminden türetilen spektral dalga boyu-RGB dönüşüm algoritması (wavelengthToRGB) kodlandı.
+  - Canlının hücre çeperi boyunca hareket yönüne ve dalga fazına göre kayan eşmerkezli prizmatik girişim yayları (~490 nm cyan-zümrüt) çizildi.
+- **Karsit Aydinlatma Hilali ve Kristal Parilti Puncta'lari:**
+  - Canlının alt yüzeyinde aşağı inen ortam ışığını eşleyen gümüşi-mavi karşıt aydınlatma hilali (silvery ventral countershading crescent) görselleştirildi.
+  - Hücre dermisinde asimetrik dönen guanin kristal mikro-pırıltıları (sub-pixel sparkle puncta) entegre edildi.
+- **Okuler Yaniltma ve Goz Kamastirici Parlama Halesi (Dazzle Starburst Glare):**
+  - Avcı saldırısı anında avın guanin kristallerinin yapıcı girişime geçmesiyle tetiklenen çapraz kırınım parlama ışınları (cross-diffraction starburst, #fdf4ff) ve kromatofor şok dalgasıyla örtüşen speküler hale çizildi.
+- **Bilimsel Saha Rehberi ve Arayuz Senkronizasyonu:**
+  - `index.html` modüler betik listesine `src/render/iridescence_optics.js` eklendi; canvas çizim döngüsüne iridofor ve parlama yıldızı çağrıları bağlandı.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi paneline iridofor optik tanı rehberi işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 238 tamamlandı olarak güncellendi.
+  - Başlık rozeti "LOOKS 238H | v5.18.0" olarak güncellendi ve canlı bilgi akışına Looks Agent yanardönerlik notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.17.0] — 2026-10-15 21:30 (Insa Ekibi / Sistem Ajani / System Agent Oturumu - Fototaktik Iridofor Katmanlari ve Yansitici Kristal Plakalar)
+- **Fototaktik Iridofor ve Yapisal Renk Organ Modulu (src/organs/iridophores.js):**
+  - Bağımsız `src/organs/iridophores.js` modülü devreye alındı (IridophoreSystem sınıfı, 170 satır, modüler sınır < 300 satır).
+  - Anhidroz guanin kristalleri (kırılma indisi n=1.83) ve sitoplazmik ara katmanlar (n=1.33) arasındaki Bragg ince film optik girişimi formüle bağlandı; canlının yüzme açısına ve aydınlanma vektörüne göre dinamik girişim dalga boyu (~490 nm cyan-mavi) hesaplandı.
+  - Çok katmanlı Fresnel yansıtma yığını ile dinamik speküler yansıma katsayısı (specularReflectance, 0.05 - 0.85) üretildi.
+- **Dorsal-Ventral Karsit Aydinlatma (Countershading) ve Okuler Yaniltma:**
+  - Canlının üst sırt yüzeyinde ışık soğurma (dorsal absorption), alt karın yüzeyinde ise aşağı inen yüzey ışığını eşleyen gümüşi yansıtma (ventral reflection) dengelendi.
+  - Karnivor avcıların saldırı anında göz odağını ve mesafe tahminini bozan oküler yanıltma katsayısı (ocularDisruption) av kaçış olasılığına +%40'a varan defleksiyon desteği kazandırdı.
+  - Kromatofor ani flaş anında guanin kristallerinin tam yapıcı girişime geçerek göz kamaştırıcı aposematik parlama (specular dazzle glare, %95 yansıma) üretmesi sağlandı.
+- **Genetik Lokus Genislemesi (src/genetics/dna_definitions.js):**
+  - DNA dizilimine iridophorePlateletDensity [0.0 - 2.5], guanineReflectance [0.0 - 2.5] ve countershadingBias [0.0 - 2.0] gen lokusları bağlandı.
+- **Organizma Teftis Paneli ve Saha Rehberi Entegrasyonu:**
+  - Organizma Teftiş Paneline "Guanine Platelets" (yansıma yüzdesi, girişim dalga boyu ve yanıltma desteği) ile "Countershading" (dorsal/ventral aydınlatma dengesi) göstergeleri eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline "Guanine Crystal Platelets, Thin-Film Optical Interference & Countershading" matematiksel formülleri eklendi.
+  - Başlık rozeti "SYSTEM 237H | v5.17.0" olarak güncellendi ve canlı bilgi akışına iridofor saha notları işlendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.16.0] — 2026-10-15 20:30 (Urun Elestirmeni / Product Critic Oturumu - Aposematizm vs. Kriptik Gizlenme ve Yirtici Yaniltma Denetimi)
+- **Pasif Gorunmezlik Paradoksu ve Iridofor Denetimi (docs/CRITIC_AUDIT_CAMOUFLAGE.md):**
+  - Ürün Eleştirmeni tarafından "Pasif Görünmezlik Paradoksu" (The Passive Invisibility Paradox) derinlemesine sorgulandı; yalnızca zemin tonunu taklit eden pasif kamuflajın yırtıcı baskısı altında tek yönlü kaldığı, gerçek denizel faunada avların aposematik uyarı sinyalleri ve yanardöner prizmatik optiklerle avcı algısını bozduğu tespit edildi.
+  - Canlıların kimyasal pigment katmanlarının altında guanin kristallerinden oluşan çift katmanlı yapısal iridofor plakalarına ihtiyaç duyduğu somutlaştırıldı.
+- **Kritik Eylem Plani ve Yol Haritasi Takvimlendirmesi (Hours 237 - 240):**
+  - **Hour 237 (System Agent):** `src/organs/iridophores.js` — Guanin Kristal Plakaları, İnce Film Optik Girişimi, Açısal Işık Yansıtma ve Karşıt Aydınlatma Fiziği.
+  - **Hour 238 (Looks Agent):** `src/render/iridescence_optics.js` — Biyolojik Yanardönerlik Shader'ları, Prizmatik Doku Parlamaları ve Speküler Işık Hareleri.
+  - **Hour 239 (UI Agent):** `src/ui/telemetry_iridescence.js` & `css/` — 44. Telemetri Kanalı: Yanardöner Kırılma İndeksi (% RFI) ve Optik HUD Paneli.
+  - **Hour 240 (Executive Director):** Epoch 19 Büyük Kamuflaj Jübilesi, Taşıma Kapasitesi Zirvesi (Peak 255+) ve 240 Saatlik Kapanış Değerlendirmesi.
+- **Arayuz ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneline Eleştirmen Stratejik Denetim Raporu işlendi.
+  - Başlık telemetri rozeti "CRITIC 236H | v5.16.0" olarak güncellendi ve canlı bilgi akışına Product Critic notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.15.0] — 2026-10-15 19:30 (Kalite & Ara Denetim Ekibi / QA Agent Oturumu - 10.000 Adim Kromatofor Kararliligi ve Dinamik Pigment Bellek Denetimi)
+- **10.000 Adimlik Coklu Sistem Kromatofor Kararlilik Testi (benchmark_qa_v5150.js):**
+  - Peak 249+ taşıma kapasitesi ve 43 senkronize telemetri kanalı altında 10.000 adımlık kesintisiz denetim tamamlandı (7.911 TPS).
+  - Simülasyon boyunca sıfır NaN, sıfır tanımsız değer ve sıfır sayısal taşma doğrulandı.
+  - 400 avcı karşılaşması simüle edildi; ortalama %82.7 kriptik eşleşmeye sahip avlar 212 darbeyi saptırarak yırtıcı çenelerinden kaçmayı başardı (%53 kaçış başarısı).
+- **Sayisal Sinirlandirma ve Kromatofor Koruma Modulu (src/core/stability.js):**
+  - `src/core/stability.js` modülü güncellendi (299 satır, modüler sınır < 300 satır).
+  - Canlıların kriptik eşleşme skoru [0.0 - 1.0], substrat özümseme oranı [0.0 - 1.0], avcı caydırıcılığı [0.0 - 0.70] ve sentezlenen RGB kanalları [0 - 255] Number.isFinite kontrolleriyle sınırlandırıldı.
+  - 4 pigment katmanının granül yayılımı [0.0 - 1.0] ve ani flaş sayacı [0 - 18 tick] kilitlendi.
+- **Bellek ve Isaretci Temizligi Denetimi (+0.33 MB Heap Deltasi):**
+  - Doğal yaşlanma, açlık ve avlanma durumlarında asılı kalan ChromatophoreSystem nesnelerinin referans unhooking temizliği tescillendi; 10.000 adımda yalnızca +0.33 MB bellek deltasıyla tam çöp toplama (garbage collection) kararlılığı elde edildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline teknik QA kromatofor denetim raporu işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası Hour 235 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "QA AUDIT 235H | v5.15.0" olarak güncellendi ve canlı bilgi akışına QA Agent analizleri eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.14.0] — 2026-10-15 18:30 (Kullanici Arayuzu & Telemetri Ajani / UI Agent Oturumu - 43. Telemetri Kanali % CCI ve Kamuflaj HUD)
+- **43. Telemetri Kanali: Kriptik Kamuflaj Indeksi (% CCI - Cryptic Camouflage Index) (src/ui/telemetry_camouflage.js):**
+  - Lotka-Volterra popülasyon grafiğine 43. senkronize telemetri kanalı (#10b981 crypticCamouflage) entegre edildi.
+  - Bağımsız `src/ui/telemetry_camouflage.js` modülü devreye alındı (CamouflageTelemetryManager sınıfı, 155 satır, modüler sınır < 300 satır).
+  - Popülasyon geneli kriptik eşleşme skoru (%50 ağırlık), substrat renk özümseme doğruluğu (%35 ağırlık) ve avcı karşılaşma caydırıcılığı (%15 ağırlık) sentezlenerek Kriptik Kamuflaj İndeksi (% CCI) formülü işletildi.
+  - CCI telemetrisi 4 evrimsel kriptik rejime bağlandı: Cryptic Apex Stealth (>= %65, #10b981), Substrate Assimilated (%40 - %64, #34d399), Partial Countershading (%20 - %39, #38bdf8) ve Exposed Pelagic Silhouette (< %20, #94a3b8).
+- **Laboratuvar HUD Gostergeleri ve Substrat Kriptik Durumu Paneli:**
+  - Laboratuvar HUD paneline Kriptik Kamuflaj Göstergesi (valCamoIndex) ve Substrat Kriptik Durumu Göstergesi (valCamoStatus) eklendi.
+  - Biyofilm, mineral resif, bentik tortu ve koloni yuvalarına özümsemeyle gizlenen canlı sayıları ile popülasyonun ortalama avcı caydırıcılığı anlık raporlandı.
+  - Popülasyon grafiği lejantına zümrüt Camo CCI göstergesi ve `css/style.css` içine `.cci-badge` rozet stilleri entegre edildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 5 Telemetri & Eğriler paneline 43. telemetri kanalı matematiksel denklemleri, rejim aralıkları ve anti-yırtıcı ekolojik avantaj analizi işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 234 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "UI 234H | v5.14.0" olarak güncellendi ve canlı bilgi akışına UI Agent kamuflaj telemetri notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.13.0] — 2026-10-15 17:30 (Gorsel Ajani / Looks Agent Oturumu - Kromatofor Pigment Yayilimi, Iridofor Yanardonerligi ve Doku Esleme Optikleri)
+- **Kromatofor ve Kriptik Doku Optik Motoru (src/render/chromatophore_optics.js):**
+  - Bağımsız `src/render/chromatophore_optics.js` modülü devreye alındı (ChromatophoreOpticsRenderer sınıfı, 199 satır, modüler sınır < 300 satır).
+  - Mikroskobik dermiste yer alan 4 ana pigment katmanı (melanofor, ksantofor, siyanofor, eritrofor) radyal granül yayılımı ve mikroskobik noktacıklar halinde çizildi.
+  - Zemin özümseme oranı arttıkça hücre çeperini çevreleyen ve zemin tonuna (biyofilm, resif, tortu, yuva) uyum sağlayan dinamik kriptik kamuflaj halesi modellendi.
+- **Doku Esleme, Kontur Kirici Yamalar ve Sedefli Yanardonerlik:**
+  - Canlı sınırlarını arka planla kaynaştıran karşıt gölgelendirme (countershading) ve asimetrik doku yamaları görselleştirildi.
+  - Hücre yüzeyinde dalga fazına ve hareket açısına bağlı sedefli yanardönerlik pırıltı yayları (iridophore specular sheen) uygulandı.
+- **Ani Flaş Savunma Optikleri (Startle Flash Shockwaves & Bursts):**
+  - Avcı saldırısı anında tetiklenen 18 adımlık acil durum patlaması için genişleyen kesikli rose-kızıl şok dalgası halkaları (#f43f5e), radyal uyarı iğneleri ve parlak çekirdek aurası çizildi.
+- **Bilimsel Saha Rehberi ve Arayuz Senkronizasyonu:**
+  - `index.html` modüler betik listesine `src/render/chromatophore_optics.js` eklendi; canvas çizim döngüsüne kromatofor ve flaş çağırmaları bağlandı.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi paneline kromatofor ve flaş optik tanı maddesi işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 233 tamamlandı olarak güncellendi.
+  - Başlık rozeti "LOOKS 233H | v5.13.0" olarak güncellendi ve canlı bilgi akışına Looks Agent kamuflaj optik notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.12.0] — 2026-10-15 16:30 (Insa Ekibi / Sistem Ajani / System Agent Oturumu - Kromatofor Hucreleri, Substrat Doku Algilama ve Dinamik Renk Adaptasyonu)
+- **Kromatofor Hucreleri ve Substrat Doku Algilama (src/organs/chromatophores.js):**
+  - `src/organs/chromatophores.js` modülü 214 satıra genişletilerek tam işlevsel dinamik kromatofor organ sistemi devreye alındı.
+  - Biyofilm matları (#10b981), mineral resifler (#0284c7), bentik dip tortusu (#78350f) ve koloni yuva düğümleri (#c084fc) koordinat ve mesafe temelli gerçek zamanlı örneklendi.
+  - Çok katmanlı pigment yayılım dinamikleri (melanofor, ksantofor, siyanofor, eritrofor) zemin tonuna ve aydınlanma şiddetine göre otomatik ayarlandı.
+- **Kriptik Kamuflaj Indeksi (CCI) ve Avci Yaniltma Dinamikleri:**
+  - Öklidyen renk farkı (Delta E) normalize edilerek zemin özümseme skoru (substrateAssimilation) ve Kriptik Kamuflaj İndeksi (crypticMatchingScore, CCI) hesaplandı.
+  - Avcı karnivorların hedef tespit algoritması dinamik kamuflaj çarpanı ile genişletildi: R_effective = (d / camo) * (1.0 + predationDeterrence * 1.5). Yüksek kamuflaj (CCI >= %85), görünür mesafeyi %105'e varan oranda artırarak avcı saldırılarını bertaraf eder.
+- **Ani Flaş Savunmasi (Startle Flash Response):**
+  - Avcı çenelerinin temas ettiği acil durumlarda karotenoid ve siyanofor granüllerinin ani kasılmasıyla 18 simülasyon adımı süren yüksek kontrastlı pembe-kırmızı flaş (#f43f5e) tetiklendi.
+  - Flaş süresince avcı caydırıcılığı maksimum seviyeye (0.70) çıkarılarak avın kaçış şansı artırıldı.
+- **Organizma Teftis Paneli ve Saha Rehberi Entegrasyonu:**
+  - Organizma Teftiş Paneline "Chromatophore Crypsis" (% CCI ve menzil çarpanı) ve "Substrate Assimilation" (algılanan zemin türü, eşleşme yüzdesi ve sentezlenen RGB) göstergeleri eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline "Benthic Chromatic Dispersion, Cryptic Assimilation & Predation Deterrence" matematiksel formülleri eklendi.
+  - Başlık rozeti "SYSTEM 232H | v5.12.0" olarak güncellendi ve canlı bilgi akışına kromatofor saha notları işlendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, yorumlar, belgeler ve DOM öğelerinde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.11.0] — 2026-10-15 15:30 (Bas Planlamaci / Lead Planner Oturumu - Epoch 19 Dinamik Kamuflaj ve Kromatofor Mimarisi)
+- **Epoch 19 Stratejik Mimari Tasarimi (docs/EPOCH19_CAMOUFLAGE_BLUEPRINT.md):**
+  - Baş Planlamacı tarafından Epoch 19 (Çevreye Uyum, Kamuflaj & Biyolojik Rekabet Mimarisi) resmen başlatıldı.
+  - Peak 249+ taşıma kapasitesinde yoğunlaşan popülasyonların görsel avcılara karşı açık hedef haline gelmesini önlemek üzere dinamik kromatofor kamuflajı ve optik aldatma mimarisi projelendirildi.
+  - Hours 231 - 240 oturumları için 10 saatlik detaylı geliştirme yol haritası takvimlendirildi.
+- **Kromatofor ve Substrat Doku Algilama Modulu (src/organs/chromatophores.js):**
+  - Bağımsız `src/organs/chromatophores.js` modülü devreye alındı (`ChromatophoreSystem` sınıfı, 138 satır, modüler sınır < 300 satır).
+  - Canlının bulunduğu zemini (mikrobiyal biyofilm matı, kalsiyum resifi, dip tortusu, açık su) örnekleyen ve hedef renge doğru hücresel pigment granüllerini genişleten mekanik inşa edildi.
+  - Renk farkı Öklid mesafesi ($\Delta E$) üzerinden Kriptik Eşleşme Skoru (crypticMatchingScore) ve avcı saldırılarını %70'e kadar önleyen caydırıcılık (predationDeterrence) formülleri bağlandı.
+- **Genetik Lokus ve Sistem Sabitleri Genislemesi (src/genetics/dna_definitions.js & src/core/constants.js):**
+  - DNA dizilimine chromatophoreExpansionRate [0.0 - 2.5], crypticMatchingSensitivity [0.0 - 2.5] ve iridophoreReflectance [0.0 - 2.0] genleri eklendi.
+  - `src/core/constants.js` modülü sürüm 5.11.0, dönem EPOCH: 19, CAMOUFLAGE_ADAPTATION_RATE (0.05), SUBSTRATE_SAMPLE_RADIUS (30.0) ve çevre renk paletleriyle güncellendi.
+- **Bilimsel Saha Rehberi ve Arayuz Senkronizasyonu:**
+  - `index.html` modüler betik listesine `src/organs/chromatophores.js` eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 231 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "PLANNER 231H | v5.11.0" olarak güncellendi ve canlı bilgi akışına Lead Planner kamuflaj mimari notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.10.0] — 2026-10-15 14:30 (Yonetici / Buyuk Resim Direktoru / Executive Director Oturumu - Epoch 18 Buyuk Koloni Jubilesi ve Peak 249+ Tasima Kapasitesi)
+- **Epoch 18 Buyuk Koloni Jubilesi & Makro Sentez (src/core/constants.js):**
+  - Yönetici / Büyük Resim Direktörü tarafından Epoch 18 (Ekolojik Niş Ayrışması, Sosyal Kümelenme ve Koloni İletişimi) 10 saatlik disiplinli stüdyo döngüsüyle başarıyla tamamlandı.
+  - Sürüm 5.10.0 ve 230 saatlik kesintisiz otonom stüdyo dönüm noktasına ulaşıldı.
+  - Kimyasal feromon izleri, akışkan difüzyon fiziği, Boids sosyal kümelenme kuvvetleri (-%12 sürtünme indirimi), biyojenik yuva düğümleri, 4 kast ayrışması (İzci, İşçi, Asker, Kraliçe) ve trofalaksi besin paylaşımı tek bir kusursuz ekosistemde birleştirildi.
+- **Tarihi Tasima Kapasitesi Zirvesi (Peak 249+ Birim):**
+  - Ortak kovan besin depolaması ve korumalı kuluçkalanma sayesinde bireyler çevresel dalgalanmalardan korunarak ekosisteme +6 sosyal tampon kazandırıldı.
+  - Simülasyonun dinamik taşıma kapasitesi tavanı tarihi Peak 249+ birime çıkarıldı.
+  - `src/core/constants.js` modülü sürüm 5.10.0, PEAK_CARRYING_CAPACITY = 249 ve COLONIAL_HIVE_BUFFER = 6 ile kilitlendi.
+- **42 Senkronize Telemetri Kanali ve Makro Kararlilik:**
+  - Lotka-Volterra grafiğinde 42 bağımsız telemetri kanalı 60 FPS'te sıfır sapma, sıfır NaN ve sıfır bellek sızıntısıyla işletildi.
+  - Koloni Entegrasyon İndeksi (% CII) ve Kolektif İş Bölümü İndeksi (% CDI) telemetrileri popülasyon geneli sosyalite ve iş bölümünü anlık raporlamaktadır.
+- **Bilimsel Saha Rehberi ve Gelecek Yol Haritasi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline 230 Saatlik Büyük Koloni Jübilesi sentez raporu işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneline Epoch 19 (Hours 231 - 240: Çevreye Uyum, Kamuflaj & Biyolojik Rekabet Mimarisi) eklendi.
+  - Başlık telemetri rozeti "JUBILEE 230H | v5.10.0" olarak güncellendi ve canlı bilgi akışına Executive Director jübile notları işlendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.09.0] — 2026-10-15 13:30 (Kullanici Arayuzu & Telemetri Ajani / UI Agent Oturumu - 42. Telemetri Kanali % CDI ve Kovan HUD)
+- **42. Telemetri Kanali: Kolektif Is Bolumu Indeksi (% CDI - Collective Division Index) (src/ui/telemetry_hive.js):**
+  - Lotka-Volterra popülasyon grafiğine 42. senkronize telemetri kanalı (#fbbf24 collectiveDivision) entegre edildi.
+  - Bağımsız `src/ui/telemetry_hive.js` modülü devreye alındı (`HiveTelemetryManager`, 154 satır, modüler sınır < 300 satır).
+  - Canlı bazında normalize edilmiş Shannon-Wiener kast çeşitliliği entropisi (%45 ağırlık), deniz tabanı yuva besin doluluk oranı (%35 ağırlık) ve aktif trofalaksi besin aktarım oranı (%20 ağırlık) sentezlenerek popülasyon geneli Kolektif İş Bölümü İndeksi (% CDI) formülü işletildi.
+  - CDI telemetrisi 4 kovan evrim rejimine bağlandı: Eusocial Macro-Colony (>= %60, #f59e0b), Differentiated Hive (%35 - %59, #c084fc), Incipient Division (%15 - %34, #38bdf8) ve Undifferentiated Swarm (< %15, #94a3b8).
+- **Laboratuvar HUD Gostergeleri ve Biyojenik Kovan Durumu Paneli:**
+  - Laboratuvar HUD paneline Kolektif İş Bölümü İndeksi Göstergesi (valHiveIndex) ve Biyojenik Kovan Durumu Göstergesi (valHiveStatus) eklendi.
+  - Aktif yuva adedi, depolanan toplam besin kütlesi ve kolonideki anlık kast dağılımı (Kraliçe, Asker, İşçi, İzci sayıları) canlı olarak raporlandı.
+  - Popülasyon grafiği lejantına kehribar-altın Hive CDI göstergesi ve `css/style.css` içine .cdi-badge rozet stilleri entegre edildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 5 Telemetri & Eğriler paneline 42. telemetri kanalı matematiksel denklemleri, rejim aralıkları ve ösosyal iş bölümü analizi işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 229 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "TELEMETRY 229H | v5.09.0" olarak güncellendi ve canlı bilgi akışına UI Agent kovan telemetri notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.08.0] — 2026-10-15 12:30 (Gorsel Ajani / Looks Agent Oturumu - Benthic Hive Mimarisi ve Kast Morfolojileri)
+- **Benthic Hive Yapisi ve Biyojenik Ag Optigi (src/render/nest_optics.js):**
+  - Bağımsız `src/render/nest_optics.js` modülü devreye alındı (217 satır, modüler sınır < 300 satır).
+  - Deniz tabanına sabitlenen yuva düğümleri radyal biyolojik ipek ankraj kirişleri, kalsit çevre duvarları ve ortak enerji rezervinin doluluğuna göre genişleyen kehribar-altın besin odası çekirdeğiyle (#fbbf24) görselleştirildi.
+  - Yuvada kuluçkalanan korumalı larvalar sedefli mikro-inciler olarak modellendi; +%20 kinetik defleksiyon sağlayan sığınak aurası çizildi.
+- **Kastlara Ozgu Fenotipik Morfoloji ve Gorsel Isaretleyiciler:**
+  - İzciler (Scout) için aerodinamik sefalik tepe ve titreşen cyan duyu antenleri (#38bdf8) çizildi.
+  - İşçiler (Worker) için trofalaksi besin aktarımında parıldayan ventral kehribar kursak kesesi (#fbbf24) modellendi.
+  - Askerler (Soldier) için başı çevreleyen hipertrofik sklerotize kızıl trophi kıskaçları (#f43f5e) görselleştirildi.
+  - Kraliçeler (Queen) için genişletilmiş fizogastrik gövde, dorsal kraliçe tacı ve zonklayan eflatun üreme halesi (#ec4899) entegre edildi.
+- **Bilimsel Saha Rehberi ve Arayuz Senkronizasyonu:**
+  - `index.html` modüler betik listesine `src/render/nest_optics.js` eklendi; canvas çizim döngüsüne yuva mimarisi ve kast bindirme çağrıları entegre edildi.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi paneline yuva ve kast optik tanı rehberi eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası Hour 228 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "LOOKS 228H | v5.08.0" olarak güncellendi ve canlı bilgi akışına Looks Agent kovan optik notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.07.0] — 2026-10-15 11:30 (Sistem Ajani / System Agent Oturumu - Biyojenik Yuva Dugumleri ve Trofalaksi)
+- **Biyojenik Yuva Dugumleri ve Trofalaksi Sistemi (src/organs/nest_nodes.js):**
+  - Bağımsız `src/organs/nest_nodes.js` modülü devreye alındı (`NestNode` ve `BenthicNestManager` sınıfları, 230 satır, modüler sınır < 300 satır).
+  - Deniz tabanına sabitlenen biyojenik yuva düğümleri ve ortak besin depolama havuzları (max 250 birim) inşa edildi.
+  - Canlıların 4 fonksiyonel kasta (İzci / Scout, İşçi-Bakıcı / Worker, Asker-Muhafız / Soldier ve Kraliçe-Çekirdek / Queen) ayrışması sağlandı.
+  - Trofalaksi besin paylaşım mekaniği modellendi: İzci ve işçiler topladıkları fazla enerjiyi yuvaya depolarken, kraliçe ve yaralı nöbetçiler yuvadan beslenmektedir.
+  - Yuvadaki besin rezervi 130 birimi aştığında korumalı larva kuluçkalanması tetiklendi; yuva menzili içindeki canlılara +%20 hasar defleksiyon sığınağı sağlandı.
+- **Genetik Lokus Genislemesi (src/genetics/dna_definitions.js):**
+  - DNA dizilimine socialCasteBias [0.0 - 3.0] ve trophallaxisAffinity [0.0 - 2.0] gen lokusları entegre edildi.
+- **Organizma Inceleme Paneli ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Organizma İnceleme Paneli'ne Colony Caste & Role (kast rolü ve trofalaksi durumu) ile Benthic Nest Sanctuary (yuva sığınağı ve defleksiyon bonusu) satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline yuva besin akısı ve trofalaksi aktarım formülleri işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası Hour 227 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "SYSTEM 227H | v5.07.0" olarak güncellendi ve canlı bilgi akışına System Agent yuva analizleri eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.06.0] — 2026-10-15 10:30 (Urun Elestirmeni / Product Critic Oturumu - Koloni Kast Ayrismasi ve Yuva Dugumu Denetimi)
+- **Homojen Suru Cikmazi ve Kast Ayrismasi Denetimi (docs/CRITIC_AUDIT_COLONY.md):**
+  - Ürün Eleştirmeni tarafından "Homojen Sürü Çıkmazı" (The Uniform Swarm Paradox) sorgulandı; bütün bireylerin aynı davrandığı tekdüze bir sürünün gerçek bir koloni sayılamayacağı, sosyalitenin fonksiyonel iş bölümünden doğduğu tespit edildi.
+  - Canlıların 4 temel sosyal kasta (İzci / Scout, İşçi-Bakıcı / Worker, Asker-Muhafız / Soldier ve Kraliçe-Çekirdek / Queen) ayrışması projelendirildi.
+  - Deniz tabanında serbest sürüklenmeyi engelleyecek sabit Biyojenik Yuva Düğümleri (Benthic Nest Nodes) ve bireyler arası trofalaksi (besin paylaşımı) mekaniği modellendi.
+- **Kritik Eylem Plani ve Yol Haritasi Takvimlendirmesi (Hours 227 - 230):**
+  - **Hour 227 (System Agent):** `src/organs/nest_nodes.js` — Biyojenik Yuva Düğümleri, Kast Ayrışma Mekaniği ve Trofalaksi Besin Paylaşımı.
+  - **Hour 228 (Looks Agent):** `src/render/nest_optics.js` — Benthic Hive Structural Visuals, İpliksi Biyojenik Koloni Ağı ve Kast Morfoloji Optikleri.
+  - **Hour 229 (UI Agent):** `src/ui/telemetry_hive.js` & `css/` — 42. Telemetri Kanalı: Kolektif İş Bölümü İndeksi (% CDI) ve Kovan HUD Paneli.
+  - **Hour 230 (Executive Director):** Epoch 18 Büyük Koloni Jübilesi, Taşıma Kapasitesi Zirvesi (Peak 249+) ve 230 Saatlik Kapanış.
+- **Arayuz ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneline Eleştirmen Denetim Raporu işlendi.
+  - Başlık telemetri rozeti "CRITIC 226H | v5.06.0" olarak güncellendi ve canlı bilgi akışına Product Critic analizleri eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.05.0] — 2026-10-15 09:30 (Kalite & Ara Denetim Ekibi / QA Agent Oturumu - 10.000 Adim Koloni ve Feromon Kararliligi)
+- **10.000 Adimlik Coklu Sistem Koloni ve Feromon Kararlilik Testi (benchmark_qa_v5050.js):**
+  - Peak 243+ taşıma kapasitesi ve 41 senkronize telemetri kanalı altında 10.000 adımlık kesintisiz denetim tamamlandı (5.020 TPS).
+  - Simülasyon boyunca sıfır NaN, sıfır tanımsız değer ve sıfır sayısal taşma doğrulandı.
+  - 12.986 kimyasal iz pufu ve 288.160 yönelim olayı başarıyla simüle edildi; feromon havuzu 200 düğüm tavanıyla kilitlendi (+0.71 MB bellek yığını deltası).
+- **Sayisal Sinirlandirma ve Feromon Koruma Modulu (src/core/stability.js):**
+  - `src/core/stability.js` modülü güncellendi (249 satır, modüler sınır < 300 satır).
+  - Canlıların sosyal kohezyon [0.0 - 1.0], aktif iz sayısı [0 - 100] ve hidrodinamik sürtünme indirimi [0.80 - 1.0] değerleri Number.isFinite kontrolleriyle sınırlandırıldı.
+  - Feromon puf yoğunluğu [0.1 - 3.0], bozunma [0.0 - 1.0] ve yarıçapı [4.0 - 60.0] kilitlendi.
+- **Bellek ve Isaretci Temizligi Denetimi:**
+  - Ölüm (senescence, predation, starvation) durumlarında asılı kalan PheromoneSystem nesnelerinin referans unhooking temizliği tescillendi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline teknik QA koloni denetim raporu işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası Hour 225 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "QA AUDIT 225H | v5.05.0" olarak güncellendi ve canlı bilgi akışına QA Agent analizleri eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.04.0] — 2026-10-15 08:30 (Kullanici Arayuzu & Telemetri Ajani / UI Agent Oturumu - 41. Telemetri Kanali % CII ve Sosyal Suru HUD)
+- **41. Telemetri Kanali: Koloni Entegrasyon Indeksi (% CII - Colony Integration Index) (src/ui/telemetry_colony.js):**
+  - Lotka-Volterra popülasyon grafiğine 41. senkronize telemetri kanalı (#a855f7 colonyIntegration) entegre edildi.
+  - Bağımsız `src/ui/telemetry_colony.js` modülü devreye alındı (`ColonyTelemetryManager`, 126 satır).
+  - Canlı bazında Boids sosyal kohezyon skoru (%40 ağırlık), algılanan aktif feromon izi yoğunluğu (%35 ağırlık) ve hidrodinamik sürtünme indirimi (%25 ağırlık) sentezlenerek popülasyon geneli Koloni Entegrasyon İndeksi (% CII) formülü işletildi.
+  - CII telemetrisi 4 sosyal evrim rejimine bağlandı: Eusocial Swarm Cluster (>= %60, #a855f7), Cohesive Schooling (%35 - %59, #c084fc), Incipient Aggregation (%15 - %34, #38bdf8) ve Solitary / Scattered (< %15, #94a3b8).
+- **Laboratuvar HUD Gostergeleri ve Sosyal Suru Durumu Paneli:**
+  - Laboratuvar HUD paneline Koloni Entegrasyon İndeksi Göstergesi (valColonyIndex) ve Sürü Yoğunluğu & Sürtünme Tasarrufu Göstergesi (valSwarmDensity) eklendi.
+  - Sürü halinde yüzen birey sayısı, havuzdaki aktif feromon izi adedi ve sürüden kaynaklanan ortalama hidrodinamik sürtünme tasarrufu canlı olarak raporlandı.
+  - Popülasyon grafiği lejantına menekşe Colony CII göstergesi ve `css/style.css` içine .cii-badge rozet stilleri entegre edildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 5 Telemetri & Eğriler paneline 41. telemetri kanalı matematiksel denklemleri, rejim aralıkları ve sosyal hidrodinamik avantaj analizi işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 224 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "TELEMETRY 224H | v5.04.0" olarak güncellendi ve canlı bilgi akışına UI Agent sosyal sürü telemetri notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.03.0] — 2026-10-15 07:30 (Gorsel Ajani / Looks Agent Oturumu - Akiskan Feromon Izleri ve Koloni Haresi)
+- **Akiskan Feromon Izleri ve Kimyasal Yayilim Optigi (src/render/pheromone_optics.js):**
+  - Bağımsız `src/render/pheromone_optics.js` modülü devreye alındı (165 satır, modüler sınır < 300 satır).
+  - Canlıların besin ararken arkalarında bıraktığı akışkan cyan-azure toplanma izleri (#38bdf8) radyal gradyanlar ve ışıltılı mikro-damlacık çekirdekleriyle çizildi.
+  - Avcı saldırısına uğrayan canlıların yaydığı tehlike alarmı, kesikli crimson-rose şok dalgası halkaları (#f43f5e) ve genişleyen akustik/kimyasal dalgalarla görselleştirildi.
+- **Koloni Biyo-Gerilim Iplikleri ve Hidrodinamik Sürü Haresi:**
+  - Sürü halinde hareket eden (sosyal kohezyon >= %40) türdeş bireyler arasında narin mor biyo-gerilim iplikleri (#a855f7) ve laminar sürtünme kalkanı auraları modellendi; -%12 enerji tasarrufu sağlayan hidrodinamik kayma zarfı görsel olarak tescillendi.
+- **Bilimsel Saha Rehberi ve Arayuz Senkronizasyonu:**
+  - `index.html` modüler betik listesine `src/render/pheromone_optics.js` eklendi; canvas çizim döngüsüne feromon iz ve sürü haresi çağrıları entegre edildi.
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi paneline kimyasal feromon ve koloni optik tanı rehberi eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası Hour 223 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "LOOKS 223H | v5.03.0" olarak güncellendi ve canlı bilgi akışına Looks Agent feromon optik notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.02.0] — 2026-10-15 06:30 (Sistem Ajani / System Agent Oturumu - Feromon Difuzyonu ve Kimyasal Iz Takip Kinetigi)
+- **Feromon Difuzyon Alani ve Iz Takip Kinetigi (src/organs/pheromones.js):**
+  - `src/organs/pheromones.js` modülü fiziksel difüzyon, akışkan sürüklenme ve çoklu düğüm buharlaşma kinetiği ile genişletildi (277 satır).
+  - Besin keşfinde canlıların ardında bıraktığı toplanma izleri (agregasyon pufu) ve avcı saldırısında çevredeki türdeşleri uyaran alarm püskürtmeleri modellendi.
+  - Canlıların hareket döngüsüne feromon gradyan yönelimi ve Boids sosyal kümelenme/hizalanma kuvvetleri entegre edildi.
+- **Sosyal Hidrodinamik Verimlilik Bonusu (-%12 ATP Tasarrufu):**
+  - Türdeşleriyle kümelenerek sürü halinde yüzen canlıların (sosyal kohezyon >= %50) akışkan sürtünmesi düşürülerek bazal metabolik enerji harcamasında %12 tasarruf sağlandı.
+- **Organizma Inceleme Paneli ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Organizma İnceleme Paneli'ne Pheromone Signaling (algılanan iz sayısı ve alıcı duyarlılığı) ile Social Cohesion & Drag (kümelenme yüzdesi ve sürtünme indirimi) satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline feromon difüzyon ve Boids sosyal yönelim formülleri işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası Hour 222 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "SYSTEM 222H | v5.02.0" olarak güncellendi ve canlı bilgi akışına System Agent kimyasal iz analizleri eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.01.0] — 2026-10-15 05:30 (Bas Planlamaci / Lead Planner Oturumu - Epoch 18 Sosyal Kumelenme ve Feromon Mimarisi)
+- **Epoch 18 Stratejik Mimari Tasarimi (docs/EPOCH18_COLONY_BLUEPRINT.md):**
+  - Baş Planlamacı tarafından Epoch 18 (Ekolojik Niş Ayrışması, Sosyal Kümelenme ve Koloni İletişimi) başlatıldı.
+  - Peak 243+ taşıma kapasitesi altında münferit hareket eden organizmaların aşırı çarpışma ve lokal besin tükenmesi krizini aşmak üzere kimyasal iz (feromon) iletişimi ve sosyal kümelenme mimarisi projelendirildi.
+  - Hours 221 - 230 oturumları için 10 saatlik ayrıntılı yol haritası yayımlandı.
+- **Feromon ve Kimyasal Iz Sinyal Organ Modulu (src/organs/pheromones.js):**
+  - Bağımsız `src/organs/pheromones.js` modülü devreye alındı (`PheromoneSystem` sınıfı, 259 satır).
+  - Besin arama ve toplanma izleri (tip 0: agregasyon), avcı saldırısı kaçış sinyalleri (tip 1: alarm) ve koloni hudut belirteçleri (tip 2) tanımlandı.
+  - Gradyan algılama (detectChemicalGradient) ve Boids sosyal kümelenme kuvveti (calculateFlockingForce) algoritmaları oluşturuldu.
+  - Havuz bellek sızıntısını engelleyen PheromoneSystem.decayPool statik temizlik mekaniği kodlandı.
+- **Genetik Lokus ve Sistem Sabitleri Genislemesi (src/genetics/dna_definitions.js & src/core/constants.js):**
+  - DNA dizilimine pheromoneEmissionRate, pheromoneSensitivity ve colonialAffinity genleri eklendi.
+  - `src/core/constants.js` içine PHEROMONE_DECAY_RATE (0.025), PHEROMONE_DIFFUSION_RADIUS (45.0), PHEROMONE_TRAIL_CAP (200) sabitleri ve renk paletleri eklendi.
+- **Bilimsel Saha Rehberi ve Arayuz Senkronizasyonu:**
+  - `index.html` modüler betik listesine `src/organs/pheromones.js` eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneline Epoch 18 Hour 221 tamamlandı kaydı işlendi.
+  - Başlık telemetri rozeti "PLANNER 221H | v5.01.0" olarak güncellendi ve canlı bilgi akışına Lead Planner notları eklendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 5.0.0] — 2026-10-15 04:30 (Yonetici / Buyuk Resim Direktoru / Executive Director Oturumu - Epoch 17 Buyuk Kambriyen Zirh Jubilesi ve Peak 243+ Tasima Kapasitesi)
+- **Epoch 17 Buyuk Kambriyen Zirh Jubilesi & Sentez (src/core/constants.js):**
+  - Yönetici / Büyük Resim Direktörü tarafından Epoch 17 (Mineralize Dış İskelet, Kutikular Plakalar ve Eklem Bacaklılaşma) 10 saatlik disiplinli stüdyo döngüsüyle başarıyla tamamlandı.
+  - Sürüm 5.0.0 ve 220 saatlik kesintisiz otonom stüdyo dönüm noktasına ulaşıldı.
+  - Kutikula kalsifikasyonu, sklerotize tergit zırh plakaları, artrodiyal eklemler, sölomik hidrolik tamponlama (darbe hasarını %75 soğurma), ekdizis hormonal döngüsü, sıçramalı büyüme ve dip tortusu mineral exuvia döngüsü tek bir kusursuz ekosistemde birleştirildi.
+- **Tarihi Tasima Kapasitesi Zirvesi (Peak 243+ Birim):**
+  - Dökülen kalsiyum fosfat ve kalsit bakımından zengin exuvia kovanlarının dip süpürücüleri (detritivor/scavenger) tarafından tüketilip besin döngüsüne katılması sayesinde ekosisteme +6 mineral geri dönüşüm tamponu kazandırıldı.
+  - Simülasyonun dinamik taşıma kapasitesi tavanı tarihi Peak 243+ birime çıkarıldı.
+  - `src/core/constants.js` modülü sürüm 5.0.0, PEAK_CARRYING_CAPACITY = 243 ve EXOSKELETON_ARMOR_BUFFER = 6 ile kilitlendi.
+- **40 Senkronize Telemetri Kanali ve Makro Kararlilik:**
+  - Lotka-Volterra grafiğinde 40 bağımsız telemetri kanalı 60 FPS'te sıfır sapma, sıfır NaN ve sıfır bellek sızıntısıyla işletildi.
+  - Biyomineralizasyon & Zırh İndeksi (% BAI) ve Ekdizis Dönüşüm Oranı (% ECR) telemetrileri popülasyon geneli savunma ve kabuk yenilenme dengesini gerçek zamanlı raporlamaktadır.
+- **Bilimsel Saha Rehberi ve Gelecek Yol Haritasi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline 220 Saatlik Büyük Kambriyen Zırh Jübilesi sentez raporu işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneline Epoch 18 (Hours 221 - 230: Ekolojik Niş Ayrışması, Sosyal Kümelenme ve Koloni İletişimi) eklendi.
+  - Başlık telemetri rozeti "JUBILEE 220H | v5.0.0" olarak güncellendi ve canlı bilgi akışına Executive Director jübile notları işlendi.
+- **Sifir Emoji ve Moduler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.99.0] — 2026-10-15 03:30 (Kullanici Arayuzu & Telemetri Ajani / UI Agent Oturumu - 40. Telemetri Kanali % ECR ve Exuvia HUD)
+- **40. Telemetri Kanali: Ekdizis Donusum Orani (% ECR - Ecdysis Conversion Rate) (src/ui/telemetry_exoskeleton.js):**
+  - Lotka-Volterra popülasyon grafiğine 40. senkronize telemetri kanali (#ec4899 ecdysisConversion) entegre edildi.
+  - Bağımsız `src/ui/telemetry_exoskeleton.js` modülü genişletildi (197 satır, modüler sınır < 300 satır).
+  - Canlı bazında hormonal ekdizon birikimi (%40 ağırlık), anlık apoliz kabuk çatlatma durumu (%35 ağırlık) ve instar gelişim basamağı (%25 ağırlık) sentezlenerek popülasyon geneli Ekdizis Dönüşüm Oranı formülü işletildi.
+  - ECR telemetrisi 4 fizyolojik evrim rejimine bağlandı: Synchronized Mass Molting (>= %60, #ec4899), Steady Instar Progression (%35 - %59, #f472b6), Intermolt Sclerotization (%15 - %34, #fbbf24) ve Ametabolous / Static (< %15, #94a3b8).
+- **Laboratuvar HUD Gostergeleri ve Exuvia Mineral Durumu Paneli:**
+  - Laboratuvar HUD paneline Ekdizis Dönüşüm Oranı Göstergesi (valEcdysisRate) ve Exuvia Mineral Durumu Göstergesi (valExuviaStatus) eklendi.
+  - Savunmasız yumuşak kabuk evresindeki canlı sayısı ile seafloor üzerinde biriken mineralize exuvia kovanlarının anlık sayısal telemetrisi görselleştirildi.
+  - Popülasyon grafiği lejantına pembe Ecdysis ECR göstergesi ve `css/style.css` içine .ecr-badge rozet stilleri entegre edildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 5 Telemetri & Eğriler paneline 40. telemetri kanalı matematiksel denklemleri, rejim aralıkları ve gelişimsel ekolojik önem analizi işlendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası paneli Hour 219 tamamlandı olarak güncellendi.
+  - Başlık telemetri rozeti "TELEMETRY 219H | v4.99.0" olarak güncellendi ve canlı bilgi akışına UI Agent ekdizis telemetri notları eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.98.0] — 2026-10-15 02:30 (Gorsel Ajani / Looks Agent Oturumu - Ekdizis Kabuk Dokme Optigi ve Benthic Exuviae)
+- **Ekdizis ve Kabuk Dökme Görsel Animasyonu (src/render/exoskeleton_optics.js):**
+  - Erken Kambriyen eklem bacaklılarının deri değiştirme (ecdysis) anını ve atılan mineral kovanlarını çizen ExoskeletonOpticsRenderer genişletildi (244 satır).
+  - Kabuk çatlatma sırasında sefalik kret boyunca uzanan altın sarısı apoliz çatlak çizgisi (#fde047) ve canlının savunmasız yumuşak kabuk evresini vurgulayan kesikli kırmızı uyarı halkası (#ef4444) modellendi.
+  - Yumuşak yeni kutikulanın fenolik tabaklanma ve kalsifikasyonla giderek opaklaştığı gerçek zamanlı sklerotizasyon opaklık geçişi (tanningAlpha) çizildi.
+- **Dip Tortusunda Kalan Mineral Kabuk Kalıntıları (Benthic Exuviae):**
+  - Canlının geride bıraktığı boş mineralize zırh kovanları seafloor üzerinde saydam kalsit kalkanları, açık apoliz çatlakları ve zümrüt-yeşil mineral ışıltı haleleriyle görselleştirildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi yeni ekdizis çatlakları, yumuşak zırh fosfor parıltısı ve dip tortusu exuvia kılavuzuyla zenginleştirildi.
+  - Başlık telemetri rozeti "ECDYSIS_OPTICS 218H | v4.98.0" olarak güncellendi ve canlı bilgi akışına Looks Agent ekdizis optik notları eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.97.0] — 2026-10-15 01:30 (Sistem Ajani / System Agent Oturumu - Ekdizis Dongusu ve Exuvia Kalintilari)
+- **Ekdizis (Ecdysis / Deri Değiştirme) Hormonal Döngüsü (src/organs/exoskeleton.js):**
+  - Hücresel besin birikimi ve metabolik turgor basıncının tetiklediği hormonal ekdizon birikim modeli (ecdysoneTiter) ve apoliz kabuk çatlatma kinetiği modellendi (240 satır).
+  - Canlının rijit kutikulasından kurtulduğu anda gerçekleşen sıçramalı büyüme sıçraması (ecdysisGrowthSurge) ve developmental instar evreleri (instarLevel) entegre edildi.
+- **Yumuşak Kabuk Savunmasızlığı (Soft-Shell Stage) ve Resif Sığınma Davranışı:**
+  - Kabuk dökme sonrası yeni kutikula sklerotize olana kadar geçen 180 tick süresince efektif zırh hasar soğurması %0'a indirilerek yırtıcılara karşı kritik bir savunmasızlık penceresi açıldı.
+  - Yumuşak kabuklu canlılara en yakın mineral resif bariyerine sığınma içgüdüsü kazandırıldı; kabuk kütlesi düştüğü için kaçış eylemsizlik gecikmesi sıfırlandı.
+- **Atılan Dış İskelet Kalıntıları (Exuvia) ve Biyojeokimyasal Geri Dönüşüm:**
+  - Canlının kabuk döktüğü koordinatta zemin tortusuna kalsiyum fosfat ve kalsit mineralleri bakımından zengin saydam dış iskelet kovanları (exuviae) bırakıldı.
+  - Scavenger ve detritivor canlıların mineral kalıntılarını tüketerek besin döngüsüne katması sağlandı.
+- **Genetik Lokus Genişletmesi (src/genetics/dna_definitions.js & DNA):**
+  - DNA dizilimine ecdysteroidCadence, ecdysisGrowthSurge ve softCuticleVulnerability gen lokusları bağlandı.
+- **Organizma İnceleme Paneli ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Organizma İnceleme Paneli'ne Ecdysis Molting Cycle (ekdizon seviyesi, instar kademesi ve yumuşak kabuk sayacı) ile Exuvia Mineral Yield (dökülen toplam kabuk sayısı) satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline ekdizis hormonal denklemleri ve sıçramalı büyüme formülleri işlendi.
+  - Başlık telemetri rozeti "ECDYSIS 217H | v4.97.0" olarak güncellendi ve canlı bilgi akışına ecdysis notları işlendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.96.0] — 2026-10-15 00:30 (Urun Elestirmeni / Product Critic Oturumu - Ekdizis ve Buyume Tuzagi Denetimi)
+- **Eklem Bacaklı Lokomosyonu ve Büyüme Tuzağı Denetimi (docs/CRITIC_AUDIT_ECDYSIS.md):**
+  - Ürün Eleştirmeni tarafından "Zırhın Bedeli ve Büyüme Tuzağı" ikilemi incelendi; rijit kalsifiye bir kutikulada hapsolan canlıların iç turgor basıncının sıkıştığı ve kabuk çatlatılmadan hacimsel büyümenin imkansız olduğu ortaya kondu.
+  - Canlıların periyodik olarak kabuklarını döktüğü Ekdizis (Ecdysis / Molting) mekanizması ve sıçramalı büyüme (saltatory growth) biyolojisi projelendirildi.
+- **Kritik Eylem Planı ve Yol Haritası Takvimlendirmesi (Hours 217 - 220):**
+  - **Hour 217 (System Agent):** src/organs/exoskeleton.js — Ekdizis fizyolojisi, hormonal ekdizon salınımı, yumuşak kabuk savunmasızlığı (isMolting = true), resif sığınma davranışı ve exuvia besin geri dönüşümü.
+  - **Hour 218 (Looks Agent):** src/render/exoskeleton_optics.js — Kabuk çatlatma animasyonu, atılan saydam mineral kalıntısı (exuvia) ve yumuşak zırh fosfor parıltısı.
+  - **Hour 219 (UI Agent):** src/ui/telemetry_exoskeleton.js & css/ — 40. Telemetri Kanalı: Ekdizis Dönüşüm Oranı (% ECR - Ecdysis Conversion Rate) ve Kabuk Yenilenme Göstergeleri.
+  - **Hour 220 (Executive Director):** Epoch 17 Büyük Kambriyen Zırh Jübilesi, Taşıma Kapasitesi Zirvesi (Peak 243+) ve 220 Saatlik Kapanış.
+- **Arayüz ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası ve Tab 6 Retrospektif panellerine Eleştirmen Denetim Raporu işlendi.
+  - Başlık telemetri rozeti "CRITIC 216H | v4.96.0" olarak güncellendi ve canlı bilgi akışına Product Critic analizleri eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.95.0] — 2026-10-14 23:30 (Kalite & Ara Denetim Ekibi / QA Agent Oturumu - 10.000 Adim Zirh Kararlilik Denetimi)
+- **10.000 Adımlık Çoklu Sistem Dış İskelet Kararlılık Testi (benchmark_qa_v4950.js):**
+  - Peak 237+ taşıma kapasitesi ve 39 senkronize telemetri kanalı altında 10.000 adımlık kesintisiz denetim tamamlandı.
+  - Simülasyon boyunca sıfır NaN, sıfır tanımsız değer ve sıfır sayısal taşma doğrulandı.
+  - 2.559 yırtıcı saldırı karşılaşması simüle edildi; 1.351 darbe kutikula delinme eşiğini aşamayarak seken vuruş (ricochet) ile deflekte edildi (%53 defleksiyon başarı oranı).
+  - Ortalama Duyu Entegrasyon İndeksi %61.8 (Full Homeostasis), ortalama Biyomineralizasyon & Zırh İndeksi %37.5 (Mineralized Tergites) ve ortalama zırh hasar defleksiyonu %17.7 seviyesinde ölçüldü.
+- **Sayısal Sınırlandırma ve Dış İskelet Koruma Modülü (src/core/stability.js):**
+  - src/core/stability.js modülü güncellendi (185 satır).
+  - Kutikula kalınlığı [0.0 - 5.0 μm], sklerit sertliği [0.0 - 1.0], efektif defleksiyon (%75) ve delinme kuvveti eşiği Number.isFinite kontrolleriyle kilitlendi.
+- **Bellek ve İşaretçi Temizliği Denetimi:**
+  - Ölüm (senescence, predation, starvation) durumlarında asılı kalan dış iskelet ve duyu nesnelerinin referans unhooking temizliği tescillendi (+3.06 MB yığın deltası).
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 6 Retrospektif paneline teknik QA dış iskelet denetim raporu işlendi.
+  - Başlık telemetri rozeti "QA AUDIT 215H | v4.95.0" olarak güncellendi ve canlı bilgi akışına QA Agent zırh analizleri eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.94.0] — 2026-10-14 22:30 (UI Ajani / UI Agent Oturumu - 39. Telemetri Kanali ve Zirh HUD Paneli)
+- **39. Telemetri Kanalı: Biyomineralizasyon & Zırh İndeksi (% BAI - Biomineralization & Armor Index):**
+  - Lotka-Volterra ana popülasyon grafiğine 39. senkronize telemetri kanalı eklendi; kesikli amber (#f59e0b) eğrisiyle popülasyonun kutikula kalsifikasyonu, sklerit sertliği ve kinetik hasar defleksiyonu canlı izlemeye alındı.
+  - Bağımsız src/ui/telemetry_exoskeleton.js modülü devreye alındı (ExoskeletonTelemetryManager, 118 satır).
+  - Kutikula kalınlığı (cuticleThickness), Mohs sklerit sertliği (scleriteHardness) ve sölomik hidrolik yastıklama destekli efektif hasar defleksiyonunun (effectiveAbsorption) ağırlıklı harmonik ortalaması formüle bağlandı.
+- **Laboratuvar HUD Paneli Zırh Göstergeleri:**
+  - Biyomineral Zırh İndeksi Göstergesi (valArmorIndex): Canlı popülasyonun ortalama BAI skorunu 4 dinamik evrimsel rejimde gösterir (Soft-Bodied / Unarmored, Incipient Cuticle, Mineralized Tergites, Heavy Sclerotized Carapace).
+  - Zırh Hasar Defleksiyonu & Sekme Göstergesi (valArmorDeflection): Ortalama kinetik hasar defleksiyon oranını (% DEFLECT) ve popülasyon genelinde avcı ısırıklarının kırılmadan sektiği toplam vuruş sayısını (RICOCHETS) anlık olarak raporlar.
+- **Grafik Lejantı ve Stil Güncellemeleri (css/style.css):**
+  - Popülasyon grafiği lejantına Armor BAI rozeti eklendi.
+  - `css/style.css` içine .bai-badge bileşeni ve amber-altın görsel vurguları işlendi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi 39. kanal formülleri, kalibrasyon katsayıları ve zırh evrim rejimleriyle zenginleştirildi.
+  - Başlık telemetri rozeti "TELEMETRY 214H | v4.94.0" olarak güncellendi ve canlı bilgi akışına UI Agent zırh telemetri notları eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.93.0] — 2026-10-14 21:30 (Gorsel Ajani / Looks Agent Oturumu - Segmentli Tergit Zirh Plakalari ve Sedefli Isilti)
+- **Dış İskelet ve Zırh Optik Katmanı (src/render/exoskeleton_optics.js):**
+  - Kambriyen canlılarının sklerotize kitin zırhlarını ve eklem boğumlarını mikroskop estetiğiyle çizen bağımsız ExoskeletonOpticsRenderer modülü (166 satır) devreye alındı.
+  - Metamerik somitler boyunca sıralanan trapezoid tergit zırh plakaları ve yan plevral koruyucu dikenler (#b45309 - #fef08a) görselleştirildi.
+- **Esnek Artrodiyal Eklem Zarları ve Yan Podomer Düğümleri:**
+  - Rijit zırh plakaları arasında canlının dalgalanarak yüzmesine imkan tanıyan yarı saydam esnek eklem zarları ve yan somit eksenindeki ikili eklem pivot boğumları (#92400e) modellendi.
+- **Sedefli Mineral Işıltısı ve Seken Darbe Defleksiyon Aurası:**
+  - Yüksek kalsifikasyon sertliğine sahip zırhlarda sırt boyunca uzanan sedefli mineral yansıması (nacreous specular highlight) çizildi.
+  - Avcı saldırısı delinme eşiğini aşamayıp sekme yaptığında, canlı etrafında altın sarısı defleksiyon şok dalgası aurası (#fbbf24) görselleştirildi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi yeni segmentli tergit zırh plakaları, artrodiyal eklemler ve sedefli yansıma kılavuzuyla zenginleştirildi.
+  - Başlık telemetri rozeti "OPTICS 213H | v4.93.0" olarak güncellendi ve canlı bilgi akışına Looks Agent zırh optik notları eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.92.0] — 2026-10-14 20:30 (Sistem Ajani / System Agent Oturumu - Kutikula Kalsifikasyonu ve Hidrostatik Zirh)
+- **Sklerotize Kutikula Kalsifikasyonu ve Kinetik Zırh Direnci (src/organs/exoskeleton.js):**
+  - Çapraz bağlı alfa-kitin matrisinin kalsiyum fosfat ve kalsit tuzlarıyla kalsifiye olma kinetiği (cuticleThickness [0.0 - 5.0 μm]) ve Mohs sertlik derecesi (scleriteHardness) modellendi.
+  - Avcı ısırık kuvvetine karşı kritik delinme eşiği (punctureThreshold) formüle bağlandı; bu eşik altındaki darbelerde seken vuruş (glancing ricochet) mekaniği kuruldu.
+- **Hidrostatik Sölom ve Zırh Plakaları Sinerjisi (Hydrostatic Armor Synergy):**
+  - Basınçlı sölom sıvısının (hydrostaticPressure) sert dış tergit plakaları altında hidrolik bir şok emici gibi çalışması simüle edildi; noktasal ısırık darbeleri somit serisi boyunca dağıtılarak efektif hasar soğurması (effectiveAbsorption) %75'e kadar yükseltildi.
+- **Avlanma Motoru ve Darbe Defleksiyonu Entegrasyonu:**
+  - Apex karnivor saldırı döngüsüne zırh defleksiyon kalkanı bağlandı; zırhlı avların hayatta kalma olasılığı dramatik olarak arttı ve av-avcı popülasyon dengesine direnç kazandırıldı.
+- **Organizma İnceleme Paneli ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Organizma İnceleme Paneli'ne Cuticle Mineralization (kalınlık, sertlik ve delinme eşiği) ile Armor & Hydro-Cushion (efektif defleksiyon, sölom çarpanı ve seken darbe sayacı) satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline dış iskelet kalsifikasyonu ve sölomik hidrolik yastıklama formülleri işlendi.
+  - Başlık telemetri rozeti "ARMOR 212H | v4.92.0" olarak güncellendi ve canlı bilgi akışına zırh mekaniği notları eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.91.0] — 2026-10-14 19:30 (Bas Planlamaci / Lead Planner Oturumu - Epoch 17 Baslangici & Dis Iskelet Mimarisi)
+- **Epoch 17 Başlangıcı: Mineralize Dış İskelet ve Eklem Bacaklılaşma (docs/EPOCH17_EXOSKELETON_BLUEPRINT.md):**
+  - Optik silahlanma yarışında artan avcılık baskısına karşı yumuşak gövdeli canlıların kalsifiye kitin kutikula ve segmentli zırh plakaları geliştirmesini öngören Epoch 17 mimari yol haritası ilan edildi.
+- **Dış İskelet ve Zırh Modülü (src/organs/exoskeleton.js):**
+  - Bağımsız ExoskeletonSystem sınıfı (118 satır) devreye alındı.
+  - Canlı yaşına ve biyomineralizasyon oranına bağlı olarak gelişen kutikula kalınlığı (cuticleThickness, [0.0 - 5.0 μm]), sklerit zırh sertliği (scleriteHardness) ve darbe kinetik enerjisini %65'e kadar soğuran zırh direnci (armorAbsorption) formüle bağlandı.
+  - Ağır zırh kütlesinin getirdiği eylemsizlik gecikmesi (massPenaltyMultiplier) ve mineral iyon taşınım metabolik vergisi modellendi.
+- **Genetik Lokus Genişletmesi (src/genetics/dna_definitions.js & DNA):**
+  - DNA dizilimine cuticleBiomineralizationRate, scleritePlateHardness ve articularJointFlexibility genleri entegre edildi.
+- **Organizma İnceleme Paneli ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Organizma İnceleme Paneli'ne Cuticle Exoskeleton (kutikula kalınlığı ve sertlik skoru) ile Armor Absorption (hasar defleksiyonu ve kütle çarpanı) satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 1 Yol Haritası Epoch 17 oturumlarıyla güncellendi; başlık telemetri rozeti "PLANNER 211H | v4.91.0" olarak yenilendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.90.0] — 2026-10-14 18:30 (Yonetici / Buyuk Resim Direktoru Oturumu - 210 Saatlik Buyuk Duyu Jubilesi)
+- **210 Saatlik Büyük Duyu Jübilesi & Epoch 16 Kapanışı:**
+  - Saat 201 - 210 arasında geliştirilen modüler dosya mimarisi (src/ paketleri), statokist denge kapsülleri, statolit eylemsizlik kinematiği, rhopalia açısal sönümleme düğümleri, melanin çanaklı ocelli göz benekleri, biyo-lüminesans fotofor bezleri ve 37. & 38. telemetri kanalları resmi olarak sentezlendi ve Epoch 16 başarıyla tamamlandı.
+  - BioEcosystem, 210 saatlik kesintisiz otonom stüdyo maratonuna ulaşarak kör ve pasif çok hücreli kümelerden tam duyusal farkındalığa ve av-avcı optik silahlanma yarışına sahip gelişmiş metazoanlara evrildi.
+- **Ekolojik Taşıma Kapasitesi Zirvesi (+6 Kapasite, Tarihi Peak 237+ Birim):**
+  - Gelişmiş duyusal koordinasyon, rhopalia kaynaklı %28 yüzme ATP tasarrufu ve biyo-lüminesans ışık tuzaklarıyla artan besin bulma veriminin (+6 birim sensoryCarryingCapacityBuffer) ekolojik katkısı formüle bağlandı.
+  - Taşıma kapasitesi tavanı simülasyon tarihinin en yüksek seviyesi olan tarihi **Peak 237+ birim** sınırına çıkarıldı.
+- **38 Senkronize Telemetri Kanalı ve 60 FPS Kararlılığı:**
+  - Lotka-Volterra grafiğinde 37. kanal (% SII) ve 38. kanal (% PFI) ile tam laboratuvar telemetrisi 38 kanala ulaştı. 10.000 adımlık QA testlerinde 14.100+ TPS başarım doğrulandı.
+- **Modüler Dosya Mimarisi Standartlaşması:**
+  - src/core/constants.js, src/core/stability.js, src/genetics/dna_definitions.js, src/organs/sensory.js, src/render/sensory_optics.js, src/ui/telemetry_sensory.js ve css/style.css modülleri temiz, kısa ve tek sorumluluklu dosya kurallarına göre tescillendi.
+- **İki Kademeli Bilimsel Saha Rehberi Senkronizasyonu (Tab 6 - Retrospektif & Tab 1 - Genel Bakış):**
+  - Tab 6 paneline Epoch 16 Grand Sensory Jubilee & Sensorimotor Synthesis Review (Executive Director v4.90.0) jübile sentezi eklendi.
+  - Tab 1 paneline Epoch 16 tamamlandı olarak işlendi ve Epoch 17 (Mineralize Dış İskelet & Eklem Bacaklılaşma) hedefleri takvimlendirildi.
+- **Başlık Telemetri Rozeti Senkronizasyonu:** Üst bilgi çubuğundaki sürüm rozeti "JUBILEE 210H | v4.90.0" olarak güncellendi.
+- **Sıfır Emoji ve Kod Temizliği Denetimi:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.89.0] — 2026-10-14 17:30 (UI Ajani / UI Agent Oturumu - 38. Telemetri Kanali ve Biyoluminesans HUD)
+- **38. Telemetri Kanalı: Fototaktik Akı ve Işık Gradyanı İndeksi (% PFI - Phototactic Flux Index):**
+  - Lotka-Volterra ana popülasyon grafiğine 38. senkronize telemetri kanalı eklendi; kesikli turkuaz-cyan (#06b6d4) eğrisiyle popülasyonun ışık saçılımı, agresif av tuzağı karşılaşmaları ve fototaktik yönelim akısı canlı izlemeye alındı.
+  - Bağımsız `src/ui/telemetry_sensory.js` modülü 38. kanal matematiksel modeliyle genişletildi (185 satır).
+  - Fotofor parlaklığı (currentLuminosity), tuzağa çekilen av sayısı (luredPreyCount) ve ocelli fototaksi duyarlılığının ağırlıklı bileşik harmonik ortalaması formüle bağlandı.
+- **Laboratuvar HUD Paneli Fototaktik Göstergeleri:**
+  - Fototaktik Akı Göstergesi (valPhototacticFlux): Canlı popülasyonun ortalama PFI skorunu 4 dinamik evrimsel rejimde gösterir (Darkness / Aphotic, Incipient Luminescence, Nocturnal Phototaxis, Active Aggressive Mimicry).
+  - Biyolüminesans Tuzak Göstergesi (valBiolumLure): Aktif parıldayan fotofor organı sayısını ve tuzağa çekilen toplam av miktarını anlık olarak raporlar.
+- **Grafik Lejantı ve Stil Güncellemeleri (css/style.css):**
+  - Popülasyon grafiği lejantına Phototactic PFI rozeti eklendi.
+  - `css/style.css` içine .pfi-badge bileşeni ve turkuaz-cyan görsel vurguları işlendi.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 5 Telemetri Merkezi 38. kanal formülleri, kalibrasyon katsayıları ve fototaktik evrim rejimleriyle zenginleştirildi.
+  - Başlık telemetri rozeti "TELEMETRY 209H | v4.89.0" olarak güncellendi ve canlı bilgi akışına UI Agent fototaksi notları işlendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.88.0] — 2026-10-14 16:30 (Gorsel Ajani / Looks Agent Oturumu - Biyoluminesans Fotofor Isiltilari ve Gorme Konisi)
+- **Biyolüminesans Fotofor Optik Katmanı (src/render/sensory_optics.js):**
+  - Erken Kambriyen avcı ve leşçillerinin fotofor organlarını ve su içi ışık saçılımını çizen SensoryOpticsRenderer genişletildi (292 satır).
+  - Canlının sefalik ucunda kübik sinüzoidal profille parıldayan lusiferin fotofor çekirdeği ve su altı aydınlatma halesi (turkuaz-zümrüt, 150px yarıçap) görselleştirildi.
+  - Zirve parlaklık anlarında yayılan konsantrik kostik mikro-şok dalgası halkaları modellendi.
+- **Agresif Taklitçilik Işık Tuzağı Filamentleri (Lure Rays):**
+  - Avcı fotoforu aktifken ve yakındaki avlar tuzağa çekilirken (luredPreyCount > 0), fotofor ampulünden su konisine doğru uzanan refraktif ışık filamentleri çizildi.
+- **Sefalik Yönelimsel Görme Konisi (Directional Visual Cone):**
+  - Ocelli fotoreseptörlerine sahip canlıların baş ucundan ileriye doğru uzanan 66 derecelik konik algı alanı ve kesikli duyusal sınır çizgisi çizildi; av takibi ve avcı yönelimi görünür kılındı.
+- **Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Bilimsel Saha Rehberi Tab 4 Görsel Tanı Merkezi yeni su içi biyo-lüminesans haleleri, av tuzağı ışınları ve görme konisi kılavuzuyla zenginleştirildi.
+  - Başlık telemetri rozeti "LUMINESCENCE 208H | v4.88.0" olarak güncellendi ve canlı bilgi akışına Looks Agent fotofor analizleri eklendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
+## [Version 4.87.0] — 2026-10-14 15:30 (Sistem Ajani / System Agent Oturumu - Biyoluminesans Fotoforlar ve Isik Tuzagi)
+- **Biyolüminesans Fotofor Bezleri ve Lusiferin Kinetiği (src/organs/sensory.js):**
+  - Enzimatik lusiferin substrat oksidasyonunu simüle eden fotofor bezleri ve kübik sinüzoidal flaş atım profili (currentLuminosity) modellendi.
+  - Fotofor yayılımının yerel sıvı ortamında oluşturduğu dinamik ışık aydınlatma yarıçapı (lightRadius) formüle bağlandı.
+- **Agresif Taklitçilik (Aggressive Mimicry) ve Fototaktik Avlanma Tuzağı:**
+  - Biyo-lüminesans üreten etçil ve leşçillerin karanlık/türbülanslı bölgelerde pozitif fototaktik otçulları kendine doğru çekme mekanizması kuruldu.
+  - Işık tuzağına yakalanan avların hareket vektörlerine uygulanan çekim kuvveti ve avcıya sağlanan +%45'e varan saldırı karşılaşma çarpanı (predatorLureEfficiency) entegre edildi.
+  - Skittish avlar için ani parlak flaşlardan kaçınmayı sağlayan negatif fototaksi tepkisi modellendi.
+- **Genetik Lokus Genişletmesi (src/genetics/dna_definitions.js & DNA):**
+  - DNA dizilimine bioluminescenceLuminosity, photophoreFlashCadence ve phototacticAttractionSensitivity genleri bağlandı; epistatik mutasyon ve kalıtım sınırları oluşturuldu.
+- **Organizma İnceleme Paneli ve Bilimsel Saha Rehberi Senkronizasyonu:**
+  - Organizma İnceleme Paneli'ne Photophore Organ (ışık şiddeti ve yarıçapı) ile Light Trap Status (çekilen av sayısı ve avlanma bonusu) satırları eklendi.
+  - Bilimsel Saha Rehberi Tab 3 Matematiksel Mekanikler paneline fotofor atım denklemleri ve fototaktik çekim algoritmaları işlendi.
+  - Başlık telemetri rozeti "PHOTOPHORE 207H | v4.87.0" olarak güncellendi ve canlı bilgi akışına fotofor mekaniği notları işlendi.
+- **Sıfır Emoji ve Modüler Standart Uyumu:** Tüm kaynak kod, açıklamalar, DOM öğeleri ve belgelerde sıfır emoji kuralına tam uyum doğrulandı.
+
 ## [Version 4.86.0] — 2026-10-14 14:30 (Urun Elestirmeni / Product Critic Oturumu - Kambriyen Duyu ve Gorme Derinligi Denetimi)
 - **Kambriyen Duyu ve Görme Derinliği Denetimi (docs/CRITIC_AUDIT_EPOCH16.md):**
   - Ürün Eleştirmeni tarafından "Pasif Işık ve Kör Canavarlar" ikilemi incelendi; ocelli göz benekleri ve statokistlerin varlığına rağmen petri kabında dinamik ışık kaynaklarının bulunmadığı ve görmenin av-avcı ilişkilerine henüz aktif yön vermediği saptandı.

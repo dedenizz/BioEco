@@ -485,3 +485,563 @@
     color: #818cf8;
     border: 1px solid rgba(99, 102, 241, 0.35);
 }
+
+/* Phototactic Flux & 38th Channel Styling (UI Agent v4.89.0) */
+.pfi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+/* Biomineralization & 39th Channel Armor Styling (UI Agent v4.94.0) */
+.bai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+/* Ecdysis Conversion & 40th Channel Molting Styling (UI Agent v4.99.0) */
+.ecr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(236, 72, 153, 0.15);
+    color: #ec4899;
+    border: 1px solid rgba(236, 72, 153, 0.35);
+}
+
+/* Colony Integration & 41st Channel Sociality Styling (UI Agent v5.04.0) */
+.cii-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+/* Collective Division & 42nd Channel Hive Styling (UI Agent v5.09.0) */
+.cdi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+/* Cryptic Camouflage & 43rd Channel Camouflage Styling (UI Agent v5.14.0) */
+.cci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* Refractive Iridescence & 44th Channel Optical Styling (UI Agent v5.19.0) */
+.rfi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* Chemoautotrophic Energy Flux & 45th Channel Abyssal Styling (UI Agent v5.24.0) */
+.cef-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.abyssal-hud-indicator {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #facc15;
+}
+
+/* Bioluminescent Synchronization & 46th Channel Optical Styling (UI Agent v5.29.0) */
+.bsi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+.biolum-hud-indicator {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #22d3ee;
+}
+
+/* Diel Vertical Migration & 47th Channel Bathymetric Styling (UI Agent v5.34.0) */
+.vmi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.dvm-hud-indicator {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #7dd3fc;
+}
+
+/* Ventral Counter-Illumination & 48th Channel Styling (UI Agent v5.39.0) */
+.cii-counter-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(34, 211, 238, 0.15);
+    color: #22d3ee;
+    border: 1px solid rgba(34, 211, 238, 0.35);
+}
+
+.counter-illum-hud-indicator {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #22d3ee;
+}
+
+/* Siphon Jet Propulsion & 49th Channel Hydrodynamic Styling (UI Agent v5.44.0) */
+.jpi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.35);
+}
+
+.jet-hud-indicator {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: #fda4af;
+}
+
+/* 50th Channel Vectorial Maneuver Agility Styling (UI Agent v5.49.0) */
+.vma-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+/* 51st Channel Hydrothermal Energy Index Styling (UI Agent v5.55.0) */
+.hei-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+/* 52nd Channel Thermal Taxis Resilience Styling (UI Agent v5.59.0) */
+.ttr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* 53rd Channel Reef Calcification Index Styling (UI Agent v5.65.0) */
+.rci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* 54th Channel Bleaching Vulnerability Index Styling (UI Agent v5.69.0) */
+.bvi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.35);
+}
+
+/* 55th Channel Neural Plasticity Index Styling (UI Agent v5.74.0) */
+.npi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+/* 56th Channel Adaptive Mimicry Index Styling (UI Agent v5.78.0) */
+.ami-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+/* 57th Channel Coevolutionary Adaptation Index Styling (UI Agent v5.84.0) */
+.cai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* 58th Channel Biotic Red-Queen Index Styling (Looks/UI Agent v5.88.0) */
+.bri-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+/* 59th Channel Biomic Homeostasis Index Styling (UI Agent v5.94.0) */
+.bhi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+/* 60th Channel Trophic Current Synergy Styling (Looks/UI Agent v5.98.0) */
+.tcs-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+/* 61st Channel Biological Carbon Index Styling (UI Agent v6.04.0) */
+.bci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(226, 232, 240, 0.15);
+    color: #e2e8f0;
+    border: 1px solid rgba(226, 232, 240, 0.35);
+}
+
+/* 62nd Channel Biogeochemical Nitrogen Yield Styling (Looks/UI Agent v6.08.0) */
+.bny-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(192, 132, 252, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.45);
+}
+
+/* 63rd Channel Biogenic Calcification Ratio Styling (UI Agent v6.14.0) */
+.cal-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(248, 250, 252, 0.15);
+    color: #f8fafc;
+    border: 1px solid rgba(248, 250, 252, 0.45);
+}
+
+/* 64th Channel Shell Hardness Matrix Styling (UI Agent v6.18.0) */
+.shm-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.45);
+}
+
+/* 65th Channel Trophic Volume Capacity Styling (UI Agent v6.24.0) */
+.tvc-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+/* 66th Channel Megafauna Biomass Efficiency Styling (UI Agent v6.28.0) */
+.mbe-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+/* 67th Channel Benthic Burrowing Index Styling (UI Agent v6.34.0) */
+.bdi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 88, 12, 0.15);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.45);
+}
+/* 68th Channel Substrate Oxygenation Index Styling (UI Agent v6.38.0) */
+.sox-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+
+/* 69th Channel Bioelectric Energy Index Styling (UI Agent v6.44.0) */
+.bei-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+/* 70th Channel Magnetic Polarization Order Styling (Looks/UI Agent v6.48.0) */
+.mpo-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.45);
+}
+
+/* 71st Channel Mechanoreceptive Hydrodynamic Sensitivity Styling (UI Agent v6.54.0) */
+.mhs-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(20, 184, 166, 0.15);
+    color: #14b8a6;
+    border: 1px solid rgba(20, 184, 166, 0.45);
+}
+
+/* 72nd Channel Acoustic Dispersion & Drag Reduction Styling (Looks/UI Agent v6.58.0) */
+.adr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.45);
+}
+
+/* 73rd Channel Bioluminescent Emission Reliability Styling (UI Agent v6.64.0) */
+.ble-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+
+/* 74th Channel Photophore Catalytic Optimization Styling (UI Agent v6.68.0) */
+.pco-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+/* 75th Channel Piezophilic Membrane Stability Styling (UI Agent v6.74.0) */
+.pms-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.45);
+}
+
+/* 76th Channel Abyssal Barometric Adaptation Index Styling (UI Agent v6.78.0) */
+.aba-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(20, 184, 166, 0.15);
+    color: #14b8a6;
+    border: 1px solid rgba(20, 184, 166, 0.45);
+}
+
+/* 77th Channel Bioturbation Turbulence Index Styling (UI Agent v6.84.0) */
+.bti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+/* 78th Channel Biogenic Mineral Recycling Efficiency Styling (Looks/UI Agent v6.88.0) */
+.bmr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+/* 79th Channel Seston Filtration Efficiency Styling (UI Agent v6.94.0) */
+.sfe-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+
+/* 80th Channel Benthic Carbon Flux Interception Styling (Looks/UI Agent v6.98.0) */
+.bcf-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(139, 92, 246, 0.15);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.45);
+}
+/* 81st Channel Calyx Elevation Advantage Styling (UI Agent v7.04.0) */
+.cea-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.45);
+}
