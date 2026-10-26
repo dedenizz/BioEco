@@ -77,7 +77,7 @@
          * Render lipid membrane fringe or baric compression fracture striations.
          */
         static drawBaricCompressionField(ctx, org, size, depth, pufa, stress, tick) {
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.12 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.12 + (org.numericId || 0));
             const baricFactor = Math.min(1.0, depth / 550.0);
 
             ctx.save();
@@ -122,7 +122,7 @@
          */
         static drawDecompressionStress(ctx, org, size, decompressStress, depth, tick) {
             ctx.save();
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.numericId || 0));
             const severity = Math.max(decompressStress, depth < 260.0 ? (260.0 - depth) / 260.0 * 0.6 : 0.0);
             const radius = size * (1.25 + severity * 0.40 + pulse * 0.12);
             const alpha = Math.min(0.60, 0.15 + severity * 0.55);
@@ -158,7 +158,7 @@
             ctx.save();
             const sphereCount = 5 + Math.floor(piezolyte * 5);
             const orbitRadius = size * (1.28 + piezolyte * 0.18);
-            const baseAngle = tick * 0.04 + (org.id || 0) * 1.35;
+            const baseAngle = tick * 0.04 + (org.numericId || 0) * 1.35;
             const alpha = Math.min(0.55, piezolyte * 0.65);
 
             ctx.fillStyle = `rgba(192, 132, 252, ${alpha})`;
@@ -180,7 +180,7 @@
          */
         static drawChemosyntheticAura(ctx, org, size, chemoRate, tick) {
             ctx.save();
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.09 + (org.id || 0) * 0.8);
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.09 + (org.numericId || 0) * 0.8);
             const auraRadius = size * (1.20 + chemoRate * 0.35 + pulse * 0.14);
             const alpha = Math.min(0.38, chemoRate * 0.45);
 
@@ -202,7 +202,7 @@
         static drawBenthicAnchoring(ctx, org, size, anchoring, isAnchored, tick) {
             ctx.save();
             const rootCount = isAnchored ? 4 : 2;
-            const sway = Math.sin(tick * 0.06 + (org.id || 0)) * 2.5;
+            const sway = Math.sin(tick * 0.06 + (org.numericId || 0)) * 2.5;
             const alpha = isAnchored ? 0.60 : 0.35;
 
             ctx.strokeStyle = `rgba(4, 120, 87, ${alpha})`;

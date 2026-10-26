@@ -72,7 +72,7 @@
 
         static drawCleaningStation(ctx, org, size, tick) {
             if (!org.isCleaningStation) return;
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.08 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.08 + (org.numericId || 0));
             const stationRadius = size * (2.2 + pulse * 0.4);
 
             ctx.beginPath();
@@ -93,7 +93,7 @@
 
         static drawSolicitationPose(ctx, org, size, tick) {
             if (!org.solicitationPoseActive) return;
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.12 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.12 + (org.numericId || 0));
             const poseR = size * (1.35 + pulse * 0.15);
 
             ctx.beginPath();
@@ -116,7 +116,7 @@
             const load = org.ectoparasiteLoad || 0.0;
             if (load < 0.05) return;
             const cystCount = Math.min(5, Math.max(1, Math.floor(load * 6)));
-            const baseAngle = (org.id ? (org.id * 1.37) : 0) + (org.angle || 0);
+            const baseAngle = ((org.numericId || 0) * 1.37) + (org.angle || 0);
 
             for (let c = 0; c < cystCount; c++) {
                 const cAngle = baseAngle + (c * (Math.PI * 2 / cystCount));
@@ -129,7 +129,7 @@
             }
 
             if (org.cleaningTruceActive || org.cleaningStationRef) {
-                const sparkPhase = (tick * 0.15 + (org.id || 0)) % 1.0;
+                const sparkPhase = (tick * 0.15 + (org.numericId || 0)) % 1.0;
                 const sx = org.x + Math.cos(tick * 0.1) * (size * 1.4 * (1 + sparkPhase * 0.5));
                 const sy = org.y + Math.sin(tick * 0.1) * (size * 1.4 * (1 + sparkPhase * 0.5));
                 ctx.beginPath();
@@ -144,7 +144,7 @@
             if (enzyme < 1.15 || org.dna.diet !== 2) return;
             const angle = org.angle || 0;
             const flareR = size * 1.15;
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.25 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.25 + (org.numericId || 0));
             const intensity = Math.min(1.0, (enzyme - 1.0) / 1.5);
 
             for (let s of [-0.28, 0.28]) {
@@ -159,7 +159,7 @@
 
         static drawCleaningSymbiosis(ctx, org, size, tick) {
             if (!org.cleaningSymbiosisActive) return;
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.numericId || 0));
             const haloR = size * (1.35 + pulse * 0.25);
 
             ctx.beginPath();

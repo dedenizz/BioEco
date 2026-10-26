@@ -177,7 +177,7 @@
                 ctx.stroke();
 
                 // Small rising micro-bubble particle
-                if ((tick + (org.id || 0)) % 4 === 0) {
+                if ((tick + (org.numericId || 0)) % 4 === 0) {
                     const effX = (Math.sin(tick * 0.15) * size * 0.4);
                     const effY = size * 0.9 + ((tick * 0.4) % wakeLength);
                     ctx.beginPath();

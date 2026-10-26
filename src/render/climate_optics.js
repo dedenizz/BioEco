@@ -159,7 +159,7 @@
 
             // 1. Convective Wave Surfing Wings & Lift Trail
             if (org.convectiveSurfingActive) {
-                const pulse = 0.5 + 0.5 * Math.sin(tick * 0.22 + (org.id || 0));
+                const pulse = 0.5 + 0.5 * Math.sin(tick * 0.22 + (org.numericId || 0));
                 ctx.beginPath();
                 ctx.moveTo(org.x - size * 1.2, org.y + size * 0.4);
                 ctx.quadraticCurveTo(org.x, org.y + size * 1.6, org.x + size * 1.2, org.y + size * 0.4);
@@ -196,7 +196,7 @@
 
             // 4. Nutrient Upwelling Assimilation Glow
             if (org.inUpwellingPlume && (org.upwellingNutrientAssimilation || 0) > 0.05) {
-                const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.id || 0));
+                const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.numericId || 0));
                 const glowR = size * (1.3 + pulse * 0.2);
                 ctx.beginPath();
                 ctx.arc(org.x, org.y, glowR, 0, Math.PI * 2);

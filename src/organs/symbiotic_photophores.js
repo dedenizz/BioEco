@@ -121,7 +121,7 @@
 
             // 3. Substrate exhaustion check & Pulsatile emission mode
             org.pulsatileEmissionMode = org.luciferinSubstrate < 22.0 || (org.energy || 50.0) < 22.0;
-            const pulseGate = org.pulsatileEmissionMode ? (Math.sin(tick * 0.22 + (org.id || 0)) > 0.15 ? 1.0 : 0.2) : 1.0;
+            const pulseGate = org.pulsatileEmissionMode ? (Math.sin(tick * 0.22 + (org.numericId || 0)) > 0.15 ? 1.0 : 0.2) : 1.0;
 
             // 4. Counter-illumination ventral crypsis matching downwelling light
             if (org.luciferinSubstrate > 4.0 && (org.energy || 50.0) > 8.0) {
@@ -171,7 +171,7 @@
             }
 
             org.isQuorumSynchronized = quorumNeighbors >= this.quorumThreshold;
-            const pulsePhase = Math.sin((tick * 0.08) + (org.id || 0) * 0.5);
+            const pulsePhase = Math.sin((tick * 0.08) + (org.numericId || 0) * 0.5);
 
             if (org.isQuorumSynchronized) {
                 const synchronizedGlow = (0.5 + 0.5 * pulsePhase) * org.photonicQuenchingFactor;

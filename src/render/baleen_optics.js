@@ -177,7 +177,7 @@
          */
         static drawMegafaunaSilhouette(ctx, org, size, scale, tick) {
             const excessScale = Math.min(1.25, scale - 1.0);
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.05 + org.id);
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.05 + (org.numericId || 0));
 
             // Deep pelagic water displacement aura
             ctx.beginPath();
@@ -208,7 +208,7 @@
          */
         static drawBlubberAura(ctx, org, size, blubber, tick) {
             const blubberRatio = Math.min(1.0, blubber / 60.0);
-            const pulse = 0.7 + 0.3 * Math.sin(tick * 0.08 + org.id);
+            const pulse = 0.7 + 0.3 * Math.sin(tick * 0.08 + (org.numericId || 0));
 
             ctx.beginPath();
             ctx.arc(org.x, org.y, size * 0.65, 0, Math.PI * 2);

@@ -69,7 +69,7 @@
             const isPulsatile = org.pulsatileEmissionMode || false;
 
             // Pulsatile micro-strobe flare modulation
-            const staccato = isPulsatile ? (0.6 + 0.4 * Math.sin(tick * 0.45 + (org.id || 0))) : 1.0;
+            const staccato = isPulsatile ? (0.6 + 0.4 * Math.sin(tick * 0.45 + (org.numericId || 0))) : 1.0;
             const effectivePulse = pulse * staccato;
             const baseGlowAlpha = Math.min(0.95, (0.22 + effectivePulse * 0.75 * efficiency) * quenching);
 

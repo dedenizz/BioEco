@@ -55,14 +55,9 @@
                 ctx.fill();
             } else {
                 // Type 0: Foraging / Aggregation Trail (Cyan-Azure Fluid Ribbon Puff)
-                const grad = ctx.createRadialGradient(p.x, p.y, 1.5, p.x, p.y, radius);
-                grad.addColorStop(0.0, "rgba(56, 189, 248, " + (alpha * 0.65) + ")");
-                grad.addColorStop(0.5, "rgba(6, 182, 212, " + (alpha * 0.3) + ")");
-                grad.addColorStop(1.0, "rgba(56, 189, 248, 0.0)");
-
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
-                ctx.fillStyle = grad;
+                ctx.fillStyle = "rgba(56, 189, 248, " + (alpha * 0.28).toFixed(3) + ")";
                 ctx.fill();
 
                 // Shimmering micro-droplet core
@@ -135,14 +130,9 @@
                 const pulse = Math.sin((tick * 0.08) + (o.x * 0.02)) * 1.0;
                 const envAlpha = Math.min(0.35, cohesion * 0.35);
 
-                const grad = ctx.createRadialGradient(o.x, o.y, size * 0.8, o.x, o.y, envelopeRadius + pulse);
-                grad.addColorStop(0.0, "rgba(168, 85, 247, 0.0)");
-                grad.addColorStop(0.7, "rgba(192, 132, 252, " + (envAlpha * 0.6).toFixed(3) + ")");
-                grad.addColorStop(1.0, "rgba(168, 85, 247, 0.0)");
-
                 ctx.beginPath();
                 ctx.arc(o.x, o.y, envelopeRadius + pulse, 0, Math.PI * 2);
-                ctx.fillStyle = grad;
+                ctx.fillStyle = "rgba(192, 132, 252, " + (envAlpha * 0.22).toFixed(3) + ")";
                 ctx.fill();
 
                 // Faint hydrodynamic laminar slip boundary

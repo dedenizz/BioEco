@@ -54,3 +54,7 @@ repo_extract/
    - UI Agent -> `src/ui/`, `css/`
    - QA Agent -> Modul entegrasyon testleri, 60 FPS performans denetimi
    - Lead Planner & Executive Director -> Mimari planlama ve dokumantasyon
+
+## 5. Gelismis Sistemler Icin Esnek Satir Limiti ve Tekil Dosya Disiplini (v7.06.0 Guncellemesi)
+- **Zor ve Karmasik Sistemlerde Satir Esnekligi:** Basit modullerde 150-300 satir araligi korunurken, ileri duzey biyomekanik, genetik, hidrodinamik ve cok katmanli sistemlerde 300 satir ust siniri kaldirilmistir. Zor ve derin sistemlerde kodu yapay olarak bolmek veya kisaltmak yerine, mekanigin gerektirdigi kadar satir (400 - 800+ satir) kullanilarak derinlikli ve kapsamli moduller yazilabilir.
+- **Yigin Dosya Yasagi:** Kok dizinde surum numarali `benchmark_qa_vXXXX.js` dosyalari veya `docs/` altinda ayri ayri epoch dosyalari cogaltilmaz. Tum QA testleri tekil `tests/benchmark_qa.js` uzerinde, mimari plan ve denetimler ise `docs/EPOCH_BLUEPRINT.md` ve `docs/CRITIC_AUDIT.md` uzerinde guncellenir.

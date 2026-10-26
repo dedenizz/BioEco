@@ -220,7 +220,7 @@
             if (sulfur > 0.4 || yieldATP > 0.01) {
                 const normSulfur = Math.min(1.0, sulfur / 25.0);
                 const auraRadius = size * (1.30 + normSulfur * 0.45);
-                const pulse = Math.sin(tick * 0.10 + (org.id || 0)) * 0.08;
+                const pulse = Math.sin(tick * 0.10 + (org.numericId || 0)) * 0.08;
                 const auraAlpha = Math.min(0.45, 0.12 + normSulfur * 0.28 + pulse);
 
                 const chemoGrad = ctx.createRadialGradient(0, 0, size * 0.5, 0, 0, auraRadius);
@@ -242,7 +242,7 @@
                 ctx.strokeStyle = `rgba(251, 146, 60, ${beamAlpha})`;
                 ctx.beginPath();
                 const flareLen = size * 1.6;
-                const angle = (tick * 0.06 + (org.id || 0)) % (Math.PI * 2);
+                const angle = (tick * 0.06 + (org.numericId || 0)) % (Math.PI * 2);
                 ctx.arc(0, 0, flareLen, angle, angle + Math.PI * 0.35);
                 ctx.stroke();
             }

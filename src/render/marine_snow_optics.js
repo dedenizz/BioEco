@@ -187,7 +187,7 @@
 
             // 1. Benthic Filter-Feeding Intake Vortex Arcs
             if ((org.marineSnowConsumption || 0) > 0) {
-                const pulse = 0.5 + 0.5 * Math.sin(tick * 0.15 + (org.id || 0));
+                const pulse = 0.5 + 0.5 * Math.sin(tick * 0.15 + (org.numericId || 0));
                 const feedR = size * (1.25 + pulse * 0.18);
                 const angle = org.angle || 0.0;
 
@@ -210,7 +210,7 @@
 
             // 2. Diazotrophic Nitrogen Fixation Amethyst Covalent Halo
             if ((org.nitrogenFixationFlux || 0) > 0.001) {
-                const nPulse = 0.5 + 0.5 * Math.sin(tick * 0.12 + (org.id || 0));
+                const nPulse = 0.5 + 0.5 * Math.sin(tick * 0.12 + (org.numericId || 0));
                 const fixR = size * (1.35 + nPulse * 0.2);
 
                 ctx.beginPath();

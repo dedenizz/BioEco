@@ -18,7 +18,7 @@
     class NeuralOpticsRenderer {
         static drawCerebralGanglion(ctx, org, size, tick) {
             const cerebralActivity = org.cerebralActivity || 0.4;
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.09 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.09 + (org.numericId || 0));
 
             const gx = org.x + Math.cos(org.angle || 0) * (size * 0.28);
             const gy = org.y + Math.sin(org.angle || 0) * (size * 0.28);

@@ -222,7 +222,7 @@
 
             // 4. Protective organic mucus barrier halo against heat shock
             if (mucus > 0.05) {
-                const mPulse = 0.5 + 0.5 * Math.sin(tick * 0.07 + (org.id || 0));
+                const mPulse = 0.5 + 0.5 * Math.sin(tick * 0.07 + (org.numericId || 0));
                 ctx.beginPath();
                 ctx.arc(org.x, org.y, size * (1.25 + mucus * 0.25), 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(186, 230, 253, ${0.08 + mucus * 0.16 + mPulse * 0.05})`;

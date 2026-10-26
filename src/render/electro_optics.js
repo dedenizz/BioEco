@@ -69,7 +69,7 @@
          * Render electrostatic crypsis veil dampening outward ionic dipole emission.
          */
         static drawElectrostaticCrypsis(ctx, org, size, crypsis, tick) {
-            const pulse = 0.85 + 0.15 * Math.sin(tick * 0.10 + (org.id || 0));
+            const pulse = 0.85 + 0.15 * Math.sin(tick * 0.10 + (org.numericId || 0));
             const radius = size * (1.15 + crypsis * 0.35);
 
             ctx.beginPath();
@@ -87,7 +87,7 @@
         static drawElectroreceptors(ctx, org, size, electro, tick) {
             const poreCount = Math.min(8, Math.max(2, Math.floor(electro)));
             const angle = typeof org.angle === "number" ? org.angle : Math.atan2(org.vy || 0, org.vx || 0.01);
-            const pulse = 0.7 + 0.3 * Math.sin(tick * 0.15 + (org.id || 0));
+            const pulse = 0.7 + 0.3 * Math.sin(tick * 0.15 + (org.numericId || 0));
 
             ctx.save();
             ctx.rotate(angle);
@@ -117,7 +117,7 @@
         static drawDipoleFieldLines(ctx, org, size, dipole, potential, crypsis, tick) {
             const dampingFactor = 1.0 - (crypsis || 0.0) * 0.55;
             const fieldRadius = size * (1.6 + dipole * 2.8 * dampingFactor);
-            const pulse = Math.sin(tick * 0.18 + (org.id || 0) * 0.5);
+            const pulse = Math.sin(tick * 0.18 + (org.numericId || 0) * 0.5);
             const isExcited = potential > -30.0;
             const alpha = Math.min(0.65, (0.12 + dipole * 0.5) * dampingFactor);
 

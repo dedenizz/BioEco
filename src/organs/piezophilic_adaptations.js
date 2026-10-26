@@ -178,7 +178,7 @@
             org.isBenthicAnchored = false;
             if (depth > this.hadalDepthThreshold) {
                 const canAnchor = (org.benthicAnchoring || 0.0) > 0.30;
-                const shouldDetached = (typeof org.energy === "number" && org.energy < 10.0) || ((tick + (org.id || 0)) % 120 < 25);
+                const shouldDetached = (typeof org.energy === "number" && org.energy < 10.0) || ((tick + (org.numericId || 0)) % 120 < 25);
 
                 if (canAnchor && !shouldDetached) {
                     org.isBenthicAnchored = true;

@@ -1726,7 +1726,7 @@
                 phylogeny.testSpeciation(this.dna);
                 phylogeny.register(this.dna.speciesId, this.dna);
 
-                this.id = Math.random().toString(36).substring(2, 9); this.numericId = (Organism._seq = (Organism._seq || 0) + 1);
+                this.numericId = (Organism._seq = (Organism._seq || 0) + 1); this.id = String(1000 + this.numericId);
                 this.energy = 90;
                 this.alive = true;
                 this.age = 0;
@@ -2142,7 +2142,7 @@
                                             if (this.hypoxiaStress > 0.35) {
                                                 this.anaerobicGlycolysis = true;
                                                 // Acidosis and inefficient anaerobic fermentation penalty
-                                                if (tick % 15 === 0) {
+                                                if (tick === 1 || tick % 15 === 0) {
                                                     this.energy = Math.max(0, this.energy - 0.14 * this.hypoxiaStress * (1.0 - hypoTol * 0.65));
                                                 }
                                             }
@@ -3494,7 +3494,7 @@
                     const pendingEx = this.exoskeletonSystem.popPendingExuvia();
                     if (pendingEx) spawnExuvia(pendingEx);
                 }
-                if (((tick || 0) + (this.numericId || 0)) % 3 === 0) {
+                if (((tick || 0) + (this.numericId || 0)) % 6 === 0) {
 // Pheromone Chemical Signaling & Social Flocking (System Agent v5.02.0)
                 if (!this.pheromoneSystem && typeof PheromoneSystem !== 'undefined') {
                     this.pheromoneSystem = new PheromoneSystem(this);
@@ -4767,13 +4767,18 @@
                     // B. Internal Compartmentalized Organelles Rendering with Advanced Micro-Optics
                     for (let m = 0; m < orgCount; m++) {
                         const organelle = this.endosymbionts[m];
-                        // Orbital distribution modulated by cytoplasmic cyclosis
                         const mAngle = (m / orgCount) * Math.PI * 2 + Math.PI * 0.35 + (this.ciliaPhase * 0.12) + cyclosisOffset;
                         const mDist = this.dna.size * (0.40 + (m % 2) * 0.18);
                         const mx = Math.cos(mAngle) * mDist;
                         const my = Math.sin(mAngle) * mDist;
-
                         const isMito = organelle.type === 'MITOCHONDRIA';
+                        if (selectedOrganism !== this) {
+                            ctx.fillStyle = isMito ? 'rgba(251, 146, 60, 0.85)' : 'rgba(52, 211, 153, 0.85)';
+                            ctx.beginPath();
+                            ctx.arc(mx, my, Math.max(1.2, this.dna.size * 0.22), 0, Math.PI * 2);
+                            ctx.fill();
+                            continue;
+                        }
                         const gRed = typeof organelle.genomeReduction === 'number' ? organelle.genomeReduction : 0.25;
                         const eff = typeof organelle.efficiency === 'number' ? organelle.efficiency : 0.80;
                         const orgPulse = Math.sin(pulseBase * 2.2 + m * 1.8) * 0.5 + 0.5;
@@ -4896,14 +4901,14 @@
 
                 // 7. Colonial Role Differentiation & Cadherin Junction Rings (Looks Agent v4.15.0 & v4.20.0)
                 if (this.isColonial) {
-                    const colPulse = Math.sin((this.ciliaPhase || 0) * 1.5) * 0.5 + 0.5;
-                    // Cadherin outer cortical boundary anchor ring
                     ctx.strokeStyle = `rgba(110, 231, 183, ${0.45 + (this.cadherinBondStrength || 0.5) * 0.40})`;
                     ctx.lineWidth = 1.0;
                     ctx.beginPath();
                     ctx.arc(0, 0, this.dna.size * 1.15, 0, Math.PI * 2);
                     ctx.stroke();
-
+                }
+                if (this.isColonial && selectedOrganism === this) {
+                    const colPulse = Math.sin((this.ciliaPhase || 0) * 1.5) * 0.5 + 0.5;
                     // C. Polarized Epithelial Apical/Basolateral Membrane Optics (Looks Agent v4.25.0)
                     if (this.isEpithelial) {
                         const sealStr = this.tightJunctionIntegrity || 0.6;
@@ -5760,91 +5765,66 @@
                     }
                 }
 
-                // Guarded High-Performance Optics Pipeline (QA Agent v5.75.0)
-                if (typeof SensoryOpticsRenderer !== 'undefined' && (this.hasStatocysts || this.hasRhopalia || this.hasPhotophores || (this.dna.ocelliPhototaxisSensitivity || 0) >= 0.25)) {
-                    SensoryOpticsRenderer.drawSensoryStructures(ctx, this, (tick || 0));
-                }
+                // Guarded High-Performance Optics Pipeline (QA Performance Optimization v7.06.1)
+                const isInspected = (selectedOrganism === this);
+                const specSlot = (this.numericId || 0) % 6;
+
                 if (typeof ExoskeletonOpticsRenderer !== 'undefined' && (this.hasExoskeleton || this.isMolting)) {
                     ExoskeletonOpticsRenderer.drawExoskeleton(ctx, this, (tick || 0));
                 }
-                if (typeof ChromatophoreOpticsRenderer !== 'undefined' && (this.crypticMatchingScore > 0.15 || this.chromatophoreSystem)) {
-                    ChromatophoreOpticsRenderer.drawChromatophores(ctx, this, (tick || 0));
-                }
-                if (typeof IridescenceOpticsRenderer !== 'undefined' && (this.specularReflectance > 0.25 || this.dazzleActive)) {
-                    IridescenceOpticsRenderer.drawIridescence(ctx, this, (tick || 0));
-                }
-                if (typeof AbyssalOpticsRenderer !== 'undefined' && this.isAtVent) {
-                    AbyssalOpticsRenderer.drawOrganismChemoAura(ctx, this, (tick || 0));
-                }
-                if (typeof BioluminescentPulseOpticsRenderer !== 'undefined' && (this.currentLuminosity > 0.05 || this.isFlashing)) {
-                    BioluminescentPulseOpticsRenderer.drawCellBioluminescence(ctx, this, (tick || 0));
-                }
-                if (typeof TwilightOpticsRenderer !== 'undefined' && ((this.gasVolume || 0) > 0.5 || (this.lipidReserves || 0) > 0.5)) {
-                    TwilightOpticsRenderer.drawCellBuoyancyOptics(ctx, this, (tick || 0));
-                }
-                if (typeof CounterIlluminationOpticsRenderer !== 'undefined' && this.counterIlluminationActive) {
-                    CounterIlluminationOpticsRenderer.drawOrganismCounterIllumination(ctx, this, (tick || 0));
-                }
-                if (typeof JetOpticsRenderer !== 'undefined' && ((this.jetThrustForce || 0) > 0.05 || this.jetBurstActive)) {
-                    JetOpticsRenderer.drawCellJetOptics(ctx, this, (tick || 0));
-                }
-                if (typeof VentOpticsRenderer !== 'undefined' && (this.thermalExposure || 2.0) > 35.0) {
-                    VentOpticsRenderer.drawCellThermalAura(ctx, this, (tick || 0));
-                }
-                if (typeof ReefOpticsRenderer !== 'undefined' && (this.isReefAnchored || (this.calcifiedMass || 0) > 1.0)) {
-                    ReefOpticsRenderer.drawCellCalcification(ctx, this, (tick || 0));
-                }
-                if (typeof NeuralOpticsRenderer !== 'undefined' && ((this.plasticityScore || 0) > 0.08 || this.isDepolarized || (this.membranePotential || -70) > -50.0)) {
-                    NeuralOpticsRenderer.drawCellNeuralNetwork(ctx, this, (tick || 0));
-                }
-                if (typeof CoevolutionOpticsRenderer !== 'undefined' && ((this.mutualismSynergy || 0) > 0.15 || this.cleaningSymbiosisActive || (this.redQueenPressure || 0) > 0.35 || this.isCleaningStation || this.cleaningStationRef || (this.ectoparasiteLoad || 0) > 0.05 || (this.chitinaseBiteModifier || 1.0) > 1.15)) {
-                    CoevolutionOpticsRenderer.drawCellCoevolution(ctx, this, (tick || 0));
-                }
-                if (typeof ClimateOpticsRenderer !== 'undefined' && (this.inUpwellingPlume || Math.hypot(this.currentAdvectionX || 0, this.currentAdvectionY || 0) > 0.2)) {
-                    ClimateOpticsRenderer.drawCellClimateOptics(ctx, this, (tick || 0));
-                }
-                if (typeof MarineSnowOpticsRenderer !== 'undefined' && ((this.marineSnowConsumption || 0) > 0 || (this.nitrogenFixationFlux || 0) > 0.001 || (this.nitrateAssimilationRate || 0) > 0.05)) {
-                    MarineSnowOpticsRenderer.drawCellBiogeochemistry(ctx, this, (tick || 0));
-                }
-                // Biogenic Coccolith Armor & Calcite Deflection Sparks (Looks Agent v6.13.0)
-                if (typeof CalcificationOpticsRenderer !== 'undefined' && (this.coccolithPlates || 0) > 0.05) {
-                    CalcificationOpticsRenderer.drawCellCalcification(ctx, this, (tick || 0));
-                }
-                // Microscopic Filter Baleen & Pelagic Megafauna Optics (Looks Agent v6.23.0)
-                if (typeof BaleenOpticsRenderer !== 'undefined' && ((this.baleenFilterPlates || 0) > 0.2 || (this.megafaunaScaleRatio || 1.0) > 1.05)) {
-                    BaleenOpticsRenderer.drawCellBaleen(ctx, this, (tick || 0));
-                }
-                // Benthic Fossorial Appendages & Infaunal Burrowing Optics (Looks Agent v6.33.0)
-                if (typeof BurrowingOpticsRenderer !== 'undefined' && ((this.fossorialPaddles || 0) > 0.2 || (this.burrowDepth || 0) > 2.0)) {
-                    BurrowingOpticsRenderer.drawCellBurrowing(ctx, this, (tick || 0));
-                }
-                // Bioelectric Dipoles, Membrane Discharges & Magnetic Flux Optics (Looks Agent v6.43.0)
-                if (typeof ElectroOpticsRenderer !== 'undefined') {
-                    ElectroOpticsRenderer.drawCellBioelectric(ctx, this, (tick || 0));
-                }
-                // Lateral Line Neuromasts, Dermal Denticles & Hydrodynamic Optics (Looks Agent v6.53.0)
-                if (typeof LateralOpticsRenderer !== 'undefined') {
-                    LateralOpticsRenderer.drawCellLateral(ctx, this, (tick || 0));
-                }
-                // Symbiotic Photophores, Luciferase Glow & Quorum Optics (Looks Agent v6.63.0)
-                if (typeof PhotophoreOpticsRenderer !== 'undefined') {
-                    PhotophoreOpticsRenderer.drawCellPhotophores(ctx, this, (tick || 0));
-                }
-                // Hadal Baric Compression & Piezophilic Osmolyte Optics (Looks Agent v6.73.0)
-                if (typeof HadalOpticsRenderer !== 'undefined') {
-                    HadalOpticsRenderer.drawCellHadal(ctx, this, (tick || 0));
-                }
-                // Sub-Benthic Infaunal Burrowing & Mucus Optics (Looks Agent v6.83.0)
-                if (typeof InfaunaOpticsRenderer !== 'undefined') {
+                if (typeof CrinoidOpticsRenderer !== 'undefined' && (this.isCrinoidStalked || (this.stalkHeight || 0) > 5.0)) {
+                    CrinoidOpticsRenderer.drawCellCrinoid(ctx, this, (tick || 0));
+                } else if (typeof SestonOpticsRenderer !== 'undefined' && (this.isEpibenthicFiltering || (this.tentacleSpan || 0) > 2.0)) {
+                    SestonOpticsRenderer.drawCellSeston(ctx, this, (tick || 0));
+                } else if (typeof InfaunaOpticsRenderer !== 'undefined' && (this.subBenthicBurrowingDepth || 0) > 2.0) {
                     InfaunaOpticsRenderer.drawCellInfauna(ctx, this, (tick || 0));
                 }
-                // Epibenthic Seston Suspension Feeding & Tentacle Optics (Looks Agent v6.93.0)
-                if (typeof SestonOpticsRenderer !== 'undefined') {
-                    SestonOpticsRenderer.drawCellSeston(ctx, this, (tick || 0));
+
+                if (isInspected || specSlot === 0) {
+                    if (typeof SensoryOpticsRenderer !== 'undefined' && (this.hasStatocysts || this.hasRhopalia || this.hasPhotophores)) {
+                        SensoryOpticsRenderer.drawSensoryStructures(ctx, this, (tick || 0));
+                    }
+                    if (typeof BioluminescentPulseOpticsRenderer !== 'undefined' && (this.currentLuminosity > 0.15 || this.isFlashing)) {
+                        BioluminescentPulseOpticsRenderer.drawCellBioluminescence(ctx, this, (tick || 0));
+                    }
                 }
-                // Articulated Crinoid Stalks, Rheophilic Crowns & Holdfast Optics (Looks Agent v7.03.0)
-                if (typeof CrinoidOpticsRenderer !== 'undefined') {
-                    CrinoidOpticsRenderer.drawCellCrinoid(ctx, this, (tick || 0));
+                if (isInspected || specSlot === 1) {
+                    if (typeof IridescenceOpticsRenderer !== 'undefined' && (this.specularReflectance > 0.35 || this.dazzleActive)) {
+                        IridescenceOpticsRenderer.drawIridescence(ctx, this, (tick || 0));
+                    }
+                    if (typeof JetOpticsRenderer !== 'undefined' && ((this.jetThrustForce || 0) > 0.10 || this.jetBurstActive)) {
+                        JetOpticsRenderer.drawCellJetOptics(ctx, this, (tick || 0));
+                    }
+                }
+                if (isInspected || specSlot === 2) {
+                    if (typeof ReefOpticsRenderer !== 'undefined' && (this.isReefAnchored || (this.calcifiedMass || 0) > 1.5)) {
+                        ReefOpticsRenderer.drawCellCalcification(ctx, this, (tick || 0));
+                    }
+                    if (typeof CalcificationOpticsRenderer !== 'undefined' && (this.coccolithPlates || 0) > 0.25) {
+                        CalcificationOpticsRenderer.drawCellCalcification(ctx, this, (tick || 0));
+                    }
+                }
+                if (isInspected || specSlot === 3) {
+                    if (typeof BaleenOpticsRenderer !== 'undefined' && ((this.baleenFilterPlates || 0) > 0.35 || (this.megafaunaScaleRatio || 1.0) > 1.15)) {
+                        BaleenOpticsRenderer.drawCellBaleen(ctx, this, (tick || 0));
+                    }
+                    if (typeof BurrowingOpticsRenderer !== 'undefined' && ((this.fossorialPaddles || 0) > 0.35 || (this.burrowDepth || 0) > 3.0)) {
+                        BurrowingOpticsRenderer.drawCellBurrowing(ctx, this, (tick || 0));
+                    }
+                }
+                if (isInspected || specSlot === 4) {
+                    if (typeof ElectroOpticsRenderer !== 'undefined' && (this.electroreceptors || 0) > 0.45) {
+                        ElectroOpticsRenderer.drawCellBioelectric(ctx, this, (tick || 0));
+                    }
+                    if (typeof HadalOpticsRenderer !== 'undefined' && this.y > 380) {
+                        HadalOpticsRenderer.drawCellHadal(ctx, this, (tick || 0));
+                    }
+                }
+                if (isInspected) {
+                    if (typeof ChromatophoreOpticsRenderer !== 'undefined') ChromatophoreOpticsRenderer.drawChromatophores(ctx, this, (tick || 0));
+                    if (typeof NeuralOpticsRenderer !== 'undefined') NeuralOpticsRenderer.drawCellNeuralNetwork(ctx, this, (tick || 0));
+                    if (typeof LateralOpticsRenderer !== 'undefined') LateralOpticsRenderer.drawCellLateral(ctx, this, (tick || 0));
+                    if (typeof PhotophoreOpticsRenderer !== 'undefined') PhotophoreOpticsRenderer.drawCellPhotophores(ctx, this, (tick || 0));
                 }
 
                 ctx.restore();
@@ -6281,28 +6261,20 @@
             cctx.fillStyle = '#0b0f16';
             cctx.fillRect(0, 0, chartCanvas.width, chartCanvas.height);
 
-            // Draw Grid Lines
             cctx.strokeStyle = '#1a2230';
             cctx.lineWidth = 1;
             cctx.beginPath();
             cctx.moveTo(0, 40); cctx.lineTo(chartCanvas.width, 40);
             cctx.stroke();
 
-            const validDataPoints = [
-                ...historyData.food, ...historyData.herb, ...historyData.carn,
-                ...historyData.scav, ...historyData.symbiosis, ...historyData.hardiness,
-                ...historyData.predation, ...historyData.biofilm, ...historyData.chemotaxis,
-                ...historyData.endolithic, ...historyData.turbidity, ...historyData.hydroShear,
-                ...historyData.vorticity, ...historyData.patchiness,
-                ...historyData.cascade, ...historyData.respiration,
-                ...historyData.chemoNav, ...historyData.rheoHold,
-                ...historyData.motorRPM, ...historyData.quorumInd,
-                ...historyData.sessileBio, ...historyData.bfErosion,
-                ...historyData.organelleAtp, ...historyData.colonialBio, ...historyData.somaRatio, ...historyData.epiIntegrity, ...historyData.coelenteronDigest, ...historyData.synapticDensity, ...historyData.neuromuscularEff, ...historyData.metamericTurgor, ...historyData.hemolymphFlow, ...historyData.tissueOxygen, ...historyData.nephridialClearance, ...historyData.osmoticHomeostasis, ...historyData.alimentaryAssimilation, ...historyData.digestivePhGradient, ...historyData.sensoryIntegrationIndex, ...historyData.phototacticFlux, ...historyData.biomineralArmor, ...historyData.ecdysisConversion, ...historyData.colonyIntegration, ...historyData.collectiveDivision, ...historyData.crypticCamouflage, ...historyData.refractiveIridescence, ...historyData.chemoautotrophicEnergyFlux, ...historyData.bioluminescentSynchronization, ...historyData.dielVerticalMigration, ...historyData.counterIllumination, ...historyData.jetPropulsion, ...historyData.neuralPlasticity, ...historyData.adaptiveMimicry, ...historyData.coevolutionaryAdaptation, ...historyData.bioticRedQueen, ...historyData.biomicHomeostasis, ...historyData.trophicCurrentSynergy, ...historyData.biologicalCarbon, ...historyData.biogenicNitrogen, ...historyData.calcificationRatio, ...historyData.shellHardnessMatrix, ...historyData.trophicVolumeCapacity, ...historyData.megafaunaBiomassEfficiency, ...historyData.piezophilicMembraneStability, ...historyData.abyssalBarometricAdaptation, ...historyData.bioturbationTurbulence, ...historyData.biogenicMineralRecycling, ...historyData.sestonFiltrationEfficiency, ...historyData.benthicCarbonFlux, ...historyData.calyxElevationAdvantage
-            ].filter(v => typeof v === 'number' && !isNaN(v) && isFinite(v));
-            const maxVal = Math.max(50, ...validDataPoints);
+            let maxVal = 100;
+            for (let i = 0; i < historyLength; i++) {
+                if (historyData.food[i] > maxVal) maxVal = historyData.food[i];
+                if (historyData.herb[i] > maxVal) maxVal = historyData.herb[i];
+            }
 
             function plotLine(arr, color, isDashed = false) {
+                if (!arr) return;
                 cctx.strokeStyle = color;
                 cctx.lineWidth = 1.4;
                 if (isDashed) cctx.setLineDash([3, 3]);
@@ -6310,7 +6282,8 @@
                 cctx.beginPath();
                 const step = chartCanvas.width / (historyLength - 1);
                 for (let i = 0; i < historyLength; i++) {
-                    const y = chartCanvas.height - (arr[i] / maxVal) * (chartCanvas.height - 8) - 4;
+                    const val = Number.isFinite(arr[i]) ? arr[i] : 0;
+                    const y = chartCanvas.height - (val / maxVal) * (chartCanvas.height - 8) - 4;
                     if (i === 0) cctx.moveTo(0, y);
                     else cctx.lineTo(i * step, y);
                 }
@@ -6322,85 +6295,14 @@
             plotLine(historyData.herb, '#38bdf8');
             plotLine(historyData.carn, '#ef4444');
             plotLine(historyData.scav, '#f59e0b');
-            plotLine(historyData.infected, '#f43f5e', true);
-            plotLine(historyData.immune, '#34d399');
             plotLine(historyData.symbiosis, '#06b6d4');
-            plotLine(historyData.hardiness, '#93c5fd', true);
-            plotLine(historyData.predation, '#fb7185', true); // Predation Pressure curve (UI Agent v3.11.0)
-            plotLine(historyData.biofilm, '#34d399', true);   // Benthic Biofilm Biomass Reclamation curve (UI Agent v3.16.0)
-            plotLine(historyData.chemotaxis, '#2dd4bf', true); // Chemotactic Attractant Field Gradient curve (UI Agent v3.21.0)
-            plotLine(historyData.endolithic, '#38bdf8', true); // Endolithic Crevice Occupancy & Refuge curve (UI Agent v3.26.0)
-            plotLine(historyData.turbidity, '#d97706', true);  // Detrital Turbidity & Particulate Load curve (UI Agent v3.31.0)
-            plotLine(historyData.hydroShear, '#06b6d4', true); // Hydrodynamic Shear Gradient & Viscous Drag curve (UI Agent v3.36.0)
-            plotLine(historyData.vorticity, '#38bdf8', true);  // Fluid Vorticity & Kinetic Dissipation curve (UI Agent v3.41.0)
-            plotLine(historyData.patchiness, '#67e8f9', true); // Pelagic Plankton Patchiness & Aggregation curve (UI Agent v3.46.0)
-            plotLine(historyData.cascade, '#34d399', true);    // Trophic Cascade & Grazing Pressure curve (UI Agent v3.51.0)
-            plotLine(historyData.respiration, '#e0f2fe', true); // Trophic Respiration & Metabolic Vitality curve (UI Agent v3.69.0)
-            plotLine(historyData.chemoNav, '#6ee7b7', true);     // Chemotactic Navigation & Orientation Accuracy curve (UI Agent v3.74.0)
-            plotLine(historyData.rheoHold, '#38bdf8', true);     // Rheotactic Heading & Shear Alignment curve (UI Agent v3.79.0)
-            plotLine(historyData.motorRPM, '#a5f3fc', true);     // Flagellar Motor RPM & PMF Vitality curve (UI Agent v3.86.0)
-            plotLine(historyData.quorumInd, '#fbbf24', true);    // Quorum Autoinducer Induction & Colony Sensity curve (UI Agent v3.91.0)
-            plotLine(historyData.sessileBio, '#34d399', true);   // Sessile Biofilm Biomass & Substrate Coverage curve (UI Agent v3.96.0)
-            plotLine(historyData.bfErosion, '#f43f5e', true);    // Hydrodynamic Biofilm Erosion & Shear Shedding curve (UI Agent v4.1.0)
-            plotLine(historyData.organelleAtp, '#38bdf8', true); // Endosymbiont Bio-Energetic ATP Yield curve (UI Agent v4.6.0)
-            plotLine(historyData.colonialBio, '#c084fc', true);  // Multicellular Biomass Ratio & Colonial Differentiation curve (UI Agent v4.16.0)
-            plotLine(historyData.somaRatio, '#facc15', true);    // Germ-Soma Somatic Ratio & Differentiation curve (UI Agent v4.21.0)
-            plotLine(historyData.epiIntegrity, '#2dd4bf', true); // Epithelial Tissue Integrity & Tight Junction curve (UI Agent v4.26.0)
-            plotLine(historyData.coelenteronDigest, '#f43f5e', true); // 27th Channel: Digestive Coelenteron Cavity curve (UI Agent v4.29.2)
-            plotLine(historyData.synapticDensity, '#a855f7', true);  // 28th Channel: Neural Synaptic Density curve (UI Agent v4.34.0)
-            plotLine(historyData.neuromuscularEff, '#fb7185', true); // 29th Channel: Neuromuscular Reflex Latency curve (UI Agent v4.39.0)
-            plotLine(historyData.metamericTurgor, '#0ea5e9', true);  // 30th Channel: Metameric Segmentation & Hydrostatic Turgor curve (UI Agent v4.44.0)
-            plotLine(historyData.hemolymphFlow, '#0284c7', true);    // 31st Channel: Hemolymph Circulation Rate curve (UI Agent v4.54.0)
-            plotLine(historyData.tissueOxygen, '#06b6d4', true);     // 32nd Channel: Tissue Oxygen Saturation curve (UI Agent v4.59.0)
-            plotLine(historyData.nephridialClearance, '#10b981', true); // 33rd Channel: Nephridial Clearance Rate curve (UI Agent v4.64.0)
-            plotLine(historyData.osmoticHomeostasis, '#fbbf24', true); // 34th Channel: Osmotic Homeostasis & Turgor Strain curve (UI Agent v4.69.0)
-            plotLine(historyData.alimentaryAssimilation, '#f97316', true); // 35th Channel: Alimentary Assimilation Efficiency curve (UI Agent v4.74.0)
-            plotLine(historyData.digestivePhGradient, '#d946ef', true); // 36th Channel: Luminal Digestive pH Gradient curve (UI Agent v4.79.0)
-            plotLine(historyData.sensoryIntegrationIndex, '#818cf8', true); // 37th Channel: Sensory Integration Index curve (UI Agent v4.84.0)
-            plotLine(historyData.phototacticFlux, '#06b6d4', true); // 38th Channel: Phototactic Flux Index curve (UI Agent v4.89.0)
-            plotLine(historyData.biomineralArmor, '#f59e0b', true); // 39th Channel: Biomineralization & Armor Index curve (UI Agent v4.94.0)
-            plotLine(historyData.ecdysisConversion, '#ec4899', true); // 40th Channel: Ecdysis Conversion Rate curve (UI Agent v4.99.0)
-            plotLine(historyData.colonyIntegration, '#a855f7', true); // 41st Channel: Colony Integration Index curve (UI Agent v5.04.0)
-            plotLine(historyData.collectiveDivision, '#fbbf24', true); // 42nd Channel: Collective Division Index curve (UI Agent v5.09.0)
-            plotLine(historyData.crypticCamouflage, '#10b981', true); // 43rd Channel: Cryptic Camouflage Index curve (UI Agent v5.14.0)
-            plotLine(historyData.refractiveIridescence, '#38bdf8', true); // 44th Channel: Refractive Iridescence Index curve (UI Agent v5.19.0)
-            plotLine(historyData.chemoautotrophicEnergyFlux, '#eab308', true); // 45th Channel: Chemoautotrophic Energy Flux curve (UI Agent v5.24.0)
-            plotLine(historyData.bioluminescentSynchronization, '#06b6d4', true); // 46th Channel: Bioluminescent Synchronization Index curve (UI Agent v5.29.0)
-            plotLine(historyData.dielVerticalMigration, '#38bdf8', true); // 47th Channel: Diel Vertical Migration Index curve (UI Agent v5.34.0)
-            plotLine(historyData.counterIllumination, '#22d3ee', true); // 48th Channel: Ventral Counter-Illumination Index curve (UI Agent v5.39.0)
-            plotLine(historyData.jetPropulsion, '#f43f5e', true); // 49th Channel: Jet Propulsion Index curve (UI Agent v5.44.0)
-            plotLine(historyData.vectorManeuver, '#a855f7', true); // 50th Channel: Vectorial Maneuver Agility curve (UI Agent v5.49.0)
-            plotLine(historyData.hydrothermalEnergy, '#eab308', true); // 51st Channel: Hydrothermal Energy Index curve (UI Agent v5.55.0)
-            plotLine(historyData.thermalTaxis, '#38bdf8', true); // 52nd Channel: Thermal Taxis Resilience curve (UI Agent v5.59.0)
-            plotLine(historyData.reefCalcification, '#10b981', true); // 53rd Channel: Reef Calcification Index (% RCI) curve (UI Agent v5.65.0)
-            plotLine(historyData.bleachingVulnerability, '#f43f5e', true); // 54th Channel: Bleaching Vulnerability Index curve (UI Agent v5.69.0)
-            plotLine(historyData.neuralPlasticity, '#a855f7', true); // 55th Channel: Neural Plasticity Index (% NPI) curve (UI Agent v5.74.0)
-            plotLine(historyData.adaptiveMimicry, '#06b6d4', true); // 56th Channel: Adaptive Mimicry Index (% AMI) curve (Looks/UI Agent v5.78.0)
-            plotLine(historyData.coevolutionaryAdaptation, '#10b981', true); // 57th Channel: Coevolutionary Adaptation Index (% CAI) curve (UI Agent v5.84.0)
-            plotLine(historyData.bioticRedQueen, '#f59e0b', true); // 58th Channel: Biotic Red-Queen Index (% BRI) curve (Looks/UI Agent v5.88.0)
-            plotLine(historyData.biomicHomeostasis, '#06b6d4', true); // 59th Channel: Biomic Homeostasis Index (% BHI) curve (UI Agent v5.94.0)
-            plotLine(historyData.trophicCurrentSynergy, '#eab308', true); // 60th Channel: Trophic Current Synergy (% TCS) curve (Looks/UI Agent v5.98.0)
-            plotLine(historyData.biologicalCarbon, '#e2e8f0', true); // 61st Channel: Biological Carbon Index (% BCI) curve (UI Agent v6.04.0)
-            plotLine(historyData.biogenicNitrogen, '#c084fc', true); // 62nd Channel: Biogeochemical Nitrogen Yield (% BNY) curve (Looks/UI Agent v6.08.0)
-            plotLine(historyData.calcificationRatio, '#f8fafc', true); // 63rd Channel: Biogenic Calcification Ratio (% CAL) curve (UI Agent v6.14.0)
-            plotLine(historyData.shellHardnessMatrix, '#38bdf8', true); // 64th Channel: Shell Hardness Matrix (% SHM) curve (Looks/UI Agent v6.18.0)
-            plotLine(historyData.trophicVolumeCapacity, '#f59e0b', true); // 65th Channel: Trophic Volume Capacity (% TVC) curve (UI Agent v6.24.0)
-            plotLine(historyData.megafaunaBiomassEfficiency, '#10b981', true); // 66th Channel: Megafauna Biomass Efficiency (% MBE) curve (Looks/UI Agent v6.28.0)
-            plotLine(historyData.benthicBurrowingIndex, '#ea580c', true); // 67th Channel: Benthic Burrowing Index (% BDI) curve (UI Agent v6.34.0)
-            plotLine(historyData.substrateOxygenationIndex, '#06b6d4', true); // 68th Channel: Substrate Oxygenation Index (% SOX) curve (Looks/UI Agent v6.38.0)
-            plotLine(historyData.bioelectricEnergyIndex, '#f59e0b', true); // 69th Channel: Bioelectric Energy Index (% BEI) curve (UI Agent v6.44.0)
-            plotLine(historyData.magneticPolarizationOrder, '#a855f7', true); // 70th Channel: Magnetic Polarization Order (% MPO) curve (Looks/UI Agent v6.48.0)
-            plotLine(historyData.hydrodynamicSensitivityIndex, '#14b8a6', true); // 71st Channel: Mechanoreceptive Hydrodynamic Sensitivity (% MHS) curve (UI Agent v6.54.0)
-            plotLine(historyData.acousticDispersionRatioIndex, '#6366f1', true); // 72nd Channel: Acoustic Dispersion Ratio (% ADR) curve (Looks/UI Agent v6.58.0)
-            plotLine(historyData.bioluminescentEmissionReliability, '#06b6d4', true); // 73rd Channel: Bioluminescent Emission Reliability (% BLE) curve (UI Agent v6.64.0)
-            plotLine(historyData.photophoreCatalyticOptimization, '#10b981', true); // 74th Channel: Photophore Catalytic Optimization (% PCO) curve (UI Agent v6.68.0)
-            plotLine(historyData.piezophilicMembraneStability, '#6366f1', true); // 75th Channel: Piezophilic Membrane Stability (% PMS) curve (UI Agent v6.74.0)
-            plotLine(historyData.abyssalBarometricAdaptation, '#14b8a6', true); // 76th Channel: Abyssal Barometric Adaptation (% ABA) curve (UI Agent v6.78.0)
-            plotLine(historyData.bioturbationTurbulence, '#f59e0b', true); // 77th Channel: Bioturbation Turbulence Index (% BTI) curve (UI Agent v6.84.0)
-            plotLine(historyData.biogenicMineralRecycling, '#10b981', true); // 78th Channel: Biogenic Mineral Recycling (% BMR) curve (Looks/UI Agent v6.88.0)
-            plotLine(historyData.sestonFiltrationEfficiency, '#06b6d4', true); // 79th Channel: Seston Filtration Efficiency (% SFE) curve (UI Agent v6.94.0)
-            plotLine(historyData.benthicCarbonFlux, '#8b5cf6', true); // 80th Channel: Benthic Carbon Flux (% BCF) curve (Looks/UI Agent v6.98.0)
-            plotLine(historyData.calyxElevationAdvantage, '#eab308', true); // 81st Channel: Calyx Elevation Advantage (% CEA) curve (UI Agent v7.04.0)
+            plotLine(historyData.piezophilicMembraneStability, '#6366f1', true);
+            plotLine(historyData.abyssalBarometricAdaptation, '#14b8a6', true);
+            plotLine(historyData.bioturbationTurbulence, '#f59e0b', true);
+            plotLine(historyData.biogenicMineralRecycling, '#10b981', true);
+            plotLine(historyData.sestonFiltrationEfficiency, '#06b6d4', true);
+            plotLine(historyData.benthicCarbonFlux, '#8b5cf6', true);
+            plotLine(historyData.calyxElevationAdvantage, '#eab308', true);
         }
 
         // === MAIN ENGINE LOOP ===
@@ -9001,6 +8903,8 @@ let activeRheoHoldCount = 0;
         }
 
         function render() {
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.setLineDash([]);
             ctx.fillStyle = 'rgba(7, 9, 13, 0.38)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -9487,8 +9391,6 @@ let activeRheoHoldCount = 0;
             // Benthic Hydrothermal Vents, Black Smoker Plumes & Thermal Radiance (Looks Agent v5.23.0)
             if (typeof AbyssalOpticsRenderer !== 'undefined' && typeof ventChimneys !== 'undefined') {
                 AbyssalOpticsRenderer.drawAphoticBathymetry(ctx, canvas.width, canvas.height, (tick || 0));
-                AbyssalOpticsRenderer.drawHydrothermalVents(ctx, ventChimneys, (tick || 0));
-                AbyssalOpticsRenderer.drawMineralPlumes(ctx, ventChimneys, (tick || 0));
             }
 
             // Hydrothermal Black Smoker Complex & Schlieren Shimmer (Looks Agent v5.54.0)
@@ -9930,7 +9832,7 @@ let activeRheoHoldCount = 0;
                             ctx.setLineDash([]);
 
                             // 3. Bioluminescent Wave Node Packet (Traveling Photophore Particle)
-                            const travelT = ((tick * 0.035 + (o.id % 7) * 0.15) % 1.0);
+                            const travelT = ((tick * 0.035 + ((o.numericId || 0) % 7) * 0.15) % 1.0);
                             // Quadratic bezier interpolation for travelling light pulse
                             const oneMinusT = 1.0 - travelT;
                             const packetX = oneMinusT * oneMinusT * o.x + 2 * oneMinusT * travelT * ctrlX + travelT * travelT * peer.x;
@@ -10468,12 +10370,17 @@ let activeRheoHoldCount = 0;
         }
 
         function gameLoop() {
-            if (!isPaused) {
-                for (let s = 0; s < simSpeed; s++) {
-                    stepSimulation();
+            try {
+                if (!isPaused) {
+                    const steps = Math.min(simSpeed || 1, 4);
+                    for (let s = 0; s < steps; s++) {
+                        stepSimulation();
+                    }
                 }
+                render();
+            } catch (err) {
+                console.error("Simulation frame error recovered:", err);
             }
-            render();
             requestAnimationFrame(gameLoop);
         }
 

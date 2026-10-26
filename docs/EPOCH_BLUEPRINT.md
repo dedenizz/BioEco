@@ -56,6 +56,6 @@ Bu devrimsel krinoid atilimi, ekosisteme uc boyutlu dikine beslenme katmani kaza
 ---
 
 ## 4. Moduler Kod ve Kalite Standartlari
-- `src/` altindaki tum JavaScript modulleri kesinlikle `[150, 300]` satir standardina sadik kalacaktir.
+- Gelismis ve zor sistemlerde 300 satir ust siniri uygulanmaz; karmasik biyomekanik ve sistem modulleri gerektigi kadar kapsamli ve uzun yazilabilir. Gereksiz dosya cogaltmak yerine mevcut moduller derinlestirilir.
 - Kod tabaninda, DOM yapisinda, loglarda, belgelerde ve sohbet yanitlarinda sifir emoji kurali tavizsiz uygulanacaktir.
 - Her adimda Google Drive ve Google Docs senkronizasyonu tam guvenilirlikle surdurulecektir.

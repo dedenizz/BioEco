@@ -115,15 +115,9 @@
                     const pr = 4.0 + (1.0 - p.life) * 16.0;
                     const pAlpha = Math.max(0.0, p.life * 0.55);
 
-                    const plumeGrad = ctx.createRadialGradient(p.x, p.y, pr * 0.15, p.x, p.y, pr);
-                    plumeGrad.addColorStop(0.0, `rgba(15, 23, 42, ${pAlpha * 0.95})`);
-                    plumeGrad.addColorStop(0.45, `rgba(51, 65, 85, ${pAlpha * 0.65})`);
-                    plumeGrad.addColorStop(0.80, `rgba(202, 138, 4, ${pAlpha * 0.30})`);
-                    plumeGrad.addColorStop(1.0, "rgba(2, 6, 23, 0.0)");
-
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, pr, 0, Math.PI * 2);
-                    ctx.fillStyle = plumeGrad;
+                    ctx.fillStyle = `rgba(51, 65, 85, ${(pAlpha * 0.45).toFixed(3)})`;
                     ctx.fill();
                 }
 
@@ -212,14 +206,14 @@
 
             // 2. Hyperthermal heat-shock stress or optimum Arrhenius aura
             if (strain > 0.05) {
-                const shockPulse = 0.6 + 0.4 * Math.sin(tick * 0.35 + org.id);
+                const shockPulse = 0.6 + 0.4 * Math.sin(tick * 0.35 + (org.numericId || 0));
                 ctx.beginPath();
                 ctx.arc(org.x, org.y, size * (1.35 + shockPulse * 0.25), 0, Math.PI * 2);
                 ctx.lineWidth = 0.9;
                 ctx.strokeStyle = `rgba(239, 68, 68, ${0.40 + strain * 0.45})`;
                 ctx.stroke();
             } else if (temp >= 60.0 && temp <= 98.0) {
-                const catPulse = 0.5 + 0.5 * Math.sin(tick * 0.15 + org.id);
+                const catPulse = 0.5 + 0.5 * Math.sin(tick * 0.15 + (org.numericId || 0));
                 ctx.beginPath();
                 ctx.arc(org.x, org.y, size * (1.25 + catPulse * 0.20), 0, Math.PI * 2);
                 ctx.lineWidth = 0.8;

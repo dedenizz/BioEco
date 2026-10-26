@@ -69,7 +69,7 @@
         }
 
         static drawAcousticWaveDamping(ctx, org, size, acousticDamp, tick) {
-            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.id || 0));
+            const pulse = 0.5 + 0.5 * Math.sin(tick * 0.18 + (org.numericId || 0));
             const haloRadius = size * (1.15 + acousticDamp * 0.35 + pulse * 0.12);
             const alpha = Math.min(0.42, acousticDamp * 0.55);
 
@@ -115,7 +115,7 @@
         static drawNeuromastSensors(ctx, org, size, neuromasts, tick) {
             const poreCount = Math.min(8, Math.max(3, Math.floor(neuromasts * 0.65)));
             const angle = typeof org.angle === "number" ? org.angle : Math.atan2(org.vy || 0, org.vx || 0.01);
-            const pulse = 0.8 + 0.2 * Math.sin(tick * 0.14 + (org.id || 0));
+            const pulse = 0.8 + 0.2 * Math.sin(tick * 0.14 + (org.numericId || 0));
 
             ctx.save();
             ctx.rotate(angle);
@@ -214,7 +214,7 @@
             ctx.strokeStyle = `rgba(20, 184, 166, ${alpha})`;
             ctx.lineWidth = 0.8;
 
-            const phase = tick * 0.22 + (org.id || 0);
+            const phase = tick * 0.22 + (org.numericId || 0);
             const leftSwirlX = -wakeLen + Math.sin(phase) * 2.0;
             const leftSwirlY = -swirlRadius * 1.5;
 
@@ -246,7 +246,7 @@
                 const wake = org.wakeDisplacementVector;
                 if (!wake || wake.magnitude <= 0.45) continue;
 
-                const ringRadius = 18.0 + (tick * 0.4 + org.id) % 24.0;
+                const ringRadius = 18.0 + (tick * 0.4 + (org.numericId || 0)) % 24.0;
                 const ringAlpha = Math.max(0.0, 0.04 - (ringRadius / 42.0) * 0.04);
 
                 ctx.beginPath();
