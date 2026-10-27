@@ -1,6 +1,6 @@
 // BioEcosystem - Benthic Crinoid Stalks & Rheophilic Calyx Elevation Kinetics
 // Module: src/organs/crinoid_stalks.js
-// Version: 7.02.0 (Hour 422 - System Agent: Calcite Columnals, Hydrodynamic Articulation & Calyx Elevation)
+// Version: 7.07.0 (Hour 427 - System Agent: Overturning Torque, Calcite Tax, MCT Fatigue & Autotomy)
 // Zero emoji policy strictly enforced.
 
 (function(global) {
@@ -13,8 +13,11 @@
      * - Mutable Collagenous Tissue (MCT): Catch-collagen passive stiffening locking stalk without muscular ATP
      * - Calyx Elevation Advantage (CEA): Lifting suspension crown out of boundary shear into laminar current
      * - Holdfast Cirri Anchoring: Articulated basal claws counteracting overturning hydrodynamic torque
+     * - Overturning Torque & Detachment: Dynamic lever arm torque and holdfast tension limits
+     * - Calcite Maintenance Overhead: Biomineral metabolic cost and starvation skeletal resorption
+     * - Collagen Fatigue & Column Autotomy: Catch-collagen fatigue damping and emergency syzygy shedding
      * - Rheophilic Articulation: Parabolic crown curvature oriented against prevailing fluid streamlines
-     * - Precursor calculations for 81st Channel (% CEA) and 82nd Channel (% RAR - Rheophilic Articulation Ratio)
+     * - Foundation calculations for 81st Channel (% CEA) and 82nd Channel (% RAR - Rheophilic Articulation Ratio)
      */
     class CrinoidStalkManager {
         constructor() {
@@ -35,14 +38,19 @@
                 meanColumnalCount: 0.0,
                 meanCalyxElevation: 0.0,
                 meanCollagenStiffness: 0.0,
+                meanCollagenFatigue: 0.0,
                 meanHoldfastGrip: 0.0,
+                meanHoldfastTension: 0.0,
                 meanElevationAdvantage: 0.0,
                 meanArticulationRatio: 0.0,
                 activeElevatedFeeders: 0,
                 stalkLockEvents: 0,
                 deflectionAngleMean: 0.0,
                 assimilatedHighVelocityCarbon: 0.0,
-                overturningDeflections: 0
+                overturningDeflections: 0,
+                holdfastDetachmentEvents: 0,
+                calciteResorptionEvents: 0,
+                autotomyEvents: 0
             };
         }
 
@@ -50,7 +58,7 @@
             if (!org) return;
 
             const isDeepBenthic = (org.y >= 360.0);
-            const geneticTendency = (org.genes && org.genes.benthicGrip > 0.45) ||
+            const geneticTendency = (org.dna && org.dna.benthicGrip > 0.45) ||
                                    (org.filterFeedingAdapted === true) ||
                                    (org.cellType === "herbivore" && isDeepBenthic);
 
@@ -71,6 +79,10 @@
                 org.mutableCollagenStiffness = org.isCrinoidStalked ? 0.68 : 0.0;
             }
 
+            if (typeof org.collagenFatigueFactor === "undefined") {
+                org.collagenFatigueFactor = 0.0;
+            }
+
             if (typeof org.holdfastCirriCount === "undefined") {
                 org.holdfastCirriCount = org.isCrinoidStalked ? (5 + Math.floor(Math.random() * 5)) : 0;
             }
@@ -79,12 +91,32 @@
                 org.holdfastCirriGrip = org.isCrinoidStalked ? (0.65 + Math.random() * 0.32) : 0.0;
             }
 
+            if (typeof org.isHoldfastDetached === "undefined") {
+                org.isHoldfastDetached = false;
+            }
+
+            if (typeof org.reanchoringTimer === "undefined") {
+                org.reanchoringTimer = 0;
+            }
+
             if (typeof org.stalkDeflectionAngle === "undefined") {
                 org.stalkDeflectionAngle = 0.0;
             }
 
             if (typeof org.isStalkLocked === "undefined") {
                 org.isStalkLocked = false;
+            }
+
+            if (typeof org.stalkBrittleness === "undefined") {
+                org.stalkBrittleness = 0.0;
+            }
+
+            if (typeof org.autotomyCooldown === "undefined") {
+                org.autotomyCooldown = 0;
+            }
+
+            if (typeof org.autotomyActive === "undefined") {
+                org.autotomyActive = false;
             }
 
             if (typeof org.calyxElevationAdvantage === "undefined") {
@@ -114,27 +146,70 @@
             const flowSpeed = (typeof currentVelocity === "number") ? currentVelocity : 0.45;
             const flowAngle = (typeof currentAngle === "number") ? currentAngle : 0.0;
 
-            // Maintain stalk height within physiological biomechanical constraints
-            org.stalkHeight = Math.max(this.minStalkHeight, Math.min(this.maxStalkHeight, org.stalkHeight));
-            org.calciteColumnalCount = Math.max(6, Math.floor(org.stalkHeight / this.diskThickness));
+            if (org.autotomyCooldown > 0) {
+                org.autotomyCooldown--;
+                if (org.autotomyCooldown === 0) org.autotomyActive = false;
+            }
 
-            // Hydrodynamic drag induces overturning torque on elevated calyx
-            const torqueMoment = (org.stalkHeight / 80.0) * flowSpeed;
-            const anchorStability = (org.holdfastCirriGrip * (org.holdfastCirriCount / 8.0));
+            // 1. Column Autotomy Regeneration & Stalk Height Clamping
+            if (!org.autotomyActive && org.stalkHeight < 40.0) {
+                org.stalkHeight += 0.08 * effDt * 60.0; // Gradual post-autotomy stalk regrowth
+            }
+            org.stalkHeight = Math.max(this.minStalkHeight * 0.4, Math.min(this.maxStalkHeight, org.stalkHeight));
+            org.calciteColumnalCount = Math.max(2, Math.floor(org.stalkHeight / this.diskThickness));
 
-            // Catch-collagen (Mutable Collagenous Tissue) locking mechanics
-            if (torqueMoment > 0.40 && anchorStability > 0.50) {
+            // 2. Overturning Hydrodynamic Torque & Lever Arm Dynamics
+            const dynamicLeverArm = org.stalkHeight * Math.cos(org.stalkDeflectionAngle);
+            const overturningTorque = (dynamicLeverArm / 70.0) * (flowSpeed * flowSpeed * 1.8 + 0.1);
+            const anchorResistance = Math.max(0.2, org.holdfastCirriGrip * (org.holdfastCirriCount / 6.0));
+            const holdfastTension = overturningTorque / anchorResistance;
+
+            const baseTensionLimit = 1.35 + (org.dna && org.dna.benthicGrip ? org.dna.benthicGrip * 0.8 : 0.4);
+
+            // Detachment check under catastrophic torque
+            if (holdfastTension > baseTensionLimit && !org.isHoldfastDetached) {
+                org.isHoldfastDetached = true;
+                org.reanchoringTimer = 60 + Math.floor(Math.random() * 80);
+                this.metrics.holdfastDetachmentEvents++;
+            }
+
+            if (org.isHoldfastDetached) {
+                org.reanchoringTimer--;
+                org.vx += (Math.cos(flowAngle) * flowSpeed * 0.8 - org.vx) * 0.06;
+                org.vy += (Math.sin(flowAngle) * flowSpeed * 0.8 - org.vy) * 0.06;
+                if (org.reanchoringTimer <= 0 && org.y >= 380.0) {
+                    org.isHoldfastDetached = false;
+                    org.holdfastCirriGrip = Math.max(0.4, org.holdfastCirriGrip * 0.85); // Temporary adhesion fatigue
+                }
+            }
+
+            // 3. Catch-Collagen Passive Stiffening & Fatigue Dynamics
+            if (overturningTorque > 0.40 && anchorResistance > 0.45 && !org.isHoldfastDetached) {
                 org.isStalkLocked = true;
                 org.mutableCollagenStiffness = Math.min(0.98, org.mutableCollagenStiffness + 0.04 * effDt * 60.0);
+                org.collagenFatigueFactor = Math.min(1.0, org.collagenFatigueFactor + 0.012 * effDt * 60.0);
                 this.metrics.stalkLockEvents++;
             } else {
                 org.isStalkLocked = false;
-                org.mutableCollagenStiffness = Math.max(0.40, org.mutableCollagenStiffness - 0.02 * effDt * 60.0);
+                org.mutableCollagenStiffness = Math.max(0.38, org.mutableCollagenStiffness - 0.02 * effDt * 60.0);
+                org.collagenFatigueFactor = Math.max(0.0, org.collagenFatigueFactor - 0.025 * effDt * 60.0);
             }
 
-            // Deflection angle bending under flow
-            const targetDeflection = (Math.sin(flowAngle) * torqueMoment * 0.42) /
-                                    (org.mutableCollagenStiffness * anchorStability + 0.15);
+            // 4. Stalk Autotomy Reflex under Extreme Fatigue or Fracture Strain
+            if ((org.collagenFatigueFactor > 0.85 || org.stalkBrittleness > 0.65) && overturningTorque > 1.15 && !org.autotomyActive) {
+                org.stalkHeight = Math.max(14.0, org.stalkHeight * 0.38);
+                org.calciteColumnalCount = Math.max(3, Math.floor(org.stalkHeight / this.diskThickness));
+                org.autotomyActive = true;
+                org.autotomyCooldown = 140;
+                org.collagenFatigueFactor = 0.0;
+                org.isStalkLocked = false;
+                this.metrics.autotomyEvents++;
+            }
+
+            // 5. Deflection angle bending under flow
+            const fatiguePenalty = 1.0 + (org.collagenFatigueFactor * 0.45);
+            const targetDeflection = (Math.sin(flowAngle) * overturningTorque * 0.42 * fatiguePenalty) /
+                                    (org.mutableCollagenStiffness * anchorResistance + 0.15);
             org.stalkDeflectionAngle += (targetDeflection - org.stalkDeflectionAngle) * 0.08;
 
             if (Math.abs(org.stalkDeflectionAngle) > this.overturningTorqueLimit) {
@@ -142,7 +217,7 @@
                 org.stalkDeflectionAngle = Math.sign(org.stalkDeflectionAngle) * this.overturningTorqueLimit;
             }
 
-            // Calyx Elevation Advantage (CEA): elevation above boundary layer into laminar stream
+            // 6. Calyx Elevation Advantage (CEA)
             const calyxY = org.y - org.stalkHeight * Math.cos(org.stalkDeflectionAngle);
             const boundaryLayerClearance = Math.max(0.0, this.bblBoundaryY - calyxY);
             const elevationFactor = Math.min(1.0, boundaryLayerClearance / 65.0);
@@ -150,23 +225,34 @@
 
             org.calyxElevationAdvantage = Math.min(1.0, 0.25 + elevationFactor * 0.75);
 
-            // Rheophilic Articulation Ratio (RAR): parabolic alignment with current vs drag
+            // 7. Rheophilic Articulation Ratio (RAR) - Foundation for 82nd Channel
             const alignment = Math.cos(org.stalkDeflectionAngle - (flowAngle * 0.5));
-            const stabilityComponent = Math.min(1.0, anchorStability);
-            const stiffnessComponent = org.mutableCollagenStiffness;
+            const compliance = 1.0 - Math.min(1.0, Math.abs(org.stalkDeflectionAngle) / this.overturningTorqueLimit);
+            const anchorStability = Math.max(0.0, 1.0 - Math.min(1.0, holdfastTension / baseTensionLimit));
+            const stiffnessHealth = org.mutableCollagenStiffness * (1.0 - org.collagenFatigueFactor * 0.6);
+
             org.rheophilicArticulationRatio = Math.max(0.0, Math.min(1.0,
-                (alignment * 0.40) + (stabilityComponent * 0.35) + (stiffnessComponent * 0.25)
+                (alignment * 0.30) + (compliance * 0.25) + (anchorStability * 0.25) + (stiffnessHealth * 0.20)
             ));
 
-            // Nutrient capture bonus: elevated crown intercepts suspended seston particles
+            // 8. Nutrient capture bonus & Calcite maintenance tax
             const assimilationYield = laminarBonus * 0.038 * effDt * 60.0;
             if (org.energy && org.alive) {
                 org.energy = Math.min(100.0, org.energy + assimilationYield);
                 this.metrics.assimilatedHighVelocityCarbon += assimilationYield;
 
-                // Calcite biomineral maintenance tax (passive skeletal matrix)
-                const maintenanceTax = this.calciteMetabolicCost * (org.calciteColumnalCount / 16.0) * effDt * 60.0;
+                // Calcite biomineral maintenance tax
+                const maintenanceTax = this.calciteMetabolicCost * (org.calciteColumnalCount / 14.0) * effDt * 60.0;
                 org.energy = Math.max(1.0, org.energy - maintenanceTax);
+
+                // Starvation skeletal resorption
+                if (org.energy < 15.0) {
+                    org.calciteMineralInvestment = Math.max(0.5, org.calciteMineralInvestment - 0.04 * effDt * 60.0);
+                    org.stalkBrittleness = Math.min(1.0, (15.0 - org.energy) / 15.0);
+                    this.metrics.calciteResorptionEvents++;
+                } else {
+                    org.stalkBrittleness = Math.max(0.0, org.stalkBrittleness - 0.02 * effDt * 60.0);
+                }
             }
         }
 
@@ -184,7 +270,9 @@
             let sumHeight = 0.0;
             let sumColumnals = 0;
             let sumStiffness = 0.0;
+            let sumFatigue = 0.0;
             let sumGrip = 0.0;
+            let sumTension = 0.0;
             let sumCEA = 0.0;
             let sumRAR = 0.0;
             let sumDeflection = 0.0;
@@ -202,10 +290,16 @@
                     sumHeight += org.stalkHeight;
                     sumColumnals += org.calciteColumnalCount;
                     sumStiffness += org.mutableCollagenStiffness;
+                    sumFatigue += org.collagenFatigueFactor;
                     sumGrip += org.holdfastCirriGrip;
                     sumCEA += org.calyxElevationAdvantage;
                     sumRAR += org.rheophilicArticulationRatio;
                     sumDeflection += Math.abs(org.stalkDeflectionAngle);
+
+                    const dynamicLever = org.stalkHeight * Math.cos(org.stalkDeflectionAngle);
+                    const torque = (dynamicLever / 70.0) * (flowSpeed * flowSpeed * 1.8 + 0.1);
+                    const res = Math.max(0.2, org.holdfastCirriGrip * (org.holdfastCirriCount / 6.0));
+                    sumTension += (torque / res);
 
                     if (org.calyxElevationAdvantage > 0.50) {
                         activeFeeders++;
@@ -219,7 +313,9 @@
             this.metrics.meanStalkHeight = stalkedCount > 0 ? (sumHeight / stalkedCount) : 0.0;
             this.metrics.meanColumnalCount = stalkedCount > 0 ? (sumColumnals / stalkedCount) : 0.0;
             this.metrics.meanCollagenStiffness = stalkedCount > 0 ? (sumStiffness / stalkedCount) : 0.0;
+            this.metrics.meanCollagenFatigue = stalkedCount > 0 ? (sumFatigue / stalkedCount) : 0.0;
             this.metrics.meanHoldfastGrip = stalkedCount > 0 ? (sumGrip / stalkedCount) : 0.0;
+            this.metrics.meanHoldfastTension = stalkedCount > 0 ? (sumTension / stalkedCount) : 0.0;
             this.metrics.meanElevationAdvantage = stalkedCount > 0 ? (sumCEA / stalkedCount) : 0.0;
             this.metrics.meanArticulationRatio = stalkedCount > 0 ? (sumRAR / stalkedCount) : 0.0;
             this.metrics.deflectionAngleMean = stalkedCount > 0 ? (sumDeflection / stalkedCount) : 0.0;

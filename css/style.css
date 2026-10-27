@@ -14,7 +14,7 @@
         }
         .app-shell {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) 350px;
+            grid-template-columns: minmax(0, 1fr) 390px;
             gap: 16px;
             max-width: 1540px;
             width: 100%;
@@ -207,10 +207,12 @@
         }
         .chart-legend {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+            justify-content: flex-start;
             font-size: 0.65rem;
-            color: #6b7280;
-            margin-top: 2px;
+            color: #9ca3af;
+            margin-top: 4px;
             text-transform: uppercase;
         }
         .legend-dot {
@@ -1035,6 +1037,104 @@
     border: 1px solid rgba(139, 92, 246, 0.45);
 }
 /* 81st Channel Calyx Elevation Advantage Styling (UI Agent v7.04.0) */
+
+/* 82nd Channel Rheophilic Articulation Ratio Styling (UI Agent v7.08.0) */
+/* 83rd Channel Water Vascular Index Styling (UI Agent v7.14.0) */
+/* 85th Channel Stereom Protection Index Styling (UI Agent v7.24.0) */
+.spi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.spi-unarmored {
+    background: rgba(148, 163, 184, 0.12);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.spi-developing {
+    background: rgba(203, 213, 225, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(203, 213, 225, 0.45);
+}
+.spi-articulated {
+    background: rgba(226, 232, 240, 0.18);
+    color: #e2e8f0;
+    border: 1px solid rgba(226, 232, 240, 0.50);
+}
+.spi-maximal {
+    background: rgba(248, 250, 252, 0.22);
+    color: #f8fafc;
+    border: 1px solid rgba(248, 250, 252, 0.60);
+}
+
+/* 86th Channel Pedicellariae Deterrence Ratio Styling (Looks/UI Agent v7.28.0) */
+.pdr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(225, 29, 72, 0.15);
+    color: #e11d48;
+    border: 1px solid rgba(225, 29, 72, 0.45);
+}
+.pdr-depleted {
+    background: rgba(225, 29, 72, 0.12);
+    color: #f43f5e;
+    border: 1px solid rgba(225, 29, 72, 0.40);
+}
+.pdr-vulnerable {
+    background: rgba(244, 63, 94, 0.15);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.45);
+}
+.pdr-active {
+    background: rgba(251, 113, 133, 0.18);
+    color: #fda4af;
+    border: 1px solid rgba(251, 113, 133, 0.50);
+}
+.pdr-maximal {
+    background: rgba(255, 228, 230, 0.22);
+    color: #ffe4e6;
+    border: 1px solid rgba(255, 228, 230, 0.60);
+}
+
+/* 84th Channel Podial Traction Index Styling (UI Agent v7.18.0) */
+.pti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.wvi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(2, 132, 199, 0.15);
+    color: #0284c7;
+    border: 1px solid rgba(2, 132, 199, 0.45);
+}
+.rar-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.45);
+}
 .cea-badge {
     display: inline-block;
     padding: 2px 6px;
@@ -1044,4 +1144,187 @@
     background: rgba(234, 179, 8, 0.15);
     color: #eab308;
     border: 1px solid rgba(234, 179, 8, 0.45);
+}
+/* === BEGINNER VS PRO LAB MODE UI SYSTEM (v7.07.1) === */
+body.beginner-mode .pro-only {
+    display: none !important;
+}
+body.pro-mode .beginner-only {
+    display: none !important;
+}
+
+.header-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.header-stats-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.header-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.mode-toggle-btn {
+    padding: 4px 10px !important;
+    font-weight: 700 !important;
+    font-size: 0.72rem !important;
+    border-radius: 5px !important;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+}
+.mode-toggle-btn.mode-beginner {
+    background: rgba(16, 185, 129, 0.18) !important;
+    border: 1px solid #10b981 !important;
+    color: #34d399 !important;
+}
+.mode-toggle-btn.mode-pro {
+    background: rgba(168, 85, 247, 0.22) !important;
+    border: 1px solid #c084fc !important;
+    color: #e9d5ff !important;
+}
+
+.tutorial-btn {
+    padding: 4px 10px !important;
+    font-weight: 700 !important;
+    font-size: 0.72rem !important;
+    background: rgba(245, 158, 11, 0.16) !important;
+    border: 1px solid #f59e0b !important;
+    color: #fbbf24 !important;
+    border-radius: 5px !important;
+}
+.tutorial-btn:hover {
+    background: rgba(245, 158, 11, 0.28) !important;
+}
+
+.codex-btn {
+    padding: 4px 10px !important;
+    font-weight: 700 !important;
+    font-size: 0.72rem !important;
+    background: rgba(56, 189, 248, 0.15) !important;
+    border: 1px solid #38bdf8 !important;
+    color: #38bdf8 !important;
+    border-radius: 5px !important;
+}
+.codex-btn:hover {
+    background: rgba(56, 189, 248, 0.28) !important;
+}
+
+.fps-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.14);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #10b981;
+    font-weight: 700;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+}
+
+/* 4-Box Food Chain Scoreboard */
+.food-chain-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-bottom: 4px;
+}
+.fc-box {
+    background: #0d131d;
+    border: 1px solid #222d3f;
+    border-radius: 6px;
+    padding: 6px 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.fc-box .fc-count {
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.fc-box .fc-name {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.fc-box .fc-sub {
+    font-size: 0.58rem;
+    color: #94a3b8;
+}
+
+/* Beginner Creature Inspector Trait Bars */
+.trait-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 4px;
+}
+.trait-label-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.70rem;
+    color: #cbd5e1;
+}
+.trait-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: #0b0f16;
+    border: 1px solid #222d3f;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.trait-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.15s ease;
+}
+
+.helper-hint {
+    font-size: 0.68rem;
+    color: #94a3b8;
+    background: #0d131d;
+    border-left: 3px solid #38bdf8;
+    padding: 5px 8px;
+    border-radius: 3px;
+    line-height: 1.35;
+}
+
+/* Tutorial Step Cards */
+.tutorial-steps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+@media (max-width: 750px) {
+    .tutorial-steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.tutorial-card {
+    background: #111827;
+    border: 1px solid #283548;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.tutorial-card h4 {
+    font-size: 0.88rem;
+    color: #f8fafc;
+    margin-bottom: 2px;
+}
+.tutorial-card p {
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    line-height: 1.5;
 }

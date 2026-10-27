@@ -7,14 +7,14 @@
     "use strict";
 
     const SimulationConstants = {
-        VERSION: "7.06.0",
-        EPOCH: 38,
-        HISTORIC_MILESTONE_HOURS: 426,
+        VERSION: "7.28.0",
+        EPOCH: 40,
+        HISTORIC_MILESTONE_HOURS: 448,
         TARGET_FPS: 60,
         
         // Carrying Capacity Boundaries & Historic Milestone Expansions
         BASE_CARRYING_CAPACITY: 120,
-        PEAK_CARRYING_CAPACITY: 345,
+        PEAK_CARRYING_CAPACITY: 355,
         COMPLETE_DIGESTIVE_BUFFER: 6,
         SENSORY_INTEGRATION_BUFFER: 6,
         EXOSKELETON_ARMOR_BUFFER: 6,
@@ -36,7 +36,9 @@
         ABYSSAL_BENTHOS_BUFFER: 5,
         INFAUNAL_BIOTURBATION_BUFFER: 5,
         SESTON_FILTRATION_BUFFER: 5,
-        TOTAL_TELEMETRY_CHANNELS: 81,
+        CRINOID_ELEVATION_BUFFER: 5,
+        ECHINODERM_PODIA_BUFFER: 5,
+        TOTAL_TELEMETRY_CHANNELS: 86,
         
         // Fluid & Physics Dynamics
         VISCOSITY: 0.982,

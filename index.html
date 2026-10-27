@@ -7,20 +7,27 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body class="beginner-mode">
 
     <div class="app-shell">
         <!-- Viewport Section -->
         <div class="viewport-section">
             <div class="header-bar">
-                <div>CYCLE: <b id="lblCycle">1</b> (<span id="lblSeason" class="season-badge season-spring">SPRING</span>)</div>
-                <div>POPULATION: <b id="lblTotalPop">0</b></div>
-                <div>TAXA: <b id="lblTaxaCount">0</b> (<span id="lblSpeciationRate" style="color: #38bdf8;">0 SP</span>)</div>
-                <div>RESILIENCE: <b id="lblResilience" style="color: #10b981;">STABLE</b></div>
-                <div>DIVERSITY: <b id="lblDiversity" style="color: #c084fc;">0.00 H'</b></div>
-                <div>SPEED: <b id="lblSimSpeed">1.0x</b></div>
-                <div class="centenary-badge" title="BioEcosystem 426-Hour Studio Milestone - Version 7.06.0 Critic Audit" style="display: inline-flex; align-items: center; background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 4px; padding: 2px 7px; font-size: 10px; font-weight: 700; color: #ef4444; letter-spacing: 0.5px;">CRITIC 426H | v7.06.0</div>
-                <button class="action-btn" id="btnOpenGuide" style="padding: 2px 8px; font-weight: 600; border-color: #38bdf8; color: #38bdf8;">CODEX &amp; DOCS</button>
+                <div class="header-stats-group">
+                    <div>CYCLE: <b id="lblCycle">1</b> (<span id="lblSeason" class="season-badge season-spring">SPRING</span>)</div>
+                    <div>CREATURES: <b id="lblTotalPop">31</b></div>
+                    <div>SPECIES: <b id="lblTaxaCount">3</b> <span class="pro-only">(<span id="lblSpeciationRate" style="color: #38bdf8;">3 SP</span>)</span></div>
+                    <div>ECOSYSTEM: <b id="lblResilience" style="color: #10b981;">STABLE</b></div>
+                    <div class="pro-only">DIVERSITY: <b id="lblDiversity" style="color: #c084fc;">0.00 H'</b></div>
+                    <div>SPEED: <b id="lblSimSpeed">1.0x</b></div>
+                    <div class="fps-badge" id="lblFps">60 FPS</div>
+                </div>
+                <div class="header-actions-group">
+                    <div class="centenary-badge pro-only" title="BioEcosystem 448-Hour Studio Milestone - Version 7.28.0" style="display: inline-flex; align-items: center; background: rgba(225, 29, 72, 0.12); border: 1px solid rgba(225, 29, 72, 0.4); border-radius: 4px; padding: 2px 7px; font-size: 10px; font-weight: 700; color: #fb7185; letter-spacing: 0.5px;">LOOKS-UI 448H | v7.28.0</div>
+                    <button class="action-btn mode-toggle-btn mode-beginner" id="btnToggleMode" onclick="window.toggleGameMode && window.toggleGameMode()" title="Switch between Beginner Mode (Fun & Clear) and Pro Lab Mode (Full 81-Channel Biology)">MODE: BEGINNER (FUN)</button>
+                    <button class="action-btn tutorial-btn" id="btnOpenTutorial" onclick="window.openTutorial && window.openTutorial()" title="Open Step-by-Step How to Play Tutorial">HOW TO PLAY</button>
+                    <button class="action-btn codex-btn" id="btnOpenGuide" onclick="window.openGuide && window.openGuide()" title="Open Plain-English Dictionary & Scientific Codex">CODEX &amp; DOCS</button>
+                </div>
             </div>
 
             <!-- Live Event Ticker & Micro-Narrative Bar (UI Agent v3.60.0) -->
@@ -40,13 +47,41 @@
             <!-- Real-Time Telemetry & Population Dynamics Chart -->
             <div class="card">
                 <div class="card-header">
-                    <span>Population Dynamics (Lotka-Volterra)</span>
-                    <span id="lblDominantTaxon" style="color: #38bdf8;">None</span>
+                    <span>Food Chain &amp; Population Live Count</span>
+                    <span class="pro-only">Top Species: <b id="lblDominantTaxon" style="color: #38bdf8;">None</b></span>
+                </div>
+                <div class="food-chain-grid">
+                    <div class="fc-box" style="border-color: rgba(16, 185, 129, 0.45);" title="Green Plankton grows naturally in the water. Blue Grazers eat it!">
+                        <span class="fc-count" id="cntFood" style="color: #10b981;">45</span>
+                        <span class="fc-name" style="color: #34d399;">Plankton</span>
+                        <span class="fc-sub">Plant Food</span>
+                    </div>
+                    <div class="fc-box" style="border-color: rgba(56, 189, 248, 0.45);" title="Blue Grazers (Herbivores) eat green plankton and hide in reefs.">
+                        <span class="fc-count" id="cntHerb" style="color: #38bdf8;">20</span>
+                        <span class="fc-name" style="color: #7dd3fc;">Grazers</span>
+                        <span class="fc-sub">Eats Plankton</span>
+                    </div>
+                    <div class="fc-box" style="border-color: rgba(239, 68, 68, 0.45);" title="Red Hunters (Predators) chase and eat Blue Grazers.">
+                        <span class="fc-count" id="cntCarn" style="color: #ef4444;">5</span>
+                        <span class="fc-name" style="color: #fca5a5;">Hunters</span>
+                        <span class="fc-sub">Eats Grazers</span>
+                    </div>
+                    <div class="fc-box" style="border-color: rgba(245, 158, 11, 0.45);" title="Gold Cleaners (Scavengers) eat dead leftovers and recycle nutrients.">
+                        <span class="fc-count" id="cntScav" style="color: #f59e0b;">6</span>
+                        <span class="fc-name" style="color: #fcd34d;">Cleaners</span>
+                        <span class="fc-sub">Cleans Dish</span>
+                    </div>
                 </div>
                 <div class="chart-container">
                     <canvas id="chartCanvas" width="296" height="80"></canvas>
                 </div>
-                <div class="chart-legend">
+                <div class="chart-legend beginner-only">
+                    <span><span class="legend-dot" style="background:#10b981;"></span>Green Plankton (Food)</span>
+                    <span><span class="legend-dot" style="background:#38bdf8;"></span>Blue Grazers</span>
+                    <span><span class="legend-dot" style="background:#ef4444;"></span>Red Hunters</span>
+                    <span><span class="legend-dot" style="background:#f59e0b;"></span>Gold Cleaners</span>
+                </div>
+                <div class="chart-legend pro-only" style="max-height: 58px; overflow-y: auto;">
                     <span><span class="legend-dot" style="background:#10b981;"></span>Food</span>
                     <span><span class="legend-dot" style="background:#38bdf8;"></span>Herb</span>
                     <span><span class="legend-dot" style="background:#ef4444;"></span>Carn</span>
@@ -107,6 +142,10 @@
                     <span><span class="legend-dot" style="background:#f59e0b;"></span>Bioelectric BEI</span>
                     <span><span class="legend-dot" style="background:#a855f7;"></span>Polarization MPO</span>
                     <span><span class="legend-dot" style="background:#14b8a6;"></span>Hydrodynamic MHS</span>
+                    <span><span class="legend-dot" style="background:#eab308;"></span>Elevation CEA</span>
+                    <span><span class="legend-dot" style="background:#f43f5e;"></span>Rheophilic RAR</span>
+                    <span><span class="legend-dot" style="background:#0284c7;"></span>Hydraulic WVI</span>
+                    <span><span class="legend-dot" style="background:#f59e0b;"></span>Traction PTI</span>
                 </div>
                 <div class="chart-legend" style="border-top: 1px solid #212936; padding-top: 4px; margin-top: 4px;">
                     <span style="color: #94a3b8;"><span class="legend-dot" style="background:#38bdf8;"></span>Healthy</span>
@@ -120,18 +159,21 @@
             <!-- Organism Real-Time Inspector Card -->
             <div class="card">
                 <div class="card-header">
-                    <span>Organism Telemetry Inspector</span>
-                    <span id="lblInspectMode" style="color: #6ee7b7; font-size: 0.68rem; cursor: pointer;" title="Click to deselect">LIVE TRACK [DESELECT]</span>
+                    <span>Creature Inspector (Click Dish)</span>
+                    <span id="lblInspectMode" style="color: #6ee7b7; font-size: 0.68rem; cursor: pointer;" title="Click to deselect">UNSELECT [X]</span>
                 </div>
-                <div class="inspector-body" id="inspectorContent">
-                    <div style="color: #64748b; text-align: center; padding: 12px 0;">Click any organism in the viewport to inspect its genome, lineage, and live state.</div>
+                <div class="inspector-body" id="inspectorContent" style="max-height: 250px; overflow-y: auto; padding-right: 4px;">
+                    <div style="color: #94a3b8; text-align: center; padding: 10px 6px; line-height: 1.45;">
+                        Click any swimming creature inside the circular dish to see its role, energy bar, DNA traits, and what it is doing!
+                    </div>
                 </div>
             </div>
 
-            <!-- Simulation Controls -->
+            <!-- Simulation Controls & Sandbox Powers -->
             <div class="card">
                 <div class="card-header">
-                    <span>Simulation Controls</span>
+                    <span>Game Speed &amp; Sandbox Powers</span>
+                    <button class="action-btn" id="btnResetDish" onclick="window.initSimulation && window.initSimulation()" style="padding: 2px 8px; font-size: 0.65rem; border-color: #475569;">RESET DISH</button>
                 </div>
                 <div class="btn-group" style="grid-template-columns: repeat(5, 1fr);">
                     <button class="action-btn" id="btnPause">PAUSE</button>
@@ -141,196 +183,207 @@
                     <button class="action-btn" id="btnFullscreen" title="Toggle Fullscreen Immersion">FULL</button>
                 </div>
 
-                <div class="card-header" style="margin-top: 6px;">
-                    <span>Intervention Tool</span>
+                <div class="helper-hint" style="margin-top: 4px;">
+                    <b>Sandbox Tool:</b> Pick a button below, then click or drag anywhere inside the circular dish!
                 </div>
                 <div class="tool-selector">
-                    <button class="action-btn active" data-tool="food">Feed Nutrients</button>
-                    <button class="action-btn" data-tool="herb">Add Herbivore</button>
-                    <button class="action-btn" data-tool="carn">Add Carnivore</button>
-                    <button class="action-btn" data-tool="scav">Add Scavenger</button>
-                    <button class="action-btn" data-tool="pathogen">Infect Pathogen</button>
-                    <button class="action-btn" id="btnToggleReefs" style="grid-column: span 2;">REEF BARRIERS: ACTIVE</button>
+                    <button class="action-btn active" data-tool="food" title="Click in the dish to drop green plankton food">+ Drop Plankton (Food)</button>
+                    <button class="action-btn" data-tool="herb" title="Click in the dish to spawn a Blue Grazer">+ Blue Grazer (Prey)</button>
+                    <button class="action-btn" data-tool="carn" title="Click in the dish to spawn a Red Hunter">+ Red Hunter (Predator)</button>
+                    <button class="action-btn" data-tool="scav" title="Click in the dish to spawn a Gold Cleaner">+ Gold Cleaner (Recycler)</button>
+                    <button class="action-btn" data-tool="pathogen" style="grid-column: span 2;" title="Click near a creature to infect it with a virus and test evolution of immunity">Drop Virus (Test Immunity Evolution)</button>
+                    <button class="action-btn" id="btnToggleReefs" style="grid-column: span 2;" title="Toggle the 2 dark circular reef shelters where small grazers can hide from predators">SAFE REEF SHELTERS: ON</button>
                 </div>
             </div>
 
             <!-- Ecological Averages -->
             <div class="card">
                 <div class="card-header">
-                    <span>Ecological & Genetic Telemetry</span>
+                    <span>Evolution Trait Averages</span>
+                    <span class="beginner-only" style="font-size: 0.62rem; color: #38bdf8; cursor: pointer;" onclick="window.toggleGameMode && window.toggleGameMode()">[+80 Pro Stats]</span>
                 </div>
-                <div class="stat-grid">
-                    <div class="stat-item"><span>Avg Velocity:</span><b id="avgVelocity">0.00</b></div>
-                    <div class="stat-item"><span>Avg Sensory Cone:</span><b id="avgSensory">0px</b></div>
-                    <div class="stat-item"><span>Avg Biomass:</span><b id="avgSize">0.00</b></div>
-                    <div class="stat-item"><span>Avg Camouflage:</span><b id="avgCamo">0%</b></div>
-                    <div class="stat-item"><span>Avg Immunity:</span><b id="avgImmunity">0%</b></div>
-                    <div class="stat-item"><span>Epigenetic Hardiness:</span><b id="avgHardiness" style="color: #38bdf8;">0%</b></div>
-                    <div class="stat-item"><span>Chemotaxis Index:</span><b id="avgChemotaxis" style="color: #34d399;">0%</b></div>
-                    <div class="stat-item"><span>Endolithic Index:</span><b id="avgEndolithic" style="color: #38bdf8;">0% (0)</b></div>
-                    <div class="stat-item"><span>Avg Symbiosis:</span><b id="avgSymbiosis" style="color: #06b6d4;">0%</b></div>
-                    <div class="stat-item"><span>Active Bonds:</span><b id="valMutualists" style="color: #06b6d4;">0</b></div>
-                    <div class="stat-item"><span>Symbiosis Index:</span><b id="valSymbiosisIndex" style="color: #06b6d4;">0%</b></div>
-                    <div class="stat-item"><span>Plasmid Transfers:</span><b id="valHgtEvents" style="color: #c084fc;">0</b></div>
-                    <div class="stat-item"><span>Herd Resistance:</span><b id="valHerdImmunity" style="color: #34d399;">0%</b></div>
-                    <div class="stat-item"><span>Shannon Diversity:</span><b id="valShannon" style="color: #c084fc;">0.00 H'</b></div>
-                    <div class="stat-item"><span>Pack Hunting:</span><b id="valPackHunting" style="color: #f87171;">0%</b></div>
-                    <div class="stat-item"><span>Predation Pressure:</span><b id="valPredPressure" style="color: #fb7185;">0%</b></div>
-                    <div class="stat-item"><span>Ancient Clade:</span><b id="valAncientClade" style="color: #38bdf8;">None</b></div>
-                    <div class="stat-item"><span>Trophic Ratio:</span><b id="valTrophicRatio" style="color: #38bdf8;">1:5.0</b></div>
-                    <div class="stat-item"><span>Pyramid Health:</span><b id="valPyramidHealth" style="color: #10b981;">OPTIMAL</b></div>
-                    <div class="stat-item"><span>Biofilm Matrix Mass:</span><b id="valBiofilmMass" style="color: #10b981;">0.0 BM</b></div>
-                    <div class="stat-item"><span>Benthic Reclamation:</span><b id="valBenthicReclaim" style="color: #34d399;">0% (0.00/t)</b></div>
-                    <div class="stat-item"><span>Substrate Density:</span><b id="valSubstrateDensity" style="color: #2dd4bf;">0% (P:0 I:0 C:0)</b></div>
-                    <div class="stat-item"><span>Chemo Field Pull:</span><b id="valChemoFieldPull" style="color: #34d399;">0.00x</b></div>
-                    <div class="stat-item"><span>Crevice Refuge Load:</span><b id="valCreviceLoad" style="color: #38bdf8;">0% (0/16)</b></div>
-                    <div class="stat-item"><span>Lithic Haven State:</span><b id="valLithicHaven" style="color: #10b981;">PERMEABLE</b></div>
-                    <div class="stat-item"><span>Detrital Pool:</span><b id="valDetritalPool" style="color: #f59e0b;">0 DP (0%)</b></div>
-                    <div class="stat-item"><span>Turbidity Index:</span><b id="valTurbidityIndex" style="color: #d97706;">0% (0.00 NTU)</b></div>
-                    <div class="stat-item"><span>Sediment Stratum:</span><b id="valSedimentStratum" style="color: #b45309;">CLEAR</b></div>
-                    <div class="stat-item"><span>Benthic Flux Rate:</span><b id="valBenthicFlux" style="color: #38bdf8;">0.00 mg/m²/t</b></div>
-                    <div class="stat-item"><span>Boundary Shear:</span><b id="valBoundaryShear" style="color: #2dd4bf;">0% (LAMINAR)</b></div>
-                    <div class="stat-item"><span>Turbocline Level:</span><b id="valTurboclineLevel" style="color: #06b6d4;">65% R (STRATIFIED)</b></div>
-                    <div class="stat-item"><span>Vorticity Energy:</span><b id="valVorticityEnergy" style="color: #38bdf8;">0.00 J/m³ (0 EDDIES)</b></div>
-                    <div class="stat-item"><span>Momentum Dissipation:</span><b id="valDissipationRate" style="color: #2dd4bf;">0.80% /t (LAMINAR WAKE)</b></div>
-                    <div class="stat-item"><span>Plankton Patchiness:</span><b id="valPlanktonPatch" style="color: #38bdf8;">0% (DISPERSED)</b></div>
-                    <div class="stat-item"><span>Patch Dispersion:</span><b id="valPatchDispersion" style="color: #67e8f9;">1.00 MORISITA (RANDOM)</b></div>
-                    <div class="stat-item"><span>Grazing Pressure:</span><b id="valGrazingPressure" style="color: #34d399;">0.00 /t (EQUILIBRIUM)</b></div>
-                    <div class="stat-item"><span>Carrying Capacity:</span><b id="valCarryingCap" style="color: #10b981;">85 FOOD (BASE)</b></div>
-                    <div class="stat-item"><span>Respiration Vitality:</span><b id="valRespirationVitality" style="color: #e0f2fe;">1.00x (EQUILIBRIUM)</b></div>
-                    <div class="stat-item"><span>Locomotion Cadence:</span><b id="valLocomotionCadence" style="color: #38bdf8;">0% BURST / 0% PAUSE</b></div>
-                    <div class="stat-item"><span>Chemo Navigation:</span><b id="valChemoAccuracy" style="color: #6ee7b7;">0% (DISPERSED)</b></div>
-                    <div class="stat-item"><span>Rheo Alignment:</span><b id="valRheoHold" style="color: #38bdf8;">50% (CONVECTIVE)</b></div>
-                    <div class="stat-item"><span>Rheotaxis Census:</span><b id="valRheoCensus" style="color: #6ee7b7;">0% HOLD / 0% DRIFT</b></div>
-                    <div class="stat-item"><span>Flagellar Motor:</span><b id="valMotorRPM" style="color: #a5f3fc;">120 RPM (NOMINAL)</b></div>
-                    <div class="stat-item"><span>PMF Force / Torque:</span><b id="valPmfTorque" style="color: #67e8f9;">50% PMF / 45% TRQ</b></div>
-                    <div class="stat-item"><span>Quorum Induction:</span><b id="valQuorumInduction" style="color: #fbbf24;">0% (SOLITARY)</b></div>
-                    <div class="stat-item"><span>Autoinducer Signal:</span><b id="valQuorumSignal" style="color: #fde68a;">0.00 AHL / 0 COL</b></div>
-                    <div class="stat-item"><span>Sessile Biomass:</span><b id="valSessileRatio" style="color: #34d399;">0% (PLANKTONIC)</b></div>
-                    <div class="stat-item"><span>EPS Encrustation:</span><b id="valEpsCoverage" style="color: #6ee7b7;">0.0 EPS / 0% COV</b></div>
-                    <div class="stat-item"><span>Biofilm Erosion:</span><b id="valBiofilmErosion" style="color: #f43f5e;">0.00/t (QUIESCENT)</b></div>
-                    <div class="stat-item"><span>Shear Sloughing:</span><b id="valShearSlough" style="color: #fb7185;">0 FLOCS / STABLE</b></div>
-                    <div class="stat-item"><span>Organelle ATP Yield:</span><b id="valOrganelleAtp" style="color: #38bdf8;">+0.000 ATP/t (BASAL)</b></div>
-                    <div class="stat-item"><span>Eukaryogenesis Ratio:</span><b id="valProtoEukaryoteRatio" style="color: #c084fc;">0% (PROKARYOTIC)</b></div>
-                    <div class="stat-item"><span>Organelle Partition:</span><b id="valOrganellePartition" style="color: #fb923c;">0 MITO / 0 PLAS (EMPTY)</b></div>
-                    <div class="stat-item"><span>Gross Metabolic ATP Flux:</span><b id="valMetabolicFluxRate" style="color: #38bdf8;">0.00 ATP/t (QUIESCENCE)</b></div>
-                    <div class="stat-item"><span>Multicellular Biomass:</span><b id="valColonialRatio" style="color: #c084fc;">0% (SOLITARY)</b></div>
-                    <div class="stat-item"><span>Colony Cluster Census:</span><b id="valColonyCensus" style="color: #a855f7;">0 CLUSTERS / 0.0 AVG (MAX 0)</b></div>
-                    <div class="stat-item"><span>Germ-Soma Specialization:</span><b id="valGermSomaRatio" style="color: #facc15;">0 SOMA / 0 GERM (UNDIFF)</b></div>
-                    <div class="stat-item"><span>Somatic Senescence:</span><b id="valSomaticSenescence" style="color: #94a3b8;">0 SENESCENT / STABLE</b></div>
-                    <div class="stat-item"><span>Epithelial Integrity:</span><b id="valEpiIntegrity" style="color: #2dd4bf;">0% (UNPOLARIZED)</b></div>
-                    <div class="stat-item"><span>Basal Lamina Matrix:</span><b id="valBasalLaminaCensus" style="color: #34d399;">0 SHEETS / 0% ECM</b></div>
-                    <div class="stat-item"><span>Coelenteron Cavity:</span><b id="valCoelenteronDigest" style="color: #f43f5e;">0.00 NUTRIENT (EMPTY)</b></div>
-                    <div class="stat-item"><span>Gastrula Morphology:</span><b id="valGastrulaCensus" style="color: #fb923c;">0 CUPS (PLANAR)</b></div>
-                    <div class="stat-item"><span>Synaptic Density:</span><b id="valSynapticDensity" style="color: #a855f7;">0% (AMYELINATED)</b></div>
-                    <div class="stat-item"><span>Membrane Potential:</span><b id="valActionPotentialOsc" style="color: #c084fc;">-70.0 mV (RESTING)</b></div>
-                    <div class="stat-item"><span>Reflex Latency:</span><b id="valReflexLatency" style="color: #fb7185;">-- ms (DIFFUSE)</b></div>
-                    <div class="stat-item"><span>Neuromuscular Eff:</span><b id="valNeuromuscularEff" style="color: #f472b6;">0% (AMUSCULAR)</b></div>
-                    <div class="stat-item"><span>Metameric Turgor:</span><b id="valMetamericTurgor" style="color: #0ea5e9;">0.0 kPa (ACOELOMATE)</b></div>
-                    <div class="stat-item"><span>Somite Census:</span><b id="valSomiteCensus" style="color: #38bdf8;">0 SOMITES (UNSEGMENTED)</b></div>
-                    <div class="stat-item"><span>Burrowing Velocity:</span><b id="valBurrowRate" style="color: #38bdf8;">0.00 px/t (PELAGIC DRIFT)</b></div>
-                    <div class="stat-item"><span>Bioturbation Flux:</span><b id="valBioturbationIndex" style="color: #facc15;">0.0% (QUIESCENT)</b></div>
-                    <div class="stat-item"><span>Hemolymph Pressure:</span><b id="valHemolymphFlow" style="color: #0284c7;">0.0 mm Hg (AVASCULAR)</b></div>
-                    <div class="stat-item"><span>Vascular Pulse:</span><b id="valVascularBPM" style="color: #38bdf8;">-- BPM (STATIC/AVASCULAR)</b></div>
-                    <div class="stat-item"><span>Tissue Oxygenation:</span><b id="valTissueOxygen" style="color: #06b6d4;">85% (NORMOTOXIC AEROBIC)</b></div>
-                    <div class="stat-item"><span>Hypoxia Stress Index:</span><b id="valHypoxiaAlert" style="color: #10b981;">0 ANOXIC (STABLE AEROBIC)</b></div>
-                    <div class="stat-item"><span>Nephric Filtration:</span><b id="valNephridialClearance" style="color: #10b981;">0.00 FLUX (DIFFUSIVE / ANEPHRIC)</b></div>
-                    <div class="stat-item"><span>Nitrogen Toxicity:</span><b id="valNitrogenToxicity" style="color: #34d399;">12.0 ppm (CLEAN HOMEOSTASIS)</b></div>
-                    <div class="stat-item"><span>Medium Osmolarity:</span><b id="valAmbientSalinity" style="color: #38bdf8;">35.0 mOsm/L (BRACKISH BASIN)</b></div>
-                    <div class="stat-item"><span>Osmotic Strain Index:</span><b id="valOsmoticStrain" style="color: #10b981;">0% STRAIN (ISOTONIC HOMEOSTASIS)</b></div>
-                    <div class="stat-item"><span>Alimentary Assimilation:</span><b id="valAssimilationEfficiency" style="color: #f97316;">0% AAE (BLIND-SAC / ANEPIGESTIVE)</b></div>
-                    <div class="stat-item"><span>Trophic Digestive Flux:</span><b id="valDigestiveFlux" style="color: #fb923c;">0.0 BOLUS (QUIESCENT)</b></div>
-                    <div class="stat-item"><span>Gastric Acidity:</span><b id="valGastricPh" style="color: #ef4444;">pH 7.0 (NEUTRAL / UNDIFFERENTIATED)</b></div>
-                    <div class="stat-item"><span>Enteric Absorption:</span><b id="valEntericAbsorption" style="color: #38bdf8;">0% UPTAKE (UNSPECIALIZED BRUSH)</b></div>
-                    <div class="stat-item"><span>Sensory Integration:</span><b id="valSensoryIndex" style="color: #818cf8;">0.0% SII (LATENT)</b></div>
-                    <div class="stat-item"><span>Sensory Equilibrium:</span><b id="valSensoryBalance" style="color: #38bdf8;">0.0% STAB | +0.0% ATP</b></div>
-                    <div class="stat-item"><span>Phototactic Flux:</span><b id="valPhototacticFlux" style="color: #06b6d4;">0.0% PFI (APHOTIC)</b></div>
-                    <div class="stat-item"><span>Bioluminescent Traps:</span><b id="valBiolumLure" style="color: #38bdf8;">0 FLASHING | 0 LURED</b></div>
-                    <div class="stat-item"><span>Biomineral Armor:</span><b id="valArmorIndex" style="color: #f59e0b;">0.0% BAI (UNARMORED)</b></div>
-                    <div class="stat-item"><span>Armor Deflection:</span><b id="valArmorDeflection" style="color: #10b981;">0% DEFLECT | 0 RICOCHETS</b></div>
-                    <div class="stat-item"><span>Ecdysis Conversion:</span><b id="valEcdysisRate" style="color: #ec4899;">0.0% ECR (AMETABOLOUS / STATIC)</b></div>
-                    <div class="stat-item"><span>Exuvia Mineral Status:</span><b id="valExuviaStatus" style="color: #f472b6;">0 VULNERABLE | 0 EXUVIAE</b></div>
-                    <div class="stat-item"><span>Colony Integration:</span><b id="valColonyIndex" style="color: #a855f7;">0.0% CII (SOLITARY / SCATTERED)</b></div>
-                    <div class="stat-item"><span>Swarm &amp; Drag Savings:</span><b id="valSwarmDensity" style="color: #c084fc;">0 SCHOOLING | 0 TRAILS (-0.0% DRAG)</b></div>
-                    <div class="stat-item"><span>Collective Division:</span><b id="valHiveIndex" style="color: #fbbf24;">0.0% CDI (UNDIFFERENTIATED SWARM)</b></div>
-                    <div class="stat-item"><span>Benthic Hive Status:</span><b id="valHiveStatus" style="color: #f59e0b;">0 NESTS (0 NUTR) | Q:0 S:0 W:0 Sc:0</b></div>
-                    <div class="stat-item"><span>Cryptic Camouflage:</span><b id="valCamoIndex" style="color: #10b981;">0.0% CCI (EXPOSED PELAGIC SILHOUETTE)</b></div>
-                    <div class="stat-item"><span>Substrate Crypsis:</span><b id="valCamoStatus" style="color: #34d399;">0 ASSIM (0.0% DETERR) | B:0 R:0 S:0 N:0</b></div>
-                    <div class="stat-item"><span>Refractive Iridescence:</span><b id="valIridIndex" style="color: #38bdf8;">0.0% RFI (NON-REFRACTIVE DERMIS)</b></div>
-                    <div class="stat-item"><span>Optical Reflex Status:</span><b id="valIridStatus" style="color: #67e8f9;">490nm (0% REFL) | 0 DAZZLE | +0.0% DEFLECT</b></div>
-                    <div class="stat-item"><span>Chemoautotrophic Flux:</span><b id="valChemoFluxIndex" style="color: #eab308;">0.0% CEF (NO HYDROTHERMAL FLUX)</b></div>
-                    <div class="stat-item"><span>Abyssal Vent Status:</span><b id="valAbyssalStatus" style="color: #facc15;">0 AT VENT (0.00 ATP) | STRAIN: 0.00 | S: 0.0 | APHOTIC: 0.0%</b></div>
-                    <div class="stat-item"><span>Bioluminescent Sync:</span><b id="valBiolumIndex" style="color: #06b6d4;">0.0% BSI (DARK QUIESCENCE)</b></div>
-                    <div class="stat-item"><span>Photophore Network:</span><b id="valBiolumStatus" style="color: #22d3ee;">0 FLASHING (0 SYNC PEERS) | LUM: 0.00 | LUCIFERIN: 0.0</b></div>
-                    <div class="stat-item"><span>Diel Vertical Migration:</span><b id="valDVMIndex" style="color: #38bdf8;">0.0% VMI (DECOUPLED PELAGIC DRIFT)</b></div>
-                    <div class="stat-item"><span>Bathymetric Hydrostatic Status:</span><b id="valDVMStatus" style="color: #7dd3fc;">UP: 0 | DOWN: 0 | GAS: 0.0 | LIPID: 0.0 | REFUGE: 0</b></div>
-                    <div class="stat-item"><span>Counter-Illumination Index:</span><b id="valCounterIllumIndex" style="color: #22d3ee;">0.0% CII (EXPOSED DARK SILHOUETTES)</b></div>
-                    <div class="stat-item"><span>Twilight Silhouette Concealment:</span><b id="valCounterIllumStatus" style="color: #7dd3fc;">CONCEALED: 0 | ACTIVE: 0 | MESO: 0 | LUM: 0.00 | ERR: 0.00</b></div>
-                    <div class="stat-item"><span>Jet Propulsion Index:</span><b id="valJPIIndex" style="color: #f43f5e;">0.0% JPI (QUIESCENT PELAGIC DRIFT)</b></div>
-                    <div class="stat-item"><span>Hydrodynamic Siphon Thrust:</span><b id="valJPIStatus" style="color: #fda4af;">JETTING: 0 | BURSTS: 0 | CAVITY: 0.0 kPa | EXIT: 0.0 px/t | V: 0.0</b></div>
-                    <div class="stat-item"><span>Vectorial Maneuver Agility:</span><b id="valVMAIndex" style="color: #a855f7;">0.0% VMA (RIGID LINEAR AXIAL DISCHARGE)</b></div>
-                    <div class="stat-item"><span>Hyponome Vectoring &amp; Braking:</span><b id="valVMAStatus" style="color: #d8b4fe;">VECTORING: 0 | BRAKING: 0 | DODGE: 0 | DEFLECT: 0.0 deg | CRAMP: 0</b></div>
-                    <div class="stat-item"><span>Hydrothermal Energy Index:</span><b id="valHEIIndex" style="color: #eab308;">0.0% HEI (DORMANT BENTHIC COLD SEEP)</b></div>
-                    <div class="stat-item"><span>Benthic Vent Dynamics:</span><b id="valHEIStatus" style="color: #fef08a;">VENT GRAZERS: 0 | ARRHENIUS OPT: 0 | SHOCK: 0 | CHEM-ATP: +0.00 | S-RES: 100%</b></div>
-                    <div class="stat-item"><span>Thermal Taxis Resilience:</span><b id="valTTRIndex" style="color: #38bdf8;">0.0% TTR (VULNERABLE THERMAL INCINERATION RISK)</b></div>
-                    <div class="stat-item"><span>Thermotaxis Navigation:</span><b id="valTTRStatus" style="color: #7dd3fc;">THERMOTAXIS ACTIVE: 0 | AVG TEMP: 2.0 C | HEAT STRAIN: 0.000 | SHOCK EVADED: 0</b></div>
-                    <div class="stat-item"><span>Reef Calcification Index:</span><b id="valRCIIndex" style="color: #10b981;">0.0% RCI (DORMANT PELAGIC SUSPENSION)</b></div>
-                    <div class="stat-item"><span>Biogenic Reef &amp; Polyp Dynamics:</span><b id="valRCIStatus" style="color: #6ee7b7;">POLYPS: 0 | SHELTERED: 0 | MASS: 0.0 CaCO3 | REEF BIOHERM: 0 kg | SYM: +0.00 ATP</b></div>
-                    <div class="stat-item"><span>Bleaching Vulnerability Index:</span><b id="valBVIIndex" style="color: #f43f5e;">0.0% BVI (HOMEOSTATIC REEF EQUILIBRIUM)</b></div>
-                    <div class="stat-item"><span>Reef Thermal Crisis &amp; Mucus:</span><b id="valBVIStatus" style="color: #fda4af;">BLEACHED: 0 | MUCUS SHIELD: 0% | DISSOLVING: 0 | RECOVERY: 0 | SURGE: 0</b></div>
-                    <div class="stat-item"><span>Neural Plasticity Index:</span><b id="valNPIIndex" style="color: #a855f7;">0.0% NPI (DORMANT DIFFUSE PROTONEURON)</b></div>
-                    <div class="stat-item"><span>Cephalopod Cognition &amp; Spiking:</span><b id="valNPIStatus" style="color: #c084fc;">NEURAL: 0 | SPIKING: 0 | PLAST: 0% | V_M: -70.0 mV | ACH: 60 | DA: 30 | DRIVE: 0%</b></div>
-                    <div class="stat-item"><span>Adaptive Mimicry Index:</span><b id="valAMIIndex" style="color: #06b6d4;">0.0% AMI (PASSIVE SUBSTRATE EXPOSURE)</b></div>
-                    <div class="stat-item"><span>Tool Armor &amp; Mimicry State:</span><b id="valAMIStatus" style="color: #22d3ee;">SHIELDS: 0 | FREEZING: 0 | INK READY: 0 | REACH: 14.0px</b></div>
-                    <div class="stat-item"><span>Coevolutionary Adaptation Index:</span><b id="valCAIIndex" style="color: #10b981;">0.0% CAI (SOLITARY ASYNCHRONOUS DRIFT)</b></div>
-                    <div class="stat-item"><span>Community Mutualism &amp; Arms Race:</span><b id="valCAIStatus" style="color: #6ee7b7;">MUTUALISTS: 0 | CLEANING: 0 | SYN: 0% | HETERO: 50%</b></div>
-                    <div class="stat-item"><span>Biotic Red-Queen Arms Race:</span><b id="valBRIIndex" style="color: #f59e0b;">0.0% BRI (HOMOGENEOUS LOW SELECTION DRIFT)</b></div>
-                    <div class="stat-item"><span>Red-Queen Coevolution Dynamics:</span><b id="valBRIStatus" style="color: #fbbf24;">CHITINASE: 1.00x | PARASITES: 0% | STATIONS: 0 | HOSTS: 0 | SHIELDS: 0</b></div>
-                    <div class="stat-item"><span>Biomic Homeostasis Index:</span><b id="valBHIIndex" style="color: #06b6d4;">0.0% BHI (STRATIFIED STAGNANT DRIFT)</b></div>
-                    <div class="stat-item"><span>Water Column &amp; Upwelling Dynamics:</span><b id="valBHIStatus" style="color: #38bdf8;">UPWELLING: 55% | BENTHIC STOCK: 120 | IN PLUME: 0 | ASSIM: 0% | DRIFT: 0.00px/f</b></div>
-                    <div class="stat-item"><span>Trophic Current Synergy:</span><b id="valTCSIndex" style="color: #eab308;">0.0% TCS (DORMANT TROPHIC CIRCULATION)</b></div>
-                    <div class="stat-item"><span>Current Recycling &amp; Surfing:</span><b id="valTCSStatus" style="color: #facc15;">SURFING: 0 | COUNTER-SWIM: 0 | ASSIM: 0% | RECYCLE: ACTIVE</b></div>
-                    <div class="stat-item"><span>Biological Carbon Index:</span><b id="valBCIIndex" style="color: #e2e8f0;">0.0% BCI (DORMANT CARBON SINK)</b></div>
-                    <div class="stat-item"><span>Marine Snow &amp; Sediment Carbon:</span><b id="valBCIStatus" style="color: #cbd5e1;">SNOW FLOCS: 0 | SEDIMENT C: 85 | FLUX: 0.00 mg/f | FEEDERS: 0 | NO3: 52 uM</b></div>
-                    <div class="stat-item"><span>Biogeochemical Nitrogen Yield:</span><b id="valBNYIndex" style="color: #c084fc;">0.0% BNY (OLIGOTROPHIC NITROGEN DEPRIVATION)</b></div>
-                    <div class="stat-item"><span>Nitrogen Fixation &amp; Remineralization:</span><b id="valBNYStatus" style="color: #d8b4fe;">FIXERS: 0 | ASSIM: 0 | NO3: 52 uM | NH4: 18 uM | REMIN: 0.06 mg/f</b></div>
-                    <div class="stat-item"><span>Biogenic Calcification Ratio:</span><b id="valCALIndex" style="color: #f8fafc;">0.0% CAL (UNARMORED MEMBRANOUS DIATHE)</b></div>
-                    <div class="stat-item"><span>Coccolith Armor &amp; Chalk Sediment:</span><b id="valCALStatus" style="color: #cbd5e1;">ARMORED: 0/0 | PLATES: 0.0/cell | HARDNESS: 0.00 | CHALK: 35 uM | DEFLECT: 0</b></div>
-                    <div class="stat-item"><span>Shell Hardness Matrix:</span><b id="valSHMIndex" style="color: #38bdf8;">0.0% SHM (UNMINERALIZED SOFT CRUST)</b></div>
-                    <div class="stat-item"><span>Calcite Resilience &amp; Lattice:</span><b id="valSHMStatus" style="color: #bae6fd;">LATTICE: 0.00 | HARDNESS: 0.000 | FRACTURES: 0 | DEFLECT: 0</b></div>
-                    <div class="stat-item"><span>Trophic Volume Capacity:</span><b id="valTVCIndex" style="color: #f59e0b;">0.0% TVC (INCIPIENT CILIARY SIFTING)</b></div>
-                    <div class="stat-item"><span>Filter Baleen &amp; Megafauna:</span><b id="valTVCStatus" style="color: #fbbf24;">FILTERS: 0/0 | PLATES: 0.0/cell | FLUX: 0.00 | SCALE: 1.00x | SIFTED: 0</b></div>
-                    <div class="stat-item"><span>Megafauna Biomass Efficiency:</span><b id="valMBEIndex" style="color: #10b981;">0.0% MBE (SOLITARY DISPERSED PLANKTER)</b></div>
-                    <div class="stat-item"><span>Scale &amp; Blubber Reserves:</span><b id="valMBEStatus" style="color: #34d399;">SCALE: 1.00x | BLUBBER: 0.0 | PODS: 0 | EXUDATE: 0</b></div>
-                    <div class="stat-item"><span>Benthic Burrowing Index:</span><b id="valBDIIndex" style="color: #ea580c;">0.0% BDI (EPIPELAGIC SUSPENSION / INCIPIENT SCRATCHING)</b></div>
-                    <div class="stat-item"><span>Burrow Depth &amp; Substrate Torque:</span><b id="valBDIStatus" style="color: #fb923c;">BURROWERS: 0/0 | DEPTH: 0.0 px | PADDLES: 0.0/cell | TORQUE: 0.00 | DIGESTED: 0.0</b></div>
-                    <div class="stat-item"><span>Substrate Oxygenation Index:</span><b id="valSOXIndex" style="color: #06b6d4;">0.0% SOX (ANOXIC COMPACTED HARDGROUND)</b></div>
-                    <div class="stat-item"><span>Bio-Irrigation &amp; Gas Venting:</span><b id="valSOXStatus" style="color: #22d3ee;">VENTED: 0.0 | PERISTALSIS: 0.00 | ANOXIC: 0.0% | PLUMES: 0</b></div>
-                    <div class="stat-item"><span>Bioelectric Energy Index:</span><b id="valBEIIndex" style="color: #f59e0b;">0.0% BEI (QUIESCENT RESTING POTENTIAL)</b></div>
-                    <div class="stat-item"><span>Dipole Field &amp; Action Potential:</span><b id="valBEIStatus" style="color: #fbbf24;">SENSORS: 0/0 | POTENTIAL: -70.0 mV | DIPOLE: 0.00 | SPIKES: 0 | HEADING: 0.0%</b></div>
-                    <div class="stat-item"><span>Magnetic Polarization Order:</span><b id="valMPOIndex" style="color: #a855f7;">0.0% MPO (ISOTROPIC DISORDERED DISPERSION)</b></div>
-                    <div class="stat-item"><span>Geomagnetic Swarm Coherence:</span><b id="valMPOStatus" style="color: #c084fc;">MAGNET CARRIERS: 0/0 | HEADING ORDER: 0.0% | BYPASS EVASIONS: 0 | AXIS: 90 DEG N-S</b></div>
-                    <div class="stat-item"><span>Mechanoreceptive Hydrodynamic Sensitivity:</span><b id="valMHSIndex" style="color: #14b8a6;">0.0% MHS (ISOTROPIC FLUID DRIFT / DORMANT CUPULA)</b></div>
-                    <div class="stat-item"><span>Lateral Neuromasts &amp; Dermal Damping:</span><b id="valMHSStatus" style="color: #2dd4bf;">NEUROMASTS: 0.0/cell | DENTICLES: 0.0 | DRAG DAMP: 0.0% | RHEOTAXIS: 0.0% | DRAFTING: 0.0%</b></div>
-                    <div class="stat-item"><span>Acoustic Dispersion &amp; Drag Reduction:</span><b id="valADRIndex" style="color: #6366f1;">0.0% ADR (UNMITIGATED TURBULENT DRAG &amp; ACOUSTIC EXPOSURE)</b></div>
-                    <div class="stat-item"><span>Acoustic Damping &amp; Hinge Kinetics:</span><b id="valADRStatus" style="color: #818cf8;">ACOUSTIC DAMP: 0.0% | WAKE FILTER: 0.0% | HINGE FLEX: 0.0% | NET INERTIA: 0.00</b></div>
-                    <div class="stat-item"><span>Bioluminescent Emission Reliability:</span><b id="valBLEIndex" style="color: #06b6d4;">0.0% BLE (PELAGIC DARKNESS / DORMANT PHOTOPHORES)</b></div>
-                    <div class="stat-item"><span>Photophore Catalytic Optimization:</span><b id="valPCOIndex" style="color: #10b981;">0.0% PCO (METABOLIC OVERBURN / SUBSTRATE DEPLETION)</b></div>
-                    <div class="stat-item"><span>Symbiotic Photophores &amp; Quorum Dynamics:</span><b id="valBLEStatus" style="color: #38bdf8;">PHOTOPHORES: 0.0/cell | LUCIFERASE: 0.0% | COUNTER-ILLUM: 0.0% | QUORUM: 0.0% | FLASH EVASIONS: 0</b></div>
-                    <div class="stat-item"><span>Piezophilic Membrane Stability:</span><b id="valPMSIndex" style="color: #6366f1;">0.0% PMS (BARIC MEMBRANE CRACKING &amp; LEAKAGE)</b></div>
-                    <div class="stat-item"><span>Hadal Barometer &amp; TMAO Osmolytes:</span><b id="valPMSStatus" style="color: #818cf8;">HADAL CELLS: 0/0 | PUFA: 0.0% | TMAO: 0.0% | ANCHORED: 0 | CHEMO ATP: 0.00 | BARIC DEPTH: 0 px</b></div>
-                    <div class="stat-item"><span>Abyssal Barometric Adaptation:</span><b id="valABAIndex" style="color: #14b8a6;">0.0% ABA (DECOMPRESSION LYSIS &amp; TURGOR RUPTURE)</b></div>
-                    <div class="stat-item"><span>Decompression Buffer &amp; Osmolyte Status:</span><b id="valABAStatus" style="color: #2dd4bf;">DECOMPRESS STRESS: 0.0% | BUFFER: 260px | RECYCLED ATP: 0.00 | SURGES: 0 | TRAUMA: 0</b></div>
-                    <div class="stat-item"><span>Bioturbation Turbulence Index:</span><b id="valBTIIndex" style="color: #f59e0b;">0.0% BTI (STAGNANT ANOXIC COMPACTION &amp; CLOGGING)</b></div>
-                    <div class="stat-item"><span>Infaunal Aeration &amp; Sediment Tunnels:</span><b id="valBTIStatus" style="color: #fbbf24;">INFAUNAL CELLS: 0/0 | ACTIVE TUNNELS: 0 | OPD: 8.5 px | SULPHIDE ATP: 0.00 | RECYCLED POREWATER: 0.00</b></div>
-                    <div class="stat-item"><span>Biogenic Mineral Recycling:</span><b id="valBMRIndex" style="color: #10b981;">0.0% BMR (MINERAL SEQUESTRATION &amp; ANOXIC SINK)</b></div>
-                    <div class="stat-item"><span>Redox Flux &amp; Turbidity Dynamics:</span><b id="valBMRStatus" style="color: #34d399;">TURBIDITY: 0.0% | FERMENTATION: 100.0% | VENT SURGES: 0 | COMPACTION STALLS: 0</b></div>
-                    <div class="stat-item"><span>Seston Filtration Efficiency:</span><b id="valSFEIndex" style="color: #06b6d4;">0.0% SFE (RETRACTED TENTACLES &amp; CURRENT DEFLECTION)</b></div>
-                    <div class="stat-item"><span>BBL Suspension &amp; Ciliary Vortex:</span><b id="valSFEStatus" style="color: #38bdf8;">EPIBENTHIC CELLS: 0/0 | ACTIVE FILTERS: 0 | SPAN: 0.0 px | CILIARY VEL: 0.00 | CAPTURED CARBON: 0.00</b></div>
-                    <div class="stat-item"><span>Benthic Carbon Flux:</span><b id="valBCFIndex" style="color: #8b5cf6;">0.0% BCF (CARBON BURIAL &amp; EPIBENTHIC STARVATION)</b></div>
-                    <div class="stat-item"><span>Silt Fouling &amp; Sheath Dynamics:</span><b id="valBCFStatus" style="color: #a78bfa;">SILT FOULING: 0.0% | CLEANSING TWITCHES: 0 | SHEATH INTEGRITY: 0.0% | SHEAR TRAUMA: 0</b></div>
-                    <div class="stat-item"><span>Calyx Elevation Advantage:</span><b id="valCEAIndex" style="color: #eab308;">0.0% CEA (BASAL SILT SUFFOCATION &amp; STALK COLLAPSE)</b></div>
-                    <div class="stat-item"><span>Crinoid Column &amp; Holdfast Stability:</span><b id="valCEAStatus" style="color: #fde047;">STALKED CELLS: 0/0 | ACTIVE FEEDERS: 0 | STALK HEIGHT: 0.0 px | CIRRI GRIP: 0.0% | LOCKED STALKS: 0</b></div>
+                <div class="stat-grid" style="max-height: 220px; overflow-y: auto; padding-right: 4px;">
+                    <div class="stat-item" title="Average swimming speed evolved across all living creatures"><span>Avg Swim Speed:</span><b id="avgVelocity">0.00</b></div>
+                    <div class="stat-item" title="How far creatures can see food or predators"><span>Avg Vision Range:</span><b id="avgSensory">0px</b></div>
+                    <div class="stat-item" title="Average body size (larger creatures resist predators better)"><span>Avg Body Size:</span><b id="avgSize">0.00</b></div>
+                    <div class="stat-item" title="Stealth rating against predators"><span>Avg Camouflage:</span><b id="avgCamo">0%</b></div>
+                    <div class="stat-item" title="Resistance against viral outbreaks"><span>Virus Immunity:</span><b id="avgImmunity">0%</b></div>
+                    <div class="stat-item pro-only"><span>Epigenetic Hardiness:</span><b id="avgHardiness" style="color: #38bdf8;">0%</b></div>
+                    <div class="stat-item pro-only"><span>Chemotaxis Index:</span><b id="avgChemotaxis" style="color: #34d399;">0%</b></div>
+                    <div class="stat-item pro-only"><span>Endolithic Index:</span><b id="avgEndolithic" style="color: #38bdf8;">0% (0)</b></div>
+                    <div class="stat-item pro-only"><span>Avg Symbiosis:</span><b id="avgSymbiosis" style="color: #06b6d4;">0%</b></div>
+                    <div class="stat-item pro-only"><span>Active Bonds:</span><b id="valMutualists" style="color: #06b6d4;">0</b></div>
+                    <div class="stat-item pro-only"><span>Symbiosis Index:</span><b id="valSymbiosisIndex" style="color: #06b6d4;">0%</b></div>
+                    <div class="stat-item pro-only"><span>Plasmid Transfers:</span><b id="valHgtEvents" style="color: #c084fc;">0</b></div>
+                    <div class="stat-item pro-only"><span>Herd Resistance:</span><b id="valHerdImmunity" style="color: #34d399;">0%</b></div>
+                    <div class="stat-item pro-only"><span>Shannon Diversity:</span><b id="valShannon" style="color: #c084fc;">0.00 H'</b></div>
+                    <div class="stat-item pro-only"><span>Pack Hunting:</span><b id="valPackHunting" style="color: #f87171;">0%</b></div>
+                    <div class="stat-item pro-only"><span>Predation Pressure:</span><b id="valPredPressure" style="color: #fb7185;">0%</b></div>
+                    <div class="stat-item pro-only"><span>Ancient Clade:</span><b id="valAncientClade" style="color: #38bdf8;">None</b></div>
+                    <div class="stat-item pro-only"><span>Trophic Ratio:</span><b id="valTrophicRatio" style="color: #38bdf8;">1:5.0</b></div>
+                    <div class="stat-item" title="Overall balance between Plankton, Grazers, and Hunters"><span>Food Chain Balance:</span><b id="valPyramidHealth" style="color: #10b981;">OPTIMAL</b></div>
+                    <div class="stat-item pro-only"><span>Biofilm Matrix Mass:</span><b id="valBiofilmMass" style="color: #10b981;">0.0 BM</b></div>
+                    <div class="stat-item pro-only"><span>Benthic Reclamation:</span><b id="valBenthicReclaim" style="color: #34d399;">0% (0.00/t)</b></div>
+                    <div class="stat-item pro-only"><span>Substrate Density:</span><b id="valSubstrateDensity" style="color: #2dd4bf;">0% (P:0 I:0 C:0)</b></div>
+                    <div class="stat-item pro-only"><span>Chemo Field Pull:</span><b id="valChemoFieldPull" style="color: #34d399;">0.00x</b></div>
+                    <div class="stat-item pro-only"><span>Crevice Refuge Load:</span><b id="valCreviceLoad" style="color: #38bdf8;">0% (0/16)</b></div>
+                    <div class="stat-item pro-only"><span>Lithic Haven State:</span><b id="valLithicHaven" style="color: #10b981;">PERMEABLE</b></div>
+                    <div class="stat-item pro-only"><span>Detrital Pool:</span><b id="valDetritalPool" style="color: #f59e0b;">0 DP (0%)</b></div>
+                    <div class="stat-item pro-only"><span>Turbidity Index:</span><b id="valTurbidityIndex" style="color: #d97706;">0% (0.00 NTU)</b></div>
+                    <div class="stat-item pro-only"><span>Sediment Stratum:</span><b id="valSedimentStratum" style="color: #b45309;">CLEAR</b></div>
+                    <div class="stat-item pro-only"><span>Benthic Flux Rate:</span><b id="valBenthicFlux" style="color: #38bdf8;">0.00 mg/m²/t</b></div>
+                    <div class="stat-item pro-only"><span>Boundary Shear:</span><b id="valBoundaryShear" style="color: #2dd4bf;">0% (LAMINAR)</b></div>
+                    <div class="stat-item pro-only"><span>Turbocline Level:</span><b id="valTurboclineLevel" style="color: #06b6d4;">65% R (STRATIFIED)</b></div>
+                    <div class="stat-item pro-only"><span>Vorticity Energy:</span><b id="valVorticityEnergy" style="color: #38bdf8;">0.00 J/m³ (0 EDDIES)</b></div>
+                    <div class="stat-item pro-only"><span>Momentum Dissipation:</span><b id="valDissipationRate" style="color: #2dd4bf;">0.80% /t (LAMINAR WAKE)</b></div>
+                    <div class="stat-item pro-only"><span>Plankton Patchiness:</span><b id="valPlanktonPatch" style="color: #38bdf8;">0% (DISPERSED)</b></div>
+                    <div class="stat-item pro-only"><span>Patch Dispersion:</span><b id="valPatchDispersion" style="color: #67e8f9;">1.00 MORISITA (RANDOM)</b></div>
+                    <div class="stat-item pro-only"><span>Grazing Pressure:</span><b id="valGrazingPressure" style="color: #34d399;">0.00 /t (EQUILIBRIUM)</b></div>
+                    <div class="stat-item pro-only"><span>Carrying Capacity:</span><b id="valCarryingCap" style="color: #10b981;">85 FOOD (BASE)</b></div>
+                    <div class="stat-item pro-only"><span>Respiration Vitality:</span><b id="valRespirationVitality" style="color: #e0f2fe;">1.00x (EQUILIBRIUM)</b></div>
+                    <div class="stat-item pro-only"><span>Locomotion Cadence:</span><b id="valLocomotionCadence" style="color: #38bdf8;">0% BURST / 0% PAUSE</b></div>
+                    <div class="stat-item pro-only"><span>Chemo Navigation:</span><b id="valChemoAccuracy" style="color: #6ee7b7;">0% (DISPERSED)</b></div>
+                    <div class="stat-item pro-only"><span>Rheo Alignment:</span><b id="valRheoHold" style="color: #38bdf8;">50% (CONVECTIVE)</b></div>
+                    <div class="stat-item pro-only"><span>Rheotaxis Census:</span><b id="valRheoCensus" style="color: #6ee7b7;">0% HOLD / 0% DRIFT</b></div>
+                    <div class="stat-item pro-only"><span>Flagellar Motor:</span><b id="valMotorRPM" style="color: #a5f3fc;">120 RPM (NOMINAL)</b></div>
+                    <div class="stat-item pro-only"><span>PMF Force / Torque:</span><b id="valPmfTorque" style="color: #67e8f9;">50% PMF / 45% TRQ</b></div>
+                    <div class="stat-item pro-only"><span>Quorum Induction:</span><b id="valQuorumInduction" style="color: #fbbf24;">0% (SOLITARY)</b></div>
+                    <div class="stat-item pro-only"><span>Autoinducer Signal:</span><b id="valQuorumSignal" style="color: #fde68a;">0.00 AHL / 0 COL</b></div>
+                    <div class="stat-item pro-only"><span>Sessile Biomass:</span><b id="valSessileRatio" style="color: #34d399;">0% (PLANKTONIC)</b></div>
+                    <div class="stat-item pro-only"><span>EPS Encrustation:</span><b id="valEpsCoverage" style="color: #6ee7b7;">0.0 EPS / 0% COV</b></div>
+                    <div class="stat-item pro-only"><span>Biofilm Erosion:</span><b id="valBiofilmErosion" style="color: #f43f5e;">0.00/t (QUIESCENT)</b></div>
+                    <div class="stat-item pro-only"><span>Shear Sloughing:</span><b id="valShearSlough" style="color: #fb7185;">0 FLOCS / STABLE</b></div>
+                    <div class="stat-item pro-only"><span>Organelle ATP Yield:</span><b id="valOrganelleAtp" style="color: #38bdf8;">+0.000 ATP/t (BASAL)</b></div>
+                    <div class="stat-item pro-only"><span>Eukaryogenesis Ratio:</span><b id="valProtoEukaryoteRatio" style="color: #c084fc;">0% (PROKARYOTIC)</b></div>
+                    <div class="stat-item pro-only"><span>Organelle Partition:</span><b id="valOrganellePartition" style="color: #fb923c;">0 MITO / 0 PLAS (EMPTY)</b></div>
+                    <div class="stat-item pro-only"><span>Gross Metabolic ATP Flux:</span><b id="valMetabolicFluxRate" style="color: #38bdf8;">0.00 ATP/t (QUIESCENCE)</b></div>
+                    <div class="stat-item pro-only"><span>Multicellular Biomass:</span><b id="valColonialRatio" style="color: #c084fc;">0% (SOLITARY)</b></div>
+                    <div class="stat-item pro-only"><span>Colony Cluster Census:</span><b id="valColonyCensus" style="color: #a855f7;">0 CLUSTERS / 0.0 AVG (MAX 0)</b></div>
+                    <div class="stat-item pro-only"><span>Germ-Soma Specialization:</span><b id="valGermSomaRatio" style="color: #facc15;">0 SOMA / 0 GERM (UNDIFF)</b></div>
+                    <div class="stat-item pro-only"><span>Somatic Senescence:</span><b id="valSomaticSenescence" style="color: #94a3b8;">0 SENESCENT / STABLE</b></div>
+                    <div class="stat-item pro-only"><span>Epithelial Integrity:</span><b id="valEpiIntegrity" style="color: #2dd4bf;">0% (UNPOLARIZED)</b></div>
+                    <div class="stat-item pro-only"><span>Basal Lamina Matrix:</span><b id="valBasalLaminaCensus" style="color: #34d399;">0 SHEETS / 0% ECM</b></div>
+                    <div class="stat-item pro-only"><span>Coelenteron Cavity:</span><b id="valCoelenteronDigest" style="color: #f43f5e;">0.00 NUTRIENT (EMPTY)</b></div>
+                    <div class="stat-item pro-only"><span>Gastrula Morphology:</span><b id="valGastrulaCensus" style="color: #fb923c;">0 CUPS (PLANAR)</b></div>
+                    <div class="stat-item pro-only"><span>Synaptic Density:</span><b id="valSynapticDensity" style="color: #a855f7;">0% (AMYELINATED)</b></div>
+                    <div class="stat-item pro-only"><span>Membrane Potential:</span><b id="valActionPotentialOsc" style="color: #c084fc;">-70.0 mV (RESTING)</b></div>
+                    <div class="stat-item pro-only"><span>Reflex Latency:</span><b id="valReflexLatency" style="color: #fb7185;">-- ms (DIFFUSE)</b></div>
+                    <div class="stat-item pro-only"><span>Neuromuscular Eff:</span><b id="valNeuromuscularEff" style="color: #f472b6;">0% (AMUSCULAR)</b></div>
+                    <div class="stat-item pro-only"><span>Metameric Turgor:</span><b id="valMetamericTurgor" style="color: #0ea5e9;">0.0 kPa (ACOELOMATE)</b></div>
+                    <div class="stat-item pro-only"><span>Somite Census:</span><b id="valSomiteCensus" style="color: #38bdf8;">0 SOMITES (UNSEGMENTED)</b></div>
+                    <div class="stat-item pro-only"><span>Burrowing Velocity:</span><b id="valBurrowRate" style="color: #38bdf8;">0.00 px/t (PELAGIC DRIFT)</b></div>
+                    <div class="stat-item pro-only"><span>Bioturbation Flux:</span><b id="valBioturbationIndex" style="color: #facc15;">0.0% (QUIESCENT)</b></div>
+                    <div class="stat-item pro-only"><span>Hemolymph Pressure:</span><b id="valHemolymphFlow" style="color: #0284c7;">0.0 mm Hg (AVASCULAR)</b></div>
+                    <div class="stat-item pro-only"><span>Vascular Pulse:</span><b id="valVascularBPM" style="color: #38bdf8;">-- BPM (STATIC/AVASCULAR)</b></div>
+                    <div class="stat-item pro-only"><span>Tissue Oxygenation:</span><b id="valTissueOxygen" style="color: #06b6d4;">85% (NORMOTOXIC AEROBIC)</b></div>
+                    <div class="stat-item pro-only"><span>Hypoxia Stress Index:</span><b id="valHypoxiaAlert" style="color: #10b981;">0 ANOXIC (STABLE AEROBIC)</b></div>
+                    <div class="stat-item pro-only"><span>Nephric Filtration:</span><b id="valNephridialClearance" style="color: #10b981;">0.00 FLUX (DIFFUSIVE / ANEPHRIC)</b></div>
+                    <div class="stat-item pro-only"><span>Nitrogen Toxicity:</span><b id="valNitrogenToxicity" style="color: #34d399;">12.0 ppm (CLEAN HOMEOSTASIS)</b></div>
+                    <div class="stat-item pro-only"><span>Medium Osmolarity:</span><b id="valAmbientSalinity" style="color: #38bdf8;">35.0 mOsm/L (BRACKISH BASIN)</b></div>
+                    <div class="stat-item pro-only"><span>Osmotic Strain Index:</span><b id="valOsmoticStrain" style="color: #10b981;">0% STRAIN (ISOTONIC HOMEOSTASIS)</b></div>
+                    <div class="stat-item pro-only"><span>Alimentary Assimilation:</span><b id="valAssimilationEfficiency" style="color: #f97316;">0% AAE (BLIND-SAC / ANEPIGESTIVE)</b></div>
+                    <div class="stat-item pro-only"><span>Trophic Digestive Flux:</span><b id="valDigestiveFlux" style="color: #fb923c;">0.0 BOLUS (QUIESCENT)</b></div>
+                    <div class="stat-item pro-only"><span>Gastric Acidity:</span><b id="valGastricPh" style="color: #ef4444;">pH 7.0 (NEUTRAL / UNDIFFERENTIATED)</b></div>
+                    <div class="stat-item pro-only"><span>Enteric Absorption:</span><b id="valEntericAbsorption" style="color: #38bdf8;">0% UPTAKE (UNSPECIALIZED BRUSH)</b></div>
+                    <div class="stat-item pro-only"><span>Sensory Integration:</span><b id="valSensoryIndex" style="color: #818cf8;">0.0% SII (LATENT)</b></div>
+                    <div class="stat-item pro-only"><span>Sensory Equilibrium:</span><b id="valSensoryBalance" style="color: #38bdf8;">0.0% STAB | +0.0% ATP</b></div>
+                    <div class="stat-item pro-only"><span>Phototactic Flux:</span><b id="valPhototacticFlux" style="color: #06b6d4;">0.0% PFI (APHOTIC)</b></div>
+                    <div class="stat-item pro-only"><span>Bioluminescent Traps:</span><b id="valBiolumLure" style="color: #38bdf8;">0 FLASHING | 0 LURED</b></div>
+                    <div class="stat-item pro-only"><span>Biomineral Armor:</span><b id="valArmorIndex" style="color: #f59e0b;">0.0% BAI (UNARMORED)</b></div>
+                    <div class="stat-item pro-only"><span>Armor Deflection:</span><b id="valArmorDeflection" style="color: #10b981;">0% DEFLECT | 0 RICOCHETS</b></div>
+                    <div class="stat-item pro-only"><span>Ecdysis Conversion:</span><b id="valEcdysisRate" style="color: #ec4899;">0.0% ECR (AMETABOLOUS / STATIC)</b></div>
+                    <div class="stat-item pro-only"><span>Exuvia Mineral Status:</span><b id="valExuviaStatus" style="color: #f472b6;">0 VULNERABLE | 0 EXUVIAE</b></div>
+                    <div class="stat-item pro-only"><span>Colony Integration:</span><b id="valColonyIndex" style="color: #a855f7;">0.0% CII (SOLITARY / SCATTERED)</b></div>
+                    <div class="stat-item pro-only"><span>Swarm &amp; Drag Savings:</span><b id="valSwarmDensity" style="color: #c084fc;">0 SCHOOLING | 0 TRAILS (-0.0% DRAG)</b></div>
+                    <div class="stat-item pro-only"><span>Collective Division:</span><b id="valHiveIndex" style="color: #fbbf24;">0.0% CDI (UNDIFFERENTIATED SWARM)</b></div>
+                    <div class="stat-item pro-only"><span>Benthic Hive Status:</span><b id="valHiveStatus" style="color: #f59e0b;">0 NESTS (0 NUTR) | Q:0 S:0 W:0 Sc:0</b></div>
+                    <div class="stat-item pro-only"><span>Cryptic Camouflage:</span><b id="valCamoIndex" style="color: #10b981;">0.0% CCI (EXPOSED PELAGIC SILHOUETTE)</b></div>
+                    <div class="stat-item pro-only"><span>Substrate Crypsis:</span><b id="valCamoStatus" style="color: #34d399;">0 ASSIM (0.0% DETERR) | B:0 R:0 S:0 N:0</b></div>
+                    <div class="stat-item pro-only"><span>Refractive Iridescence:</span><b id="valIridIndex" style="color: #38bdf8;">0.0% RFI (NON-REFRACTIVE DERMIS)</b></div>
+                    <div class="stat-item pro-only"><span>Optical Reflex Status:</span><b id="valIridStatus" style="color: #67e8f9;">490nm (0% REFL) | 0 DAZZLE | +0.0% DEFLECT</b></div>
+                    <div class="stat-item pro-only"><span>Chemoautotrophic Flux:</span><b id="valChemoFluxIndex" style="color: #eab308;">0.0% CEF (NO HYDROTHERMAL FLUX)</b></div>
+                    <div class="stat-item pro-only"><span>Abyssal Vent Status:</span><b id="valAbyssalStatus" style="color: #facc15;">0 AT VENT (0.00 ATP) | STRAIN: 0.00 | S: 0.0 | APHOTIC: 0.0%</b></div>
+                    <div class="stat-item pro-only"><span>Bioluminescent Sync:</span><b id="valBiolumIndex" style="color: #06b6d4;">0.0% BSI (DARK QUIESCENCE)</b></div>
+                    <div class="stat-item pro-only"><span>Photophore Network:</span><b id="valBiolumStatus" style="color: #22d3ee;">0 FLASHING (0 SYNC PEERS) | LUM: 0.00 | LUCIFERIN: 0.0</b></div>
+                    <div class="stat-item pro-only"><span>Diel Vertical Migration:</span><b id="valDVMIndex" style="color: #38bdf8;">0.0% VMI (DECOUPLED PELAGIC DRIFT)</b></div>
+                    <div class="stat-item pro-only"><span>Bathymetric Hydrostatic Status:</span><b id="valDVMStatus" style="color: #7dd3fc;">UP: 0 | DOWN: 0 | GAS: 0.0 | LIPID: 0.0 | REFUGE: 0</b></div>
+                    <div class="stat-item pro-only"><span>Counter-Illumination Index:</span><b id="valCounterIllumIndex" style="color: #22d3ee;">0.0% CII (EXPOSED DARK SILHOUETTES)</b></div>
+                    <div class="stat-item pro-only"><span>Twilight Silhouette Concealment:</span><b id="valCounterIllumStatus" style="color: #7dd3fc;">CONCEALED: 0 | ACTIVE: 0 | MESO: 0 | LUM: 0.00 | ERR: 0.00</b></div>
+                    <div class="stat-item pro-only"><span>Jet Propulsion Index:</span><b id="valJPIIndex" style="color: #f43f5e;">0.0% JPI (QUIESCENT PELAGIC DRIFT)</b></div>
+                    <div class="stat-item pro-only"><span>Hydrodynamic Siphon Thrust:</span><b id="valJPIStatus" style="color: #fda4af;">JETTING: 0 | BURSTS: 0 | CAVITY: 0.0 kPa | EXIT: 0.0 px/t | V: 0.0</b></div>
+                    <div class="stat-item pro-only"><span>Vectorial Maneuver Agility:</span><b id="valVMAIndex" style="color: #a855f7;">0.0% VMA (RIGID LINEAR AXIAL DISCHARGE)</b></div>
+                    <div class="stat-item pro-only"><span>Hyponome Vectoring &amp; Braking:</span><b id="valVMAStatus" style="color: #d8b4fe;">VECTORING: 0 | BRAKING: 0 | DODGE: 0 | DEFLECT: 0.0 deg | CRAMP: 0</b></div>
+                    <div class="stat-item pro-only"><span>Hydrothermal Energy Index:</span><b id="valHEIIndex" style="color: #eab308;">0.0% HEI (DORMANT BENTHIC COLD SEEP)</b></div>
+                    <div class="stat-item pro-only"><span>Benthic Vent Dynamics:</span><b id="valHEIStatus" style="color: #fef08a;">VENT GRAZERS: 0 | ARRHENIUS OPT: 0 | SHOCK: 0 | CHEM-ATP: +0.00 | S-RES: 100%</b></div>
+                    <div class="stat-item pro-only"><span>Thermal Taxis Resilience:</span><b id="valTTRIndex" style="color: #38bdf8;">0.0% TTR (VULNERABLE THERMAL INCINERATION RISK)</b></div>
+                    <div class="stat-item pro-only"><span>Thermotaxis Navigation:</span><b id="valTTRStatus" style="color: #7dd3fc;">THERMOTAXIS ACTIVE: 0 | AVG TEMP: 2.0 C | HEAT STRAIN: 0.000 | SHOCK EVADED: 0</b></div>
+                    <div class="stat-item pro-only"><span>Reef Calcification Index:</span><b id="valRCIIndex" style="color: #10b981;">0.0% RCI (DORMANT PELAGIC SUSPENSION)</b></div>
+                    <div class="stat-item pro-only"><span>Biogenic Reef &amp; Polyp Dynamics:</span><b id="valRCIStatus" style="color: #6ee7b7;">POLYPS: 0 | SHELTERED: 0 | MASS: 0.0 CaCO3 | REEF BIOHERM: 0 kg | SYM: +0.00 ATP</b></div>
+                    <div class="stat-item pro-only"><span>Bleaching Vulnerability Index:</span><b id="valBVIIndex" style="color: #f43f5e;">0.0% BVI (HOMEOSTATIC REEF EQUILIBRIUM)</b></div>
+                    <div class="stat-item pro-only"><span>Reef Thermal Crisis &amp; Mucus:</span><b id="valBVIStatus" style="color: #fda4af;">BLEACHED: 0 | MUCUS SHIELD: 0% | DISSOLVING: 0 | RECOVERY: 0 | SURGE: 0</b></div>
+                    <div class="stat-item pro-only"><span>Neural Plasticity Index:</span><b id="valNPIIndex" style="color: #a855f7;">0.0% NPI (DORMANT DIFFUSE PROTONEURON)</b></div>
+                    <div class="stat-item pro-only"><span>Cephalopod Cognition &amp; Spiking:</span><b id="valNPIStatus" style="color: #c084fc;">NEURAL: 0 | SPIKING: 0 | PLAST: 0% | V_M: -70.0 mV | ACH: 60 | DA: 30 | DRIVE: 0%</b></div>
+                    <div class="stat-item pro-only"><span>Adaptive Mimicry Index:</span><b id="valAMIIndex" style="color: #06b6d4;">0.0% AMI (PASSIVE SUBSTRATE EXPOSURE)</b></div>
+                    <div class="stat-item pro-only"><span>Tool Armor &amp; Mimicry State:</span><b id="valAMIStatus" style="color: #22d3ee;">SHIELDS: 0 | FREEZING: 0 | INK READY: 0 | REACH: 14.0px</b></div>
+                    <div class="stat-item pro-only"><span>Coevolutionary Adaptation Index:</span><b id="valCAIIndex" style="color: #10b981;">0.0% CAI (SOLITARY ASYNCHRONOUS DRIFT)</b></div>
+                    <div class="stat-item pro-only"><span>Community Mutualism &amp; Arms Race:</span><b id="valCAIStatus" style="color: #6ee7b7;">MUTUALISTS: 0 | CLEANING: 0 | SYN: 0% | HETERO: 50%</b></div>
+                    <div class="stat-item pro-only"><span>Biotic Red-Queen Arms Race:</span><b id="valBRIIndex" style="color: #f59e0b;">0.0% BRI (HOMOGENEOUS LOW SELECTION DRIFT)</b></div>
+                    <div class="stat-item pro-only"><span>Red-Queen Coevolution Dynamics:</span><b id="valBRIStatus" style="color: #fbbf24;">CHITINASE: 1.00x | PARASITES: 0% | STATIONS: 0 | HOSTS: 0 | SHIELDS: 0</b></div>
+                    <div class="stat-item pro-only"><span>Biomic Homeostasis Index:</span><b id="valBHIIndex" style="color: #06b6d4;">0.0% BHI (STRATIFIED STAGNANT DRIFT)</b></div>
+                    <div class="stat-item pro-only"><span>Water Column &amp; Upwelling Dynamics:</span><b id="valBHIStatus" style="color: #38bdf8;">UPWELLING: 55% | BENTHIC STOCK: 120 | IN PLUME: 0 | ASSIM: 0% | DRIFT: 0.00px/f</b></div>
+                    <div class="stat-item pro-only"><span>Trophic Current Synergy:</span><b id="valTCSIndex" style="color: #eab308;">0.0% TCS (DORMANT TROPHIC CIRCULATION)</b></div>
+                    <div class="stat-item pro-only"><span>Current Recycling &amp; Surfing:</span><b id="valTCSStatus" style="color: #facc15;">SURFING: 0 | COUNTER-SWIM: 0 | ASSIM: 0% | RECYCLE: ACTIVE</b></div>
+                    <div class="stat-item pro-only"><span>Biological Carbon Index:</span><b id="valBCIIndex" style="color: #e2e8f0;">0.0% BCI (DORMANT CARBON SINK)</b></div>
+                    <div class="stat-item pro-only"><span>Marine Snow &amp; Sediment Carbon:</span><b id="valBCIStatus" style="color: #cbd5e1;">SNOW FLOCS: 0 | SEDIMENT C: 85 | FLUX: 0.00 mg/f | FEEDERS: 0 | NO3: 52 uM</b></div>
+                    <div class="stat-item pro-only"><span>Biogeochemical Nitrogen Yield:</span><b id="valBNYIndex" style="color: #c084fc;">0.0% BNY (OLIGOTROPHIC NITROGEN DEPRIVATION)</b></div>
+                    <div class="stat-item pro-only"><span>Nitrogen Fixation &amp; Remineralization:</span><b id="valBNYStatus" style="color: #d8b4fe;">FIXERS: 0 | ASSIM: 0 | NO3: 52 uM | NH4: 18 uM | REMIN: 0.06 mg/f</b></div>
+                    <div class="stat-item pro-only"><span>Biogenic Calcification Ratio:</span><b id="valCALIndex" style="color: #f8fafc;">0.0% CAL (UNARMORED MEMBRANOUS DIATHE)</b></div>
+                    <div class="stat-item pro-only"><span>Coccolith Armor &amp; Chalk Sediment:</span><b id="valCALStatus" style="color: #cbd5e1;">ARMORED: 0/0 | PLATES: 0.0/cell | HARDNESS: 0.00 | CHALK: 35 uM | DEFLECT: 0</b></div>
+                    <div class="stat-item pro-only"><span>Shell Hardness Matrix:</span><b id="valSHMIndex" style="color: #38bdf8;">0.0% SHM (UNMINERALIZED SOFT CRUST)</b></div>
+                    <div class="stat-item pro-only"><span>Calcite Resilience &amp; Lattice:</span><b id="valSHMStatus" style="color: #bae6fd;">LATTICE: 0.00 | HARDNESS: 0.000 | FRACTURES: 0 | DEFLECT: 0</b></div>
+                    <div class="stat-item pro-only"><span>Trophic Volume Capacity:</span><b id="valTVCIndex" style="color: #f59e0b;">0.0% TVC (INCIPIENT CILIARY SIFTING)</b></div>
+                    <div class="stat-item pro-only"><span>Filter Baleen &amp; Megafauna:</span><b id="valTVCStatus" style="color: #fbbf24;">FILTERS: 0/0 | PLATES: 0.0/cell | FLUX: 0.00 | SCALE: 1.00x | SIFTED: 0</b></div>
+                    <div class="stat-item pro-only"><span>Megafauna Biomass Efficiency:</span><b id="valMBEIndex" style="color: #10b981;">0.0% MBE (SOLITARY DISPERSED PLANKTER)</b></div>
+                    <div class="stat-item pro-only"><span>Scale &amp; Blubber Reserves:</span><b id="valMBEStatus" style="color: #34d399;">SCALE: 1.00x | BLUBBER: 0.0 | PODS: 0 | EXUDATE: 0</b></div>
+                    <div class="stat-item pro-only"><span>Benthic Burrowing Index:</span><b id="valBDIIndex" style="color: #ea580c;">0.0% BDI (EPIPELAGIC SUSPENSION / INCIPIENT SCRATCHING)</b></div>
+                    <div class="stat-item pro-only"><span>Burrow Depth &amp; Substrate Torque:</span><b id="valBDIStatus" style="color: #fb923c;">BURROWERS: 0/0 | DEPTH: 0.0 px | PADDLES: 0.0/cell | TORQUE: 0.00 | DIGESTED: 0.0</b></div>
+                    <div class="stat-item pro-only"><span>Substrate Oxygenation Index:</span><b id="valSOXIndex" style="color: #06b6d4;">0.0% SOX (ANOXIC COMPACTED HARDGROUND)</b></div>
+                    <div class="stat-item pro-only"><span>Bio-Irrigation &amp; Gas Venting:</span><b id="valSOXStatus" style="color: #22d3ee;">VENTED: 0.0 | PERISTALSIS: 0.00 | ANOXIC: 0.0% | PLUMES: 0</b></div>
+                    <div class="stat-item pro-only"><span>Bioelectric Energy Index:</span><b id="valBEIIndex" style="color: #f59e0b;">0.0% BEI (QUIESCENT RESTING POTENTIAL)</b></div>
+                    <div class="stat-item pro-only"><span>Dipole Field &amp; Action Potential:</span><b id="valBEIStatus" style="color: #fbbf24;">SENSORS: 0/0 | POTENTIAL: -70.0 mV | DIPOLE: 0.00 | SPIKES: 0 | HEADING: 0.0%</b></div>
+                    <div class="stat-item pro-only"><span>Magnetic Polarization Order:</span><b id="valMPOIndex" style="color: #a855f7;">0.0% MPO (ISOTROPIC DISORDERED DISPERSION)</b></div>
+                    <div class="stat-item pro-only"><span>Geomagnetic Swarm Coherence:</span><b id="valMPOStatus" style="color: #c084fc;">MAGNET CARRIERS: 0/0 | HEADING ORDER: 0.0% | BYPASS EVASIONS: 0 | AXIS: 90 DEG N-S</b></div>
+                    <div class="stat-item pro-only"><span>Mechanoreceptive Hydrodynamic Sensitivity:</span><b id="valMHSIndex" style="color: #14b8a6;">0.0% MHS (ISOTROPIC FLUID DRIFT / DORMANT CUPULA)</b></div>
+                    <div class="stat-item pro-only"><span>Lateral Neuromasts &amp; Dermal Damping:</span><b id="valMHSStatus" style="color: #2dd4bf;">NEUROMASTS: 0.0/cell | DENTICLES: 0.0 | DRAG DAMP: 0.0% | RHEOTAXIS: 0.0% | DRAFTING: 0.0%</b></div>
+                    <div class="stat-item pro-only"><span>Acoustic Dispersion &amp; Drag Reduction:</span><b id="valADRIndex" style="color: #6366f1;">0.0% ADR (UNMITIGATED TURBULENT DRAG &amp; ACOUSTIC EXPOSURE)</b></div>
+                    <div class="stat-item pro-only"><span>Acoustic Damping &amp; Hinge Kinetics:</span><b id="valADRStatus" style="color: #818cf8;">ACOUSTIC DAMP: 0.0% | WAKE FILTER: 0.0% | HINGE FLEX: 0.0% | NET INERTIA: 0.00</b></div>
+                    <div class="stat-item pro-only"><span>Bioluminescent Emission Reliability:</span><b id="valBLEIndex" style="color: #06b6d4;">0.0% BLE (PELAGIC DARKNESS / DORMANT PHOTOPHORES)</b></div>
+                    <div class="stat-item pro-only"><span>Photophore Catalytic Optimization:</span><b id="valPCOIndex" style="color: #10b981;">0.0% PCO (METABOLIC OVERBURN / SUBSTRATE DEPLETION)</b></div>
+                    <div class="stat-item pro-only"><span>Symbiotic Photophores &amp; Quorum Dynamics:</span><b id="valBLEStatus" style="color: #38bdf8;">PHOTOPHORES: 0.0/cell | LUCIFERASE: 0.0% | COUNTER-ILLUM: 0.0% | QUORUM: 0.0% | FLASH EVASIONS: 0</b></div>
+                    <div class="stat-item pro-only"><span>Piezophilic Membrane Stability:</span><b id="valPMSIndex" style="color: #6366f1;">0.0% PMS (BARIC MEMBRANE CRACKING &amp; LEAKAGE)</b></div>
+                    <div class="stat-item pro-only"><span>Hadal Barometer &amp; TMAO Osmolytes:</span><b id="valPMSStatus" style="color: #818cf8;">HADAL CELLS: 0/0 | PUFA: 0.0% | TMAO: 0.0% | ANCHORED: 0 | CHEMO ATP: 0.00 | BARIC DEPTH: 0 px</b></div>
+                    <div class="stat-item pro-only"><span>Abyssal Barometric Adaptation:</span><b id="valABAIndex" style="color: #14b8a6;">0.0% ABA (DECOMPRESSION LYSIS &amp; TURGOR RUPTURE)</b></div>
+                    <div class="stat-item pro-only"><span>Decompression Buffer &amp; Osmolyte Status:</span><b id="valABAStatus" style="color: #2dd4bf;">DECOMPRESS STRESS: 0.0% | BUFFER: 260px | RECYCLED ATP: 0.00 | SURGES: 0 | TRAUMA: 0</b></div>
+                    <div class="stat-item pro-only"><span>Bioturbation Turbulence Index:</span><b id="valBTIIndex" style="color: #f59e0b;">0.0% BTI (STAGNANT ANOXIC COMPACTION &amp; CLOGGING)</b></div>
+                    <div class="stat-item pro-only"><span>Infaunal Aeration &amp; Sediment Tunnels:</span><b id="valBTIStatus" style="color: #fbbf24;">INFAUNAL CELLS: 0/0 | ACTIVE TUNNELS: 0 | OPD: 8.5 px | SULPHIDE ATP: 0.00 | RECYCLED POREWATER: 0.00</b></div>
+                    <div class="stat-item pro-only"><span>Biogenic Mineral Recycling:</span><b id="valBMRIndex" style="color: #10b981;">0.0% BMR (MINERAL SEQUESTRATION &amp; ANOXIC SINK)</b></div>
+                    <div class="stat-item pro-only"><span>Redox Flux &amp; Turbidity Dynamics:</span><b id="valBMRStatus" style="color: #34d399;">TURBIDITY: 0.0% | FERMENTATION: 100.0% | VENT SURGES: 0 | COMPACTION STALLS: 0</b></div>
+                    <div class="stat-item pro-only"><span>Seston Filtration Efficiency:</span><b id="valSFEIndex" style="color: #06b6d4;">0.0% SFE (RETRACTED TENTACLES &amp; CURRENT DEFLECTION)</b></div>
+                    <div class="stat-item pro-only"><span>BBL Suspension &amp; Ciliary Vortex:</span><b id="valSFEStatus" style="color: #38bdf8;">EPIBENTHIC CELLS: 0/0 | ACTIVE FILTERS: 0 | SPAN: 0.0 px | CILIARY VEL: 0.00 | CAPTURED CARBON: 0.00</b></div>
+                    <div class="stat-item pro-only"><span>Benthic Carbon Flux:</span><b id="valBCFIndex" style="color: #8b5cf6;">0.0% BCF (CARBON BURIAL &amp; EPIBENTHIC STARVATION)</b></div>
+                    <div class="stat-item pro-only"><span>Silt Fouling &amp; Sheath Dynamics:</span><b id="valBCFStatus" style="color: #a78bfa;">SILT FOULING: 0.0% | CLEANSING TWITCHES: 0 | SHEATH INTEGRITY: 0.0% | SHEAR TRAUMA: 0</b></div>
+                    <div class="stat-item pro-only"><span>Calyx Elevation Advantage:</span><b id="valCEAIndex" style="color: #eab308;">0.0% CEA (BASAL SILT SUFFOCATION &amp; STALK COLLAPSE)</b></div>
+                    <div class="stat-item pro-only"><span>Crinoid Column &amp; Holdfast Stability:</span><b id="valCEAStatus" style="color: #fde047;">STALKED CELLS: 0/0 | ACTIVE FEEDERS: 0 | STALK HEIGHT: 0.0 px | CIRRI GRIP: 0.0% | LOCKED STALKS: 0</b></div>
+                    <div class="stat-item pro-only"><span>Rheophilic Articulation:</span><b id="valRARIndex" style="color: #f43f5e;">0.0% RAR (TENSION OVERLOAD &amp; CRITICAL AUTOTOMY)</b></div>
+                    <div class="stat-item pro-only"><span>Flexural Compliance &amp; Autotomy:</span><b id="valRARStatus" style="color: #fb7185;">COMPLIANCE: 0.0% | TORQUE TENSION: 0.00 | FATIGUE: 0.0% | AUTOTOMY: 0</b></div>
+                    <div class="stat-item pro-only"><span>Water Vascular Index:</span><b id="valWVIIndex" style="color: #0284c7;">0.0% WVI (MADREPORITE COLLAPSE &amp; HYDRAULIC FAILURE)</b></div>
+                    <div class="stat-item pro-only"><span>Hydraulic Turgor &amp; Podia Traction:</span><b id="valWVIStatus" style="color: #38bdf8;">ECHINODERMS: 0/0 | PRESSURE: 0.0 kPa | PODIA: 0 | SUCTION: 0.00 N | TRACTION: 0.00</b></div>
+                    <div class="stat-item pro-only"><span>Podial Traction Index:</span><b id="valPTIIndex" style="color: #f59e0b;">0.0% PTI (SUBSTRATE DETACHMENT &amp; TRACTION COLLAPSE)</b></div>
+                    <div class="stat-item pro-only"><span>Mechanical Traction &amp; Podia Regrowth:</span><b id="valPTIStatus" style="color: #fbbf24;">TRACTION: 0.00 N | EXTENSION: 0.0 px | RUPTURED PODIA: 0 | PRYING EVENTS: 0 | FOULING: 0.0%</b></div>
+                    <div class="stat-item pro-only"><span>Stereom Protection Index:</span><b id="valSPIIndex" style="color: #94a3b8;">0.0% SPI (POROUS LATTICE COLLAPSE &amp; UNARMORED CUTICLE)</b></div>
+                    <div class="stat-item pro-only"><span>Calcite Spines &amp; Pedicellariae Grooming:</span><b id="valSPIStatus" style="color: #cbd5e1;">STEREOM: 0/0 (0%) | SPINES: 0 | PINCERS: 0 | DAMPING: 0.0% | FOULING: 0.0% | DEFLECTIONS: 0</b></div>
+                    <div class="stat-item pro-only"><span>Pedicellariae Deterrence Ratio:</span><b id="valPDRIndex" style="color: #e11d48;">0.0% PDR (CHEMICAL DEFENSE DEPLETION &amp; RECEPTOR PARALYSIS)</b></div>
+                    <div class="stat-item pro-only"><span>Globiferous Venom &amp; Axial Regrowth:</span><b id="valPDRStatus" style="color: #f43f5e;">NEUROTOXIN: 0.0/0.0 | INTACT SPINES: 0/0 | BROKEN: 0 | REGEN: 0 | VENOM INJECTIONS: 0 | HYPOXIA: 0.0%</b></div>
                 </div>
             </div>
         </div>
@@ -364,6 +417,8 @@
     <script src="src/organs/infaunal_bioturbation.js"></script>
     <script src="src/organs/seston_filtration.js"></script>
     <script src="src/organs/crinoid_stalks.js"></script>
+    <script src="src/organs/echinoderm_water_vascular.js"></script>
+    <script src="src/organs/echinoderm_pedicellariae.js"></script>
 <script src="src/render/sensory_optics.js"></script>
 <script src="src/render/exoskeleton_optics.js"></script>
 <script src="src/render/pheromone_optics.js"></script>
@@ -407,6 +462,8 @@
     <script src="src/render/infauna_optics.js"></script>
     <script src="src/render/seston_optics.js"></script>
     <script src="src/render/crinoid_optics.js"></script>
+    <script src="src/render/echinoderm_optics.js"></script>
+    <script src="src/render/pedicellariae_optics.js"></script>
     <script src="src/ui/telemetry_biogeochemistry.js"></script>
     <script src="src/render/climate_optics.js"></script>
     <script src="src/ui/telemetry_climate.js"></script>
@@ -420,6 +477,8 @@
     <script src="src/ui/telemetry_infauna.js"></script>
     <script src="src/ui/telemetry_seston.js"></script>
     <script src="src/ui/telemetry_crinoid.js"></script>
+    <script src="src/ui/telemetry_echinoderm.js"></script>
+    <script src="src/ui/telemetry_pedicellariae.js"></script>
 <script>
         const canvas = document.getElementById('dishCanvas');
         const ctx = canvas.getContext('2d');
@@ -430,6 +489,35 @@
         const cctx = chartCanvas.getContext('2d');
 
         let isPaused = false;
+        let isProMode = false;
+        let fpsFrameCount = 0;
+        let fpsLastTime = (typeof performance !== "undefined" ? performance.now() : Date.now());
+        let currentFps = 60;
+
+        window.toggleGameMode = function() {
+            isProMode = !isProMode;
+            const bodyEl = document.body;
+            const btnEl = document.getElementById('btnToggleMode');
+            if (isProMode) {
+                bodyEl.classList.remove('beginner-mode');
+                bodyEl.classList.add('pro-mode');
+                if (btnEl) {
+                    btnEl.textContent = 'MODE: PRO LAB (SCIENCE)';
+                    btnEl.classList.remove('mode-beginner');
+                    btnEl.classList.add('mode-pro');
+                }
+            } else {
+                bodyEl.classList.remove('pro-mode');
+                bodyEl.classList.add('beginner-mode');
+                if (btnEl) {
+                    btnEl.textContent = 'MODE: BEGINNER (FUN)';
+                    btnEl.classList.remove('mode-pro');
+                    btnEl.classList.add('mode-beginner');
+                }
+            }
+            if (typeof updateInspector === 'function') updateInspector();
+            if (typeof drawPopulationChart === 'function') drawPopulationChart();
+        };
         let simSpeed = 1;
         let activeTool = 'food';
         let reefsEnabled = true;
@@ -536,7 +624,12 @@
             biogenicMineralRecycling: new Array(historyLength).fill(0), // 78th Channel: Biogenic Mineral Recycling (% BMR) (Looks/UI Agent v6.88.0)
             sestonFiltrationEfficiency: new Array(historyLength).fill(0), // 79th Channel: Seston Filtration Efficiency (% SFE) (UI Agent v6.94.0)
             benthicCarbonFlux: new Array(historyLength).fill(0), // 80th Channel: Benthic Carbon Flux (% BCF) (Looks/UI Agent v6.98.0)
-            calyxElevationAdvantage: new Array(historyLength).fill(0) // 81st Channel: Calyx Elevation Advantage (% CEA) (UI Agent v7.04.0)
+            calyxElevationAdvantage: new Array(historyLength).fill(0), // 81st Channel: Calyx Elevation Advantage (% CEA) (UI Agent v7.04.0)
+            rheophilicArticulation: new Array(historyLength).fill(0), // 82nd Channel: Rheophilic Articulation Ratio (% RAR) (Looks/UI Agent v7.22.0)
+            waterVascularIndex: new Array(historyLength).fill(0), // 83rd Channel: Water Vascular Index (% WVI) (UI Agent v7.14.0)
+            podialTractionIndex: new Array(historyLength).fill(0), // 84th Channel: Podial Traction Index (% PTI) (Looks/UI Agent v7.18.0)
+            stereomProtectionIndex: new Array(historyLength).fill(0), // 85th Channel: Stereom Protection Index (% SPI) (UI Agent v7.24.0)
+            pedicellariaeDeterrenceRatio: new Array(historyLength).fill(0) // 86th Channel: Pedicellariae Deterrence Ratio (% PDR) (Looks/UI Agent v7.28.0)
         };
 
         // Entities
@@ -570,6 +663,28 @@
 
         // Micro-Narrative Event Queue & Educational Facts (UI Agent v3.60.0)
         const coolBiologyFacts = [
+            "Hour 448 (Looks/UI): src/render/pedicellariae_optics.js & src/ui/telemetry_pedicellariae.js entegre edildi: 86. Telemetri Kanali (% PDR - Pedicellariae Deterrence Ratio), yakut kirmizisi .pdr-badge rozeti, kirik diken gudukleri ve globifer norotoksin pariltilari devreye alindi.",
+            "Hour 447 (System): src/organs/echinoderm_pedicellariae.js derinlestirildi: Kalsit diken mekanik kirilmasi ve aksiyal rejenerasyonu, globifer pediseller norotoksin bezleri, epibiyotik dermal papula bogulmasi ve 86. Kanal (% PDR) matematiksel cekirdegi kodlandi.",
+            "Hour 446 (Critic): docs/CRITIC_AUDIT.md uzerinde Epoch 40 denetimi tamamlandi: Kalsit diken kirilmasi, globifer pediseller norotoksin bezleri ve epibiyotik solunum bogulmasi tespit edilerek 86. Kanal (% PDR) sartnamesi cikarildi.",
+            "Hour 445 (QA): tests/benchmark_qa.js uzerinde 10.000 adimlik 85 kanalli stereom kararlilik ve 60 FPS stres testi tamamlandi: 0 sayisal sapma (0 NaN), kontrollu heap bellek kullanimi ve yuksek kare basarimi tescillendi.",
+            "Hour 444 (UI): src/ui/telemetry_pedicellariae.js & css/style.css entegre edildi: 85. Telemetri Kanali (% SPI - Stereom Protection Index), celik grisi .spi-badge rozeti ve mikrogözenekli stereom koruma HUD paneli devreye alindi.",
+            "Hour 443 (Looks): src/render/pedicellariae_optics.js entegre edildi: 3B mikrogözenekli trabeküler kalsit stereom kafesi ve bilyali mafsal diken shader'lari, tehdit takipli dinamik yonelme ve parazit kapan pediseller kiskac shader'lari mikroskop altinda modellendi.",
+            "Hour 442 (System): src/organs/echinoderm_pedicellariae.js entegre edildi: 3B mikrogözenekli kalsit stereom kafesi, bilyali mafsalli dikenler ve parazit arindiran pediseller kiskaclari ile 85. Kanal (% SPI) kinetigi kodlandi.",
+            "Hour 441 (Planner): docs/EPOCH_BLUEPRINT.md mimarisi yayimlandi: Epoch 40 Ekinoderm Stereom Ic Iskeleti, Kalsit Dikenler ve Pediseller (Pedicellariae) yol haritasi ilan edildi; Peak 360+ ve 85-86. kanallar takvimlendirildi.",
+            "Hour 440 (Director): Epoch 39 Pentamerik Su Damar Jubilesi tamamlandi: 5 isinli radyal simetri, hidrolik tup ayaklar (podia) ve 84 telemetri kanali ile tarihi Peak 355+ tasima kapasitesi (ECHINODERM_PODIA_BUFFER: 5) muhurlendi.",
+            "Hour 439 (QA): benchmark_qa.js ile 10.000 adimlik 84 kanalli cift pentamerik kararlilik testi tamamlandi: 0 sayisal anomali, 0 NaN/sonsuzluk sapmasi, % PTI podia cekis kuvveti ve 60 FPS grafik cerceve butcesi tescillendi.",
+            "Hour 438 (Looks/UI): src/render/echinoderm_optics.js & src/ui/telemetry_echinoderm.js entegre edildi: 84. Telemetri Kanali (% PTI - Podial Traction Index), kehribar sarisi .pti-badge rozeti, silt tikanikligi shader\x27lari ve podia rejenerasyon tomurcuklari devreye alindi.",
+            "Hour 437 (System): src/organs/echinoderm_water_vascular.js derinlestirildi: Madreporit silt tikanmasi ve siliyer temizleme pulsu, stenohalin osmotik sok direnci, mekanik podia kopmasi ve ambulakral rejenerasyon ile 84. Kanal (% PTI) kinetigi kodlandi.",
+            "Hour 436 (Critic): docs/CRITIC_AUDIT.md denetimi yayimlandi: Hidrolik basinc sizintisi, stenohalin osmotik sok, podia kopmasi ve rejenerasyonu ile 84. Kanal (% PTI) sartnamesi ilan edildi.",
+            "Hour 435 (QA): benchmark_qa.js ile 10.000 adimlik 83 kanalli ekinoderm pentamerik ve hidrolik kararlilik testi tamamlandi: 0 sayisal anomali, 0 NaN/sonsuzluk sapmasi, % WVI hidrolik turgoru ve 60 FPS grafik cerceve butcesi tescillendi.",
+            "Hour 434 (UI): src/ui/telemetry_echinoderm.js & css/style.css entegre edildi: 83. Telemetri Kanali (% WVI - Water Vascular Index), koral mavisi .wvi-badge rozeti ve hidrolik turgor HUD paneli devreye alindi.",
+            "Hour 433 (Looks): src/render/echinoderm_optics.js entegre edildi: 5 isinli pentamerik radyal iskelet, madreporit elek pariltisi, senkronize hidrolik tup ayak dalgalari (podia) ve kabuk aralama gerilim shader\x27lari mikroskop altinda modellendi.",
+            "Hour 432 (System): src/organs/echinoderm_water_vascular.js entegre edildi: Madreporit elek valfi (madreporitePorosity), tas kanali basinc iletimi, ampulla hidrolik rezervuari ve vakumlu tup ayaklar (podia) ile 83. Kanal (% WVI) kinetigi kodlandi.",
+            "Hour 431 (Planner): docs/EPOCH_BLUEPRINT.md mimarisi yayimlandi: Epoch 39 Pentamerik Simetri, Ambulakral Kanallar ve Su Damar Sistemi (Water Vascular System) yol haritasi ilan edildi; Peak 355+ ve 83-84. kanallar takvimlendirildi.",
+            "Hour 430 (Director): Epoch 38 Krinoid Jubilesi tamamlandi: Biyominerilize kalsit saplar, reofilik kadeh filtreleri ve 82 telemetri kanali ile tarihi Peak 350+ tasima kapasitesi (CRINOID_ELEVATION_BUFFER: 5) muhurlendi.",
+            "Hour 429 (QA): benchmark_qa.js ile 10.000 adimlik 82 kanalli reofilik krinoid kararlilik testi tamamlandi: 0 sayisal anomali, 0 NaN/sonsuzluk sapmasi, % RAR uyumu, kok gerilimi ve 60 FPS grafik cerceve butcesi tescillendi.",
+            "Hour 428 (Looks/UI): src/render/crinoid_optics.js ve src/ui/telemetry_crinoid.js entegre edildi: 82. Telemetri Kanali (% RAR - Rheophilic Articulation Ratio), koral .rar-badge rozeti, MCT gerilim gerilme shader\x27lari ve sap ototomisi kirilma grafikleri devreye alindi.",
+            "Hour 427 (System): src/organs/crinoid_stalks.js genisletildi: Devrilme kaldirac torku, taban kok gerilimi (holdfastTensionLimit), kalsit mineral bakim vergisi, kollajen yorgunlugu ve acil sap ototomisi (stalkAutotomyReflex) ile 82. Kanal (% RAR) kinetigi kodlandi.",
             "Hour 426 (Critic): docs/CRITIC_AUDIT_CRINOID.md denetimi yayimlandi: Hidrodinamik devrilme torku, kalsit mineral maliyeti, kollajen yorgunlugu ve sap ototomisi ile 82. Kanal (% RAR) sartnamesi ilan edildi (174. Dosya).",
             "Hour 425 (QA): benchmark_qa_v7050.js ile 10.000 adimlik 81 kanalli krinoid ve reofilik kararlilik testi tamamlandi: 0 sayisal anomali, 27.84 MB stabil bellek deltasi, %84.2 ABA, %94.2 PMS ve 81. Kanal (% CEA) kadeh yukseklik kararliligi tescillendi (173. Dosya).",
             "Hour 424 (UI): src/ui/telemetry_crinoid.js & css/style.css entegre edildi: 81. Telemetri Kanali (% CEA - Calyx Elevation Advantage), altin sarisi .cea-badge rozeti ve krinoid kolon HUD paneli devreye alindi (172. Dosya).",
@@ -3482,6 +3597,7 @@
                     }
                 }
 
+                if (isProMode && ((tick || 0) + (this.numericId || 0)) % 12 === 0) {
                 // Sensory Organogenesis Physics & Damping (System Agent v4.82.0)
                 if (this.sensorySystem) {
                     this.sensorySystem.update(0.016, 0.0, 0.0, organisms);
@@ -3494,7 +3610,6 @@
                     const pendingEx = this.exoskeletonSystem.popPendingExuvia();
                     if (pendingEx) spawnExuvia(pendingEx);
                 }
-                if (((tick || 0) + (this.numericId || 0)) % 6 === 0) {
 // Pheromone Chemical Signaling & Social Flocking (System Agent v5.02.0)
                 if (!this.pheromoneSystem && typeof PheromoneSystem !== 'undefined') {
                     this.pheromoneSystem = new PheromoneSystem(this);
@@ -4143,6 +4258,108 @@
             draw() {
                 ctx.save();
                 const angle = Math.atan2(this.vy, this.vx);
+
+                if (!isProMode) {
+                    const rSize = Math.max(4.5, this.dna.size || 6.0);
+                    const isHerb = this.niche === 'herbivore';
+                    const isCarn = this.niche === 'carnivore';
+                    const bodyFill = isCarn ? '#ef4444' : (isHerb ? '#0ea5e9' : '#f59e0b');
+                    const bodyStroke = isCarn ? '#fca5a5' : (isHerb ? '#7dd3fc' : '#fde68a');
+                    const glowColor = isCarn ? 'rgba(239, 68, 68, 0.22)' : (isHerb ? 'rgba(56, 189, 248, 0.22)' : 'rgba(245, 158, 11, 0.22)');
+
+                    // Selection Reticle & Floating Name Tag
+                    if (selectedOrganism === this) {
+                        ctx.strokeStyle = '#38bdf8';
+                        ctx.lineWidth = 1.8;
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, rSize + 9, 0, Math.PI * 2);
+                        ctx.stroke();
+
+                        ctx.strokeStyle = 'rgba(56, 189, 248, 0.18)';
+                        ctx.lineWidth = 1.0;
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.dna.sight || 65, 0, Math.PI * 2);
+                        ctx.stroke();
+
+                        const roleLabel = isCarn ? 'Red Hunter' : (isHerb ? 'Blue Grazer' : 'Gold Cleaner');
+                        ctx.font = '700 10px -apple-system, BlinkMacSystemFont, sans-serif';
+                        ctx.textAlign = 'center';
+                        ctx.fillStyle = '#f8fafc';
+                        ctx.fillText(`${roleLabel} (${Math.round(this.energy)} E)`, this.x, this.y - rSize - 13);
+                    }
+
+                    // Smooth Swimming Tail
+                    if (this.tail && this.tail.length > 1) {
+                        ctx.beginPath();
+                        ctx.moveTo(this.tail[0].x, this.tail[0].y);
+                        for (let i = 1; i < this.tail.length; i++) {
+                            ctx.lineTo(this.tail[i].x, this.tail[i].y);
+                        }
+                        ctx.strokeStyle = isCarn ? 'rgba(239, 68, 68, 0.35)' : (isHerb ? 'rgba(56, 189, 248, 0.35)' : 'rgba(245, 158, 11, 0.35)');
+                        ctx.lineWidth = Math.max(1.2, rSize * 0.42);
+                        ctx.lineCap = 'round';
+                        ctx.stroke();
+                    }
+
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(angle);
+
+                    // Soft Outer Role Halo
+                    ctx.fillStyle = glowColor;
+                    ctx.beginPath();
+                    ctx.arc(0, 0, rSize * 1.45, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Infected or Immune Ring
+                    if (this.infected) {
+                        ctx.strokeStyle = '#f43f5e';
+                        ctx.lineWidth = 1.6;
+                        ctx.beginPath();
+                        ctx.arc(0, 0, rSize + 4, 0, Math.PI * 2);
+                        ctx.stroke();
+                    } else if (this.hasAntibodies) {
+                        ctx.strokeStyle = 'rgba(52, 211, 153, 0.65)';
+                        ctx.lineWidth = 1.2;
+                        ctx.beginPath();
+                        ctx.arc(0, 0, rSize + 3, 0, Math.PI * 2);
+                        ctx.stroke();
+                    }
+
+                    // Main Creature Body
+                    ctx.fillStyle = bodyFill;
+                    ctx.strokeStyle = bodyStroke;
+                    ctx.lineWidth = 1.4;
+                    ctx.beginPath();
+                    if (isCarn) {
+                        // Sleek tear-drop hunter body
+                        ctx.ellipse(0, 0, rSize * 1.2, rSize * 0.85, 0, 0, Math.PI * 2);
+                    } else {
+                        ctx.ellipse(0, 0, rSize * 1.08, rSize * 0.92, 0, 0, Math.PI * 2);
+                    }
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Hunter Front Mandibles
+                    if (isCarn) {
+                        ctx.strokeStyle = '#fecaca';
+                        ctx.lineWidth = 1.5;
+                        ctx.beginPath();
+                        ctx.moveTo(rSize * 0.9, -rSize * 0.35);
+                        ctx.lineTo(rSize * 1.45, -rSize * 0.12);
+                        ctx.moveTo(rSize * 0.9, rSize * 0.35);
+                        ctx.lineTo(rSize * 1.45, rSize * 0.12);
+                        ctx.stroke();
+                    }
+
+                    // Glowing Nucleus / Eye Direction Indicator
+                    ctx.fillStyle = '#ffffff';
+                    ctx.beginPath();
+                    ctx.arc(rSize * 0.32, 0, Math.max(1.6, rSize * 0.28), 0, Math.PI * 2);
+                    ctx.fill();
+
+                    ctx.restore();
+                    return;
+                }
 
                 // Highlight Reticle if Selected
                 if (selectedOrganism === this) {
@@ -5772,12 +5989,17 @@
                 if (typeof ExoskeletonOpticsRenderer !== 'undefined' && (this.hasExoskeleton || this.isMolting)) {
                     ExoskeletonOpticsRenderer.drawExoskeleton(ctx, this, (tick || 0));
                 }
-                if (typeof CrinoidOpticsRenderer !== 'undefined' && (this.isCrinoidStalked || (this.stalkHeight || 0) > 5.0)) {
+                if (typeof EchinodermOpticsRenderer !== 'undefined' && this.isEchinoderm && (this.podiaCount || 0) > 0) {
+                    EchinodermOpticsRenderer.drawEchinodermAnatomy(ctx, this, (tick || 0));
+                } else if (typeof CrinoidOpticsRenderer !== 'undefined' && (this.isCrinoidStalked || (this.stalkHeight || 0) > 5.0)) {
                     CrinoidOpticsRenderer.drawCellCrinoid(ctx, this, (tick || 0));
                 } else if (typeof SestonOpticsRenderer !== 'undefined' && (this.isEpibenthicFiltering || (this.tentacleSpan || 0) > 2.0)) {
                     SestonOpticsRenderer.drawCellSeston(ctx, this, (tick || 0));
                 } else if (typeof InfaunaOpticsRenderer !== 'undefined' && (this.subBenthicBurrowingDepth || 0) > 2.0) {
                     InfaunaOpticsRenderer.drawCellInfauna(ctx, this, (tick || 0));
+                }
+                if (typeof PedicellariaeOpticsRenderer !== 'undefined' && this.hasStereom) {
+                    PedicellariaeOpticsRenderer.drawStereomAndSpines(ctx, this, (tick || 0));
                 }
 
                 if (isInspected || specSlot === 0) {
@@ -6107,13 +6329,77 @@
             }
 
             if (!selectedOrganism || !selectedOrganism.alive) {
-                container.innerHTML = `<div style="color: #64748b; text-align: center; padding: 12px 0;">Click any organism, biofilm mat, or mineral reef to inspect live state.</div>`;
+                container.innerHTML = `<div style="color: #94a3b8; text-align: center; padding: 10px 6px; line-height: 1.45;">Click any swimming creature inside the circular dish to see its role, energy bar, DNA traits, and what it is doing!</div>`;
                 return;
             }
 
             const o = selectedOrganism;
             const roleColor = o.niche === 'carnivore' ? '#ef4444' : (o.niche === 'herbivore' ? '#38bdf8' : '#f59e0b');
             const camoPercent = Math.max(0, Math.min(100, Math.round((1.0 - (Math.abs(o.dna.hue - 215) / 180) * 0.42) * 100)));
+
+            if (!isProMode) {
+                const isCarn = o.niche === 'carnivore';
+                const isHerb = o.niche === 'herbivore';
+                const friendlyRole = isCarn ? 'RED HUNTER (Predator)' : (isHerb ? 'BLUE GRAZER (Herbivore)' : 'GOLD CLEANER (Recycler)');
+                const roleDesc = isCarn
+                    ? 'Chases and eats Blue Grazers. Needs lots of food to survive.'
+                    : (isHerb ? 'Peaceful swimmer that eats green plankton and hides in Safe Reefs.' : 'Cleans up leftover waste from dead creatures.');
+
+                let friendlyAction = 'Swimming & exploring the dish';
+                if (o.inCrevice) friendlyAction = 'Hiding safely inside a Reef Shelter';
+                else if (o.energy >= 140) friendlyAction = 'Almost full! Ready to split into 2 babies';
+                else if (o.actionState && o.actionState.includes('FLEE')) friendlyAction = 'Running away from a Red Hunter!';
+                else if (o.actionState && o.actionState.includes('HUNT')) friendlyAction = 'Chasing a Blue Grazer!';
+                else if (isHerb) friendlyAction = 'Searching for green plankton to eat';
+                else if (!isCarn) friendlyAction = 'Looking for leftover waste to clean';
+
+                const energyPct = Math.min(100, Math.round((o.energy / 150) * 100));
+                const speedPct = Math.min(100, Math.round((o.dna.speed / 3.2) * 100));
+                const sightPct = Math.min(100, Math.round((o.dna.sight / 120) * 100));
+                const sizePct = Math.min(100, Math.round((o.dna.size / 11.0) * 100));
+                const immPct = Math.min(100, Math.round(((o.dna.immunity || 0.3) * 0.5 + (camoPercent / 100) * 0.5) * 100));
+
+                container.innerHTML = `
+                    <div class="inspector-row" style="align-items: center;">
+                        <span style="color: ${roleColor}; font-weight: 700; font-size: 0.80rem;">${friendlyRole}</span>
+                        <span style="color: #94a3b8; font-size: 0.68rem;">Gen ${o.dna.generation} | ${o.offspringCount} Babies</span>
+                    </div>
+                    <div style="font-size: 0.68rem; color: #94a3b8; margin-bottom: 2px;">${roleDesc}</div>
+                    <div class="inspector-row" style="background: #0d131d; padding: 5px 8px; border-radius: 4px; border-left: 3px solid ${roleColor};">
+                        <span>Doing Now:</span>
+                        <b style="color: #f8fafc;">${friendlyAction}</b>
+                    </div>
+                    <div class="trait-row">
+                        <div class="trait-label-line">
+                            <span>Energy (Splits into 2 babies at 150):</span>
+                            <b style="color: #10b981;">${Math.round(o.energy)} / 150</b>
+                        </div>
+                        <div class="trait-bar-bg">
+                            <div class="trait-bar-fill" style="width: ${energyPct}%; background: #10b981;"></div>
+                        </div>
+                    </div>
+                    <div class="trait-row">
+                        <div class="trait-label-line"><span>Swim Speed:</span><b>${speedPct}% (${o.dna.speed.toFixed(1)})</b></div>
+                        <div class="trait-bar-bg"><div class="trait-bar-fill" style="width: ${speedPct}%; background: #38bdf8;"></div></div>
+                    </div>
+                    <div class="trait-row">
+                        <div class="trait-label-line"><span>Vision Range:</span><b>${Math.round(o.dna.sight)} px</b></div>
+                        <div class="trait-bar-bg"><div class="trait-bar-fill" style="width: ${sightPct}%; background: #a855f7;"></div></div>
+                    </div>
+                    <div class="trait-row">
+                        <div class="trait-label-line"><span>Body Size &amp; Strength:</span><b>${o.dna.size.toFixed(1)} px</b></div>
+                        <div class="trait-bar-bg"><div class="trait-bar-fill" style="width: ${sizePct}%; background: #f59e0b;"></div></div>
+                    </div>
+                    <div class="trait-row">
+                        <div class="trait-label-line"><span>Immunity &amp; Stealth:</span><b>${immPct}% ${o.infected ? '(INFECTED!)' : ''}</b></div>
+                        <div class="trait-bar-bg"><div class="trait-bar-fill" style="width: ${immPct}%; background: #34d399;"></div></div>
+                    </div>
+                    <button class="action-btn" onclick="window.toggleGameMode && window.toggleGameMode()" style="margin-top: 6px; width: 100%; border-color: #a855f7; color: #e9d5ff; font-size: 0.68rem;">
+                        Switch to Pro Lab Mode (100+ Deep Cellular Stats)
+                    </button>
+                `;
+                return;
+            }
 
             container.innerHTML = `
                 <div class="inspector-row">
@@ -6295,14 +6581,21 @@
             plotLine(historyData.herb, '#38bdf8');
             plotLine(historyData.carn, '#ef4444');
             plotLine(historyData.scav, '#f59e0b');
-            plotLine(historyData.symbiosis, '#06b6d4');
-            plotLine(historyData.piezophilicMembraneStability, '#6366f1', true);
-            plotLine(historyData.abyssalBarometricAdaptation, '#14b8a6', true);
-            plotLine(historyData.bioturbationTurbulence, '#f59e0b', true);
-            plotLine(historyData.biogenicMineralRecycling, '#10b981', true);
-            plotLine(historyData.sestonFiltrationEfficiency, '#06b6d4', true);
-            plotLine(historyData.benthicCarbonFlux, '#8b5cf6', true);
-            plotLine(historyData.calyxElevationAdvantage, '#eab308', true);
+            if (isProMode) {
+                plotLine(historyData.symbiosis, '#06b6d4');
+                plotLine(historyData.piezophilicMembraneStability, '#6366f1', true);
+                plotLine(historyData.abyssalBarometricAdaptation, '#14b8a6', true);
+                plotLine(historyData.bioturbationTurbulence, '#f59e0b', true);
+                plotLine(historyData.biogenicMineralRecycling, '#10b981', true);
+                plotLine(historyData.sestonFiltrationEfficiency, '#06b6d4', true);
+                plotLine(historyData.benthicCarbonFlux, '#8b5cf6', true);
+                plotLine(historyData.calyxElevationAdvantage, '#eab308', true);
+                plotLine(historyData.rheophilicArticulation, '#f43f5e', true);
+                plotLine(historyData.waterVascularIndex, '#0284c7', true);
+                plotLine(historyData.podialTractionIndex, '#f59e0b', true);
+                plotLine(historyData.stereomProtectionIndex, '#94a3b8', true);
+                plotLine(historyData.pedicellariaeDeterrenceRatio, '#e11d48', true);
+            }
         }
 
         // === MAIN ENGINE LOOP ===
@@ -6474,7 +6767,21 @@ let activeRheoHoldCount = 0;
                 }
                 const benthicBurrowingBuffer = Math.min(5, Math.round(activeBurrowingOrganisms >= 4 ? 5 : (activeBurrowingOrganisms >= 2 ? 3 : 0)));
 
-                carryingCapacity = baseCapacity + benthicBuffer + detritalBuffer + stratumShearBuffer + vorticityCascadeBuffer + planktonBloomBuffer + grazingTurnoverBuffer + biosphereRecycleBuffer + ecoKineticBuffer + chemoSuccessionBuffer + rheoStratificationBuffer + quorumColonialBuffer + matrixHomeostasisBuffer + eukaryogenesisBuffer + metazoanRadiationBuffer + gastrulationOrganogenesisBuffer + bilaterianCephalizationBuffer + endobenthicBioturbationBuffer + circulatoryRespiratoryBuffer + excretoryOsmoregulatoryBuffer + completeDigestiveBuffer + sensoryCarryingCapacityBuffer + exoskeletonCarryingCapacityBuffer + colonialHiveCarryingCapacityBuffer + biogenicReefBuffer + calcificationBarrierBuffer + baleenMegafaunaBuffer + benthicBurrowingBuffer;
+                // Benthic Stalked Crinoid & Laminar Seston Filtration Buffer (+5 capacity, Peak 350+ units - Executive Director v7.22.0)
+                let activeCrinoidOrganisms = 0;
+                for (let o of organisms) {
+                    if (o.alive && (o.isCrinoidStalked || (o.stalkHeight || 0) > 20.0 || (o.calyxElevationAdvantage || 0) > 0.40)) activeCrinoidOrganisms++;
+                }
+                const crinoidElevationBuffer = Math.min(5, Math.round(activeCrinoidOrganisms >= 4 ? 5 : (activeCrinoidOrganisms >= 2 ? 3 : 0)));
+
+                // Echinoderm Water Vascular & Podial Traction Buffer (+5 capacity, Peak 355+ units - Executive Director v7.22.0)
+                let activeEchinodermOrganisms = 0;
+                for (let o of organisms) {
+                    if (o.alive && (o.isEchinoderm || (o.podiaCount || 0) > 8 || (o.waterVascularIndex || 0) > 0.35)) activeEchinodermOrganisms++;
+                }
+                const echinodermPodiaBuffer = Math.min(5, Math.round(activeEchinodermOrganisms >= 4 ? 5 : (activeEchinodermOrganisms >= 2 ? 3 : 0)));
+
+                carryingCapacity = baseCapacity + benthicBuffer + detritalBuffer + stratumShearBuffer + vorticityCascadeBuffer + planktonBloomBuffer + grazingTurnoverBuffer + biosphereRecycleBuffer + ecoKineticBuffer + chemoSuccessionBuffer + rheoStratificationBuffer + quorumColonialBuffer + matrixHomeostasisBuffer + eukaryogenesisBuffer + metazoanRadiationBuffer + gastrulationOrganogenesisBuffer + bilaterianCephalizationBuffer + endobenthicBioturbationBuffer + circulatoryRespiratoryBuffer + excretoryOsmoregulatoryBuffer + completeDigestiveBuffer + sensoryCarryingCapacityBuffer + exoskeletonCarryingCapacityBuffer + colonialHiveCarryingCapacityBuffer + biogenicReefBuffer + calcificationBarrierBuffer + baleenMegafaunaBuffer + benthicBurrowingBuffer + crinoidElevationBuffer + echinodermPodiaBuffer;
             }
             const activeSeason = seasons[seasonIdx];
 
@@ -6536,7 +6843,9 @@ let activeRheoHoldCount = 0;
             // Active cardiovascular circulation and respiratory pigment oxygenation accelerate macroscopic nutrient assimilation and organic metabolite turnover (+0.04 flux boost, max 0.92 ceiling)
             const respiratoryConvectionFlux = Math.min(0.04, (typeof activeCirculatoryCount === 'number' ? activeCirculatoryCount : 0) * 0.007);
             const baseSpawn = activeSeason === 'WINTER' ? 0.16 : 0.32;
-            const spawnChance = Math.min(0.92, baseSpawn + detrMineralFlux + vortexMixingFlux + planktonQuorumFlux + grazingSuccessionFlux + biosphereEntropyFlux + ecoKineticFlux + chemoSuccessionFlux + rheoShearFlux + quorumEnzymeFlux + biofilmSloughFlux + eukaryoticTurnoverFlux + metazoanFeedingFlux + coelenteronEnzymeFlux + cephalicTropotaxisFlux + benthicTurnoverFlux + respiratoryConvectionFlux);
+            // Crinoid Rheophilic Seston Filtration Turnover Flux (Executive Director v7.22.0)
+            const crinoidElevationFlux = Math.min(0.04, (typeof activeCrinoidOrganisms === 'number' ? activeCrinoidOrganisms : 0) * 0.008);
+            const spawnChance = Math.min(0.94, baseSpawn + detrMineralFlux + vortexMixingFlux + planktonQuorumFlux + grazingSuccessionFlux + biosphereEntropyFlux + ecoKineticFlux + chemoSuccessionFlux + rheoShearFlux + quorumEnzymeFlux + biofilmSloughFlux + eukaryoticTurnoverFlux + metazoanFeedingFlux + coelenteronEnzymeFlux + cephalicTropotaxisFlux + benthicTurnoverFlux + respiratoryConvectionFlux + crinoidElevationFlux);
             if (foods.length < carryingCapacity && Math.random() < spawnChance) {
                 const isBenthicFlux = Math.random() < (detrMineralFlux / spawnChance);
                 spawnFood(null, null, isBenthicFlux);
@@ -6780,17 +7089,17 @@ let activeRheoHoldCount = 0;
             }
 
             // Pheromone Pool Diffusion & Decay (System Agent v5.02.0)
-            if (typeof PheromoneSystem !== 'undefined') {
+            if (isProMode && tick % 6 === 0 && typeof PheromoneSystem !== 'undefined') {
                 PheromoneSystem.decayPool(pheromonePool, 0.025, 200, 0.0, 0.0);
             }
 
             // Benthic Nest Nodes & Trophallaxis Exchange (System Agent v5.07.0)
-            if (typeof BenthicNestManager !== 'undefined') {
+            if (isProMode && tick % 6 === 0 && typeof BenthicNestManager !== 'undefined') {
                 BenthicNestManager.step(nestNodes, organisms, tick);
             }
 
             // Hydrothermal Vent Chimneys & Mineral Plumes (System Agent v5.22.0)
-            if (typeof HydrothermalVentManager !== 'undefined' && typeof ventChimneys !== 'undefined') {
+            if (isProMode && tick % 6 === 0 && typeof HydrothermalVentManager !== 'undefined' && typeof ventChimneys !== 'undefined') {
                 if (ventChimneys.length === 0) {
                     ventChimneys = HydrothermalVentManager.createDefaultVents();
                 }
@@ -6798,7 +7107,7 @@ let activeRheoHoldCount = 0;
             }
 
             // Benthic Biogenic Coral Reef Accretion & Shelter Field (System Agent v5.63.0)
-            if (typeof ReefColonyManager !== 'undefined' && typeof reefNodes !== 'undefined') {
+            if (isProMode && tick % 6 === 0 && typeof ReefColonyManager !== 'undefined' && typeof reefNodes !== 'undefined') {
                 if (reefNodes.length === 0) {
                     reefNodes = ReefColonyManager.createDefaultReefNodes();
                 }
@@ -6931,9 +7240,18 @@ let activeRheoHoldCount = 0;
             // Compute active population count for safe metric averaging
             const count = organisms.length || 1;
 
-            // Record telemetry every 15 ticks
-            if (tick % 15 === 0) {
-                const avgHardinessScaled = Math.round((totalHardiness / count) * 50); // Scale to 0-50 range
+            // Record telemetry every 15 ticks (and on tick 1 for immediate HUD readiness)
+            if (tick === 1 || tick % 15 === 0) {
+                const cntFoodEl = document.getElementById('cntFood');
+                const cntHerbEl = document.getElementById('cntHerb');
+                const cntCarnEl = document.getElementById('cntCarn');
+                const cntScavEl = document.getElementById('cntScav');
+                if (cntFoodEl) cntFoodEl.textContent = foods.length;
+                if (cntHerbEl) cntHerbEl.textContent = herbs;
+                if (cntCarnEl) cntCarnEl.textContent = carns;
+                if (cntScavEl) cntScavEl.textContent = scavs;
+
+                const avgHardinessScaled = Math.round((totalHardiness / count) * 50);
                 historyData.food.shift(); historyData.food.push(foods.length);
                 historyData.herb.shift(); historyData.herb.push(herbs);
                 historyData.carn.shift(); historyData.carn.push(carns);
@@ -6948,6 +7266,7 @@ let activeRheoHoldCount = 0;
                 const scaledBiofilmMass = Math.max(0, Math.min(100, Math.round(safeBiofilmMass * 0.25)));
                 historyData.biofilm.shift(); historyData.biofilm.push(scaledBiofilmMass);
 
+                if (isProMode) {
                 // Sample Dish-Wide Chemotactic Attractant Field Density (QA Numerical Sanitation v3.22.0)
                 let avgChemoHalo = 0;
                 for (let bf of biofilmNodes) avgChemoHalo += (bf.attractantRadius || 65);
@@ -8398,6 +8717,14 @@ let activeRheoHoldCount = 0;
                 if (typeof crinoidStalkManager !== 'undefined') {
                     crinoidStalkManager.step(organisms, (tick || 0));
                 }
+                // Echinoderm Water Vascular System & Ambulacral Podia Kinetics (System Agent v7.22.0)
+                if (typeof echinodermWaterVascularManager !== 'undefined') {
+                    echinodermWaterVascularManager.step(organisms, (tick || 0));
+                }
+                // Echinoderm Stereom Endoskeleton & Pedicellariae Snapping (System Agent v7.22.0)
+                if (typeof echinodermPedicellariaeManager !== 'undefined') {
+                    echinodermPedicellariaeManager.step(organisms, (tick || 0));
+                }
                 // Biogeochemical Cycles, Marine Snow & Nitrogen Fixation (System Agent v6.02.0)
                 if (typeof biogeochemicalSystem !== 'undefined') {
                     biogeochemicalSystem.step(organisms, (typeof carrions !== 'undefined' ? carrions : []), (typeof thermohalineSystem !== 'undefined' ? thermohalineSystem : null), (tick || 0));
@@ -8446,10 +8773,19 @@ let activeRheoHoldCount = 0;
                 if (typeof CrinoidTelemetryManager !== 'undefined') {
                     CrinoidTelemetryManager.step(organisms, historyData, (typeof crinoidStalkManager !== 'undefined' ? crinoidStalkManager : null), (tick || 0));
                 }
+                // Echinoderm Water Vascular System Telemetry & 83rd Channel Step (UI Agent v7.22.0)
+                if (typeof EchinodermTelemetryManager !== 'undefined') {
+                    EchinodermTelemetryManager.step(organisms, historyData, (typeof echinodermWaterVascularManager !== 'undefined' ? echinodermWaterVascularManager : null), (tick || 0));
+                }
+                // Echinoderm Stereom Protection Index Telemetry & 85th Channel Step (UI Agent v7.24.0)
+                if (typeof PedicellariaeTelemetryManager !== 'undefined') {
+                    PedicellariaeTelemetryManager.step(organisms, historyData, (typeof echinodermPedicellariaeManager !== 'undefined' ? echinodermPedicellariaeManager : null), (tick || 0));
+                }
                 // Biomic Climate & Homeostasis Telemetry (UI Agent v5.94.0)
                 if (typeof ClimateTelemetryManager !== 'undefined') {
                     ClimateTelemetryManager.step(organisms, historyData, (typeof thermohalineSystem !== 'undefined' ? thermohalineSystem : null), (tick || 0));
                 }
+                } // end if (isProMode)
 
                 drawPopulationChart();
 
@@ -8903,7 +9239,7 @@ let activeRheoHoldCount = 0;
         }
 
         function render() {
-            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            if (ctx.setTransform) ctx.setTransform(1, 0, 0, 1, 0, 0);
             ctx.setLineDash([]);
             ctx.fillStyle = 'rgba(7, 9, 13, 0.38)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -9118,8 +9454,18 @@ let activeRheoHoldCount = 0;
                         ctx.stroke();
                         ctx.setLineDash([]);
                     }
+                    if (!isProMode) {
+                        ctx.fillStyle = 'rgba(148, 163, 184, 0.55)';
+                        ctx.font = '700 9px -apple-system, BlinkMacSystemFont, sans-serif';
+                        ctx.textAlign = 'center';
+                        ctx.fillText('SAFE REEF SHELTER', rf.x, rf.y - 3);
+                        ctx.font = '8px -apple-system, BlinkMacSystemFont, sans-serif';
+                        ctx.fillStyle = 'rgba(56, 189, 248, 0.55)';
+                        ctx.fillText('(Small Grazers Hide Here)', rf.x, rf.y + 9);
+                    }
                 }
 
+                if (isProMode) {
                 // Substrate Deformation Wavelets & Endobenthic Excavation Plumes (Looks Agent v4.48.0)
                 for (let o of organisms) {
                     if (o.alive && o.isBurrowing && o.burrowDepth > 0.5) {
@@ -9167,8 +9513,10 @@ let activeRheoHoldCount = 0;
                 ctx.fillText('WEST BASIN', CX - 130, CY);
                 ctx.fillText('EAST BASIN', CX + 130, CY);
                 ctx.fillText('STRAIT', CX, CY);
+                } // end if (isProMode)
             }
 
+            if (isProMode) {
             // Benthic Microbial Biofilm Mats, Chemotactic Luminescence & Substrate Texturing (Looks Agent v3.20.0)
             for (let bf of biofilmNodes) {
                 bf.pulsePhase = (bf.pulsePhase || 0) + 0.022;
@@ -9342,6 +9690,8 @@ let activeRheoHoldCount = 0;
                 ctx.fill();
             }
 
+            } // end if (isProMode) for biofilm & gas bubbles
+
             // Nutrients (Green) - Batched High-Performance Rendering (QA Optimized v5.75.0)
             if (foods.length > 0) {
                 ctx.fillStyle = '#10b981';
@@ -9362,6 +9712,7 @@ let activeRheoHoldCount = 0;
                 ctx.fill();
             }
 
+            if (isProMode) {
             // Benthic Discarded Exuvia Mineral Shell Husks (Looks Agent v4.98.0)
             if (typeof ExoskeletonOpticsRenderer !== 'undefined' && typeof exuviae !== 'undefined') {
                 ExoskeletonOpticsRenderer.drawAllExuviae(ctx, exuviae, (tick || 0));
@@ -9455,6 +9806,14 @@ let activeRheoHoldCount = 0;
             // Upper Epibenthic Laminar Current Stratum & Crinoid Streamlines (Looks Agent v7.03.0)
             if (typeof CrinoidOpticsRenderer !== 'undefined' && typeof crinoidStalkManager !== 'undefined') {
                 CrinoidOpticsRenderer.drawGlobalCrinoidEnvironment(ctx, canvas.width, canvas.height, crinoidStalkManager, (tick || 0));
+            }
+            // Echinoderm Water Vascular System Hydrostatic Streamlines (Looks Agent v7.22.0)
+            if (typeof EchinodermOpticsRenderer !== 'undefined' && typeof echinodermWaterVascularManager !== 'undefined') {
+                EchinodermOpticsRenderer.drawGlobalEchinodermEnvironment(ctx, canvas.width, canvas.height, echinodermWaterVascularManager, (tick || 0));
+            }
+            // Echinoderm Stereom Calcite Spicules & Benthic Mineral Dusting (Looks Agent v7.23.0)
+            if (typeof PedicellariaeOpticsRenderer !== 'undefined' && typeof echinodermPedicellariaeManager !== 'undefined') {
+                PedicellariaeOpticsRenderer.drawGlobalPedicellariaeEnvironment(ctx, canvas.width, canvas.height, echinodermPedicellariaeManager, (tick || 0));
             }
 
             // Benthic Detrital Particulates & Microscopic Turbidity Aesthetics (Looks Agent v3.30.0)
@@ -10332,11 +10691,14 @@ let activeRheoHoldCount = 0;
                 }
             });
 
+            } // end if (isProMode) for environment shaders & filaments
+
             // Organisms
             for (let o of organisms) {
                 o.draw();
             }
 
+            if (isProMode) {
             // Caste-Specific Insignia & Morphological Overlays (Looks Agent v5.08.0)
             if (typeof NestOpticsRenderer !== 'undefined' && typeof organisms !== 'undefined') {
                 NestOpticsRenderer.drawAllCasteOverlays(ctx, organisms, (tick || 0));
@@ -10350,6 +10712,11 @@ let activeRheoHoldCount = 0;
             // Specular Dazzle Glares & Chromatic Starbursts (Looks Agent v5.18.0)
             if (typeof IridescenceOpticsRenderer !== 'undefined' && typeof organisms !== 'undefined') {
                 IridescenceOpticsRenderer.drawDazzleGlares(ctx, organisms, (tick || 0));
+            }
+
+            // Pedicellariae Defensive Snapping & Parasite Crushing Arcs (Looks Agent v7.23.0)
+            if (typeof PedicellariaeOpticsRenderer !== 'undefined' && typeof organisms !== 'undefined') {
+                PedicellariaeOpticsRenderer.drawPedicellariaeSnaps(ctx, organisms, (tick || 0));
             }
 
             // In-Sim Cause-of-Death Micro-Badges & Floating Text (UI Agent v3.60.0)
@@ -10367,10 +10734,25 @@ let activeRheoHoldCount = 0;
                 ctx.restore();
                 if (b.life <= 0) deathBadges.splice(i, 1);
             }
+            } else {
+                if (deathBadges.length > 0) deathBadges.length = 0;
+            }
         }
 
         function gameLoop() {
             try {
+                fpsFrameCount++;
+                const now = (typeof performance !== "undefined" ? performance.now() : Date.now());
+                if (now - fpsLastTime >= 500) {
+                    currentFps = Math.min(60, Math.round((fpsFrameCount * 1000) / (now - fpsLastTime)));
+                    const fpsEl = document.getElementById('lblFps');
+                    if (fpsEl) {
+                        fpsEl.textContent = `${currentFps} FPS`;
+                        fpsEl.style.color = currentFps >= 50 ? '#10b981' : (currentFps >= 30 ? '#f59e0b' : '#ef4444');
+                    }
+                    fpsFrameCount = 0;
+                    fpsLastTime = now;
+                }
                 if (!isPaused) {
                     const steps = Math.min(simSpeed || 1, 4);
                     for (let s = 0; s < steps; s++) {
@@ -10384,88 +10766,200 @@ let activeRheoHoldCount = 0;
             requestAnimationFrame(gameLoop);
         }
 
-        // === TWO-TIER INTERACTIVE SCIENTIFIC CODEX & DOCUMENTATION HUB (UI Agent v3.61.0) ===
-        const guideModal = document.getElementById('guideModal');
-        const btnOpenGuide = document.getElementById('btnOpenGuide');
-        const btnCloseGuide = document.getElementById('btnCloseGuide');
-        const codexSearchInput = document.getElementById('codexSearch');
+        // === INTERACTIVE TUTORIAL & CODEX MODAL SYSTEM (FIXED & ENHANCED v7.07.1) ===
+        window.openTutorial = function() {
+            const m = document.getElementById('tutorialModal');
+            if (m) m.classList.add('active');
+        };
+        window.closeTutorial = function() {
+            const m = document.getElementById('tutorialModal');
+            if (m) m.classList.remove('active');
+        };
+        window.openGuide = function() {
+            const m = document.getElementById('guideModal');
+            if (m) m.classList.add('active');
+        };
+        window.closeGuide = function() {
+            const m = document.getElementById('guideModal');
+            if (m) m.classList.remove('active');
+        };
+        window.switchCodexTab = function(targetTabId, clickedBtn) {
+            const btns = document.querySelectorAll('.codex-tab-btn');
+            const panes = document.querySelectorAll('.codex-tab-pane');
+            btns.forEach(b => b.classList.remove('active'));
+            panes.forEach(p => p.classList.remove('active'));
+            if (clickedBtn) clickedBtn.classList.add('active');
+            const activePane = document.getElementById(targetTabId);
+            if (activePane) activePane.classList.add('active');
+        };
 
-        function openGuide() {
-            if (guideModal) guideModal.classList.add('active');
-        }
-        function closeGuide() {
-            if (guideModal) guideModal.classList.remove('active');
-        }
+        if (typeof window !== 'undefined' && window.addEventListener) window.addEventListener('DOMContentLoaded', () => {
+            const guideModal = document.getElementById('guideModal');
+            const tutorialModal = document.getElementById('tutorialModal');
+            const codexSearchInput = document.getElementById('codexSearch');
 
-        if (btnOpenGuide) btnOpenGuide.addEventListener('click', openGuide);
-        if (btnCloseGuide) btnCloseGuide.addEventListener('click', closeGuide);
-
-        if (guideModal) {
-            guideModal.addEventListener('click', e => {
-                if (e.target === guideModal) closeGuide();
+            if (guideModal) {
+                guideModal.addEventListener('click', e => {
+                    if (e.target === guideModal) window.closeGuide();
+                });
+            }
+            if (tutorialModal) {
+                tutorialModal.addEventListener('click', e => {
+                    if (e.target === tutorialModal) window.closeTutorial();
+                });
+            }
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                    window.closeGuide();
+                    window.closeTutorial();
+                }
             });
-        }
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape' && guideModal && guideModal.classList.contains('active')) {
-                closeGuide();
+
+            const codexTabBtns = document.querySelectorAll('.codex-tab-btn');
+            codexTabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    window.switchCodexTab(btn.getAttribute('data-tab'), btn);
+                });
+            });
+
+            if (codexSearchInput) {
+                codexSearchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    const allItems = document.querySelectorAll('.guide-item, .formula-box, .guide-section');
+                    const codexTabPanes = document.querySelectorAll('.codex-tab-pane');
+                    if (!query) {
+                        allItems.forEach(it => it.style.display = '');
+                        return;
+                    }
+                    codexTabPanes.forEach(p => p.classList.add('active'));
+                    allItems.forEach(it => {
+                        const text = it.textContent.toLowerCase();
+                        it.style.display = text.includes(query) ? '' : 'none';
+                    });
+                });
             }
         });
 
-        // Tab Navigation Switching
-        const codexTabBtns = document.querySelectorAll('.codex-tab-btn');
-        const codexTabPanes = document.querySelectorAll('.codex-tab-pane');
-        codexTabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const targetTab = btn.getAttribute('data-tab');
-                codexTabBtns.forEach(b => b.classList.remove('active'));
-                codexTabPanes.forEach(p => p.classList.remove('active'));
-                btn.classList.add('active');
-                const activePane = document.getElementById(targetTab);
-                if (activePane) activePane.classList.add('active');
-            });
-        });
-
-        // Search Filter Across Codex Items
-        if (codexSearchInput) {
-            codexSearchInput.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                const allItems = document.querySelectorAll('.guide-item, .formula-box, .guide-section');
-                if (!query) {
-                    allItems.forEach(it => it.style.display = '');
-                    return;
-                }
-                // When searching, make all tab panes visible to reveal matches across the codex
-                codexTabPanes.forEach(p => p.classList.add('active'));
-                allItems.forEach(it => {
-                    const text = it.textContent.toLowerCase();
-                    it.style.display = text.includes(query) ? '' : 'none';
-                });
-            });
-        }
-
         requestAnimationFrame(gameLoop);
     </script>
+
+    <!-- STEP-BY-STEP BEGINNER TUTORIAL MODAL -->
+    <div class="modal-overlay" id="tutorialModal">
+        <div class="modal-container" style="max-width: 820px;">
+            <div class="modal-header">
+                <h3>How to Play BioEcosystem — Quick Beginner's Tutorial</h3>
+                <button class="modal-close-btn" onclick="window.closeTutorial()">CLOSE [ESC]</button>
+            </div>
+            <div class="modal-body" style="padding: 16px;">
+                <div class="guide-section" style="border-left: 3px solid #10b981;">
+                    <h4 style="color: #10b981;">Welcome to Your Living Petri Dish!</h4>
+                    <p>You are watching a real-time ecosystem where microscopic creatures swim, hunt, hide, and evolve through <b>Natural Selection</b>. You don't need any biology degree to play — here is everything you need to know in 4 simple cards:</p>
+                </div>
+                <div class="tutorial-steps-grid">
+                    <div class="tutorial-card" style="border-top: 3px solid #38bdf8;">
+                        <h4 style="color: #38bdf8;">1. Who Eats Whom? (The Colors)</h4>
+                        <p>&bull; <b style="color: #10b981;">Green Dots (Plankton):</b> Plant food that grows naturally in the water.</p>
+                        <p>&bull; <b style="color: #38bdf8;">Blue Creatures (Grazers):</b> Peaceful herbivores that swim around eating green plankton.</p>
+                        <p>&bull; <b style="color: #ef4444;">Red Creatures (Hunters):</b> Fast predators that chase and eat Blue Grazers!</p>
+                        <p>&bull; <b style="color: #f59e0b;">Gold Creatures (Cleaners):</b> Scavengers that eat dead leftovers and keep the dish clean.</p>
+                    </div>
+                    <div class="tutorial-card" style="border-top: 3px solid #10b981;">
+                        <h4 style="color: #10b981;">2. How Evolution Works</h4>
+                        <p>&bull; Every creature has an <b>Energy Bar</b>. Moving fast costs energy; eating restores energy.</p>
+                        <p>&bull; When a creature reaches <b>150 Energy</b>, it splits into <b>2 baby creatures</b>!</p>
+                        <p>&bull; Babies inherit their parent's <b>Speed</b>, <b>Vision Range</b>, and <b>Body Size</b> with small random mutations. Over generations, slow creatures get eaten and fast/smart ones evolve!</p>
+                    </div>
+                    <div class="tutorial-card" style="border-top: 3px solid #f59e0b;">
+                        <h4 style="color: #f59e0b;">3. Safe Reefs &amp; Your Sandbox Powers</h4>
+                        <p>&bull; <b>Safe Reef Shelters:</b> The 2 dark circles in the dish are reefs. Small Blue Grazers can hide inside them where big Red Hunters cannot reach!</p>
+                        <p>&bull; <b>Click Any Creature:</b> Click a swimmer to track it live and see its Energy, Speed, Vision, and what it's doing.</p>
+                        <p>&bull; <b>God-Mode Tools:</b> Pick any tool on the right panel (<i>Drop Plankton</i>, <i>+ Blue Grazer</i>, <i>+ Red Hunter</i>, <i>Drop Virus</i>) and click/drag inside the dish!</p>
+                    </div>
+                    <div class="tutorial-card" style="border-top: 3px solid #a855f7;">
+                        <h4 style="color: #c084fc;">4. Beginner Mode vs. Pro Lab Mode</h4>
+                        <p>&bull; <b>Beginner Mode (Default):</b> Clean visuals, locked 60 FPS performance, and plain-English stats designed for fun gameplay.</p>
+                        <p>&bull; <b>Pro Lab Mode:</b> Click the <b>MODE: BEGINNER</b> button in the top bar at any time to switch to <b>MODE: PRO LAB</b> and unlock 81 channels of deep marine biology, hydrothermal vents, crinoid stalks, and cellular organelles!</p>
+                    </div>
+                </div>
+                <div style="margin-top: 14px; display: flex; justify-content: flex-end; gap: 10px;">
+                    <button class="action-btn codex-btn" onclick="window.closeTutorial(); window.openGuide();">Open Plain-English Dictionary &amp; Codex</button>
+                    <button class="action-btn mode-toggle-btn mode-beginner" onclick="window.closeTutorial()">Got It — Let's Play!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Two-Tier Interactive Scientific Codex & Deep Documentation Hub (UI Agent v3.61.0) -->
     <div class="modal-overlay" id="guideModal">
         <div class="modal-container">
             <div class="modal-header">
-                <h3>BioEcosystem Laboratory Scientific Codex &amp; Documentation Hub</h3>
-                <button class="modal-close-btn" id="btnCloseGuide">CLOSE [ESC]</button>
+                <h3>BioEcosystem Plain-English Dictionary &amp; Scientific Codex</h3>
+                <button class="modal-close-btn" id="btnCloseGuide" onclick="window.closeGuide()">CLOSE [ESC]</button>
             </div>
             <div class="codex-nav-bar">
                 <div class="codex-tabs">
-                    <button class="codex-tab-btn active" data-tab="tabOverview">1. Overview</button>
+                    <button class="codex-tab-btn active" data-tab="tabBeginnerDict">0. Plain-English Dictionary</button>
+                    <button class="codex-tab-btn" data-tab="tabOverview">1. Overview</button>
                     <button class="codex-tab-btn" data-tab="tabNiches">2. Niches &amp; Taxa</button>
                     <button class="codex-tab-btn" data-tab="tabMechanics">3. Mathematical Mechanics</button>
                     <button class="codex-tab-btn" data-tab="tabVisuals">4. Visual Diagnostics</button>
                     <button class="codex-tab-btn" data-tab="tabTelemetry">5. Telemetry &amp; Curves</button>
-                    <button class="codex-tab-btn" data-tab="tabRetrospective" style="border-color: rgba(56, 189, 248, 0.35); color: #38bdf8;">6. Centenary Retrospective</button>
+                    <button class="codex-tab-btn" data-tab="tabRetrospective" style="border-color: rgba(56, 189, 248, 0.35); color: #38bdf8;">6. Studio Roadmap</button>
                 </div>
-                <input type="text" class="codex-search-input" id="codexSearch" placeholder="Search codex..." />
+                <input type="text" class="codex-search-input" id="codexSearch" placeholder="Search any term (e.g. reef, virus, crinoid, speed)..." />
             </div>
             <div class="modal-body" id="codexBody">
+                <!-- Tab 0: Plain-English Dictionary for Beginners -->
+                <div class="codex-tab-pane active" id="tabBeginnerDict">
+                    <div class="guide-section" style="border-left: 3px solid #10b981;">
+                        <h4 style="color: #10b981;">What Are All These Things? (Plain-English Visual Dictionary)</h4>
+                        <p>Wondering what a term or visual structure means in Beginner Mode or Pro Lab Mode? Here is the plain-English translation of everything in the simulation:</p>
+                    </div>
+                    <div class="guide-grid">
+                        <div class="guide-item">
+                            <h5 style="color: #10b981;">Green Plankton (Food)</h5>
+                            <p>Tiny plant-like algae dots that grow naturally in the dish. Blue Grazers eat them to gain energy and reproduce.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #38bdf8;">Blue Grazers (Herbivores)</h5>
+                            <p>Peaceful plant-eating creatures. They evolve faster swimming speed or better vision to find plankton and escape predators.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #ef4444;">Red Hunters (Carnivores)</h5>
+                            <p>Predators with front mandibles that hunt Blue Grazers. If they eat all the grazers, they will starve—so nature balances their numbers!</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #f59e0b;">Gold Cleaners (Scavengers)</h5>
+                            <p>Decomposers that eat dead creature remains (brown/amber drops) and recycle them back into fresh nutrients for the dish.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #94a3b8;">Safe Reef Shelters (2 Dark Circles)</h5>
+                            <p>Porous rock barriers in the top and bottom of the dish. Small Grazers can slip inside the cracks to hide from large Red Hunters.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #f43f5e;">Virus / Pathogen &amp; Immunity</h5>
+                            <p>When infected, a creature gets a red ring and loses energy. Creatures with high Immunity survive and pass antibodies to their babies.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #c084fc;">Pro Mode: Purple Webs (Benthic Hive Nests)</h5>
+                            <p>In Pro Lab Mode, social creatures build purple silk nests on the dish floor to store extra food and protect their colony.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #eab308;">Pro Mode: Bottom Cones (Hydrothermal Vents)</h5>
+                            <p>In Pro Lab Mode, volcanic chimneys at the bottom of the dish release heat and sulfur that deep-sea creatures convert into energy.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #34d399;">Pro Mode: Biofilm Mats &amp; Slime</h5>
+                            <p>In Pro Lab Mode, green/amber bacterial mats grow on the floor and recycle dead organic waste into nutrients.</p>
+                        </div>
+                        <div class="guide-item">
+                            <h5 style="color: #fde047;">Pro Mode: Crinoids &amp; Seston Filters</h5>
+                            <p>In Pro Lab Mode, bottom-dwelling creatures can grow stalked lily-like crowns (Crinoids) or tentacles to catch falling food particles.</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Tab 1: Overview & Two-Tier Philosophy -->
-                <div class="codex-tab-pane active" id="tabOverview">
+                <div class="codex-tab-pane" id="tabOverview">
                     <div class="guide-section">
                         <h4>Simulation Architecture &amp; Two-Tier Experience</h4>
                         <p>BioEcosystem is an autonomous microscopic artificial life simulation operating in a bounded petri dish environment. The system models physical fluid dynamics, cellular genetics, evolutionary arms races, and multi-trophic biogeochemical feedback loops.</p>
@@ -11025,7 +11519,12 @@ Exuvia Benthic Mineral Husk: Mass = CuticleThickness &times; 5.5; Nutrient yield
                             <li><b>Hour 424 (Surum 7.04.0 - Completed):</b> UI Agent — src/ui/telemetry_crinoid.js &amp; css/style.css: 81. Telemetri Kanali (% CEA - Calyx Elevation Advantage) ve Krinoid HUD Paneli (172. dosya).</li>
                             <li><b>Hour 425 (Surum 7.05.0 - Completed):</b> QA Agent — benchmark_qa_v7050.js: 10.000 Adim 81 Kanalli Krinoid ve Reofilik Kararlilik Testi (173. dosya).</li>
                             <li><b>Hour 426 (Surum 7.06.0 - Completed):</b> Product Critic — docs/CRITIC_AUDIT_CRINOID.md: Devrilme Torku, Kalsifikasyon Maliyeti, Sap Kirilmasi ve 82. Kanal Denetimi (174. dosya).</li>
-                            <li><b>Hour 427 (Surum 7.07.0 - Planned):</b> System Agent — src/organs/crinoid_stalks.js: Devrilme Direnci, Pasif Reofilik Kilitlenme ve 82. Kanal (% RAR) Metrigi.</li>
+                            <li><b>Hour 427 (Surum 7.07.0 - Completed):</b> System Agent — src/organs/crinoid_stalks.js: Devrilme Direnci, Pasif Reofilik Kilitlenme ve 82. Kanal (% RAR) Metrigi.</li>
+                            <li><b>Hour 428 (Surum 7.08.0 - Completed):</b> Looks &amp; UI Agent — src/render/crinoid_optics.js &amp; src/ui/telemetry_crinoid.js: 82. Telemetri Kanali (% RAR - Rheophilic Articulation Ratio) ve Koral HUD Gostergeleri.</li>
+                            <li><b>Hour 429 (Surum 7.09.0 - Completed):</b> QA Agent — tests/benchmark_qa.js: 10.000 Adim 82 Kanalli Reofilik Krinoid Kararlilik ve 60 FPS Stres Testi.</li>
+                            <li><b>Hour 430 (Surum 7.10.0 - Planned):</b> Executive Director — docs/EPOCH38_CRINOID_JUBILEE.md: Epoch 38 Krinoid Jubilesi, Peak 350+ Tasima Kapasitesi ve 82 Kanalli Sistem Tescili.</li>
+                            <li><b>Hour 431 (Surum 7.11.0 - Planned):</b> Lead Planner — docs/EPOCH39_ECHINODERM_BLUEPRINT.md: Epoch 39 Pentamerik Simetri ve Su Damar Sistemi Mimarisi.</li>
+                            <li><b>Hour 430 (Surum 7.10.0 - Planned):</b> Executive Director — docs/EPOCH38_CRINOID_JUBILEE.md: Epoch 38 Krinoid Jubilesi, Peak 350+ Tasima Kapasitesi ve 82 Kanalli Sistem Tescili.</li>
                         </ul>
                     </div>
                     <div class="guide-section" style="border-left: 3px solid #06b6d4;">

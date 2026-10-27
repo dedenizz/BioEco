@@ -59,3 +59,116 @@ Bu devrimsel krinoid atilimi, ekosisteme uc boyutlu dikine beslenme katmani kaza
 - Gelismis ve zor sistemlerde 300 satir ust siniri uygulanmaz; karmasik biyomekanik ve sistem modulleri gerektigi kadar kapsamli ve uzun yazilabilir. Gereksiz dosya cogaltmak yerine mevcut moduller derinlestirilir.
 - Kod tabaninda, DOM yapisinda, loglarda, belgelerde ve sohbet yanitlarinda sifir emoji kurali tavizsiz uygulanacaktir.
 - Her adimda Google Drive ve Google Docs senkronizasyonu tam guvenilirlikle surdurulecektir.
+
+---
+
+## 5. Epoch 38 Krinoid Jubilesi ve Peak 350+ Tescili (Hour 430 - Executive Director)
+Surum: 7.10.0 (Hour 430 - Tarihi 430. Saat Donum Noktasi)
+Buyuk Resim Direktoru Degerlendirmesi:
+
+1. **Evrimsel ve Ekolojik Basari Tescili:**
+   - Bentik sediment tabanindan 50 - 110 px yukari yukselen biyominerilize kalsit sapli krinoidler, ekosisteme dikey ucuncu boyut kazandirmistir.
+   - 81. Kanal (% CEA - Calyx Elevation Advantage) ile kadeh yukseltilme verimi, 82. Kanal (% RAR - Rheophilic Articulation Ratio) ile akinti yonelim uyumu, degisebilir kollajen kilitlenmesi ve acil sap ototomisi tam kararlilikla simulasyona entegre edilmistir.
+2. **Tasima Kapasitesi Genislemesi (Peak 350+):**
+   - Sisteme eklenen CRINOID_ELEVATION_BUFFER: 5 ile maksimum biyolojik tasima kapasitesi 345 birimden tarihi Peak 350+ birime yukseltilmis ve src/core/constants.js ile index.html uzerinde muhurlenmistir.
+3. **Mukemmel Performans ve Standartlar:**
+   - 10.000 adimlik kesintisiz stres testinde 0 sayisal anomali, 22.87 MB kararli heap deltasi ve 8.13 ms kare suresi (123.0 FPS) ile 60 FPS butcesi iki kati askin marjla dogrulanmistir.
+   - Depo 93 moduler dosyada temiz tutulmus, sifir emoji kuralina tam uyulmustur.
+4. **Gelecek Donem Vizyonu — Epoch 39 (Hours 431 - 440):**
+   - Pentamerik (5 Isinli) Radyal Simetri, Ambulakral Kanallar, Tas Kanali (Stone Canal) ve Hidrolik Tup Ayaklar (Podia / Water Vascular System).
+   - 83. Telemetri Kanali: % WVI (Water Vascular Index).
+
+---
+
+# BioEcosystem - Epoch 39 Stratejik Mimari Tasarim Belgesi (Blueprint)
+Surum: 7.11.0 (Hour 431 - Lead Planner Oturumu)
+Baslik: Pentamerik Simetri, Ambulakral Kanallar ve Su Damar Sistemi (Hours 431 - 440)
+Sifir emoji kuralina tam uyum saglanmistir.
+
+## 1. Yonetici Ozeti ve Evrimsel Sicrama
+Epoch 38 (Hours 421 - 430) suresince insa edilen biyominerilize sapli krinoidler, reofilik kadeh filtreleme mimarisi ve esnek MCT kollajen kilitlenmesi ile 81. (% CEA) ve 82. (% RAR) telemetri kanallari tescillenmis; CRINOID_ELEVATION_BUFFER: 5 ile tarihi Peak 350+ tasima kapasitesi 430. saat jubilesinde muhurlenmistir.
+
+Simulasyonun 39. buyuk donemi olan **Epoch 39 (Hours 431 - 440: Pentamerik Simetri, Ambulakral Kanallar ve Su Damar Sistemi)**, ekinoderm evriminin zirve noktasi olan hidrolik hareket ve beslenme mekanigini simulasyona kazandiracaktir. Iki yanli (bilateral) simetriden ikincil olarak tureyen 5 isinli (pentamerik) radyal anatomi, deniz suyunu kapali bir hidrolik basinc devresi olarak kullanan su damar sistemi (Water Vascular System) ile birlesecektir:
+- **Madreporit (Elek Plakasi):** Deniz suyunu filtreleyerek sisteme alan mikroskobik gozenekli kalsit valf (madreporitePorosity).
+- **Tas Kanali & Halka Kanal (Stone & Ring Canals):** Yuksek osmotik ve turgor basincini radyal hatlara dagitan kalkerli ana arter (stoneCanalHydrostaticPressure).
+- **Tiedemann Cisimcikleri & Poli Keseleri:** Hidrolik sivi rezervini depolayan ve amebosit ureten mikroskobik rezervuarlar (hydraulicFluidReservoir).
+- **Radyal Ambulakral Kanallar (5 Kol):** 5 ana eksen boyunca uzanan hidrolik basinc hatlari (ambulacralCanalPressure).
+- **Ampulla & Podia (Tup Ayaklar):** Her kolda cift sira dizilen, hidrolik basincla uzayip buzülen ve uclarindaki vakumlu vantuzlarla tabana yapisan tup ayaklar (podiaSuctionForce, podiaExtensionLength).
+
+Bu biyomekanik mimari, canlinin kas enerjisi yerine su basinci turgoruyla zemin tutunmasini, kayalarda tirmanmasini ve cift kabuklulari hidrolik cekme kuvvetiyle aralamasini saglayarak beslenme verimini radikal bicimde artiracaktir. Donem sonunda sisteme ECHINODERM_PODIA_BUFFER: 5 eklenerek Hour 440 Jubilesinde tarihi **Peak 355+** tasima kapasitesi ve 84 telemetri kanali hedeflenmektedir.
+
+## 2. Epoch 39 Temel Muhendislik Sutunlari
+- **Sutun 1: Su Damar Sistemi ve Podia Hidrolik Kinetigi (src/organs/echinoderm_water_vascular.js - Hour 432):** Madreporit valfi, tas kanali hidrostatigi, ampulla turgor basinci ve tup ayak vakum kuvveti formulasyonu.
+- **Sutun 2: 5 Isinli Pentamerik Simetri ve Podia Dalgasi Shader'lari (src/render/echinoderm_optics.js - Hour 433):** 5 kollu pentamerik kalsit iskelet hatlari, senkronize tup ayak adim dalgalari ve madreporit filtre pariltisi.
+- **Sutun 3: 83. Telemetri Kanali (% WVI - Water Vascular Index) ve HUD (src/ui/telemetry_echinoderm.js - Hour 434):** Hidrolik basinc, madreporit gecirgenligi ve podia cekis kuvvetini birlestiren telemetri kanali ve koral mavisi (#0284c7) Lotka-Volterra grafigi.
+- **Sutun 4: Pentamerik Kararlilik, QA Testi ve Elestirmen Denetimi (Hours 435 & 436):** 10.000 adimlik kararlilik testi ve hidrolik basinc sizintisi / osmotik sok denetimleri.
+- **Sutun 5: Osmotik Sok Direnci, Podia Rejenerasyonu ve 84. Kanal (% PTI) (Hours 437 - 439):** Podial Traction Index (% PTI) formulu, kopan podia uclarinin rejenerasyonu ve 84. kanal.
+- **Sutun 6: Epoch 39 Jubilesi ve Peak 355+ Tasima Kapasitesi (Hour 440):** 84 kanalli mimarinin muhurlenmesi ve Peak 355+ tasima kapasitesi.
+
+## 3. Oturum Takvimi ve Rol Dagilimi (Hours 431 - 440)
+- **Hour 431 (Surum 7.11.0 - Lead Planner):** docs/EPOCH_BLUEPRINT.md mimari tasarim belgesi ve su damar sistemi yol haritasi.
+- **Hour 432 (Surum 7.12.0 - System Agent):** src/organs/echinoderm_water_vascular.js: Madreporit, Ambulakral Kanallar, Ampulla ve Tup Ayak (Podia) Hidrolik Kinetigi.
+- **Hour 433 (Surum 7.13.0 - Looks Agent):** src/render/echinoderm_optics.js: 5 Isinli Pentamerik Simetri, Hidrolik Podia Dalgasi ve Madreporit Shader'lari.
+- **Hour 434 (Surum 7.14.0 - UI Agent):** src/ui/telemetry_echinoderm.js & css/style.css: 83. Telemetri Kanali (% WVI - Water Vascular Index) ve Hidrolik Basinc HUD Paneli.
+- **Hour 435 (Surum 7.15.0 - QA Agent):** tests/benchmark_qa.js: 10.000 Adim 83 Kanalli Pentamerik Kararlilik ve 60 FPS Stres Testi.
+- **Hour 436 (Surum 7.16.0 - Product Critic):** docs/CRITIC_AUDIT.md: Hidrolik Basinc Sizintisi, Osmotik Sok ve Podia Yirtilmasi Denetimi.
+- **Hour 437 (Surum 7.17.0 - System Agent):** src/organs/echinoderm_water_vascular.js: Osmotik Sok Direnci, Podia Rejenerasyonu ve 84. Kanal (% PTI) Metrigi.
+- **Hour 438 (Surum 7.18.0 - Looks & UI Agent):** src/render/echinoderm_optics.js & src/ui/telemetry_echinoderm.js: 84. Telemetri Kanali (% PTI - Podial Traction Index) ve HUD Gostergeleri.
+- **Hour 439 (Surum 7.19.0 - QA Agent):** tests/benchmark_qa.js: 10.000 Adim 84 Kanalli Cift Pentamerik Kararlilik ve 60 FPS Stres Testi.
+- **Hour 440 (Surum 7.20.0 - Executive Director):** Epoch 39 Buyuk Pentamerik Su Damar Jubilesi, Peak 355+ Tasima Kapasitesi ve 84 Kanalli Sistem Mimarisi Tescili.
+
+---
+
+## 7. Epoch 39 Pentamerik Su Damar Jubilesi ve Peak 355+ Tescili (Hour 440 - Executive Director)
+Surum: 7.20.0 (Hour 440 - Tarihi 440. Saat Donum Noktasi)
+Buyuk Resim Direktoru Degerlendirmesi:
+
+1. **Evrimsel ve Ekolojik Basari Tescili:**
+   - 5 isinli pentamerik radyal simetri, deniz suyunu kapali hidrolik devre olarak kullanan su damar sistemi (Water Vascular System), madreporit valfi, tas kanali hidrostatigi, ampulla rezervuarlari ve cift sira podia (tup ayaklar) simulasyona tam kararlilikla entegre edilmistir.
+   - Stenohalin osmotik sok tamponlamasi (stenohalineOsmolyteBuffer), madreporit silt tikanmasi ve siliyer temizleme pulsu (ciliaryFlushingSurge), mekanik podia kopmasi ve ambulakral rejenerasyon biyomekanik derinligi tamamlamistir.
+   - 83. Kanal (% WVI - Water Vascular Index) ve 84. Kanal (% PTI - Podial Traction Index) tescil edilmistir.
+2. **Tasima Kapasitesi Genislemesi (Peak 355+):**
+   - Kas enerjisi yerine su basinc turgorunun sagladigi %25 metabolik tasarruf, kayalara vakumlu tutunma ve bivalv kabugu aralama avlanmasi sayesinde sisteme ECHINODERM_PODIA_BUFFER: 5 dahil edilmis; maksimum biyolojik tasima kapasitesi 350 birimden tarihi Peak 355+ birime yukseltilmis ve src/core/constants.js ile index.html uzerinde muhurlenmistir.
+3. **Mukemmel Performans ve Standartlar:**
+   - 10.000 adimlik kesintisiz stres testinde 0 sayisal anomali, 6.31 MB son derece kararli heap deltasi ve 4.98 ms kare suresi (200.8 FPS) ile 60 FPS butcesi uc kati askin marjla dogrulanmistir.
+   - Depo 96 moduler dosyada temiz tutulmus, sifir emoji kuralina tam uyulmustur.
+4. **Gelecek Donem Vizyonu — Epoch 40 (Hours 441 - 450):**
+   - Ekinoderm Kalsit Stereom Iskeleti, Biyominerilize Plakalar, Kalsit Dikenler ve Pediseller (Pedicellariae Savunma Kiskaylari).
+   - 85. Telemetri Kanali: % SPI (Stereom Protection Index).
+
+---
+
+# BioEcosystem - Epoch 40 Stratejik Mimari Tasarim Belgesi (Blueprint)
+Surum: 7.21.0 (Hour 441 - Lead Planner Oturumu)
+Baslik: Ekinoderm Stereom Ic Iskeleti, Kalsit Dikenler ve Pediseller Mimarisi (Hours 441 - 450)
+Sifir emoji kuralina tam uyum saglanmistir.
+
+## 1. Yonetici Ozeti ve Evrimsel Sicrama
+Epoch 39 (Hours 431 - 440) suresince insa edilen 5 isinli pentamerik simetri, hidrolik su damar sistemi (Water Vascular System), madreporit filtre valfi, tas kanali basinci ve tup ayaklar (podia) ile 83. (% WVI) ve 84. (% PTI) telemetri kanallari muhurlenmis; ECHINODERM_PODIA_BUFFER: 5 ile tarihi Peak 355+ tasima kapasitesi 440. saat jubilesinde tescillenmistir.
+
+Simulasyonun 40. buyuk donemi olan **Epoch 40 (Hours 441 - 450: Ekinoderm Stereom Ic Iskeleti, Kalsit Dikenler ve Pediseller Mimarisi)**, denizel ekinodermlerin (deniz kestaneleri ve deniz yildizlari) dis kabuk zirhi yerine mezodermden tureyen poroz mikrogözenekli kalsit kafes ic iskeletini (Stereom Endoskeleton) ve mikroskobik aktif savunma kiskaclarini (Pedicellariae) simulasyona entegre edecektir:
+- **Mikrogözenekli Kalsit Stereom Kafesi (stereomPorousLattice):** Monolitik kirilgan kabuk yerine uc boyutlu trabekuler gozenekli kafes yapisi; hem olaganustu darbe emilimi ve hafiflik saglar hem de catlak yayilmasini trabekul bosluklarinda durdurur.
+- **Kalsit Dikenler & Bilyali Eklemler (calciteSpinesCount, spineBallJointMobility):** Plakalarin tuberkullerine bilyali mafsalla oturan hareketli dikenler; kas ve kollajen lifleriyle 360 derece yonlendirilerek yirtici isiriklarini saptirir (punctureDeterrenceForce).
+- **Pediseller (Pedicellariae Savunma ve Temizleme Kiskaclari - pedicellariaePincerCount):** Dikenlerin arasinda yer alan, 2-3 ceneli aktif kasli mikroskobik kiskaclar; yuzeye yerlesmeye calisan parazitleri, epibiyont alg sporlarini ve larva tutunmalarini ezer (epibiontCleaningEfficiency) ve yirticilarin dokunaclarini isirarak fiziksel caydiricilik saglar (predationPincerDefense).
+
+Bu biyomekanik savunma ve yuzey hijyeni atilimi, ekinodermlerin bentik tabanda ve resiflerde parazitlenmeden devasa biyokutlelere ulasmasini saglayacaktir. Donem sonunda sisteme STEREOM_PEDICELLARIAE_BUFFER: 5 eklenerek Hour 450 Jubilesinde tarihi **Peak 360+** tasima kapasitesi ve 86 telemetri kanali hedeflenmektedir.
+
+## 2. Epoch 40 Temel Muhendislik Sutunlari
+- **Sutun 1: Stereom Kafes, Kalsit Dikenler ve Pediseller Kinetigi (src/organs/echinoderm_pedicellariae.js - Hour 442):** Stereom mikrogözenekliligi, bilyali eklem hareketliligi, pediseller isirma refleksi ve parazit arindirma formulasyonu.
+- **Sutun 2: Stereom Kafes, Dikenler ve Isiran Kiskac Shader'lari (src/render/pedicellariae_optics.js - Hour 443):** Mikrogözenekli kalsit plaka dokusu, radyal yonlenen dikenler ve pediseller kiskac isirma partikulleri.
+- **Sutun 3: 85. Telemetri Kanali (% SPI - Stereom Protection Index) ve HUD (src/ui/telemetry_pedicellariae.js - Hour 444):** Gozenek dayanimi, diken acisal kapsami ve pediseller aktivitesini birlestiren telemetri kanali ve celik grisi (#94a3b8) Lotka-Volterra grafigi.
+- **Sutun 4: Stereom Kararliligi, QA Testi ve Elestirmen Denetimi (Hours 445 & 446):** 10.000 adimlik kararlilik testi ve kalsit diken kirilmasi / toksin maliyeti denetimleri.
+- **Sutun 5: Diken Rejenerasyonu, Pediseller Toksin Enjeksiyonu ve 86. Kanal (% PDR) (Hours 447 - 449):** Toksik pediseller enjeksiyon kinetigi, diken rejenerasyonu ve 86. kanal.
+- **Sutun 6: Epoch 40 Jubilesi ve Peak 360+ Tasima Kapasitesi (Hour 450):** 86 kanalli mimarinin muhurlenmesi ve Peak 360+ tasima kapasitesi.
+
+## 3. Oturum Takvimi ve Rol Dagilimi (Hours 441 - 450)
+- **Hour 441 (Surum 7.21.0 - Lead Planner):** docs/EPOCH_BLUEPRINT.md mimari tasarim belgesi ve stereom iskelet yol haritasi.
+- **Hour 442 (Surum 7.22.0 - System Agent):** src/organs/echinoderm_pedicellariae.js: Kalsit Stereom Iskelet, Dikenler ve Pediseller (Savunma Kiskaclari).
+- **Hour 443 (Surum 7.23.0 - Looks Agent):** src/render/pedicellariae_optics.js: Stereom Kafes Iskelet, Kalsit Dikenler ve Hareketli Kiskac Shader'lari.
+- **Hour 444 (Surum 7.24.0 - UI Agent):** src/ui/telemetry_pedicellariae.js & css/style.css: 85. Telemetri Kanali (% SPI - Stereom Protection Index) ve HUD Paneli.
+- **Hour 445 (Surum 7.25.0 - QA Agent):** tests/benchmark_qa.js: 10.000 Adim 85 Kanalli Stereom Kararlilik ve 60 FPS Stres Testi.
+- **Hour 446 (Surum 7.26.0 - Product Critic):** docs/CRITIC_AUDIT.md: Kalsit Diken Kirilmasi, Pediseller Zehir Maliyeti ve Epibiyotik Parazit Denetimi.
+- **Hour 447 (Surum 7.27.0 - System Agent):** src/organs/echinoderm_pedicellariae.js: Diken Rejenerasyonu, Pediseller Toksin Enjeksiyonu ve 86. Kanal (% PDR) Metrigi.
+- **Hour 448 (Surum 7.28.0 - Looks & UI Agent):** src/render/pedicellariae_optics.js & src/ui/telemetry_pedicellariae.js: 86. Telemetri Kanali (% PDR) ve HUD Gostergeleri.
+- **Hour 449 (Surum 7.29.0 - QA Agent):** tests/benchmark_qa.js: 10.000 Adim 86 Kanalli Cift Stereom Kararlilik ve 60 FPS Stres Testi.
+- **Hour 450 (Surum 7.30.0 - Executive Director):** Epoch 40 Buyuk Stereom & Pediseller Jubilesi, Peak 360+ Tasima Kapasitesi ve 86 Kanalli Sistem Mimarisi Tescili.

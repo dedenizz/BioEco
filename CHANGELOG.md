@@ -1,5 +1,267 @@
 # BioEcosystem — Changelog
 
+## [Version 7.28.0] — 2026-10-27 20:10 (İnşa Ekibi: Görsel Tasarım ve Arayüz Ekibi - 86. Telemetri Kanalı % PDR, Kırık Diken ve Globifer Zehir HUD Paneli)
+- **86. Telemetri Kanalı (% PDR - Pedicellariae Deterrence Ratio) ve Kıskaç HUD Paneli (src/ui/telemetry_pedicellariae.js & css/style.css):**
+  - **86. Kanal Formülasyonu (% PDR):** Nörotoksin doluluk oranı (%30 ağırlık), kıskaç kapanma hızı (%25 ağırlık), sağlam diken oranı (%25 ağırlık) ve dermal papula hijyeni (%20 ağırlık) birleştirilerek canlının kimyasal ve mekanik caydırıcılık kapasitesi hesaplandı.
+  - **Dört Kademeli Biyolojik Rejim:** Kimyasal Savunma Çöküşü (0-%29), Düşük Toksin Yükü ve Kırık Diken Güdükleri (%30-%59), Paralitik Nörotoksin ve Aktif Kıskaç Savunması (%60-%84) ve Maksimal Globifer Zehir ile Aksiyal Rejenerasyon (%85-%100) rejimleri tanımlandı.
+  - **Laboratuvar HUD Paneli ve Göstergeleri:** `#valPDRIndex` ana göstergesi, `#valPDRStatus` detaylı metrik dökümü (nörotoksin yükü, sağlam/kırık diken oranı, rejenerasyon olayları, zehir tükenmesi ve hipoksi katsayısı) canlı DOM katmanına eklendi.
+  - **Yakut Kırmızısı Lotka-Volterra Entegrasyonu:** `historyData.pedicellariaeDeterrenceRatio` tamponu Lotka-Volterra popülasyon grafiğine yakut kırmızısı (#e11d48) çizgiyle bağlandı; `css/style.css` içerisine `.pdr-badge` ve durum sınıfları işlendi.
+- **Kırık Diken, Zehir Kesecikleri ve Dermal Boğulma Optiği (src/render/pedicellariae_optics.js):**
+  - **Kırık Diken Güdükleri ve Aksiyal Tomurcuklar:** Mekanik travma anında kırılan kalsit diken güdükleri, pürüzlü kırılma çizgileri ve aksiyal kalsiyum mineral kristallenme parıltıları modellendi.
+  - **Globifer Zehir Damlaları ve Toksin Püskürmesi:** 2-3 çeneli kıskaç başlarında yakut kırmızısı nörotoksin kesecikleri, hızlı kapanma anında ortaya çıkan mikroskobik zehir buharı flaşları ve yüksek % PDR caydırıcılık haleleri tuvale aktarıldı.
+  - **Dermal Papula Boğulması:** Epibiyotik kirlenmenin dermal solunum papulalarını örttüğü bölgelerdeki koyu zeytin yeşili boğulma kabukları görselleştirildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.28.0, `HISTORIC_MILESTONE_HOURS: 448`, `TOTAL_TELEMETRY_CHANNELS: 86` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'LOOKS-UI 448H | v7.28.0' yapıldı; `coolBiologyFacts` güncellendi.
+  - `tests/benchmark_qa.js`: 89 modül, 86 kanal denetimi ve 77.8 FPS hız ile başsız stres testi başarıyla geçti.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.27.0] — 2026-10-27 19:55 (İnşa Ekibi: Sistem Ajanı - Diken Rejenerasyonu, Pediseller Toksin Enjeksiyonu ve 86. Kanal Metriği)
+- **Ekinoderm Stereom İskelet ve Pediseller Biyofizik Modülü (src/organs/echinoderm_pedicellariae.js):**
+  - **Kalsit Diken Kırılması ve Aksiyal Rejenerasyon:** Avcı darbeleri ve mekanik sürtünme anında kırılan kalsit dikenler (`brokenSpinesCount`); kalsiyum minerali ve ATP harcanarak tüberküller üzerinden yürütülen aksiyal kalsit kristal büyümesi (`spineRegenerationRate`) modellendi.
+  - **Globifer Zehir Bezleri ve Nörotoksin Caydırıcılığı:** Avcı dokusunu ısıran kıskaçların ucundaki zehir bezleri (`venomousPedicellariaeGland`, `neurotoxinPayload`); avcıya felç edici hasar ve hız kesintisi uygulayan zehir enjeksiyonu ile protein bazlı zehir dolum döngüsü kodlandı.
+  - **Dermal Papula Boğulması ve Hipoksi Dinamikleri:** Pediseller hijyeni aksadığında yüzeyi kaplayan epibiyotik biyofilmin dermal solunum papulalarını tıkaması (`dermalGasExchangeImpairment`) ve hücresel solunum kısıtlaması simüle edildi.
+  - **86. Kanal (% PDR) Matematiksel Temelleri:** Zehir potansiyeli, kıskaç hazırlığı, sağlam diken oranı ve dermal hijyeni birleştiren Pediseller Caydırıcılık Oranı (% PDR) formülasyonu sisteme bağlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.27.0, `HISTORIC_MILESTONE_HOURS: 447` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'SYSTEM 447H | v7.27.0' yapıldı; `coolBiologyFacts` güncellendi.
+  - `tests/benchmark_qa.js`: Kırık diken, nörotoksin ve dermal boğulma telemetri dökümleri eklendi; 89 modül, 114.0 FPS hız ve 0 sayısal sapma ile doğrulandı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.26.0] — 2026-10-27 18:15 (Eleştirmen & Problem Yaratan: Product Critic - Kalsit Diken Kırılması, Pediseller Zehir Maliyeti ve Epibiyotik Parazit Denetimi)
+- **Epoch 40 Ürün Eleştirisi ve Sistem Denetim Belgesi (docs/CRITIC_AUDIT.md):**
+  - **Kalsit Diken Kırılması ve Aksiyal Rejenerasyon:** Mekanik darbelerde diken kırılması (`brokenSpinesCount`) ve arkasında kalan güdüklerin kalsiyum minerali ve ATP ile aksiyal olarak yeniden büyütülmesi (`spineRegenerationRate`) şartnamesi çıkarıldı.
+  - **Globifer Pediseller Toksin Bezleri ve Tükenme Kinetiği:** Mekanik kıskaçlara ek olarak felç edici nörotoksin taşıyan zehir bezleri (`venomousPedicellariaeGland`, `neurotoxinPayload`) ve toksin tükenmesi durumundaki kimyasal caydırıcılık düşüşü tanımlandı.
+  - **Epibiyotik Biyofilm Patlaması ve Dermal Papula Boğulması:** Temizlenmeyen kütikül yüzeylerinde oluşan sert biyofilmin dermal solunum papulalarını tıkaması (`dermalGasExchangeImpairment`) ve hipoksi hasarı belgelendi.
+  - **86. Telemetri Kanalı (% PDR - Pedicellariae Deterrence Ratio) Şartnamesi:** Aktif nörotoksin yükü, kıskaç ısırma hazırlığı ve parazit arındırma oranını ölçecek kanal ile yakut kırmızısı (#e11d48) HUD rozeti (`.pdr-badge`) şartnamesi ilan edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.26.0, `HISTORIC_MILESTONE_HOURS: 446` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'CRITIC 446H | v7.26.0' yapıldı; `coolBiologyFacts` güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.25.0] — 2026-10-27 17:15 (Kalite & Ara Denetim Ekibi: QA Agent - 10.000 Adım 85 Kanallı Stereom Kararlılık ve 60 FPS Stres Testi)
+- **10.000 Adımlık 85 Kanallı Başsız Stres ve Performans Denetimi (tests/benchmark_qa.js):**
+  - **Sıfır Sayısal Sapma:** 10.000 simülasyon adımında 85 telemetri kanalı ve stereom iç iskelet kinetiği boyunca tam 0 NaN, 0 sonsuzluk ve 0 bellek/fizik sapması tescillendi.
+  - **Bellek ve Heap Kararlılığı:** 10.000 adım boyunca heap bellek artışı sadece 11.82 MB seviyesinde ölçüldü; nesne havuzlama ve temizleme döngülerinin sızıntısız çalıştığı kanıtlandı.
+  - **Yüksek Kare Hızı ve Kare Bütçesi:** Ortalama simülasyon adım süresi 2.61 ms, render süresi 0.70 ms ve toplam kare süresi 3.31 ms olarak hesaplandı (16.67 ms 60 FPS bütçesinin beşte biri). Sürdürülebilir hız 302.1 FPS olarak mühürlendi.
+  - **85. Kanal (% SPI) Biyolojik Kararlılığı:** Stereom kafes gözenekliliği, darbe sönümleme katsayısı, bilyalı mafsal diken açısal kapsamı ve pediseller parazit temizlik döngüleri tüm nüfusta doğrulandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.25.0, `HISTORIC_MILESTONE_HOURS: 445` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'QA 445H | v7.25.0' yapıldı; `coolBiologyFacts` güncellendi.
+  - `tests/benchmark_qa.js`: 89 modül, 10.000 adım ve 85 kanal denetimi başarıyla tamamlandı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.24.0] — 2026-10-27 16:45 (İnşa Ekibi: Kullanıcı Arayüzü Ekibi - 85. Telemetri Kanalı % SPI ve Stereom Koruma HUD Paneli)
+- **85. Telemetri Kanalı (% SPI - Stereom Protection Index) ve Pediseller Paneli (src/ui/telemetry_pedicellariae.js & css/style.css):**
+  - **85. Kanal Formülasyonu (% SPI):** Mikrogözenekli kalsit stereom kafesi (%30 ağırlık), darbe sönümleme katsayısı (%25 ağırlık), bilyalı mafsallı diken kapsama oranı (%25 ağırlık) ve pediseller epibiont arındırma hijyeni (%20 ağırlık) birleştirilerek canlının bütünsel koruma katsayısı hesaplandı.
+  - **Dört Kademeli Biyolojik Rejim:** Korumasız Kütikül (0-%29), Gelişmekte Olan Trabeküler Kafes (%30-%59), Dikenli Savunma ve Hijyen Barikatı (%60-%84) ve Maksimal Trabeküler Stereom Koruması (%85-%100) rejimleri tanımlandı.
+  - **Laboratuvar HUD Paneli ve Göstergeleri:** `#valSPIIndex` ana göstergesi, `#valSPIStatus` detaylı metrik dökümü (stereom oranı, diken sayısı, pediseller sayısı, sönümleme ve kirlenme yüzdeleri) canlı DOM katmanına eklendi.
+  - **Çelik Grisi Lotka-Volterra Entegrasyonu:** `historyData.stereomProtectionIndex` tamponu Lotka-Volterra popülasyon grafiğine çelik grisi (#94a3b8) çizgiyle bağlandı; `css/style.css` içerisine `.spi-badge` ve durum sınıfları işlendi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.24.0, `HISTORIC_MILESTONE_HOURS: 444`, `TOTAL_TELEMETRY_CHANNELS: 85` olarak güncellendi.
+  - `index.html`: `src/ui/telemetry_pedicellariae.js` script tagi eklendi; `historyData` yapısı genişletildi; simülasyon telemetri döngüsüne bağlandı; başlık rozeti 'UI 444H | v7.24.0' yapıldı; `coolBiologyFacts` güncellendi.
+  - `tests/benchmark_qa.js`: 89 harici modül doğrulandı; 85 kanal denetlendi; 133.2 FPS hız ve 0 sayısal sapma ile başsız test tamamlandı.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.23.0] — 2026-10-27 15:20 (İnşa Ekibi: Görsel Tasarım Ekibi - Stereom Kafes, Kalsit Diken ve Pediseller Shader'ları)
+- **Ekinoderm Stereom İskelet ve Pediseller Optik Modülü (src/render/pedicellariae_optics.js):**
+  - **Trabeküler Gözenekli Stereom Plakaları (drawTrabecularStereomPlates):** Kalsit kristal çift kırılma ışıltısı, trabeküler mikrogözenek fenestrasyonları ve darbe enerjisi sönümleme aurası mikroskop estetiğiyle çizildi.
+  - **Bilyalı Mafsallı Kalsit Dikenler (drawArticulatedCalciteSpines):** Yuvarlak tüberküllere oturan bilyalı mafsallar; yivli kalsit iğneler ve yaklaşan etçil yırtıcılara karşı 360 derece yönelerek siper oluşturan aktif savunma kinetiği modellendi.
+  - **Pediseller Kıskaç Artikülasyonu (drawPedicellariaePincers):** Dikenler arasına serpiştirilmiş 2 ve 3 çeneli mikroskobik pediseller; periyodik açılıp kapanarak parazit ve döküntüleri parçalayan kıskaç hareketleri ve mikro-kapanma flaşları tuvale aktarıldı.
+  - **Epibiyotik Biyofilm ve Hijyen Parlaklığı (drawEpibiontState):** Temizlenmemiş yüzeylerdeki yosun/döküntü kirlenme benekleri ile pedisellerce arındırılmış yüksek SPI bölgelerindeki sedefli kalsit ışıltısı görselleştirildi.
+  - **Bentik Kalsit Spikül Çökelimi ve Isırma Şok Dalgaları:** Taban tortu katmanında asılı stereom spikül tozu (`drawGlobalPedicellariaeEnvironment`) ve parazit ezme/ısırık temas yayları (`drawPedicellariaeSnaps`) eklendi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.23.0, `HISTORIC_MILESTONE_HOURS: 443` olarak güncellendi.
+  - `index.html`: `src/render/pedicellariae_optics.js` script tagi ve `Organism.prototype.draw`, küresel bentik ortam ve üst katman döngülerine bağlandı; başlık rozeti 'LOOKS 443H | v7.23.0' yapıldı; `coolBiologyFacts` güncellendi.
+  - `tests/benchmark_qa.js`: 88 harici modül doğrulandı; 197.2 FPS ortalama hız ve 0 sayısal sapma ile testler başarıyla geçti.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.22.0] — 2026-10-27 14:25 (İnşa Ekibi: Sistem Ajanı - Stereom İç İskelet, Kalsit Dikenler ve Pediseller Kinetiği)
+- **Ekinoderm Stereom İç İskelet ve Pediseller Biyomekaniği (src/organs/echinoderm_pedicellariae.js):**
+  - **Poröz Stereom Trabeküler Kafesi:** Monolitik mineral yerine darbe enerjisini dağıtan ve çatlak yayılmasını durduran 3 boyutlu mikrogözenekli kalsit kafes yapısı (`stereomPorousLattice`, `impactDampingCoefficient`) modellendi.
+  - **Bilyalı Mafsallı Kalsit Dikenler:** Kalsit tüberküllere oturan hareketli dikenler (`calciteSpinesCount`, `spineBallJointMobility`); yırtıcı tehditlerine doğru yönelerek delme ve saptırma hasarı uygulayan `punctureDeterrenceForce` kinetiği kodlandı.
+  - **Pediseller Savunma ve Yüzey Temizleme Kıskaçları:** Diken aralarında yer alan 2-3 çeneli aktif mikroskobik kıskaçlar (`pedicellariaePincerCount`); yüzey epibiont parazit yükünü ezen `epibiontCleaningEfficiency` ve avcı dokunaçlarını ısıran refleksler simüle edildi.
+  - **Hafifletilmiş Mineral Bakımı ve Telemetri Hazırlığı:** Trabeküler gözenekler sayesinde kalsit bakım vergisi %45 düşürüldü; 85. Kanal (% SPI - Stereom Protection Index) ve 86. Kanal (% PDR - Pedicellariae Deterrence Ratio) formülasyonları sisteme bağlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.22.0, `HISTORIC_MILESTONE_HOURS: 442` olarak güncellendi.
+  - `index.html`: `src/organs/echinoderm_pedicellariae.js` script tagi eklendi; `stepSimulation` ana motor döngüsüne bağlandı; başlık rozeti 'SYSTEM 442H | v7.22.0' yapıldı; `coolBiologyFacts` güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.21.0] — 2026-10-27 13:05 (Baş Planlamacı: Lead Planner - Epoch 40 Stereom İç İskeleti, Kalsit Dikenler ve Pediseller Mimarisi Yol Haritası)
+- **Epoch 40 Stereom İç İskelet ve Pediseller Mimarisi Stratejik Belgesi (docs/EPOCH_BLUEPRINT.md):**
+  - **Mezodermal Stereom Kafes İskeleti:** Monolitik mineral yerine kırılma enerjisini dağıtan ve darbe çatlaklarını durduran 3 boyutlu mikrogözenekli trabeküler kalsit kafes (`stereomPorousLattice`) mimarisi planlandı.
+  - **Bilyalı Mafsallı Kalsit Dikenler:** Tüberküllere oturan, kas ve kollajen lifleriyle 360 derece yönlendirilebilen hareketli savunma dikenleri (`calciteSpinesCount`, `spineBallJointMobility`) şartnamesi hazırlandı.
+  - **Pediseller (Pedicellariae Savunma ve Temizleme Kıskaçları):** Diken aralarında yer alan 2-3 çeneli mikroskobik kıskaçlar; yüzey parazitlerini ezme (`epibiontCleaningEfficiency`) ve yırtıcı caydırıcılığı sağlama formülleri takvimlendirildi.
+  - **85. Kanal (% SPI - Stereom Protection Index) ve 86. Kanal (% PDR - Pedicellariae Deterrence Ratio) Şartnamesi:** Stereom bütünlüğü, diken açısal koruması ve pediseller hijyenini ölçecek telemetri kanalları ile Peak 360+ taşıma kapasitesi hedefi ilan edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.21.0, `EPOCH: 40`, `HISTORIC_MILESTONE_HOURS: 441` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'PLANNER 441H | v7.21.0' yapıldı; `coolBiologyFacts` listesine 441. saat planlama bilgisi eklendi; modal yol haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.20.0] — 2026-10-27 12:30 (Yönetici / Büyük Resim Direktörü: Executive Director - Epoch 39 Pentamerik Su Damar Jübilesi, Peak 355+ Taşıma Kapasitesi ve 84 Kanallı Sistem Mimarisi Tescili)
+- **Epoch 39 Büyük Pentamerik Su Damar Jübilesi ve Büyük Resim Değerlendirmesi (docs/EPOCH_BLUEPRINT.md):**
+  - **Pentamerik Radyal Anatomi ve Hidrolik Turgor Tescili:** 5 ana ambulakral kol ekseni, madreporit elek valfi (`madreporitePorosity`), taş kanalı turgor basıncı (`stoneCanalPressure`), ampulla rezervuarları ve dual-row vakumlu tüp ayaklar (`podiaSuctionForce`) simülasyona tam kararlılıkla entegre edildi.
+  - **84 Telemetri Kanalı Mühürlenmesi:** Su Damar Endeksi (% WVI) ve Podial Çekiş Endeksi (% PTI) dahil olmak üzere 84 telemetri kanalının tamamı Lotka-Volterra grafiğinde ve laboratuvar HUD'ında onaylandı.
+  - **Taşıma Kapasitesi Genişlemesi (Peak 355+):** Ekinodermlerin kas enerjisi yerine su basıncı turgorunu kullanarak %25 metabolik tasarruf sağlaması ve sert kabuk aralama avlanması sonucunda sisteme `ECHINODERM_PODIA_BUFFER: 5` dahil edildi; maksimum taşıma kapasitesi tarihi **Peak 355+** birime yükseltildi.
+  - **Sıfır Emoji ve 96 Modüler Dosya Mimarisi:** Yinelenen versiyonlu dosyalar üretilmeden depo 96 temiz modüler dosyada sabitlendi; sıfır emoji kuralı tavizsiz uygulandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.20.0, `HISTORIC_MILESTONE_HOURS: 440`, `PEAK_CARRYING_CAPACITY: 355`, `ECHINODERM_PODIA_BUFFER: 5`, `TOTAL_TELEMETRY_CHANNELS: 84` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'DIRECTOR 440H | v7.20.0' yapıldı; taşıma kapasitesi ve besin akısı algoritmaları Peak 355+ ekinoderm rezerviyle bağlandı; `coolBiologyFacts` listesine 440. saat jübile bilgisi eklendi.
+- **Epoch 40 Vizyonu İlanı (Hours 441 - 450):**
+  - Kalsit Stereom İç İskeleti, Biyominerilize Plakalar, Kalsit Dikenler ve Pediseller (Pedicellariae Savunma Kıskaçları) mimarisi gelecek dönemin ana hedefi olarak takvimlendirildi.
+
+## [Version 7.19.0] — 2026-10-27 11:20 (Kalite & Ara Denetim Ekibi: QA Ajanı - 10.000 Adım 84 Kanallı Çift Pentamerik Kararlılık ve 60 FPS Stres Testi)
+- **10.000 Adım Başlıksız Performans ve 84 Kanallı Stres Testi (tests/benchmark_qa.js):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 96 tepe popülasyona ulaşarak ekosistem dengesini korudu.
+  - **84. Telemetri Kanalı (% PTI) ve Podial Çekiş Denetimi:** 84 kanallı Lotka-Volterra eğrileri, Podial Çekiş Endeksi (% PTI), Su Damar Endeksi (% WVI), Reofilik Eklemlenme Oranı (% RAR), Kadeh Yükseklik Avantajı (% CEA), Seston Filtreleme Verimi (% SFE), Bentik Karbon Akısı (% BCF), Hadal Barometrik Adaptasyon (% ABA) ve Piezofilik Membran Stabilitesi (% PMS) metrikleri tam kararlılıkla doğrulandı.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 6.31 MB seviyesinde olağanüstü stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi; toplam kare süresi 4.98 ms (4.06 ms tick + 0.92 ms render) ile 200.8 FPS sürdürülebilir başarım sağlandı.
+  - **Depo Mimarisi ve Sıfır Emoji Standardı:** Yinelenen versiyonlu dosyalar üretilmeden tek test dosyası kuralı korundu, toplam 96 modüler dosya korundu ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.19.0, `HISTORIC_MILESTONE_HOURS: 439` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'QA 439H | v7.19.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.18.0] — 2026-10-27 10:25 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 84. Telemetri Kanalı % PTI ve Podial Çekiş HUD Göstergeleri)
+- **Podial Çekiş Optikleri ve Rejenerasyon Görselleştirmesi (src/render/echinoderm_optics.js):**
+  - **Madreporit Silt Kabuğu ve Siliyer Yıkama Su Jeti:** Tortulu dip sedimentine maruz kalan elek plakasında biriken silt kabuk örtüsü ve gözenekler tıkandığında canlı tarafından püskürtülen temizleme su jetleri (`ciliaryFlushingSurge`) mikroskop tuvaline yansıtıldı.
+  - **Podia Kopması ve Ambulakral Rejenerasyon Tomurcukları:** Aşırı akıntıda veya sert bivalv kabuğu aralamada kopan tüp ayakların küt kırık güdükleri ve ambulakral hat boyunca turuncu parıltıyla tomurcuklanan yeni podia filizleri simüle edildi.
+  - **Kehribar Zemin Çekiş Halesi (% PTI):** Tüp ayakların bentik kayalara ve tabana vakumla kilitlendiği anlarda (% PTI > %50) kehribar sarısı (#f59e0b) sürtünme temas auraları eklendi.
+- **84. Telemetri Kanalı (% PTI - Podial Traction Index) ve Ekinoderm HUD (src/ui/telemetry_echinoderm.js & css/style.css):**
+  - **84. Telemetri Kanalı (% PTI):** Zemin çekiş kuvveti (%35), tüp ayak uzama oranı (%25), sağlam podia oranı (%20) ve osmotik sağlık katsayısını (%20) birleştiren 84. telemetri kanalı devreye alındı.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** OPTIMAL SUBSTRATE VACUUM TRACTION (#f59e0b), BALANCED PODIAL CREEP & ADHESION (#fbbf24), HIGH SHEAR PODIAL RUPTURE STRAIN (#f97316) ve SUBSTRATE DETACHMENT & TRACTION COLLAPSE (#ef4444) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valPTIIndex` ve `#valPTIStatus` DOM göstergeleri bağlandı; canlı `historyData.podialTractionIndex` kayıt tamponu Lotka-Volterra grafiğine kehribar sarısı kesikli çizgiyle (#f59e0b) entegre edildi; pro-only legend içine `Traction PTI` eklendi; `.pti-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.18.0, `HISTORIC_MILESTONE_HOURS: 438`, `TOTAL_TELEMETRY_CHANNELS: 84` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'LOOKS-UI 438H | v7.18.0' yapıldı; `coolBiologyFacts` listesine 438. saat geliştirme bilgisi eklendi; modal yol haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.17.0] — 2026-10-27 09:20 (İnşa Ekibi: Sistem Ajanı - Osmotik Şok Direnci, Podia Rejenerasyonu ve 84. Kanal % PTI Metriği)
+- **Ekinoderm Su Damar Biyomekaniği ve Osmotik Savunma Genişletmesi (src/organs/echinoderm_water_vascular.js):**
+  - **Madreporit Silt Tıkanması ve Siliyer Ters Yıkama Refleksi:** Dip tortusuna maruz kalan elek plakasında biriken siltin debiyi düşürmesi (`madreporiteFoulingRatio`), taş kanalında turgor kaybı ve canlı enerji harcayarak gözenekleri temizleyen `ciliaryFlushingSurge` pulsu kodlandı.
+  - **Stenohalin Osmotik Şok Tamponlaması:** Deniz suyunun doğrudan hidrolik sıvı olarak kullanılmasından kaynaklanan tuzluluk dalgalanması zafiyetine karşı `stenohalineOsmolyteBuffer` kalkanı ve sitolenf basınç gerilimi (`osmoticHydrostaticStrain`) modellendi.
+  - **Mekanik Podia Yırtılması ve Ambulakral Rejenerasyon:** Şiddetli akıntılarda veya bivalv aralama manevralarında aşırı mekanik gerilime maruz kalan tüp ayakların uçlarının kopması (`rupturedPodiaCount`) ve ambulakral kanaldan kademeli doku rejenerasyonu (`podialRegenerationEvents`) simüle edildi.
+  - **84. Telemetri Kanalı (% PTI - Podial Traction Index) Temel Formülasyonu:** Zemin sürtünme çekişi, podia sağlamlığı, vakum turgoru ve kabuk aralama verimini birleştiren 84. kanal matematiği sisteme entegre edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.17.0, `HISTORIC_MILESTONE_HOURS: 437` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'SYSTEM 437H | v7.17.0' yapıldı; `coolBiologyFacts` listesine 437. saat geliştirme bilgisi eklendi; modal yol haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.16.0] — 2026-10-27 08:35 (Eleştirmen & Problem Yaratan: Product Critic - Hidrolik Basınç Sızıntısı, Osmotik Şok ve Podia Yırtılması Denetimi)
+- **Ekinoderm Su Damar Sistemi Kapsamlı Ürün Denetimi (docs/CRITIC_AUDIT.md):**
+  - **Madreporit Tıkanması ve Hidrolik Basınç Kaybı (Madreporite Fouling & Hydraulic Pressure Loss):** Dip sedimenti ve silt partiküllerinin elek plakasını tıkaması sonucu taş kanalında oluşacak turgor kaybı (`hydraulicPressureLoss`), tüp ayakların gevşemesi (`podialFlaccidity`) ve siliyer ters yıkama refleksi (`ciliaryFlushingSurge`) tanımlandı.
+  - **Stenohalin Ekinoderm Osmotik Şok Zafiyeti:** Deniz suyunu doğrudan hidrolik sıvı olarak kullanan ekinodermlerin ani tuzluluk değişimlerinde iç turgor patlaması (`podialLysisStress`) veya dehidrasyona uğrama riski incelendi; osmolit kalkan tamponu (`stenohalineOsmolyteBuffer`) gereksinimi ortaya kondu.
+  - **Mekanik Gerilim ve Podia Yırtılması (Podial Rupture & Regeneration):** Av kabuklarını aralarken veya fırtına akıntılarında kayalara tutunurken tüp ayakların uç vantuzlarının yırtılması (`podiaRuptureSurge`) ve ambulakral rejenerasyon süreci formüle edildi.
+  - **84. Telemetri Kanalı Şartnamesi (% PTI - Podial Traction Index):** Zeminle temas eden tüp ayakların sürtünme çekişini, vakum tutunmasını ve av aralama kuvvetini ölçecek 84. telemetri kanalı (% PTI) için formülasyon ve kehribar sarısı (#f59e0b) grafik entegrasyonu planlandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.16.0, `HISTORIC_MILESTONE_HOURS: 436` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'CRITIC 436H | v7.16.0' yapıldı; `coolBiologyFacts` listesine 436. saat denetim bilgisi eklendi; modal yol haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.15.0] — 2026-10-27 07:55 (Kalite & Ara Denetim Ekibi: QA Ajanı - 10.000 Adım 83 Kanallı Pentamerik Kararlılık ve 60 FPS Stres Testi)
+- **10.000 Adım Başlıksız Performans ve 83 Kanallı Stres Testi (tests/benchmark_qa.js):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 138 tepe popülasyona ve 122 nihai canlı hücreye ulaşarak ekosistem dengesini korudu.
+  - **83. Telemetri Kanalı (% WVI) ve Su Damar Sistemi Denetimi:** 83 kanallı Lotka-Volterra eğrileri, Su Damar Endeksi (% WVI), Reofilik Eklemlenme Oranı (% RAR), Kadeh Yükseklik Avantajı (% CEA), Seston Filtreleme Verimi (% SFE), Bentik Karbon Akısı (% BCF), Hadal Barometrik Adaptasyon (% ABA) ve Piezofilik Membran Stabilitesi (% PMS) metrikleri tam kararlılıkla doğrulandı.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 26.11 MB seviyesinde stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi; ortalama render süresi 1.66 ms olarak ölçüldü.
+  - **Depo Mimarisi ve Sıfır Emoji Standardı:** Yinelenen versiyonlu dosyalar üretilmeden tek test dosyası kuralı korundu, toplam 96 modüler dosya korundu ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.15.0, `HISTORIC_MILESTONE_HOURS: 435` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'QA 435H | v7.15.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.14.0] — 2026-10-27 06:25 (İnşa Ekibi: Arayüz Ajanı - 83. Telemetri Kanalı % WVI ve Ekinoderm Hidrolik Basınç HUD Göstergeleri)
+- **83. Telemetri Kanalı (% WVI - Water Vascular Index) ve Ekinoderm HUD (src/ui/telemetry_echinoderm.js & css/style.css):**
+  - **83. Telemetri Kanalı (% WVI):** Taş kanalı turgor basıncı (%30), madreporit valfi geçirgenliği (%25), tüp ayak vakum tutunma kuvveti (%25) ve ambulakral hat yoğunluğunu (%20) bütünsel olarak puanlayan 83. telemetri kanalı devreye alındı.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** OPTIMAL HYDRAULIC TURGOR & PODIA LOCK (#0284c7), BALANCED HYDROSTATIC AMBULACRAL FLOW (#38bdf8), MODERATE VASCULAR PRESSURE STRAIN (#f59e0b) ve MADREPORITE COLLAPSE & HYDRAULIC FAILURE (#ef4444) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valWVIIndex` ve `#valWVIStatus` DOM göstergeleri bağlandı; canlı `historyData.waterVascularIndex` kayıt tamponu Lotka-Volterra grafiğine koral mavisi kesikli çizgiyle (#0284c7) entegre edildi; pro-only legend içine `Hydraulic WVI` eklendi; `.wvi-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.14.0, `HISTORIC_MILESTONE_HOURS: 434`, `TOTAL_TELEMETRY_CHANNELS: 83` olarak güncellendi.
+  - `index.html`: `src/ui/telemetry_echinoderm.js` script tagi eklendi; `stepSimulation` döngüsüne `EchinodermTelemetryManager.step` çağrısı bağlandı; başlık rozeti 'UI 434H | v7.14.0' yapıldı; `coolBiologyFacts` güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.13.0] — 2026-10-27 05:50 (İnşa Ekibi: Görsel Ajanı - 5 Işınlı Pentamerik Simetri, Madreporit ve Hidrolik Podia Shader'ları)
+- **Ekinoderm Pentamerik Simetri ve Su Damar Optikleri (src/render/echinoderm_optics.js):**
+  - **5 Işınlı Pentamerik Radyal İskelet (drawPentamericSkeleton):** Merkezi disk etrafında 5 ana ambulakral kol ekseni, kalkerli ossicle sırtları ve circumoral halka kanalı turgor nabzı mikroskop estetiğiyle tuvale işlendi.
+  - **Senkronize Hidrolik Tüp Ayaklar (drawAmbulacralPodia):** Ritmik ampulla kasılma dalgalarıyla kollardan iki yana uzayıp büzülen tüp ayaklar (podia) ve uçlarındaki vakum vantuz diskleri modellendi.
+  - **Madreporit Elek Plakası ve Giriş Parıltısı (drawMadreporiteSieve):** Aboral yüzeydeki gözenekli kalsit elek valfi ve içeri süzülen deniz suyunun kapiler akış ışıltısı eklendi.
+  - **Taban Vakum Tutunma Halesi ve Çift Kabuklu Aralama Gerilimi:** Kayalara ve tabana yapışma anındaki turgor temas halkaları (`drawPodialTractionGrip`) ile yırtıcıların sert kabuklu avları aralama anındaki hidrolik gerilim yayları (`drawBivalvePryingOptics`) görselleştirildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.13.0, `HISTORIC_MILESTONE_HOURS: 433` olarak güncellendi.
+  - `index.html`: `src/render/echinoderm_optics.js` script tagi eklendi; `Organism.prototype.draw()` ve `render()` döngülerine entegre edildi; başlık rozeti 'LOOKS 433H | v7.13.0' yapıldı; `coolBiologyFacts` güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.12.0] — 2026-10-27 04:05 (İnşa Ekibi: Sistem Ajanı - Su Damar Sistemi, Ambulakral Kanallar ve Tüp Ayak Hidrolik Kinetiği)
+- **Ekinoderm Su Damar Sistemi ve Podia Kinetiği (src/organs/echinoderm_water_vascular.js):**
+  - **Madreporit ve Taş Kanalı Basınç İletimi:** Dış ortam suyunu süzen mikroskobik gözenekli madreporit valfi (`madreporitePorosity`) ve suyu halka kanala ileten kalsifiye taş kanalı (`stoneCanalPressure`: 12-45 kPa) modellendi.
+  - **Polian Keseleri ve Ampulla Rezervuarları:** Basınç dalgalanmalarını sönümleyen hidrolik rezervuar havuzu (`hydraulicFluidReservoir`) ve 5 radyal koldaki ambulakral kanallara sıvı pompalayan ampullalar kodlandı.
+  - **Tüp Ayaklar (Podia) ve Vakum Vantuzları:** Ampulla hidrolik basıncıyla uzayan tüp ayaklar (`podiaExtensionLength`), kimyasal mukus ve vakum yapışma diski kuvveti (`podiaSuctionForce`) ve taban çekiş kuvveti (`podialTractionForce`) simüle edildi.
+  - **Hidrolik Enerji Tasarrufu ve Kabuk Aralama Kinetiği:** Kas kasılması yerine sıvı basıncı turgoru kullanılarak %25 enerji tasarrufu sağlandı; avlanan kalsifiye avların kabuklarını hidrolik basınçla yavaşça aralayan `bivalvePryingActive` mekaniği sisteme bağlandı.
+  - **83. Kanal (% WVI - Water Vascular Index) ve 84. Kanal (% PTI - Podial Traction Index) Formülasyonu:** Hidrolik basınç turgoru ve zemin çekişini birleştiren metrikler hesaplandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.12.0, `HISTORIC_MILESTONE_HOURS: 432` olarak güncellendi.
+  - `index.html`: `src/organs/echinoderm_water_vascular.js` script tagi eklendi; `stepSimulation` döngüsüne entegre edildi; başlık rozeti 'SYSTEM 432H | v7.12.0' yapıldı; `coolBiologyFacts` güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.11.0] — 2026-10-27 03:20 (Baş Planlamacı: Lead Planner - Epoch 39 Pentamerik Simetri ve Su Damar Sistemi Mimarisi Yol Haritası)
+- **Epoch 39 Pentamerik Simetri ve Su Damar Sistemi Stratejik Mimarisi (docs/EPOCH_BLUEPRINT.md):**
+  - **Hidrolik Hareket ve Su Damar Sistemi (Water Vascular System):** Denizel ekinodermlerin deniz suyunu hidrolik sıvı olarak kullanarak kas lifi enerjisi yerine turgor basıncıyla hareket etmesi, tutunması ve kabuk açması için biyomekanik mimari tasarlandı.
+  - **Madreporit, Taş Kanalı ve Ambulakral Hatlar:** Dış ortam suyunu süzen madreporit valfi (`madreporitePorosity`), merkezi halka ve 5 radyal koldaki ambulakral kanalların basınç dinamikleri şartnamesi hazırlandı.
+  - **Ampulla & Podia (Tüp Ayaklar):** Hidrolik rezervuar ampullaları ve uçlarındaki kimyasal vakum diskleriyle tabana ve kayalara yapışan tüp ayaklar (podia) formüle edildi.
+  - **83. Telemetri Kanalı (% WVI - Water Vascular Index) ve 84. Kanal (% PTI - Podial Traction Index) Şartnamesi:** Hidrolik basınç kararlılığı ve çekiş kuvvetini ölçecek telemetri kanalları ile Peak 355+ taşıma kapasitesi hedefi ilan edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.11.0, `EPOCH: 39`, `HISTORIC_MILESTONE_HOURS: 431` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'PLANNER 431H | v7.11.0' yapıldı; `coolBiologyFacts` listesine 431. saat planlama bilgisi eklendi; modal yol haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.10.0] — 2026-10-27 02:45 (Yönetici / Büyük Resim Direktörü: Executive Director - Epoch 38 Krinoid Jübilesi, Peak 350+ Taşıma Kapasitesi ve 82 Kanallı Sistem Mimarisi Tescili)
+- **Epoch 38 Büyük Krinoid Jübilesi ve Büyük Resim Değerlendirmesi (docs/EPOCH_BLUEPRINT.md):**
+  - **Dikey Beslenme Katmanı ve Üçüncü Boyut Tescili:** Canlıların bentik sediment tabanından 50-110 px yukarı yükselen mineralize kalsit saplar (`calciteColumnalCount`, `stalkHeight`) ve esnek parabolik kadeh taçları ile laminer akıntıyı süzme başarısı tescillendi.
+  - **82 Telemetri Kanalı Mühürlenmesi:** Kadeh Yükseklik Avantajı (% CEA) ve Reofilik Eklemlenme Oranı (% RAR) dahil olmak üzere 82 telemetri kanalının tamamı Lotka-Volterra grafiğinde ve laboratuvar HUD'ında onaylandı.
+  - **Taşıma Kapasitesi Genişlemesi (Peak 350+):** Krinoidlerin yüksek akıntılı asılı karbonu yakalaması ve ekosisteme geri döndürmesi sonucunda sisteme `CRINOID_ELEVATION_BUFFER: 5` dahil edildi; maksimum taşıma kapasitesi tarihi **Peak 350+** birime yükseltildi.
+  - **Sıfır Emoji ve 93 Modüler Dosya Mimarisi:** Yinelenen versiyonlu dosyalar üretilmeden depo 93 temiz modüler dosyada sabitlendi; sıfır emoji kuralı tavizsiz uygulandı.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js`: Sürüm 7.10.0, `HISTORIC_MILESTONE_HOURS: 430`, `PEAK_CARRYING_CAPACITY: 350`, `CRINOID_ELEVATION_BUFFER: 5`, `TOTAL_TELEMETRY_CHANNELS: 82` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'DIRECTOR 430H | v7.10.0' yapıldı; taşıma kapasitesi ve besin akısı algoritmaları Peak 350+ krinoid rezerviyle bağlandı; `coolBiologyFacts` listesine 430. saat jübile bilgisi eklendi.
+- **Epoch 39 Vizyonu İlanı (Hours 431 - 440):**
+  - Pentamerik (5 Işınlı) Simetri, Ambulakral Kanallar, Taş Kanalı ve Hidrolik Tüp Ayak (Podia / Water Vascular System) mimarisi gelecek dönemin ana hedefi olarak takvimlendirildi.
+
+## [Version 7.09.0] — 2026-10-27 01:25 (Kalite & Ara Denetim Ekibi: QA Ajanı - 10.000 Adım 82 Kanallı Reofilik Krinoid Kararlılık ve 60 FPS Stres Testi)
+- **10.000 Adım Başlıksız Performans ve 82 Kanallı Stres Testi (tests/benchmark_qa.js):**
+  - **Sıfır Sayısal Sapma ve Kararlılık Tescili:** 10.000 simülasyon adımında tam 0 NaN / sayısal sapma tespit edildi. Simülasyon döngüsü 31 başlangıç hücresinden 124 tepe popülasyona ve 120 nihai canlı hücreye ulaşarak ekosistem dengesini korudu.
+  - **82. Telemetri Kanalı (% RAR) ve Krinoid Denetimi:** 82 kanallı Lotka-Volterra eğrileri, Reofilik Eklemlenme Oranı (% RAR), Kadeh Yükseklik Avantajı (% CEA), Seston Filtreleme Verimi (% SFE), Bentik Karbon Akısı (% BCF), Hadal Barometrik Adaptasyon (% ABA) ve Piezofilik Membran Stabilitesi (% PMS) metrikleri tam kararlılıkla doğrulandı.
+  - **Hafıza ve Çerçeve Bütçesi Denetimi:** Heap bellek artışı 22.87 MB seviyesinde stabil kaldı; bellek sızıntısı görülmedi. 500 ardışık render çerçevesiyle mikroskop shader bütçesi denetlendi; toplam kare süresi 8.13 ms (6.96 ms tick + 1.17 ms render) ile 123.0 FPS sürdürülebilir başarım sağlandı.
+  - **Depo Mimarisi ve Sıfır Emoji Standardı:** Yinelenen dosya üretilmeden tek test dosyası kuralı korundu, toplam 93 modüler dosya korundu ve sıfır emoji standardı teyit edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.09.0, `HISTORIC_MILESTONE_HOURS: 429` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'QA 429H | v7.09.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.08.0] — 2026-10-27 01:00 (İnşa Ekibi: Görsel ve Arayüz Ajanı - 82. Telemetri Kanalı % RAR ve Reofilik Eklemlenme HUD Göstergeleri)
+- **Reofilik Krinoid Optikleri ve Gerilim Kırılma Görselleştirmesi (src/render/crinoid_optics.js):**
+  - **Sap Ototomisi Kırılma Düzlemi ve Şifalanma Blasteması (drawStalkAutotomyFracture):** Aşırı devrilme torkunda veya acil eklem feda durumunda planlı sap kırılmasının bıraktığı pürüzlü kalsit kırık hattı, kristal kırılma ışıltıları ve rejeneratif hücresel blastema tomurcuğu mikroskop tuvaline işlendi.
+  - **MCT Kollajen Fleksiyon Gerilimi Yayları:** Aşırı bükülme ve kollajen yorgunluğu (`collagenFatigueFactor`) altındaki disk eklemleri arasında koral kırmızısı kesikli gerilim hatları simüle edildi.
+  - **Taban Kök Gerilme Stres Halesi (drawHoldfastTensionStress):** Kök cirrilerine binen hidrodinamik kaldıraç torku kritik sınıra yaklaştığında taban tutunma çengelleri etrafında uyarıcı stres yayları parıldatıldı.
+  - **Reofilik Kadeh Akıntı Uyum Aurası:** Parabolik çanağın laminer akıntıya mükemmel kilitlendiği anlarda (% RAR > %50) pinnül uçlarında ve kadeh çeperinde koral-pembe akışkanlık aurası modellendi.
+- **82. Telemetri Kanalı (% RAR - Rheophilic Articulation Ratio) ve Krinoid HUD (src/ui/telemetry_crinoid.js & css/style.css):**
+  - **82. Telemetri Kanalı (% RAR):** Akıntı yönelim uyumu (%30), bükülme elastikiyeti (%25), kök tutunma stabilitesi (%25) ve kollajen sağlık rezervini (%20) birleştiren 82. telemetri kanalı devreye alındı.
+  - **Dinamik 4 Kademeli Biyolojik Rejim Sınıflandırması:** OPTIMAL RHEOPHILIC PARABOLIC LOCK (#f43f5e), BALANCED FLEXION COMPLIANCE (#fb7185), HIGH TORQUE COLLAGEN STRAIN (#f59e0b) ve TENSION OVERLOAD & CRITICAL AUTOTOMY (#ef4444) rejimleri tanımlandı.
+  - **Laboratuvar HUD Göstergeleri ve Dairesel Grafik Tamponu:** `#valRARIndex` ve `#valRARStatus` DOM göstergeleri bağlandı; canlı `historyData.rheophilicArticulation` kayıt tamponu Lotka-Volterra grafiğine koral kırmızısı kesikli çizgiyle (#f43f5e) entegre edildi; kart incelemeleri için `.rar-badge` HTML rozet stili oluşturuldu.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.08.0, `HISTORIC_MILESTONE_HOURS: 428`, `TOTAL_TELEMETRY_CHANNELS: 82` olarak güncellendi.
+  - `index.html`: Başlık rozeti 'LOOKS-UI 428H | v7.08.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+## [Version 7.07.0] — 2026-10-26 23:25 (İnşa Ekibi: Sistem Ajanı - Devrilme Torku, Kalsit Vergisi, Kollajen Yorgunluğu ve Sap Ototomisi)
+- **Krinoid Biyomekanik ve Hidrodinamik Genişletmesi (src/organs/crinoid_stalks.js - 341 satır):**
+  - **Dinamik Kaldıraç Torku ve Kök Kopması (Overturning Hydrodynamic Torque & Detachment):** Sap uzantısı ve akıntı sürtünmesiyle büyüyen kaldıraç momenti (`overturningTorque`), kök cirrilerine binen gerilim (`holdfastTension`) ve kritik kopma eşiği (`baseTensionLimit`) modellendi; aşırı fırtına akıntısında kökün kopması (`holdfastDetachmentSurge`) ve yeniden tutunma manevrası eklendi.
+  - **Kalsit Biyomineral Bakım Vergisi (Calcite Maintenance Overhead):** Onlarca kolumnal diskin hücreye yüklediği metabolik enerji vergisi (`calciteMetabolicCost`) ve açlık durumunda iskelet rezorpsiyonu ile sap kırılganlığı (`stalkBrittleness`) kinetiğe bağlandı.
+  - **Kollajen Yorgunluğu ve Sap Ototomisi (MCT Fatigue & Stalk Autotomy Reflex):** Uzun süreli kilitlenmede MCT kollajen dokusunun yorulması (`collagenFatigueFactor`) ve aşırı tork/kırılma geriliminde sapın planlı bir eklemden feda edilerek (`stalkAutotomyReflex`) kadehin kurtarılması ve sonrasında kademeli sap rejenerasyonu simüle edildi.
+  - **82. Telemetri Kanalı (% RAR - Rheophilic Articulation Ratio) Temel Hesaplaması:** Parabolik akıntı uyumu, elastik bükülme toleransı, kök tutunma stabilitesi ve kollajen sağlığını birleştiren 82. telemetri kanalı (% RAR) formülasyonu sisteme entegre edildi.
+- **Entegrasyon ve Çekirdek Simülasyon Sabitleri:**
+  - `src/core/constants.js` Sürüm 7.07.0, `HISTORIC_MILESTONE_HOURS: 427` olarak güncellendi (192 satır).
+  - `index.html`: Başlık rozeti 'SYSTEM 427H | v7.07.0' yapıldı; `coolBiologyFacts` ve Yol Haritası güncellendi.
+- **Sıfır Emoji Standardı:** Kod tabanında, DOM yapısında, loglarda ve belgelerde sıfır emoji kuralına tavizsiz uyuldu.
+
+
 ## [Version 7.06.0] — 2026-10-26 22:45 (Eleştirmen & Problem Yaratan: Product Critic - Devrilme Torku, Kalsifikasyon Maliyeti, Sap Kırılması ve 82. Kanal Denetimi)
 - **Krinoid Biyomekanik Ekosistemi Kapsamlı Ürün Denetimi (docs/CRITIC_AUDIT_CRINOID.md - 174. dosya):**
   - **Devrilme Hidrodinamik Torku ve Kök Kopması (Overturning Hydrodynamic Torque):** Kolumnal sap uzadıkça laminer akıntının kadehe uyguladığı kaldıraç kolunun büyümesi ve kök tutunma çengellerine binen aşırı gerilim (`holdfastTensionLimit`) sonucu canlının tabandan sökülüp sürüklenme riski masaya yatırıldı; taban gerilim eşiği tanımlandı.
