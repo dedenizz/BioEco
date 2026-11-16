@@ -1104,6 +1104,266 @@
     border: 1px solid rgba(255, 228, 230, 0.60);
 }
 
+/* 87th Channel Grazing Lantern Index Styling (UI Agent v7.34.0) */
+.gli-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.gli-depleted {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.40);
+}
+.gli-developing {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.45);
+}
+.gli-active {
+    background: rgba(110, 231, 183, 0.18);
+    color: #6ee7b7;
+    border: 1px solid rgba(110, 231, 183, 0.50);
+}
+.gli-maximal {
+    background: rgba(167, 243, 208, 0.22);
+    color: #a7f3d0;
+    border: 1px solid rgba(167, 243, 208, 0.60);
+}
+
+/* 88th Channel Bioerosion & Dental Renewal Index Styling (UI Agent v7.38.0) */
+.ber-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.ber-depleted {
+    background: rgba(217, 119, 6, 0.12);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.40);
+}
+.ber-basal {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.ber-active {
+    background: rgba(251, 191, 36, 0.18);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.50);
+}
+.ber-maximal {
+    background: rgba(254, 243, 199, 0.22);
+    color: #fef3c7;
+    border: 1px solid rgba(254, 243, 199, 0.60);
+}
+
+/* 89th Channel Cuvierian Defense Index Styling (UI Agent v7.44.0) */
+.cdi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(14, 165, 233, 0.15);
+    color: #0ea5e9;
+    border: 1px solid rgba(14, 165, 233, 0.45);
+}
+.cdi-depleted {
+    background: rgba(14, 165, 233, 0.12);
+    color: #0ea5e9;
+    border: 1px solid rgba(14, 165, 233, 0.40);
+}
+.cdi-basal {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.45);
+}
+.cdi-active {
+    background: rgba(125, 211, 252, 0.18);
+    color: #7dd3fc;
+    border: 1px solid rgba(125, 211, 252, 0.50);
+}
+.cdi-maximal {
+    background: rgba(224, 242, 254, 0.22);
+    color: #e0f2fe;
+    border: 1px solid rgba(224, 242, 254, 0.60);
+}
+
+/* 90th Channel Visceral Regeneration Index Styling (UI Agent v7.48.0) */
+.vri-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.45);
+}
+.vri-critical {
+    background: rgba(168, 85, 247, 0.12);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.40);
+}
+.vri-mesenteric {
+    background: rgba(192, 132, 252, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.45);
+}
+.vri-restructuring {
+    background: rgba(216, 180, 254, 0.18);
+    color: #d8b4fe;
+    border: 1px solid rgba(216, 180, 254, 0.50);
+}
+.vri-maximal {
+    background: rgba(243, 232, 255, 0.22);
+    color: #f3e8ff;
+    border: 1px solid rgba(243, 232, 255, 0.60);
+}
+
+/* 91st Channel Catch Apparatus Compliance Styling (UI Agent v7.54.0) */
+.cac-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.cac-compliant {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.40);
+}
+.cac-anchoring {
+    background: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.45);
+}
+.cac-stiffening {
+    background: rgba(253, 230, 138, 0.18);
+    color: #fde68a;
+    border: 1px solid rgba(253, 230, 138, 0.50);
+}
+.cac-maximal {
+    background: rgba(254, 243, 199, 0.22);
+    color: #fef3c7;
+    border: 1px solid rgba(254, 243, 199, 0.60);
+}
+
+/* 92nd Channel Extraoral Gastric Eversion Index Styling (Looks & UI Agent v7.58.0) */
+.ege-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.45);
+}
+.ege-retracted {
+    background: rgba(244, 63, 94, 0.12);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.40);
+}
+.ege-histolysis {
+    background: rgba(251, 113, 133, 0.15);
+    color: #fb7185;
+    border: 1px solid rgba(251, 113, 133, 0.45);
+}
+.ege-liquefaction {
+    background: rgba(253, 164, 175, 0.18);
+    color: #fda4af;
+    border: 1px solid rgba(253, 164, 175, 0.50);
+}
+.ege-maximal {
+    background: rgba(255, 228, 230, 0.22);
+    color: #ffe4e6;
+    border: 1px solid rgba(255, 228, 230, 0.60);
+}
+
+/* 93rd Channel Serpentiform Velocity & Articulation Index Styling (UI Agent v7.64.0) */
+.svi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.svi-quiescent {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.40);
+}
+.svi-rheotactic {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.45);
+}
+.svi-slithering {
+    background: rgba(110, 231, 183, 0.18);
+    color: #6ee7b7;
+    border: 1px solid rgba(110, 231, 183, 0.50);
+}
+.svi-maximal {
+    background: rgba(209, 250, 229, 0.22);
+    color: #d1fae5;
+    border: 1px solid rgba(209, 250, 229, 0.60);
+}
+
+/* 94th Channel Brittle Fracture & Autotomy Ratio Styling (Looks & UI Agent v7.68.0) */
+.bfr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(203, 213, 225, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(203, 213, 225, 0.45);
+}
+.bfr-intact {
+    background: rgba(203, 213, 225, 0.12);
+    color: #cbd5e1;
+    border: 1px solid rgba(203, 213, 225, 0.40);
+}
+.bfr-fracture {
+    background: rgba(226, 232, 240, 0.15);
+    color: #e2e8f0;
+    border: 1px solid rgba(226, 232, 240, 0.45);
+}
+.bfr-autotomy {
+    background: rgba(241, 245, 249, 0.18);
+    color: #f1f5f9;
+    border: 1px solid rgba(241, 245, 249, 0.50);
+}
+.bfr-maximal {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.60);
+}
+
+
+
+
+
 /* 84th Channel Podial Traction Index Styling (UI Agent v7.18.0) */
 .pti-badge {
     display: inline-block;
@@ -1327,4 +1587,3514 @@ body.pro-mode .beginner-only {
     font-size: 0.78rem;
     color: #cbd5e1;
     line-height: 1.5;
+}
+
+/* 95th Channel Pharyngeal Slit Index (% PSI) Styling (UI Agent v7.74.0) */
+.psi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+.psi-resting {
+    background: rgba(6, 182, 212, 0.12);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.40);
+}
+.psi-ciliary {
+    background: rgba(34, 211, 238, 0.15);
+    color: #22d3ee;
+    border: 1px solid rgba(34, 211, 238, 0.45);
+}
+.psi-filtration {
+    background: rgba(103, 232, 249, 0.18);
+    color: #67e8f9;
+    border: 1px solid rgba(103, 232, 249, 0.50);
+}
+.psi-peak {
+    background: rgba(207, 250, 254, 0.22);
+    color: #cffafe;
+    border: 1px solid rgba(207, 250, 254, 0.60);
+}
+
+/* 96th Channel Proboscis Burrowing Efficiency (% PBE) Styling (Looks & UI Agent v7.78.0) */
+.pbe-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.pbe-surface {
+    background: rgba(217, 119, 6, 0.12);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.40);
+}
+.pbe-flushing {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.pbe-stable {
+    background: rgba(253, 230, 138, 0.18);
+    color: #fde68a;
+    border: 1px solid rgba(253, 230, 138, 0.50);
+}
+.pbe-peak {
+    background: rgba(254, 243, 199, 0.22);
+    color: #fef3c7;
+    border: 1px solid rgba(254, 243, 199, 0.60);
+}
+
+/* 97th Channel Notochord Turgor & Tension Index (% NTI) Styling (UI Agent v7.84.0) */
+.nti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(37, 99, 235, 0.15);
+    color: #2563eb;
+    border: 1px solid rgba(37, 99, 235, 0.45);
+}
+.nti-flaccid {
+    background: rgba(37, 99, 235, 0.12);
+    color: #2563eb;
+    border: 1px solid rgba(37, 99, 235, 0.40);
+}
+.nti-gliding {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.45);
+}
+.nti-thrust {
+    background: rgba(96, 165, 250, 0.18);
+    color: #60a5fa;
+    border: 1px solid rgba(96, 165, 250, 0.50);
+}
+.nti-peak {
+    background: rgba(191, 219, 254, 0.22);
+    color: #bfdbfe;
+    border: 1px solid rgba(191, 219, 254, 0.60);
+}
+
+/* 98th Channel Myomeric Flexion & Propulsion Efficiency (% MFE) Styling (UI Agent v7.88.0) */
+.mfe-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(20, 184, 166, 0.15);
+    color: #14b8a6;
+    border: 1px solid rgba(20, 184, 166, 0.45);
+}
+.mfe-spasm {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.mfe-fatigued {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.mfe-steady {
+    background: rgba(20, 184, 166, 0.18);
+    color: #14b8a6;
+    border: 1px solid rgba(20, 184, 166, 0.50);
+}
+.mfe-peak {
+    background: rgba(94, 234, 212, 0.22);
+    color: #5eead4;
+    border: 1px solid rgba(94, 234, 212, 0.60);
+}
+
+/* 99th Channel Tunic Protective Integrity (% TPI) Styling (UI Agent v7.94.0) */
+.tpi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.tpi-vulnerable {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.tpi-meta {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.tpi-stable {
+    background: rgba(234, 179, 8, 0.18);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.tpi-peak {
+    background: rgba(254, 240, 138, 0.22);
+    color: #fef08a;
+    border: 1px solid rgba(254, 240, 138, 0.60);
+}
+
+/* 100th Channel Ciliary Pumping & Reversal Ratio (% CPR) Styling (UI Agent v7.98.0) */
+.cpr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(139, 92, 246, 0.15);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.45);
+}
+.cpr-stall {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.cpr-fouled {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.cpr-sync {
+    background: rgba(139, 92, 246, 0.18);
+    color: #a855f7;
+    border: 1px solid rgba(139, 92, 246, 0.50);
+}
+.cpr-peak {
+    background: rgba(192, 132, 252, 0.22);
+    color: #d8b4fe;
+    border: 1px solid rgba(192, 132, 252, 0.60);
+}
+
+/* 101st Channel Slime Defense Capacity Index (% SCI) Styling (UI Agent v8.04.0) */
+.sci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(132, 204, 22, 0.15);
+    color: #84cc16;
+    border: 1px solid rgba(132, 204, 22, 0.45);
+}
+.sci-depleted {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.sci-regen {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.sci-stable {
+    background: rgba(132, 204, 22, 0.18);
+    color: #bef264;
+    border: 1px solid rgba(132, 204, 22, 0.50);
+}
+.sci-peak {
+    background: rgba(190, 242, 100, 0.22);
+    color: #d9f99d;
+    border: 1px solid rgba(190, 242, 100, 0.60);
+}
+
+/* 102nd Channel Oral Suction & Parasitic Traction Index (% OTI) Styling (UI Agent v8.08.0) */
+.oti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(225, 29, 72, 0.15);
+    color: #e11d48;
+    border: 1px solid rgba(225, 29, 72, 0.45);
+}
+.oti-quiescent {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.oti-searching {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.oti-latched {
+    background: rgba(225, 29, 72, 0.18);
+    color: #fb7185;
+    border: 1px solid rgba(225, 29, 72, 0.50);
+}
+.oti-peak {
+    background: rgba(254, 205, 211, 0.22);
+    color: #fecdd3;
+    border: 1px solid rgba(254, 205, 211, 0.60);
+}
+
+/* 103rd Channel Ostracoderm Armor Integrity Index (% OAI) Styling (UI Agent v8.14.0) */
+.oai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.oai-unarmored {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.oai-dermal {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.oai-aspidin {
+    background: rgba(217, 119, 6, 0.18);
+    color: #fbbf24;
+    border: 1px solid rgba(217, 119, 6, 0.50);
+}
+.oai-impenetrable {
+    background: rgba(254, 243, 199, 0.22);
+    color: #fef3c7;
+    border: 1px solid rgba(254, 243, 199, 0.60);
+}
+
+.ostracoderm-hud-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 6px 8px;
+    background: rgba(217, 119, 6, 0.08);
+    border: 1px solid rgba(217, 119, 6, 0.30);
+    border-radius: 6px;
+}
+.ostracoderm-meter-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.ostracoderm-meter-fill {
+    height: 100%;
+    width: 0%;
+    background: #d97706;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* 104th Channel Pectoral Elevation & Hydrofoil Force Index (% PEF) Styling (Looks & UI Agent v8.18.0) */
+.pef-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+.pef-stalled {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.pef-trimming {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.pef-gliding {
+    background: rgba(6, 182, 212, 0.18);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.50);
+}
+.pef-cruising {
+    background: rgba(165, 243, 252, 0.22);
+    color: #a5f3fc;
+    border: 1px solid rgba(165, 243, 252, 0.60);
+}
+
+/* 105th Channel Gnathostome Jaw Index (% GJI) Styling (UI Agent v8.24.0) */
+.gji-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 88, 12, 0.15);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.45);
+}
+.gji-unhinged {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.gji-incipient {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.gji-shearing {
+    background: rgba(234, 88, 12, 0.18);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.50);
+}
+.gji-apex {
+    background: rgba(254, 215, 170, 0.22);
+    color: #fed7aa;
+    border: 1px solid rgba(254, 215, 170, 0.60);
+}
+
+.placoderm-hud-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 6px 8px;
+    background: rgba(234, 88, 12, 0.08);
+    border: 1px solid rgba(234, 88, 12, 0.30);
+    border-radius: 6px;
+}
+.placoderm-meter-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.placoderm-meter-fill {
+    height: 100%;
+    width: 0%;
+    background: #ea580c;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* 106th Telemetry Channel: Cranio-Thoracic Shear Index (% CTS) Styling (Looks & UI Agent v8.29.0) */
+.cts-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(185, 28, 28, 0.15);
+    color: #b91c1c;
+    border: 1px solid rgba(185, 28, 28, 0.45);
+}
+.cts-rigid {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cts-incipient {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.cts-articulated {
+    background: rgba(234, 88, 12, 0.18);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.50);
+}
+.cts-apex {
+    background: rgba(185, 28, 28, 0.25);
+    color: #fca5a5;
+    border: 1px solid rgba(185, 28, 28, 0.65);
+    box-shadow: 0 0 6px rgba(185, 28, 28, 0.45);
+}
+.placoderm-cts-meter-fill {
+    height: 100%;
+    width: 0%;
+    background: #b91c1c;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* 107th Telemetry Channel: Placoid Denticle & Hydrodynamic Index (% PDI) Styling (Looks & UI Agent v8.35.0) */
+.pdi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(14, 165, 233, 0.15);
+    color: #0ea5e9;
+    border: 1px solid rgba(14, 165, 233, 0.45);
+}
+.pdi-naked {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.pdi-incipient {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.45);
+}
+.pdi-streamlined {
+    background: rgba(14, 165, 233, 0.18);
+    color: #0ea5e9;
+    border: 1px solid rgba(14, 165, 233, 0.50);
+}
+.pdi-apex {
+    background: rgba(2, 132, 199, 0.25);
+    color: #bae6fd;
+    border: 1px solid rgba(2, 132, 199, 0.65);
+    box-shadow: 0 0 6px rgba(14, 165, 233, 0.45);
+}
+.chondrichthyes-pdi-meter-fill {
+    height: 100%;
+    width: 0%;
+    background: #0ea5e9;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* 108th Telemetry Channel: Polyphyodont Tooth Replacement Rate (% PBR) Styling (Looks & UI Agent v8.35.0) */
+.pbr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(248, 250, 252, 0.15);
+    color: #f8fafc;
+    border: 1px solid rgba(248, 250, 252, 0.45);
+}
+.pbr-fixed {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.pbr-tardy {
+    background: rgba(203, 213, 225, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(203, 213, 225, 0.45);
+}
+.pbr-whorl {
+    background: rgba(241, 245, 249, 0.18);
+    color: #f1f5f9;
+    border: 1px solid rgba(241, 245, 249, 0.50);
+}
+.pbr-conveyor {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.70);
+    box-shadow: 0 0 6px rgba(248, 250, 252, 0.50);
+}
+.chondrichthyes-pbr-meter-fill {
+    height: 100%;
+    width: 0%;
+    background: #f8fafc;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* 109th Telemetry Channel: Swim Bladder Hydrostatic Index (% SBI) Styling (Looks & UI Agent v8.41.0) */
+.sbi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.sbi-sinker {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.sbi-incipient {
+    background: rgba(5, 150, 105, 0.15);
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.45);
+}
+.sbi-hover {
+    background: rgba(16, 185, 129, 0.18);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.50);
+}
+.sbi-master {
+    background: rgba(52, 211, 153, 0.25);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.70);
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.50);
+}
+
+/* 110th Telemetry Channel: Opercular Ventilation Rate & Dual-Pump (% OVR) Styling (Looks & UI Agent v8.41.0) */
+.ovr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.45);
+}
+.ovr-ram {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ovr-sluggish {
+    background: rgba(225, 29, 72, 0.15);
+    color: #e11d48;
+    border: 1px solid rgba(225, 29, 72, 0.45);
+}
+.ovr-dual {
+    background: rgba(244, 63, 94, 0.18);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.50);
+}
+.ovr-hyper {
+    background: rgba(251, 113, 133, 0.25);
+    color: #fb7185;
+    border: 1px solid rgba(251, 113, 133, 0.70);
+    box-shadow: 0 0 6px rgba(244, 63, 94, 0.50);
+}
+
+
+/* 111th Telemetry Channel: Lobe-Fin Locomotion Index (% LFI) Styling (Looks & UI Agent v8.47.0) */
+.lfi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.lfi-ray {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.lfi-incipient {
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.lfi-crawler {
+    background: rgba(245, 158, 11, 0.18);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.50);
+}
+.lfi-gait {
+    background: rgba(251, 191, 36, 0.25);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.70);
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.50);
+}
+
+/* 112th Telemetry Channel: Pulmonary Respiration & Air-Breathing (% PRI) Styling (Looks & UI Agent v8.47.0) */
+.pri-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 88, 12, 0.15);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.45);
+}
+.pri-gill {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.pri-gulp {
+    background: rgba(194, 65, 12, 0.15);
+    color: #c2410c;
+    border: 1px solid rgba(194, 65, 12, 0.45);
+}
+.pri-bimodal {
+    background: rgba(234, 88, 12, 0.18);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.50);
+}
+.pri-obligate {
+    background: rgba(249, 115, 22, 0.25);
+    color: #f97316;
+    border: 1px solid rgba(249, 115, 22, 0.70);
+    box-shadow: 0 0 6px rgba(234, 88, 12, 0.50);
+}
+
+
+/* 113th Telemetry Channel: Tetrapod Appendicular Index (% TAI) Styling (Looks & UI Agent v8.53.0) */
+.tai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(22, 163, 74, 0.15);
+    color: #16a34a;
+    border: 1px solid rgba(22, 163, 74, 0.45);
+}
+.tai-fringe {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.tai-paddle {
+    background: rgba(22, 163, 74, 0.15);
+    color: #16a34a;
+    border: 1px solid rgba(22, 163, 74, 0.45);
+}
+.tai-gait {
+    background: rgba(34, 197, 94, 0.18);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.50);
+}
+.tai-stride {
+    background: rgba(74, 222, 128, 0.25);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.70);
+    box-shadow: 0 0 6px rgba(22, 163, 74, 0.50);
+}
+
+/* 114th Telemetry Channel: Amphibious Acoustic & Auditory Index (% AAI) Styling (Looks & UI Agent v8.53.0) */
+.aai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.45);
+}
+.aai-submerged {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.aai-stapes {
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.45);
+}
+.aai-resonance {
+    background: rgba(129, 140, 248, 0.18);
+    color: #818cf8;
+    border: 1px solid rgba(129, 140, 248, 0.50);
+}
+.aai-aerial {
+    background: rgba(165, 180, 252, 0.25);
+    color: #a5b4fc;
+    border: 1px solid rgba(165, 180, 252, 0.70);
+    box-shadow: 0 0 6px rgba(99, 102, 241, 0.50);
+}
+
+
+/* 115th Telemetry Channel: Amniotic Egg Integrity & Shell Calcification Index (% AEI) Styling (Looks & UI Agent v8.59.0) */
+.aei-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.45);
+}
+.aei-gelatinous {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.aei-leathery {
+    background: rgba(202, 138, 4, 0.15);
+    color: #ca8a04;
+    border: 1px solid rgba(202, 138, 4, 0.45);
+}
+.aei-calcified {
+    background: rgba(234, 179, 8, 0.18);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.aei-clutch {
+    background: rgba(253, 224, 71, 0.25);
+    color: #fde047;
+    border: 1px solid rgba(253, 224, 71, 0.70);
+    box-shadow: 0 0 6px rgba(234, 179, 8, 0.50);
+}
+
+/* 116th Telemetry Channel: Keratinized Scale Resilience & Costal Breathing Index (% KSR) Styling (Looks & UI Agent v8.59.0) */
+.ksr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(220, 38, 38, 0.15);
+    color: #dc2626;
+    border: 1px solid rgba(220, 38, 38, 0.45);
+}
+.ksr-permeable {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ksr-keratin {
+    background: rgba(220, 38, 38, 0.15);
+    color: #dc2626;
+    border: 1px solid rgba(220, 38, 38, 0.45);
+}
+.ksr-scaled {
+    background: rgba(239, 68, 68, 0.18);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.50);
+}
+.ksr-armored {
+    background: rgba(248, 113, 113, 0.25);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.70);
+    box-shadow: 0 0 6px rgba(220, 38, 38, 0.50);
+}
+
+/* 117th Telemetry Channel: Thermal Sail Index & Vascular Heat Flux (% TSI) Styling (Looks & UI Agent v8.65.0) */
+.tsi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.tsi-sailless {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.tsi-spines {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.tsi-vascular {
+    background: rgba(251, 191, 36, 0.20);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.55);
+}
+.tsi-apex {
+    background: rgba(252, 211, 77, 0.25);
+    color: #fcd34d;
+    border: 1px solid rgba(252, 211, 77, 0.70);
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.50);
+}
+
+/* 118th Telemetry Channel: Heterodont Dentition Index & Carnassial/Molar Shear (% HDI) Styling (Looks & UI Agent v8.65.0) */
+.hdi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(224, 231, 255, 0.15);
+    color: #e0e7ff;
+    border: 1px solid rgba(224, 231, 255, 0.45);
+}
+.hdi-homodont {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.hdi-canines {
+    background: rgba(199, 210, 254, 0.18);
+    color: #c7d2fe;
+    border: 1px solid rgba(199, 210, 254, 0.50);
+}
+.hdi-shearer {
+    background: rgba(224, 231, 255, 0.22);
+    color: #e0e7ff;
+    border: 1px solid rgba(224, 231, 255, 0.60);
+}
+.hdi-mammalian {
+    background: rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 6px rgba(224, 231, 255, 0.50);
+}
+
+/* 119th Telemetry Channel: Secondary Palate Index & Continuous Respiration (% SPI) Styling (Looks & UI Agent v8.71.0) */
+.spi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+.spi-apalatal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.spi-incipient {
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+.spi-complete {
+    background: rgba(34, 211, 238, 0.20);
+    color: #22d3ee;
+    border: 1px solid rgba(34, 211, 238, 0.55);
+}
+.spi-turbinates {
+    background: rgba(103, 232, 249, 0.25);
+    color: #67e8f9;
+    border: 1px solid rgba(103, 232, 249, 0.70);
+    box-shadow: 0 0 6px rgba(6, 182, 212, 0.50);
+}
+
+/* 120th Telemetry Channel: Endothermic Metabolic Index & Thermal Homeostasis (% EMI) Styling (Looks & UI Agent v8.71.0) */
+.emi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.45);
+}
+.emi-bradymetabolic {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.emi-tachymetabolic {
+    background: rgba(244, 63, 94, 0.15);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.45);
+}
+.emi-mesothermic {
+    background: rgba(251, 113, 133, 0.20);
+    color: #fb7185;
+    border: 1px solid rgba(251, 113, 133, 0.55);
+}
+.emi-homeothermic {
+    background: rgba(253, 164, 175, 0.25);
+    color: #fda4af;
+    border: 1px solid rgba(253, 164, 175, 0.70);
+    box-shadow: 0 0 6px rgba(244, 63, 94, 0.50);
+}
+
+
+/* 121st Telemetry Channel: Mammaliaform Ear Index & High-Frequency Acoustic Acuity (% MEI) Styling (Looks & UI Agent v8.77.0) */
+.mei-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(139, 92, 246, 0.15);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.45);
+}
+.mei-quadrate {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.mei-transitional {
+    background: rgba(139, 92, 246, 0.15);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.45);
+}
+.mei-detached {
+    background: rgba(167, 139, 250, 0.20);
+    color: #a78bfa;
+    border: 1px solid rgba(167, 139, 250, 0.55);
+}
+.mei-resonance {
+    background: rgba(196, 181, 253, 0.25);
+    color: #c4b5fd;
+    border: 1px solid rgba(196, 181, 253, 0.70);
+    box-shadow: 0 0 6px rgba(139, 92, 246, 0.50);
+}
+
+/* 122nd Telemetry Channel: Lactation, Milk Secretion & Juvenile Nursing Index (% LAI) Styling (Looks & UI Agent v8.77.0) */
+.lai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(254, 240, 138, 0.15);
+    color: #fef08a;
+    border: 1px solid rgba(254, 240, 138, 0.45);
+}
+.lai-alactic {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.lai-incipient {
+    background: rgba(254, 240, 138, 0.15);
+    color: #fef08a;
+    border: 1px solid rgba(254, 240, 138, 0.45);
+}
+.lai-areolar {
+    background: rgba(253, 224, 71, 0.20);
+    color: #fde047;
+    border: 1px solid rgba(253, 224, 71, 0.55);
+}
+.lai-specialized {
+    background: rgba(254, 249, 195, 0.25);
+    color: #fef9c3;
+    border: 1px solid rgba(254, 249, 195, 0.70);
+    box-shadow: 0 0 6px rgba(254, 240, 138, 0.50);
+}
+
+
+/* 123rd Telemetry Channel: Marsupium Pouch Index & Altricial Neonate Nipple-Latching (% MPI) Styling (Looks & UI Agent v8.83.0) */
+.mpi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 88, 12, 0.15);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.45);
+}
+.mpi-cloacal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.mpi-incipient {
+    background: rgba(234, 88, 12, 0.15);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.45);
+}
+.mpi-pouch {
+    background: rgba(249, 115, 22, 0.20);
+    color: #f97316;
+    border: 1px solid rgba(249, 115, 22, 0.55);
+}
+.mpi-latching {
+    background: rgba(251, 146, 60, 0.25);
+    color: #fb923c;
+    border: 1px solid rgba(251, 146, 60, 0.70);
+    box-shadow: 0 0 6px rgba(234, 88, 12, 0.50);
+}
+
+/* 124th Telemetry Channel: Choriovitelline Placenta Index & Trophoblast Exchange (% CPI) Styling (Looks & UI Agent v8.83.0) */
+.cpi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(225, 29, 72, 0.15);
+    color: #e11d48;
+    border: 1px solid rgba(225, 29, 72, 0.45);
+}
+.cpi-aplacental {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cpi-incipient {
+    background: rgba(225, 29, 72, 0.15);
+    color: #e11d48;
+    border: 1px solid rgba(225, 29, 72, 0.45);
+}
+.cpi-choriovitelline {
+    background: rgba(244, 63, 94, 0.20);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.55);
+}
+.cpi-chorioallantoic {
+    background: rgba(251, 113, 133, 0.25);
+    color: #fb7185;
+    border: 1px solid rgba(251, 113, 133, 0.70);
+    box-shadow: 0 0 6px rgba(225, 29, 72, 0.50);
+}
+
+/* 125th Telemetry Channel: Tribosphenic Molar Occlusion Index (% TMI) Styling (Looks & UI Agent v8.89.0) */
+.tmi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.tmi-triconodont {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.tmi-incipient {
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.tmi-tribosphenic {
+    background: rgba(245, 158, 11, 0.20);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.55);
+}
+.tmi-mastication {
+    background: rgba(251, 191, 36, 0.25);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.70);
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.50);
+}
+
+/* 126th Telemetry Channel: Chorioallantoic Placentation Index (% CAI) Styling (Looks & UI Agent v8.89.0) */
+.cai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(190, 18, 60, 0.15);
+    color: #be123c;
+    border: 1px solid rgba(190, 18, 60, 0.45);
+}
+.cai-choriovitelline {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cai-allantoic {
+    background: rgba(190, 18, 60, 0.15);
+    color: #be123c;
+    border: 1px solid rgba(190, 18, 60, 0.45);
+}
+.cai-placenta {
+    background: rgba(225, 29, 72, 0.20);
+    color: #e11d48;
+    border: 1px solid rgba(225, 29, 72, 0.55);
+}
+.cai-hemochorial {
+    background: rgba(244, 63, 94, 0.25);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.70);
+    box-shadow: 0 0 6px rgba(190, 18, 60, 0.50);
+}
+
+/* 127th Telemetry Channel: Plagiaulacoid Blade Index & Multituberculate Seed Grinding (% PBI) Styling (Looks & UI Agent v8.95.0) */
+.pbi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(101, 163, 13, 0.15);
+    color: #65a30d;
+    border: 1px solid rgba(101, 163, 13, 0.45);
+}
+.pbi-simple {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.pbi-incipient {
+    background: rgba(101, 163, 13, 0.15);
+    color: #65a30d;
+    border: 1px solid rgba(101, 163, 13, 0.45);
+}
+.pbi-saw {
+    background: rgba(132, 204, 22, 0.20);
+    color: #84cc16;
+    border: 1px solid rgba(132, 204, 22, 0.55);
+}
+.pbi-granivorous {
+    background: rgba(163, 230, 53, 0.25);
+    color: #a3e635;
+    border: 1px solid rgba(163, 230, 53, 0.70);
+    box-shadow: 0 0 6px rgba(101, 163, 13, 0.50);
+}
+
+/* 128th Telemetry Channel: Torpor & Hibernation Index / Metabolic Resilience (% THI) Styling (Looks & UI Agent v8.95.0) */
+.thi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(2, 132, 199, 0.15);
+    color: #0284c7;
+    border: 1px solid rgba(2, 132, 199, 0.45);
+}
+.thi-vulnerable {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.thi-nocturnal {
+    background: rgba(2, 132, 199, 0.15);
+    color: #0284c7;
+    border: 1px solid rgba(2, 132, 199, 0.45);
+}
+.thi-torpor {
+    background: rgba(56, 189, 248, 0.20);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.55);
+}
+.thi-hibernation {
+    background: rgba(125, 211, 252, 0.25);
+    color: #7dd3fc;
+    border: 1px solid rgba(125, 211, 252, 0.70);
+    box-shadow: 0 0 6px rgba(2, 132, 199, 0.50);
+}
+
+/* 129th Telemetry Channel: Binocular Vision Index & Depth Perception (% BVI) Styling (Looks & UI Agent v9.01.0) */
+.bvi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(79, 70, 229, 0.15);
+    color: #4f46e5;
+    border: 1px solid rgba(79, 70, 229, 0.45);
+}
+.bvi-flat {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bvi-incipient {
+    background: rgba(99, 102, 241, 0.15);
+    color: #6366f1;
+    border: 1px solid rgba(99, 102, 241, 0.45);
+}
+.bvi-stereo {
+    background: rgba(79, 70, 229, 0.20);
+    color: #818cf8;
+    border: 1px solid rgba(79, 70, 229, 0.55);
+}
+.bvi-precision {
+    background: rgba(67, 56, 202, 0.25);
+    color: #a5b4fc;
+    border: 1px solid rgba(79, 70, 229, 0.70);
+    box-shadow: 0 0 6px rgba(79, 70, 229, 0.50);
+}
+
+/* 130th Telemetry Channel: Opposable Grasping Index & Arboreal Locomotion (% OGI) Styling (Looks & UI Agent v9.01.0) */
+.ogi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(5, 150, 105, 0.15);
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.45);
+}
+.ogi-claw {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ogi-incipient {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.ogi-grasp {
+    background: rgba(5, 150, 105, 0.20);
+    color: #34d399;
+    border: 1px solid rgba(5, 150, 105, 0.55);
+}
+.ogi-acrobatics {
+    background: rgba(4, 120, 87, 0.25);
+    color: #6ee7b7;
+    border: 1px solid rgba(5, 150, 105, 0.70);
+    box-shadow: 0 0 6px rgba(5, 150, 105, 0.50);
+}
+
+/* 131st Telemetry Channel: Cetacean Transition Index & Pachyosteosclerosis (% CTI) Styling (Looks & UI Agent v9.07.0) */
+.cti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(2, 132, 199, 0.15);
+    color: #0284c7;
+    border: 1px solid rgba(2, 132, 199, 0.45);
+}
+.cti-terrestrial {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cti-ambulocetid {
+    background: rgba(3, 105, 161, 0.15);
+    color: #0369a1;
+    border: 1px solid rgba(3, 105, 161, 0.45);
+}
+.cti-protocetid {
+    background: rgba(2, 132, 199, 0.20);
+    color: #38bdf8;
+    border: 1px solid rgba(2, 132, 199, 0.55);
+}
+.cti-basilosaurid {
+    background: rgba(14, 165, 233, 0.25);
+    color: #7dd3fc;
+    border: 1px solid rgba(14, 165, 233, 0.70);
+    box-shadow: 0 0 6px rgba(2, 132, 199, 0.50);
+}
+
+/* 132nd Telemetry Channel: Aquatic Undulating Thrust & Fluke Kinematics (% AUT) Styling (Looks & UI Agent v9.07.0) */
+.aut-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.15);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.45);
+}
+.aut-paddle {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.aut-pelvic {
+    background: rgba(8, 145, 178, 0.15);
+    color: #0891b2;
+    border: 1px solid rgba(8, 145, 178, 0.45);
+}
+.aut-fluking {
+    background: rgba(6, 182, 212, 0.20);
+    color: #22d3ee;
+    border: 1px solid rgba(6, 182, 212, 0.55);
+}
+.aut-hydrofoil {
+    background: rgba(34, 211, 238, 0.25);
+    color: #67e8f9;
+    border: 1px solid rgba(34, 211, 238, 0.70);
+    box-shadow: 0 0 6px rgba(6, 182, 212, 0.50);
+}
+
+/* 133rd Telemetry Channel: Ossicone & Weaponization Index (% OVI) Styling (Looks & UI Agent v9.13.0) */
+.ovi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(180, 83, 9, 0.15);
+    color: #b45309;
+    border: 1px solid rgba(180, 83, 9, 0.45);
+}
+.ovi-unarmed {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ovi-bosses {
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.ovi-uintatherid {
+    background: rgba(180, 83, 9, 0.20);
+    color: #f59e0b;
+    border: 1px solid rgba(180, 83, 9, 0.55);
+}
+.ovi-titan {
+    background: rgba(245, 158, 11, 0.25);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.70);
+    box-shadow: 0 0 6px rgba(180, 83, 9, 0.50);
+}
+
+/* 134th Telemetry Channel: Graviportal Columnar Index (% GCI) Styling (Looks & UI Agent v9.13.0) */
+.gci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(21, 128, 61, 0.15);
+    color: #15803d;
+    border: 1px solid rgba(21, 128, 61, 0.45);
+}
+.gci-flexed {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.gci-subgraviportal {
+    background: rgba(22, 163, 74, 0.15);
+    color: #16a34a;
+    border: 1px solid rgba(22, 163, 74, 0.45);
+}
+.gci-pillar {
+    background: rgba(21, 128, 61, 0.20);
+    color: #22c55e;
+    border: 1px solid rgba(21, 128, 61, 0.55);
+}
+.gci-titan {
+    background: rgba(34, 197, 94, 0.25);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.70);
+    box-shadow: 0 0 6px rgba(21, 128, 61, 0.50);
+}
+
+/* 135th Telemetry Channel: Bone-Crushing & Carnassial Index (% BCI) Styling (Looks & UI Agent v9.19.0) */
+.bci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(220, 38, 38, 0.15);
+    color: #dc2626;
+    border: 1px solid rgba(220, 38, 38, 0.45);
+}
+.bci-basal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bci-shear {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+}
+.bci-bonebreaker {
+    background: rgba(220, 38, 38, 0.20);
+    color: #f87171;
+    border: 1px solid rgba(220, 38, 38, 0.55);
+}
+.bci-crusher {
+    background: rgba(185, 28, 28, 0.25);
+    color: #fca5a5;
+    border: 1px solid rgba(185, 28, 28, 0.70);
+    box-shadow: 0 0 6px rgba(220, 38, 38, 0.50);
+}
+
+/* 136th Telemetry Channel: Cursorial Terrestrial Index (% CTI) Styling (Looks & UI Agent v9.19.0) */
+.cti-pred-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.45);
+}
+.cti-ambling {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cti-prowler {
+    background: rgba(202, 138, 4, 0.15);
+    color: #ca8a04;
+    border: 1px solid rgba(202, 138, 4, 0.45);
+}
+.cti-sprinter {
+    background: rgba(234, 179, 8, 0.20);
+    color: #facc15;
+    border: 1px solid rgba(234, 179, 8, 0.55);
+}
+.cti-chaser {
+    background: rgba(250, 204, 21, 0.25);
+    color: #fef08a;
+    border: 1px solid rgba(250, 204, 21, 0.70);
+    box-shadow: 0 0 6px rgba(234, 179, 8, 0.50);
+}
+
+/* 137th Telemetry Channel: Beak Biomechanics Index (% BBI) Styling (Looks & UI Agent v9.25.0) */
+.bbi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(37, 99, 235, 0.15);
+    color: #2563eb;
+    border: 1px solid rgba(37, 99, 235, 0.45);
+}
+.bbi-anatid {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bbi-hooked {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.45);
+}
+.bbi-raptorial {
+    background: rgba(37, 99, 235, 0.20);
+    color: #60a5fa;
+    border: 1px solid rgba(37, 99, 235, 0.55);
+}
+.bbi-crusher {
+    background: rgba(29, 78, 216, 0.25);
+    color: #93c5fd;
+    border: 1px solid rgba(29, 78, 216, 0.70);
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.50);
+}
+
+/* 138th Telemetry Channel: Avian Pursuit Index (% API) Styling (Looks & UI Agent v9.25.0) */
+.api-pred-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 88, 12, 0.15);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.45);
+}
+.api-amble {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.api-prowler {
+    background: rgba(249, 115, 22, 0.15);
+    color: #f97316;
+    border: 1px solid rgba(249, 115, 22, 0.45);
+}
+.api-runner {
+    background: rgba(234, 88, 12, 0.20);
+    color: #fb923c;
+    border: 1px solid rgba(234, 88, 12, 0.55);
+}
+.api-chaser {
+    background: rgba(194, 65, 12, 0.25);
+    color: #fdba74;
+    border: 1px solid rgba(194, 65, 12, 0.70);
+    box-shadow: 0 0 6px rgba(234, 88, 12, 0.50);
+}
+
+/* 139th Telemetry Channel: Paraceratheriid Elevation Index (% PEI) Styling (Looks & UI Agent v9.31.0) */
+.pei-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(5, 150, 105, 0.15);
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.45);
+}
+.pei-low {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.pei-subcolumnar {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.45);
+}
+.pei-pillar {
+    background: rgba(5, 150, 105, 0.20);
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.55);
+}
+.pei-titan {
+    background: rgba(4, 120, 87, 0.25);
+    color: #34d399;
+    border: 1px solid rgba(4, 120, 87, 0.70);
+    box-shadow: 0 0 6px rgba(5, 150, 105, 0.50);
+}
+
+/* 140th Telemetry Channel: Browsing Foliage Index (% BFI) Styling (Looks & UI Agent v9.31.0) */
+.bfi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.15);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.bfi-basal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bfi-incipient {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.bfi-defoliator {
+    background: rgba(217, 119, 6, 0.20);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.55);
+}
+.bfi-titan-browser {
+    background: rgba(180, 83, 9, 0.25);
+    color: #fbbf24;
+    border: 1px solid rgba(180, 83, 9, 0.70);
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.50);
+}
+
+/* 141st Telemetry Channel: Entelodont Bite & Bone-Crushing Index (% EBI) Styling (Looks & UI Agent v9.37.0) */
+.ebi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(71, 85, 105, 0.20);
+    color: #e2e8f0;
+    border: 1px solid rgba(148, 163, 184, 0.50);
+}
+.ebi-basal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ebi-incipient {
+    background: rgba(203, 213, 225, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(203, 213, 225, 0.45);
+}
+.ebi-crusher {
+    background: rgba(71, 85, 105, 0.25);
+    color: #e2e8f0;
+    border: 1px solid rgba(226, 232, 240, 0.60);
+    box-shadow: 0 0 6px rgba(148, 163, 184, 0.40);
+}
+.ebi-titan {
+    background: rgba(30, 41, 59, 0.35);
+    color: #f8fafc;
+    border: 1px solid rgba(248, 250, 252, 0.80);
+    box-shadow: 0 0 8px rgba(226, 232, 240, 0.60);
+}
+
+/* 142nd Telemetry Channel: Omnivorous Flange & Foraging Index (% OFI) Styling (Looks & UI Agent v9.37.0) */
+.ofi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(220, 38, 38, 0.15);
+    color: #dc2626;
+    border: 1px solid rgba(220, 38, 38, 0.45);
+}
+.ofi-root {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ofi-flange {
+    background: rgba(248, 113, 113, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(248, 113, 113, 0.45);
+}
+.ofi-pirate {
+    background: rgba(239, 68, 68, 0.20);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.55);
+}
+.ofi-terminator {
+    background: rgba(153, 27, 27, 0.25);
+    color: #dc2626;
+    border: 1px solid rgba(220, 38, 38, 0.75);
+    box-shadow: 0 0 6px rgba(220, 38, 38, 0.50);
+}
+
+/* 143rd Telemetry Channel: Chalicothere Claw & Climbing Index (% CCI) Styling (Looks & UI Agent v9.43.0) */
+.cci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(100, 116, 139, 0.20);
+    color: #64748b;
+    border: 1px solid rgba(148, 163, 184, 0.50);
+}
+.cci-basal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cci-incipient {
+    background: rgba(203, 213, 225, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(203, 213, 225, 0.45);
+}
+.cci-knuckle {
+    background: rgba(100, 116, 139, 0.25);
+    color: #cbd5e1;
+    border: 1px solid rgba(100, 116, 139, 0.60);
+    box-shadow: 0 0 6px rgba(100, 116, 139, 0.40);
+}
+.cci-apex {
+    background: rgba(30, 41, 59, 0.35);
+    color: #f8fafc;
+    border: 1px solid rgba(248, 250, 252, 0.80);
+    box-shadow: 0 0 8px rgba(226, 232, 240, 0.60);
+}
+
+/* 144th Telemetry Channel: Branch Pulling & Incurvation Index (% BPI) Styling (Looks & UI Agent v9.43.0) */
+.bpi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.18);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.bpi-shrub {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bpi-deflector {
+    background: rgba(250, 204, 21, 0.18);
+    color: #facc15;
+    border: 1px solid rgba(250, 204, 21, 0.45);
+}
+.bpi-stripper {
+    background: rgba(234, 179, 8, 0.22);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.60);
+    box-shadow: 0 0 6px rgba(234, 179, 8, 0.40);
+}
+.bpi-titan {
+    background: rgba(202, 138, 4, 0.28);
+    color: #fef08a;
+    border: 1px solid rgba(253, 224, 71, 0.75);
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.60);
+}
+
+/* 145th Telemetry Channel: Saber Canine & Shear Index (% SCI) Styling (Looks & UI Agent v9.49.0) */
+.sci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(185, 28, 28, 0.20);
+    color: #b91c1c;
+    border: 1px solid rgba(185, 28, 28, 0.50);
+}
+.sci-basal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.sci-dirk {
+    background: rgba(244, 63, 94, 0.15);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.45);
+}
+.sci-ambush {
+    background: rgba(225, 29, 72, 0.22);
+    color: #f43f5e;
+    border: 1px solid rgba(225, 29, 72, 0.60);
+    box-shadow: 0 0 6px rgba(225, 29, 72, 0.40);
+}
+.sci-titan {
+    background: rgba(185, 28, 28, 0.30);
+    color: #fecdd3;
+    border: 1px solid rgba(251, 113, 133, 0.80);
+    box-shadow: 0 0 8px rgba(185, 28, 28, 0.60);
+}
+
+/* 146th Telemetry Channel: Bear-Dog Bone-Crush & Agility Index (% BDI) Styling (Looks & UI Agent v9.49.0) */
+.bdi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.20);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.50);
+}
+.bdi-caniform {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bdi-forager {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.45);
+}
+.bdi-breaker {
+    background: rgba(217, 119, 6, 0.22);
+    color: #f59e0b;
+    border: 1px solid rgba(217, 119, 6, 0.60);
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.40);
+}
+.bdi-titan {
+    background: rgba(180, 83, 9, 0.30);
+    color: #fef3c7;
+    border: 1px solid rgba(252, 211, 77, 0.80);
+    box-shadow: 0 0 8px rgba(217, 119, 6, 0.60);
+}
+
+/* 147th Telemetry Channel: Hypsodont Enamel & Grazing Index (% HEI) Styling (Looks & UI Agent v9.55.0) */
+.hei-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(22, 163, 74, 0.20);
+    color: #16a34a;
+    border: 1px solid rgba(22, 163, 74, 0.50);
+}
+.hei-brachydont {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.hei-mesodont {
+    background: rgba(132, 204, 22, 0.15);
+    color: #a3e635;
+    border: 1px solid rgba(132, 204, 22, 0.45);
+}
+.hei-hypsodont {
+    background: rgba(22, 163, 74, 0.22);
+    color: #4ade80;
+    border: 1px solid rgba(22, 163, 74, 0.60);
+    box-shadow: 0 0 6px rgba(22, 163, 74, 0.40);
+}
+.hei-titan {
+    background: rgba(21, 128, 61, 0.30);
+    color: #bbf7d0;
+    border: 1px solid rgba(74, 222, 128, 0.80);
+    box-shadow: 0 0 8px rgba(22, 163, 74, 0.60);
+}
+
+/* 148th Telemetry Channel: Cursorial Unguligrade & Sprint Index (% CUI) Styling (Looks & UI Agent v9.55.0) */
+.cui-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(180, 83, 9, 0.20);
+    color: #b45309;
+    border: 1px solid rgba(180, 83, 9, 0.50);
+}
+.cui-tridactyl {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cui-subunguligrade {
+    background: rgba(217, 119, 6, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(217, 119, 6, 0.45);
+}
+.cui-monodactyl {
+    background: rgba(180, 83, 9, 0.22);
+    color: #f59e0b;
+    border: 1px solid rgba(180, 83, 9, 0.60);
+    box-shadow: 0 0 6px rgba(180, 83, 9, 0.40);
+}
+.cui-titan {
+    background: rgba(146, 64, 14, 0.30);
+    color: #fef3c7;
+    border: 1px solid rgba(251, 191, 36, 0.80);
+    box-shadow: 0 0 8px rgba(180, 83, 9, 0.60);
+}
+
+/* 149th Telemetry Channel: Bipedal Alignment & Striding Index (% BAI) Styling (Looks & UI Agent v9.61.0) */
+.bai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 88, 12, 0.20);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.50);
+}
+.bai-quadruped {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bai-waddler {
+    background: rgba(249, 115, 22, 0.15);
+    color: #fb923c;
+    border: 1px solid rgba(249, 115, 22, 0.45);
+}
+.bai-striding {
+    background: rgba(234, 88, 12, 0.22);
+    color: #fdba74;
+    border: 1px solid rgba(234, 88, 12, 0.60);
+    box-shadow: 0 0 6px rgba(234, 88, 12, 0.40);
+}
+.bai-endurance {
+    background: rgba(194, 65, 12, 0.30);
+    color: #ffedd5;
+    border: 1px solid rgba(251, 146, 60, 0.80);
+    box-shadow: 0 0 8px rgba(234, 88, 12, 0.60);
+}
+
+/* 150th Telemetry Channel: Tool Manipulation & Lithic Index (% TMI) Styling (Looks & UI Agent v9.61.0) */
+.tmi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(71, 85, 105, 0.20);
+    color: #94a3b8;
+    border: 1px solid rgba(71, 85, 105, 0.50);
+}
+.tmi-nontool {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.tmi-cobble {
+    background: rgba(100, 116, 139, 0.18);
+    color: #cbd5e1;
+    border: 1px solid rgba(100, 116, 139, 0.50);
+}
+.tmi-oldowan {
+    background: rgba(71, 85, 105, 0.25);
+    color: #e2e8f0;
+    border: 1px solid rgba(71, 85, 105, 0.65);
+    box-shadow: 0 0 6px rgba(71, 85, 105, 0.45);
+}
+.tmi-master {
+    background: rgba(51, 65, 85, 0.35);
+    color: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.80);
+    box-shadow: 0 0 8px rgba(71, 85, 105, 0.60);
+}
+
+/* 151st Telemetry Channel: Acheulean Biface Index (% ABI) Styling (Looks & UI Agent v9.67.0) */
+.abi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(220, 38, 38, 0.20);
+    color: #f87171;
+    border: 1px solid rgba(220, 38, 38, 0.50);
+}
+.abi-crude {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.abi-proto {
+    background: rgba(248, 113, 113, 0.18);
+    color: #fca5a5;
+    border: 1px solid rgba(248, 113, 113, 0.50);
+}
+.abi-symmetric {
+    background: rgba(220, 38, 38, 0.25);
+    color: #fee2e2;
+    border: 1px solid rgba(220, 38, 38, 0.65);
+    box-shadow: 0 0 6px rgba(220, 38, 38, 0.45);
+}
+.abi-apex {
+    background: rgba(185, 28, 28, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(248, 113, 113, 0.85);
+    box-shadow: 0 0 8px rgba(220, 38, 38, 0.65);
+}
+
+/* 152nd Telemetry Channel: Thermal Cooking & Digestion Index (% TCI) Styling (Looks & UI Agent v9.67.0) */
+.tci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 88, 12, 0.20);
+    color: #ea580c;
+    border: 1px solid rgba(234, 88, 12, 0.50);
+}
+.tci-raw {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.tci-ember {
+    background: rgba(251, 146, 60, 0.18);
+    color: #fdba74;
+    border: 1px solid rgba(251, 146, 60, 0.50);
+}
+.tci-cook {
+    background: rgba(234, 88, 12, 0.25);
+    color: #ffedd5;
+    border: 1px solid rgba(234, 88, 12, 0.65);
+    box-shadow: 0 0 6px rgba(234, 88, 12, 0.45);
+}
+.tci-master {
+    background: rgba(194, 65, 12, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(251, 146, 60, 0.85);
+    box-shadow: 0 0 8px rgba(234, 88, 12, 0.65);
+}
+
+/* 153rd Telemetry Channel: Levallois Prepared-Core Index (% LPI) Styling (Looks & UI Agent v9.73.0) */
+.lpi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(59, 130, 246, 0.20);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.50);
+}
+.lpi-crude {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.lpi-tortoise {
+    background: rgba(147, 197, 253, 0.18);
+    color: #93c5fd;
+    border: 1px solid rgba(147, 197, 253, 0.50);
+}
+.lpi-point {
+    background: rgba(59, 130, 246, 0.25);
+    color: #dbeafe;
+    border: 1px solid rgba(59, 130, 246, 0.65);
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.45);
+}
+.lpi-apex {
+    background: rgba(29, 78, 216, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(96, 165, 250, 0.85);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.65);
+}
+
+/* 154th Telemetry Channel: Composite Spear & Hafting Index (% CSI) Styling (Looks & UI Agent v9.73.0) */
+.csi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(51, 65, 85, 0.25);
+    color: #94a3b8;
+    border: 1px solid rgba(51, 65, 85, 0.55);
+}
+.csi-unhafted {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.csi-lance {
+    background: rgba(100, 116, 139, 0.18);
+    color: #cbd5e1;
+    border: 1px solid rgba(100, 116, 139, 0.50);
+}
+.csi-spear {
+    background: rgba(51, 65, 85, 0.30);
+    color: #e2e8f0;
+    border: 1px solid rgba(71, 85, 105, 0.70);
+    box-shadow: 0 0 6px rgba(51, 65, 85, 0.45);
+}
+.csi-master {
+    background: rgba(30, 41, 59, 0.40);
+    color: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.85);
+    box-shadow: 0 0 8px rgba(51, 65, 85, 0.65);
+}
+
+/* 155th Telemetry Channel: Atlatl Mechanical Leverage Index (% AMI) Styling (Looks & UI Agent v9.79.0) */
+.ami-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.20);
+    color: #fde047;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.ami-unassisted {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ami-incipient {
+    background: rgba(253, 224, 71, 0.18);
+    color: #fef08a;
+    border: 1px solid rgba(253, 224, 71, 0.50);
+}
+.ami-hunter {
+    background: rgba(234, 179, 8, 0.25);
+    color: #fde047;
+    border: 1px solid rgba(234, 179, 8, 0.65);
+    box-shadow: 0 0 6px rgba(234, 179, 8, 0.45);
+}
+.ami-apex {
+    background: rgba(202, 138, 4, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(250, 204, 21, 0.85);
+    box-shadow: 0 0 8px rgba(234, 179, 8, 0.65);
+}
+
+/* 156th Telemetry Channel: Parietal Cave Artistry Index (% PCA) Styling (Looks & UI Agent v9.79.0) */
+.pca-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(153, 27, 27, 0.25);
+    color: #fca5a5;
+    border: 1px solid rgba(153, 27, 27, 0.55);
+}
+.pca-pragmatic {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.pca-stenciler {
+    background: rgba(248, 113, 113, 0.18);
+    color: #fecaca;
+    border: 1px solid rgba(248, 113, 113, 0.50);
+}
+.pca-artist {
+    background: rgba(220, 38, 38, 0.28);
+    color: #fee2e2;
+    border: 1px solid rgba(220, 38, 38, 0.70);
+    box-shadow: 0 0 6px rgba(220, 38, 38, 0.45);
+}
+.pca-master {
+    background: rgba(153, 27, 27, 0.40);
+    color: #ffffff;
+    border: 1px solid rgba(248, 113, 113, 0.85);
+    box-shadow: 0 0 8px rgba(153, 27, 27, 0.65);
+}
+
+/* 157th Telemetry Channel: Canine Domestication Index (% CDI) Styling (Looks & UI Agent v9.84.0) */
+.cdi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(100, 116, 139, 0.25);
+    color: #cbd5e1;
+    border: 1px solid rgba(100, 116, 139, 0.55);
+}
+.cdi-wild {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cdi-incipient {
+    background: rgba(100, 116, 139, 0.20);
+    color: #cbd5e1;
+    border: 1px solid rgba(100, 116, 139, 0.50);
+}
+.cdi-hunting {
+    background: rgba(71, 85, 105, 0.30);
+    color: #e2e8f0;
+    border: 1px solid rgba(100, 116, 139, 0.70);
+    box-shadow: 0 0 6px rgba(100, 116, 139, 0.45);
+}
+.cdi-apex {
+    background: rgba(245, 158, 11, 0.25);
+    color: #fef3c7;
+    border: 1px solid rgba(245, 158, 11, 0.85);
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.65);
+}
+
+/* 158th Telemetry Channel: Bow & Arrow Ballistics Index (% BAI) Styling (Looks & UI Agent v9.84.0) */
+.bai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(22, 163, 74, 0.20);
+    color: #86efac;
+    border: 1px solid rgba(22, 163, 74, 0.50);
+}
+.bai-dart {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bai-incipient {
+    background: rgba(134, 239, 172, 0.18);
+    color: #bbf7d0;
+    border: 1px solid rgba(134, 239, 172, 0.50);
+}
+.bai-archer {
+    background: rgba(34, 197, 94, 0.25);
+    color: #86efac;
+    border: 1px solid rgba(34, 197, 94, 0.65);
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.45);
+}
+.bai-apex {
+    background: rgba(21, 128, 61, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(34, 197, 94, 0.85);
+    box-shadow: 0 0 8px rgba(22, 163, 74, 0.65);
+}
+
+/* Mesolithic Fishery & 159th Channel Barbed Harpoon Index (% BHI) (Looks & UI Agent v9.89.0) */
+.bhi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.20);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.50);
+}
+.bhi-spear {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bhi-incipient {
+    background: rgba(251, 113, 133, 0.18);
+    color: #fecdd3;
+    border: 1px solid rgba(251, 113, 133, 0.50);
+}
+.bhi-harpooner {
+    background: rgba(244, 63, 94, 0.25);
+    color: #fda4af;
+    border: 1px solid rgba(244, 63, 94, 0.65);
+    box-shadow: 0 0 6px rgba(244, 63, 94, 0.45);
+}
+.bhi-apex {
+    background: rgba(225, 29, 72, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(244, 63, 94, 0.85);
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.65);
+}
+
+/* Mesolithic Fishery & 160th Channel Weir Fishery Index (% WFI) (Looks & UI Agent v9.89.0) */
+.wfi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.20);
+    color: #22d3ee;
+    border: 1px solid rgba(6, 182, 212, 0.50);
+}
+.wfi-gleaner {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.wfi-incipient {
+    background: rgba(34, 211, 238, 0.18);
+    color: #a5f3fc;
+    border: 1px solid rgba(34, 211, 238, 0.50);
+}
+.wfi-trapper {
+    background: rgba(6, 182, 212, 0.25);
+    color: #67e8f9;
+    border: 1px solid rgba(6, 182, 212, 0.65);
+    box-shadow: 0 0 6px rgba(6, 182, 212, 0.45);
+}
+.wfi-apex {
+    background: rgba(8, 145, 178, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(6, 182, 212, 0.85);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.65);
+}
+
+/* Neolithic Agriculture & 161st Channel Neolithic Agriculture Index (% NAI) (Looks & UI Agent v9.94.0) */
+.nai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.20);
+    color: #fef08a;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.nai-forager {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.nai-incipient {
+    background: rgba(254, 240, 138, 0.18);
+    color: #fef9c3;
+    border: 1px solid rgba(254, 240, 138, 0.50);
+}
+.nai-farmer {
+    background: rgba(234, 179, 8, 0.25);
+    color: #fde047;
+    border: 1px solid rgba(234, 179, 8, 0.65);
+    box-shadow: 0 0 6px rgba(234, 179, 8, 0.45);
+}
+.nai-apex {
+    background: rgba(202, 138, 4, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(234, 179, 8, 0.85);
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.65);
+}
+
+/* Neolithic Pottery & 162nd Channel Pottery Storage & Sedentism Index (% PSI) (Looks & UI Agent v9.94.0) */
+.psi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(194, 65, 12, 0.20);
+    color: #fdba74;
+    border: 1px solid rgba(194, 65, 12, 0.50);
+}
+.psi-nomadic {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.psi-incipient {
+    background: rgba(253, 186, 116, 0.18);
+    color: #ffedd5;
+    border: 1px solid rgba(253, 186, 116, 0.50);
+}
+.psi-village {
+    background: rgba(234, 88, 12, 0.25);
+    color: #fb923c;
+    border: 1px solid rgba(234, 88, 12, 0.65);
+    box-shadow: 0 0 6px rgba(234, 88, 12, 0.45);
+}
+.psi-apex {
+    background: rgba(154, 52, 18, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(234, 88, 12, 0.85);
+    box-shadow: 0 0 10px rgba(234, 88, 12, 0.65);
+}
+
+/* Pastoral Domestication & 163rd Channel Pastoral Herd Index (% PHI) (Looks & UI Agent v9.99.0) */
+.phi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(132, 204, 22, 0.20);
+    color: #bef264;
+    border: 1px solid rgba(132, 204, 22, 0.50);
+}
+.phi-wild {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.phi-incipient {
+    background: rgba(190, 242, 100, 0.18);
+    color: #ecfccb;
+    border: 1px solid rgba(190, 242, 100, 0.50);
+}
+.phi-herd {
+    background: rgba(132, 204, 22, 0.25);
+    color: #d9f99d;
+    border: 1px solid rgba(132, 204, 22, 0.65);
+    box-shadow: 0 0 6px rgba(132, 204, 22, 0.45);
+}
+.phi-apex {
+    background: rgba(101, 163, 13, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(132, 204, 22, 0.85);
+    box-shadow: 0 0 10px rgba(132, 204, 22, 0.65);
+}
+
+/* Secondary Products Revolution & 164th Channel (% SPR) (Looks & UI Agent v9.99.0) */
+.spr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(248, 250, 252, 0.20);
+    color: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.50);
+}
+.spr-primary {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.spr-incipient {
+    background: rgba(241, 245, 249, 0.18);
+    color: #f1f5f9;
+    border: 1px solid rgba(226, 232, 240, 0.50);
+}
+.spr-dairy {
+    background: rgba(248, 250, 252, 0.25);
+    color: #ffffff;
+    border: 1px solid rgba(248, 250, 252, 0.65);
+    box-shadow: 0 0 6px rgba(248, 250, 252, 0.45);
+}
+.spr-apex {
+    background: rgba(203, 213, 225, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(248, 250, 252, 0.85);
+    box-shadow: 0 0 10px rgba(248, 250, 252, 0.65);
+}
+
+/* Chalcolithic Metallurgy & 165th Channel (% CMI) (Looks & UI Agent v10.4.0) */
+.cmi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(217, 119, 6, 0.20);
+    color: #fbbf24;
+    border: 1px solid rgba(217, 119, 6, 0.50);
+}
+.cmi-lithic {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cmi-copper {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fde68a;
+    border: 1px solid rgba(245, 158, 11, 0.50);
+}
+.cmi-kiln {
+    background: rgba(217, 119, 6, 0.26);
+    color: #fdba74;
+    border: 1px solid rgba(217, 119, 6, 0.65);
+    box-shadow: 0 0 6px rgba(217, 119, 6, 0.45);
+}
+.cmi-apex {
+    background: rgba(180, 83, 9, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(217, 119, 6, 0.85);
+    box-shadow: 0 0 10px rgba(217, 119, 6, 0.65);
+}
+
+/* Irrigation & Plough Cultivation & 166th Channel (% ICI) (Looks & UI Agent v10.4.0) */
+.ici-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(2, 132, 199, 0.20);
+    color: #38bdf8;
+    border: 1px solid rgba(2, 132, 199, 0.50);
+}
+.ici-rainfed {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ici-ditch {
+    background: rgba(56, 189, 248, 0.18);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.50);
+}
+.ici-canal {
+    background: rgba(2, 132, 199, 0.25);
+    color: #7dd3fc;
+    border: 1px solid rgba(2, 132, 199, 0.65);
+    box-shadow: 0 0 6px rgba(2, 132, 199, 0.45);
+}
+.ici-apex {
+    background: rgba(3, 105, 161, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(2, 132, 199, 0.85);
+    box-shadow: 0 0 10px rgba(2, 132, 199, 0.65);
+}
+
+/* Bronze Age Alloying & 167th Channel (% BAI) (Looks & UI Agent v10.9.0) */
+.bai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(180, 83, 9, 0.20);
+    color: #fcd34d;
+    border: 1px solid rgba(180, 83, 9, 0.50);
+}
+.bai-copper {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.bai-trial {
+    background: rgba(217, 119, 6, 0.18);
+    color: #fde68a;
+    border: 1px solid rgba(217, 119, 6, 0.50);
+}
+.bai-foundry {
+    background: rgba(180, 83, 9, 0.26);
+    color: #fcd34d;
+    border: 1px solid rgba(180, 83, 9, 0.65);
+    box-shadow: 0 0 6px rgba(180, 83, 9, 0.45);
+}
+.bai-apex {
+    background: rgba(146, 64, 14, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(217, 119, 6, 0.85);
+    box-shadow: 0 0 10px rgba(217, 119, 6, 0.65);
+}
+
+/* Wheeled Transport & Urban Guilds & 168th Channel (% WTI) (Looks & UI Agent v10.9.0) */
+.wti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(79, 70, 229, 0.20);
+    color: #a5b4fc;
+    border: 1px solid rgba(79, 70, 229, 0.50);
+}
+.wti-sledge {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.wti-cart {
+    background: rgba(99, 102, 241, 0.18);
+    color: #c7d2fe;
+    border: 1px solid rgba(99, 102, 241, 0.50);
+}
+.wti-caravan {
+    background: rgba(79, 70, 229, 0.25);
+    color: #a5b4fc;
+    border: 1px solid rgba(79, 70, 229, 0.65);
+    box-shadow: 0 0 6px rgba(79, 70, 229, 0.45);
+}
+.wti-apex {
+    background: rgba(67, 56, 202, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(99, 102, 241, 0.85);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.65);
+}
+
+/* Iron Age Smelting & Steel & 169th Channel (% ISI) (Looks & UI Agent v11.4.0) */
+.isi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(100, 116, 139, 0.20);
+    color: #cbd5e1;
+    border: 1px solid rgba(100, 116, 139, 0.50);
+}
+.isi-recession {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.isi-bloomery {
+    background: rgba(100, 116, 139, 0.22);
+    color: #e2e8f0;
+    border: 1px solid rgba(100, 116, 139, 0.55);
+}
+.isi-steel {
+    background: rgba(71, 85, 105, 0.30);
+    color: #f1f5f9;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    box-shadow: 0 0 6px rgba(148, 163, 184, 0.45);
+}
+.isi-apex {
+    background: rgba(51, 65, 85, 0.40);
+    color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    box-shadow: 0 0 10px rgba(148, 163, 184, 0.65);
+}
+
+/* Maritime Trade & Navigation & 170th Channel (% MTI) (Looks & UI Agent v11.4.0) */
+.mti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(13, 148, 136, 0.20);
+    color: #5eead4;
+    border: 1px solid rgba(13, 148, 136, 0.50);
+}
+.mti-landlocked {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.mti-barge {
+    background: rgba(20, 184, 166, 0.18);
+    color: #99f6e4;
+    border: 1px solid rgba(20, 184, 166, 0.50);
+}
+.mti-galley {
+    background: rgba(13, 148, 136, 0.25);
+    color: #5eead4;
+    border: 1px solid rgba(13, 148, 136, 0.65);
+    box-shadow: 0 0 6px rgba(13, 148, 136, 0.45);
+}
+.mti-apex {
+    background: rgba(15, 118, 110, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(45, 212, 191, 0.85);
+    box-shadow: 0 0 10px rgba(13, 148, 136, 0.65);
+}
+
+/* Classical Hydraulics & 171st Channel (% WHI) (Looks & UI Agent v11.9.0) */
+.whi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(3, 105, 161, 0.20);
+    color: #38bdf8;
+    border: 1px solid rgba(3, 105, 161, 0.50);
+}
+.whi-quern {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.whi-conduit {
+    background: rgba(14, 165, 233, 0.18);
+    color: #bae6fd;
+    border: 1px solid rgba(14, 165, 233, 0.50);
+}
+.whi-aqueduct {
+    background: rgba(3, 105, 161, 0.26);
+    color: #7dd3fc;
+    border: 1px solid rgba(3, 105, 161, 0.65);
+    box-shadow: 0 0 6px rgba(3, 105, 161, 0.45);
+}
+.whi-apex {
+    background: rgba(7, 89, 133, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(56, 189, 248, 0.85);
+    box-shadow: 0 0 10px rgba(3, 105, 161, 0.65);
+}
+
+/* Crop Rotation Agronomy & 172nd Channel (% CRI) (Looks & UI Agent v11.9.0) */
+.cri-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(21, 128, 61, 0.20);
+    color: #4ade80;
+    border: 1px solid rgba(21, 128, 61, 0.50);
+}
+.cri-depletion {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cri-fallow {
+    background: rgba(34, 197, 94, 0.18);
+    color: #bbf7d0;
+    border: 1px solid rgba(34, 197, 94, 0.50);
+}
+.cri-rotation {
+    background: rgba(21, 128, 61, 0.25);
+    color: #86efac;
+    border: 1px solid rgba(21, 128, 61, 0.65);
+    box-shadow: 0 0 6px rgba(21, 128, 61, 0.45);
+}
+.cri-apex {
+    background: rgba(22, 101, 52, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(74, 222, 128, 0.85);
+    box-shadow: 0 0 10px rgba(21, 128, 61, 0.65);
+}
+
+/* Medieval Windmills & Mouldboard Plough & 173rd Channel (% WMI) (Looks & UI Agent v12.4.0) */
+.wmi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(202, 138, 4, 0.20);
+    color: #facc15;
+    border: 1px solid rgba(202, 138, 4, 0.50);
+}
+.wmi-ard {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.wmi-post {
+    background: rgba(234, 179, 8, 0.18);
+    color: #fef08a;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.wmi-tower {
+    background: rgba(202, 138, 4, 0.26);
+    color: #fde047;
+    border: 1px solid rgba(202, 138, 4, 0.65);
+    box-shadow: 0 0 6px rgba(202, 138, 4, 0.45);
+}
+.wmi-apex {
+    background: rgba(161, 98, 7, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(250, 204, 21, 0.85);
+    box-shadow: 0 0 10px rgba(202, 138, 4, 0.65);
+}
+
+/* Magnetic Compass & Oceanic Navigation & 174th Channel (% CNI) (Looks & UI Agent v12.4.0) */
+.cni-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(29, 78, 216, 0.20);
+    color: #60a5fa;
+    border: 1px solid rgba(29, 78, 216, 0.50);
+}
+.cni-coastal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cni-lodestone {
+    background: rgba(59, 130, 246, 0.18);
+    color: #bfdbfe;
+    border: 1px solid rgba(59, 130, 246, 0.50);
+}
+.cni-compass {
+    background: rgba(29, 78, 216, 0.25);
+    color: #93c5fd;
+    border: 1px solid rgba(29, 78, 216, 0.65);
+    box-shadow: 0 0 6px rgba(29, 78, 216, 0.45);
+}
+.cni-apex {
+    background: rgba(30, 64, 175, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(96, 165, 250, 0.85);
+    box-shadow: 0 0 10px rgba(29, 78, 216, 0.65);
+}
+
+/* Renaissance Printing Press & 175th Channel (% PPI) (Looks & UI Agent v12.9.0) */
+.ppi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(147, 51, 234, 0.20);
+    color: #d8b4fe;
+    border: 1px solid rgba(147, 51, 234, 0.50);
+}
+.ppi-scribal {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.ppi-woodblock {
+    background: rgba(168, 85, 247, 0.18);
+    color: #e9d5ff;
+    border: 1px solid rgba(168, 85, 247, 0.50);
+}
+.ppi-foundry {
+    background: rgba(147, 51, 234, 0.26);
+    color: #f3e8ff;
+    border: 1px solid rgba(147, 51, 234, 0.65);
+    box-shadow: 0 0 6px rgba(147, 51, 234, 0.45);
+}
+.ppi-apex {
+    background: rgba(126, 34, 206, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(192, 132, 252, 0.85);
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.65);
+}
+
+/* Clockwork & Empirical Astronomy & 176th Channel (% CAI) (Looks & UI Agent v12.9.0) */
+.cai-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.20);
+    color: #fef08a;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.cai-sundial {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.cai-clock {
+    background: rgba(250, 204, 21, 0.18);
+    color: #fef9c3;
+    border: 1px solid rgba(250, 204, 21, 0.50);
+}
+.cai-telescope {
+    background: rgba(234, 179, 8, 0.25);
+    color: #fef08a;
+    border: 1px solid rgba(234, 179, 8, 0.65);
+    box-shadow: 0 0 6px rgba(234, 179, 8, 0.45);
+}
+.cai-apex {
+    background: rgba(202, 138, 4, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(253, 224, 71, 0.85);
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.65);
+}
+
+/* Industrial Steam Power & 177th Channel (% STI) (Looks & UI Agent v13.4.0) */
+.sti-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(220, 38, 38, 0.20);
+    color: #fca5a5;
+    border: 1px solid rgba(220, 38, 38, 0.50);
+}
+.sti-pre {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.sti-pump {
+    background: rgba(239, 68, 68, 0.18);
+    color: #fecaca;
+    border: 1px solid rgba(239, 68, 68, 0.50);
+}
+.sti-watt {
+    background: rgba(220, 38, 38, 0.26);
+    color: #fca5a5;
+    border: 1px solid rgba(220, 38, 38, 0.65);
+    box-shadow: 0 0 6px rgba(220, 38, 38, 0.45);
+}
+.sti-apex {
+    background: rgba(185, 28, 28, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(248, 113, 113, 0.85);
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.65);
+}
+
+/* Rail Logistics & Industrial Index & 178th Channel (% RLI) (Looks & UI Agent v13.4.0) */
+.rli-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(71, 85, 105, 0.22);
+    color: #cbd5e1;
+    border: 1px solid rgba(100, 116, 139, 0.50);
+}
+.rli-turnpike {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+}
+.rli-plateway {
+    background: rgba(100, 116, 139, 0.20);
+    color: #e2e8f0;
+    border: 1px solid rgba(100, 116, 139, 0.50);
+}
+.rli-rail {
+    background: rgba(71, 85, 105, 0.28);
+    color: #f1f5f9;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    box-shadow: 0 0 6px rgba(100, 116, 139, 0.45);
+}
+.rli-apex {
+    background: rgba(51, 65, 85, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    box-shadow: 0 0 10px rgba(100, 116, 139, 0.65);
+}
+
+/* 179th Channel: Electrical Grid & Telegraph Index (% EGI) - Electric Blue (#0ea5e9) */
+.egi-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(14, 165, 233, 0.18);
+    color: #7dd3fc;
+    border: 1px solid rgba(14, 165, 233, 0.50);
+}
+.egi-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.egi-dynamo {
+    background: rgba(56, 189, 248, 0.18);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.50);
+}
+.egi-grid {
+    background: rgba(14, 165, 233, 0.28);
+    color: #e0f2fe;
+    border: 1px solid rgba(14, 165, 233, 0.70);
+    box-shadow: 0 0 6px rgba(14, 165, 233, 0.45);
+}
+.egi-apex {
+    background: rgba(2, 132, 199, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(125, 211, 252, 0.85);
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.70);
+}
+
+/* 180th Channel: Synthetic Nitrogen & Haber-Bosch Index (% SNI) - Nitrogen Emerald (#10b981) */
+.sni-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(16, 185, 129, 0.18);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.50);
+}
+.sni-organic {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.sni-nitrate {
+    background: rgba(52, 211, 153, 0.18);
+    color: #a7f3d0;
+    border: 1px solid rgba(52, 211, 153, 0.50);
+}
+.sni-haber {
+    background: rgba(16, 185, 129, 0.28);
+    color: #d1fae5;
+    border: 1px solid rgba(16, 185, 129, 0.70);
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.45);
+}
+.sni-apex {
+    background: rgba(5, 150, 105, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(110, 231, 183, 0.85);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.70);
+}
+
+/* 181st Channel: Internal Combustion & Aviation Index (% ICA) - Aviation Blue (#2563eb) */
+.ica-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(37, 99, 235, 0.18);
+    color: #93c5fd;
+    border: 1px solid rgba(37, 99, 235, 0.50);
+}
+.ica-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.ica-piston {
+    background: rgba(59, 130, 246, 0.18);
+    color: #bfdbfe;
+    border: 1px solid rgba(59, 130, 246, 0.50);
+}
+.ica-aero {
+    background: rgba(37, 99, 235, 0.28);
+    color: #dbeafe;
+    border: 1px solid rgba(37, 99, 235, 0.70);
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.45);
+}
+.ica-apex {
+    background: rgba(29, 78, 216, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(147, 197, 253, 0.85);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.70);
+}
+
+/* 182nd Channel: Radio Communication & Broadcast Index (% RCI) - Radio Violet (#9333ea) */
+.rci-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(147, 51, 234, 0.18);
+    color: #d8b4fe;
+    border: 1px solid rgba(147, 51, 234, 0.50);
+}
+.rci-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.rci-spark {
+    background: rgba(168, 85, 247, 0.18);
+    color: #e9d5ff;
+    border: 1px solid rgba(168, 85, 247, 0.50);
+}
+.rci-wave {
+    background: rgba(147, 51, 234, 0.28);
+    color: #f3e8ff;
+    border: 1px solid rgba(147, 51, 234, 0.70);
+    box-shadow: 0 0 6px rgba(147, 51, 234, 0.45);
+}
+.rci-apex {
+    background: rgba(126, 34, 206, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(216, 180, 254, 0.85);
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.70);
+}
+
+/* 183rd Channel: Semiconductor & Microprocessor Compute Index (% SMC) - Silicon Cyan (#06b6d4) */
+.smc-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(6, 182, 212, 0.18);
+    color: #67e8f9;
+    border: 1px solid rgba(6, 182, 212, 0.50);
+}
+.smc-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.smc-logic {
+    background: rgba(34, 211, 238, 0.18);
+    color: #a5f3fc;
+    border: 1px solid rgba(34, 211, 238, 0.50);
+}
+.smc-vlsi {
+    background: rgba(6, 182, 212, 0.28);
+    color: #cffafe;
+    border: 1px solid rgba(6, 182, 212, 0.70);
+    box-shadow: 0 0 6px rgba(6, 182, 212, 0.45);
+}
+.smc-apex {
+    background: rgba(8, 145, 178, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(103, 232, 249, 0.85);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.70);
+}
+
+/* 184th Channel: Global Internet & Fiber Network Index (% GIN) - Fiber Indigo (#6366f1) */
+.gin-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(99, 102, 241, 0.18);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.50);
+}
+.gin-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.gin-packet {
+    background: rgba(129, 140, 248, 0.18);
+    color: #c7d2fe;
+    border: 1px solid rgba(129, 140, 248, 0.50);
+}
+.gin-web {
+    background: rgba(99, 102, 241, 0.28);
+    color: #e0e7ff;
+    border: 1px solid rgba(99, 102, 241, 0.70);
+    box-shadow: 0 0 6px rgba(99, 102, 241, 0.45);
+}
+.gin-apex {
+    background: rgba(79, 70, 229, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(165, 180, 252, 0.85);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.70);
+}
+
+/* 185th Channel: Artificial Neural & Robotics Index (% ANI) - Neural Magenta (#a855f7) */
+.ani-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(168, 85, 247, 0.18);
+    color: #e9d5ff;
+    border: 1px solid rgba(168, 85, 247, 0.50);
+}
+.ani-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.ani-perc {
+    background: rgba(192, 132, 252, 0.18);
+    color: #f3e8ff;
+    border: 1px solid rgba(192, 132, 252, 0.50);
+}
+.ani-deep {
+    background: rgba(168, 85, 247, 0.28);
+    color: #faf5ff;
+    border: 1px solid rgba(168, 85, 247, 0.70);
+    box-shadow: 0 0 6px rgba(168, 85, 247, 0.45);
+}
+.ani-apex {
+    background: rgba(147, 51, 234, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(233, 213, 255, 0.85);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.70);
+}
+
+/* 186th Channel: Quantum Compute & Coherence Index (% QCR) - Quantum Gold (#eab308) */
+.qcr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(234, 179, 8, 0.18);
+    color: #fef08a;
+    border: 1px solid rgba(234, 179, 8, 0.50);
+}
+.qcr-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.qcr-nisq {
+    background: rgba(250, 204, 21, 0.18);
+    color: #fef9c3;
+    border: 1px solid rgba(250, 204, 21, 0.50);
+}
+.qcr-grid {
+    background: rgba(234, 179, 8, 0.28);
+    color: #fefce8;
+    border: 1px solid rgba(234, 179, 8, 0.70);
+    box-shadow: 0 0 6px rgba(234, 179, 8, 0.45);
+}
+.qcr-apex {
+    background: rgba(202, 138, 4, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(254, 240, 138, 0.85);
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.70);
+}
+
+/* 187th Channel: Synthetic Genomics & CRISPR Editing Index (% SGE) - Genome Green (#22c55e) */
+.sge-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(34, 197, 94, 0.18);
+    color: #86efac;
+    border: 1px solid rgba(34, 197, 94, 0.50);
+}
+.sge-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.sge-plasmid {
+    background: rgba(74, 222, 128, 0.18);
+    color: #bbf7d0;
+    border: 1px solid rgba(74, 222, 128, 0.50);
+}
+.sge-crispr {
+    background: rgba(34, 197, 94, 0.28);
+    color: #dcfce7;
+    border: 1px solid rgba(34, 197, 94, 0.70);
+    box-shadow: 0 0 6px rgba(34, 197, 94, 0.45);
+}
+.sge-apex {
+    background: rgba(22, 163, 74, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(134, 239, 172, 0.85);
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.70);
+}
+
+/* 188th Channel: Artificial Cell & Metabolic Chassis Index (% ACR) - Bio-Teal (#14b8a6) */
+.acr-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: rgba(20, 184, 166, 0.18);
+    color: #5eead4;
+    border: 1px solid rgba(20, 184, 166, 0.50);
+}
+.acr-pre {
+    background: rgba(148, 163, 184, 0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.40);
+}
+.acr-pathway {
+    background: rgba(45, 212, 191, 0.18);
+    color: #99f6e4;
+    border: 1px solid rgba(45, 212, 191, 0.50);
+}
+.acr-chassis {
+    background: rgba(20, 184, 166, 0.28);
+    color: #ccfbf1;
+    border: 1px solid rgba(20, 184, 166, 0.70);
+    box-shadow: 0 0 6px rgba(20, 184, 166, 0.45);
+}
+.acr-apex {
+    background: rgba(13, 148, 136, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(94, 234, 212, 0.85);
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.70);
+}
+
+/* Epoch 92: Orbital Habitat & Microgravity Ecology Index (% OHE) & Asteroid Mining & Closed-Loop Resource Index (% AMR) Badges */
+.ohe-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.ohe-pre {
+    background: rgba(56, 189, 248, 0.10);
+    color: #7dd3fc;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+}
+.ohe-orbit {
+    background: rgba(56, 189, 248, 0.18);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.48);
+}
+.ohe-closed {
+    background: rgba(14, 165, 233, 0.28);
+    color: #e0f2fe;
+    border: 1px solid rgba(56, 189, 248, 0.72);
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.45);
+}
+.ohe-apex {
+    background: rgba(2, 132, 199, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(125, 211, 252, 0.85);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.70);
+}
+.amr-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.amr-pre {
+    background: rgba(245, 158, 11, 0.10);
+    color: #fcd34d;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+.amr-probe {
+    background: rgba(245, 158, 11, 0.18);
+    color: #fde68a;
+    border: 1px solid rgba(245, 158, 11, 0.48);
+}
+.amr-smelt {
+    background: rgba(217, 119, 6, 0.28);
+    color: #fef3c7;
+    border: 1px solid rgba(245, 158, 11, 0.72);
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.45);
+}
+.amr-apex {
+    background: rgba(180, 83, 9, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(252, 211, 77, 0.85);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.70);
+}
+
+/* Epoch 93: Exoplanet Terraforming (% ETI) & Pan-Galactic Biome Network (% PGN) Badges */
+.eti-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.eti-pre {
+    background: rgba(16, 185, 129, 0.10);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+.eti-seed {
+    background: rgba(16, 185, 129, 0.18);
+    color: #a7f3d0;
+    border: 1px solid rgba(16, 185, 129, 0.48);
+}
+.eti-oxygen {
+    background: rgba(5, 150, 105, 0.28);
+    color: #d1fae5;
+    border: 1px solid rgba(16, 185, 129, 0.72);
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.45);
+}
+.eti-apex {
+    background: rgba(4, 120, 87, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(110, 231, 183, 0.85);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.70);
+}
+.pgn-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.pgn-pre {
+    background: rgba(139, 92, 246, 0.10);
+    color: #c4b5fd;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+}
+.pgn-cryo {
+    background: rgba(139, 92, 246, 0.18);
+    color: #ddd6fe;
+    border: 1px solid rgba(139, 92, 246, 0.48);
+}
+.pgn-sync {
+    background: rgba(124, 58, 237, 0.28);
+    color: #ede9fe;
+    border: 1px solid rgba(139, 92, 246, 0.72);
+    box-shadow: 0 0 6px rgba(139, 92, 246, 0.45);
+}
+.pgn-apex {
+    background: rgba(109, 40, 217, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(196, 181, 253, 0.85);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.70);
+}
+
+/* Epoch 94: Dyson Swarm (% DSH) & Cosmic Entropy Reversal (% CER) Badges */
+.dsh-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.dsh-pre {
+    background: rgba(250, 204, 21, 0.10);
+    color: #fde047;
+    border: 1px solid rgba(250, 204, 21, 0.25);
+}
+.dsh-solar {
+    background: rgba(250, 204, 21, 0.18);
+    color: #fef08a;
+    border: 1px solid rgba(250, 204, 21, 0.48);
+}
+.dsh-swarm {
+    background: rgba(234, 179, 8, 0.28);
+    color: #fef9c3;
+    border: 1px solid rgba(250, 204, 21, 0.72);
+    box-shadow: 0 0 6px rgba(250, 204, 21, 0.45);
+}
+.dsh-apex {
+    background: rgba(202, 138, 4, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(254, 240, 138, 0.85);
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.70);
+}
+.cer-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.cer-pre {
+    background: rgba(236, 72, 153, 0.10);
+    color: #f9a8d4;
+    border: 1px solid rgba(236, 72, 153, 0.25);
+}
+.cer-rec {
+    background: rgba(236, 72, 153, 0.18);
+    color: #fbcfe8;
+    border: 1px solid rgba(236, 72, 153, 0.48);
+}
+.cer-lock {
+    background: rgba(219, 39, 119, 0.28);
+    color: #fdf2f8;
+    border: 1px solid rgba(236, 72, 153, 0.72);
+    box-shadow: 0 0 6px rgba(236, 72, 153, 0.45);
+}
+.cer-apex {
+    background: rgba(190, 24, 93, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(249, 168, 212, 0.85);
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.70);
+}
+
+/* Epoch 95: Universal Biosphere Synthesis (% UBS) & Multiverse Seeding (% MVS) Badges */
+.ubs-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.ubs-pre {
+    background: rgba(56, 189, 248, 0.10);
+    color: #7dd3fc;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+}
+.ubs-weave {
+    background: rgba(56, 189, 248, 0.18);
+    color: #bae6fd;
+    border: 1px solid rgba(56, 189, 248, 0.48);
+}
+.ubs-lock {
+    background: rgba(14, 165, 233, 0.28);
+    color: #e0f2fe;
+    border: 1px solid rgba(56, 189, 248, 0.72);
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.45);
+}
+.ubs-apex {
+    background: rgba(2, 132, 199, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(125, 211, 252, 0.85);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.70);
+}
+.mvs-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.mvs-pre {
+    background: rgba(168, 85, 247, 0.10);
+    color: #d8b4fe;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+}
+.mvs-probe {
+    background: rgba(168, 85, 247, 0.18);
+    color: #e9d5ff;
+    border: 1px solid rgba(168, 85, 247, 0.48);
+}
+.mvs-arc {
+    background: rgba(147, 51, 234, 0.28);
+    color: #f3e8ff;
+    border: 1px solid rgba(168, 85, 247, 0.72);
+    box-shadow: 0 0 6px rgba(168, 85, 247, 0.45);
+}
+.mvs-apex {
+    background: rgba(126, 34, 206, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(216, 180, 254, 0.85);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.70);
+}
+
+/* Epoch 96: Quantum Vacuum Life (% QVR) & Meta-Evolutionary Synthesis (% MES) Badges */
+.qvr-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.qvr-pre {
+    background: rgba(6, 182, 212, 0.10);
+    color: #67e8f9;
+    border: 1px solid rgba(6, 182, 212, 0.25);
+}
+.qvr-casimir {
+    background: rgba(6, 182, 212, 0.18);
+    color: #a5f3fc;
+    border: 1px solid rgba(6, 182, 212, 0.48);
+}
+.qvr-lock {
+    background: rgba(8, 145, 178, 0.28);
+    color: #cffafe;
+    border: 1px solid rgba(6, 182, 212, 0.72);
+    box-shadow: 0 0 6px rgba(6, 182, 212, 0.45);
+}
+.qvr-apex {
+    background: rgba(14, 116, 144, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(103, 232, 249, 0.85);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.70);
+}
+.mes-badge {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.mes-pre {
+    background: rgba(244, 63, 94, 0.10);
+    color: #fda4af;
+    border: 1px solid rgba(244, 63, 94, 0.25);
+}
+.mes-tune {
+    background: rgba(244, 63, 94, 0.18);
+    color: #fecdd3;
+    border: 1px solid rgba(244, 63, 94, 0.48);
+}
+.mes-res {
+    background: rgba(225, 29, 72, 0.28);
+    color: #ffe4e6;
+    border: 1px solid rgba(244, 63, 94, 0.72);
+    box-shadow: 0 0 6px rgba(244, 63, 94, 0.45);
+}
+.mes-apex {
+    background: rgba(190, 18, 60, 0.38);
+    color: #ffffff;
+    border: 1px solid rgba(253, 164, 175, 0.85);
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.70);
 }
